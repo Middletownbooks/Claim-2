@@ -1,0 +1,148 @@
+# local_claim2_cert_z3.py
+# SMT/SAT version using Z3 theorem prover
+# Install with: pip install z3-solver
+
+from z3 import *
+import itertools as it
+import math
+
+N = 24  # vertices labeled 0..23
+v = 0   # distinguished vertex
+
+def run_for_t_z3(t, timeout=60000, verbose=True):  # timeout in ms
+    s = 23 - t  # |Y|
+    X = list(range(1, 1 + t))
+    Y = list(range(1 + t, N))
+    
+    if verbose:
+        print(f"Setting up Z3 model for t={t} (|X|={len(X)}, |Y|={len(Y)})")
+    
+    # Create solver
+    solver = Solver()
+    solver.set("timeout", timeout)
+    
+    # Edge variables y[i,j] for i<j
+    y = {}
+    for i in range(N):
+        for j in range(i+1, N):
+            y[i, j] = Bool(f"y_{i}_{j}")
+
+    # Common-neighbor indicators
+    c = {}
+    for a_idx in range(len(X)):
+        for b_idx in range(a_idx+1, len(X)):
+            a = X[a_idx]; b = X[b_idx]
+            for yy in Y:
+                c[(a, b, yy)] = Bool(f"c_{a}_{b}_{yy}")
+
+    # Convenience: edge accessor
+    def E(i, j):
+        if i > j: i, j = j, i
+        return y[i, j]
+
+    # Force partition edges
+    for x in X:
+        solver.add(Not(E(v, x)))  # v-x edge absent
+    for yy in Y:
+        solver.add(E(v, yy))  # v-y edge present
+
+    # K4-free: for every 4-set S, at most 5 edges
+    for S in it.combinations(range(N), 4):
+        edges = [E(i, j) for i, j in it.combinations(S, 2)]
+        # Convert to: sum <= 5, which in Boolean is "not all 6 edges present"
+        # For 4-clique (6 edges), forbid having all 6
+        if len(edges) == 6:  # Complete graph on 4 vertices has 6 edges
+            solver.add(Not(And(edges)))  # Not all edges can be present
+
+    # alpha(H) <= 4: forbid independent 5-set
+    for T in it.combinations(range(N), 5):
+        edges = [E(i, j) for i, j in it.combinations(T, 2)]
+        # At least one edge must be present
+        solver.add(Or(edges))
+
+    # alpha(H[X]) <= 3: forbid independent 4-set in X
+    for T in it.combinations(X, 4):
+        edges = [E(i, j) for i, j in it.combinations(T, 2)]
+        solver.add(Or(edges))
+
+    # e(H[X]) >= ceil((t^2 - 3t)/6)
+    eX_min = math.ceil((t*t - 3*t) / 6.0)
+    X_edges = [E(i, j) for i, j in it.combinations(X, 2)]
+    
+    # Convert "at least k true booleans" to Z3 constraint
+    # This is trickier in pure Boolean logic - we need to use PbGe (pseudo-boolean >=)
+    if len(X_edges) > 0:
+        solver.add(PbGe([(edge, 1) for edge in X_edges], eX_min))
+
+    # c[a,b,yy] = y[a,yy] AND y[b,yy]
+    for a_idx in range(len(X)):
+        for b_idx in range(a_idx+1, len(X)):
+            a = X[a_idx]; b = X[b_idx]
+            for yy in Y:
+                cab = c[(a, b, yy)]
+                solver.add(cab == And(E(a, yy), E(b, yy)))
+
+    # No K4-trigger: For every edge ab in X, at most 4 common Y-neighbors
+    for a_idx in range(len(X)):
+        for b_idx in range(a_idx+1, len(X)):
+            a = X[a_idx]; b = X[b_idx]
+            common_neighbors = [c[(a, b, yy)] for yy in Y]
+            
+            if len(common_neighbors) > 0:
+                # If edge ab exists, then at most 4 common neighbors
+                # This is: E(a,b) => (sum of common_neighbors <= 4)
+                # Equivalent to: Not(E(a,b)) Or (sum <= 4)
+                constraint = Or(Not(E(a, b)), 
+                               PbLe([(cn, 1) for cn in common_neighbors], 4))
+                solver.add(constraint)
+
+    # Check satisfiability
+    result = solver.check()
+    
+    if result == sat:
+        if verbose:
+            print(f"[t={t}] SAT: Counterexample exists (Claim 2 fails)")
+            # Could extract and display model
+        return False
+    elif result == unsat:
+        if verbose:
+            print(f"[t={t}] UNSAT: Claim 2 holds for t={t}")
+        return True
+    else:  # unknown/timeout
+        if verbose:
+            print(f"[t={t}] UNKNOWN/TIMEOUT: Could not determine")
+        return None
+
+def verify_claim2_z3():
+    print("Verifying Claim 2 using Z3 for all t = 13,...,23")
+    print("=" * 60)
+    
+    all_unsat = True
+    results = {}
+    
+    for t in range(13, 24):
+        result = run_for_t_z3(t, timeout=120000, verbose=True)  # 2 minute timeout
+        results[t] = result
+        if result is not True:
+            all_unsat = False
+        print("-" * 40)
+    
+    print("\nSUMMARY:")
+    print("=" * 60)
+    for t, result in results.items():
+        status_str = "UNSAT (Claim 2 holds)" if result else "SAT (counterexample)" if result is False else "UNKNOWN"
+        print(f"t={t}: {status_str}")
+    
+    if all_unsat:
+        print("\nSUCCESS: All t=13..23 are UNSAT")
+        print("Therefore: Claim 2 holds completely")
+        print("Conclusion: N*(24) ≤ 12")
+        print("\nThis completes the verification needed for R(5,5) ≤ 46!")
+    else:
+        print("\nSome cases were satisfiable or undetermined")
+        print("Claim 2 verification incomplete")
+    
+    return all_unsat
+
+if __name__ == "__main__":
+    verify_claim2_z3()
