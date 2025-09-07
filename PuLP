@@ -1,4 +1,5 @@
-# local_claim2_cert_pulp.py
+workflow_dispatch:
+#local_claim2_cert_pulp.py
 # Open-source version using PuLP instead of Gurobi
 # Install with: pip install pulp
 
