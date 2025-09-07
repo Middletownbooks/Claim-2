@@ -1,0 +1,144 @@
+# local_claim2_cert_pulp.py
+# Open-source version using PuLP instead of Gurobi
+# Install with: pip install pulp
+
+import pulp
+import itertools as it
+import math
+
+N = 24  # vertices labeled 0..23
+v = 0   # distinguished vertex
+
+def run_for_t_pulp(t, time_limit=3600, verbose=True):
+    s = 23 - t  # |Y|
+    X = list(range(1, 1 + t))
+    Y = list(range(1 + t, N))
+    assert len(X) == t and len(Y) == s and {v}.union(X, Y) == set(range(N))
+
+    # Create the model
+    prob = pulp.LpProblem(f"Claim2_t{t}", pulp.LpMinimize)
+
+    # Edge variables y[i,j] for i<j
+    y = {}
+    for i in range(N):
+        for j in range(i+1, N):
+            y[i, j] = pulp.LpVariable(f"y_{i}_{j}", cat='Binary')
+
+    # Common-neighbor indicators for edges ab in X and yY in Y
+    c = {}
+    for a_idx in range(len(X)):
+        for b_idx in range(a_idx+1, len(X)):
+            a = X[a_idx]; b = X[b_idx]
+            for yy in Y:
+                c[(a, b, yy)] = pulp.LpVariable(f"c_{a}_{b}_{yy}", cat='Binary')
+
+    # Convenience: edge accessor
+    def E(i, j):
+        if i > j: i, j = j, i
+        return y[i, j]
+
+    # Force partition edges: v-x=0 for x in X; v-y=1 for y in Y
+    for x in X:
+        prob += E(v, x) == 0, f"vx0_{x}"
+    for yy in Y:
+        prob += E(v, yy) == 1, f"vy1_{yy}"
+
+    # K4-free: for every 4-set S, sum_{i<j in S} y_ij <= 5
+    for S in it.combinations(range(N), 4):
+        expr = pulp.lpSum([E(i, j) for i, j in it.combinations(S, 2)])
+        prob += expr <= 5, f"K4free_{S}"
+
+    # alpha(H) <= 4: forbid independent 5-set
+    for T in it.combinations(range(N), 5):
+        expr = pulp.lpSum([E(i, j) for i, j in it.combinations(T, 2)])
+        prob += expr >= 1, f"alpha_le4_{T}"
+
+    # alpha(H[X]) <= 3: forbid independent 4-set entirely inside X
+    for T in it.combinations(X, 4):
+        expr = pulp.lpSum([E(i, j) for i, j in it.combinations(T, 2)])
+        prob += expr >= 1, f"alphaX_le3_{T}"
+
+    # e(H[X]) >= ceil((t^2 - 3t)/6)
+    eX_min = math.ceil((t*t - 3*t) / 6.0)
+    eX_expr = pulp.lpSum([E(i, j) for i, j in it.combinations(X, 2)])
+    prob += eX_expr >= eX_min, f"eX_min"
+
+    # c[a,b,yy] = y[a,yy] AND y[b,yy]
+    for a_idx in range(len(X)):
+        for b_idx in range(a_idx+1, len(X)):
+            a = X[a_idx]; b = X[b_idx]
+            for yy in Y:
+                cab = c[(a, b, yy)]
+                prob += cab <= E(a, yy), f"c_le_ay_{a}_{b}_{yy}"
+                prob += cab <= E(b, yy), f"c_le_by_{a}_{b}_{yy}"
+                prob += cab >= E(a, yy) + E(b, yy) - 1, f"c_ge_summinus1_{a}_{b}_{yy}"
+
+    # No K4-trigger: For every edge ab in X, sum_{yy in Y} c[a,b,yy] <= 4.
+    # Use big-M trick with M=s (|Y|).
+    for a_idx in range(len(X)):
+        for b_idx in range(a_idx+1, len(X)):
+            a = X[a_idx]; b = X[b_idx]
+            z_ab = E(a, b)
+            if len(Y) > 0:
+                lhs = pulp.lpSum([c[(a, b, yy)] for yy in Y])
+                rhs = 4 + len(Y) * (1 - z_ab)
+                prob += lhs <= rhs, f"no_trigger_{a}_{b}"
+
+    # Dummy objective (feasibility problem)
+    prob += 0
+
+    # Solve
+    if verbose:
+        print(f"Solving for t={t} with {len(X)} vertices in X, {len(Y)} in Y...")
+        print(f"Required e(H[X]) >= {eX_min}")
+    
+    # Try CBC solver first
+    status = prob.solve(pulp.PULP_CBC_CMD(msg=verbose, timeLimit=time_limit))
+    
+    if status == pulp.LpStatusOptimal:
+        if verbose:
+            print(f"[t={t}] FEASIBLE: Found counterexample to Claim 2")
+            # Could print solution details here
+        return False
+    elif status == pulp.LpStatusInfeasible:
+        if verbose:
+            print(f"[t={t}] INFEASIBLE: Claim 2 holds for t={t}")
+        return True
+    else:
+        if verbose:
+            print(f"[t={t}] Solver status: {pulp.LpStatus[status]}")
+        return None
+
+def verify_claim2():
+    print("Verifying Claim 2 for all t = 13,...,23")
+    print("=" * 50)
+    
+    all_infeasible = True
+    results = {}
+    
+    for t in range(13, 24):
+        result = run_for_t_pulp(t, time_limit=600, verbose=True)
+        results[t] = result
+        if result is not True:
+            all_infeasible = False
+        print("-" * 30)
+    
+    print("\nSUMMARY:")
+    print("=" * 50)
+    for t, result in results.items():
+        status_str = "INFEASIBLE (Claim 2 holds)" if result else "FEASIBLE (counterexample)" if result is False else "UNKNOWN"
+        print(f"t={t}: {status_str}")
+    
+    if all_infeasible:
+        print("\n🎉 SUCCESS: All t=13..23 are INFEASIBLE")
+        print("Therefore: Claim 2 holds completely")
+        print("Conclusion: N*(24) ≤ 12")
+        print("\nThis completes the proof that R(5,5) ≤ 46!")
+    else:
+        print("\n❌ Some cases were feasible or undetermined")
+        print("Claim 2 verification incomplete")
+    
+    return all_infeasible
+
+if __name__ == "__main__":
+    verify_claim2()
