@@ -1,0 +1,130 @@
+# local_claim2_cert.py
+# Certifies Claim 2 for 24-vertex local graphs:
+# For each t = |X| in {13,...,23}, we search for a 24-vertex graph H with:
+# - K4-free
+# - alpha(H) <= 4 (no independent set of size 5)
+# - a distinguished vertex v (index 0), with X = {1,...,t}, Y = {t+1,...,23}
+# - v nonadjacent to X, adjacent to Y
+# - alpha(H[X]) <= 3 (no independent 4-set inside X)
+# - e(H[X]) >= ceil((t^2 - 3t)/6)  (from Claim 1)
+# - For every edge ab inside X, |N_Y(a) ∩ N_Y(b)| <= 4  (no "K4 trigger" from Claim 3)
+#
+# If infeasible for a given t, Claim 2 holds for that t.
+# If infeasible for all t in 13..23, we conclude N*(24) <= 12.
+
+from gurobipy import Model, GRB, quicksum
+import itertools as it
+import math
+
+N = 24  # vertices labeled 0..23
+v = 0   # distinguished vertex
+
+def run_for_t(t, time_limit=3600, seed=1, verbose=True):
+    s = 23 - t  # |Y|
+    X = list(range(1, 1 + t))
+    Y = list(range(1 + t, N))
+    assert len(X) == t and len(Y) == s and {v}.union(X, Y) == set(range(N))
+
+    mdl = Model(f"Claim2_t{t}")
+    mdl.Params.OutputFlag = 1 if verbose else 0
+    mdl.Params.TimeLimit = time_limit
+    mdl.Params.Seed = seed
+
+    # Edge variables y[i,j] for i<j
+    y = {}
+    for i in range(N):
+        for j in range(i+1, N):
+            y[i, j] = mdl.addVar(vtype=GRB.BINARY, name=f"y[{i},{j}]")
+
+    # Common-neighbor indicators for edges ab in X and yY in Y
+    c = {}
+    for a_idx in range(len(X)):
+        for b_idx in range(a_idx+1, len(X)):
+            a = X[a_idx]; b = X[b_idx]
+            for yy in Y:
+                c[(a, b, yy)] = mdl.addVar(vtype=GRB.BINARY, name=f"c[{a},{b},{yy}]")
+
+    mdl.update()
+
+    # Convenience: edge accessor
+    def E(i, j):
+        if i > j: i, j = j, i
+        return y[i, j]
+
+    # Force partition edges: v-x=0 for x in X; v-y=1 for y in Y
+    for x in X:
+        mdl.addConstr(E(v, x) == 0, name=f"vx0_{x}")
+    for yy in Y:
+        mdl.addConstr(E(v, yy) == 1, name=f"vy1_{yy}")
+
+    # K4-free: for every 4-set S, sum_{i<j in S} y_ij <= 5
+    for S in it.combinations(range(N), 4):
+        expr = quicksum(E(i, j) for i, j in it.combinations(S, 2))
+        mdl.addConstr(expr <= 5, name=f"K4free_{S}")
+
+    # alpha(H) <= 4: forbid independent 5-set
+    for T in it.combinations(range(N), 5):
+        expr = quicksum(E(i, j) for i, j in it.combinations(T, 2))
+        mdl.addConstr(expr >= 1, name=f"alpha_le4_{T}")
+
+    # alpha(H[X]) <= 3: forbid independent 4-set entirely inside X
+    for T in it.combinations(X, 4):
+        expr = quicksum(E(i, j) for i, j in it.combinations(T, 2))
+        mdl.addConstr(expr >= 1, name=f"alphaX_le3_{T}")
+
+    # e(H[X]) >= ceil((t^2 - 3t)/6)
+    eX_min = math.ceil((t*t - 3*t) / 6.0)
+    eX_expr = quicksum(E(i, j) for i, j in it.combinations(X, 2))
+    mdl.addConstr(eX_expr >= eX_min, name=f"eX_min")
+
+    # c[a,b,yy] = y[a,yy] AND y[b,yy]
+    for a_idx in range(len(X)):
+        for b_idx in range(a_idx+1, len(X)):
+            a = X[a_idx]; b = X[b_idx]
+            for yy in Y:
+                cab = c[(a, b, yy)]
+                mdl.addConstr(cab <= E(a, yy), name=f"c_le_ay_{a}_{b}_{yy}")
+                mdl.addConstr(cab <= E(b, yy), name=f"c_le_by_{a}_{b}_{yy}")
+                mdl.addConstr(cab >= E(a, yy) + E(b, yy) - 1, name=f"c_ge_summinus1_{a}_{b}_{yy}")
+
+    # No K4-trigger: For every edge ab in X, sum_{yy in Y} c[a,b,yy] <= 4.
+    # Linearize "only for edges": use big-M trick with M=s (|Y|).
+    # Introduce z[a,b] = y[a,b] to gate the constraint; then:
+    #   sum c[a,b,yy] <= 4 + s*(1 - z[a,b]).
+    # If y[a,b]=0, RHS is large and constraint is vacuous; if y[a,b]=1, RHS=4.
+    for a_idx in range(len(X)):
+        for b_idx in range(a_idx+1, len(X)):
+            a = X[a_idx]; b = X[b_idx]
+            z_ab = E(a, b)
+            lhs = quicksum(c[(a, b, yy)] for yy in Y) if len(Y) > 0 else 0
+            rhs = 4 + (len(Y)) * (1 - z_ab)
+            mdl.addConstr(lhs <= rhs, name=f"no_trigger_{a}_{b}")
+
+    # Feasibility model
+    mdl.setObjective(0.0)
+    mdl.optimize()
+
+    status = mdl.Status
+    if status == GRB.OPTIMAL:
+        print(f"[t={t}] FEASIBLE graph found (counterexample to Claim 2 for t).")
+        mdl.write(f"claim2_t{t}_feasible.sol")
+        return False
+    elif status == GRB.INFEASIBLE:
+        print(f"[t={t}] INFEASIBLE: Claim 2 holds for t={t}.")
+        return True
+    else:
+        print(f"[t={t}] Solver status: {status}.")
+        if mdl.SolCount > 0:
+            mdl.write(f"claim2_t{t}_sol.sol")
+        return None
+
+if __name__ == "__main__":
+    all_ok = True
+    for t in range(13, 24):
+        ok = run_for_t(t, time_limit=600, seed=1, verbose=True)
+        if ok is False or ok is None:
+            all_ok = False
+    if all_ok:
+        print("All t=13..23 infeasible: Claim 2 holds in full, hence N*(24) <= 12.")
+    else:
+        print("Some t produced a feasible instance or undetermined. Inspect saved solutions.")
