@@ -124,7 +124,16 @@ Python 3.11.15, Linux, stdlib only, deterministic, `--seed` inert.
 
 **Outcome 1 of the prompt's list: exact reproduction**, including the candidate identifier.
 The identifier is a function of ledger position, so matching it also confirms the T-table and
-transport arms produced the same number of hypotheses.
+transport arms produced the same number of hypotheses — and, because ledger position depends
+on the `m` and `k` grids, that those were left at their defaults in the pretest too.
+
+One inference to flag: the pretest report gave only the *outer* bounds (`r` to 12, `d` to
+112) and never stated its command. The calibration widths `r_train = 8`, `d_train = 92` were
+inferred here — 92 because it is the minimum for which the largest period is fittable, which
+the report itself says drove the sizing. Candidate ids do not constrain `r_train`/`d_train`,
+so a pretest that used slightly different inner widths and got the same outcome cannot be
+ruled out. Everything downstream in this audit uses the parameters printed above, which are
+recorded in `runs/p1-real-C/manifest.json`.
 
 Holdout integrity (`audit/boundaries_p1.json`): 70 720 queries, **0 duplicate requests**,
 **0 cross-phase overlaps**, query ids strictly increasing, `E_freeze.json` written at query
