@@ -1,0 +1,58 @@
+{
+  "ablation": "C: no T family, no transport, no parent theorem",
+  "entries": [
+    {
+      "calibration_errors": 0,
+      "cost": 845,
+      "final_errors": 4,
+      "id": "E-H00001",
+      "kind": "factor",
+      "op": "and",
+      "status": "REFUTED",
+      "validation_errors": 20
+    },
+    {
+      "calibration_errors": 10880,
+      "cost": 1700616,
+      "final_errors": 6532,
+      "id": "E-H00002",
+      "kind": "factor",
+      "op": "or",
+      "status": "REFUTED",
+      "validation_errors": 5460
+    },
+    {
+      "calibration_errors": 10880,
+      "cost": 1700616,
+      "final_errors": 6532,
+      "id": "E-H00003",
+      "kind": "factor",
+      "op": "xor",
+      "status": "REFUTED",
+      "validation_errors": 5460
+    },
+    {
+      "calibration_errors": 10880,
+      "cost": 1700616,
+      "final_errors": 6532,
+      "id": "E-H00004",
+      "kind": "factor",
+      "op": "iff",
+      "status": "REFUTED",
+      "validation_errors": 5460
+    },
+    {
+      "calibration_errors": 0,
+      "cost": 1483,
+      "final_errors": 178,
+      "id": "E-H00005",
+      "kind": "tile",
+      "op": null,
+      "status": "REFUTED",
+      "validation_errors": 575
+    }
+  ],
+  "exports": [],
+  "label": "COMPUTED",
+  "oracle_queries": 64512
+}

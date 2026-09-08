@@ -1,0 +1,2975 @@
+{
+  "columns": {
+    "candidates": [
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.051000000000000004,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.051000000000000004,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.051000000000000004,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.051000000000000004,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.051000000000000004,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:2"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:3"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "gcd:2"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "mod:4"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "mod:6"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "n"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "sub:1"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "add:3"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "gcd:2"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "mod:4"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "mod:6"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "n"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "sub:1"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "gcd:2"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "mod:4"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "mod:6"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "n"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "sub:1"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "gcd:2"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "mod:4"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "mod:6"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "sub:1"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "gcd:2"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "mod:4"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "mod:6"
+        ],
+        "groups": 92,
+        "label": "COMPUTED",
+        "quality_score": 0.052000000000000005,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 308,
+        "contradictory_pairs": 108,
+        "features": [
+          "mod:4",
+          "mod:6"
+        ],
+        "groups": 12,
+        "label": "COMPUTED",
+        "quality_score": 0.35917108977978546,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1012,
+        "contradictory_pairs": 414,
+        "features": [
+          "mod:4"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.41226482213438737,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1012,
+        "contradictory_pairs": 414,
+        "features": [
+          "mod:4",
+          "gcd:2"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.41326482213438737,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 660,
+        "contradictory_pairs": 284,
+        "features": [
+          "mod:6"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.43456389986824767,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 660,
+        "contradictory_pairs": 284,
+        "features": [
+          "mod:6",
+          "gcd:2"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.4355638998682477,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 2070,
+        "contradictory_pairs": 943,
+        "features": [
+          "gcd:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.45764251207729467,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 2070,
+        "contradictory_pairs": 943,
+        "features": [
+          "mod:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.45764251207729467,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1140,
+        "contradictory_pairs": 524,
+        "features": [
+          "gcd:6"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.4628230358504958,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1541,
+        "contradictory_pairs": 943,
+        "features": [
+          "gcd:4"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.6145707332900714,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1365,
+        "contradictory_pairs": 989,
+        "features": [
+          "mod:3"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.7271725593247332,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 4186,
+        "contradictory_pairs": 3059,
+        "features": [
+          "const:0"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.7323127090301003,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 4186,
+        "contradictory_pairs": 3059,
+        "features": [
+          "const:1"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.7323127090301003,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 4186,
+        "contradictory_pairs": 3059,
+        "features": [
+          "const:2"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.7323127090301003,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 4186,
+        "contradictory_pairs": 3059,
+        "features": [
+          "const:3"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.7323127090301003,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 2854,
+        "contradictory_pairs": 2096,
+        "features": [
+          "gcd:5"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.736494805155236,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 2326,
+        "contradictory_pairs": 1710,
+        "features": [
+          "gcd:3"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.7372546263411717,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 801,
+        "contradictory_pairs": 593,
+        "features": [
+          "mod:5"
+        ],
+        "groups": 5,
+        "label": "COMPUTED",
+        "quality_score": 0.7440419855615263,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 135,
+        "contradictory_pairs": 113,
+        "features": [
+          "quo:4"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.8510805152979066,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 91,
+        "contradictory_pairs": 76,
+        "features": [
+          "quo:3"
+        ],
+        "groups": 31,
+        "label": "COMPUTED",
+        "quality_score": 0.8530126612517918,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 45,
+        "contradictory_pairs": 45,
+        "features": [
+          "quo:2"
+        ],
+        "groups": 47,
+        "label": "COMPUTED",
+        "quality_score": 1.0265434782608696,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 3,
+        "contradictory_pairs": 3,
+        "features": [
+          "sub:3"
+        ],
+        "groups": 90,
+        "label": "COMPUTED",
+        "quality_score": 1.0499130434782609,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 1,
+        "features": [
+          "sub:2"
+        ],
+        "groups": 91,
+        "label": "COMPUTED",
+        "quality_score": 1.0504565217391304,
+        "requires_row_probes": false,
+        "vacuous": false
+      }
+    ],
+    "label": "COMPUTED",
+    "scope": "observational equivalence on training coordinates only",
+    "signature_classes": [
+      {
+        "members": [
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42,
+          44,
+          46,
+          48,
+          50,
+          52,
+          54,
+          56,
+          58,
+          60,
+          62,
+          64,
+          66,
+          68,
+          70,
+          72,
+          74,
+          76,
+          78,
+          80,
+          82,
+          84,
+          86,
+          88,
+          90,
+          92
+        ],
+        "signature": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          3,
+          15,
+          27,
+          35,
+          39,
+          47,
+          59,
+          63,
+          75,
+          83,
+          87
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          23
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true
+        ]
+      },
+      {
+        "members": [
+          11,
+          51,
+          71
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          7,
+          43,
+          79
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          67
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          true
+        ]
+      },
+      {
+        "members": [
+          19,
+          55
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          31
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          91
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          5,
+          9,
+          29,
+          53,
+          57,
+          69,
+          77
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          45,
+          89
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true
+        ]
+      },
+      {
+        "members": [
+          17,
+          33,
+          65
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          21,
+          41
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          81
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          13,
+          25,
+          85
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          37,
+          73
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          49
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          61
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          1
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    ]
+  },
+  "label": "COMPUTED",
+  "rows": {
+    "candidates": [
+      {
+        "comparable_pairs": 37,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:period"
+        ],
+        "groups": 9,
+        "label": "COMPUTED",
+        "quality_score": 0.01975,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 37,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:period",
+          "probe:true_count"
+        ],
+        "groups": 9,
+        "label": "COMPUTED",
+        "quality_score": 0.020749999999999998,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 16,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:total_failures"
+        ],
+        "groups": 13,
+        "label": "COMPUTED",
+        "quality_score": 0.028083333333333335,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 16,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:period",
+          "probe:total_failures"
+        ],
+        "groups": 13,
+        "label": "COMPUTED",
+        "quality_score": 0.029083333333333336,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 16,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:total_failures",
+          "probe:true_count"
+        ],
+        "groups": 13,
+        "label": "COMPUTED",
+        "quality_score": 0.029083333333333336,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 38,
+        "contradictory_pairs": 1,
+        "features": [
+          "probe:true_count"
+        ],
+        "groups": 8,
+        "label": "COMPUTED",
+        "quality_score": 0.04398245614035087,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 0.04891666666666667,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:period",
+          "sub:2"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 0.04991666666666667,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:total_failures",
+          "sub:2"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 0.04991666666666667,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:true_count",
+          "sub:2"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 0.04991666666666667,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:period",
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:period",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:period",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:period",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:total_failures",
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:total_failures",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:total_failures",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:total_failures",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:true_count",
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:true_count",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:true_count",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "probe:true_count",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 3,
+        "contradictory_pairs": 2,
+        "features": [
+          "sub:3"
+        ],
+        "groups": 22,
+        "label": "COMPUTED",
+        "quality_score": 0.7134999999999999,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 46,
+        "contradictory_pairs": 37,
+        "features": [
+          "mod:5"
+        ],
+        "groups": 5,
+        "label": "COMPUTED",
+        "quality_score": 0.8157644927536232,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 196,
+        "contradictory_pairs": 163,
+        "features": [
+          "gcd:5"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.8367993197278911,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 22,
+        "contradictory_pairs": 18,
+        "features": [
+          "quo:3"
+        ],
+        "groups": 9,
+        "label": "COMPUTED",
+        "quality_score": 0.8379318181818183,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 232,
+        "contradictory_pairs": 195,
+        "features": [
+          "probe:first_false"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.845683908045977,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 60,
+        "contradictory_pairs": 51,
+        "features": [
+          "mod:4"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.8593333333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 114,
+        "features": [
+          "gcd:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.8688030303030303,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 114,
+        "features": [
+          "mod:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.8688030303030303,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 239,
+        "features": [
+          "const:0"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8690253623188405,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 239,
+        "features": [
+          "const:1"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8690253623188405,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 239,
+        "features": [
+          "const:2"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8690253623188405,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 239,
+        "features": [
+          "const:3"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8690253623188405,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 239,
+        "features": [
+          "probe:cycle_positives"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8690253623188405,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 239,
+        "features": [
+          "probe:first_true"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8690253623188405,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 239,
+        "features": [
+          "probe:onset"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8690253623188405,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 31,
+        "features": [
+          "mod:6"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.8746111111111111,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 84,
+        "contradictory_pairs": 73,
+        "features": [
+          "mod:3"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.876297619047619,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 148,
+        "contradictory_pairs": 129,
+        "features": [
+          "gcd:3"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.8767882882882883,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 96,
+        "contradictory_pairs": 84,
+        "features": [
+          "gcd:4"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.88225,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 68,
+        "contradictory_pairs": 60,
+        "features": [
+          "gcd:6"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.8916862745098039,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 33,
+        "contradictory_pairs": 31,
+        "features": [
+          "quo:4"
+        ],
+        "groups": 7,
+        "label": "COMPUTED",
+        "quality_score": 0.9549772727272727,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 11,
+        "contradictory_pairs": 11,
+        "features": [
+          "quo:2"
+        ],
+        "groups": 13,
+        "label": "COMPUTED",
+        "quality_score": 1.0280833333333332,
+        "requires_row_probes": false,
+        "vacuous": false
+      }
+    ],
+    "label": "COMPUTED",
+    "scope": "observational equivalence on training coordinates only",
+    "signature_classes": [
+      {
+        "members": [
+          23
+        ],
+        "signature": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          19
+        ],
+        "signature": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "members": [
+          17
+        ],
+        "signature": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          13
+        ],
+        "signature": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          11,
+          22
+        ],
+        "signature": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "members": [
+          7,
+          9,
+          14,
+          18,
+          21
+        ],
+        "signature": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "members": [
+          5,
+          10,
+          15,
+          16,
+          20
+        ],
+        "signature": [
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          3,
+          4,
+          6,
+          8,
+          12,
+          24
+        ],
+        "signature": [
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "members": [
+          1,
+          2
+        ],
+        "signature": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    ]
+  }
+}
