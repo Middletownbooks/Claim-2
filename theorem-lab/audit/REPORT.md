@@ -37,6 +37,12 @@ Four findings materially qualify the result:
    periodicity entirely, and other representations still reach **zero final error** (§6).
    The AND factorisation is the *cheapest* description, not the only one.
 
+One result exceeded expectation. In the extended T experiment (§14), the pre-registered
+prediction that *no* arithmetic rule would survive was **falsified**: for the unit family the
+pipeline selected, before the freeze, the rule `U(m,k) ⟺ period(m) | (k−1)` with 0 errors
+over 6 720 tests, and the calibrated period equals `λ(m)` on all 48 moduli. That is a rule
+rather than a table — though the period is still measured per modulus, not derived from `m`.
+
 What genuinely survives: from truth values alone, per modulus, the pipeline recovered a
 threshold-and-period decomposition that agrees exactly with `ν` and `λ` on all 48 moduli,
 extrapolated without error to `d = 400` and `r = 40`, recovered a non-arithmetic hidden
@@ -380,10 +386,60 @@ representation language cannot factor at all.
 
 ---
 
-## 14. T-family follow-up
+## 14. T-family follow-up — and the one result that exceeded prediction
 
-Pre-registered in `audit/PHASE15_preregistration.md` before the run, with predictions
-recorded in advance. Results in §14 addendum below.
+Pre-registered in `audit/PHASE15_preregistration.md` before the run, with four predictions
+recorded in advance and a declared failure condition. Command:
+`--k-train 92 --k-valid 112 --k-test 140` (E grid shrunk to a stub; 14 272 queries, run
+`runs/p15-T-extended`). The window 92 is `2·λ(47)`, derived from the Phase 13 proof —
+**HUMAN_SUPPLIED**, as the pre-registration states.
+
+| Prediction | Outcome |
+|---|---|
+| 1. `cycles` reaches 0 errors everywhere and T becomes `UNREFUTED_ON_TESTED_DATA` for the first time on the real oracle | **Confirmed.** `T-H03177` (cycles), selected before the freeze, 0 errors on train, calibration, validation and final |
+| 2. fitted period `= λ(m)` for squarefree `m`; prefix `[True]` + block `[False]` otherwise | **Confirmed for all 48 rows**, zero deviations |
+| 3. every arithmetic-rule model stays REFUTED | **REFUTED for T — but FALSIFIED for U.** See below |
+| 4. the T result is a memorised per-row code, not a law | **Confirmed for T** (the only T survivor of 3 219 is `cycles`); **wrong for U** |
+
+### The declared failure condition fired
+
+The pre-registration said that if an arithmetic rule survived, that would be *materially
+stronger than expected and must be reported as such, including the rule*. One did, in the
+unit family:
+
+> **`U-H05582`**  `divides(probe:period, sub:1)`  —  i.e.  **`U(m,k) ⟺ period(m) | (k−1)`**
+
+* Evidence: **0 errors and 0 abstentions on all four phases — 6 720 tests** (train 2 208,
+  calibration 2 208, validation 720, final 1 584).
+* It was the candidate **selected before the freeze** (`U_freeze.json: selected_id =
+  U-H05582`), so this is not a post-hoc pick from a large pool.
+* `probe:period` is the row's fitted period. Independently checked: it equals **λ(m) for all
+  48 moduli**. The rule is therefore the classical classification of the unit family,
+  `U(m,k) ⟺ λ(m) | k−1`.
+* The same rule applied to the T family is **REFUTED** (`T-H02201`, 556 final errors) —
+  exactly as the mathematics requires, since T additionally needs `m` squarefree and the
+  feature language cannot express squarefreeness.
+
+**How much is this worth?** More than the E result, and less than a theorem.
+
+* It is a *rule*, not a table: one relation plus 48 measured constants, and it extrapolates
+  to every `k`, not just to the tested window. Compare the T survivor, which is 48 stored
+  sequences.
+* But `λ(m)` is **measured, not derived**: `probe:period` comes from calibrating that row
+  over `k ≤ 92`, so a new modulus still requires 92 fresh observations before the rule can be
+  applied. The rule is "for each modulus there is a period `p_m` with `U(m,k) ⟺ p_m | k−1`",
+  with `p_m` observed. That the observed `p_m` *is* `λ(m)` is the auditor's identification,
+  not the system's.
+* It only exists because the `k`-window was widened to 92 on the strength of the auditor's
+  proof. At the original `k_train = 24` the U family was refuted.
+
+Even so, this is the closest thing in the whole program to a **discovered mathematical
+statement** rather than a fitted description, and it is the one place where the audit's own
+pre-registered expectation was too pessimistic.
+
+Also of note: 18 candidates exported here (1 T + 12 transport + 5 U), and the four other U
+survivors are the same atom conjoined with vacuously-true clauses — i.e. one discovery, not
+five.
 
 ---
 
@@ -402,11 +458,41 @@ What this experiment demonstrates, stated at the altitude the evidence supports:
   Most of the value here is in the falsification machinery — the frozen forecasts, the
   cache-membership asserts, the `INCOMPLETE` status for abstention — not in the discovery
   machinery.
+* **Widening a window bought more than widening a model.** The one rule-shaped result in
+  the program appeared when the `k`-axis was extended to 92, not when the hypothesis language
+  was enriched. Across every experiment here, what limited the system was how much of the
+  object it was allowed to see, not what it was allowed to say — with the single exception of
+  cross-object generalisation, where the language is the binding constraint (§15.1).
 * **The discovery machinery is weaker than it looks.** Three quite different representations
   (AND factors, tiles/row codes, a gcd-of-differences estimator) all reach zero error, and the
   cheapest is not the one the laboratory uses. Nothing in the E result required the specific
   representational language, and the ablation that removes the *most* structure (B) produces
   the *shortest* description.
+### 15.1 Direct test of the missing capability (auditor-initiated)
+
+The diagnosis above is not an inference from architecture — it was measured
+(`audit/crossmodulus.py`, `audit/crossmodulus.json`). Hold out **moduli** instead of axis
+ranges: fit on `m ≤ 30`, predict the `d`-truth-table of `m ∈ [31,48]` at fixed `r = 8`, using
+the laboratory's own hypothesis language over features of `m` and `d` (3 080 models:
+constants, atoms, depth-2 Booleans, feature-pair quotient tables).
+
+| | held-out accuracy (2 016 points) |
+|---|---|
+| majority class ("always false") | 0.90823 |
+| best model **selected by training accuracy** (a quotient table keyed on `add:1`, training accuracy **1.000**) | **0.90823** |
+| best model **selected by cheating on the held-out set** | 0.90873 |
+
+The best honest model performs *exactly* at the trivial baseline, and the best conceivable
+model in this language beats the baseline by 0.05 percentage points. The model that fits the
+training moduli perfectly does so by memorising them — `add:1` is injective on `m`, so the
+table is a lookup — and carries nothing to a new modulus.
+
+**Confirmed empirically: the laboratory can describe the moduli it has seen and cannot say
+anything about one it has not.** The single exception (§14) proves the shape of the limit
+rather than escaping it: `U(m,k) ⟺ period(m) | (k−1)` generalises perfectly along `k` for
+*any* modulus, but only after that modulus has been calibrated over 92 observations. The
+missing capability is specifically the map `m ↦ λ(m)`, not the ability to state a law.
+
 * **The central missing capability is generalisation across objects.** Every model the
   laboratory exports is indexed by modulus. There is no mechanism by which "period at m = 47
   is 46" and "period at m = 32 is 8" can become a hypothesis about `m`. Until a learner can
@@ -415,7 +501,8 @@ What this experiment demonstrates, stated at the altitude the evidence supports:
   discovered structure is a table.
 * **The honest summary of the loop status**: GENERATE ✓, DEFORM ✗ (literal, human-written),
   TRANSPORT ✓ (but on non-independent data), COMPOSE partial, VERIFY ✗ (no formal
-  verification), CLASSIFY ✓, EXTRACT EXCEPTIONS ✓, DISCOVER NEW STRUCTURES ✗.
+  verification), CLASSIFY ✓, EXTRACT EXCEPTIONS ✓, DISCOVER NEW STRUCTURES partial — one
+  genuine rule (§14, unit family), everything else a per-object table.
 
 **Recommended next experiment**, in the spirit of the program: hold out moduli rather than
 axis ranges. Fit on `m ≤ 30`, then require the system to *predict the threshold and period of
