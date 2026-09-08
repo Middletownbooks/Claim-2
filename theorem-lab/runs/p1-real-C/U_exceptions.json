@@ -1,0 +1,1157 @@
+{
+  "failure_instances": 2426,
+  "interpretation": "Clusters of observables; shared causal mechanisms are not proved.",
+  "label": "COMPUTED",
+  "partitions": {
+    "coarse_profile": [
+      {
+        "count": 603,
+        "distinct_moduli": 41,
+        "examples": [
+          {
+            "coord": [
+              3,
+              2
+            ],
+            "query_id": 67634
+          },
+          {
+            "coord": [
+              3,
+              4
+            ],
+            "query_id": 67636
+          },
+          {
+            "coord": [
+              3,
+              6
+            ],
+            "query_id": 67638
+          },
+          {
+            "coord": [
+              3,
+              8
+            ],
+            "query_id": 67640
+          },
+          {
+            "coord": [
+              3,
+              10
+            ],
+            "query_id": 67642
+          }
+        ],
+        "key": "\"[\\\"false\\\",false,true,2]\""
+      },
+      {
+        "count": 1823,
+        "distinct_moduli": 43,
+        "examples": [
+          {
+            "coord": [
+              5,
+              2
+            ],
+            "query_id": 67682
+          },
+          {
+            "coord": [
+              5,
+              4
+            ],
+            "query_id": 67684
+          },
+          {
+            "coord": [
+              5,
+              6
+            ],
+            "query_id": 67686
+          },
+          {
+            "coord": [
+              5,
+              8
+            ],
+            "query_id": 67688
+          },
+          {
+            "coord": [
+              5,
+              10
+            ],
+            "query_id": 67690
+          }
+        ],
+        "key": "\"[\\\"false\\\",false,true,3]\""
+      }
+    ],
+    "column_mod_2_and_witness_unit": [
+      {
+        "count": 1472,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              2
+            ],
+            "query_id": 67634
+          },
+          {
+            "coord": [
+              3,
+              4
+            ],
+            "query_id": 67636
+          },
+          {
+            "coord": [
+              3,
+              6
+            ],
+            "query_id": 67638
+          },
+          {
+            "coord": [
+              3,
+              8
+            ],
+            "query_id": 67640
+          },
+          {
+            "coord": [
+              3,
+              10
+            ],
+            "query_id": 67642
+          }
+        ],
+        "key": "[0,true]"
+      },
+      {
+        "count": 954,
+        "distinct_moduli": 40,
+        "examples": [
+          {
+            "coord": [
+              5,
+              3
+            ],
+            "query_id": 67683
+          },
+          {
+            "coord": [
+              5,
+              7
+            ],
+            "query_id": 67687
+          },
+          {
+            "coord": [
+              5,
+              11
+            ],
+            "query_id": 67691
+          },
+          {
+            "coord": [
+              5,
+              15
+            ],
+            "query_id": 67695
+          },
+          {
+            "coord": [
+              5,
+              19
+            ],
+            "query_id": 67699
+          }
+        ],
+        "key": "[1,true]"
+      }
+    ],
+    "column_mod_3_and_witness_unit": [
+      {
+        "count": 843,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              6
+            ],
+            "query_id": 67638
+          },
+          {
+            "coord": [
+              3,
+              12
+            ],
+            "query_id": 67644
+          },
+          {
+            "coord": [
+              3,
+              18
+            ],
+            "query_id": 67650
+          },
+          {
+            "coord": [
+              3,
+              24
+            ],
+            "query_id": 67656
+          },
+          {
+            "coord": [
+              4,
+              6
+            ],
+            "query_id": 67662
+          }
+        ],
+        "key": "[0,true]"
+      },
+      {
+        "count": 735,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              4
+            ],
+            "query_id": 67636
+          },
+          {
+            "coord": [
+              3,
+              10
+            ],
+            "query_id": 67642
+          },
+          {
+            "coord": [
+              3,
+              16
+            ],
+            "query_id": 67648
+          },
+          {
+            "coord": [
+              3,
+              22
+            ],
+            "query_id": 67654
+          },
+          {
+            "coord": [
+              4,
+              4
+            ],
+            "query_id": 67660
+          }
+        ],
+        "key": "[1,true]"
+      },
+      {
+        "count": 848,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              2
+            ],
+            "query_id": 67634
+          },
+          {
+            "coord": [
+              3,
+              8
+            ],
+            "query_id": 67640
+          },
+          {
+            "coord": [
+              3,
+              14
+            ],
+            "query_id": 67646
+          },
+          {
+            "coord": [
+              3,
+              20
+            ],
+            "query_id": 67652
+          },
+          {
+            "coord": [
+              4,
+              2
+            ],
+            "query_id": 67658
+          }
+        ],
+        "key": "[2,true]"
+      }
+    ],
+    "column_mod_4_and_witness_unit": [
+      {
+        "count": 736,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              4
+            ],
+            "query_id": 67636
+          },
+          {
+            "coord": [
+              3,
+              8
+            ],
+            "query_id": 67640
+          },
+          {
+            "coord": [
+              3,
+              12
+            ],
+            "query_id": 67644
+          },
+          {
+            "coord": [
+              3,
+              16
+            ],
+            "query_id": 67648
+          },
+          {
+            "coord": [
+              3,
+              20
+            ],
+            "query_id": 67652
+          }
+        ],
+        "key": "[0,true]"
+      },
+      {
+        "count": 377,
+        "distinct_moduli": 32,
+        "examples": [
+          {
+            "coord": [
+              7,
+              5
+            ],
+            "query_id": 67733
+          },
+          {
+            "coord": [
+              7,
+              9
+            ],
+            "query_id": 67737
+          },
+          {
+            "coord": [
+              7,
+              17
+            ],
+            "query_id": 67745
+          },
+          {
+            "coord": [
+              7,
+              21
+            ],
+            "query_id": 67749
+          },
+          {
+            "coord": [
+              9,
+              5
+            ],
+            "query_id": 67781
+          }
+        ],
+        "key": "[1,true]"
+      },
+      {
+        "count": 736,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              2
+            ],
+            "query_id": 67634
+          },
+          {
+            "coord": [
+              3,
+              6
+            ],
+            "query_id": 67638
+          },
+          {
+            "coord": [
+              3,
+              10
+            ],
+            "query_id": 67642
+          },
+          {
+            "coord": [
+              3,
+              14
+            ],
+            "query_id": 67646
+          },
+          {
+            "coord": [
+              3,
+              18
+            ],
+            "query_id": 67650
+          }
+        ],
+        "key": "[2,true]"
+      },
+      {
+        "count": 577,
+        "distinct_moduli": 40,
+        "examples": [
+          {
+            "coord": [
+              5,
+              3
+            ],
+            "query_id": 67683
+          },
+          {
+            "coord": [
+              5,
+              7
+            ],
+            "query_id": 67687
+          },
+          {
+            "coord": [
+              5,
+              11
+            ],
+            "query_id": 67691
+          },
+          {
+            "coord": [
+              5,
+              15
+            ],
+            "query_id": 67695
+          },
+          {
+            "coord": [
+              5,
+              19
+            ],
+            "query_id": 67699
+          }
+        ],
+        "key": "[3,true]"
+      }
+    ],
+    "column_mod_5_and_witness_unit": [
+      {
+        "count": 465,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              10
+            ],
+            "query_id": 67642
+          },
+          {
+            "coord": [
+              3,
+              20
+            ],
+            "query_id": 67652
+          },
+          {
+            "coord": [
+              4,
+              10
+            ],
+            "query_id": 67666
+          },
+          {
+            "coord": [
+              4,
+              20
+            ],
+            "query_id": 67676
+          },
+          {
+            "coord": [
+              5,
+              10
+            ],
+            "query_id": 67690
+          }
+        ],
+        "key": "[0,true]"
+      },
+      {
+        "count": 440,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              6
+            ],
+            "query_id": 67638
+          },
+          {
+            "coord": [
+              3,
+              16
+            ],
+            "query_id": 67648
+          },
+          {
+            "coord": [
+              4,
+              6
+            ],
+            "query_id": 67662
+          },
+          {
+            "coord": [
+              4,
+              16
+            ],
+            "query_id": 67672
+          },
+          {
+            "coord": [
+              5,
+              6
+            ],
+            "query_id": 67686
+          }
+        ],
+        "key": "[1,true]"
+      },
+      {
+        "count": 507,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              2
+            ],
+            "query_id": 67634
+          },
+          {
+            "coord": [
+              3,
+              12
+            ],
+            "query_id": 67644
+          },
+          {
+            "coord": [
+              3,
+              22
+            ],
+            "query_id": 67654
+          },
+          {
+            "coord": [
+              4,
+              2
+            ],
+            "query_id": 67658
+          },
+          {
+            "coord": [
+              4,
+              12
+            ],
+            "query_id": 67668
+          }
+        ],
+        "key": "[2,true]"
+      },
+      {
+        "count": 505,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              8
+            ],
+            "query_id": 67640
+          },
+          {
+            "coord": [
+              3,
+              18
+            ],
+            "query_id": 67650
+          },
+          {
+            "coord": [
+              4,
+              8
+            ],
+            "query_id": 67664
+          },
+          {
+            "coord": [
+              4,
+              18
+            ],
+            "query_id": 67674
+          },
+          {
+            "coord": [
+              5,
+              3
+            ],
+            "query_id": 67683
+          }
+        ],
+        "key": "[3,true]"
+      },
+      {
+        "count": 509,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              4
+            ],
+            "query_id": 67636
+          },
+          {
+            "coord": [
+              3,
+              14
+            ],
+            "query_id": 67646
+          },
+          {
+            "coord": [
+              3,
+              24
+            ],
+            "query_id": 67656
+          },
+          {
+            "coord": [
+              4,
+              4
+            ],
+            "query_id": 67660
+          },
+          {
+            "coord": [
+              4,
+              14
+            ],
+            "query_id": 67670
+          }
+        ],
+        "key": "[4,true]"
+      }
+    ],
+    "column_mod_6_and_witness_unit": [
+      {
+        "count": 460,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              6
+            ],
+            "query_id": 67638
+          },
+          {
+            "coord": [
+              3,
+              12
+            ],
+            "query_id": 67644
+          },
+          {
+            "coord": [
+              3,
+              18
+            ],
+            "query_id": 67650
+          },
+          {
+            "coord": [
+              3,
+              24
+            ],
+            "query_id": 67656
+          },
+          {
+            "coord": [
+              4,
+              6
+            ],
+            "query_id": 67662
+          }
+        ],
+        "key": "[0,true]"
+      },
+      {
+        "count": 229,
+        "distinct_moduli": 32,
+        "examples": [
+          {
+            "coord": [
+              5,
+              7
+            ],
+            "query_id": 67687
+          },
+          {
+            "coord": [
+              5,
+              19
+            ],
+            "query_id": 67699
+          },
+          {
+            "coord": [
+              10,
+              7
+            ],
+            "query_id": 67807
+          },
+          {
+            "coord": [
+              10,
+              19
+            ],
+            "query_id": 67819
+          },
+          {
+            "coord": [
+              11,
+              7
+            ],
+            "query_id": 67831
+          }
+        ],
+        "key": "[1,true]"
+      },
+      {
+        "count": 506,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              2
+            ],
+            "query_id": 67634
+          },
+          {
+            "coord": [
+              3,
+              8
+            ],
+            "query_id": 67640
+          },
+          {
+            "coord": [
+              3,
+              14
+            ],
+            "query_id": 67646
+          },
+          {
+            "coord": [
+              3,
+              20
+            ],
+            "query_id": 67652
+          },
+          {
+            "coord": [
+              4,
+              2
+            ],
+            "query_id": 67658
+          }
+        ],
+        "key": "[2,true]"
+      },
+      {
+        "count": 383,
+        "distinct_moduli": 40,
+        "examples": [
+          {
+            "coord": [
+              5,
+              3
+            ],
+            "query_id": 67683
+          },
+          {
+            "coord": [
+              5,
+              15
+            ],
+            "query_id": 67695
+          },
+          {
+            "coord": [
+              7,
+              3
+            ],
+            "query_id": 67731
+          },
+          {
+            "coord": [
+              7,
+              9
+            ],
+            "query_id": 67737
+          },
+          {
+            "coord": [
+              7,
+              15
+            ],
+            "query_id": 67743
+          }
+        ],
+        "key": "[3,true]"
+      },
+      {
+        "count": 506,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              4
+            ],
+            "query_id": 67636
+          },
+          {
+            "coord": [
+              3,
+              10
+            ],
+            "query_id": 67642
+          },
+          {
+            "coord": [
+              3,
+              16
+            ],
+            "query_id": 67648
+          },
+          {
+            "coord": [
+              3,
+              22
+            ],
+            "query_id": 67654
+          },
+          {
+            "coord": [
+              4,
+              4
+            ],
+            "query_id": 67660
+          }
+        ],
+        "key": "[4,true]"
+      },
+      {
+        "count": 342,
+        "distinct_moduli": 40,
+        "examples": [
+          {
+            "coord": [
+              5,
+              11
+            ],
+            "query_id": 67691
+          },
+          {
+            "coord": [
+              5,
+              23
+            ],
+            "query_id": 67703
+          },
+          {
+            "coord": [
+              7,
+              5
+            ],
+            "query_id": 67733
+          },
+          {
+            "coord": [
+              7,
+              11
+            ],
+            "query_id": 67739
+          },
+          {
+            "coord": [
+              7,
+              17
+            ],
+            "query_id": 67745
+          }
+        ],
+        "key": "[5,true]"
+      }
+    ],
+    "least_witness": [
+      {
+        "count": 1270,
+        "distinct_moduli": 23,
+        "examples": [
+          {
+            "coord": [
+              3,
+              2
+            ],
+            "query_id": 67634
+          },
+          {
+            "coord": [
+              3,
+              4
+            ],
+            "query_id": 67636
+          },
+          {
+            "coord": [
+              3,
+              6
+            ],
+            "query_id": 67638
+          },
+          {
+            "coord": [
+              3,
+              8
+            ],
+            "query_id": 67640
+          },
+          {
+            "coord": [
+              3,
+              10
+            ],
+            "query_id": 67642
+          }
+        ],
+        "key": "2"
+      },
+      {
+        "count": 776,
+        "distinct_moduli": 20,
+        "examples": [
+          {
+            "coord": [
+              4,
+              2
+            ],
+            "query_id": 67658
+          },
+          {
+            "coord": [
+              4,
+              4
+            ],
+            "query_id": 67660
+          },
+          {
+            "coord": [
+              4,
+              6
+            ],
+            "query_id": 67662
+          },
+          {
+            "coord": [
+              4,
+              8
+            ],
+            "query_id": 67664
+          },
+          {
+            "coord": [
+              4,
+              10
+            ],
+            "query_id": 67666
+          }
+        ],
+        "key": "3"
+      },
+      {
+        "count": 326,
+        "distinct_moduli": 11,
+        "examples": [
+          {
+            "coord": [
+              6,
+              2
+            ],
+            "query_id": 67706
+          },
+          {
+            "coord": [
+              6,
+              4
+            ],
+            "query_id": 67708
+          },
+          {
+            "coord": [
+              6,
+              6
+            ],
+            "query_id": 67710
+          },
+          {
+            "coord": [
+              6,
+              8
+            ],
+            "query_id": 67712
+          },
+          {
+            "coord": [
+              6,
+              10
+            ],
+            "query_id": 67714
+          }
+        ],
+        "key": "5"
+      },
+      {
+        "count": 54,
+        "distinct_moduli": 2,
+        "examples": [
+          {
+            "coord": [
+              22,
+              6
+            ],
+            "query_id": 68094
+          },
+          {
+            "coord": [
+              22,
+              16
+            ],
+            "query_id": 68104
+          },
+          {
+            "coord": [
+              30,
+              2
+            ],
+            "query_id": 68282
+          },
+          {
+            "coord": [
+              30,
+              3
+            ],
+            "query_id": 68283
+          },
+          {
+            "coord": [
+              30,
+              4
+            ],
+            "query_id": 68284
+          }
+        ],
+        "key": "7"
+      }
+    ],
+    "witness_gcd": [
+      {
+        "count": 2426,
+        "distinct_moduli": 46,
+        "examples": [
+          {
+            "coord": [
+              3,
+              2
+            ],
+            "query_id": 67634
+          },
+          {
+            "coord": [
+              3,
+              4
+            ],
+            "query_id": 67636
+          },
+          {
+            "coord": [
+              3,
+              6
+            ],
+            "query_id": 67638
+          },
+          {
+            "coord": [
+              3,
+              8
+            ],
+            "query_id": 67640
+          },
+          {
+            "coord": [
+              3,
+              10
+            ],
+            "query_id": 67642
+          }
+        ],
+        "key": "1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "events": [
+    {
+      "H1": "T-H03177",
+      "H2": "T-H03177",
+      "counterexample": {
+        "coord": [
+          17,
+          33
+        ],
+        "label": "COMPUTED",
+        "least_witness": null,
+        "novelty_reference": "training observational signatures",
+        "observable_structure": "[\"true\"]",
+        "observed": true,
+        "prediction": false,
+        "query_id": 1129,
+        "structurally_novel": false
+      },
+      "family": "T",
+      "kind": "conjecture_evolution",
+      "label": "COMPUTED",
+      "revision_succeeded_on_refinement_set": false,
+      "what_it_exposes": "An observable prediction failure, not an inferred cause."
+    },
+    {
+      "kind": "theorem_deformation",
+      "label": "CONJECTURED",
+      "new_family": "E",
+      "operator": "x^k = x -> x^(r+d) = x^r",
+      "operator_origin": "preregistered library, not discovered",
+      "parent": "TR-H03319",
+      "parent_status": "unrefuted exported candidate"
+    },
+    {
+      "kind": "theorem_deformation",
+      "label": "CONJECTURED",
+      "new_family": "U",
+      "operator": "all residues -> residues satisfying gcd(x,m)=1",
+      "operator_origin": "preregistered library, not discovered",
+      "parent": "TR-H03319"
+    },
+    {
+      "change": "raw table -> arithmetic rules / quotient tables / prefix-block codes -> Boolean tensor factors",
+      "kind": "representation_deformation",
+      "label": "COMPUTED",
+      "parent": "TR-H03319"
+    },
+    {
+      "change": "replace direct finite enumeration by a proof using surviving transport lemmas",
+      "kind": "proof_deformation",
+      "label": "UNCHECKED SPECIFICATION",
+      "parent": "TR-H03319",
+      "status": "proof planning only; no proof synthesis engine"
+    },
+    {
+      "H1": "U-H06588",
+      "H2": "U-H06588",
+      "counterexample": {
+        "coord": [
+          17,
+          33
+        ],
+        "label": "COMPUTED",
+        "least_witness": null,
+        "novelty_reference": "training observational signatures",
+        "observable_structure": "[\"true\"]",
+        "observed": true,
+        "prediction": false,
+        "query_id": 68713,
+        "structurally_novel": false
+      },
+      "family": "U",
+      "kind": "conjecture_evolution",
+      "label": "COMPUTED",
+      "revision_succeeded_on_refinement_set": false,
+      "what_it_exposes": "An observable prediction failure, not an inferred cause."
+    },
+    {
+      "change": "full profile -> early-stopping least-witness computation",
+      "early_residue_evaluations": 199,
+      "full_residue_evaluations": 288,
+      "kind": "algorithm_deformation",
+      "label": "COMPUTED",
+      "parent": "TR-H03319",
+      "scope": "bounded operational equivalence only",
+      "tests": 64
+    }
+  ],
+  "label": "COMPUTED"
+}

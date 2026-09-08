@@ -1,0 +1,1210 @@
+{
+  "grid": {
+    "A": [
+      6,
+      8
+    ],
+    "B": [
+      48,
+      64
+    ],
+    "M": 20
+  },
+  "label": "COMPUTED",
+  "note": "Scoring is identical for every family and mentions no particular deformation. T is (a,1,all); U is (a,1,units); the human-designed E deformation is (a+b,a,all).",
+  "oracle_queries": 573440,
+  "pre_registered_weights": {
+    "compressibility": 0.2,
+    "cross_modulus_invariance": 0.15,
+    "exception_structure": 0.1,
+    "extrapolation": 0.25,
+    "nontriviality": 0.3
+  },
+  "ranking": [
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5597222222222222,
+        "cross_modulus_invariance": 0.5634920634920635,
+        "exception_structure": 0.8361394871308416,
+        "extrapolation": 0.9714285714285714,
+        "nontriviality": 0.555
+      },
+      "description_bits": 2536,
+      "domain": "all",
+      "family": "x^(1) = x^(a) on all",
+      "final_errors": 128,
+      "lhs": "1",
+      "representation_choice": {
+        "factor": 13,
+        "tile": 7
+      },
+      "rhs": "a",
+      "score": 0.6894393455384811,
+      "true_rate": 0.30833333333333335
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.48611111111111116,
+        "cross_modulus_invariance": 0.23333333333333328,
+        "exception_structure": 0.45543090254412777,
+        "extrapolation": 0.9761160714285715,
+        "nontriviality": 0.8725000000000002
+      },
+      "description_bits": 2960,
+      "domain": "all",
+      "family": "x^(2a) = x^(ab) on all",
+      "final_errors": 107,
+      "lhs": "2a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.6835443303337778,
+      "true_rate": 0.5152777777777777
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5694444444444444,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.15653383141310828,
+        "extrapolation": 0.9939732142857143,
+        "nontriviality": 0.8615625
+      },
+      "description_bits": 2480,
+      "domain": "units",
+      "family": "x^(a) = x^(ab) on units",
+      "final_errors": 27,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.6765043256016283,
+      "true_rate": 0.5213541666666667
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5583333333333333,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.15653383141310828,
+        "extrapolation": 0.9941964285714285,
+        "nontriviality": 0.8615625
+      },
+      "description_bits": 2544,
+      "domain": "units",
+      "family": "x^(2a) = x^(ab) on units",
+      "final_errors": 26,
+      "lhs": "2a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.6743379069508346,
+      "true_rate": 0.5213541666666667
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7583333333333333,
+        "cross_modulus_invariance": 0.4,
+        "exception_structure": 0.43349049344709467,
+        "extrapolation": 0.8285714285714285,
+        "nontriviality": 0.675
+      },
+      "description_bits": 1392,
+      "domain": "all",
+      "family": "x^(a+2) = x^(2a) on all",
+      "final_errors": 768,
+      "lhs": "a+2",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "2a",
+      "score": 0.6646585731542334,
+      "true_rate": 0.375
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5666666666666667,
+        "cross_modulus_invariance": 0.4,
+        "exception_structure": 0.3985646135709229,
+        "extrapolation": 0.9428571428571428,
+        "nontriviality": 0.675
+      },
+      "description_bits": 2496,
+      "domain": "all",
+      "family": "x^(a+1) = x^(2a) on all",
+      "final_errors": 256,
+      "lhs": "a+1",
+      "representation_choice": {
+        "factor": 8,
+        "tile": 12
+      },
+      "rhs": "2a",
+      "score": 0.6514040804047113,
+      "true_rate": 0.375
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.4041666666666667,
+        "cross_modulus_invariance": 0.09999999999999998,
+        "exception_structure": 0.5432952452835162,
+        "extrapolation": 0.9265625,
+        "nontriviality": 0.8803125
+      },
+      "description_bits": 3432,
+      "domain": "all",
+      "family": "x^(a) = x^(ab) on all",
+      "final_errors": 329,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.645897232861685,
+      "true_rate": 0.4890625
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5652777777777778,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.1408058959171079,
+        "extrapolation": 0.9591517857142857,
+        "nontriviality": 0.7840625000000001
+      },
+      "description_bits": 2504,
+      "domain": "units",
+      "family": "x^(b) = x^(ab) on units",
+      "final_errors": 183,
+      "lhs": "b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.6421428415758378,
+      "true_rate": 0.5644097222222222
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.6791666666666667,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.38687243345658195,
+        "extrapolation": 0.9854910714285714,
+        "nontriviality": 0.6021875
+      },
+      "description_bits": 1848,
+      "domain": "all",
+      "family": "x^(a+2) = x^(a+b) on all",
+      "final_errors": 65,
+      "lhs": "a+2",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.6415495945361345,
+      "true_rate": 0.3345486111111111
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.8097222222222222,
+        "cross_modulus_invariance": 1.0,
+        "exception_structure": 0.771461856046472,
+        "extrapolation": 1.0,
+        "nontriviality": 0.0
+      },
+      "description_bits": 1096,
+      "domain": "all",
+      "family": "x^(1) = x^(2a) on all",
+      "final_errors": 0,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "2a",
+      "score": 0.6390906300490917,
+      "true_rate": 0.1
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.4291666666666667,
+        "cross_modulus_invariance": 0.23333333333333328,
+        "exception_structure": 0.5121639025677824,
+        "extrapolation": 0.9674107142857142,
+        "nontriviality": 0.733125
+      },
+      "description_bits": 3288,
+      "domain": "all",
+      "family": "x^(a+2) = x^(ab) on all",
+      "final_errors": 146,
+      "lhs": "a+2",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.6338399021615402,
+      "true_rate": 0.40729166666666666
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.6583333333333333,
+        "cross_modulus_invariance": 0.23333333333333328,
+        "exception_structure": 0.4290382247091229,
+        "extrapolation": 0.9863839285714285,
+        "nontriviality": 0.5915625000000001
+      },
+      "description_bits": 1968,
+      "domain": "all",
+      "family": "x^(a+1) = x^(a+b) on all",
+      "final_errors": 61,
+      "lhs": "a+1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.6336352212804361,
+      "true_rate": 0.32864583333333336
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5486111111111112,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.16000195475217283,
+        "extrapolation": 0.9805803571428572,
+        "nontriviality": 0.7378125000000001
+      },
+      "description_bits": 2600,
+      "domain": "units",
+      "family": "x^(a+2) = x^(ab) on units",
+      "final_errors": 87,
+      "lhs": "a+2",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.6322112569831538,
+      "true_rate": 0.40989583333333335
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7583333333333333,
+        "cross_modulus_invariance": 0.4,
+        "exception_structure": 0.10667556175777815,
+        "extrapolation": 0.8285714285714285,
+        "nontriviality": 0.675
+      },
+      "description_bits": 1392,
+      "domain": "units",
+      "family": "x^(a+2) = x^(2a) on units",
+      "final_errors": 768,
+      "lhs": "a+2",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "2a",
+      "score": 0.6319770799853017,
+      "true_rate": 0.375
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7333333333333334,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11465507510656658,
+        "extrapolation": 1.0,
+        "nontriviality": 0.6056250000000001
+      },
+      "description_bits": 1536,
+      "domain": "units",
+      "family": "x^(1) = x^(b) on units",
+      "final_errors": 0,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "b",
+      "score": 0.6298196741773234,
+      "true_rate": 0.33645833333333336
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7333333333333334,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11465507510656658,
+        "extrapolation": 1.0,
+        "nontriviality": 0.6056250000000001
+      },
+      "description_bits": 1536,
+      "domain": "units",
+      "family": "x^(a+1) = x^(a+b) on units",
+      "final_errors": 0,
+      "lhs": "a+1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.6298196741773234,
+      "true_rate": 0.33645833333333336
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7333333333333334,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11565802475059528,
+        "extrapolation": 1.0,
+        "nontriviality": 0.6018749999999999
+      },
+      "description_bits": 1536,
+      "domain": "units",
+      "family": "x^(a) = x^(a+b) on units",
+      "final_errors": 0,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.6287949691417263,
+      "true_rate": 0.334375
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7277777777777779,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11465507510656658,
+        "extrapolation": 1.0,
+        "nontriviality": 0.6056250000000001
+      },
+      "description_bits": 1568,
+      "domain": "units",
+      "family": "x^(a+2) = x^(a+b) on units",
+      "final_errors": 0,
+      "lhs": "a+2",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.6287085630662123,
+      "true_rate": 0.33645833333333336
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5666666666666667,
+        "cross_modulus_invariance": 0.4,
+        "exception_structure": 0.10667556175777815,
+        "extrapolation": 0.9428571428571428,
+        "nontriviality": 0.675
+      },
+      "description_bits": 2496,
+      "domain": "units",
+      "family": "x^(1) = x^(a) on units",
+      "final_errors": 256,
+      "lhs": "1",
+      "representation_choice": {
+        "factor": 8,
+        "tile": 12
+      },
+      "rhs": "a",
+      "score": 0.6222151752233969,
+      "true_rate": 0.375
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5666666666666667,
+        "cross_modulus_invariance": 0.4,
+        "exception_structure": 0.10667556175777815,
+        "extrapolation": 0.9428571428571428,
+        "nontriviality": 0.675
+      },
+      "description_bits": 2496,
+      "domain": "units",
+      "family": "x^(a+1) = x^(2a) on units",
+      "final_errors": 256,
+      "lhs": "a+1",
+      "representation_choice": {
+        "factor": 8,
+        "tile": 12
+      },
+      "rhs": "2a",
+      "score": 0.6222151752233969,
+      "true_rate": 0.375
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.42638888888888893,
+        "cross_modulus_invariance": 0.1333333333333333,
+        "exception_structure": 0.4029416953200343,
+        "extrapolation": 0.9395089285714285,
+        "nontriviality": 0.7890625000000001
+      },
+      "description_bits": 3304,
+      "domain": "all",
+      "family": "x^(b) = x^(ab) on all",
+      "final_errors": 271,
+      "lhs": "b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.6171679294526384,
+      "true_rate": 0.5616319444444444
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.8097222222222222,
+        "cross_modulus_invariance": 1.0,
+        "exception_structure": 0.49674166522435426,
+        "extrapolation": 1.0,
+        "nontriviality": 0.0
+      },
+      "description_bits": 1096,
+      "domain": "all",
+      "family": "x^(a) = x^(a+1) on all",
+      "final_errors": 0,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+1",
+      "score": 0.6116186109668799,
+      "true_rate": 0.1
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.75,
+        "cross_modulus_invariance": 0.23333333333333328,
+        "exception_structure": 0.5499333419035619,
+        "extrapolation": 0.9857142857142858,
+        "nontriviality": 0.4083333333333333
+      },
+      "description_bits": 1440,
+      "domain": "all",
+      "family": "x^(a) = x^(2a) on all",
+      "final_errors": 64,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "2a",
+      "score": 0.6089219056189277,
+      "true_rate": 0.2916666666666667
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5361111111111111,
+        "cross_modulus_invariance": 0.23333333333333328,
+        "exception_structure": 0.42049798810091754,
+        "extrapolation": 0.9808035714285714,
+        "nontriviality": 0.5925
+      },
+      "description_bits": 2672,
+      "domain": "all",
+      "family": "x^(b) = x^(2a) on all",
+      "final_errors": 86,
+      "lhs": "b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "2a",
+      "score": 0.6072229138894568,
+      "true_rate": 0.32916666666666666
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.8097222222222222,
+        "cross_modulus_invariance": 1.0,
+        "exception_structure": 0.41867850123629713,
+        "extrapolation": 1.0,
+        "nontriviality": 0.0
+      },
+      "description_bits": 1096,
+      "domain": "all",
+      "family": "x^(a+1) = x^(a+2) on all",
+      "final_errors": 0,
+      "lhs": "a+1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+2",
+      "score": 0.6038122945680742,
+      "true_rate": 0.1
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.6083333333333334,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11473860014149961,
+        "extrapolation": 0.9933035714285714,
+        "nontriviality": 0.6053125
+      },
+      "description_bits": 2256,
+      "domain": "units",
+      "family": "x^(b) = x^(2a) on units",
+      "final_errors": 30,
+      "lhs": "b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "2a",
+      "score": 0.6030601695379595,
+      "true_rate": 0.3362847222222222
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5777777777777777,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11465507510656658,
+        "extrapolation": 0.9821428571428571,
+        "nontriviality": 0.6056250000000001
+      },
+      "description_bits": 2432,
+      "domain": "units",
+      "family": "x^(a) = x^(b) on units",
+      "final_errors": 80,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "b",
+      "score": 0.5942442773519265,
+      "true_rate": 0.33645833333333336
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5777777777777777,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11465507510656658,
+        "extrapolation": 0.9821428571428571,
+        "nontriviality": 0.6056250000000001
+      },
+      "description_bits": 2432,
+      "domain": "units",
+      "family": "x^(2a) = x^(a+b) on units",
+      "final_errors": 80,
+      "lhs": "2a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.5942442773519265,
+      "true_rate": 0.33645833333333336
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.49583333333333335,
+        "cross_modulus_invariance": 0.23333333333333328,
+        "exception_structure": 0.4042241136040903,
+        "extrapolation": 0.9638392857142857,
+        "nontriviality": 0.595
+      },
+      "description_bits": 2904,
+      "domain": "all",
+      "family": "x^(2a) = x^(a+b) on all",
+      "final_errors": 162,
+      "lhs": "2a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.5940488994556471,
+      "true_rate": 0.33055555555555555
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5694444444444444,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11465507510656658,
+        "extrapolation": 0.9821428571428571,
+        "nontriviality": 0.6056250000000001
+      },
+      "description_bits": 2480,
+      "domain": "units",
+      "family": "x^(b) = x^(a+2) on units",
+      "final_errors": 80,
+      "lhs": "b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+2",
+      "score": 0.5925776106852599,
+      "true_rate": 0.33645833333333336
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5625,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11465507510656658,
+        "extrapolation": 0.9821428571428571,
+        "nontriviality": 0.6056250000000001
+      },
+      "description_bits": 2520,
+      "domain": "units",
+      "family": "x^(b) = x^(a+1) on units",
+      "final_errors": 80,
+      "lhs": "b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+1",
+      "score": 0.591188721796371,
+      "true_rate": 0.33645833333333336
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5638888888888889,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.11532355259310234,
+        "extrapolation": 0.9834821428571429,
+        "nontriviality": 0.603125
+      },
+      "description_bits": 2512,
+      "domain": "units",
+      "family": "x^(1) = x^(a+b) on units",
+      "final_errors": 74,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.5911181687513738,
+      "true_rate": 0.3350694444444444
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5305555555555556,
+        "cross_modulus_invariance": 0.25,
+        "exception_structure": 0.7375562330310105,
+        "extrapolation": 1.0,
+        "nontriviality": 0.40875
+      },
+      "description_bits": 2704,
+      "domain": "all",
+      "family": "x^(1) = x^(b) on all",
+      "final_errors": 0,
+      "lhs": "1",
+      "representation_choice": {
+        "factor": 7,
+        "tile": 13
+      },
+      "rhs": "b",
+      "score": 0.5899917344142122,
+      "true_rate": 0.22708333333333333
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7555555555555555,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.12544796486929433,
+        "extrapolation": 1.0,
+        "nontriviality": 0.42
+      },
+      "description_bits": 1408,
+      "domain": "units",
+      "family": "x^(1) = x^(a+1) on units",
+      "final_errors": 0,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+1",
+      "score": 0.5796559075980405,
+      "true_rate": 0.3
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7555555555555555,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.12544796486929433,
+        "extrapolation": 1.0,
+        "nontriviality": 0.42
+      },
+      "description_bits": 1408,
+      "domain": "units",
+      "family": "x^(a) = x^(2a) on units",
+      "final_errors": 0,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "2a",
+      "score": 0.5796559075980405,
+      "true_rate": 0.3
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7555555555555555,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.12544796486929433,
+        "extrapolation": 1.0,
+        "nontriviality": 0.42
+      },
+      "description_bits": 1408,
+      "domain": "units",
+      "family": "x^(b) = x^(a+b) on units",
+      "final_errors": 0,
+      "lhs": "b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.5796559075980405,
+      "true_rate": 0.3
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7583333333333333,
+        "cross_modulus_invariance": 0.40740740740740744,
+        "exception_structure": 0.7520641622772737,
+        "extrapolation": 1.0,
+        "nontriviality": 0.13416666666666666
+      },
+      "description_bits": 1392,
+      "domain": "all",
+      "family": "x^(1) = x^(a+1) on all",
+      "final_errors": 0,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+1",
+      "score": 0.5782341940055052,
+      "true_rate": 0.19166666666666668
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7458333333333333,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.12544796486929433,
+        "extrapolation": 1.0,
+        "nontriviality": 0.42
+      },
+      "description_bits": 1464,
+      "domain": "units",
+      "family": "x^(1) = x^(a+2) on units",
+      "final_errors": 0,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+2",
+      "score": 0.5777114631535961,
+      "true_rate": 0.3
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.48750000000000004,
+        "cross_modulus_invariance": 0.09999999999999998,
+        "exception_structure": 0.48911100609762714,
+        "extrapolation": 1.0,
+        "nontriviality": 0.551875
+      },
+      "description_bits": 2952,
+      "domain": "all",
+      "family": "x^(a) = x^(a+b) on all",
+      "final_errors": 0,
+      "lhs": "a",
+      "representation_choice": {
+        "factor": 7,
+        "tile": 13
+      },
+      "rhs": "a+b",
+      "score": 0.5769736006097627,
+      "true_rate": 0.30659722222222224
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.7486111111111111,
+        "cross_modulus_invariance": 0.40740740740740744,
+        "exception_structure": 0.7520641622772737,
+        "extrapolation": 1.0,
+        "nontriviality": 0.13416666666666666
+      },
+      "description_bits": 1448,
+      "domain": "all",
+      "family": "x^(1) = x^(a+2) on all",
+      "final_errors": 0,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+2",
+      "score": 0.5762897495610607,
+      "true_rate": 0.19166666666666668
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.8097222222222222,
+        "cross_modulus_invariance": 1.0,
+        "exception_structure": 0.07938016428569528,
+        "extrapolation": 1.0,
+        "nontriviality": 0.0
+      },
+      "description_bits": 1096,
+      "domain": "units",
+      "family": "x^(a) = x^(a+1) on units",
+      "final_errors": 0,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+1",
+      "score": 0.569882460873014,
+      "true_rate": 0.1
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.8097222222222222,
+        "cross_modulus_invariance": 1.0,
+        "exception_structure": 0.07938016428569528,
+        "extrapolation": 1.0,
+        "nontriviality": 0.0
+      },
+      "description_bits": 1096,
+      "domain": "units",
+      "family": "x^(a+1) = x^(a+2) on units",
+      "final_errors": 0,
+      "lhs": "a+1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+2",
+      "score": 0.569882460873014,
+      "true_rate": 0.1
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.8097222222222222,
+        "cross_modulus_invariance": 1.0,
+        "exception_structure": 0.07332140244394336,
+        "extrapolation": 1.0,
+        "nontriviality": 0.0
+      },
+      "description_bits": 1096,
+      "domain": "units",
+      "family": "x^(1) = x^(2a) on units",
+      "final_errors": 0,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "2a",
+      "score": 0.5692765846888388,
+      "true_rate": 0.1
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.6041666666666667,
+        "cross_modulus_invariance": 0.5925925925925926,
+        "exception_structure": 0.7735890515789235,
+        "extrapolation": 1.0,
+        "nontriviality": 0.09499999999999999
+      },
+      "description_bits": 2280,
+      "domain": "all",
+      "family": "x^(a) = x^(a+2) on all",
+      "final_errors": 0,
+      "lhs": "a",
+      "representation_choice": {
+        "factor": 3,
+        "tile": 17
+      },
+      "rhs": "a+2",
+      "score": 0.5655811273801146,
+      "true_rate": 0.31666666666666665
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5958333333333333,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.3387806414143615,
+        "extrapolation": 0.9910714285714286,
+        "nontriviality": 0.3790625
+      },
+      "description_bits": 2328,
+      "domain": "all",
+      "family": "x^(a+b) = x^(ab) on all",
+      "final_errors": 40,
+      "lhs": "a+b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.55453133795096,
+      "true_rate": 0.21059027777777778
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.38888888888888884,
+        "cross_modulus_invariance": 0.09999999999999998,
+        "exception_structure": 0.39976217860824503,
+        "extrapolation": 0.9660714285714286,
+        "nontriviality": 0.5965625
+      },
+      "description_bits": 3520,
+      "domain": "all",
+      "family": "x^(b) = x^(a+2) on all",
+      "final_errors": 152,
+      "lhs": "b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+2",
+      "score": 0.5532406027814594,
+      "true_rate": 0.3314236111111111
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.3666666666666667,
+        "cross_modulus_invariance": 0.09999999999999998,
+        "exception_structure": 0.44109494790056625,
+        "extrapolation": 0.9620535714285714,
+        "nontriviality": 0.58625
+      },
+      "description_bits": 3648,
+      "domain": "all",
+      "family": "x^(b) = x^(a+1) on all",
+      "final_errors": 170,
+      "lhs": "b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+1",
+      "score": 0.5488312209805328,
+      "true_rate": 0.32569444444444445
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5680555555555555,
+        "cross_modulus_invariance": 0.25,
+        "exception_structure": 0.7280254548756706,
+        "extrapolation": 0.9834821428571429,
+        "nontriviality": 0.24024305555555558
+      },
+      "description_bits": 2488,
+      "domain": "all",
+      "family": "x^(1) = x^(a+b) on all",
+      "final_errors": 74,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+b",
+      "score": 0.5418571089796306,
+      "true_rate": 0.21840277777777778
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5361111111111111,
+        "cross_modulus_invariance": 0.23333333333333328,
+        "exception_structure": 0.3951807949750439,
+        "extrapolation": 0.9799107142857143,
+        "nontriviality": 0.3684375
+      },
+      "description_bits": 2672,
+      "domain": "all",
+      "family": "x^(a+1) = x^(ab) on all",
+      "final_errors": 90,
+      "lhs": "a+1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.5372492302911551,
+      "true_rate": 0.2046875
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.3597222222222223,
+        "cross_modulus_invariance": 0.09999999999999998,
+        "exception_structure": 0.5001824978992078,
+        "extrapolation": 0.9263392857142857,
+        "nontriviality": 0.5553125
+      },
+      "description_bits": 3688,
+      "domain": "all",
+      "family": "x^(a) = x^(b) on all",
+      "final_errors": 330,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "b",
+      "score": 0.5351412656629366,
+      "true_rate": 0.30850694444444443
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.8013888888888889,
+        "cross_modulus_invariance": 0.6842105263157895,
+        "exception_structure": 0.21834033547233334,
+        "extrapolation": 1.0,
+        "nontriviality": 0.0
+      },
+      "description_bits": 1144,
+      "domain": "units",
+      "family": "x^(a) = x^(a+2) on units",
+      "final_errors": 0,
+      "lhs": "a",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "a+2",
+      "score": 0.5347433902723796,
+      "true_rate": 0.35
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.41666666666666663,
+        "cross_modulus_invariance": 0.25,
+        "exception_structure": 0.8168779316986272,
+        "extrapolation": 0.9910714285714286,
+        "nontriviality": 0.28125
+      },
+      "description_bits": 3360,
+      "domain": "all",
+      "family": "x^(1) = x^(ab) on all",
+      "final_errors": 40,
+      "lhs": "1",
+      "representation_choice": {
+        "factor": 7,
+        "tile": 13
+      },
+      "rhs": "ab",
+      "score": 0.5346639836460532,
+      "true_rate": 0.15625
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.6055555555555556,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.0916239502147782,
+        "extrapolation": 0.9910714285714286,
+        "nontriviality": 0.3790625
+      },
+      "description_bits": 2272,
+      "domain": "units",
+      "family": "x^(1) = x^(ab) on units",
+      "final_errors": 40,
+      "lhs": "1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.5317601132754461,
+      "true_rate": 0.21059027777777778
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.6,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.0916239502147782,
+        "extrapolation": 0.9910714285714286,
+        "nontriviality": 0.3790625
+      },
+      "description_bits": 2304,
+      "domain": "units",
+      "family": "x^(a+1) = x^(ab) on units",
+      "final_errors": 40,
+      "lhs": "a+1",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.5306490021643351,
+      "true_rate": 0.21059027777777778
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5958333333333333,
+        "cross_modulus_invariance": 0.2666666666666667,
+        "exception_structure": 0.0916239502147782,
+        "extrapolation": 0.9910714285714286,
+        "nontriviality": 0.3790625
+      },
+      "description_bits": 2328,
+      "domain": "units",
+      "family": "x^(a+b) = x^(ab) on units",
+      "final_errors": 40,
+      "lhs": "a+b",
+      "representation_choice": {
+        "tile": 20
+      },
+      "rhs": "ab",
+      "score": 0.5298156688310017,
+      "true_rate": 0.21059027777777778
+    },
+    {
+      "calibration_errors": 0,
+      "components": {
+        "compressibility": 0.5013888888888889,
+        "cross_modulus_invariance": 0.125,
+        "exception_structure": 0.3935686125625151,
+        "extrapolation": 0.9723214285714286,
+        "nontriviality": 0.41562499999999997
+      },
+      "description_bits": 2872,
+      "domain": "all",
+      "family": "x^(b) = x^(a+b) on all",
+      "final_errors": 124,
+      "lhs": "b",
+      "representation_choice": {
+        "factor": 7,
+        "tile": 13
+      },
+      "rhs": "a+b",
+      "score": 0.5261524961768864,
+      "true_rate": 0.296875
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "configuration": {
+    "budget": 40000,
+    "control": "C",
+    "d_test": 24,
+    "d_train": 12,
+    "d_valid": 18,
+    "k_test": 64,
+    "k_train": 24,
+    "k_valid": 40,
+    "m_test": 48,
+    "m_train": 24,
+    "m_valid": 36,
+    "oracle": "synthetic",
+    "oracle_command": null,
+    "out": "runs/p0-selftest",
+    "r_test": 8,
+    "r_train": 4,
+    "r_valid": 6,
+    "seed": 20250308,
+    "self_test": true,
+    "worker": false
+  },
+  "label": "COMPUTED",
+  "platform": "Linux-6.18.44-fc-v24-x86_64-with-glibc2.39",
+  "provenance_policy": "Labels apply recursively unless a nested object overrides them.",
+  "python": "3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 13.3.0]",
+  "randomness": "Search is deterministic. Seed is recorded for protocol identity; this version does not consume random numbers.",
+  "source_sha256": "bb8640cce91604e322ab6292bf09ec7a061d87965a836fe3f4bccd1270ff1405",
+  "verification_status": "No formal verification is performed."
+}

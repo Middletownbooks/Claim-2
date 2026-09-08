@@ -1,0 +1,36 @@
+{
+  "ablation": "B",
+  "calibration_points": 35328,
+  "final_abstentions": 0,
+  "final_accuracy": 1.0,
+  "final_errors": 0,
+  "final_points": 15552,
+  "final_points_total": 15552,
+  "grid": {
+    "D": [
+      92,
+      102,
+      112
+    ],
+    "M": 48,
+    "R": [
+      8,
+      10,
+      12
+    ]
+  },
+  "oracle_queries": 64512,
+  "selected_family_counts": {
+    "difference_estimator": 46,
+    "grammar": 2
+  },
+  "total_description_cost": 186,
+  "validation_points": 13632,
+  "world_command": [
+    "/usr/local/bin/python3",
+    "/home/user/Claim-2/theorem-lab/lab.py",
+    "--worker",
+    "--oracle",
+    "real"
+  ]
+}

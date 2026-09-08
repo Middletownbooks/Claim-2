@@ -1,0 +1,90 @@
+{
+  "Boolean_relations": [
+    "and",
+    "or",
+    "xor"
+  ],
+  "atomic_relations": [
+    "eq",
+    "le",
+    "divides",
+    "coprime"
+  ],
+  "empirical_features": [
+    "true count",
+    "first true",
+    "first false",
+    "failure count",
+    "learned onset",
+    "learned period",
+    "cycle positive count"
+  ],
+  "features": [
+    "n",
+    "add:1",
+    "sub:1",
+    "add:2",
+    "sub:2",
+    "add:3",
+    "sub:3",
+    "mod:2",
+    "gcd:2",
+    "mod:3",
+    "gcd:3",
+    "mod:4",
+    "gcd:4",
+    "mod:5",
+    "gcd:5",
+    "mod:6",
+    "gcd:6",
+    "quo:2",
+    "quo:3",
+    "quo:4",
+    "const:0",
+    "const:1",
+    "const:2",
+    "const:3"
+  ],
+  "formal_export": "Only preregistered shortlists with no observed counterexamples or abstentions; infinite extension remains conjectural.",
+  "label": "UNCHECKED SPECIFICATION",
+  "refinement": "only before final forecasts",
+  "second_order": [
+    "AND factors",
+    "OR factors",
+    "XOR factors",
+    "IFF factors",
+    "2D periodic tiles"
+  ],
+  "selection": "validation errors, training errors, symbolic cost",
+  "sequence_search": "exact prefix/block; at least two block copies",
+  "transport": {
+    "binary": [
+      "product",
+      "lcm",
+      "gcd",
+      "sum"
+    ],
+    "restrictions": [
+      "any",
+      "coprime",
+      "noncoprime"
+    ],
+    "truth_claims": [
+      "implication",
+      "reverse implication",
+      "equivalence"
+    ],
+    "unary": [
+      "both divisor directions",
+      "column +1,+2,+3",
+      "column times 2,3"
+    ],
+    "witness_claims": [
+      "every witness projection",
+      "least maps to a witness",
+      "mapped least remains least",
+      "literal least preserved"
+    ]
+  },
+  "transport_final_overlap": "Transport evaluation reuses the T table, with a fixed template language. It is not an independent replication."
+}

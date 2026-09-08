@@ -1,0 +1,2522 @@
+{
+  "candidates": [
+    {
+      "CONCLUSION": {
+        "claim": "every failing x maps to failing x % target_m",
+        "domain": "m,d,k >= 1; d divides m",
+        "kind": "unary",
+        "source": [
+          "d",
+          "k"
+        ],
+        "target": [
+          "m",
+          "k"
+        ]
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 75231
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "m,d,k >= 1; d divides m",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 69601,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 69601,
+          "tests": 69601
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 5630,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 5630,
+          "tests": 5630
+        }
+      },
+      "HYPOTHESES": "m,d,k >= 1; d divides m",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03319",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "every failing x maps to failing x % target_m",
+          "domain": "m,d,k >= 1; d divides m",
+          "kind": "unary",
+          "source": [
+            "d",
+            "k"
+          ],
+          "target": [
+            "m",
+            "k"
+          ]
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "implication",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "gcd",
+        "restriction": "any",
+        "source_connective": "or"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 16449
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 68064,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 14008,
+          "tests": 14008
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 7200,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 2441,
+          "tests": 2441
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03330",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "implication",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "gcd",
+          "restriction": "any",
+          "source_connective": "or"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "equivalence",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "lcm",
+        "restriction": "any",
+        "source_connective": "and"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 15936
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 13560,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 13560,
+          "tests": 13560
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 2376,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 2376,
+          "tests": 2376
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03353",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "equivalence",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "lcm",
+          "restriction": "any",
+          "source_connective": "and"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "implication",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "gcd",
+        "restriction": "any",
+        "source_connective": "xor"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 13396
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 68064,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 11614,
+          "tests": 11614
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 7200,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 1782,
+          "tests": 1782
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03333",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "implication",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "gcd",
+          "restriction": "any",
+          "source_connective": "xor"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "implication",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "gcd",
+        "restriction": "coprime",
+        "source_connective": "or"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 10512
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 41248,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 8904,
+          "tests": 8904
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 4320,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 1608,
+          "tests": 1608
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03339",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "implication",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "gcd",
+          "restriction": "coprime",
+          "source_connective": "or"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "equivalence",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "lcm",
+        "restriction": "noncoprime",
+        "source_connective": "and"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 11008
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 9448,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 9448,
+          "tests": 9448
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 1560,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 1560,
+          "tests": 1560
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03371",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "equivalence",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "lcm",
+          "restriction": "noncoprime",
+          "source_connective": "and"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "implication",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "gcd",
+        "restriction": "coprime",
+        "source_connective": "xor"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 8855
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 41248,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 7622,
+          "tests": 7622
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 4320,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 1233,
+          "tests": 1233
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03342",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "implication",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "gcd",
+          "restriction": "coprime",
+          "source_connective": "xor"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "least_witness_maps_to_a_witness",
+        "domain": "m,d,k >= 1; d divides m",
+        "kind": "unary",
+        "source": [
+          "d",
+          "k"
+        ],
+        "target": [
+          "m",
+          "k"
+        ]
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 6715
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "m,d,k >= 1; d divides m",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 10656,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 5803,
+          "tests": 5803
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 2016,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 912,
+          "tests": 912
+        }
+      },
+      "HYPOTHESES": "m,d,k >= 1; d divides m",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03322",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "least_witness_maps_to_a_witness",
+          "domain": "m,d,k >= 1; d divides m",
+          "kind": "unary",
+          "source": [
+            "d",
+            "k"
+          ],
+          "target": [
+            "m",
+            "k"
+          ]
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "implication",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "gcd",
+        "restriction": "noncoprime",
+        "source_connective": "or"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 5937
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 26816,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 5104,
+          "tests": 5104
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 2880,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 833,
+          "tests": 833
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03348",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "implication",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "gcd",
+          "restriction": "noncoprime",
+          "source_connective": "or"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "equivalence",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "lcm",
+        "restriction": "coprime",
+        "source_connective": "and"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 4928
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 4112,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 4112,
+          "tests": 4112
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 816,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 816,
+          "tests": 816
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03362",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "equivalence",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "lcm",
+          "restriction": "coprime",
+          "source_connective": "and"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "equivalence",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "mul",
+        "restriction": "coprime",
+        "source_connective": "and"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 4928
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 4112,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 4112,
+          "tests": 4112
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 816,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 816,
+          "tests": 816
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03389",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "equivalence",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "mul",
+          "restriction": "coprime",
+          "source_connective": "and"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "claim": "implication",
+        "domain": "a,b,k >= 1",
+        "kind": "binary_modulus",
+        "operation": "gcd",
+        "restriction": "any",
+        "source_connective": "and"
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 3053
+      },
+      "DEPENDENCIES": [
+        "T definition",
+        "transport AST semantics in lab.py"
+      ],
+      "DOMAIN": "a,b,k >= 1",
+      "EXPERIMENTAL EVIDENCE": {
+        "final": {
+          "abstentions": 0,
+          "cases": 68064,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 2394,
+          "tests": 2394
+        },
+        "train": {
+          "abstentions": 0,
+          "cases": 7200,
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "supporting": 659,
+          "tests": 659
+        }
+      },
+      "HYPOTHESES": "a,b,k >= 1",
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "Universal transport claim described by the exact AST.",
+      "THEOREM-ID": "TR-H03327",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": {
+          "claim": "implication",
+          "domain": "a,b,k >= 1",
+          "kind": "binary_modulus",
+          "operation": "gcd",
+          "restriction": "any",
+          "source_connective": "and"
+        },
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": null
+      },
+      "label": "CONJECTURED"
+    },
+    {
+      "CONCLUSION": {
+        "kind": "factor",
+        "op": "and",
+        "rows": {
+          "1": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 92,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "2": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 92,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "3": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                true
+              ],
+              "observed_repetitions": 46,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "4": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                true
+              ],
+              "observed_repetitions": 46,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "5": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 23,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "6": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                true
+              ],
+              "observed_repetitions": 46,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "7": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 15,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "8": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 6,
+              "prefix": [
+                false,
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                true
+              ],
+              "observed_repetitions": 46,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "9": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 15,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "10": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 23,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "11": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 9,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "12": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                true
+              ],
+              "observed_repetitions": 46,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "13": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "14": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 15,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "15": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 23,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "16": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 5,
+              "prefix": [
+                false,
+                false,
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 23,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "17": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 5,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "18": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 15,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "19": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 5,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "20": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 23,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "21": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 15,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "22": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 9,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "23": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 4,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "24": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 6,
+              "prefix": [
+                false,
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                true
+              ],
+              "observed_repetitions": 46,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "25": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 4,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "26": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "27": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 6,
+              "prefix": [
+                false,
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 5,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "28": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 15,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "29": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 3,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "30": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 23,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "31": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 3,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "32": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 4,
+              "prefix": [
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 11,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "33": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 9,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "34": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 5,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "35": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "36": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 15,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "37": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 2,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "38": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 5,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "39": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "40": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 6,
+              "prefix": [
+                false,
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 23,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "41": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 2,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "42": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 15,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "43": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 2,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "44": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 9,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "45": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": [
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 7,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "46": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 4,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "47": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 8,
+              "prefix": []
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 2,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          },
+          "48": {
+            "a": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                true
+              ],
+              "observed_repetitions": 5,
+              "prefix": [
+                false,
+                false,
+                false
+              ]
+            },
+            "ambiguous_second_factor_columns": 0,
+            "b": {
+              "continuation_status": "CONJECTURED",
+              "cycle": [
+                false,
+                false,
+                false,
+                true
+              ],
+              "observed_repetitions": 23,
+              "prefix": []
+            },
+            "feasible_first_factor_assignments": 1
+          }
+        }
+      },
+      "COUNTEREXAMPLES TESTED": {
+        "smallest_found": null,
+        "status": "UNREFUTED_ON_TESTED_DATA",
+        "tests": 64512
+      },
+      "DEPENDENCIES": [
+        "E definition",
+        "E_freeze.json"
+      ],
+      "DOMAIN": {
+        "d": "all positive integers",
+        "m": [
+          1,
+          48
+        ],
+        "r": "all positive integers"
+      },
+      "EXPERIMENTAL EVIDENCE": {
+        "calibration": {
+          "abstentions": 0,
+          "dataset_hash": "116e6f35339ebc47a5fac0a6abaf136f26e5eb74b673a6011e48b927325050ed",
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "support_examples": [
+            {
+              "coord": [
+                1,
+                1,
+                1
+              ],
+              "query_id": 3073
+            },
+            {
+              "coord": [
+                1,
+                1,
+                2
+              ],
+              "query_id": 3074
+            },
+            {
+              "coord": [
+                1,
+                1,
+                3
+              ],
+              "query_id": 3075
+            }
+          ],
+          "supporting": 35328,
+          "tests": 35328
+        },
+        "final": {
+          "abstentions": 0,
+          "dataset_hash": "f3fe2ddacbca9d212861fc3425b0c2ebb5a51f10028c862dee4acb513485bf31",
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "support_examples": [
+            {
+              "coord": [
+                1,
+                1,
+                103
+              ],
+              "query_id": 52033
+            },
+            {
+              "coord": [
+                1,
+                1,
+                104
+              ],
+              "query_id": 52034
+            },
+            {
+              "coord": [
+                1,
+                1,
+                105
+              ],
+              "query_id": 52035
+            }
+          ],
+          "supporting": 15552,
+          "tests": 15552
+        },
+        "validation_refinement": {
+          "abstentions": 0,
+          "dataset_hash": "15d0213f56176a849f73cd5347e1338a0ba3c566cea2ba4a25d7686c0eba7a4c",
+          "errors": 0,
+          "label": "COMPUTED",
+          "smallest_counterexample": null,
+          "support_examples": [
+            {
+              "coord": [
+                1,
+                1,
+                93
+              ],
+              "query_id": 38401
+            },
+            {
+              "coord": [
+                1,
+                1,
+                94
+              ],
+              "query_id": 38402
+            },
+            {
+              "coord": [
+                1,
+                1,
+                95
+              ],
+              "query_id": 38403
+            }
+          ],
+          "supporting": 13632,
+          "tests": 13632
+        }
+      },
+      "HYPOTHESES": {
+        "d": "all positive integers",
+        "m": [
+          1,
+          48
+        ],
+        "r": "all positive integers"
+      },
+      "PROOF STRATEGY": {
+        "label": "UNCHECKED SPECIFICATION",
+        "plan": [
+          "Expand the exact oracle definition.",
+          "Explain the learned representation independently of fitting.",
+          "Try surviving transport candidates as intermediate lemmas.",
+          "Prove both directions, or return a counterexample.",
+          "Do not treat finite agreement as an induction principle."
+        ]
+      },
+      "STATEMENT": "The eventual-equality predicate equals the frozen tensor decoder.",
+      "THEOREM-ID": "E-H03407",
+      "UNVERIFIED LEAN TARGET": {
+        "ast_if_no_type": null,
+        "label": "UNCHECKED SPECIFICATION",
+        "note": "No proof term has been constructed or checked.",
+        "type": "∀ m r d : Nat, 1 ≤ m → m ≤ 48 → 1 ≤ r → 1 ≤ d → (Q m r d ↔ ((m = 1 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 1 = 0)))))) ∨ (m = 2 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 1 = 0)))))) ∨ (m = 3 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 2 = 1)))))) ∨ (m = 4 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 2 = 1)))))) ∨ (m = 5 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 4 = 3)))))) ∨ (m = 6 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 2 = 1)))))) ∨ (m = 7 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 6 = 5)))))) ∨ (m = 8 ∧ (((3 ≤ r ∧ (((r - 3) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 2 = 1)))))) ∨ (m = 9 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 6 = 5)))))) ∨ (m = 10 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 4 = 3)))))) ∨ (m = 11 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 10 = 9)))))) ∨ (m = 12 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 2 = 1)))))) ∨ (m = 13 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 12 = 11)))))) ∨ (m = 14 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 6 = 5)))))) ∨ (m = 15 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 4 = 3)))))) ∨ (m = 16 ∧ (((4 ≤ r ∧ (((r - 4) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 4 = 3)))))) ∨ (m = 17 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 16 = 15)))))) ∨ (m = 18 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 6 = 5)))))) ∨ (m = 19 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 18 = 17)))))) ∨ (m = 20 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 4 = 3)))))) ∨ (m = 21 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 6 = 5)))))) ∨ (m = 22 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 10 = 9)))))) ∨ (m = 23 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 22 = 21)))))) ∨ (m = 24 ∧ (((3 ≤ r ∧ (((r - 3) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 2 = 1)))))) ∨ (m = 25 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 20 = 19)))))) ∨ (m = 26 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 12 = 11)))))) ∨ (m = 27 ∧ (((3 ≤ r ∧ (((r - 3) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 18 = 17)))))) ∨ (m = 28 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 6 = 5)))))) ∨ (m = 29 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 28 = 27)))))) ∨ (m = 30 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 4 = 3)))))) ∨ (m = 31 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 30 = 29)))))) ∨ (m = 32 ∧ (((5 ≤ r ∧ (((r - 5) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 8 = 7)))))) ∨ (m = 33 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 10 = 9)))))) ∨ (m = 34 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 16 = 15)))))) ∨ (m = 35 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 12 = 11)))))) ∨ (m = 36 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 6 = 5)))))) ∨ (m = 37 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 36 = 35)))))) ∨ (m = 38 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 18 = 17)))))) ∨ (m = 39 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 12 = 11)))))) ∨ (m = 40 ∧ (((3 ≤ r ∧ (((r - 3) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 4 = 3)))))) ∨ (m = 41 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 40 = 39)))))) ∨ (m = 42 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 6 = 5)))))) ∨ (m = 43 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 42 = 41)))))) ∨ (m = 44 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 10 = 9)))))) ∨ (m = 45 ∧ (((2 ≤ r ∧ (((r - 2) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 12 = 11)))))) ∨ (m = 46 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 22 = 21)))))) ∨ (m = 47 ∧ (((1 ≤ r ∧ (((r - 1) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 46 = 45)))))) ∨ (m = 48 ∧ (((4 ≤ r ∧ (((r - 4) % 1 = 0)))) ∧ ((1 ≤ d ∧ (((d - 1) % 4 = 3))))))))"
+      },
+      "label": "CONJECTURED"
+    }
+  ],
+  "external_oracle": null,
+  "label": "CONJECTURED",
+  "oracle_world": "real",
+  "warning": "No candidate in this file has a supplied proof."
+}

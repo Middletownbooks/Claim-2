@@ -1,0 +1,32 @@
+{
+  "cache_hits_by_phase": {
+    "algorithm-audit:full": 64,
+    "transport": 477408
+  },
+  "control": "C",
+  "exported_candidates": 14,
+  "formally_verified_theorems": 0,
+  "hypotheses_tested": 6588,
+  "label": "COMPUTED",
+  "oracle_world": "synthetic",
+  "queries_by_first_phase": {
+    "E:calibration": 2304,
+    "E:final": 4032,
+    "E:validation": 2880,
+    "T:final": 1344,
+    "T:final-row-calibration": 288,
+    "T:train": 576,
+    "T:validation": 576,
+    "T:validation-row-calibration": 288,
+    "U:final": 1344,
+    "U:final-row-calibration": 288,
+    "U:train": 576,
+    "U:validation": 576,
+    "U:validation-row-calibration": 288,
+    "algorithm-audit:early": 64
+  },
+  "refuted_hypotheses": 6571,
+  "selected_T_id": "T-H03185",
+  "selected_T_status": "UNREFUTED_ON_TESTED_DATA",
+  "unique_oracle_queries": 15424
+}

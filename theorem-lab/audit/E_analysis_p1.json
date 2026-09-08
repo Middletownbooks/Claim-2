@@ -1,0 +1,803 @@
+{
+  "marginals": {
+    "E:calibration": {
+      "abstain": 0,
+      "errA": 26193,
+      "errAND": 0,
+      "errB": 617,
+      "n": 35328
+    },
+    "E:final": {
+      "abstain": 0,
+      "errA": 12137,
+      "errAND": 0,
+      "errB": 73,
+      "n": 15552
+    },
+    "E:validation": {
+      "abstain": 0,
+      "errA": 10671,
+      "errAND": 0,
+      "errB": 63,
+      "n": 13632
+    }
+  },
+  "model_ids": {
+    "factor/and": "E-H03407",
+    "factor/iff": "E-H03410",
+    "factor/or": "E-H03408",
+    "factor/xor": "E-H03409",
+    "tile/-": "E-H03411"
+  },
+  "moduli_matching_theory": 48,
+  "moduli_not_matching_theory": 0,
+  "per_modulus": {
+    "1": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 92,
+      "lambda": 1,
+      "learned_d_period": 1,
+      "learned_d_positive_offset": 1,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 0,
+      "r_repetitions_observed": 8
+    },
+    "2": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 92,
+      "lambda": 1,
+      "learned_d_period": 1,
+      "learned_d_positive_offset": 1,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "3": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 46,
+      "lambda": 2,
+      "learned_d_period": 2,
+      "learned_d_positive_offset": 2,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "4": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 46,
+      "lambda": 2,
+      "learned_d_period": 2,
+      "learned_d_positive_offset": 2,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "5": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 23,
+      "lambda": 4,
+      "learned_d_period": 4,
+      "learned_d_positive_offset": 4,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "6": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 46,
+      "lambda": 2,
+      "learned_d_period": 2,
+      "learned_d_positive_offset": 2,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "7": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 15,
+      "lambda": 6,
+      "learned_d_period": 6,
+      "learned_d_positive_offset": 6,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "8": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false,
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 46,
+      "lambda": 2,
+      "learned_d_period": 2,
+      "learned_d_positive_offset": 2,
+      "learned_r_threshold": 3,
+      "matches_theory": true,
+      "nu": 3,
+      "r_repetitions_observed": 6
+    },
+    "9": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 15,
+      "lambda": 6,
+      "learned_d_period": 6,
+      "learned_d_positive_offset": 6,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "10": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 23,
+      "lambda": 4,
+      "learned_d_period": 4,
+      "learned_d_positive_offset": 4,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "11": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 9,
+      "lambda": 10,
+      "learned_d_period": 10,
+      "learned_d_positive_offset": 10,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "12": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 46,
+      "lambda": 2,
+      "learned_d_period": 2,
+      "learned_d_positive_offset": 2,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "13": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 7,
+      "lambda": 12,
+      "learned_d_period": 12,
+      "learned_d_positive_offset": 12,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "14": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 15,
+      "lambda": 6,
+      "learned_d_period": 6,
+      "learned_d_positive_offset": 6,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "15": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 23,
+      "lambda": 4,
+      "learned_d_period": 4,
+      "learned_d_positive_offset": 4,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "16": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false,
+        false,
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 23,
+      "lambda": 4,
+      "learned_d_period": 4,
+      "learned_d_positive_offset": 4,
+      "learned_r_threshold": 4,
+      "matches_theory": true,
+      "nu": 4,
+      "r_repetitions_observed": 5
+    },
+    "17": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 5,
+      "lambda": 16,
+      "learned_d_period": 16,
+      "learned_d_positive_offset": 16,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "18": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 15,
+      "lambda": 6,
+      "learned_d_period": 6,
+      "learned_d_positive_offset": 6,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "19": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 5,
+      "lambda": 18,
+      "learned_d_period": 18,
+      "learned_d_positive_offset": 18,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "20": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 23,
+      "lambda": 4,
+      "learned_d_period": 4,
+      "learned_d_positive_offset": 4,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "21": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 15,
+      "lambda": 6,
+      "learned_d_period": 6,
+      "learned_d_positive_offset": 6,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "22": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 9,
+      "lambda": 10,
+      "learned_d_period": 10,
+      "learned_d_positive_offset": 10,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "23": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 4,
+      "lambda": 22,
+      "learned_d_period": 22,
+      "learned_d_positive_offset": 22,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "24": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false,
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 46,
+      "lambda": 2,
+      "learned_d_period": 2,
+      "learned_d_positive_offset": 2,
+      "learned_r_threshold": 3,
+      "matches_theory": true,
+      "nu": 3,
+      "r_repetitions_observed": 6
+    },
+    "25": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 4,
+      "lambda": 20,
+      "learned_d_period": 20,
+      "learned_d_positive_offset": 20,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "26": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 7,
+      "lambda": 12,
+      "learned_d_period": 12,
+      "learned_d_positive_offset": 12,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "27": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false,
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 5,
+      "lambda": 18,
+      "learned_d_period": 18,
+      "learned_d_positive_offset": 18,
+      "learned_r_threshold": 3,
+      "matches_theory": true,
+      "nu": 3,
+      "r_repetitions_observed": 6
+    },
+    "28": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 15,
+      "lambda": 6,
+      "learned_d_period": 6,
+      "learned_d_positive_offset": 6,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "29": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 3,
+      "lambda": 28,
+      "learned_d_period": 28,
+      "learned_d_positive_offset": 28,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "30": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 23,
+      "lambda": 4,
+      "learned_d_period": 4,
+      "learned_d_positive_offset": 4,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "31": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 3,
+      "lambda": 30,
+      "learned_d_period": 30,
+      "learned_d_positive_offset": 30,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "32": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 11,
+      "lambda": 8,
+      "learned_d_period": 8,
+      "learned_d_positive_offset": 8,
+      "learned_r_threshold": 5,
+      "matches_theory": true,
+      "nu": 5,
+      "r_repetitions_observed": 4
+    },
+    "33": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 9,
+      "lambda": 10,
+      "learned_d_period": 10,
+      "learned_d_positive_offset": 10,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "34": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 5,
+      "lambda": 16,
+      "learned_d_period": 16,
+      "learned_d_positive_offset": 16,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "35": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 7,
+      "lambda": 12,
+      "learned_d_period": 12,
+      "learned_d_positive_offset": 12,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "36": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 15,
+      "lambda": 6,
+      "learned_d_period": 6,
+      "learned_d_positive_offset": 6,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "37": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 2,
+      "lambda": 36,
+      "learned_d_period": 36,
+      "learned_d_positive_offset": 36,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "38": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 5,
+      "lambda": 18,
+      "learned_d_period": 18,
+      "learned_d_positive_offset": 18,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "39": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 7,
+      "lambda": 12,
+      "learned_d_period": 12,
+      "learned_d_positive_offset": 12,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "40": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false,
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 23,
+      "lambda": 4,
+      "learned_d_period": 4,
+      "learned_d_positive_offset": 4,
+      "learned_r_threshold": 3,
+      "matches_theory": true,
+      "nu": 3,
+      "r_repetitions_observed": 6
+    },
+    "41": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 2,
+      "lambda": 40,
+      "learned_d_period": 40,
+      "learned_d_positive_offset": 40,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "42": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 15,
+      "lambda": 6,
+      "learned_d_period": 6,
+      "learned_d_positive_offset": 6,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "43": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 2,
+      "lambda": 42,
+      "learned_d_period": 42,
+      "learned_d_positive_offset": 42,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "44": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 9,
+      "lambda": 10,
+      "learned_d_period": 10,
+      "learned_d_positive_offset": 10,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "45": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 7,
+      "lambda": 12,
+      "learned_d_period": 12,
+      "learned_d_positive_offset": 12,
+      "learned_r_threshold": 2,
+      "matches_theory": true,
+      "nu": 2,
+      "r_repetitions_observed": 7
+    },
+    "46": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 4,
+      "lambda": 22,
+      "learned_d_period": 22,
+      "learned_d_positive_offset": 22,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "47": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 2,
+      "lambda": 46,
+      "learned_d_period": 46,
+      "learned_d_positive_offset": 46,
+      "learned_r_threshold": 1,
+      "matches_theory": true,
+      "nu": 1,
+      "r_repetitions_observed": 8
+    },
+    "48": {
+      "a_cycle": [
+        true
+      ],
+      "a_prefix": [
+        false,
+        false,
+        false
+      ],
+      "b_period_positives": 1,
+      "d_repetitions_observed": 23,
+      "lambda": 4,
+      "learned_d_period": 4,
+      "learned_d_positive_offset": 4,
+      "learned_r_threshold": 4,
+      "matches_theory": true,
+      "nu": 4,
+      "r_repetitions_observed": 5
+    }
+  },
+  "run": "runs/p1-real-C",
+  "selected_id": "E-H03407"
+}

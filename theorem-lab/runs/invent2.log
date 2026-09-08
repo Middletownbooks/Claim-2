@@ -1,0 +1,12 @@
+x^(a+2) = x^(2a) on all            score=0.622  {'nontriviality': 0.675, 'extrapolation': 0.85, 'compressibility': 0.517, 'cross_modulus_invariance': 0.4, 'exception_structure': 0.433}
+x^(1) = x^(a) on all               score=0.603  {'nontriviality': 0.555, 'extrapolation': 0.975, 'compressibility': 0.122, 'cross_modulus_invariance': 0.563, 'exception_structure': 0.836}
+x^(1) = x^(2a) on all              score=0.601  {'nontriviality': 0.0, 'extrapolation': 1.0, 'compressibility': 0.619, 'cross_modulus_invariance': 1.0, 'exception_structure': 0.771}
+x^(a) = x^(ab) on units            score=0.590  {'nontriviality': 0.859, 'extrapolation': 0.995, 'compressibility': 0.139, 'cross_modulus_invariance': 0.267, 'exception_structure': 0.156}
+x^(a+2) = x^(2a) on units          score=0.589  {'nontriviality': 0.675, 'extrapolation': 0.85, 'compressibility': 0.517, 'cross_modulus_invariance': 0.4, 'exception_structure': 0.107}
+x^(2a) = x^(ab) on all             score=0.587  {'nontriviality': 0.87, 'extrapolation': 0.979, 'compressibility': 0.0, 'cross_modulus_invariance': 0.233, 'exception_structure': 0.46}
+x^(2a) = x^(ab) on units           score=0.585  {'nontriviality': 0.859, 'extrapolation': 0.995, 'compressibility': 0.117, 'cross_modulus_invariance': 0.267, 'exception_structure': 0.156}
+x^(a+2) = x^(a+b) on all           score=0.581  {'nontriviality': 0.608, 'extrapolation': 0.984, 'compressibility': 0.367, 'cross_modulus_invariance': 0.267, 'exception_structure': 0.39}
+x^(1) = x^(b) on units             score=0.576  {'nontriviality': 0.611, 'extrapolation': 1.0, 'compressibility': 0.456, 'cross_modulus_invariance': 0.267, 'exception_structure': 0.114}
+x^(a+1) = x^(a+b) on units         score=0.576  {'nontriviality': 0.611, 'extrapolation': 1.0, 'compressibility': 0.456, 'cross_modulus_invariance': 0.267, 'exception_structure': 0.114}
+x^(a+1) = x^(a+b) on all           score=0.574  {'nontriviality': 0.598, 'extrapolation': 0.989, 'compressibility': 0.347, 'cross_modulus_invariance': 0.233, 'exception_structure': 0.431}
+x^(a) = x^(a+1) on all             score=0.574  {'nontriviality': 0.0, 'extrapolation': 1.0, 'compressibility': 0.619, 'cross_modulus_invariance': 1.0, 'exception_structure': 0.497}
