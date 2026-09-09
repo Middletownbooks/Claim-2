@@ -1,0 +1,5 @@
+__pycache__/
+# Regenerable in seconds from a mathlib checkout by structure.py; 19 MB and
+# 3 MB respectively, and meaningless without the matching mathlib commit.
+decls.json
+modules.json

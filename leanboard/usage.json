@@ -1,0 +1,3191 @@
+{
+ "declarations": {
+  "AbelRuffini.exists_not_solvable_by_rad": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": null,
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q657482"
+  },
+  "AddCircle.exists_norm_nsmul_le": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.WellApproximable",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1227703"
+  },
+  "Affine.Simplex.point_vsub_centroid_eq_smul_vsub": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Geometry",
+    "LinearAlgebra"
+   ],
+   "defining_module": "Mathlib.LinearAlgebra.AffineSpace.Simplex.Centroid",
+   "domain_spread_full": 0,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q2226625"
+  },
+  "Affine.Triangle.prod_dist_div_dist_eq_one_of_mem_line_of_mem_line": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Normed.Affine.Ceva",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q213603"
+  },
+  "AkraBazziRecurrence.isBigO_asympBound": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Computability.AkraBazzi.AkraBazzi",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q420714"
+  },
+  "Algebra.HasGoingDown.iff_generalizingMap_primeSpectrumComap": {
+   "areas_full_name": [
+    "AlgebraicGeometry",
+    "RingTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.Ideal.GoingDown",
+   "domain_spread_full": 2,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 3,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2379132"
+  },
+  "Algebra.HasGoingDown.of_comap_localRingHom_surjective": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.Ideal.GoingDown",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2379132"
+  },
+  "AnalyticOnNhd.eqOn_of_preconnected_of_frequently_eq": {
+   "areas_full_name": [
+    "Analysis",
+    "Probability"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Analytic.IsolatedZeros",
+   "domain_spread_full": 2,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1038716"
+  },
+  "AnalyticOnNhd.is_constant_or_isOpen": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Complex.OpenMapping",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q967972"
+  },
+  "Ballot.ballot_problem": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": null,
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2253746"
+  },
+  "Bernoulli.vonStaudt_clausen": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.Bernoulli",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527230"
+  },
+  "Besicovitch.ae_tendsto_measure_inter_div": {
+   "areas_full_name": [
+    "MeasureTheory"
+   ],
+   "areas_short_name": [
+    "Dynamics",
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Covering.Besicovitch",
+   "domain_spread_full": 1,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 3,
+   "files_referencing_short_name": 4,
+   "wikidata": "Q842953"
+  },
+  "Besicovitch.exists_disjoint_closedBall_covering_ae": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Covering.Besicovitch",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q137164"
+  },
+  "BoundedContinuousFunction.arzela_ascoli": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Topology.ContinuousMap.Bounded.ArzelaAscoli",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1477053"
+  },
+  "BoundedContinuousFunction.exists_extension_norm_eq_of_isClosedEmbedding": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.Topology.TietzeExtension",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1346677"
+  },
+  "Cardinal.not_countable_real": {
+   "areas_full_name": [
+    "MeasureTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Real.Cardinality",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q22952648"
+  },
+  "Cardinal.sum_lt_prod": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "SetTheory"
+   ],
+   "defining_module": "Mathlib.SetTheory.Cardinal.Order",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1077462"
+  },
+  "CategoryTheory.Abelian.freyd_mitchell": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.CategoryTheory.Abelian.FreydMitchell",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1148215"
+  },
+  "CategoryTheory.Monad.monadicOfCreatesGSplitCoequalizers": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.CategoryTheory.Monad.Monadicity",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q4878586"
+  },
+  "CategoryTheory.finrank_endomorphism_simple_eq_one": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "RepresentationTheory"
+   ],
+   "defining_module": "Mathlib.CategoryTheory.Preadditive.Schur",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1816952"
+  },
+  "ChainCompletePartialOrder.nonempty_fixedPoints_of_inflationary": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Order.BourbakiWitt",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q4950096"
+  },
+  "Choose.lucas_theorem": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Data.Nat.Choose.Lucas",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1186808"
+  },
+  "Combinatorics.Line.exists_mono_in_high_dimension": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.HalesJewett",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1032886"
+  },
+  "Combinatorics.exists_mono_homothetic_copy": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.HalesJewett",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q764287"
+  },
+  "CompactSpace.uniformContinuous_of_continuous": {
+   "areas_full_name": [
+    "Analysis",
+    "Topology"
+   ],
+   "areas_short_name": [
+    "Analysis",
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.Topology.UniformSpace.HeineCantor",
+   "domain_spread_full": 2,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 4,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q765987"
+  },
+  "Complex.HadamardThreeLines.norm_le_interpStrip_of_mem_verticalClosedStrip": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Complex.Hadamard",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527250"
+  },
+  "Complex.borelCaratheodory": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q3229335"
+  },
+  "Complex.cos_add_sin_mul_I_pow": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Complex.Trigonometric",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q190556"
+  },
+  "Complex.isAlgClosed": {
+   "areas_full_name": [
+    "Basic"
+   ],
+   "areas_short_name": [
+    "FieldTheory",
+    "NumberTheory"
+   ],
+   "defining_module": "Mathlib.Analysis.Complex.Polynomial.Basic",
+   "domain_spread_full": 1,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 7,
+   "wikidata": "Q192760"
+  },
+  "Complex.isConservativeOn_and_continuousOn_iff_isDifferentiableOn": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Complex.HasPrimitives",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1140119"
+  },
+  "Complex.tendsto_tsum_powerSeries_nhdsWithin_stolzCone": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Complex.AbelLimit",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q318767"
+  },
+  "CompositionSeries.jordan_holder": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.Order.JordanHolder",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q2525646"
+  },
+  "ComputablePred.rice": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Computability.Halting",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1893717"
+  },
+  "Continuous.fourierInv_fourier_eq": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Fourier.Inversion",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 6,
+   "wikidata": "Q3984053"
+  },
+  "ContinuousLinearMap.isOpenMap": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "AlgebraicGeometry",
+    "Analysis",
+    "Geometry",
+    "MeasureTheory",
+    "RingTheory",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Analysis.Normed.Operator.Banach",
+   "domain_spread_full": 0,
+   "domain_spread_short": 6,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 78,
+   "wikidata": "Q944297"
+  },
+  "ContinuousMap.subalgebra_topologicalClosure_eq_top_of_separatesPoints": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Topology.ContinuousMap.StoneWeierstrass",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q939927"
+  },
+  "ContractingWith.exists_fixedPoint": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Topology.MetricSpace.Contracting",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q220680"
+  },
+  "Convex.helly_theorem": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Convex.Radon",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1632433"
+  },
+  "Convex.image_deriv": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "Convex.image_derivWithin": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "Convex.image_hasDerivWithinAt": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "Convex.radon_partition": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Convex.Radon",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1471282"
+  },
+  "Differentiable.apply_eq_apply_of_bounded": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Complex.Liouville",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q576478"
+  },
+  "DistribLattice.prime_ideal_of_disjoint_filter_ideal": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Order.PrimeSeparator",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q872088"
+  },
+  "Equiv.Perm.subgroupOfMulAction": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.GroupTheory.Perm.Subgroup",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q179208"
+  },
+  "EuclideanDomain.instIsPrincipalIdealRing": {
+   "areas_full_name": [
+    "RingTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q670235"
+  },
+  "EuclideanGeometry.Sphere.dist_sq_eq_mul_dist_of_tangent_and_secant": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Geometry.Euclidean.Sphere.Power",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2267175"
+  },
+  "EuclideanGeometry.Sphere.thales_theorem": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Geometry"
+   ],
+   "defining_module": "Mathlib.Geometry.Euclidean.Angle.Sphere",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q285719"
+  },
+  "EuclideanGeometry.dist_sq_add_dist_sq_eq_dist_sq_add_dist_sq_of_angle_eq_pi_div_two": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Geometry.Euclidean.BritishFlag",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q4971339"
+  },
+  "EuclideanGeometry.dist_sq_add_dist_sq_eq_two_mul_dist_midpoint_sq_add_half_dist_sq": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Geometry.Euclidean.Triangle",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q877489"
+  },
+  "EuclideanGeometry.dist_sq_eq_dist_mul_dist_of_angle_eq_pi_div_two": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Geometry.Euclidean.Angle.Unoriented.RightAngle",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2226868"
+  },
+  "EuclideanGeometry.dist_sq_eq_dist_sq_add_dist_sq_iff_angle_eq_pi_div_two": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Geometry.Euclidean.Angle.Unoriented.RightAngle",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q11518"
+  },
+  "EuclideanGeometry.dist_sq_mul_dist_add_dist_sq_mul_dist": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Geometry"
+   ],
+   "defining_module": "Mathlib.Geometry.Euclidean.Triangle",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q739403"
+  },
+  "EuclideanGeometry.exterior_angle_eq_angle_add_angle": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Geometry.Euclidean.Triangle",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q5421989"
+  },
+  "EuclideanGeometry.mul_dist_add_mul_dist_eq_mul_dist_of_cospherical": {
+   "areas_full_name": [
+    "Geometry"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Geometry.Euclidean.Sphere.Ptolemy",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q459547"
+  },
+  "FermatLastTheorem": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": "Mathlib.NumberTheory.FLT.Basic",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q132469"
+  },
+  "Field.exists_primitive_element": {
+   "areas_full_name": [
+    "FieldTheory",
+    "RingTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.FieldTheory.PrimitiveElement",
+   "domain_spread_full": 2,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 5,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2093886"
+  },
+  "FiniteDimensional.proper": {
+   "areas_full_name": [
+    "Geometry",
+    "MeasureTheory"
+   ],
+   "areas_short_name": [
+    "Algebra",
+    "AlgebraicGeometry",
+    "AlgebraicTopology",
+    "Analysis",
+    "CategoryTheory",
+    "Combinatorics",
+    "Computability",
+    "Data",
+    "Geometry",
+    "GroupTheory",
+    "LinearAlgebra",
+    "MeasureTheory",
+    "ModelTheory",
+    "NumberTheory",
+    "Order",
+    "Probability",
+    "RepresentationTheory",
+    "RingTheory",
+    "SetTheory",
+    "Tactic",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Analysis.Normed.Module.FiniteDimension",
+   "domain_spread_full": 2,
+   "domain_spread_short": 21,
+   "files_referencing_full_name": 4,
+   "files_referencing_short_name": 117,
+   "wikidata": "Q253214"
+  },
+  "Finset.all_card_le_biUnion_card_iff_exists_injective": {
+   "areas_full_name": [
+    "Combinatorics"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Combinatorics.Hall.Basic",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 3,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q536640"
+  },
+  "Finset.erdos_ko_rado": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.SetFamily.KruskalKatona",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q718875"
+  },
+  "Finset.kruskal_katona": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.SetFamily.KruskalKatona",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527102"
+  },
+  "Finset.sum_pow_eq_sum_piAntidiag_of_commute": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Data.Nat.Choose.Multinomial",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q619985"
+  },
+  "FirstOrder.Language.Theory.isSatisfiable_iff_isFinitelySatisfiable": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "ModelTheory"
+   ],
+   "defining_module": "Mathlib.ModelTheory.Satisfiability",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1149458"
+  },
+  "FirstOrder.Language.Ultraproduct.sentence_realize": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "ModelTheory"
+   ],
+   "defining_module": "Mathlib.ModelTheory.Ultraproducts",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1535225"
+  },
+  "FirstOrder.Language.exists_elementaryEmbedding_card_eq": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.ModelTheory.Satisfiability",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1068283"
+  },
+  "FormalMultilinearSeries.radius_inv_eq_limsup": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Analytic.RadiusLiminf",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q859122"
+  },
+  "Function.Embedding.schroeder_bernstein": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.SetTheory.Cardinal.SchroederBernstein",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1033910"
+  },
+  "Function.cantor_surjective": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Logic.Function.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q474881"
+  },
+  "HasFDerivAt.apply_self_eq_nsmul_of_homogeneous": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.LineDeriv.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q25378679"
+  },
+  "HasFDerivAt.apply_self_eq_smul_of_eventuallyEq": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.LineDeriv.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q25378679"
+  },
+  "HasFDerivAt.apply_self_eq_smul_of_homogeneous": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.LineDeriv.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q25378679"
+  },
+  "HasStrictFDerivAt.to_localInverse": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Calculus.InverseFunctionTheorem.FDeriv",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 5,
+   "wikidata": "Q931001"
+  },
+  "Hindman.FP_partition_regular": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.Hindman",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1566341"
+  },
+  "Ideal.exists_ideal_over_prime_of_isIntegral_of_isDomain": {
+   "areas_full_name": [
+    "RingTheory"
+   ],
+   "areas_short_name": [
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.RingTheory.Ideal.GoingUp",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q2379132"
+  },
+  "Ideal.exists_ideal_over_prime_of_isIntegral_of_isPrime": {
+   "areas_full_name": [
+    "RingTheory"
+   ],
+   "areas_short_name": [
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.RingTheory.Ideal.GoingUp",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q2379132"
+  },
+  "Ideal.height_le_one_of_isPrincipal_of_mem_minimalPrimes": {
+   "areas_full_name": [
+    "RingTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.Ideal.KrullsHeightTheorem",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527241"
+  },
+  "Ideal.quotientInfRingEquivPiQuotient": {
+   "areas_full_name": [
+    "Data",
+    "RingTheory"
+   ],
+   "areas_short_name": [
+    "Data"
+   ],
+   "defining_module": "Mathlib.RingTheory.Ideal.Quotient.Operations",
+   "domain_spread_full": 2,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 4,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q193878"
+  },
+  "ImplicitFunctionData.implicitFunction": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Calculus.Implicit",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q848375"
+  },
+  "InnerProductSpace.toDual": {
+   "areas_full_name": [
+    "Analysis",
+    "Geometry",
+    "MeasureTheory",
+    "Probability"
+   ],
+   "areas_short_name": [
+    "Algebra",
+    "AlgebraicGeometry",
+    "Analysis",
+    "Basic",
+    "CategoryTheory",
+    "Combinatorics",
+    "Data",
+    "FieldTheory",
+    "GroupTheory",
+    "LinearAlgebra",
+    "NumberTheory",
+    "Order",
+    "Probability",
+    "RingTheory",
+    "SetTheory",
+    "Tactic",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Analysis.InnerProductSpace.Dual",
+   "domain_spread_full": 4,
+   "domain_spread_short": 17,
+   "files_referencing_full_name": 8,
+   "files_referencing_short_name": 141,
+   "wikidata": "Q1357684"
+  },
+  "Int.euclideanDomain": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Algebra"
+   ],
+   "defining_module": "Mathlib.Algebra.EuclideanDomain.Int",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q670235"
+  },
+  "Irrational.beattySeq_symmDiff_beattySeq_pos": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.Rayleigh",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q791663"
+  },
+  "IsAntichain.sperner": {
+   "areas_full_name": [
+    "Combinatorics"
+   ],
+   "areas_short_name": [
+    "Combinatorics"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q2226786"
+  },
+  "IsCoercive.continuousLinearEquivOfBilin": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.InnerProductSpace.LaxMilgram",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q9993851"
+  },
+  "IsCompact.exists_isMinOn": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis",
+    "Dynamics",
+    "MeasureTheory",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Topology.Order.Compact",
+   "domain_spread_full": 0,
+   "domain_spread_short": 4,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 15,
+   "wikidata": "Q752375"
+  },
+  "IsCompact.nonempty_sInter_of_directed_nonempty_isCompact_isClosed": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Topology.Compactness.Compact",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1050203"
+  },
+  "IsLocalExtr.deriv_eq_zero": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Calculus.LocalExtr.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 4,
+   "wikidata": "Q727102"
+  },
+  "IsLocalExtr.fderiv_eq_zero": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Geometry"
+   ],
+   "defining_module": "Mathlib.Analysis.Calculus.LocalExtr.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q727102"
+  },
+  "IsPicardLindelof.exists_eq_forall_mem_Icc_hasDerivWithinAt": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.ODE.ExistUnique",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q530152"
+  },
+  "IsSemisimpleRing.exists_algEquiv_pi_matrix_divisionRing": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.SimpleModule.WedderburnArtin",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q776578"
+  },
+  "IsSimpleRing.exists_algEquiv_matrix_divisionRing": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.SimpleModule.WedderburnArtin",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q776578"
+  },
+  "Language.isRegular_iff_finite_range_leftQuotient": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Computability.MyhillNerode",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q422187"
+  },
+  "LatticeHom.birkhoffSet": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Order.Birkhoff",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q17005116"
+  },
+  "LieModule.exists_nontrivial_weightSpace_of_isSolvable": {
+   "areas_full_name": [
+    "Algebra"
+   ],
+   "areas_short_name": [
+    "Algebra"
+   ],
+   "defining_module": "Mathlib.Algebra.Lie.LieTheorem",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q20971632"
+  },
+  "LinearMap.IsSymmetric.continuous": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Algebra",
+    "AlgebraicGeometry",
+    "AlgebraicTopology",
+    "Analysis",
+    "CategoryTheory",
+    "Combinatorics",
+    "Condensed",
+    "Control",
+    "Data",
+    "Dynamics",
+    "FieldTheory",
+    "Geometry",
+    "GroupTheory",
+    "InformationTheory",
+    "LinearAlgebra",
+    "MeasureTheory",
+    "NumberTheory",
+    "Order",
+    "Probability",
+    "RepresentationTheory",
+    "RingTheory",
+    "SetTheory",
+    "Tactic",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Analysis.InnerProductSpace.Symmetric",
+   "domain_spread_full": 0,
+   "domain_spread_short": 24,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1084,
+   "wikidata": "Q1472120"
+  },
+  "LinearMap.continuous_of_isClosed_graph": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Normed.Operator.Banach",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1068085"
+  },
+  "LinearMap.rank_range_add_rank_ker": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.LinearAlgebra.Dimension.RankNullity",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q303402"
+  },
+  "LipschitzOnWith.ae_differentiableWithinAt": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Calculus.Rademacher",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q132427"
+  },
+  "Matrix.aeval_self_charpoly": {
+   "areas_full_name": [
+    "LinearAlgebra"
+   ],
+   "areas_short_name": [
+    "LinearAlgebra"
+   ],
+   "defining_module": "Mathlib.LinearAlgebra.Matrix.Charpoly.Basic",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 4,
+   "wikidata": "Q656772"
+  },
+  "Matrix.det_one_add_mul_comm": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q7660749"
+  },
+  "Matrix.invOf_add_mul_mul'": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "LinearAlgebra"
+   ],
+   "defining_module": "Mathlib.LinearAlgebra.Matrix.Invertible",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1551745"
+  },
+  "MeasurableEmbedding.schroederBernstein": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.MeasurableSpace.Embedding",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q7432915"
+  },
+  "MeasureTheory.AddContent.measure": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Algebra",
+    "Analysis",
+    "Basic",
+    "Combinatorics",
+    "Data",
+    "Dynamics",
+    "Geometry",
+    "GroupTheory",
+    "InformationTheory",
+    "MeasureTheory",
+    "NumberTheory",
+    "Order",
+    "Probability",
+    "RingTheory",
+    "Tactic",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.OuterMeasure.OfAddContent",
+   "domain_spread_full": 0,
+   "domain_spread_short": 16,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 415,
+   "wikidata": "Q2631152"
+  },
+  "MeasureTheory.AddContent.measure_eq": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "MeasureTheory",
+    "Probability"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.OuterMeasure.OfAddContent",
+   "domain_spread_full": 0,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 6,
+   "wikidata": "Q2631152"
+  },
+  "MeasureTheory.Conservative.ae_mem_imp_frequently_image_mem": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Dynamics.Ergodic.Conservative",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q226014"
+  },
+  "MeasureTheory.FiniteMeasure.tendsto_lintegral_nn_of_le_const": {
+   "areas_full_name": [
+    "MeasureTheory"
+   ],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1067156X"
+  },
+  "MeasureTheory.Integrable.fourierInv_fourier_eq": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Fourier.Inversion",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 6,
+   "wikidata": "Q179467"
+  },
+  "MeasureTheory.Measure.absolutelyContinuous_iff_withDensity_rnDeriv_eq": {
+   "areas_full_name": [
+    "MeasureTheory"
+   ],
+   "areas_short_name": [
+    "MeasureTheory",
+    "Probability"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Measure.Decomposition.RadonNikodym",
+   "domain_spread_full": 1,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q1191319"
+  },
+  "MeasureTheory.Measure.div_mem_nhds_one_of_haar_pos": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Measure.Haar.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527166"
+  },
+  "MeasureTheory.Measure.haveLebesgueDecomposition_of_sigmaFinite": {
+   "areas_full_name": [
+    "MeasureTheory"
+   ],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q191693"
+  },
+  "MeasureTheory.OuterMeasure.caratheodory": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis",
+    "MeasureTheory",
+    "Probability"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.OuterMeasure.Caratheodory",
+   "domain_spread_full": 0,
+   "domain_spread_short": 3,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 12,
+   "wikidata": "Q258374"
+  },
+  "MeasureTheory.ProbabilityMeasure.tendsto_iff_tendsto_charFun": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Probability"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Measure.LevyConvergence",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1966978"
+  },
+  "MeasureTheory.SignedMeasure.exists_isCompl_positive_negative": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.VectorMeasure.Decomposition.Hahn",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1568811"
+  },
+  "MeasureTheory.TendstoInDistribution.continuous_comp": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis",
+    "Probability",
+    "Tactic",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Function.ConvergenceInDistribution",
+   "domain_spread_full": 0,
+   "domain_spread_short": 4,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 11,
+   "wikidata": "Q5165492"
+  },
+  "MeasureTheory.TendstoInDistribution.continuous_comp_prodMk_of_tendstoInMeasure_const": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Function.ConvergenceInDistribution",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q643826"
+  },
+  "MeasureTheory.exists_ne_zero_mem_lattice_of_measure_mul_two_pow_lt_measure": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Group.GeometryOfNumbers",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1097021"
+  },
+  "MeasureTheory.integral_divergence_of_hasFDerivAt_off_countable": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Integral.DivergenceTheorem",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q338886"
+  },
+  "MeasureTheory.integral_prod": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis",
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Integral.Prod",
+   "domain_spread_full": 0,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 3,
+   "wikidata": "Q1149022"
+  },
+  "MeasureTheory.integral_tendsto_of_tendsto_of_antitone": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1153584"
+  },
+  "MeasureTheory.lintegral_liminf_le": {
+   "areas_full_name": [
+    "MeasureTheory"
+   ],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Integral.Lebesgue.Add",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 4,
+   "wikidata": "Q5437947"
+  },
+  "MeasureTheory.lintegral_tendsto_of_tendsto_of_monotone": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Integral.Lebesgue.Add",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 4,
+   "wikidata": "Q1153584"
+  },
+  "MeasureTheory.submartingale_iff_expected_stoppedValue_mono": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Probability.Martingale.OptionalStopping",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2027347"
+  },
+  "MeasureTheory.tendstoInMeasure_iff_tendsto_Lp": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Function.UnifTight",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q11352023"
+  },
+  "MeasureTheory.tendstoUniformlyOn_of_ae_tendsto": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Function.Egorov",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1191709"
+  },
+  "MeasureTheory.tendsto_integral_of_dominated_convergence": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis",
+    "MeasureTheory",
+    "Probability"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+   "domain_spread_full": 1,
+   "domain_spread_short": 3,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 7,
+   "wikidata": "Q1067156"
+  },
+  "MeasureTheory.tendsto_lintegral_nn_filter_of_le_const": {
+   "areas_full_name": [
+    "MeasureTheory"
+   ],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Measure.HasOuterApproxClosed",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1067156X"
+  },
+  "Metric.isCompact_iff_isClosed_bounded": {
+   "areas_full_name": [
+    "MeasureTheory",
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Topology.MetricSpace.Bounded",
+   "domain_spread_full": 2,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 3,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q253214"
+  },
+  "Module.equiv_free_prod_directSum": {
+   "areas_full_name": [
+    "GroupTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Algebra.Module.PID",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q7888360"
+  },
+  "MonoidAlgebra.Submodule.exists_isCompl": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis",
+    "LinearAlgebra",
+    "MeasureTheory",
+    "Order",
+    "RingTheory",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.RepresentationTheory.Maschke",
+   "domain_spread_full": 0,
+   "domain_spread_short": 6,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 16,
+   "wikidata": "Q656198"
+  },
+  "Monotone.tendstoLocallyUniformly_of_forall_tendsto": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Topology.UniformSpace.Dini",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q595466"
+  },
+  "MulAction.orbitEquivQuotientStabilizer": {
+   "areas_full_name": [
+    "CategoryTheory",
+    "GroupTheory"
+   ],
+   "areas_short_name": [
+    "Data",
+    "GroupTheory"
+   ],
+   "defining_module": "Mathlib.GroupTheory.GroupAction.Quotient",
+   "domain_spread_full": 2,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 3,
+   "wikidata": "Q288465"
+  },
+  "Multiset.prod_X_add_C_eq_sum_esymm": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.Polynomial.Vieta",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q570779"
+  },
+  "MvPolynomial.schwartz_zippel_sup_sum": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Algebra.MvPolynomial.SchwartzZippel",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q7433182"
+  },
+  "MvPolynomial.vanishingIdeal_zeroLocus_eq_radical": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "AlgebraicGeometry",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.RingTheory.Nullstellensatz",
+   "domain_spread_full": 0,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 5,
+   "wikidata": "Q1068976"
+  },
+  "Nat.ModEq.pow_totient": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": "Mathlib.FieldTheory.Finite.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q193910"
+  },
+  "Nat.Partition.card_odds_eq_card_distincts": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.Enumerative.Partition.Glaisher",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1082910"
+  },
+  "Nat.Partition.card_restricted_eq_card_countRestricted": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.Enumerative.Partition.Glaisher",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q5566491"
+  },
+  "Nat.Partrec.Code.fixed_point\u2082": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Computability"
+   ],
+   "defining_module": "Mathlib.Computability.PartrecCode",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1933521"
+  },
+  "Nat.Partrec.Code.smn": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Data"
+   ],
+   "defining_module": "Mathlib.Computability.PartrecCode",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1766814"
+  },
+  "Nat.Prime.sq_add_sq": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "FieldTheory"
+   ],
+   "defining_module": "Mathlib.NumberTheory.SumTwoSquares",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q914517"
+  },
+  "Nat.bertrand": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.Bertrand",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q632546"
+  },
+  "Nat.exists_infinite_primes": {
+   "areas_full_name": [
+    "Data",
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": "Mathlib.Data.Nat.Prime.Infinite",
+   "domain_spread_full": 2,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 4,
+   "wikidata": "Q1506253"
+  },
+  "Nat.gcd_eq_gcd_ab": {
+   "areas_full_name": [
+    "Algebra",
+    "Data"
+   ],
+   "areas_short_name": [
+    "Algebra",
+    "Data",
+    "GroupTheory",
+    "NumberTheory",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.Data.Int.GCD",
+   "domain_spread_full": 2,
+   "domain_spread_short": 5,
+   "files_referencing_full_name": 5,
+   "files_referencing_short_name": 8,
+   "wikidata": "Q513028"
+  },
+  "Nat.infinite_setOfPred_prime_and_eq_mod": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.LSeries.PrimesInAP",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q550402"
+  },
+  "Nat.primeFactorsList_unique": {
+   "areas_full_name": [
+    "Data",
+    "Tactic"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Data.Nat.Factors",
+   "domain_spread_full": 2,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q670235"
+  },
+  "Nat.sum_four_squares": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.SumFourSquares",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q756946"
+  },
+  "Nat.zeckendorfEquiv": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Data.Nat.Fib.Zeckendorf",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1188392"
+  },
+  "NormedAlgebra.Complex.algEquivOfNormMul": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Normed.Algebra.GelfandMazur",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2226677"
+  },
+  "NormedAlgebra.Real.nonempty_algEquiv_or": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Normed.Algebra.GelfandMazur",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q2226677"
+  },
+  "NormedRing.algEquivComplexOfComplete": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 3,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2226677"
+  },
+  "NumberField.Units.basisModTorsion": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1227702"
+  },
+  "NumberField.Units.exist_unique_eq_mul_prod": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q1227702"
+  },
+  "Order.iso_of_countable_dense": {
+   "areas_full_name": [
+    "ModelTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Order.CountableDenseLinearOrder",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q107710112"
+  },
+  "PadicInt.hasSum_mahler": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.Padics.MahlerBasis",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527118"
+  },
+  "Pell.eq_pell": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.PellMatiyasevic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q853067"
+  },
+  "Pell.exists_of_not_isSquare": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.Pell",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q853067"
+  },
+  "Pell.matiyasevic": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": "Mathlib.NumberTheory.PellMatiyasevic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q16251580"
+  },
+  "PhragmenLindelof.horizontal_strip": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Complex.PhragmenLindelof",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q4378868"
+  },
+  "Polynomial.abc": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "Algebra",
+    "CategoryTheory",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.NumberTheory.FLT.MasonStothers",
+   "domain_spread_full": 1,
+   "domain_spread_short": 3,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 3,
+   "wikidata": "Q6783821"
+  },
+  "Polynomial.eq_centerMass_of_eval_derivative_eq_zero": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Complex.Polynomial.GaussLucas",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1008566"
+  },
+  "Polynomial.isNoetherianRing": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "AlgebraicGeometry",
+    "NumberTheory",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.RingTheory.Polynomial.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 3,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 17,
+   "wikidata": "Q656645"
+  },
+  "Polynomial.rootSet_derivative_subset_convexHull_rootSet": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Complex.Polynomial.GaussLucas",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1008566"
+  },
+  "PowerSeries.WithPiTopology.hasProd_one_sub_X_pow": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.Enumerative.Pentagonal.PowerSeries",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q282649"
+  },
+  "PowerSeries.exists_isWeierstrassFactorization": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.PowerSeries.WeierstrassPreparation",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527219"
+  },
+  "ProbabilityTheory.IsGaussian.exists_integrable_exp_sq": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Probability.Distributions.Gaussian.Fernique",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q5445112"
+  },
+  "ProbabilityTheory.Kernel.traj": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Probability"
+   ],
+   "defining_module": "Mathlib.Probability.Kernel.IonescuTulcea.Traj",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q25378690"
+  },
+  "ProbabilityTheory.cond_eq_inv_mul_cond_mul": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Probability.ConditionalProbability",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q182505"
+  },
+  "ProbabilityTheory.tendstoInDistribution_inv_sqrt_mul_sum_sub": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Probability.CentralLimitTheorem",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q190391"
+  },
+  "ProbabilityTheory.tendsto_choose_mul_pow_of_tendsto_mul_atTop": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Probability.Distributions.Poisson.PoissonLimitThm",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q7208500"
+  },
+  "QuadraticForm.equivalent_one_zero_neg_one_weighted_sum_squared": {
+   "areas_full_name": [
+    "LinearAlgebra"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.LinearAlgebra.QuadraticForm.Real",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1752621"
+  },
+  "QuotientGroup.quotientInfEquivProdNormalQuotient": {
+   "areas_full_name": [
+    "GroupTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.GroupTheory.QuotientGroup.Basic",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1065966"
+  },
+  "QuotientGroup.quotientKerEquivRange": {
+   "areas_full_name": [
+    "GroupTheory",
+    "Topology"
+   ],
+   "areas_short_name": [
+    "Algebra",
+    "Data",
+    "GroupTheory",
+    "LinearAlgebra",
+    "RingTheory",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.GroupTheory.QuotientGroup.Basic",
+   "domain_spread_full": 2,
+   "domain_spread_short": 6,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 10,
+   "wikidata": "Q1187646"
+  },
+  "QuotientGroup.quotientQuotientEquivQuotient": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis",
+    "Data",
+    "GroupTheory",
+    "LinearAlgebra",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.GroupTheory.QuotientGroup.Basic",
+   "domain_spread_full": 1,
+   "domain_spread_short": 5,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 6,
+   "wikidata": "Q3527189"
+  },
+  "Rat.AbsoluteValue.equiv_real_or_padic": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.Ostrowski",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2919401"
+  },
+  "RatFunc.valuation_isEquiv_infty_or_adic": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.RatFunc.Ostrowski",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2919401"
+  },
+  "Real.exists_int_int_abs_mul_sub_le": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.DiophantineApproximation.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1227703"
+  },
+  "Real.exists_nat_abs_mul_sub_round_le": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.DiophantineApproximation.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1227703"
+  },
+  "Real.exists_rat_abs_sub_le_and_den_le": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.DiophantineApproximation.Basic",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1227703"
+  },
+  "Real.tendsto_tsum_powerSeries_nhdsWithin_lt": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Complex.AbelLimit",
+   "domain_spread_full": 0,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q318767"
+  },
+  "SchwartzMap.integral_inner_fourier_fourier": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Distribution.SchwartzSpace.Fourier",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2096184"
+  },
+  "Set.OrdConnected.image_deriv": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "Set.OrdConnected.image_derivWithin": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "Set.OrdConnected.image_hasDerivWithinAt": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "SimpleGraph.exists_isPerfectMatching_of_forall_ncard_le": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.SimpleGraph.Hall",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q536640"
+  },
+  "SimpleGraph.isTuranMaximal_iff_nonempty_iso_turanGraph": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.SimpleGraph.Extremal.Turan",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1047749"
+  },
+  "SimpleGraph.tutte": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.SimpleGraph.Tutte",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q510197"
+  },
+  "Stirling.tendsto_stirlingSeq_sqrt_pi": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.SpecialFunctions.Stirling",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q470877"
+  },
+  "Subgroup.card_subgroup_dvd_card": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "GroupTheory"
+   ],
+   "defining_module": "Mathlib.GroupTheory.Coset.Card",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 5,
+   "wikidata": "Q505798"
+  },
+  "Subgroup.commutator_inf_eq_focalSubgroup": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.GroupTheory.Focal",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q5463860"
+  },
+  "Subgroup.exists_left_complement'_of_coprime": {
+   "areas_full_name": [
+    "GroupTheory"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.GroupTheory.SchurZassenhaus",
+   "domain_spread_full": 1,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2226800"
+  },
+  "Submodule.isPrimary_decomposition_pairwise_ne_radical": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.Lasker",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q172298"
+  },
+  "Sylow.card_dvd_index": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.GroupTheory.Sylow",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1057919"
+  },
+  "Sylow.exists_subgroup_card_pow_prime": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.GroupTheory.Sylow",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1057919"
+  },
+  "Sylow.isPretransitive_of_finite": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.GroupTheory.Sylow",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1057919"
+  },
+  "Theorems100.Nat.eq_two_pow_mul_prime_mersenne_of_even_perfect": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": null,
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q18206266"
+  },
+  "Theorems100.cubic_eq_zero_iff": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": null,
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q203565"
+  },
+  "Theorems100.erdos_szekeres": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": null,
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q976607"
+  },
+  "Theorems100.friendship_theorem": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": null,
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q5504427"
+  },
+  "Theorems100.quartic_eq_zero_iff": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": null,
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q476776"
+  },
+  "TopologicalSpace.metrizableSpace_of_t3_secondCountable": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Geometry",
+    "Topology"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 0,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q1194053"
+  },
+  "UniqueFactorizationMonoid": {
+   "areas_full_name": [
+    "Algebra",
+    "Data",
+    "FieldTheory",
+    "GroupTheory",
+    "NumberTheory",
+    "RingTheory"
+   ],
+   "areas_short_name": [
+    "Algebra",
+    "Data",
+    "FieldTheory",
+    "GroupTheory",
+    "NumberTheory",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.RingTheory.UniqueFactorizationDomain.Defs",
+   "domain_spread_full": 6,
+   "domain_spread_short": 6,
+   "files_referencing_full_name": 61,
+   "files_referencing_short_name": 61,
+   "wikidata": "Q670235"
+  },
+  "UniqueFactorizationMonoid.factors_unique": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Data",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.RingTheory.UniqueFactorizationDomain.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 5,
+   "wikidata": "Q670235"
+  },
+  "Vitali.exists_disjoint_covering_ae": {
+   "areas_full_name": [
+    "MeasureTheory"
+   ],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Covering.Vitali",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q3229352"
+  },
+  "VitaliFamily.ae_tendsto_lintegral_div": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Covering.Differentiation",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2275191"
+  },
+  "WeakDual.isCompact_polar": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Normed.Module.WeakDual",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q537618"
+  },
+  "ZMod.chineseRemainder": {
+   "areas_full_name": [
+    "Data",
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "Data",
+    "NumberTheory",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.Data.ZMod.Basic",
+   "domain_spread_full": 2,
+   "domain_spread_short": 3,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 5,
+   "wikidata": "Q193878"
+  },
+  "ZMod.erdos_ginzburg_ziv": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.Additive.ErdosGinzburgZiv",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q716171"
+  },
+  "ZMod.pow_card_sub_one_eq_one": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "FieldTheory",
+    "NumberTheory",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.FieldTheory.Finite.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 3,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 6,
+   "wikidata": "Q188295"
+  },
+  "ZMod.wilsons_lemma": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.Wilson",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q276082"
+  },
+  "add_pow": {
+   "areas_full_name": [
+    "Algebra",
+    "AlgebraicGeometry",
+    "Analysis",
+    "Data",
+    "FieldTheory",
+    "LinearAlgebra",
+    "NumberTheory",
+    "Probability",
+    "RingTheory"
+   ],
+   "areas_short_name": [
+    "Algebra",
+    "AlgebraicGeometry",
+    "Analysis",
+    "Data",
+    "FieldTheory",
+    "LinearAlgebra",
+    "NumberTheory",
+    "Probability",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.Data.Nat.Choose.Sum",
+   "domain_spread_full": 9,
+   "domain_spread_short": 9,
+   "files_referencing_full_name": 36,
+   "files_referencing_short_name": 36,
+   "wikidata": "Q26708"
+  },
+  "ax_grothendieck_zeroLocus": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.FieldTheory.AxGrothendieck",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q4830725"
+  },
+  "banach_steinhaus": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Normed.Operator.BanachSteinhaus",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 3,
+   "files_referencing_short_name": 3,
+   "wikidata": "Q1426292"
+  },
+  "card_sylow_modEq_one": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.GroupTheory.Sylow",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1057919"
+  },
+  "char_dvd_card_solutions_of_sum_lt": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.FieldTheory.ChevalleyWarning",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q720469"
+  },
+  "closure_convexHull_extremePoints": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Convex.KreinMilman",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q642620"
+  },
+  "compl_beattySeq": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.Rayleigh",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q791663"
+  },
+  "convexHull_eq_union": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Convex.Caratheodory",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q2471737"
+  },
+  "corners_theorem_nat": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.Additive.Corner.Roth",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q5171652"
+  },
+  "den_dvd_of_is_root": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.Polynomial.RationalRoot",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q180345"
+  },
+  "dense_sInter_of_isOpen": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Topology.Baire.Lemmas",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1052678"
+  },
+  "doublyStochastic_eq_convexHull_permMatrix": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Convex.Birkhoff",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1243340"
+  },
+  "eigenvalue_mem_ball": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.LinearAlgebra.Matrix.Gershgorin",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q978688"
+  },
+  "exists_deriv_eq_slope": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q189136"
+  },
+  "exists_deriv_eq_zero": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Calculus.LocalExtr.Rolle",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q193286"
+  },
+  "exists_embedding_euclidean_of_compact": {
+   "areas_full_name": [
+    "Geometry"
+   ],
+   "areas_short_name": [
+    "Geometry"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1306095"
+  },
+  "exists_extension_norm_eq": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Normed.Module.HahnBanach",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q866116"
+  },
+  "exists_hasDerivWithinAt_eq_of_ge_of_le": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "exists_hasDerivWithinAt_eq_of_gt_of_lt": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "exists_hasDerivWithinAt_eq_of_le_of_ge": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "exists_hasDerivWithinAt_eq_of_lt_of_gt": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Darboux",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q660799"
+  },
+  "exists_norm_eq_iInf_of_complete_convex": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.InnerProductSpace.Projection.Minimal",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527215"
+  },
+  "exists_prime_orderOf_dvd_card": {
+   "areas_full_name": [
+    "FieldTheory",
+    "GroupTheory"
+   ],
+   "areas_short_name": [
+    "FieldTheory",
+    "GroupTheory"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 2,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 5,
+   "files_referencing_short_name": 5,
+   "wikidata": "Q1139041"
+  },
+  "exists_ratio_deriv_eq_ratio_slope": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q189136"
+  },
+  "exists_wellFoundedLT": {
+   "areas_full_name": [
+    "Topology"
+   ],
+   "areas_short_name": [
+    "Topology"
+   ],
+   "defining_module": "Mathlib.SetTheory.Cardinal.Order",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q1457052"
+  },
+  "extend_partialOrder": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Order.Extension.Linear",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q869647"
+  },
+  "fixedPoints.completeLattice": {
+   "areas_full_name": [],
+   "areas_short_name": [
+    "Algebra",
+    "CategoryTheory",
+    "Data",
+    "GroupTheory",
+    "Order",
+    "RingTheory"
+   ],
+   "defining_module": "Mathlib.Order.FixedPoints",
+   "domain_spread_full": 0,
+   "domain_spread_short": 6,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 22,
+   "wikidata": "Q609612"
+  },
+  "fixedPoints.lfp_eq_sSup_iterate": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Order.FixedPoints",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527263"
+  },
+  "four_functions_theorem": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.SetFamily.FourFunctions",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q4695203"
+  },
+  "hahnEmbedding_isOrderedAddMonoid": {
+   "areas_full_name": [
+    "Algebra"
+   ],
+   "areas_short_name": [
+    "Algebra"
+   ],
+   "defining_module": "Mathlib.RingTheory.HahnSeries.HahnEmbedding",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q5638886"
+  },
+  "hasProd_eulerFunction": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Combinatorics.Enumerative.Pentagonal.EulerFunction",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q282649"
+  },
+  "hasSum_zeta_two": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": "Mathlib.NumberTheory.ZetaValues",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q810431"
+  },
+  "intermediate_value_Icc": {
+   "areas_full_name": [
+    "Analysis",
+    "Topology"
+   ],
+   "areas_short_name": [
+    "Analysis",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Topology.Order.IntermediateValue",
+   "domain_spread_full": 2,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 3,
+   "files_referencing_short_name": 3,
+   "wikidata": "Q245098"
+  },
+  "intervalIntegral.integral_eq_sub_of_hasDeriv_right_of_le": {
+   "areas_full_name": [
+    "MeasureTheory",
+    "Probability"
+   ],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus",
+   "domain_spread_full": 2,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1217677"
+  },
+  "intervalIntegral.integral_hasStrictDerivAt_of_tendsto_ae_right": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1217677"
+  },
+  "isCompact_closure_of_isTightMeasureSet": {
+   "areas_full_name": [
+    "MeasureTheory"
+   ],
+   "areas_short_name": [
+    "MeasureTheory"
+   ],
+   "defining_module": "Mathlib.MeasureTheory.Measure.Prokhorov",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q7249519"
+  },
+  "isCompact_pi_infinite": {
+   "areas_full_name": [
+    "Analysis",
+    "Topology"
+   ],
+   "areas_short_name": [
+    "Analysis",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Topology.Compactness.Compact",
+   "domain_spread_full": 2,
+   "domain_spread_short": 2,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q1137014"
+  },
+  "isCompact_setOfPred_finiteMeasure_mass_eq_compl_isCompact_le": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Measure.Prokhorov",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q7249519"
+  },
+  "isCompact_setOfPred_finiteMeasure_mass_le_compl_isCompact_le": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Measure.Prokhorov",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q7249519"
+  },
+  "isCompact_setOfPred_probabilityMeasure_mass_eq_compl_isCompact_le": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.MeasureTheory.Measure.Prokhorov",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q7249519"
+  },
+  "isInteger_of_is_root_of_monic": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.Polynomial.RationalRoot",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q180345X"
+  },
+  "jacobiSym.quadratic_reciprocity": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": "Mathlib.NumberTheory.LegendreSymbol.JacobiSymbol",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q472883"
+  },
+  "jacobson_density": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.SimpleModule.Basic",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q17098298"
+  },
+  "legendreSym.quadratic_reciprocity": {
+   "areas_full_name": [
+    "NumberTheory"
+   ],
+   "areas_short_name": [
+    "NumberTheory"
+   ],
+   "defining_module": "Mathlib.NumberTheory.LegendreSymbol.QuadraticReciprocity",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q472883"
+  },
+  "littleWedderburn": {
+   "areas_full_name": [
+    "RingTheory"
+   ],
+   "areas_short_name": [
+    "RingTheory"
+   ],
+   "defining_module": null,
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q943246"
+  },
+  "mellinInv_mellin_eq": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.MellinInversion",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q6813106"
+  },
+  "mk_eq_mk_of_basis": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.LinearAlgebra.Dimension.StrongRankCondition",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527205"
+  },
+  "niven": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.NumberTheory.Niven",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q4116459"
+  },
+  "num_dvd_of_is_root": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.RingTheory.Polynomial.RationalRoot",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q180345"
+  },
+  "riesz_extension": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Convex.Cone.Extension",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q3527217"
+  },
+  "subgroupIsFreeOfIsFree": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.GroupTheory.FreeGroup.NielsenSchreier",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1259814"
+  },
+  "taylor_mean_remainder_cauchy": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Taylor",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1137206"
+  },
+  "taylor_mean_remainder_lagrange": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Analysis.Calculus.Taylor",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q1137206"
+  },
+  "tendsto_of_tendsto_of_tendsto_of_le_of_le'": {
+   "areas_full_name": [
+    "Analysis",
+    "MeasureTheory",
+    "Order",
+    "Probability",
+    "Topology"
+   ],
+   "areas_short_name": [
+    "Analysis",
+    "MeasureTheory",
+    "Order",
+    "Probability",
+    "Topology"
+   ],
+   "defining_module": "Mathlib.Topology.Order.Basic",
+   "domain_spread_full": 5,
+   "domain_spread_short": 5,
+   "files_referencing_full_name": 15,
+   "files_referencing_short_name": 15,
+   "wikidata": "Q1065257"
+  },
+  "tendsto_subseq_of_bounded": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Topology.MetricSpace.Sequences",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 2,
+   "files_referencing_short_name": 2,
+   "wikidata": "Q468391"
+  },
+  "tendsto_subseq_of_frequently_bounded": {
+   "areas_full_name": [],
+   "areas_short_name": [],
+   "defining_module": "Mathlib.Topology.MetricSpace.Sequences",
+   "domain_spread_full": 0,
+   "domain_spread_short": 0,
+   "files_referencing_full_name": 0,
+   "files_referencing_short_name": 0,
+   "wikidata": "Q468391"
+  },
+  "tsum_sq_fourierCoeff": {
+   "areas_full_name": [
+    "Analysis"
+   ],
+   "areas_short_name": [
+    "Analysis"
+   ],
+   "defining_module": "Mathlib.Analysis.Fourier.AddCircle",
+   "domain_spread_full": 1,
+   "domain_spread_short": 1,
+   "files_referencing_full_name": 1,
+   "files_referencing_short_name": 1,
+   "wikidata": "Q1443036"
+  }
+ },
+ "method": "Phase 0 step 3: usage evidence for each board declaration.\n\nMETHOD (stated plainly because the numbers are only as good as it):\n  For every declaration named in mathlib's 1000.yaml we run one ripgrep pass\n  over Mathlib/ for (a) the fully-qualified name and (b) its final segment,\n  both as whole words, and record the distinct files and distinct top-level\n  areas that mention each.\n\n  Lean resolves a declaration by its short name inside its own namespace and\n  by its full name elsewhere, so:\n     full-name file count   UNDER-counts (misses in-namespace uses)\n     short-name file count  OVER-counts  (catches same-named decls elsewhere)\n  The truth is bracketed by the two. Neither is a compiled dependency graph;\n  this is textual evidence, labelled ACTUAL_SHARED_ABSTRACTION at best, never\n  ACTUAL_LEAN_DEPENDENCY at declaration granularity. The module import graph\n  in modules.json is the exact structural fact; this file is the approximation."
+}
