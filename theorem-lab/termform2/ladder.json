@@ -1,0 +1,1472 @@
+{
+ "certification_rule": "exact match to an independent library invariant on TRAIN, then RESERVE, then HOLDOUT; novel = not certified at an earlier rung",
+ "design": "one turn of abstraction per rung (stage-1 formation only); the vocabulary carried across rung boundaries is the only thing that changes",
+ "label": "COMPUTED",
+ "promotion_rule": "every novel certified term plus every quantifier sub-term inside it; mechanical, no hand selection",
+ "round1_promoted_terms": 20,
+ "rung0_certified_invariants": [
+  "floor_n_2",
+  "floor_n_3",
+  "floor_n_4",
+  "is_even",
+  "is_prime",
+  "is_square",
+  "n",
+  "n_div_spf",
+  "n_minus_1",
+  "spf",
+  "tau",
+  "tau_minus_1"
+ ],
+ "rungs": {
+  "V0": {
+   "atoms": 40,
+   "certified": {
+    "floor_n_2": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "const",
+        2
+       ]
+      ]
+     ],
+     "invariant": "floor_n_2",
+     "term": "<count(k: (k % 2))>",
+     "uses_carried_over": true
+    },
+    "floor_n_3": {
+     "cost": 3,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "least",
+       [
+        "div",
+        [
+         "const",
+         2
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "floor_n_3",
+     "term": "(n // <least(k: (2 // k))>)",
+     "uses_carried_over": true
+    },
+    "floor_n_4": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "const",
+        4
+       ]
+      ]
+     ],
+     "invariant": "floor_n_4",
+     "term": "<count(k: (k % 4))>",
+     "uses_carried_over": true
+    },
+    "is_even": {
+     "cost": 3,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "const",
+         2
+        ]
+       ]
+      ]
+     ],
+     "invariant": "is_even",
+     "term": "(n // <count(k: (n % 2))>)",
+     "uses_carried_over": true
+    },
+    "is_prime": {
+     "cost": 3,
+     "expanded": [
+      "div",
+      [
+       "const",
+       2
+      ],
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "is_prime",
+     "term": "(2 // <count(k: (n % k))>)",
+     "uses_carried_over": true
+    },
+    "is_square": {
+     "cost": 3,
+     "expanded": [
+      "mod",
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ],
+      [
+       "const",
+       2
+      ]
+     ],
+     "invariant": "is_square",
+     "term": "(<count(k: (n % k))> % 2)",
+     "uses_carried_over": true
+    },
+    "n": {
+     "cost": 1,
+     "expanded": [
+      "var",
+      "n"
+     ],
+     "invariant": "n",
+     "term": "n",
+     "uses_carried_over": false
+    },
+    "n_div_spf": {
+     "cost": 3,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "least",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "n_div_spf",
+     "term": "(n // <least(k: (n % k))>)",
+     "uses_carried_over": true
+    },
+    "n_minus_1": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "div",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "var",
+        "n"
+       ]
+      ]
+     ],
+     "invariant": "n_minus_1",
+     "term": "<count(k: (k // n))>",
+     "uses_carried_over": true
+    },
+    "spf": {
+     "cost": 1,
+     "expanded": [
+      "least",
+      [
+       "mod",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "spf",
+     "term": "<least(k: (n % k))>",
+     "uses_carried_over": true
+    },
+    "tau": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "tau",
+     "term": "<count(k: (n % k))>",
+     "uses_carried_over": true
+    },
+    "tau_minus_1": {
+     "cost": 3,
+     "expanded": [
+      "sub",
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ],
+      [
+       "const",
+       1
+      ]
+     ],
+     "invariant": "tau_minus_1",
+     "term": "(<count(k: (n % k))> - 1)",
+     "uses_carried_over": true
+    }
+   },
+   "classes_TRAIN": 154862,
+   "expansions": 878400,
+   "formed": 35,
+   "levels": [
+    {
+     "classes_cumulative": 36,
+     "cost": 1,
+     "expansions_cumulative": 0,
+     "kept_at_level": 40,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 36,
+     "cost": 2,
+     "expansions_cumulative": 0,
+     "kept_at_level": 0,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 2572,
+     "cost": 3,
+     "expansions_cumulative": 14400,
+     "kept_at_level": 1200,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 2572,
+     "cost": 4,
+     "expansions_cumulative": 14400,
+     "kept_at_level": 0,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 154862,
+     "cost": 5,
+     "expansions_cumulative": 878400,
+     "kept_at_level": 1200,
+     "truncated": false
+    }
+   ],
+   "novel_at_this_rung": [
+    "floor_n_2",
+    "floor_n_3",
+    "floor_n_4",
+    "is_even",
+    "is_prime",
+    "is_square",
+    "n",
+    "n_div_spf",
+    "n_minus_1",
+    "spf",
+    "tau",
+    "tau_minus_1"
+   ],
+   "novel_using_carried_vocabulary": [
+    "floor_n_2",
+    "floor_n_3",
+    "floor_n_4",
+    "is_even",
+    "is_prime",
+    "is_square",
+    "n_div_spf",
+    "n_minus_1",
+    "spf",
+    "tau",
+    "tau_minus_1"
+   ],
+   "promoted_to_next": [
+    "('count', ('mod', ('var', 'k'), ('const', 2)))",
+    "('div', ('var', 'n'), ('least', ('div', ('const', 2), ('var', 'k'))))",
+    "('least', ('div', ('const', 2), ('var', 'k')))",
+    "('count', ('mod', ('var', 'k'), ('const', 4)))",
+    "('div', ('var', 'n'), ('count', ('mod', ('var', 'n'), ('const', 2))))",
+    "('count', ('mod', ('var', 'n'), ('const', 2)))",
+    "('div', ('const', 2), ('count', ('mod', ('var', 'n'), ('var', 'k'))))",
+    "('count', ('mod', ('var', 'n'), ('var', 'k')))",
+    "('mod', ('count', ('mod', ('var', 'n'), ('var', 'k'))), ('const', 2))",
+    "('var', 'n')",
+    "('div', ('var', 'n'), ('least', ('mod', ('var', 'n'), ('var', 'k'))))",
+    "('least', ('mod', ('var', 'n'), ('var', 'k')))",
+    "('count', ('div', ('var', 'k'), ('var', 'n')))",
+    "('sub', ('count', ('mod', ('var', 'n'), ('var', 'k'))), ('const', 1))"
+   ],
+   "seconds": 11.6,
+   "tag": "V0",
+   "vocabulary_size": 0
+  },
+  "V1": {
+   "atoms": 493,
+   "certified": {
+    "floor_n_2": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "const",
+        2
+       ]
+      ]
+     ],
+     "invariant": "floor_n_2",
+     "term": "<count(k: (k % 2))>",
+     "uses_carried_over": true
+    },
+    "floor_n_3": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "least",
+       [
+        "div",
+        [
+         "const",
+         2
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "floor_n_3",
+     "term": "<(n // least(k: (2 // k)))>",
+     "uses_carried_over": true
+    },
+    "floor_n_4": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "const",
+        4
+       ]
+      ]
+     ],
+     "invariant": "floor_n_4",
+     "term": "<count(k: (k % 4))>",
+     "uses_carried_over": true
+    },
+    "is_even": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "const",
+         2
+        ]
+       ]
+      ]
+     ],
+     "invariant": "is_even",
+     "term": "<(n // count(k: (n % 2)))>",
+     "uses_carried_over": true
+    },
+    "is_prime": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "const",
+       2
+      ],
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "is_prime",
+     "term": "<(2 // count(k: (n % k)))>",
+     "uses_carried_over": true
+    },
+    "is_square": {
+     "cost": 1,
+     "expanded": [
+      "mod",
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ],
+      [
+       "const",
+       2
+      ]
+     ],
+     "invariant": "is_square",
+     "term": "<(count(k: (n % k)) % 2)>",
+     "uses_carried_over": true
+    },
+    "n": {
+     "cost": 1,
+     "expanded": [
+      "var",
+      "n"
+     ],
+     "invariant": "n",
+     "term": "n",
+     "uses_carried_over": false
+    },
+    "n_div_spf": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "least",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "n_div_spf",
+     "term": "<(n // least(k: (n % k)))>",
+     "uses_carried_over": true
+    },
+    "n_minus_1": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "div",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "var",
+        "n"
+       ]
+      ]
+     ],
+     "invariant": "n_minus_1",
+     "term": "<count(k: (k // n))>",
+     "uses_carried_over": true
+    },
+    "n_minus_n_div_spf": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "div",
+       [
+        "div",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "least",
+         [
+          "mod",
+          [
+           "var",
+           "n"
+          ],
+          [
+           "var",
+           "k"
+          ]
+         ]
+        ]
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "n_minus_n_div_spf",
+     "term": "<count(k: (<(n // least(k: (n % k)))> // k))>",
+     "uses_carried_over": true
+    },
+    "spf": {
+     "cost": 1,
+     "expanded": [
+      "least",
+      [
+       "mod",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "spf",
+     "term": "<least(k: (n % k))>",
+     "uses_carried_over": true
+    },
+    "tau": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "tau",
+     "term": "<count(k: (n % k))>",
+     "uses_carried_over": true
+    },
+    "tau_minus_1": {
+     "cost": 1,
+     "expanded": [
+      "sub",
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ],
+      [
+       "const",
+       1
+      ]
+     ],
+     "invariant": "tau_minus_1",
+     "term": "<(count(k: (n % k)) - 1)>",
+     "uses_carried_over": true
+    }
+   },
+   "classes_TRAIN": 3973145,
+   "expansions": 12836241,
+   "formed": 480,
+   "levels": [
+    {
+     "classes_cumulative": 481,
+     "cost": 1,
+     "expansions_cumulative": 0,
+     "kept_at_level": 493,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 481,
+     "cost": 2,
+     "expansions_cumulative": 0,
+     "kept_at_level": 0,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 492882,
+     "cost": 3,
+     "expansions_cumulative": 2187441,
+     "kept_at_level": 1200,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 492882,
+     "cost": 4,
+     "expansions_cumulative": 2187441,
+     "kept_at_level": 0,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 3973145,
+     "cost": 5,
+     "expansions_cumulative": 12836241,
+     "kept_at_level": 1200,
+     "truncated": false
+    }
+   ],
+   "novel_at_this_rung": [
+    "n_minus_n_div_spf"
+   ],
+   "novel_using_carried_vocabulary": [
+    "n_minus_n_div_spf"
+   ],
+   "promoted_to_next": [
+    "('count', ('div', ('div', ('var', 'n'), ('least', ('mod', ('var', 'n'), ('var', 'k')))), ('var', 'k')))",
+    "('least', ('mod', ('var', 'n'), ('var', 'k')))"
+   ],
+   "seconds": 163.6,
+   "tag": "V1",
+   "vocabulary_size": 14
+  },
+  "V2": {
+   "atoms": 505,
+   "certified": {
+    "floor_n_2": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "const",
+        2
+       ]
+      ]
+     ],
+     "invariant": "floor_n_2",
+     "term": "<count(k: (k % 2))>",
+     "uses_carried_over": true
+    },
+    "floor_n_3": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "least",
+       [
+        "div",
+        [
+         "const",
+         2
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "floor_n_3",
+     "term": "<(n // least(k: (2 // k)))>",
+     "uses_carried_over": true
+    },
+    "floor_n_4": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "const",
+        4
+       ]
+      ]
+     ],
+     "invariant": "floor_n_4",
+     "term": "<count(k: (k % 4))>",
+     "uses_carried_over": true
+    },
+    "is_even": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "const",
+         2
+        ]
+       ]
+      ]
+     ],
+     "invariant": "is_even",
+     "term": "<(n // count(k: (n % 2)))>",
+     "uses_carried_over": true
+    },
+    "is_prime": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "const",
+       2
+      ],
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "is_prime",
+     "term": "<(2 // count(k: (n % k)))>",
+     "uses_carried_over": true
+    },
+    "is_square": {
+     "cost": 1,
+     "expanded": [
+      "mod",
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ],
+      [
+       "const",
+       2
+      ]
+     ],
+     "invariant": "is_square",
+     "term": "<(count(k: (n % k)) % 2)>",
+     "uses_carried_over": true
+    },
+    "n": {
+     "cost": 1,
+     "expanded": [
+      "var",
+      "n"
+     ],
+     "invariant": "n",
+     "term": "n",
+     "uses_carried_over": false
+    },
+    "n_div_spf": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "least",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "n_div_spf",
+     "term": "<(n // least(k: (n % k)))>",
+     "uses_carried_over": true
+    },
+    "n_minus_1": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "div",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "var",
+        "n"
+       ]
+      ]
+     ],
+     "invariant": "n_minus_1",
+     "term": "<count(k: (k // n))>",
+     "uses_carried_over": true
+    },
+    "n_minus_n_div_spf": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "div",
+       [
+        "div",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "least",
+         [
+          "mod",
+          [
+           "var",
+           "n"
+          ],
+          [
+           "var",
+           "k"
+          ]
+         ]
+        ]
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "n_minus_n_div_spf",
+     "term": "<count(k: ((n // least(k: (n % k))) // k))>",
+     "uses_carried_over": true
+    },
+    "spf": {
+     "cost": 1,
+     "expanded": [
+      "least",
+      [
+       "mod",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "spf",
+     "term": "<least(k: (n % k))>",
+     "uses_carried_over": true
+    },
+    "tau": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "tau",
+     "term": "<count(k: (n % k))>",
+     "uses_carried_over": true
+    },
+    "tau_minus_1": {
+     "cost": 1,
+     "expanded": [
+      "sub",
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ],
+      [
+       "const",
+       1
+      ]
+     ],
+     "invariant": "tau_minus_1",
+     "term": "<(count(k: (n % k)) - 1)>",
+     "uses_carried_over": true
+    }
+   },
+   "classes_TRAIN": 4073724,
+   "expansions": 13203225,
+   "formed": 517,
+   "levels": [
+    {
+     "classes_cumulative": 491,
+     "cost": 1,
+     "expansions_cumulative": 0,
+     "kept_at_level": 505,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 491,
+     "cost": 2,
+     "expansions_cumulative": 0,
+     "kept_at_level": 0,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 514577,
+     "cost": 3,
+     "expansions_cumulative": 2295225,
+     "kept_at_level": 1200,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 514577,
+     "cost": 4,
+     "expansions_cumulative": 2295225,
+     "kept_at_level": 0,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 4073724,
+     "cost": 5,
+     "expansions_cumulative": 13203225,
+     "kept_at_level": 1200,
+     "truncated": false
+    }
+   ],
+   "novel_at_this_rung": [],
+   "novel_using_carried_vocabulary": [],
+   "promoted_to_next": [],
+   "seconds": 168.0,
+   "tag": "V2",
+   "vocabulary_size": 16
+  },
+  "V3": {
+   "atoms": 505,
+   "certified": {
+    "floor_n_2": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "const",
+        2
+       ]
+      ]
+     ],
+     "invariant": "floor_n_2",
+     "term": "<count(k: (k % 2))>",
+     "uses_carried_over": true
+    },
+    "floor_n_3": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "least",
+       [
+        "div",
+        [
+         "const",
+         2
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "floor_n_3",
+     "term": "<(n // least(k: (2 // k)))>",
+     "uses_carried_over": true
+    },
+    "floor_n_4": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "const",
+        4
+       ]
+      ]
+     ],
+     "invariant": "floor_n_4",
+     "term": "<count(k: (k % 4))>",
+     "uses_carried_over": true
+    },
+    "is_even": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "const",
+         2
+        ]
+       ]
+      ]
+     ],
+     "invariant": "is_even",
+     "term": "<(n // count(k: (n % 2)))>",
+     "uses_carried_over": true
+    },
+    "is_prime": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "const",
+       2
+      ],
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "is_prime",
+     "term": "<(2 // count(k: (n % k)))>",
+     "uses_carried_over": true
+    },
+    "is_square": {
+     "cost": 1,
+     "expanded": [
+      "mod",
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ],
+      [
+       "const",
+       2
+      ]
+     ],
+     "invariant": "is_square",
+     "term": "<(count(k: (n % k)) % 2)>",
+     "uses_carried_over": true
+    },
+    "n": {
+     "cost": 1,
+     "expanded": [
+      "var",
+      "n"
+     ],
+     "invariant": "n",
+     "term": "n",
+     "uses_carried_over": false
+    },
+    "n_div_spf": {
+     "cost": 1,
+     "expanded": [
+      "div",
+      [
+       "var",
+       "n"
+      ],
+      [
+       "least",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     "invariant": "n_div_spf",
+     "term": "<(n // least(k: (n % k)))>",
+     "uses_carried_over": true
+    },
+    "n_minus_1": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "div",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "var",
+        "n"
+       ]
+      ]
+     ],
+     "invariant": "n_minus_1",
+     "term": "<count(k: (k // n))>",
+     "uses_carried_over": true
+    },
+    "n_minus_n_div_spf": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "div",
+       [
+        "div",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "least",
+         [
+          "mod",
+          [
+           "var",
+           "n"
+          ],
+          [
+           "var",
+           "k"
+          ]
+         ]
+        ]
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "n_minus_n_div_spf",
+     "term": "<count(k: ((n // least(k: (n % k))) // k))>",
+     "uses_carried_over": true
+    },
+    "spf": {
+     "cost": 1,
+     "expanded": [
+      "least",
+      [
+       "mod",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "spf",
+     "term": "<least(k: (n % k))>",
+     "uses_carried_over": true
+    },
+    "tau": {
+     "cost": 1,
+     "expanded": [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "var",
+        "k"
+       ]
+      ]
+     ],
+     "invariant": "tau",
+     "term": "<count(k: (n % k))>",
+     "uses_carried_over": true
+    },
+    "tau_minus_1": {
+     "cost": 1,
+     "expanded": [
+      "sub",
+      [
+       "count",
+       [
+        "mod",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ],
+      [
+       "const",
+       1
+      ]
+     ],
+     "invariant": "tau_minus_1",
+     "term": "<(count(k: (n % k)) - 1)>",
+     "uses_carried_over": true
+    }
+   },
+   "classes_TRAIN": 4073724,
+   "expansions": 13203225,
+   "formed": 517,
+   "levels": [
+    {
+     "classes_cumulative": 491,
+     "cost": 1,
+     "expansions_cumulative": 0,
+     "kept_at_level": 505,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 491,
+     "cost": 2,
+     "expansions_cumulative": 0,
+     "kept_at_level": 0,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 514577,
+     "cost": 3,
+     "expansions_cumulative": 2295225,
+     "kept_at_level": 1200,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 514577,
+     "cost": 4,
+     "expansions_cumulative": 2295225,
+     "kept_at_level": 0,
+     "truncated": false
+    },
+    {
+     "classes_cumulative": 4073724,
+     "cost": 5,
+     "expansions_cumulative": 13203225,
+     "kept_at_level": 1200,
+     "truncated": false
+    }
+   ],
+   "novel_at_this_rung": [],
+   "novel_using_carried_vocabulary": [],
+   "seconds": 173.1,
+   "tag": "V3",
+   "vocabulary_size": 16
+  }
+ }
+}
