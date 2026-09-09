@@ -1,0 +1,226 @@
+{
+ "accuracy_composable": 0.9857,
+ "accuracy_non_composable": 1.0,
+ "base_rule": [
+  {
+   "condition": "n mod 8 = 0",
+   "value": "n//4"
+  },
+  {
+   "condition": "n mod 4 = 0",
+   "value": "n-2"
+  },
+  {
+   "condition": "n mod 2 = 0",
+   "value": "n-1"
+  },
+  {
+   "condition": "otherwise",
+   "value": "n - n//spf(n)"
+  }
+ ],
+ "base_rule_training_errors": 0,
+ "chosen_composition_op": "max",
+ "composable": [
+  33,
+  34,
+  35,
+  36,
+  38,
+  39,
+  40,
+  42,
+  44,
+  45,
+  46,
+  48
+ ],
+ "composition_scores": {
+  "add": {
+   "accuracy": 0.0,
+   "cases": 30,
+   "correct": 0
+  },
+  "gcd": {
+   "accuracy": 0.1333,
+   "cases": 30,
+   "correct": 4
+  },
+  "lcm": {
+   "accuracy": 1.0,
+   "cases": 30,
+   "correct": 30
+  },
+  "left": {
+   "accuracy": 0.5667,
+   "cases": 30,
+   "correct": 17
+  },
+  "max": {
+   "accuracy": 1.0,
+   "cases": 30,
+   "correct": 30
+  },
+  "min": {
+   "accuracy": 0.1333,
+   "cases": 30,
+   "correct": 4
+  },
+  "mul": {
+   "accuracy": 0.4667,
+   "cases": 30,
+   "correct": 14
+  },
+  "right": {
+   "accuracy": 0.5667,
+   "cases": 30,
+   "correct": 17
+  }
+ },
+ "end_to_end_accuracy": 0.99048,
+ "forecast_hash": "9c98f49e43c04d9085062987792465d2cda11cc076815e6bd3fc7b10acdf987d",
+ "held_out_objects": 18,
+ "invariant_exact_composable": 10,
+ "invariant_exact_non_composable": 6,
+ "invariant_exact_overall": 16,
+ "label": "COMPUTED",
+ "majority_class_baseline": 0.90278,
+ "non_composable": [
+  31,
+  32,
+  37,
+  41,
+  43,
+  47
+ ],
+ "oracle_queries": 4320,
+ "per_object": {
+  "31": {
+   "accuracy": 1.0,
+   "f_actual_observed": 30,
+   "f_predicted": 30,
+   "invariant_exact": true,
+   "route": "base:n - n//spf(n)"
+  },
+  "32": {
+   "accuracy": 1.0,
+   "f_actual_observed": 8,
+   "f_predicted": 8,
+   "invariant_exact": true,
+   "route": "base:n//4"
+  },
+  "33": {
+   "accuracy": 1.0,
+   "f_actual_observed": 10,
+   "f_predicted": 10,
+   "invariant_exact": true,
+   "route": "composed"
+  },
+  "34": {
+   "accuracy": 1.0,
+   "f_actual_observed": 16,
+   "f_predicted": 16,
+   "invariant_exact": true,
+   "route": "composed"
+  },
+  "35": {
+   "accuracy": 0.9143,
+   "f_actual_observed": 12,
+   "f_predicted": 6,
+   "invariant_exact": false,
+   "route": "composed"
+  },
+  "36": {
+   "accuracy": 1.0,
+   "f_actual_observed": 6,
+   "f_predicted": 6,
+   "invariant_exact": true,
+   "route": "composed"
+  },
+  "37": {
+   "accuracy": 1.0,
+   "f_actual_observed": 36,
+   "f_predicted": 36,
+   "invariant_exact": true,
+   "route": "base:n - n//spf(n)"
+  },
+  "38": {
+   "accuracy": 1.0,
+   "f_actual_observed": 18,
+   "f_predicted": 18,
+   "invariant_exact": true,
+   "route": "composed"
+  },
+  "39": {
+   "accuracy": 1.0,
+   "f_actual_observed": 12,
+   "f_predicted": 12,
+   "invariant_exact": true,
+   "route": "composed"
+  },
+  "40": {
+   "accuracy": 1.0,
+   "f_actual_observed": 4,
+   "f_predicted": 4,
+   "invariant_exact": true,
+   "route": "composed"
+  },
+  "41": {
+   "accuracy": 1.0,
+   "f_actual_observed": 40,
+   "f_predicted": 40,
+   "invariant_exact": true,
+   "route": "base:n - n//spf(n)"
+  },
+  "42": {
+   "accuracy": 1.0,
+   "f_actual_observed": 6,
+   "f_predicted": 6,
+   "invariant_exact": true,
+   "route": "composed"
+  },
+  "43": {
+   "accuracy": 1.0,
+   "f_actual_observed": 42,
+   "f_predicted": 42,
+   "invariant_exact": true,
+   "route": "base:n - n//spf(n)"
+  },
+  "44": {
+   "accuracy": 1.0,
+   "f_actual_observed": 10,
+   "f_predicted": 10,
+   "invariant_exact": true,
+   "route": "composed"
+  },
+  "45": {
+   "accuracy": 0.9143,
+   "f_actual_observed": 12,
+   "f_predicted": 6,
+   "invariant_exact": false,
+   "route": "composed"
+  },
+  "46": {
+   "accuracy": 1.0,
+   "f_actual_observed": 22,
+   "f_predicted": 22,
+   "invariant_exact": true,
+   "route": "composed"
+  },
+  "47": {
+   "accuracy": 1.0,
+   "f_actual_observed": 46,
+   "f_predicted": 46,
+   "invariant_exact": true,
+   "route": "base:n - n//spf(n)"
+  },
+  "48": {
+   "accuracy": 1.0,
+   "f_actual_observed": 4,
+   "f_predicted": 4,
+   "invariant_exact": true,
+   "route": "composed"
+  }
+ },
+ "queries_before_freeze": 1800
+}

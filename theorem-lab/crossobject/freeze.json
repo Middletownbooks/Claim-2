@@ -1,0 +1,172 @@
+{
+ "base_rule": [
+  {
+   "condition": "n mod 8 = 0",
+   "value": "n//4"
+  },
+  {
+   "condition": "n mod 4 = 0",
+   "value": "n-2"
+  },
+  {
+   "condition": "n mod 2 = 0",
+   "value": "n-1"
+  },
+  {
+   "condition": "otherwise",
+   "value": "n - n//spf(n)"
+  }
+ ],
+ "base_rule_training_errors": 0,
+ "chosen_composition_op": "max",
+ "composition_scores": {
+  "add": {
+   "accuracy": 0.0,
+   "cases": 30,
+   "correct": 0
+  },
+  "gcd": {
+   "accuracy": 0.1333,
+   "cases": 30,
+   "correct": 4
+  },
+  "lcm": {
+   "accuracy": 1.0,
+   "cases": 30,
+   "correct": 30
+  },
+  "left": {
+   "accuracy": 0.5667,
+   "cases": 30,
+   "correct": 17
+  },
+  "max": {
+   "accuracy": 1.0,
+   "cases": 30,
+   "correct": 30
+  },
+  "min": {
+   "accuracy": 0.1333,
+   "cases": 30,
+   "correct": 4
+  },
+  "mul": {
+   "accuracy": 0.4667,
+   "cases": 30,
+   "correct": 14
+  },
+  "right": {
+   "accuracy": 0.5667,
+   "cases": 30,
+   "correct": 17
+  }
+ },
+ "forecast_hash": "9c98f49e43c04d9085062987792465d2cda11cc076815e6bd3fc7b10acdf987d",
+ "observed_training_periods": {
+  "1": 1,
+  "2": 1,
+  "3": 2,
+  "4": 2,
+  "5": 4,
+  "6": 2,
+  "7": 6,
+  "8": 2,
+  "9": 6,
+  "10": 4,
+  "11": 10,
+  "12": 2,
+  "13": 12,
+  "14": 6,
+  "15": 4,
+  "16": 4,
+  "17": 16,
+  "18": 6,
+  "19": 18,
+  "20": 4,
+  "21": 6,
+  "22": 10,
+  "23": 22,
+  "24": 2,
+  "25": 20,
+  "26": 12,
+  "27": 18,
+  "28": 6,
+  "29": 28,
+  "30": 4
+ },
+ "predicted_invariants": {
+  "31": {
+   "f_pred": 30,
+   "route": "base:n - n//spf(n)"
+  },
+  "32": {
+   "f_pred": 8,
+   "route": "base:n//4"
+  },
+  "33": {
+   "f_pred": 10,
+   "route": "composed"
+  },
+  "34": {
+   "f_pred": 16,
+   "route": "composed"
+  },
+  "35": {
+   "f_pred": 6,
+   "route": "composed"
+  },
+  "36": {
+   "f_pred": 6,
+   "route": "composed"
+  },
+  "37": {
+   "f_pred": 36,
+   "route": "base:n - n//spf(n)"
+  },
+  "38": {
+   "f_pred": 18,
+   "route": "composed"
+  },
+  "39": {
+   "f_pred": 12,
+   "route": "composed"
+  },
+  "40": {
+   "f_pred": 4,
+   "route": "composed"
+  },
+  "41": {
+   "f_pred": 40,
+   "route": "base:n - n//spf(n)"
+  },
+  "42": {
+   "f_pred": 6,
+   "route": "composed"
+  },
+  "43": {
+   "f_pred": 42,
+   "route": "base:n - n//spf(n)"
+  },
+  "44": {
+   "f_pred": 10,
+   "route": "composed"
+  },
+  "45": {
+   "f_pred": 6,
+   "route": "composed"
+  },
+  "46": {
+   "f_pred": 22,
+   "route": "composed"
+  },
+  "47": {
+   "f_pred": 46,
+   "route": "base:n - n//spf(n)"
+  },
+  "48": {
+   "f_pred": 4,
+   "route": "composed"
+  }
+ },
+ "queries_before_final": 1800
+}
