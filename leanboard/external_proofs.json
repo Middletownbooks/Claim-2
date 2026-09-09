@@ -1,0 +1,33 @@
+{
+ "_note": "Formal proofs that exist in Lean OUTSIDE mathlib, and are therefore invisible to mathlib's docs/1000.yaml. Merged into bridge_ledger.json by ledger.py. Add rows here as they are found; each must carry the commit it was checked at and an explicit statement of what was and was not verified locally.",
+ "Q132469": {
+  "title": "Fermat's Last Theorem",
+  "mathlib_board_says": "statement only; comment points at the ongoing Imperial College London FLT project",
+  "external_proof": {
+   "repo": "anthropics/fermats-last-theorem",
+   "commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+   "commit_date": "2026-09-03",
+   "lean_toolchain": "leanprover/lean4:v4.33.1",
+   "mathlib_pin": "db584cd6d46c92f209a44c0f1c829460d327499d",
+   "root_theorem": "fermat_last_theorem (Theorems/Thm_fermat_last_theorem.lean:128)",
+   "derives_mathlib_statement": "FinalCheck.lean proves flt_mathlib : FermatLastTheorem",
+   "theorems": 29511,
+   "citation_edges": 106897,
+   "max_citation_depth": 118,
+   "flt_specific_theorems": 91,
+   "theorems_in_namespaces_absent_from_mathlib": 19080,
+   "maintenance": "research artifact; not maintained, not accepting contributions"
+  },
+  "verified_locally_by_this_session": [
+   "no sorry / axiom / native_decide / partial def / implemented_by / extern / unsafe / #eval in any of the 60478 .lean files under Theorems, Definitions, P2M, FinalCheck",
+   "statement text matches Mathlib's FermatLastTheorem and FinalCheck derives it",
+   "citation graph is exact, rooted and 99.93% connected to the root theorem"
+  ],
+  "NOT_verified_by_this_session": [
+   "that the development type-checks: no Lean toolchain is installable here (elan.lean-lang.org is egress-blocked) and the pinned Mathlib would need a from-source build",
+   "the repository's own reports of lake build, leanprover/comparator v4.33.0, and nanoda 0.4.13 (with four local patches) - relayed, not reproduced"
+  ],
+  "evidence_class": "DOCUMENTED_CLAIM_BY_ARTIFACT plus locally verified source hygiene; NOT FORMALLY_VERIFIED by this session",
+  "last_checked": "2026-09-09"
+ }
+}

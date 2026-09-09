@@ -63,6 +63,15 @@ inspection.
 
 ## 7. What is the most promising FLT-adjacent bridge?
 
+*(Revised after Report H.)* Within mathlib, the answer below stands. Across Lean
+as a whole it does not: `anthropics/fermats-last-theorem` already contains the
+modular-curve, automorphic-form, Néron-model and deformation-theory
+infrastructure whose absence made this question interesting. The most promising
+FLT-adjacent bridge is therefore now an **integration** question — which of
+those 165 mathlib-absent namespaces could be upstreamed — not a mathematical
+one. See Report H.4.
+
+
 **Cyclotomic fields**, via `FLT/Three.lean` → `NumberField/Cyclotomic/*` →
 `NumberField` (468 importers) — the only route by which today's FLT files touch
 a connected region (`ACTUAL_LEAN_DEPENDENCY`). Second: **Mason–Stothers/abc**
@@ -84,9 +93,15 @@ library, invisible to any board-driven strategy.
 
 ## 9. What regions are blocked by missing bridge infrastructure?
 
-1. **Elliptic curves / arithmetic geometry** — blocked on weak Mordell–Weil.
-2. **Modular forms ↔ elliptic curves** — two developed regions (40 and 19
-   modules) with no import between them; modularity is the missing link.
+*(Items 1–2 revised after Report H: the infrastructure exists in Lean, outside
+mathlib and pinned to an older Mathlib, so these are integration blocks rather
+than mathematical ones.)*
+
+1. **Elliptic curves / arithmetic geometry** — blocked, in mathlib, on weak
+   Mordell–Weil. Untouched by the FLT artifact, which needs no Mordell–Weil.
+2. **Modular forms ↔ elliptic curves** — no import between them in mathlib;
+   modularity is the missing link, and it **is proved** (in the semistable,
+   a_ℓ-matching form) in the FLT artifact.
 3. **Differential topology** — blocked on integration on manifolds and de Rham
    cohomology.
 4. **Analytic number theory** — PNT attributed outside mathlib, leaving a hole

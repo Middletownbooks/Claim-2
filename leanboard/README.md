@@ -12,6 +12,7 @@ theorem-space discovery experiments in `../theorem-lab/`.
 | mathlib4 commit | `110cb7f03dd1c2d9edd957b937f55175c9fc3343` (2026-09-08 22:52 UTC) |
 | Lean toolchain | `leanprover/lean4:v4.34.0-rc2` |
 | upstream 1000-plus commit | `8e04b97dd24adc6e931be78a884da7e935bc8780` (2026-07-22) |
+| FLT artifact (Report H) | `anthropics/fermats-last-theorem` `aa2d8b34` (2026-09-03), Lean 4.33.1, Mathlib pin `db584cd6` |
 | mathlib modules parsed | 8 513 |
 | declarations indexed | 387 719 |
 | import edges | 26 709 |
@@ -64,7 +65,14 @@ yaml (listed in `board.json`), reflecting the 7-week gap between the two commits
 | `analyze.py` | `scores.json` | area statistics, declaration kinds, board/bridge/difficulty scores |
 | `ledger.py` | `bridge_ledger.json/.csv` | Report F, refreshable |
 
-Reports A–E and G are the markdown files in this directory.
+| `flt/graph.py` | `flt/flt_graph.json` | exact declaration-level citation graph of the FLT artifact (Report H) |
+
+Reports A–E, G and H are the markdown files in this directory. **Report H was
+added last and supersedes part of Report D and answers G.7/G.9**: a complete
+29 511-theorem FLT proof exists outside mathlib, so "missing from mathlib" and
+"missing from Lean" are not the same predicate, and this map measures the
+former. Any future refresh should track external proof repositories as a source
+in their own right — mathlib's board data does not.
 
 ## Evidence discipline
 

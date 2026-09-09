@@ -1,5 +1,13 @@
 # Report D — FLT-centred bridge map
 
+> **Superseded in part by Report H.** This report measures *mathlib*. After it
+> was written, `anthropics/fermats-last-theorem` (commit `aa2d8b34`, 2026-09-03)
+> was examined: a 29 511-theorem complete proof of FLT built on a pinned Mathlib
+> v4.33.0, containing modular curves, Čerednik–Drinfeld, automorphic forms,
+> Néron models and deformation theory — **none of which exist in mathlib**.
+> Everything below remains accurate as a statement about mathlib at commit
+> `110cb7f0`; §D.3's verdict about "Lean" as a whole does not survive Report H.
+
 **Fermat's Little Theorem and Fermat's Last Theorem are different theorems with
 different board positions and are kept separate throughout.**
 
@@ -86,9 +94,11 @@ can instantiate it directly.
 
 ## D.3 The corridor verdict (Section 8)
 
+*(Read with Report H: the verdict below holds for mathlib, not for Lean.)*
+
 The chain "Diophantine equations → elliptic curves → arithmetic geometry →
-larger number-theoretic infrastructure" is **mathematically real and formally
-absent**. Measured: the elliptic-curve region has 76 transitive importers, the
+larger number-theoretic infrastructure" is, **within mathlib**, mathematically
+real and formally absent. Measured: the elliptic-curve region has 76 transitive importers, the
 height region 8, the FLT region 4. Arrows run in and stop.
 
 But the corridor is being built right now, and the gap is identified precisely:

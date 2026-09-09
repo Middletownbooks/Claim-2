@@ -21,6 +21,8 @@ def main():
     scores = json.loads((OUT / "scores.json").read_text())
     usage = json.loads((OUT / "usage.json").read_text())["declarations"]
     prox = json.loads((OUT / "proximity.json").read_text())["targets"]
+    ext_path = OUT / "external_proofs.json"
+    external = json.loads(ext_path.read_text()) if ext_path.exists() else {}
     modules = json.loads((OUT / "modules.json").read_text())["modules"]
 
     comp = {r["decl"]: r for r in scores["completed"]}
@@ -75,6 +77,9 @@ def main():
                 k for k in (r["other_assistants"] or {}) if k != "lean_upstream"
             ) or None,
             "external_url": r["external_url"],
+            # Lean proofs living outside mathlib: the board data cannot see
+            # these, so they are tracked separately and merged here.
+            "external_lean_proof": external.get(q),
             "comment": r["comment"],
             "evidence_class_for_scores": (
                 "ACTUAL_LEAN_DEPENDENCY(module-level) + "
@@ -91,6 +96,7 @@ def main():
 
     (OUT / "bridge_ledger.json").write_text(json.dumps(
         {"provenance": prov,
+         "external_proof_sources": [k for k in external if not k.startswith("_")],
          "schema_note": "one row per 1000+ board entry; see README.md",
          "weights": scores["weights"],
          "rows": rows}, indent=1, sort_keys=True) + "\n")
