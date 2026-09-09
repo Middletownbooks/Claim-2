@@ -8,16 +8,17 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 import invariants as INV                                    # noqa: E402
 
-ORDER = ["A0", "A", "B", "C", "D", "E"]
+ORDER = ["A0", "A", "Bo", "D", "B", "B520", "C", "E"]
 LABEL = {"A0": "no formation", "A": "static (control)",
          "B": "discovered", "C": "random named", "D": "re-expanded",
-         "E": "budget-matched static"}
+         "E": "static, raised budget", "Bo": "carry, outer only",
+         "B520": "carry, extra slots"}
 
 
-def load():
+def load(prefix="round2b"):
     out = {}
     for c in ORDER:
-        p = HERE / ("round2_%s.json" % c)
+        p = HERE / ("%s_%s.json" % (prefix, c))
         if p.exists():
             out[c] = json.loads(p.read_text())
     return out
@@ -39,7 +40,6 @@ def main():
             tg, len(r["untargeted"])))
 
     print("\ntarget reachability (cost of the minimal term, '-' = not reached)")
-    hdr = "%-18s" % "target" + "".join("%>8s" % c for c in ORDER if c in R)
     print("%-18s" % "target" + "".join("%8s" % c for c in ORDER if c in R))
     for t in INV.TARGETS:
         row = "%-18s" % t
