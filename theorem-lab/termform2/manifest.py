@@ -67,6 +67,45 @@ def main():
                            "B' without naming numbers; these were chosen to "
                            "satisfy that and the achieved counts are reported.",
              "when": "before any Round-2 result"},
+            {"what": "the pre-registered class cap of 300 000 bound at cost "
+                     "level 3, before the declared outer budget of cost 5 was "
+                     "delivered",
+             "correction": "the cap was a memory safety valve, not the "
+                           "operative budget. The batch beam was replaced by a "
+                           "bounded incremental heap (proved to select the "
+                           "identical set) and every condition re-run at a "
+                           "raised cap. BOTH sets are kept: round2_*.json at "
+                           "the pre-registered cap, round2b_*.json at the "
+                           "honoured budget. Conclusions are drawn from the "
+                           "honoured budget and were the same, though weaker, "
+                           "at the pre-registered one.",
+             "when": "after seeing that every condition truncated, before "
+                     "comparing conditions"},
+            {"what": "pre-registered target T3 (n_div_spf) is STRUCK",
+             "correction": "the Priority 11-E leakage audit found that the "
+                           "promoted term count(k: (k % least(k: (n % k)))) "
+                           "IS n/spf, so T3 duplicates a Round-1 term and is "
+                           "not a valid target. The PREREG exclusion list "
+                           "named tau, tau-1, spf, nu, lambda, n-1, n/2, n/4 "
+                           "and n - n/spf, and missed n/spf. T3 never "
+                           "discriminated -- every condition with a formation "
+                           "stage reaches it at cost 1 -- so striking it "
+                           "renormalises the counts to 12 without changing any "
+                           "ordering.",
+             "when": "after the results, by the audit written to catch it"},
+            {"what": "two implementation defects fixed mid-phase",
+             "correction": "(1) INHERITED FROM ROUND 1: when a formed term's "
+                           "definition itself contains a unit, synth2.ev fell "
+                           "back to language.ev, which raises on leaves, and "
+                           "the caller swallowed it -- so Round 1 silently "
+                           "dropped every unit whose definition contained a "
+                           "nested unit. termform/ is left byte-identical; "
+                           "Round 2 fixes it identically in every condition. "
+                           "(2) Outer._level assigned by_size[s] instead of "
+                           "extending it, deleting any atom whose cost equalled "
+                           "that level -- which crippled exactly the Priority-9 "
+                           "control. Fixed and D re-run.",
+             "when": "before any result was read (1); before comparing D (2)"},
             {"what": "an exploratory condition `Bo` was added",
              "correction": "promoted terms available to the outer search only, "
                            "not during term formation. Not pre-registered, "

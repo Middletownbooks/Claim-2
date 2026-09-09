@@ -1,0 +1,284 @@
+{
+ "definition": "R(s) = distinct value-vectors on TRAIN reachable at outer cost <= s. Dedup on TRAIN can only CONFLATE distinct functions, never split equal ones, so |R_TRAIN(s)| is a LOWER bound on the number of distinct semantic functions; the EVALQ refinement measures the undercount.",
+ "label": "COMPUTED",
+ "runs": {
+  "budget_honoured": {
+   "A": {
+    "class_cap": 20000000,
+    "expansions": 13203225,
+    "levels": {
+     "1": 501,
+     "2": 501,
+     "3": 683949,
+     "4": 683949,
+     "5": 4669985
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     },
+     "5": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": false
+   },
+   "A0": {
+    "class_cap": 20000000,
+    "expansions": 3105,
+    "levels": {
+     "1": 5,
+     "2": 5,
+     "3": 37,
+     "4": 37,
+     "5": 607
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 32,
+      "sampled_classes": 32,
+      "split_factor": 1.0
+     },
+     "5": {
+      "distinct_on_TRAIN+EVALQ": 570,
+      "sampled_classes": 570,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": false
+   },
+   "B": {
+    "class_cap": 20000000,
+    "expansions": 13203225,
+    "levels": {
+     "1": 496,
+     "2": 496,
+     "3": 593960,
+     "4": 593960,
+     "5": 4412551
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     },
+     "5": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": false
+   },
+   "B520": {
+    "class_cap": 20000000,
+    "expansions": 13820625,
+    "levels": {
+     "1": 516,
+     "2": 516,
+     "3": 638265,
+     "4": 638265,
+     "5": 4587639
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     },
+     "5": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": false
+   },
+   "Bo": {
+    "class_cap": 20000000,
+    "expansions": 13203225,
+    "levels": {
+     "1": 492,
+     "2": 492,
+     "3": 655569,
+     "4": 655569,
+     "5": 4557524
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     },
+     "5": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": false
+   },
+   "C": {
+    "class_cap": 20000000,
+    "expansions": 13203225,
+    "levels": {
+     "1": 490,
+     "2": 490,
+     "3": 653350,
+     "4": 653350,
+     "5": 4812635
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     },
+     "5": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": false
+   },
+   "D": {
+    "class_cap": 20000000,
+    "expansions": 12601764,
+    "levels": {
+     "1": 491,
+     "2": 491,
+     "3": 641106,
+     "4": 641106,
+     "5": 4483152
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     },
+     "5": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": false
+   },
+   "E": {
+    "class_cap": 20000000,
+    "expansions": 44706744,
+    "levels": {
+     "1": 501,
+     "2": 501,
+     "3": 683949,
+     "4": 683949,
+     "5": 8542020,
+     "6": 8542020,
+     "7": 20000000
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     },
+     "5": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     },
+     "7": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": true
+   }
+  },
+  "prereg_cap": {
+   "A": {
+    "class_cap": 300000,
+    "expansions": 699241,
+    "levels": {
+     "1": 501,
+     "2": 501,
+     "3": 300000
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": true
+   },
+   "A0": {
+    "class_cap": 300000,
+    "expansions": 3105,
+    "levels": {
+     "1": 5,
+     "2": 5,
+     "3": 37,
+     "4": 37,
+     "5": 607
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 32,
+      "sampled_classes": 32,
+      "split_factor": 1.0
+     },
+     "5": {
+      "distinct_on_TRAIN+EVALQ": 570,
+      "sampled_classes": 570,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": false
+   },
+   "B": {
+    "class_cap": 300000,
+    "expansions": 852634,
+    "levels": {
+     "1": 496,
+     "2": 496,
+     "3": 300000
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": true
+   },
+   "C": {
+    "class_cap": 300000,
+    "expansions": 736191,
+    "levels": {
+     "1": 490,
+     "2": 490,
+     "3": 300000
+    },
+    "semantic_refinement": {
+     "3": {
+      "distinct_on_TRAIN+EVALQ": 5000,
+      "sampled_classes": 5000,
+      "split_factor": 1.0
+     }
+    },
+    "truncated": true
+   }
+  }
+ }
+}

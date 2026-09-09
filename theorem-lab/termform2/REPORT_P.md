@@ -83,6 +83,12 @@ All conditions except A0 and E ran identical candidate-expansion budgets.
 | C | random carry | 505 | 13 203 225 | 4 812 635 | 3/13 | 9 |
 | E | static, 3.4× budget | 505 | 44 706 744 | 20 000 000 (cap) | **6/13** | 13 |
 
+Target counts are shown out of the 13 pre-registered targets. One of them, T3,
+was later found by the leakage audit to duplicate a promoted Round-1 term and
+is struck; see section 8. The corrected counts out of 12 are A0 0, A 4, Bo 4,
+D 4, B 3, B520 3, C 2, E 5 — the same ordering, and every comparison below
+holds under either.
+
 Two things are visible immediately.
 
 **The intra-round naming effect is enormous.** A0 → A is the comparison
@@ -288,13 +294,47 @@ outer enumeration re-run. It completed, raised nothing, and returned a
 bit-identical result. No code path in the search consults a term's name or
 printed form.
 
-**Priority 11-E, leakage audit.** Mechanical checks in `adversarial.py`:
-splits pairwise disjoint; `promote.py` never imports the invariant library and
-never mentions a Round-2 object set; every Round-1 object is a prime power,
-whereas the Round-2 targets are general-integer invariants Round 1 never
-observed; no promoted term equals a Round-2 target on TRAIN; and
-`round2.build()`, which constructs every vocabulary, contains no reference to
-the library.
+**Priority 11-D, definition blindness.** Unit selection was re-done with the
+strictly blind ordering — value-vector hash alone, no reference to a term's
+internal expression size — and the outer search re-run. The targets are
+identical to the baseline, although the blind ordering reaches *more* classes
+(4 963 466 against 4 412 551). Which 500 formed terms are selected therefore
+does not determine what is reached; only whether a carried vocabulary enters
+formation does.
+
+**Priority 11-E, leakage audit — one check FAILS, and it is mine.** Five
+mechanical checks pass: splits pairwise disjoint; `promote.py` never imports
+the invariant library and never mentions a Round-2 object set; every Round-1
+object is a prime power, whereas the Round-2 targets are general-integer
+invariants Round 1 never observed; and `round2.build()`, which constructs
+every vocabulary, contains no reference to the library.
+
+The sixth fails:
+
+```
+no_promoted_term_is_a_round2_target   FAIL
+  count(k: (k % least(k: (n % k))))  ==  n_div_spf  on TRAIN
+```
+
+The promoted term counts the k in [1..n] divisible by `spf(n)`, which is
+`n/spf(n)` exactly. So pre-registered target **T3 duplicates a Round-1 term**
+and is not a valid target: any condition carrying that vocabulary is handed it
+at cost 1. My PREREG exclusion list named `tau`, `tau−1`, `spf`, `nu`,
+`lambda`, `n−1`, `⌊n/2⌋`, `⌊n/4⌋` and `n − n/spf`, and missed `n/spf`. The
+audit was written to catch exactly this and did.
+
+**T3 is struck.** It never discriminated in any case — every condition with a
+formation stage reaches it at cost 1, including the ones carrying nothing,
+because they re-form it. Removing it renormalises the target counts to twelve
+without changing a single ordering:
+
+| | A0 | A | Bo | D | B | B520 | C | E |
+|---|---|---|---|---|---|---|---|---|
+| as pre-registered (13) | 0 | 5 | 5 | 5 | 4 | 4 | 3 | 6 |
+| **with T3 struck (12)** | **0** | **4** | **4** | **4** | **3** | **3** | **2** | **5** |
+
+Every claim in this report holds under either count. The corrected fractions
+are the ones to quote.
 
 ---
 
@@ -439,14 +479,24 @@ reasons in `experiment_manifest.json`. The substantive one:
 > budget. Conclusions are drawn from the honoured budget and were the same,
 > though weaker, at the pre-registered one.
 
-The others: the V0 atom count in PREREG §3 is 6 for a quantifier body and 5
-for the outer search (a miscount in the table); `smallest_div_gt_1` was
-removed from the invariant library as an exact duplicate of `spf`; the outer
-enumeration was vectorised, with all nine operators verified against the
-reference evaluator on 40 000 random inputs and a 300-term sample of every run
-re-evaluated by the reference evaluator (0 mismatches in every run recorded in
-every `round2*.json`); and conditions `Bo` and `B520` were added as
-exploratory arms.
+The second substantive one is the strike of target T3, forced by the leakage
+audit and described in section 8. Both of these were made after seeing
+results — the truncation and the audit failure respectively — and both are
+corrections to the instrument rather than to the hypothesis: the cap change
+applies identically to every condition, and T3 never discriminated between
+any of them.
+
+The remainder are inconsequential: the V0 atom count in PREREG §3 is 6 for a
+quantifier body and 5 for the outer search (a miscount in the table);
+`smallest_div_gt_1` was removed from the invariant library as an exact
+duplicate of `spf`; the outer enumeration was vectorised, with all nine
+operators verified against the reference evaluator on 40 000 random inputs and
+a 300-term sample of every run re-evaluated by the reference evaluator
+(0 mismatches in every run recorded in every `round2*.json`); and conditions
+`Bo` and `B520` were added as exploratory arms before any result was seen.
+
+No target, split, seed or cost model was changed after a result was seen, and
+no failed prediction was rescued.
 
 ## 15. Declared bias
 

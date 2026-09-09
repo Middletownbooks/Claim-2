@@ -1,0 +1,951 @@
+{
+ "label": "COMPUTED",
+ "note": "Survivor sets after disagreement resolution. A verdict of UNDERDETERMINED means the declared reserve contains no coordinate on which the survivors disagree: they are the SAME function on everything the protocol may observe, and the stage reports the class rather than picking a member.",
+ "targets": {
+  "Omega": {
+   "A": {
+    "reached": false
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "reached": false
+   },
+   "B520": {
+    "reached": false
+   },
+   "Bo": {
+    "reached": false
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "reached": false
+   },
+   "E": {
+    "reached": false
+   }
+  },
+  "gpf": {
+   "A": {
+    "reached": false
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "reached": false
+   },
+   "B520": {
+    "reached": false
+   },
+   "Bo": {
+    "reached": false
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "reached": false
+   },
+   "E": {
+    "reached": false
+   }
+  },
+  "is_prime": {
+   "A": {
+    "class_size": 601,
+    "examples": [
+     "(n // <count(k: (n - <least(k: (n % k))>))>)",
+     "(1 // <count(k: (<least(k: (n % k))> - k))>)",
+     "(1 // <count(k: (k % <least(k: (n % k))>))>)",
+     "(1 - <least(k: (<least(k: (n % k))> // k))>)",
+     "(1 % <least(k: (n - <least(k: (n % k))>))>)",
+     "min(1, <least(k: (n - <least(k: (n % k))>))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 3,
+    "reached": true,
+    "survivors_after_probing": 597,
+    "verdict": "UNDERDETERMINED"
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "class_size": 704,
+    "examples": [
+     "(n // <count(k: (n - <least(k: (n % k))>))>)",
+     "(n - <count(k: (k // <count(k: (n - <least(k: (n % k))>))>))>)",
+     "(1 // <count(k: (k // count(k: (n % k))))>)",
+     "(1 // <count(k: (k % least(k: (n % k))))>)",
+     "(1 - <least(k: (<least(k: (n % k))> // k))>)",
+     "(1 % <least(k: (n - <least(k: (n % k))>))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 704,
+    "verdict": "UNDERDETERMINED"
+   },
+   "B520": {
+    "class_size": 738,
+    "examples": [
+     "(n // <count(k: (n - <least(k: (n % k))>))>)",
+     "(n - <count(k: (k // <count(k: (n - <least(k: (n % k))>))>))>)",
+     "(1 // <count(k: (k // count(k: (n % k))))>)",
+     "(1 // <count(k: (k % least(k: (n % k))))>)",
+     "(1 - <least(k: (<least(k: (n % k))> // k))>)",
+     "(1 % <least(k: (n - <least(k: (n % k))>))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 738,
+    "verdict": "UNDERDETERMINED"
+   },
+   "Bo": {
+    "class_size": 680,
+    "examples": [
+     "(n // <count(k: (n - <least(k: (n % k))>))>)",
+     "(1 // <count(k: (k // count(k: (n % k))))>)",
+     "(1 // <count(k: (k % least(k: (n % k))))>)",
+     "(1 // <count(k: (<least(k: (n % k))> - k))>)",
+     "(1 // <count(k: (k % <least(k: (n % k))>))>)",
+     "(1 - <least(k: (<least(k: (n % k))> // k))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 3,
+    "reached": true,
+    "survivors_after_probing": 676,
+    "verdict": "UNDERDETERMINED"
+   },
+   "C": {
+    "class_size": 564,
+    "examples": [
+     "(n // <count(k: <least(k: (least(k: (n % k)) // k))>)>)",
+     "(n - <count(k: (k // <count(k: <least(k: (least(k: (n % k)) // k))>)>))>)",
+     "(1 - <least(k: (least(k: (n % k)) // k))>)",
+     "(1 // <count(k: (k % <least(k: (n % k))>))>)",
+     "(1 // <count(k: (k // <count(k: (n % k))>))>)",
+     "(1 % <least(k: <least(k: (least(k: (n % k)) // k))>)>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 537,
+    "verdict": "UNDERDETERMINED"
+   },
+   "D": {
+    "class_size": 483,
+    "examples": [
+     "(n // <count(k: (n - <least(k: (n % k))>))>)",
+     "(1 // <count(k: (<least(k: (n % k))> - k))>)",
+     "(1 // <count(k: (k % <least(k: (n % k))>))>)",
+     "(1 - <least(k: (<least(k: (n % k))> // k))>)",
+     "(1 % <least(k: (n - <least(k: (n % k))>))>)",
+     "min(1, <least(k: (n - <least(k: (n % k))>))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 2,
+    "reached": true,
+    "survivors_after_probing": 481,
+    "verdict": "UNDERDETERMINED"
+   },
+   "E": {
+    "class_size": 601,
+    "examples": [
+     "(n // <count(k: (n - <least(k: (n % k))>))>)",
+     "(1 // <count(k: (<least(k: (n % k))> - k))>)",
+     "(1 // <count(k: (k % <least(k: (n % k))>))>)",
+     "(1 - <least(k: (<least(k: (n % k))> // k))>)",
+     "(1 % <least(k: (n - <least(k: (n % k))>))>)",
+     "min(1, <least(k: (n - <least(k: (n % k))>))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 3,
+    "reached": true,
+    "survivors_after_probing": 597,
+    "verdict": "UNDERDETERMINED"
+   }
+  },
+  "is_prime_power": {
+   "A": {
+    "reached": false
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "class_size": 2,
+    "examples": [
+     "(<count(k: (<count(k: (k % least(k: (n % k))))> % k))> // <count(k: (k // count(k: (n % k))))>)",
+     "(<count(k: (<count(k: (k % least(k: (n % k))))> % k))> - <count(k: (k // <count(k: (k // count(k: (n % k))))>))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 2,
+    "verdict": "UNDERDETERMINED"
+   },
+   "B520": {
+    "class_size": 2,
+    "examples": [
+     "(<count(k: (<count(k: (k % least(k: (n % k))))> % k))> // <count(k: (k // count(k: (n % k))))>)",
+     "(<count(k: (<count(k: (k % least(k: (n % k))))> % k))> - <count(k: (k // <count(k: (k // count(k: (n % k))))>))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 2,
+    "verdict": "UNDERDETERMINED"
+   },
+   "Bo": {
+    "reached": false
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "reached": false
+   },
+   "E": {
+    "class_size": 1,
+    "examples": [
+     "((2 * <count(k: (n % (k * k)))>) // <count(k: (n % k))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 5,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 1,
+    "verdict": "UNIQUE"
+   }
+  },
+  "is_square": {
+   "A": {
+    "class_size": 75,
+    "examples": [
+     "(1 - <count(k: (<count(k: (n % k))> % 2))>)",
+     "(1 - <least(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n % k))> % 2)",
+     "(<count(k: (n % k))> % <least(k: 0)>)",
+     "(<count(k: (n % k))> % <least(k: (k // n))>)",
+     "(<count(k: (n % k))> % <least(k: (4 - n))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 72,
+    "verdict": "UNDERDETERMINED"
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "class_size": 73,
+    "examples": [
+     "(1 - <count(k: (<count(k: (n % k))> % 2))>)",
+     "(1 - <least(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n - k))> - <count(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n - k))> - <least(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n % k))> % 2)",
+     "(<count(k: (n % k))> % <least(k: 0)>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 70,
+    "verdict": "UNDERDETERMINED"
+   },
+   "B520": {
+    "class_size": 73,
+    "examples": [
+     "(1 - <count(k: (<count(k: (n % k))> % 2))>)",
+     "(1 - <least(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n - k))> - <count(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n - k))> - <least(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n % k))> % 2)",
+     "(<count(k: (n % k))> % <least(k: 0)>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 70,
+    "verdict": "UNDERDETERMINED"
+   },
+   "Bo": {
+    "class_size": 56,
+    "examples": [
+     "(1 - <count(k: (<count(k: (n % k))> % 2))>)",
+     "(1 - <least(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n - k))> - <count(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n - k))> - <least(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n % k))> % 2)",
+     "(<count(k: (n % k))> % <least(k: 0)>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 54,
+    "verdict": "UNDERDETERMINED"
+   },
+   "C": {
+    "class_size": 19,
+    "examples": [
+     "(<count(k: (n % k))> % 2)",
+     "(<count(k: (n % k))> % <least(k: 0)>)",
+     "(<count(k: (n % k))> % <least(k: (k // n))>)",
+     "(<count(k: (n % k))> % <count(k: (k // <count(k: (k // 4))>))>)",
+     "(<count(k: (n % k))> % <count(k: (k // <count(k: (4 % k))>))>)",
+     "(<count(k: (n % k))> % <least(k: (4 // <count(k: (4 // k))>))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 19,
+    "verdict": "UNDERDETERMINED"
+   },
+   "D": {
+    "class_size": 37,
+    "examples": [
+     "(1 - <count(k: (<count(k: (n % k))> % 2))>)",
+     "(1 - <least(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n % (k * k)))> // <count(k: (<count(k: (n % k))> % k))>)",
+     "(<count(k: (n - (k * k)))> - <count(k: (n // (k * k)))>)",
+     "(<count(k: (n - (k * k)))> % <count(k: (n // (k * k)))>)",
+     "(<count(k: (k - (n // k)))> // <least(k: (n - (k * k)))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 36,
+    "verdict": "UNDERDETERMINED"
+   },
+   "E": {
+    "class_size": 75,
+    "examples": [
+     "(1 - <count(k: (<count(k: (n % k))> % 2))>)",
+     "(1 - <least(k: (<count(k: (n % k))> % 2))>)",
+     "(<count(k: (n % k))> % 2)",
+     "(<count(k: (n % k))> % <least(k: 0)>)",
+     "(<count(k: (n % k))> % <least(k: (k // n))>)",
+     "(<count(k: (n % k))> % <least(k: (4 - n))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 72,
+    "verdict": "UNDERDETERMINED"
+   }
+  },
+  "is_squarefree": {
+   "A": {
+    "class_size": 17,
+    "examples": [
+     "(1 // <count(k: (n % (k * k)))>)",
+     "(1 - <least(k: (n % (k * k)))>)",
+     "(2 - <count(k: (n % (k * k)))>)",
+     "(<least(k: 0)> - <count(k: (n % (k * k)))>)",
+     "(<count(k: (n - k))> // <count(k: (n % (k * k)))>)",
+     "(<count(k: (n - k))> - <least(k: (n % (k * k)))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 16,
+    "verdict": "UNDERDETERMINED"
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "reached": false
+   },
+   "B520": {
+    "reached": false
+   },
+   "Bo": {
+    "class_size": 17,
+    "examples": [
+     "(1 // <count(k: (n % (k * k)))>)",
+     "(1 - <least(k: (n % (k * k)))>)",
+     "(2 - <count(k: (n % (k * k)))>)",
+     "(<count(k: (n - k))> // <count(k: (n % (k * k)))>)",
+     "(<count(k: (n - k))> - <least(k: (n % (k * k)))>)",
+     "(<least(k: 0)> - <count(k: (n % (k * k)))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 16,
+    "verdict": "UNDERDETERMINED"
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "class_size": 14,
+    "examples": [
+     "(1 // <count(k: (n % (k * k)))>)",
+     "(1 - <least(k: (n % (k * k)))>)",
+     "(2 - <count(k: (n % (k * k)))>)",
+     "(<least(k: <least(k: (n % 4))>)> - <count(k: (n % (k * k)))>)",
+     "(<count(k: (n % (k * k)))> % <least(k: <least(k: (n % 4))>)>)",
+     "(<count(k: (n % (k * k)))> % <least(k: (4 % <count(k: (n % 4))>))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 13,
+    "verdict": "UNDERDETERMINED"
+   },
+   "E": {
+    "class_size": 17,
+    "examples": [
+     "(1 // <count(k: (n % (k * k)))>)",
+     "(1 - <least(k: (n % (k * k)))>)",
+     "(2 - <count(k: (n % (k * k)))>)",
+     "(<least(k: 0)> - <count(k: (n % (k * k)))>)",
+     "(<count(k: (n - k))> // <count(k: (n % (k * k)))>)",
+     "(<count(k: (n - k))> - <least(k: (n % (k * k)))>)"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 3,
+    "probes_used": 1,
+    "reached": true,
+    "survivors_after_probing": 16,
+    "verdict": "UNDERDETERMINED"
+   }
+  },
+  "n_div_spf": {
+   "A": {
+    "class_size": 1,
+    "examples": [
+     "<count(k: (k % <least(k: (n % k))>))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 1,
+    "verdict": "UNIQUE"
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "class_size": 2,
+    "examples": [
+     "<count(k: (k % least(k: (n % k))))>",
+     "<count(k: (k - <count(k: (k % least(k: (n % k))))>))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 2,
+    "verdict": "UNDERDETERMINED"
+   },
+   "B520": {
+    "class_size": 2,
+    "examples": [
+     "<count(k: (k % least(k: (n % k))))>",
+     "<count(k: (k - <count(k: (k % least(k: (n % k))))>))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 2,
+    "verdict": "UNDERDETERMINED"
+   },
+   "Bo": {
+    "class_size": 2,
+    "examples": [
+     "<count(k: (k % least(k: (n % k))))>",
+     "<count(k: (k % <least(k: (n % k))>))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 2,
+    "verdict": "UNDERDETERMINED"
+   },
+   "C": {
+    "class_size": 1,
+    "examples": [
+     "<count(k: (k % <least(k: (n % k))>))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 1,
+    "verdict": "UNIQUE"
+   },
+   "D": {
+    "class_size": 1,
+    "examples": [
+     "<count(k: (k % <least(k: (n % k))>))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 1,
+    "verdict": "UNIQUE"
+   },
+   "E": {
+    "class_size": 1,
+    "examples": [
+     "<count(k: (k % <least(k: (n % k))>))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 1,
+    "verdict": "UNIQUE"
+   }
+  },
+  "omega": {
+   "A": {
+    "reached": false
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "reached": false
+   },
+   "B520": {
+    "reached": false
+   },
+   "Bo": {
+    "reached": false
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "reached": false
+   },
+   "E": {
+    "reached": false
+   }
+  },
+  "phi": {
+   "A": {
+    "reached": false
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "reached": false
+   },
+   "B520": {
+    "reached": false
+   },
+   "Bo": {
+    "reached": false
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "reached": false
+   },
+   "E": {
+    "reached": false
+   }
+  },
+  "rad": {
+   "A": {
+    "reached": false
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "reached": false
+   },
+   "B520": {
+    "reached": false
+   },
+   "Bo": {
+    "reached": false
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "reached": false
+   },
+   "E": {
+    "reached": false
+   }
+  },
+  "sigma": {
+   "A": {
+    "reached": false
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "reached": false
+   },
+   "B520": {
+    "reached": false
+   },
+   "Bo": {
+    "reached": false
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "reached": false
+   },
+   "E": {
+    "reached": false
+   }
+  },
+  "v_2": {
+   "A": {
+    "class_size": 1,
+    "examples": [
+     "<count(k: (n % (2 ^ k)))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 1,
+    "verdict": "UNIQUE"
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "reached": false
+   },
+   "B520": {
+    "reached": false
+   },
+   "Bo": {
+    "class_size": 1,
+    "examples": [
+     "<count(k: (n % (2 ^ k)))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 1,
+    "verdict": "UNIQUE"
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "class_size": 1,
+    "examples": [
+     "<count(k: (n % (2 ^ k)))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 1,
+    "verdict": "UNIQUE"
+   },
+   "E": {
+    "class_size": 1,
+    "examples": [
+     "<count(k: (n % (2 ^ k)))>"
+    ],
+    "holdout": {
+     "accuracy_counting_abstention_as_error": 1.0,
+     "answered": 35,
+     "coverage": 1.0,
+     "label": "COMPUTED",
+     "points": 35,
+     "selective_accuracy": 1.0
+    },
+    "min_cost": 1,
+    "probes_used": 0,
+    "reached": true,
+    "survivors_after_probing": 1,
+    "verdict": "UNIQUE"
+   }
+  },
+  "v_spf": {
+   "A": {
+    "reached": false
+   },
+   "A0": {
+    "reached": false
+   },
+   "B": {
+    "reached": false
+   },
+   "B520": {
+    "reached": false
+   },
+   "Bo": {
+    "reached": false
+   },
+   "C": {
+    "reached": false
+   },
+   "D": {
+    "reached": false
+   },
+   "E": {
+    "reached": false
+   }
+  }
+ }
+}
