@@ -13,8 +13,8 @@ programme still produced verified findings. So the useful question is not
     or from REDUCING ITS COST PER DECISIVE TEST?
 
 The two grounded inputs are taken from the record, not invented:
-  base rate of true effects in the hypothesis pool  = 3/21 = 0.143
-  forecaster informativeness as measured            = 0.0 (uninformative)
+  base rate of true effects in the hypothesis pool  = 20/44 = 0.455 (corrected)
+  forecaster informativeness as measured            = INFORMATIVE (Fisher p = 0.039)
 
 Everything else is swept, so the reader can see what the answer depends on.
 """
@@ -25,7 +25,7 @@ from pathlib import Path
 
 OUT = Path(__file__).resolve().parent
 SEED = 20260909
-BASE_RATE = 3 / 21          # measured: effects existed in 3 of 21 tests
+BASE_RATE = 20 / 44          # CORRECTED: effects existed in 20 of 44 predictions
 TRIALS = 4000
 
 
