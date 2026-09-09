@@ -9,3 +9,7 @@ flt/boundary.log
 # to ~80s); 11 MB and 12 MB. Their summaries are committed instead.
 flt/flt_graph.json
 flt/boundary.json
+# Regenerable from the NS clone by ns/parse.py in ~5s; 23 MB and 157 MB.
+ns/ns_graph.json
+ns/ns_graph_loose.json
+ns/ns_graph_strict_backup.json

@@ -1,0 +1,96 @@
+{
+ "forecast": [
+  {
+   "D": 1,
+   "breadth_P": 0.7972,
+   "early_frac": 0.126,
+   "freq_P": 0.8662,
+   "invisible_targets": 0,
+   "random_P": 0.0814,
+   "target": 927,
+   "universe": 11390
+  },
+  {
+   "D": 2,
+   "breadth_P": 0.7961,
+   "early_frac": 0.152,
+   "freq_P": 0.8702,
+   "invisible_targets": 0,
+   "random_P": 0.0818,
+   "target": 932,
+   "universe": 11390
+  },
+  {
+   "D": 3,
+   "breadth_P": 0.7944,
+   "early_frac": 0.173,
+   "freq_P": 0.8737,
+   "invisible_targets": 0,
+   "random_P": 0.082,
+   "target": 934,
+   "universe": 11390
+  },
+  {
+   "D": 4,
+   "breadth_P": 0.7977,
+   "early_frac": 0.193,
+   "freq_P": 0.8754,
+   "invisible_targets": 0,
+   "random_P": 0.0824,
+   "target": 939,
+   "universe": 11390
+  },
+  {
+   "D": 6,
+   "breadth_P": 0.7941,
+   "early_frac": 0.231,
+   "freq_P": 0.8754,
+   "invisible_targets": 0,
+   "random_P": 0.0831,
+   "target": 947,
+   "universe": 11390
+  },
+  {
+   "D": 8,
+   "breadth_P": 0.7939,
+   "early_frac": 0.259,
+   "freq_P": 0.8801,
+   "invisible_targets": 0,
+   "random_P": 0.0835,
+   "target": 951,
+   "universe": 11390
+  }
+ ],
+ "note": "graph is APPROXIMATE (textual); see parse.py",
+ "regions": {
+  "communities": [
+   {
+    "bottleneck_ratio": 0.0001,
+    "conductance": 0.1515,
+    "example": "Euler.ComparatorBridge.BackwardVorticityFlows",
+    "interface_nodes": 3,
+    "size": 48496,
+    "top_dirs": [
+     [
+      "NavierStokes",
+      33953
+     ],
+     [
+      "Euler",
+      14543
+     ]
+    ]
+   }
+  ],
+  "communities_ge_100": 1,
+  "communities_total": 858,
+  "cross_edge_fraction": 0.0,
+  "cross_traffic_top_10pct": 0.2,
+  "cross_traffic_top_1pct": 0.2,
+  "largest": 48496,
+  "median_bottleneck_ratio": 0.0001,
+  "median_conductance": 0.1515,
+  "modularity_Q": 0.0,
+  "nodes_carrying_cross_traffic": 8
+ }
+}
