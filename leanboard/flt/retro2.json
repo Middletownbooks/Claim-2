@@ -1,0 +1,52 @@
+{
+ "definitions_universe": 1230,
+ "depth_cutoff_D": 2,
+ "early_fraction": 0.4732,
+ "early_subgraph_internal_edges": 11306,
+ "invisible_fraction_of_target": 0.0,
+ "label": "POST-HOC ROBUSTNESS RUN, not pre-registered",
+ "random_baseline_precision": 0.2041,
+ "results": {
+  "combined": {
+   "auc_all": 0.9464,
+   "auc_visible_only": 0.9391,
+   "precision_at_K": 0.749,
+   "top20_hits_in_true_top20": 8
+  },
+  "community_breadth_early_only": {
+   "auc_all": 0.9639,
+   "auc_visible_only": 0.959,
+   "precision_at_K": 0.7968,
+   "top20_hits_in_true_top20": 10
+  },
+  "cooccurrence_breadth": {
+   "auc_all": 0.9377,
+   "auc_visible_only": 0.9293,
+   "precision_at_K": 0.6892,
+   "top20_hits_in_true_top20": 10
+  },
+  "early_consumer_degree": {
+   "auc_all": 0.8162,
+   "auc_visible_only": 0.7953,
+   "precision_at_K": 0.5299,
+   "top20_hits_in_true_top20": 3
+  },
+  "early_usage": {
+   "auc_all": 0.9471,
+   "auc_visible_only": 0.9399,
+   "precision_at_K": 0.741,
+   "top20_hits_in_true_top20": 8
+  },
+  "early_users_distinct": {
+   "auc_all": 0.9471,
+   "auc_visible_only": 0.9399,
+   "precision_at_K": 0.741,
+   "top20_hits_in_true_top20": 8
+  }
+ },
+ "target": "definitions carrying 80% of LATE statement usage",
+ "target_size": 251,
+ "targets_INVISIBLE_early": 0,
+ "theorems_early": 13966,
+ "theorems_late": 15545
+}

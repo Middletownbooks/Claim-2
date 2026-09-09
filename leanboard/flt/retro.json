@@ -1,0 +1,79 @@
+{
+ "definitions_universe": 1230,
+ "definitions_visible_early": 1019,
+ "depth_cutoff_D": 0,
+ "depth_histogram_first_12": {
+  "0": 8230,
+  "1": 3447,
+  "2": 2289,
+  "3": 1692,
+  "4": 1245,
+  "5": 1022,
+  "6": 823,
+  "7": 677,
+  "8": 544,
+  "9": 436,
+  "10": 362,
+  "11": 424
+ },
+ "early_fraction": 0.2789,
+ "example_invisible_targets": [],
+ "invisible_fraction_of_target": 0.0,
+ "max_depth": 117,
+ "random_baseline_precision": 0.2293,
+ "results": {
+  "combined": {
+   "auc_all": 0.9447,
+   "auc_visible_only": 0.9289,
+   "precision_at_20": 1.0,
+   "precision_at_282": 0.7553,
+   "recall_at_282": 0.7553,
+   "top20_hits_in_true_top20": 7
+  },
+  "community_breadth": {
+   "auc_all": 0.8784,
+   "auc_visible_only": 0.8436,
+   "precision_at_20": 1.0,
+   "precision_at_282": 0.6277,
+   "recall_at_282": 0.6277,
+   "top20_hits_in_true_top20": 6
+  },
+  "cooccurrence_breadth": {
+   "auc_all": 0.9484,
+   "auc_visible_only": 0.9337,
+   "precision_at_20": 1.0,
+   "precision_at_282": 0.7801,
+   "recall_at_282": 0.7801,
+   "top20_hits_in_true_top20": 12
+  },
+  "early_consumer_degree": {
+   "auc_all": 0.5,
+   "auc_visible_only": 0.5,
+   "precision_at_20": 0.35,
+   "precision_at_282": 0.273,
+   "recall_at_282": 0.273,
+   "top20_hits_in_true_top20": 1
+  },
+  "early_usage": {
+   "auc_all": 0.9635,
+   "auc_visible_only": 0.953,
+   "precision_at_20": 1.0,
+   "precision_at_282": 0.8156,
+   "recall_at_282": 0.8156,
+   "top20_hits_in_true_top20": 11
+  },
+  "early_users_distinct": {
+   "auc_all": 0.9635,
+   "auc_visible_only": 0.953,
+   "precision_at_20": 1.0,
+   "precision_at_282": 0.8156,
+   "recall_at_282": 0.8156,
+   "top20_hits_in_true_top20": 11
+  }
+ },
+ "target_size_80pct_usage": 282,
+ "targets_INVISIBLE_early": 0,
+ "targets_visible_early": 282,
+ "theorems_early": 8230,
+ "theorems_total": 29511
+}

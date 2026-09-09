@@ -69,8 +69,16 @@ yaml (listed in `board.json`), reflecting the 7-week gap between the two commits
 | `flt/boundary.py` | `flt/boundary.json` | mathlib consumption; statement vocabulary per theorem; the repo's own definition interfaces (Report I) |
 | `flt/regions.py` | `flt/regions.json`, `flt/regions_followup.json` | **name-blind** community detection on the citation graph, modularity/conductance, interface concentration (Report I) |
 | `flt/compress.py` | `flt/compression.json` | 29 511 theorems → 36 communities → 282 load-bearing interfaces |
+| `flt/retro.py` | `flt/retro.json` | pre-registered retrospective benchmark (Report J) |
+| `flt/retro2.py` | `flt/retro2.json` | corrected forecast run: late-only target, leak-free early communities |
+| `flt/retro_stability.py` | `flt/retro_stability.json` | six-split stability sweep |
 
-Reports A–E and G–I are the markdown files in this directory. Report I
+Reports A–E and G–J are the markdown files in this directory. **Report J** is
+the retrospective benchmark on the FLT proof's early layers
+(`flt/PREREG_retrospective.md`): a breadth-across-regions measure forecasts
+which abstractions end up carrying the proof better than usage frequency, in
+6 of 6 depth splits — after three defects in the pre-registered design were
+found and corrected, all of which had favoured the naive baseline. Report I
 (FLT External-Board Phase 1) maps the mathlib ↔ FLT boundary and carries a
 pre-registered blind experiment (`flt/PREREG_blind_regions.md`, written before
 the clustering ran): 3 of 5 predictions passed, 1 partially, and **P3 failed** —
