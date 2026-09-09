@@ -1,0 +1,239 @@
+{
+ "commit": "8937a8f4cbc7abaab5e9e97d1cc7f5d2319d9538",
+ "commit_date": "2026-09-08 06:57:25 -0400",
+ "coverage_fraction": 0.0355,
+ "declarations_by_kind": {
+  "abbrev": 863,
+  "class": 3,
+  "def": 10540,
+  "instance": 16,
+  "lemma": 29,
+  "structure": 627,
+  "theorem": 37301
+ },
+ "declarations_total": 49379,
+ "distinct_mathlib_modules_imported": 303,
+ "internal_modules": 2484,
+ "lean_files": 2484,
+ "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
+ "mathlib_by_area": [
+  [
+   "Analysis",
+   136
+  ],
+  [
+   "MeasureTheory",
+   52
+  ],
+  [
+   "Topology",
+   36
+  ],
+  [
+   "Algebra",
+   22
+  ],
+  [
+   "Data",
+   21
+  ],
+  [
+   "LinearAlgebra",
+   14
+  ],
+  [
+   "Tactic",
+   13
+  ],
+  [
+   "Order",
+   2
+  ],
+  [
+   "Probability",
+   2
+  ],
+  [
+   "Geometry",
+   1
+  ],
+  [
+   "NumberTheory",
+   1
+  ],
+  [
+   "Logic",
+   1
+  ],
+  [
+   "Dynamics",
+   1
+  ]
+ ],
+ "mathlib_modules_total": 8513,
+ "mathlib_pin": "v4.34.0-rc2 (the board map used mathlib 110cb7f0, also v4.34.0-rc2)",
+ "max_internal_import_depth": 96,
+ "most_imported_internal": [
+  [
+   "Euler.EulerProof",
+   32
+  ],
+  [
+   "Euler.ContinuousTimeIntegral",
+   15
+  ],
+  [
+   "Euler.ParameterSobolevCoefficient",
+   13
+  ],
+  [
+   "NavierStokes.CorrectionStep",
+   13
+  ],
+  [
+   "NavierStokes.R3.ComparisonSetup",
+   13
+  ],
+  [
+   "Euler.MeanCoefficientPathJets",
+   12
+  ],
+  [
+   "Euler.OperatorGevreyCalculus",
+   12
+  ],
+  [
+   "NavierStokes.ActualCycleParameters",
+   12
+  ],
+  [
+   "NavierStokes.VariableGaugeMean",
+   12
+  ],
+  [
+   "NavierStokes.ProblemStatement",
+   12
+  ],
+  [
+   "Euler.ParameterSobolevLinear",
+   11
+  ],
+  [
+   "NavierStokes.ActualInitialization",
+   11
+  ]
+ ],
+ "namespace_clusters": [
+  [
+   "Budget",
+   165
+  ],
+  [
+   "WordBound",
+   71
+  ],
+  [
+   "FiniteFamily",
+   66
+  ],
+  [
+   "PrefixFields",
+   41
+  ],
+  [
+   "Atlas",
+   37
+  ],
+  [
+   "SignedParameters",
+   32
+  ],
+  [
+   "PolynomialJets",
+   27
+  ],
+  [
+   "NativeDynamics",
+   26
+  ],
+  [
+   "Cutoff",
+   25
+  ],
+  [
+   "Regular",
+   22
+  ],
+  [
+   "FrameData",
+   21
+  ],
+  [
+   "CoherentFamily",
+   20
+  ]
+ ],
+ "repo": "openai/NavierStokesAndEuler",
+ "top_mathlib_imports": [
+  [
+   "Mathlib.Tactic.Ring",
+   43
+  ],
+  [
+   "Mathlib.Tactic.Linarith",
+   39
+  ],
+  [
+   "Mathlib.Tactic.FieldSimp",
+   27
+  ],
+  [
+   "Mathlib.Analysis.Calculus.MeanValue",
+   21
+  ],
+  [
+   "Mathlib.Analysis.Calculus.ContDiff.Operations",
+   21
+  ],
+  [
+   "Mathlib.Analysis.Normed.Group.Bounded",
+   21
+  ],
+  [
+   "Mathlib.Tactic.Positivity",
+   20
+  ],
+  [
+   "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas",
+   19
+  ],
+  [
+   "Mathlib.Analysis.Calculus.ContDiff.Bounds",
+   18
+  ],
+  [
+   "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus",
+   16
+  ],
+  [
+   "Mathlib.Tactic.FinCases",
+   16
+  ],
+  [
+   "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+   15
+  ],
+  [
+   "Mathlib.Analysis.SpecialFunctions.Sqrt",
+   14
+  ],
+  [
+   "Mathlib.Tactic.NormNum",
+   14
+  ],
+  [
+   "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+   14
+  ]
+ ]
+}
