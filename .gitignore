@@ -1,0 +1,5 @@
+
+# theorem-lab/termform2: regenerable run logs and the cached Round-1 formed pool
+theorem-lab/termform2/log_*.txt
+theorem-lab/termform2/logb_*.txt
+theorem-lab/termform2/round1_formed_pool.json
