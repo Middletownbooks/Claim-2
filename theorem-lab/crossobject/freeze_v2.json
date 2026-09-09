@@ -1,0 +1,107 @@
+{
+ "base_rule": [
+  {
+   "condition": "n mod 8 = 0",
+   "value": "n//4"
+  },
+  {
+   "condition": "n mod 4 = 0",
+   "value": "n-2"
+  },
+  {
+   "condition": "n mod 2 = 0",
+   "value": "n-1"
+  },
+  {
+   "condition": "otherwise",
+   "value": "n - n//spf(n)"
+  }
+ ],
+ "chosen_composition_op": "lcm",
+ "disagreement_stage": {
+  "label": "COMPUTED",
+  "observations": {
+   "55": 20
+  },
+  "probes_used": 1,
+  "rounds": [
+   {
+    "observed": 20,
+    "predictions": {
+     "lcm": 20,
+     "max": 10
+    },
+    "probe": 55,
+    "survivors": [
+     "lcm",
+     "max"
+    ],
+    "survivors_after": [
+     "lcm"
+    ]
+   }
+  ],
+  "selected": "lcm",
+  "stage": "disagreement_resolution",
+  "survivors": [
+   "lcm"
+  ],
+  "verdict": "RESOLVED"
+ },
+ "forecast_hash": "03fbe7c8162144e7cb46320bff4180de57a6e4b10540b37e00fc22a86f0c04f0",
+ "holdout": [
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48
+ ],
+ "predicted_invariants": {
+  "31": 30,
+  "32": 8,
+  "33": 10,
+  "34": 16,
+  "35": 12,
+  "36": 6,
+  "37": 36,
+  "38": 18,
+  "39": 12,
+  "40": 4,
+  "41": 40,
+  "42": 6,
+  "43": 42,
+  "44": 10,
+  "45": 12,
+  "46": 22,
+  "47": 46,
+  "48": 4
+ },
+ "queries_before_holdout": 1860,
+ "reserve": [
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60
+ ]
+}
