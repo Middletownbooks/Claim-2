@@ -2,6 +2,11 @@
 
 Reusable stages that sit between the laboratory's fitting and its final scoring.
 
+| stage | replaces | verdicts |
+|---|---|---|
+| `disagreement.py` | silent tie-breaks | `UNIQUE` / `RESOLVED` / `UNDERDETERMINED` / `SPACE_EXCLUDES_TRUTH` |
+| `abstention.py` | silent extrapolation | `LICENSED` / `ABSTAIN_MISFIT` / `ABSTAIN_UNSUPPORTED` |
+
 ## `disagreement.py` — disagreement resolution
 
 **Status: standard stage.** Promoted from the post-hoc extension in Report K
@@ -92,3 +97,45 @@ two selection sites: `table_experiment`'s `min(entries, key=validation_rank)`
 currently break ties by symbol cost and then by identifier — exactly the silent
 tie-break this stage exists to replace. A probe reserve would have to be carved
 out of the coordinate space first; today the laboratory's grid leaves none.
+
+
+## `abstention.py` — extrapolation licensing
+
+**Status: standard stage.** Added after Report L, where the base-case fitter
+chose the least-bad rule from a grammar that could not express the answer and
+then extrapolated it: **10 training errors**, a predicted threshold of 11 for
+m = 47 whose true threshold is 1, and end-to-end 0.715 against a 0.917 majority
+baseline. `min(error)` never asks whether the minimum is good enough.
+
+### The two licences
+
+A branch earns the right to extrapolate only if it (1) **fits** — reproduces
+every training point it covers, since a deterministic invariant admits no
+tolerance by default — and (2) has **support** — at least `min_support`
+covered points, because a branch constrained by one point is unfalsified rather
+than confirmed. Failing either, that branch returns `None`.
+
+Licensing is **per branch**, so a rule whose `otherwise` arm is nonsense keeps
+the arms that work.
+
+### Scoring convention
+
+`selective_report` gives coverage, selective accuracy, and the headline number
+that counts abstention as an error — so abstaining everywhere scores coverage 0
+and wins nothing.
+
+### Demonstrated result
+
+`crossobject2/task2_licensed.py`, same wrong-shaped grammar as Report L:
+
+| | without licensing | with licensing |
+|---|---|---|
+| base branches extrapolated | 4 of 4 | **0 of 4** (all `ABSTAIN_MISFIT`) |
+| held-out invariants | 12/18, six of them confidently wrong | 12 answered, **12 right**, six declined |
+| end-to-end | **0.715** (below the 0.917 baseline) | coverage 0.667, **selective accuracy 1.000** |
+
+### Tests
+
+`python3 test_abstention.py` — 14 assertions covering both licence types,
+partial abstention, configurable tolerance, and the property that blanket
+abstention wins nothing.
