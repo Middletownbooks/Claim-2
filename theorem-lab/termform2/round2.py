@@ -260,11 +260,19 @@ def main():
     # written to round2b_*.json and are reported alongside, never instead of,
     # the pre-registered runs.
     cap = int(sys.argv[2]) if len(sys.argv) > 2 else CAP
+    # Optional third argument: the beam. Reachability at cost 5 is beam
+    # limited, so a one-target difference between two conditions can be a
+    # draw of the beam rather than a difference in capability. Runs with a
+    # widened beam are written to round2c_*.json and are used only to say
+    # which differences survive it.
+    beam_override = int(sys.argv[3]) if len(sys.argv) > 3 else None
     suffix = "" if cap == CAP else "b"
+    if beam_override:
+        suffix = "c"
     t0 = time.time()
     assert cond in ("A0", "A", "B", "C", "D", "E", "Bo", "B520"), cond
     max_size = E_MAX_SIZE if cond == "E" else MAX_SIZE
-    beam = E_BEAM if cond == "E" else BEAM
+    beam = beam_override or (E_BEAM if cond == "E" else BEAM)
 
     atoms, info, formed, promoted_ids = build(cond)
     watch = [INV.vector(n, TRAIN) for n in INV.TARGETS]

@@ -1,0 +1,383 @@
+{
+ "atoms_unusable_at_this_budget": 0,
+ "budget": {
+  "beam": 1200,
+  "class_cap": 20000000,
+  "outer_max_cost": 5,
+  "prereg_class_cap": 300000,
+  "seed": 20260909,
+  "unit_cap": 500
+ },
+ "classes_TRAIN": 4812635,
+ "condition": "C",
+ "expansions": 13203225,
+ "label": "COMPUTED",
+ "levels": [
+  {
+   "classes_cumulative": 490,
+   "cost": 1,
+   "expansions_cumulative": 0,
+   "kept_at_level": 505,
+   "truncated": false
+  },
+  {
+   "classes_cumulative": 490,
+   "cost": 2,
+   "expansions_cumulative": 0,
+   "kept_at_level": 0,
+   "truncated": false
+  },
+  {
+   "classes_cumulative": 653350,
+   "cost": 3,
+   "expansions_cumulative": 2295225,
+   "kept_at_level": 1200,
+   "truncated": false
+  },
+  {
+   "classes_cumulative": 653350,
+   "cost": 4,
+   "expansions_cumulative": 2295225,
+   "kept_at_level": 0,
+   "truncated": false
+  },
+  {
+   "classes_cumulative": 4812635,
+   "cost": 5,
+   "expansions_cumulative": 13203225,
+   "kept_at_level": 1200,
+   "truncated": false
+  }
+ ],
+ "operator_check_mismatches": 0,
+ "prereg_sha256": "a241ec5344f11b117b887c7f0864dab2ba4cfb160431e0b5ffbe785816b336aa",
+ "semantic_refinement": {
+  "3": {
+   "distinct_on_TRAIN+EVALQ": 5000,
+   "sampled_classes": 5000,
+   "split_factor": 1.0
+  },
+  "5": {
+   "distinct_on_TRAIN+EVALQ": 5000,
+   "sampled_classes": 5000,
+   "split_factor": 1.0
+  }
+ },
+ "splits": {
+  "EVALQ": [
+   121,
+   160
+  ],
+  "HOLDOUT": [
+   56,
+   90
+  ],
+  "RESERVE": [
+   41,
+   55
+  ],
+  "TRAIN": [
+   2,
+   40
+  ]
+ },
+ "targets": {
+  "Omega": {
+   "reached": false
+  },
+  "gpf": {
+   "reached": false
+  },
+  "is_prime": {
+   "all_survivors_observationally_equal_on_reserve": true,
+   "disagreement": {
+    "probes_used": 1,
+    "survivors": 537,
+    "verdict": "UNDERDETERMINED"
+   },
+   "distinct_minimal_terms": 564,
+   "holdout": {
+    "accuracy_counting_abstention_as_error": 1.0,
+    "answered": 35,
+    "coverage": 1.0,
+    "label": "COMPUTED",
+    "points": 35,
+    "selective_accuracy": 1.0
+   },
+   "licence": {
+    "abstaining_branches": 0,
+    "branches": [
+     {
+      "branch": "all",
+      "covered": 54,
+      "errors": 0,
+      "reason": "",
+      "verdict": "LICENSED"
+     }
+    ],
+    "fit_tolerance": 0,
+    "label": "COMPUTED",
+    "licensed_branches": 1,
+    "min_support": 2,
+    "stage": "extrapolation_licensing"
+   },
+   "min_cost": 3,
+   "n_minimal_using_carried_over": 541,
+   "reachable_without_carried_over": true,
+   "reached": true,
+   "selected_term": "(n // <count(k: <least(k: (least(k: (n % k)) // k))>)>)",
+   "terms": [
+    "(n // <count(k: <least(k: (least(k: (n % k)) // k))>)>)",
+    "(n - <count(k: (k // <count(k: <least(k: (least(k: (n % k)) // k))>)>))>)",
+    "(1 - <least(k: (least(k: (n % k)) // k))>)",
+    "(1 // <count(k: (k % <least(k: (n % k))>))>)",
+    "(1 // <count(k: (k // <count(k: (n % k))>))>)",
+    "(1 % <least(k: <least(k: (least(k: (n % k)) // k))>)>)",
+    "min(1, <least(k: <least(k: (least(k: (n % k)) // k))>)>)",
+    "(1 % <count(k: <least(k: (least(k: (n % k)) // k))>)>)",
+    "min(1, <count(k: <least(k: (least(k: (n % k)) // k))>)>)",
+    "(1 - <count(k: (k - <least(k: (least(k: (n % k)) // k))>))>)",
+    "(1 - <count(k: (1 - <least(k: (least(k: (n % k)) // k))>))>)",
+    "(1 - <least(k: (k - <least(k: (least(k: (n % k)) // k))>))>)"
+   ]
+  },
+  "is_prime_power": {
+   "reached": false
+  },
+  "is_square": {
+   "all_survivors_observationally_equal_on_reserve": true,
+   "disagreement": {
+    "probes_used": 0,
+    "survivors": 19,
+    "verdict": "UNDERDETERMINED"
+   },
+   "distinct_minimal_terms": 19,
+   "holdout": {
+    "accuracy_counting_abstention_as_error": 1.0,
+    "answered": 35,
+    "coverage": 1.0,
+    "label": "COMPUTED",
+    "points": 35,
+    "selective_accuracy": 1.0
+   },
+   "licence": {
+    "abstaining_branches": 0,
+    "branches": [
+     {
+      "branch": "all",
+      "covered": 54,
+      "errors": 0,
+      "reason": "",
+      "verdict": "LICENSED"
+     }
+    ],
+    "fit_tolerance": 0,
+    "label": "COMPUTED",
+    "licensed_branches": 1,
+    "min_support": 2,
+    "stage": "extrapolation_licensing"
+   },
+   "min_cost": 3,
+   "n_minimal_using_carried_over": 13,
+   "reachable_without_carried_over": true,
+   "reached": true,
+   "selected_term": "(<count(k: (n % k))> % 2)",
+   "terms": [
+    "(<count(k: (n % k))> % 2)",
+    "(<count(k: (n % k))> % <least(k: 0)>)",
+    "(<count(k: (n % k))> % <least(k: (k // n))>)",
+    "(<count(k: (n % k))> % <count(k: (k // <count(k: (k // 4))>))>)",
+    "(<count(k: (n % k))> % <count(k: (k // <count(k: (4 % k))>))>)",
+    "(<count(k: (n % k))> % <least(k: (4 // <count(k: (4 // k))>))>)",
+    "(<count(k: (n % k))> % <least(k: (4 // <least(k: (2 - (n % k)))>))>)",
+    "(<count(k: (n % k))> % <least(k: (4 % <count(k: (count(k: (4 - k)) % k))>))>)",
+    "(<count(k: (n % k))> % <least(k: (k - <least(k: (count(k: (2 // k)) % k))>))>)",
+    "(<count(k: (n % k))> % <least(k: (<count(k: (count(k: (4 - k)) % k))> - 4))>)",
+    "(<count(k: (n % k))> % <least(k: (k - <least(k: (least(k: (n % k)) // k))>))>)",
+    "(<count(k: (n % k))> % <least(k: (n % <least(k: <least(k: (least(k: (n % k)) // k))>)>))>)"
+   ]
+  },
+  "is_squarefree": {
+   "reached": false
+  },
+  "n_div_spf": {
+   "all_survivors_observationally_equal_on_reserve": false,
+   "disagreement": {
+    "probes_used": 0,
+    "survivors": 1,
+    "verdict": "UNIQUE"
+   },
+   "distinct_minimal_terms": 1,
+   "holdout": {
+    "accuracy_counting_abstention_as_error": 1.0,
+    "answered": 35,
+    "coverage": 1.0,
+    "label": "COMPUTED",
+    "points": 35,
+    "selective_accuracy": 1.0
+   },
+   "licence": {
+    "abstaining_branches": 0,
+    "branches": [
+     {
+      "branch": "all",
+      "covered": 54,
+      "errors": 0,
+      "reason": "",
+      "verdict": "LICENSED"
+     }
+    ],
+    "fit_tolerance": 0,
+    "label": "COMPUTED",
+    "licensed_branches": 1,
+    "min_support": 2,
+    "stage": "extrapolation_licensing"
+   },
+   "min_cost": 1,
+   "n_minimal_using_carried_over": 0,
+   "reachable_without_carried_over": true,
+   "reached": true,
+   "selected_term": "<count(k: (k % <least(k: (n % k))>))>",
+   "terms": [
+    "<count(k: (k % <least(k: (n % k))>))>"
+   ]
+  },
+  "omega": {
+   "reached": false
+  },
+  "phi": {
+   "reached": false
+  },
+  "rad": {
+   "reached": false
+  },
+  "sigma": {
+   "reached": false
+  },
+  "v_2": {
+   "reached": false
+  },
+  "v_spf": {
+   "reached": false
+  }
+ },
+ "truncated_at_cap": false,
+ "untargeted": {
+  "floor_n_2": {
+   "cost": 1,
+   "invariant": "floor_n_2",
+   "matches_HOLDOUT": true,
+   "matches_RESERVE": true,
+   "matches_TRAIN": true,
+   "term": "<count(k: (k % 2))>",
+   "uses_carried_over": false
+  },
+  "floor_n_4": {
+   "cost": 1,
+   "invariant": "floor_n_4",
+   "matches_HOLDOUT": true,
+   "matches_RESERVE": true,
+   "matches_TRAIN": true,
+   "term": "<count(k: (k % 4))>",
+   "uses_carried_over": false
+  },
+  "is_prime": {
+   "cost": 3,
+   "invariant": "is_prime",
+   "matches_HOLDOUT": true,
+   "matches_RESERVE": true,
+   "matches_TRAIN": true,
+   "term": "(n // <count(k: <least(k: (least(k: (n % k)) // k))>)>)",
+   "uses_carried_over": true
+  },
+  "n": {
+   "cost": 1,
+   "invariant": "n",
+   "matches_HOLDOUT": true,
+   "matches_RESERVE": true,
+   "matches_TRAIN": true,
+   "term": "n",
+   "uses_carried_over": false
+  },
+  "n_div_spf": {
+   "cost": 1,
+   "invariant": "n_div_spf",
+   "matches_HOLDOUT": true,
+   "matches_RESERVE": true,
+   "matches_TRAIN": true,
+   "term": "<count(k: (k % <least(k: (n % k))>))>",
+   "uses_carried_over": false
+  },
+  "n_minus_1": {
+   "cost": 1,
+   "invariant": "n_minus_1",
+   "matches_HOLDOUT": true,
+   "matches_RESERVE": true,
+   "matches_TRAIN": true,
+   "term": "<count(k: (k // n))>",
+   "uses_carried_over": false
+  },
+  "spf": {
+   "cost": 1,
+   "invariant": "spf",
+   "matches_HOLDOUT": true,
+   "matches_RESERVE": true,
+   "matches_TRAIN": true,
+   "term": "<least(k: (n % k))>",
+   "uses_carried_over": false
+  },
+  "tau": {
+   "cost": 1,
+   "invariant": "tau",
+   "matches_HOLDOUT": true,
+   "matches_RESERVE": true,
+   "matches_TRAIN": true,
+   "term": "<count(k: (n % k))>",
+   "uses_carried_over": false
+  },
+  "tau_minus_1": {
+   "cost": 1,
+   "invariant": "tau_minus_1",
+   "matches_HOLDOUT": true,
+   "matches_RESERVE": true,
+   "matches_TRAIN": true,
+   "term": "<count(k: (k // <count(k: (n % k))>))>",
+   "uses_carried_over": false
+  }
+ },
+ "vectorisation_check": {
+  "checked": 300,
+  "mismatches": 0
+ },
+ "vocabulary": {
+  "carried_over": 20,
+  "condition": "C",
+  "formation_seconds": 93.4,
+  "formed_terms": 9589,
+  "outer_atoms": 505,
+  "random_vocabulary": [
+   "<count(k: (least(k: (n % k)) // (k + least(k: (4 // n)))))>",
+   "<count(k: (4 - (count(k: (4 // k)) % least(k: (4 // k)))))>",
+   "<count(k: (k // (n // least(k: (4 - n)))))>",
+   "<least(k: (k % (least(k: (4 // k)) % n)))>",
+   "<least(k: (count(k: (k % 4)) - least(k: (n % k))))>",
+   "<count(k: (4 % count(k: (k % 4))))>",
+   "<count(k: (k // (n // least(k: (4 // n)))))>",
+   "<least(k: (count(k: (2 // k)) % k))>",
+   "<count(k: (n - (k + least(k: (n % 4)))))>",
+   "<count(k: (n // (least(k: (n - 4)) + count(k: (n % 4)))))>",
+   "<count(k: (least(k: (n % k)) - (k * least(k: (4 // n)))))>",
+   "<count(k: (k % (least(k: (n % 4)) + count(k: (4 - k)))))>",
+   "<count(k: (k - (least(k: (2 // k)) ^ count(k: (4 // k)))))>",
+   "<count(k: (count(k: (k % 4)) % k))>",
+   "<count(k: (count(k: (4 - k)) % k))>",
+   "<count(k: (2 % (count(k: (k // n)) % k)))>",
+   "<least(k: (2 - (n % k)))>",
+   "<count(k: (k - (least(k: (2 // k)) - count(k: (k % 4)))))>",
+   "<count(k: (k % (2 ^ count(k: (k % 2)))))>",
+   "<least(k: (least(k: (n % k)) // k))>"
+  ],
+  "units": 500
+ },
+ "wall_seconds": 341.1
+}

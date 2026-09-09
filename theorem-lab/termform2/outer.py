@@ -199,7 +199,13 @@ class Outer:
             if self.truncated:
                 break
         kept = sorted(heap, key=lambda x: (x[0], x[1]), reverse=True)
-        self.by_size[s] = [self._node(rec, v) for _, _, rec, v in kept]
+        # EXTEND, never assign: an ATOM whose cost equals this level was placed
+        # in by_size[s] by __init__, and assigning here would delete it -- both
+        # as a result and as a child for higher levels. Only the re-expansion
+        # condition has atoms above cost 1, so this silently crippled exactly
+        # the Priority-9 control and nothing else.
+        self.by_size.setdefault(s, []).extend(
+            self._node(rec, v) for _, _, rec, v in kept)
         self.samples[s] = [self._node(rec) for rec in res]
 
     # ---- verification -------------------------------------------------
