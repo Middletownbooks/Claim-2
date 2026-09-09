@@ -1,0 +1,207 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "note": "transcribed from committed pre-registrations and reports",
+ "predictions": [
+  {
+   "phase": "P",
+   "id": "P-1",
+   "statement": "|R_B(5)| > |R_A(5)|",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-2",
+   "statement": "B reaches more targets than A",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-3",
+   "statement": "B > D (naming beats re-expansion)",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-4",
+   "statement": "B > C (promoted beats random)",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-5",
+   "statement": "B > E at matched expansions",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-6",
+   "statement": "no condition reaches is_squarefree",
+   "polarity": "NEGATIVE",
+   "outcome": "FAILED",
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-7",
+   "statement": "both A and B reach v_2",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-8",
+   "statement": "no rung-3 discovery (author's prior)",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "T4",
+   "statement": "gpf unreachable in all conditions",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T5",
+   "statement": "omega unreachable",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T6",
+   "statement": "Omega unreachable",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T7",
+   "statement": "is_squarefree unreachable",
+   "polarity": "NEGATIVE",
+   "outcome": "FAILED",
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T8",
+   "statement": "rad unreachable",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T10",
+   "statement": "sigma unreachable",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T12",
+   "statement": "phi unreachable",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T1/T2/T3",
+   "statement": "A cannot reach is_prime/is_square/n_div_spf, B can",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T13",
+   "statement": "v_spf reachable in B only",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "R",
+   "id": "R-prior",
+   "statement": "QPR is not a full board",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "REPORT_R"
+  },
+  {
+   "phase": "S",
+   "id": "S-pinsker",
+   "statement": "Pinsker intervention gives no gain",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "s/pinsker_prereg.md"
+  },
+  {
+   "phase": "T",
+   "id": "T-math",
+   "statement": "MATH skeletons do not transport",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "source": "t/PREREG.md"
+  },
+  {
+   "phase": "T",
+   "id": "T-eng",
+   "statement": "ENG skeletons give a small positive",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "source": "t/PREREG.md"
+  }
+ ],
+ "summary": {
+  "positive_held": 1,
+  "positive_total": 9,
+  "positive_rate": 0.1111,
+  "negative_held": 10,
+  "negative_total": 12,
+  "negative_rate": 0.8333
+ },
+ "recommendations": [
+  {
+   "from": "Q",
+   "recommendation": "upstreamability: board -> mathlib -> board is the transport channel",
+   "tested_by": "R and S",
+   "followed": "FOLLOWED",
+   "outcome": "REFUTED as transport -- R judged it engineering, S found four upstreamable lemmas and zero transport"
+  },
+  {
+   "from": "R",
+   "recommendation": "interface-mediated transport: shared mathlib interfaces predict transport",
+   "tested_by": "S",
+   "followed": "FOLLOWED",
+   "outcome": "FALSIFIED -- I|V+controls = -0.44, p = 0.0008"
+  },
+  {
+   "from": "S",
+   "recommendation": "architecture channel: proof-architecture similarity is the live signal",
+   "tested_by": "T",
+   "followed": "FOLLOWED",
+   "outcome": "FALSIFIED -- source-specific benefit null at L2/L3/MATH/ENG; the Phase S metric was 54% `have`"
+  }
+ ],
+ "recommendation_follow_through": "3/3",
+ "recommendation_positive_survival": "0/3"
+}

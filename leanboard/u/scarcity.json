@@ -1,0 +1,296 @@
+{
+ "label": "SIMULATION",
+ "caveat": "conditional on the model; the only grounded inputs are the measured base rate (0.143) and the measured forecaster informativeness (0.0)",
+ "base_rate": 0.14285714285714285,
+ "trials": 4000,
+ "rows": [
+  {
+   "budget": 10,
+   "cost_per_test": 1.0,
+   "informativeness": 0.0,
+   "mean_findings": 1.448
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 1.0,
+   "informativeness": 0.25,
+   "mean_findings": 3.0703
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 1.0,
+   "informativeness": 0.5,
+   "mean_findings": 5.697
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 1.0,
+   "informativeness": 0.9,
+   "mean_findings": 5.678
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 0.5,
+   "informativeness": 0.0,
+   "mean_findings": 2.8723
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 0.5,
+   "informativeness": 0.25,
+   "mean_findings": 4.56
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 0.5,
+   "informativeness": 0.5,
+   "mean_findings": 5.6922
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 0.5,
+   "informativeness": 0.9,
+   "mean_findings": 5.6508
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 0.25,
+   "informativeness": 0.0,
+   "mean_findings": 5.682
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 0.25,
+   "informativeness": 0.25,
+   "mean_findings": 5.7307
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 0.25,
+   "informativeness": 0.5,
+   "mean_findings": 5.702
+  },
+  {
+   "budget": 10,
+   "cost_per_test": 0.25,
+   "informativeness": 0.9,
+   "mean_findings": 5.744
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 1.0,
+   "informativeness": 0.0,
+   "mean_findings": 2.8775
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 1.0,
+   "informativeness": 0.25,
+   "mean_findings": 4.544
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 1.0,
+   "informativeness": 0.5,
+   "mean_findings": 5.7092
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 1.0,
+   "informativeness": 0.9,
+   "mean_findings": 5.726
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 0.5,
+   "informativeness": 0.0,
+   "mean_findings": 5.7533
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 0.5,
+   "informativeness": 0.25,
+   "mean_findings": 5.7255
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 0.5,
+   "informativeness": 0.5,
+   "mean_findings": 5.7165
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 0.5,
+   "informativeness": 0.9,
+   "mean_findings": 5.7352
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 0.25,
+   "informativeness": 0.0,
+   "mean_findings": 5.729
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 0.25,
+   "informativeness": 0.25,
+   "mean_findings": 5.7222
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 0.25,
+   "informativeness": 0.5,
+   "mean_findings": 5.7565
+  },
+  {
+   "budget": 20,
+   "cost_per_test": 0.25,
+   "informativeness": 0.9,
+   "mean_findings": 5.6535
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 1.0,
+   "informativeness": 0.0,
+   "mean_findings": 5.7242
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 1.0,
+   "informativeness": 0.25,
+   "mean_findings": 5.7203
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 1.0,
+   "informativeness": 0.5,
+   "mean_findings": 5.6958
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 1.0,
+   "informativeness": 0.9,
+   "mean_findings": 5.7467
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 0.5,
+   "informativeness": 0.0,
+   "mean_findings": 5.704
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 0.5,
+   "informativeness": 0.25,
+   "mean_findings": 5.6893
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 0.5,
+   "informativeness": 0.5,
+   "mean_findings": 5.691
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 0.5,
+   "informativeness": 0.9,
+   "mean_findings": 5.6975
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 0.25,
+   "informativeness": 0.0,
+   "mean_findings": 5.697
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 0.25,
+   "informativeness": 0.25,
+   "mean_findings": 5.6452
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 0.25,
+   "informativeness": 0.5,
+   "mean_findings": 5.6947
+  },
+  {
+   "budget": 100,
+   "cost_per_test": 0.25,
+   "informativeness": 0.9,
+   "mean_findings": 5.6425
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 1.0,
+   "informativeness": 0.0,
+   "mean_findings": 5.694
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 1.0,
+   "informativeness": 0.25,
+   "mean_findings": 5.6815
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 1.0,
+   "informativeness": 0.5,
+   "mean_findings": 5.706
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 1.0,
+   "informativeness": 0.9,
+   "mean_findings": 5.699
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 0.5,
+   "informativeness": 0.0,
+   "mean_findings": 5.7428
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 0.5,
+   "informativeness": 0.25,
+   "mean_findings": 5.6755
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 0.5,
+   "informativeness": 0.5,
+   "mean_findings": 5.7115
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 0.5,
+   "informativeness": 0.9,
+   "mean_findings": 5.6733
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 0.25,
+   "informativeness": 0.0,
+   "mean_findings": 5.7302
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 0.25,
+   "informativeness": 0.25,
+   "mean_findings": 5.6377
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 0.25,
+   "informativeness": 0.5,
+   "mean_findings": 5.7395
+  },
+  {
+   "budget": 1000,
+   "cost_per_test": 0.25,
+   "informativeness": 0.9,
+   "mean_findings": 5.7302
+  }
+ ]
+}
