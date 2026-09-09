@@ -1,0 +1,5 @@
+surviving classes mod 840: [1, 121, 169, 289, 361, 529]
+are they squares of units mod 840? True
+squares: [1, 121, 169, 289, 361, 529]
+primes < 3000 with no solution found: []
+sample solutions in surviving classes: {1009: (253, 85096, 1974822872), 1129: (285, 29260, 99103620), 1201: (306, 15980, 172727820), 1801: (451, 270754, 19992746114), 2521: (636, 69748, 131876031), 2689: (676, 121186, 8472598004)}
