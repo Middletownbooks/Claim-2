@@ -35,6 +35,13 @@ from outer import Outer, digest                             # noqa: E402
 from round2 import (BEAM, CAP, HOLDOUT, MAX_SIZE, RESERVE, SEED, TRAIN,
                     UNIT_CAP, EVALQ, promoted)              # noqa: E402
 
+# These are internal comparisons -- baseline against poisoned, baseline against
+# definition-blind -- so the class cap only has to be the SAME across them. It
+# is set to the budget-honoured value anyway, because the pre-registered cap
+# truncates at cost level 3 and would hide any difference that shows only at
+# cost 5.
+CAP = int(sys.argv[1]) if len(sys.argv) > 1 else 20000000
+
 
 def fingerprint(O):
     """Everything the experiment reads off a run, as a comparable object."""
