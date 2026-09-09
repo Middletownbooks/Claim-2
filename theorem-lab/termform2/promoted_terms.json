@@ -1,0 +1,355 @@
+{
+ "applied_by": "termform2/promote.py",
+ "count": 20,
+ "label": "PROMOTED_V1",
+ "note": "Round 2 re-evaluates every promoted term from its tuple form on Round-2 objects. No Round-1 value is carried across.",
+ "promotion_rule": "promote every certified term, plus every formed term appearing as a NAMED UNIT inside a certified term. Mechanical, applied before any Round-2 result is seen; no hand selection.",
+ "source_manifest_sha256": "b761b8d45d24279341249c5fbaab74761d473cae24d06dea1fa04405463f746b",
+ "term_tuples": [
+  "('count', ('div', ('var', 'k'), ('count', ('mod', ('var', 'n'), ('var', 'k')))))",
+  "('count', ('sub', ('var', 'n'), ('var', 'k')))",
+  "('count', ('div', ('var', 'k'), ('var', 'n')))",
+  "('count', ('mod', ('var', 'k'), ('const', 2)))",
+  "('count', ('mod', ('var', 'k'), ('least', ('mod', ('var', 'n'), ('var', 'k')))))",
+  "('count', ('div', ('var', 'k'), ('least', ('mod', ('var', 'n'), ('var', 'k')))))",
+  "('count', ('mod', ('var', 'k'), ('count', ('mod', ('var', 'n'), ('var', 'k')))))",
+  "('count', ('mod', ('var', 'k'), ('least', ('sub', ('var', 'n'), ('const', 2)))))",
+  "('least', ('const', 0))",
+  "('count', ('mod', ('var', 'k'), ('const', 4)))",
+  "('count', ('mod', ('var', 'k'), ('count', ('sub', ('var', 'k'), ('const', 4)))))",
+  "('count', ('mod', ('var', 'k'), ('least', ('mod', ('var', 'k'), ('const', 4)))))",
+  "('least', ('mod', ('var', 'k'), ('count', ('mod', ('var', 'k'), ('const', 4)))))",
+  "('least', ('mod', ('var', 'n'), ('sub', ('var', 'n'), ('var', 'k'))))",
+  "('count', ('div', ('var', 'n'), ('mul', ('var', 'k'), ('least', ('mod', ('var', 'n'), ('var', 'k'))))))",
+  "('count', ('mod', ('var', 'n'), ('var', 'k')))",
+  "('least', ('mod', ('var', 'n'), ('var', 'k')))",
+  "('least', ('sub', ('var', 'n'), ('const', 2)))",
+  "('count', ('sub', ('var', 'k'), ('const', 4)))",
+  "('least', ('mod', ('var', 'k'), ('const', 4)))"
+ ],
+ "terms": [
+  {
+   "expanded_size": 7,
+   "from_targets": [
+    "nu",
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k // count(k: (n % k))))",
+   "values_6_10_12_16_30_36": [
+    3,
+    3,
+    5,
+    4,
+    7,
+    8
+   ]
+  },
+  {
+   "expanded_size": 4,
+   "from_targets": [
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (n - k))",
+   "values_6_10_12_16_30_36": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "expanded_size": 4,
+   "from_targets": [
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k // n))",
+   "values_6_10_12_16_30_36": [
+    5,
+    9,
+    11,
+    15,
+    29,
+    35
+   ]
+  },
+  {
+   "expanded_size": 4,
+   "from_targets": [
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k % 2))",
+   "values_6_10_12_16_30_36": [
+    3,
+    5,
+    6,
+    8,
+    15,
+    18
+   ]
+  },
+  {
+   "expanded_size": 7,
+   "from_targets": [
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k % least(k: (n % k))))",
+   "values_6_10_12_16_30_36": [
+    3,
+    5,
+    6,
+    8,
+    15,
+    18
+   ]
+  },
+  {
+   "expanded_size": 7,
+   "from_targets": [
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k // least(k: (n % k))))",
+   "values_6_10_12_16_30_36": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "expanded_size": 7,
+   "from_targets": [
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k % count(k: (n % k))))",
+   "values_6_10_12_16_30_36": [
+    1,
+    2,
+    2,
+    3,
+    3,
+    4
+   ]
+  },
+  {
+   "expanded_size": 7,
+   "from_targets": [
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k % least(k: (n - 2))))",
+   "values_6_10_12_16_30_36": [
+    6,
+    10,
+    12,
+    16,
+    30,
+    36
+   ]
+  },
+  {
+   "expanded_size": 2,
+   "from_targets": [
+    "lambda:n mod 4 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "least(k: 0)",
+   "values_6_10_12_16_30_36": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "expanded_size": 4,
+   "from_targets": [
+    "lambda:n mod 8 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k % 4))",
+   "values_6_10_12_16_30_36": [
+    1,
+    2,
+    3,
+    4,
+    7,
+    9
+   ]
+  },
+  {
+   "expanded_size": 7,
+   "from_targets": [
+    "lambda:n mod 8 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k % count(k: (k - 4))))",
+   "values_6_10_12_16_30_36": [
+    1,
+    2,
+    3,
+    4,
+    7,
+    9
+   ]
+  },
+  {
+   "expanded_size": 7,
+   "from_targets": [
+    "lambda:n mod 8 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (k % least(k: (k % 4))))",
+   "values_6_10_12_16_30_36": [
+    1,
+    2,
+    3,
+    4,
+    7,
+    9
+   ]
+  },
+  {
+   "expanded_size": 7,
+   "from_targets": [
+    "lambda:n mod 8 = 0"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "least(k: (k % count(k: (k % 4))))",
+   "values_6_10_12_16_30_36": [
+    2,
+    2,
+    3,
+    4,
+    7,
+    9
+   ]
+  },
+  {
+   "expanded_size": 6,
+   "from_targets": [
+    "lambda:otherwise"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "least(k: (n % (n - k)))",
+   "values_6_10_12_16_30_36": [
+    3,
+    5,
+    6,
+    8,
+    15,
+    18
+   ]
+  },
+  {
+   "expanded_size": 9,
+   "from_targets": [
+    "lambda:otherwise"
+   ],
+   "reason": "certified Round-1 term",
+   "term": "count(k: (n // (k * least(k: (n % k)))))",
+   "values_6_10_12_16_30_36": [
+    3,
+    5,
+    6,
+    8,
+    15,
+    18
+   ]
+  },
+  {
+   "expanded_size": 4,
+   "from_targets": [
+    "nu",
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "named unit inside a certified term",
+   "term": "count(k: (n % k))",
+   "values_6_10_12_16_30_36": [
+    4,
+    4,
+    6,
+    5,
+    8,
+    9
+   ]
+  },
+  {
+   "expanded_size": 4,
+   "from_targets": [
+    "lambda:n mod 2 = 0",
+    "lambda:otherwise"
+   ],
+   "reason": "named unit inside a certified term",
+   "term": "least(k: (n % k))",
+   "values_6_10_12_16_30_36": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "expanded_size": 4,
+   "from_targets": [
+    "lambda:n mod 2 = 0"
+   ],
+   "reason": "named unit inside a certified term",
+   "term": "least(k: (n - 2))",
+   "values_6_10_12_16_30_36": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "expanded_size": 4,
+   "from_targets": [
+    "lambda:n mod 8 = 0"
+   ],
+   "reason": "named unit inside a certified term",
+   "term": "count(k: (k - 4))",
+   "values_6_10_12_16_30_36": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  {
+   "expanded_size": 4,
+   "from_targets": [
+    "lambda:n mod 8 = 0"
+   ],
+   "reason": "named unit inside a certified term",
+   "term": "least(k: (k % 4))",
+   "values_6_10_12_16_30_36": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  }
+ ]
+}
