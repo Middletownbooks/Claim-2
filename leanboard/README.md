@@ -66,8 +66,16 @@ yaml (listed in `board.json`), reflecting the 7-week gap between the two commits
 | `ledger.py` | `bridge_ledger.json/.csv` | Report F, refreshable |
 
 | `flt/graph.py` | `flt/flt_graph.json` | exact declaration-level citation graph of the FLT artifact (Report H) |
+| `flt/boundary.py` | `flt/boundary.json` | mathlib consumption; statement vocabulary per theorem; the repo's own definition interfaces (Report I) |
+| `flt/regions.py` | `flt/regions.json`, `flt/regions_followup.json` | **name-blind** community detection on the citation graph, modularity/conductance, interface concentration (Report I) |
+| `flt/compress.py` | `flt/compression.json` | 29 511 theorems → 36 communities → 282 load-bearing interfaces |
 
-Reports A–E, G and H are the markdown files in this directory. **Report H was
+Reports A–E and G–I are the markdown files in this directory. Report I
+(FLT External-Board Phase 1) maps the mathlib ↔ FLT boundary and carries a
+pre-registered blind experiment (`flt/PREREG_blind_regions.md`, written before
+the clustering ran): 3 of 5 predictions passed, 1 partially, and **P3 failed** —
+the proof's regions are real (modularity Q = 0.677) but are joined by broad
+seams rather than narrow interfaces. **Report H was
 added last and supersedes part of Report D and answers G.7/G.9**: a complete
 29 511-theorem FLT proof exists outside mathlib, so "missing from mathlib" and
 "missing from Lean" are not the same predicate, and this map measures the

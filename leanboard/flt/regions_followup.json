@@ -1,0 +1,87 @@
+{
+ "conductance_by_community_ge100": {
+  "223": 0.0849,
+  "788": 0.1049,
+  "2573": 0.1572,
+  "3038": 0.1573,
+  "5434": 0.0441,
+  "7871": 0.1167,
+  "7938": 0.1384,
+  "10222": 0.1465,
+  "11587": 0.1546,
+  "11713": 0.1339,
+  "14359": 0.0999,
+  "14529": 0.1176
+ },
+ "cross_community_edges": 15888,
+ "cross_edge_fraction": 0.1486,
+ "cross_traffic_share_top_10pct_nodes": 0.3749,
+ "cross_traffic_share_top_1pct_nodes": 0.1086,
+ "cross_traffic_share_top_5pct_nodes": 0.2589,
+ "distinct_nodes_carrying_cross_traffic": 11668,
+ "interpretation_Q": "Q above ~0.3 indicates community structure well beyond a degree-preserving null",
+ "median_conductance_ge100": 0.224,
+ "modularity_Q": 0.6772,
+ "top_interface_nodes": [
+  {
+   "cross_edges": 130,
+   "theorem": "LanglandsTunnell_TateLocal_modulus_adicCompletion_eq_nnnorm"
+  },
+  {
+   "cross_edges": 100,
+   "theorem": "ModularCurve_heckeOperatorsCommuteBar"
+  },
+  {
+   "cross_edges": 81,
+   "theorem": "ModularCurve_hasPrincipalDivisors_modularFunctionFieldBar_unconditional"
+  },
+  {
+   "cross_edges": 76,
+   "theorem": "CerednikDrinfeld_QM_FakeEllipticCurve_exists_isPullback_levelIff"
+  },
+  {
+   "cross_edges": 73,
+   "theorem": "WeierstrassCurve_card_torsion_of_isAlgClosed"
+  },
+  {
+   "cross_edges": 64,
+   "theorem": "ModularCurve_transcendental_jqModC"
+  },
+  {
+   "cross_edges": 60,
+   "theorem": "ValuationSubring_isAlgClosed_residueField_algebraicClosure_rat"
+  },
+  {
+   "cross_edges": 60,
+   "theorem": "ValuationSubring_isAlgClosed_residueField"
+  },
+  {
+   "cross_edges": 58,
+   "theorem": "ValuationSubring_exists_liesOverPrime_algebraicClosure_rat"
+  },
+  {
+   "cross_edges": 58,
+   "theorem": "GaloisRep_isDiscreteValuationRing_ratLocalizedAt"
+  },
+  {
+   "cross_edges": 56,
+   "theorem": "AlgebraicCurve_Place_ord_algebraMap"
+  },
+  {
+   "cross_edges": 54,
+   "theorem": "ModularCurve_coeffMap_qExpand"
+  },
+  {
+   "cross_edges": 52,
+   "theorem": "ModularCurve_deg_eq_one_modularFunctionFieldBar"
+  },
+  {
+   "cross_edges": 51,
+   "theorem": "GaloisRep_isFractionRing_ratLocalizedAt"
+  },
+  {
+   "cross_edges": 50,
+   "theorem": "GaloisRep_isLocalization_ratLocalizedAt"
+  }
+ ]
+}
