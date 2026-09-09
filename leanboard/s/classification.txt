@@ -1,0 +1,30 @@
+CLASSIFICATION (criteria declared before application):
+  BOARD  = >=10 communities of >=20 decls AND largest community <40%
+           AND >=1000 declarations AND >=100 exportable statements
+  SUB-BOARD = >=500 decls, fails one or more
+  PIECE-COLLECTION = <500 decls
+
+development                     decls  c>=20 largest   xedge export   class
+GapCVP                           8025     22    0.33   0.142    184   BOARD
+MetricCodes                      5683     35    0.25   0.124    538   BOARD
+ConnesRigidity                   2776     15    0.26   0.252    312   BOARD
+QuantumParallelRepetition        2638      6    0.65   0.066    150   SUB-BOARD
+EhrhartVolumeInequality          2361      3    0.55   0.112    105   SUB-BOARD
+SpherePacking                    2220     19    0.38   0.096    357   BOARD
+NonSoficGroup                    1436     15    0.24   0.119    267   BOARD
+Permanent                        1393     27    0.14   0.190    155   BOARD
+CompactnessAndDegeneracy          941     11    0.17   0.174     69   SUB-BOARD
+MulticolorTriangleRamsey          139      3    0.24   0.153     16   PIECE-COLLECTION
+
+BRIDGE-RICH (mean interface Jaccard to the other nine, rare-stripped):
+development                    ifaceRare vocabRare  as source  as target  class
+MetricCodes                       0.1287    0.1148     0.0511     0.0433  BOARD
+EhrhartVolumeInequality           0.1126    0.0954     0.0066     0.0137  SUB-BOARD
+SpherePacking                     0.1022    0.0880     0.0310     0.0188  BOARD
+Permanent                         0.1017    0.0724     0.0267     0.0162  BOARD
+ConnesRigidity                    0.1013    0.0911     0.0497     0.0290  BOARD
+NonSoficGroup                     0.0979    0.1061     0.0390     0.0469  BOARD
+QuantumParallelRepetition         0.0962    0.1146     0.0357     0.0525  SUB-BOARD
+GapCVP                            0.0909    0.0647     0.0024     0.0033  BOARD
+CompactnessAndDegeneracy          0.0870    0.0757     0.0037     0.0106  SUB-BOARD
+MulticolorTriangleRamsey          0.0285    0.0462     0.0006     0.0123  PIECE-COLLECTION

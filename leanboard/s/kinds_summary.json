@@ -1,0 +1,62 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "mathlib_files": 8513,
+ "names_with_kind": 336823,
+ "decls_json_entries": 241917,
+ "decls_json_covered": 166423,
+ "coverage": 0.6879,
+ "kind_distribution_over_decls_json": [
+  [
+   "theorem",
+   91312
+  ],
+  [
+   "UNKNOWN",
+   75494
+  ],
+  [
+   "lemma",
+   39394
+  ],
+  [
+   "def",
+   21956
+  ],
+  [
+   "instance",
+   7510
+  ],
+  [
+   "abbrev",
+   2678
+  ],
+  [
+   "class",
+   1724
+  ],
+  [
+   "structure",
+   1551
+  ],
+  [
+   "inductive",
+   297
+  ],
+  [
+   "axiom",
+   1
+  ]
+ ],
+ "interface_kinds": [
+  "abbrev",
+  "class",
+  "def",
+  "inductive",
+  "instance",
+  "structure"
+ ],
+ "vocabulary_kinds": [
+  "lemma",
+  "theorem"
+ ]
+}

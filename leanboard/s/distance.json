@@ -1,0 +1,680 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "generic_threshold": 8,
+ "generic_interface_decls": 26,
+ "generic_vocab_decls": 59,
+ "sizes": {
+  "CompactnessAndDegeneracy": {
+   "iface": 88,
+   "vocab": 238,
+   "iface_rare": 64,
+   "vocab_rare": 187
+  },
+  "ConnesRigidity": {
+   "iface": 299,
+   "vocab": 618,
+   "iface_rare": 274,
+   "vocab_rare": 564
+  },
+  "EhrhartVolumeInequality": {
+   "iface": 199,
+   "vocab": 660,
+   "iface_rare": 173,
+   "vocab_rare": 602
+  },
+  "GapCVP": {
+   "iface": 155,
+   "vocab": 319,
+   "iface_rare": 131,
+   "vocab_rare": 268
+  },
+  "MetricCodes": {
+   "iface": 257,
+   "vocab": 808,
+   "iface_rare": 231,
+   "vocab_rare": 749
+  },
+  "MulticolorTriangleRamsey": {
+   "iface": 31,
+   "vocab": 105,
+   "iface_rare": 16,
+   "vocab_rare": 71
+  },
+  "NonSoficGroup": {
+   "iface": 136,
+   "vocab": 410,
+   "iface_rare": 111,
+   "vocab_rare": 354
+  },
+  "Permanent": {
+   "iface": 199,
+   "vocab": 436,
+   "iface_rare": 175,
+   "vocab_rare": 392
+  },
+  "QuantumParallelRepetition": {
+   "iface": 97,
+   "vocab": 375,
+   "iface_rare": 72,
+   "vocab_rare": 318
+  },
+  "SpherePacking": {
+   "iface": 225,
+   "vocab": 871,
+   "iface_rare": 199,
+   "vocab_rare": 815
+  }
+ },
+ "matrices": {
+  "vocab": {
+   "CompactnessAndDegeneracy": {
+    "CompactnessAndDegeneracy": 1.0,
+    "ConnesRigidity": 0.096,
+    "EhrhartVolumeInequality": 0.1197,
+    "GapCVP": 0.1344,
+    "MetricCodes": 0.1432,
+    "MulticolorTriangleRamsey": 0.2163,
+    "NonSoficGroup": 0.1634,
+    "Permanent": 0.1233,
+    "QuantumParallelRepetition": 0.1903,
+    "SpherePacking": 0.0926
+   },
+   "ConnesRigidity": {
+    "CompactnessAndDegeneracy": 0.096,
+    "ConnesRigidity": 1.0,
+    "EhrhartVolumeInequality": 0.1545,
+    "GapCVP": 0.1128,
+    "MetricCodes": 0.1593,
+    "MulticolorTriangleRamsey": 0.0664,
+    "NonSoficGroup": 0.2326,
+    "Permanent": 0.113,
+    "QuantumParallelRepetition": 0.1628,
+    "SpherePacking": 0.1272
+   },
+   "EhrhartVolumeInequality": {
+    "CompactnessAndDegeneracy": 0.1197,
+    "ConnesRigidity": 0.1545,
+    "EhrhartVolumeInequality": 1.0,
+    "GapCVP": 0.0866,
+    "MetricCodes": 0.1651,
+    "MulticolorTriangleRamsey": 0.0699,
+    "NonSoficGroup": 0.1681,
+    "Permanent": 0.0905,
+    "QuantumParallelRepetition": 0.1965,
+    "SpherePacking": 0.2287
+   },
+   "GapCVP": {
+    "CompactnessAndDegeneracy": 0.1344,
+    "ConnesRigidity": 0.1128,
+    "EhrhartVolumeInequality": 0.0866,
+    "GapCVP": 1.0,
+    "MetricCodes": 0.127,
+    "MulticolorTriangleRamsey": 0.1129,
+    "NonSoficGroup": 0.1462,
+    "Permanent": 0.1457,
+    "QuantumParallelRepetition": 0.1664,
+    "SpherePacking": 0.0878
+   },
+   "MetricCodes": {
+    "CompactnessAndDegeneracy": 0.1432,
+    "ConnesRigidity": 0.1593,
+    "EhrhartVolumeInequality": 0.1651,
+    "GapCVP": 0.127,
+    "MetricCodes": 1.0,
+    "MulticolorTriangleRamsey": 0.0754,
+    "NonSoficGroup": 0.1768,
+    "Permanent": 0.1725,
+    "QuantumParallelRepetition": 0.2047,
+    "SpherePacking": 0.1832
+   },
+   "MulticolorTriangleRamsey": {
+    "CompactnessAndDegeneracy": 0.2163,
+    "ConnesRigidity": 0.0664,
+    "EhrhartVolumeInequality": 0.0699,
+    "GapCVP": 0.1129,
+    "MetricCodes": 0.0754,
+    "MulticolorTriangleRamsey": 1.0,
+    "NonSoficGroup": 0.0957,
+    "Permanent": 0.0713,
+    "QuantumParallelRepetition": 0.1374,
+    "SpherePacking": 0.0643
+   },
+   "NonSoficGroup": {
+    "CompactnessAndDegeneracy": 0.1634,
+    "ConnesRigidity": 0.2326,
+    "EhrhartVolumeInequality": 0.1681,
+    "GapCVP": 0.1462,
+    "MetricCodes": 0.1768,
+    "MulticolorTriangleRamsey": 0.0957,
+    "NonSoficGroup": 1.0,
+    "Permanent": 0.1371,
+    "QuantumParallelRepetition": 0.2323,
+    "SpherePacking": 0.1207
+   },
+   "Permanent": {
+    "CompactnessAndDegeneracy": 0.1233,
+    "ConnesRigidity": 0.113,
+    "EhrhartVolumeInequality": 0.0905,
+    "GapCVP": 0.1457,
+    "MetricCodes": 0.1725,
+    "MulticolorTriangleRamsey": 0.0713,
+    "NonSoficGroup": 0.1371,
+    "Permanent": 1.0,
+    "QuantumParallelRepetition": 0.1248,
+    "SpherePacking": 0.0643
+   },
+   "QuantumParallelRepetition": {
+    "CompactnessAndDegeneracy": 0.1903,
+    "ConnesRigidity": 0.1628,
+    "EhrhartVolumeInequality": 0.1965,
+    "GapCVP": 0.1664,
+    "MetricCodes": 0.2047,
+    "MulticolorTriangleRamsey": 0.1374,
+    "NonSoficGroup": 0.2323,
+    "Permanent": 0.1248,
+    "QuantumParallelRepetition": 1.0,
+    "SpherePacking": 0.1645
+   },
+   "SpherePacking": {
+    "CompactnessAndDegeneracy": 0.0926,
+    "ConnesRigidity": 0.1272,
+    "EhrhartVolumeInequality": 0.2287,
+    "GapCVP": 0.0878,
+    "MetricCodes": 0.1832,
+    "MulticolorTriangleRamsey": 0.0643,
+    "NonSoficGroup": 0.1207,
+    "Permanent": 0.0643,
+    "QuantumParallelRepetition": 0.1645,
+    "SpherePacking": 1.0
+   }
+  },
+  "iface": {
+   "CompactnessAndDegeneracy": {
+    "CompactnessAndDegeneracy": 1.0,
+    "ConnesRigidity": 0.1283,
+    "EhrhartVolumeInequality": 0.1811,
+    "GapCVP": 0.1854,
+    "MetricCodes": 0.1695,
+    "MulticolorTriangleRamsey": 0.202,
+    "NonSoficGroup": 0.224,
+    "Permanent": 0.1573,
+    "QuantumParallelRepetition": 0.2252,
+    "SpherePacking": 0.1593
+   },
+   "ConnesRigidity": {
+    "CompactnessAndDegeneracy": 0.1283,
+    "ConnesRigidity": 1.0,
+    "EhrhartVolumeInequality": 0.1885,
+    "GapCVP": 0.1465,
+    "MetricCodes": 0.1656,
+    "MulticolorTriangleRamsey": 0.051,
+    "NonSoficGroup": 0.2219,
+    "Permanent": 0.1857,
+    "QuantumParallelRepetition": 0.1314,
+    "SpherePacking": 0.1644
+   },
+   "EhrhartVolumeInequality": {
+    "CompactnessAndDegeneracy": 0.1811,
+    "ConnesRigidity": 0.1885,
+    "EhrhartVolumeInequality": 1.0,
+    "GapCVP": 0.131,
+    "MetricCodes": 0.216,
+    "MulticolorTriangleRamsey": 0.0849,
+    "NonSoficGroup": 0.1632,
+    "Permanent": 0.1437,
+    "QuantumParallelRepetition": 0.2385,
+    "SpherePacking": 0.2966
+   },
+   "GapCVP": {
+    "CompactnessAndDegeneracy": 0.1854,
+    "ConnesRigidity": 0.1465,
+    "EhrhartVolumeInequality": 0.131,
+    "GapCVP": 1.0,
+    "MetricCodes": 0.2118,
+    "MulticolorTriangleRamsey": 0.1071,
+    "NonSoficGroup": 0.1687,
+    "Permanent": 0.2041,
+    "QuantumParallelRepetition": 0.2057,
+    "SpherePacking": 0.1243
+   },
+   "MetricCodes": {
+    "CompactnessAndDegeneracy": 0.1695,
+    "ConnesRigidity": 0.1656,
+    "EhrhartVolumeInequality": 0.216,
+    "GapCVP": 0.2118,
+    "MetricCodes": 1.0,
+    "MulticolorTriangleRamsey": 0.0746,
+    "NonSoficGroup": 0.1696,
+    "Permanent": 0.2562,
+    "QuantumParallelRepetition": 0.2165,
+    "SpherePacking": 0.2141
+   },
+   "MulticolorTriangleRamsey": {
+    "CompactnessAndDegeneracy": 0.202,
+    "ConnesRigidity": 0.051,
+    "EhrhartVolumeInequality": 0.0849,
+    "GapCVP": 0.1071,
+    "MetricCodes": 0.0746,
+    "MulticolorTriangleRamsey": 1.0,
+    "NonSoficGroup": 0.1208,
+    "Permanent": 0.0849,
+    "QuantumParallelRepetition": 0.1636,
+    "SpherePacking": 0.0711
+   },
+   "NonSoficGroup": {
+    "CompactnessAndDegeneracy": 0.224,
+    "ConnesRigidity": 0.2219,
+    "EhrhartVolumeInequality": 0.1632,
+    "GapCVP": 0.1687,
+    "MetricCodes": 0.1696,
+    "MulticolorTriangleRamsey": 0.1208,
+    "NonSoficGroup": 1.0,
+    "Permanent": 0.1672,
+    "QuantumParallelRepetition": 0.2073,
+    "SpherePacking": 0.1759
+   },
+   "Permanent": {
+    "CompactnessAndDegeneracy": 0.1573,
+    "ConnesRigidity": 0.1857,
+    "EhrhartVolumeInequality": 0.1437,
+    "GapCVP": 0.2041,
+    "MetricCodes": 0.2562,
+    "MulticolorTriangleRamsey": 0.0849,
+    "NonSoficGroup": 0.1672,
+    "Permanent": 1.0,
+    "QuantumParallelRepetition": 0.1654,
+    "SpherePacking": 0.1277
+   },
+   "QuantumParallelRepetition": {
+    "CompactnessAndDegeneracy": 0.2252,
+    "ConnesRigidity": 0.1314,
+    "EhrhartVolumeInequality": 0.2385,
+    "GapCVP": 0.2057,
+    "MetricCodes": 0.2165,
+    "MulticolorTriangleRamsey": 0.1636,
+    "NonSoficGroup": 0.2073,
+    "Permanent": 0.1654,
+    "QuantumParallelRepetition": 1.0,
+    "SpherePacking": 0.1752
+   },
+   "SpherePacking": {
+    "CompactnessAndDegeneracy": 0.1593,
+    "ConnesRigidity": 0.1644,
+    "EhrhartVolumeInequality": 0.2966,
+    "GapCVP": 0.1243,
+    "MetricCodes": 0.2141,
+    "MulticolorTriangleRamsey": 0.0711,
+    "NonSoficGroup": 0.1759,
+    "Permanent": 0.1277,
+    "QuantumParallelRepetition": 0.1752,
+    "SpherePacking": 1.0
+   }
+  },
+  "vocab_rare": {
+   "CompactnessAndDegeneracy": {
+    "CompactnessAndDegeneracy": 1.0,
+    "ConnesRigidity": 0.0387,
+    "EhrhartVolumeInequality": 0.0619,
+    "GapCVP": 0.0532,
+    "MetricCodes": 0.0935,
+    "MulticolorTriangleRamsey": 0.1217,
+    "NonSoficGroup": 0.0863,
+    "Permanent": 0.0702,
+    "QuantumParallelRepetition": 0.1075,
+    "SpherePacking": 0.0481
+   },
+   "ConnesRigidity": {
+    "CompactnessAndDegeneracy": 0.0387,
+    "ConnesRigidity": 1.0,
+    "EhrhartVolumeInequality": 0.1126,
+    "GapCVP": 0.0612,
+    "MetricCodes": 0.1213,
+    "MulticolorTriangleRamsey": 0.0225,
+    "NonSoficGroup": 0.1845,
+    "Permanent": 0.0766,
+    "QuantumParallelRepetition": 0.1094,
+    "SpherePacking": 0.0927
+   },
+   "EhrhartVolumeInequality": {
+    "CompactnessAndDegeneracy": 0.0619,
+    "ConnesRigidity": 0.1126,
+    "EhrhartVolumeInequality": 1.0,
+    "GapCVP": 0.0333,
+    "MetricCodes": 0.1249,
+    "MulticolorTriangleRamsey": 0.0259,
+    "NonSoficGroup": 0.1155,
+    "Permanent": 0.0507,
+    "QuantumParallelRepetition": 0.1414,
+    "SpherePacking": 0.1928
+   },
+   "GapCVP": {
+    "CompactnessAndDegeneracy": 0.0532,
+    "ConnesRigidity": 0.0612,
+    "EhrhartVolumeInequality": 0.0333,
+    "GapCVP": 1.0,
+    "MetricCodes": 0.0808,
+    "MulticolorTriangleRamsey": 0.0431,
+    "NonSoficGroup": 0.078,
+    "Permanent": 0.0927,
+    "QuantumParallelRepetition": 0.0933,
+    "SpherePacking": 0.0464
+   },
+   "MetricCodes": {
+    "CompactnessAndDegeneracy": 0.0935,
+    "ConnesRigidity": 0.1213,
+    "EhrhartVolumeInequality": 0.1249,
+    "GapCVP": 0.0808,
+    "MetricCodes": 1.0,
+    "MulticolorTriangleRamsey": 0.038,
+    "NonSoficGroup": 0.1301,
+    "Permanent": 0.1387,
+    "QuantumParallelRepetition": 0.156,
+    "SpherePacking": 0.15
+   },
+   "MulticolorTriangleRamsey": {
+    "CompactnessAndDegeneracy": 0.1217,
+    "ConnesRigidity": 0.0225,
+    "EhrhartVolumeInequality": 0.0259,
+    "GapCVP": 0.0431,
+    "MetricCodes": 0.038,
+    "MulticolorTriangleRamsey": 1.0,
+    "NonSoficGroup": 0.0341,
+    "Permanent": 0.0289,
+    "QuantumParallelRepetition": 0.0716,
+    "SpherePacking": 0.0302
+   },
+   "NonSoficGroup": {
+    "CompactnessAndDegeneracy": 0.0863,
+    "ConnesRigidity": 0.1845,
+    "EhrhartVolumeInequality": 0.1155,
+    "GapCVP": 0.078,
+    "MetricCodes": 0.1301,
+    "MulticolorTriangleRamsey": 0.0341,
+    "NonSoficGroup": 1.0,
+    "Permanent": 0.0891,
+    "QuantumParallelRepetition": 0.1586,
+    "SpherePacking": 0.0784
+   },
+   "Permanent": {
+    "CompactnessAndDegeneracy": 0.0702,
+    "ConnesRigidity": 0.0766,
+    "EhrhartVolumeInequality": 0.0507,
+    "GapCVP": 0.0927,
+    "MetricCodes": 0.1387,
+    "MulticolorTriangleRamsey": 0.0289,
+    "NonSoficGroup": 0.0891,
+    "Permanent": 1.0,
+    "QuantumParallelRepetition": 0.0725,
+    "SpherePacking": 0.0325
+   },
+   "QuantumParallelRepetition": {
+    "CompactnessAndDegeneracy": 0.1075,
+    "ConnesRigidity": 0.1094,
+    "EhrhartVolumeInequality": 0.1414,
+    "GapCVP": 0.0933,
+    "MetricCodes": 0.156,
+    "MulticolorTriangleRamsey": 0.0716,
+    "NonSoficGroup": 0.1586,
+    "Permanent": 0.0725,
+    "QuantumParallelRepetition": 1.0,
+    "SpherePacking": 0.1207
+   },
+   "SpherePacking": {
+    "CompactnessAndDegeneracy": 0.0481,
+    "ConnesRigidity": 0.0927,
+    "EhrhartVolumeInequality": 0.1928,
+    "GapCVP": 0.0464,
+    "MetricCodes": 0.15,
+    "MulticolorTriangleRamsey": 0.0302,
+    "NonSoficGroup": 0.0784,
+    "Permanent": 0.0325,
+    "QuantumParallelRepetition": 0.1207,
+    "SpherePacking": 1.0
+   }
+  },
+  "iface_rare": {
+   "CompactnessAndDegeneracy": {
+    "CompactnessAndDegeneracy": 1.0,
+    "ConnesRigidity": 0.0662,
+    "EhrhartVolumeInequality": 0.0922,
+    "GapCVP": 0.0894,
+    "MetricCodes": 0.0967,
+    "MulticolorTriangleRamsey": 0.0811,
+    "NonSoficGroup": 0.1146,
+    "Permanent": 0.0766,
+    "QuantumParallelRepetition": 0.088,
+    "SpherePacking": 0.0779
+   },
+   "ConnesRigidity": {
+    "CompactnessAndDegeneracy": 0.0662,
+    "ConnesRigidity": 1.0,
+    "EhrhartVolumeInequality": 0.1374,
+    "GapCVP": 0.0946,
+    "MetricCodes": 0.1197,
+    "MulticolorTriangleRamsey": 0.0069,
+    "NonSoficGroup": 0.1667,
+    "Permanent": 0.1367,
+    "QuantumParallelRepetition": 0.0679,
+    "SpherePacking": 0.1156
+   },
+   "EhrhartVolumeInequality": {
+    "CompactnessAndDegeneracy": 0.0922,
+    "ConnesRigidity": 0.1374,
+    "EhrhartVolumeInequality": 1.0,
+    "GapCVP": 0.0592,
+    "MetricCodes": 0.1576,
+    "MulticolorTriangleRamsey": 0.0161,
+    "NonSoficGroup": 0.084,
+    "Permanent": 0.0807,
+    "QuantumParallelRepetition": 0.1502,
+    "SpherePacking": 0.2359
+   },
+   "GapCVP": {
+    "CompactnessAndDegeneracy": 0.0894,
+    "ConnesRigidity": 0.0946,
+    "EhrhartVolumeInequality": 0.0592,
+    "GapCVP": 1.0,
+    "MetricCodes": 0.1529,
+    "MulticolorTriangleRamsey": 0.028,
+    "NonSoficGroup": 0.0852,
+    "Permanent": 0.1418,
+    "QuantumParallelRepetition": 0.1093,
+    "SpherePacking": 0.0577
+   },
+   "MetricCodes": {
+    "CompactnessAndDegeneracy": 0.0967,
+    "ConnesRigidity": 0.1197,
+    "EhrhartVolumeInequality": 0.1576,
+    "GapCVP": 0.1529,
+    "MetricCodes": 1.0,
+    "MulticolorTriangleRamsey": 0.0207,
+    "NonSoficGroup": 0.1032,
+    "Permanent": 0.2047,
+    "QuantumParallelRepetition": 0.1434,
+    "SpherePacking": 0.159
+   },
+   "MulticolorTriangleRamsey": {
+    "CompactnessAndDegeneracy": 0.0811,
+    "ConnesRigidity": 0.0069,
+    "EhrhartVolumeInequality": 0.0161,
+    "GapCVP": 0.028,
+    "MetricCodes": 0.0207,
+    "MulticolorTriangleRamsey": 1.0,
+    "NonSoficGroup": 0.0325,
+    "Permanent": 0.0269,
+    "QuantumParallelRepetition": 0.0353,
+    "SpherePacking": 0.0094
+   },
+   "NonSoficGroup": {
+    "CompactnessAndDegeneracy": 0.1146,
+    "ConnesRigidity": 0.1667,
+    "EhrhartVolumeInequality": 0.084,
+    "GapCVP": 0.0852,
+    "MetricCodes": 0.1032,
+    "MulticolorTriangleRamsey": 0.0325,
+    "NonSoficGroup": 1.0,
+    "Permanent": 0.0958,
+    "QuantumParallelRepetition": 0.0958,
+    "SpherePacking": 0.1032
+   },
+   "Permanent": {
+    "CompactnessAndDegeneracy": 0.0766,
+    "ConnesRigidity": 0.1367,
+    "EhrhartVolumeInequality": 0.0807,
+    "GapCVP": 0.1418,
+    "MetricCodes": 0.2047,
+    "MulticolorTriangleRamsey": 0.0269,
+    "NonSoficGroup": 0.0958,
+    "Permanent": 1.0,
+    "QuantumParallelRepetition": 0.0833,
+    "SpherePacking": 0.0686
+   },
+   "QuantumParallelRepetition": {
+    "CompactnessAndDegeneracy": 0.088,
+    "ConnesRigidity": 0.0679,
+    "EhrhartVolumeInequality": 0.1502,
+    "GapCVP": 0.1093,
+    "MetricCodes": 0.1434,
+    "MulticolorTriangleRamsey": 0.0353,
+    "NonSoficGroup": 0.0958,
+    "Permanent": 0.0833,
+    "QuantumParallelRepetition": 1.0,
+    "SpherePacking": 0.0927
+   },
+   "SpherePacking": {
+    "CompactnessAndDegeneracy": 0.0779,
+    "ConnesRigidity": 0.1156,
+    "EhrhartVolumeInequality": 0.2359,
+    "GapCVP": 0.0577,
+    "MetricCodes": 0.159,
+    "MulticolorTriangleRamsey": 0.0094,
+    "NonSoficGroup": 0.1032,
+    "Permanent": 0.0686,
+    "QuantumParallelRepetition": 0.0927,
+    "SpherePacking": 1.0
+   }
+  },
+  "arch": {
+   "CompactnessAndDegeneracy": {
+    "CompactnessAndDegeneracy": 1.0,
+    "ConnesRigidity": 0.9033,
+    "EhrhartVolumeInequality": 0.9765,
+    "GapCVP": 0.8715,
+    "MetricCodes": 0.9533,
+    "MulticolorTriangleRamsey": 0.9829,
+    "NonSoficGroup": 0.9898,
+    "Permanent": 0.9486,
+    "QuantumParallelRepetition": 0.9389,
+    "SpherePacking": 0.9545
+   },
+   "ConnesRigidity": {
+    "CompactnessAndDegeneracy": 0.9033,
+    "ConnesRigidity": 1.0,
+    "EhrhartVolumeInequality": 0.915,
+    "GapCVP": 0.8452,
+    "MetricCodes": 0.9516,
+    "MulticolorTriangleRamsey": 0.8425,
+    "NonSoficGroup": 0.9314,
+    "Permanent": 0.9771,
+    "QuantumParallelRepetition": 0.9688,
+    "SpherePacking": 0.8143
+   },
+   "EhrhartVolumeInequality": {
+    "CompactnessAndDegeneracy": 0.9765,
+    "ConnesRigidity": 0.915,
+    "EhrhartVolumeInequality": 1.0,
+    "GapCVP": 0.8603,
+    "MetricCodes": 0.9626,
+    "MulticolorTriangleRamsey": 0.9453,
+    "NonSoficGroup": 0.9877,
+    "Permanent": 0.9463,
+    "QuantumParallelRepetition": 0.957,
+    "SpherePacking": 0.965
+   },
+   "GapCVP": {
+    "CompactnessAndDegeneracy": 0.8715,
+    "ConnesRigidity": 0.8452,
+    "EhrhartVolumeInequality": 0.8603,
+    "GapCVP": 1.0,
+    "MetricCodes": 0.8998,
+    "MulticolorTriangleRamsey": 0.8416,
+    "NonSoficGroup": 0.8765,
+    "Permanent": 0.8946,
+    "QuantumParallelRepetition": 0.8579,
+    "SpherePacking": 0.8304
+   },
+   "MetricCodes": {
+    "CompactnessAndDegeneracy": 0.9533,
+    "ConnesRigidity": 0.9516,
+    "EhrhartVolumeInequality": 0.9626,
+    "GapCVP": 0.8998,
+    "MetricCodes": 1.0,
+    "MulticolorTriangleRamsey": 0.9165,
+    "NonSoficGroup": 0.9687,
+    "Permanent": 0.9833,
+    "QuantumParallelRepetition": 0.9827,
+    "SpherePacking": 0.9197
+   },
+   "MulticolorTriangleRamsey": {
+    "CompactnessAndDegeneracy": 0.9829,
+    "ConnesRigidity": 0.8425,
+    "EhrhartVolumeInequality": 0.9453,
+    "GapCVP": 0.8416,
+    "MetricCodes": 0.9165,
+    "MulticolorTriangleRamsey": 1.0,
+    "NonSoficGroup": 0.9617,
+    "Permanent": 0.9059,
+    "QuantumParallelRepetition": 0.8925,
+    "SpherePacking": 0.9416
+   },
+   "NonSoficGroup": {
+    "CompactnessAndDegeneracy": 0.9898,
+    "ConnesRigidity": 0.9314,
+    "EhrhartVolumeInequality": 0.9877,
+    "GapCVP": 0.8765,
+    "MetricCodes": 0.9687,
+    "MulticolorTriangleRamsey": 0.9617,
+    "NonSoficGroup": 1.0,
+    "Permanent": 0.9685,
+    "QuantumParallelRepetition": 0.9668,
+    "SpherePacking": 0.9507
+   },
+   "Permanent": {
+    "CompactnessAndDegeneracy": 0.9486,
+    "ConnesRigidity": 0.9771,
+    "EhrhartVolumeInequality": 0.9463,
+    "GapCVP": 0.8946,
+    "MetricCodes": 0.9833,
+    "MulticolorTriangleRamsey": 0.9059,
+    "NonSoficGroup": 0.9685,
+    "Permanent": 1.0,
+    "QuantumParallelRepetition": 0.9834,
+    "SpherePacking": 0.8708
+   },
+   "QuantumParallelRepetition": {
+    "CompactnessAndDegeneracy": 0.9389,
+    "ConnesRigidity": 0.9688,
+    "EhrhartVolumeInequality": 0.957,
+    "GapCVP": 0.8579,
+    "MetricCodes": 0.9827,
+    "MulticolorTriangleRamsey": 0.8925,
+    "NonSoficGroup": 0.9668,
+    "Permanent": 0.9834,
+    "QuantumParallelRepetition": 1.0,
+    "SpherePacking": 0.8883
+   },
+   "SpherePacking": {
+    "CompactnessAndDegeneracy": 0.9545,
+    "ConnesRigidity": 0.8143,
+    "EhrhartVolumeInequality": 0.965,
+    "GapCVP": 0.8304,
+    "MetricCodes": 0.9197,
+    "MulticolorTriangleRamsey": 0.9416,
+    "NonSoficGroup": 0.9507,
+    "Permanent": 0.8708,
+    "QuantumParallelRepetition": 0.8883,
+    "SpherePacking": 1.0
+   }
+  }
+ }
+}

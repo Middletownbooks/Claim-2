@@ -1,0 +1,63 @@
+{
+ "label": "EXPERIMENTAL_RESULT",
+ "prereg": "s/pinsker_prereg.md",
+ "targets": [
+  "CompactnessAndDegeneracy",
+  "MetricCodes"
+ ],
+ "pinsker_cluster_size": 1,
+ "pinsker_names": [
+  "sum_over_positive_reference_support"
+ ],
+ "negative_control_size": 1,
+ "arms": {
+  "BASELINE": {
+   "CompactnessAndDegeneracy": {
+    "queries": 42,
+    "matched_ge_0.4": 0,
+    "mean_best": 0.1249,
+    "matched_to_pinsker": 0,
+    "examples": []
+   },
+   "MetricCodes": {
+    "queries": 390,
+    "matched_ge_0.4": 28,
+    "mean_best": 0.1617,
+    "matched_to_pinsker": 0,
+    "examples": []
+   }
+  },
+  "INTERVENTION": {
+   "CompactnessAndDegeneracy": {
+    "queries": 42,
+    "matched_ge_0.4": 0,
+    "mean_best": 0.1249,
+    "matched_to_pinsker": 0,
+    "examples": []
+   },
+   "MetricCodes": {
+    "queries": 390,
+    "matched_ge_0.4": 28,
+    "mean_best": 0.1621,
+    "matched_to_pinsker": 0,
+    "examples": []
+   }
+  },
+  "NEG_CONTROL": {
+   "CompactnessAndDegeneracy": {
+    "queries": 42,
+    "matched_ge_0.4": 0,
+    "mean_best": 0.1249,
+    "matched_to_pinsker": 0,
+    "examples": []
+   },
+   "MetricCodes": {
+    "queries": 390,
+    "matched_ge_0.4": 28,
+    "mean_best": 0.1617,
+    "matched_to_pinsker": 0,
+    "examples": []
+   }
+  }
+ }
+}

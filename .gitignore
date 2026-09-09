@@ -9,3 +9,6 @@ leanboard/q/per_module_vocab.json
 leanboard/q/stmts_*.json
 leanboard/q/*.log
 leanboard/r/*.log
+leanboard/s/*.log
+leanboard/s/kinds.json
+leanboard/s/vocab_sets.json

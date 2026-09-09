@@ -1,0 +1,68 @@
+{
+ "counts": {
+  "CompactnessAndDegeneracy": {
+   "klFun/klDiv": 0,
+   "negMulLog/binEntropy": 88,
+   "totalVariation": 0,
+   "entropy-like sum": 0
+  },
+  "ConnesRigidity": {
+   "klFun/klDiv": 0,
+   "negMulLog/binEntropy": 0,
+   "totalVariation": 0,
+   "entropy-like sum": 0
+  },
+  "EhrhartVolumeInequality": {
+   "klFun/klDiv": 0,
+   "negMulLog/binEntropy": 0,
+   "totalVariation": 0,
+   "entropy-like sum": 0
+  },
+  "GapCVP": {
+   "klFun/klDiv": 0,
+   "negMulLog/binEntropy": 0,
+   "totalVariation": 0,
+   "entropy-like sum": 0
+  },
+  "MetricCodes": {
+   "klFun/klDiv": 17,
+   "negMulLog/binEntropy": 48,
+   "totalVariation": 0,
+   "entropy-like sum": 5
+  },
+  "MulticolorTriangleRamsey": {
+   "klFun/klDiv": 0,
+   "negMulLog/binEntropy": 0,
+   "totalVariation": 0,
+   "entropy-like sum": 0
+  },
+  "NonSoficGroup": {
+   "klFun/klDiv": 0,
+   "negMulLog/binEntropy": 0,
+   "totalVariation": 5,
+   "entropy-like sum": 0
+  },
+  "Permanent": {
+   "klFun/klDiv": 0,
+   "negMulLog/binEntropy": 0,
+   "totalVariation": 0,
+   "entropy-like sum": 0
+  },
+  "QuantumParallelRepetition": {
+   "klFun/klDiv": 46,
+   "negMulLog/binEntropy": 45,
+   "totalVariation": 20,
+   "entropy-like sum": 9
+  },
+  "SpherePacking": {
+   "klFun/klDiv": 0,
+   "negMulLog/binEntropy": 0,
+   "totalVariation": 0,
+   "entropy-like sum": 2
+  }
+ },
+ "targets": [
+  "CompactnessAndDegeneracy",
+  "MetricCodes"
+ ]
+}

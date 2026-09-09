@@ -1,0 +1,12 @@
+{
+ "GapCVP": "BOARD",
+ "MetricCodes": "BOARD",
+ "ConnesRigidity": "BOARD",
+ "QuantumParallelRepetition": "SUB-BOARD",
+ "EhrhartVolumeInequality": "SUB-BOARD",
+ "SpherePacking": "BOARD",
+ "NonSoficGroup": "BOARD",
+ "Permanent": "BOARD",
+ "CompactnessAndDegeneracy": "SUB-BOARD",
+ "MulticolorTriangleRamsey": "PIECE-COLLECTION"
+}
