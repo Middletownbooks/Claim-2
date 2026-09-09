@@ -1,0 +1,5055 @@
+{
+ "label": "EXPERIMENTAL_RESULT",
+ "seed": 20260909,
+ "gate": {
+  "L1": {
+   "alphabet": 64,
+   "bigram_cos_mean": 0.7975,
+   "bigram_cos_sd": 0.0966,
+   "r_with_vocab": 0.4372,
+   "r_with_iface": 0.6506
+  },
+  "L2": {
+   "alphabet": 12,
+   "bigram_cos_mean": 0.8963,
+   "bigram_cos_sd": 0.0725,
+   "r_with_vocab": 0.4714,
+   "r_with_iface": 0.6029
+  },
+  "L3": {
+   "alphabet": 6,
+   "bigram_cos_mean": 0.9184,
+   "bigram_cos_sd": 0.0526,
+   "r_with_vocab": 0.4532,
+   "r_with_iface": 0.517
+  },
+  "ENG": {
+   "alphabet": 4,
+   "bigram_cos_mean": 0.9638,
+   "bigram_cos_sd": 0.0372,
+   "r_with_vocab": 0.3445,
+   "r_with_iface": 0.4867
+  },
+  "MATH": {
+   "alphabet": 7,
+   "bigram_cos_mean": 0.9364,
+   "bigram_cos_sd": 0.0663,
+   "r_with_vocab": 0.4228,
+   "r_with_iface": 0.5165
+  }
+ },
+ "wrong_domain": {
+  "CompactnessAndDegeneracy": "SpherePacking",
+  "ConnesRigidity": "CompactnessAndDegeneracy",
+  "EhrhartVolumeInequality": "GapCVP",
+  "GapCVP": "EhrhartVolumeInequality",
+  "MetricCodes": "GapCVP",
+  "MulticolorTriangleRamsey": "SpherePacking",
+  "NonSoficGroup": "SpherePacking",
+  "Permanent": "SpherePacking",
+  "QuantumParallelRepetition": "Permanent",
+  "SpherePacking": "Permanent"
+ },
+ "rows": [
+  {
+   "level": "L1",
+   "source": "ConnesRigidity",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 32.5,
+   "RANDOM": 10.2894,
+   "SOURCE": 8.576,
+   "WRONG": 9.7161
+  },
+  {
+   "level": "L1",
+   "source": "EhrhartVolumeInequality",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 32.5,
+   "RANDOM": 10.2846,
+   "SOURCE": 8.6813,
+   "WRONG": 9.7161
+  },
+  {
+   "level": "L1",
+   "source": "GapCVP",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 32.5,
+   "RANDOM": 10.2173,
+   "SOURCE": 8.0472,
+   "WRONG": 9.7161
+  },
+  {
+   "level": "L1",
+   "source": "MetricCodes",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 32.5,
+   "RANDOM": 9.8018,
+   "SOURCE": 7.9232,
+   "WRONG": 9.7161
+  },
+  {
+   "level": "L1",
+   "source": "MulticolorTriangleRamsey",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 32.5,
+   "RANDOM": 10.0648,
+   "SOURCE": 9.3726,
+   "WRONG": 9.7161
+  },
+  {
+   "level": "L1",
+   "source": "NonSoficGroup",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 32.5,
+   "RANDOM": 9.4774,
+   "SOURCE": 7.9738,
+   "WRONG": 9.7161
+  },
+  {
+   "level": "L1",
+   "source": "Permanent",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 32.5,
+   "RANDOM": 9.9033,
+   "SOURCE": 8.1823,
+   "WRONG": 9.7161
+  },
+  {
+   "level": "L1",
+   "source": "QuantumParallelRepetition",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 32.5,
+   "RANDOM": 10.5545,
+   "SOURCE": 8.3059,
+   "WRONG": 9.7161
+  },
+  {
+   "level": "L1",
+   "source": "SpherePacking",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 32.5,
+   "RANDOM": 11.311,
+   "SOURCE": 9.7161,
+   "WRONG": 9.7161
+  },
+  {
+   "level": "L1",
+   "source": "CompactnessAndDegeneracy",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 32.5,
+   "RANDOM": 8.8913,
+   "SOURCE": 7.6307,
+   "WRONG": 7.6307
+  },
+  {
+   "level": "L1",
+   "source": "EhrhartVolumeInequality",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 32.5,
+   "RANDOM": 9.0814,
+   "SOURCE": 7.6739,
+   "WRONG": 7.6307
+  },
+  {
+   "level": "L1",
+   "source": "GapCVP",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 32.5,
+   "RANDOM": 9.4068,
+   "SOURCE": 7.6147,
+   "WRONG": 7.6307
+  },
+  {
+   "level": "L1",
+   "source": "MetricCodes",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 32.5,
+   "RANDOM": 10.4121,
+   "SOURCE": 8.1703,
+   "WRONG": 7.6307
+  },
+  {
+   "level": "L1",
+   "source": "MulticolorTriangleRamsey",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 32.5,
+   "RANDOM": 11.0172,
+   "SOURCE": 10.1262,
+   "WRONG": 7.6307
+  },
+  {
+   "level": "L1",
+   "source": "NonSoficGroup",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 32.5,
+   "RANDOM": 8.4025,
+   "SOURCE": 6.9375,
+   "WRONG": 7.6307
+  },
+  {
+   "level": "L1",
+   "source": "Permanent",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 32.5,
+   "RANDOM": 8.8538,
+   "SOURCE": 7.4937,
+   "WRONG": 7.6307
+  },
+  {
+   "level": "L1",
+   "source": "QuantumParallelRepetition",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 32.5,
+   "RANDOM": 9.9649,
+   "SOURCE": 8.1834,
+   "WRONG": 7.6307
+  },
+  {
+   "level": "L1",
+   "source": "SpherePacking",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 32.5,
+   "RANDOM": 11.352,
+   "SOURCE": 9.5048,
+   "WRONG": 7.6307
+  },
+  {
+   "level": "L1",
+   "source": "CompactnessAndDegeneracy",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 32.5,
+   "RANDOM": 8.1774,
+   "SOURCE": 7.2668,
+   "WRONG": 8.3827
+  },
+  {
+   "level": "L1",
+   "source": "ConnesRigidity",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 32.5,
+   "RANDOM": 8.6111,
+   "SOURCE": 7.0992,
+   "WRONG": 8.3827
+  },
+  {
+   "level": "L1",
+   "source": "GapCVP",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 32.5,
+   "RANDOM": 9.6376,
+   "SOURCE": 8.3827,
+   "WRONG": 8.3827
+  },
+  {
+   "level": "L1",
+   "source": "MetricCodes",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 32.5,
+   "RANDOM": 7.8623,
+   "SOURCE": 6.1713,
+   "WRONG": 8.3827
+  },
+  {
+   "level": "L1",
+   "source": "MulticolorTriangleRamsey",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 32.5,
+   "RANDOM": 9.182,
+   "SOURCE": 9.0305,
+   "WRONG": 8.3827
+  },
+  {
+   "level": "L1",
+   "source": "NonSoficGroup",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 32.5,
+   "RANDOM": 7.8814,
+   "SOURCE": 6.7823,
+   "WRONG": 8.3827
+  },
+  {
+   "level": "L1",
+   "source": "Permanent",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 32.5,
+   "RANDOM": 8.9282,
+   "SOURCE": 8.0998,
+   "WRONG": 8.3827
+  },
+  {
+   "level": "L1",
+   "source": "QuantumParallelRepetition",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 32.5,
+   "RANDOM": 7.9414,
+   "SOURCE": 6.4957,
+   "WRONG": 8.3827
+  },
+  {
+   "level": "L1",
+   "source": "SpherePacking",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 32.5,
+   "RANDOM": 7.9527,
+   "SOURCE": 6.4469,
+   "WRONG": 8.3827
+  },
+  {
+   "level": "L1",
+   "source": "CompactnessAndDegeneracy",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 32.5,
+   "RANDOM": 9.3965,
+   "SOURCE": 8.6888,
+   "WRONG": 9.3437
+  },
+  {
+   "level": "L1",
+   "source": "ConnesRigidity",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 32.5,
+   "RANDOM": 10.6305,
+   "SOURCE": 9.5563,
+   "WRONG": 9.3437
+  },
+  {
+   "level": "L1",
+   "source": "EhrhartVolumeInequality",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 32.5,
+   "RANDOM": 10.6158,
+   "SOURCE": 9.3437,
+   "WRONG": 9.3437
+  },
+  {
+   "level": "L1",
+   "source": "MetricCodes",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 32.5,
+   "RANDOM": 9.4032,
+   "SOURCE": 8.2036,
+   "WRONG": 9.3437
+  },
+  {
+   "level": "L1",
+   "source": "MulticolorTriangleRamsey",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 32.5,
+   "RANDOM": 10.9691,
+   "SOURCE": 11.01,
+   "WRONG": 9.3437
+  },
+  {
+   "level": "L1",
+   "source": "NonSoficGroup",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 32.5,
+   "RANDOM": 10.1886,
+   "SOURCE": 9.0946,
+   "WRONG": 9.3437
+  },
+  {
+   "level": "L1",
+   "source": "Permanent",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 32.5,
+   "RANDOM": 8.7764,
+   "SOURCE": 7.704,
+   "WRONG": 9.3437
+  },
+  {
+   "level": "L1",
+   "source": "QuantumParallelRepetition",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 32.5,
+   "RANDOM": 10.0476,
+   "SOURCE": 8.6912,
+   "WRONG": 9.3437
+  },
+  {
+   "level": "L1",
+   "source": "SpherePacking",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 32.5,
+   "RANDOM": 12.712,
+   "SOURCE": 11.1373,
+   "WRONG": 9.3437
+  },
+  {
+   "level": "L1",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 32.5,
+   "RANDOM": 8.7476,
+   "SOURCE": 7.3525,
+   "WRONG": 8.0375
+  },
+  {
+   "level": "L1",
+   "source": "ConnesRigidity",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 32.5,
+   "RANDOM": 10.2055,
+   "SOURCE": 8.5379,
+   "WRONG": 8.0375
+  },
+  {
+   "level": "L1",
+   "source": "EhrhartVolumeInequality",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 32.5,
+   "RANDOM": 9.0849,
+   "SOURCE": 7.4372,
+   "WRONG": 8.0375
+  },
+  {
+   "level": "L1",
+   "source": "GapCVP",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 32.5,
+   "RANDOM": 9.8643,
+   "SOURCE": 8.0375,
+   "WRONG": 8.0375
+  },
+  {
+   "level": "L1",
+   "source": "MulticolorTriangleRamsey",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 32.5,
+   "RANDOM": 9.4591,
+   "SOURCE": 9.0965,
+   "WRONG": 8.0375
+  },
+  {
+   "level": "L1",
+   "source": "NonSoficGroup",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 32.5,
+   "RANDOM": 9.0579,
+   "SOURCE": 7.4622,
+   "WRONG": 8.0375
+  },
+  {
+   "level": "L1",
+   "source": "Permanent",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 32.5,
+   "RANDOM": 9.1103,
+   "SOURCE": 7.8515,
+   "WRONG": 8.0375
+  },
+  {
+   "level": "L1",
+   "source": "QuantumParallelRepetition",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 32.5,
+   "RANDOM": 8.7443,
+   "SOURCE": 6.9225,
+   "WRONG": 8.0375
+  },
+  {
+   "level": "L1",
+   "source": "SpherePacking",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 32.5,
+   "RANDOM": 10.0404,
+   "SOURCE": 8.2418,
+   "WRONG": 8.0375
+  },
+  {
+   "level": "L1",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 32.5,
+   "RANDOM": 9.8751,
+   "SOURCE": 7.5589,
+   "WRONG": 9.0886
+  },
+  {
+   "level": "L1",
+   "source": "ConnesRigidity",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 32.5,
+   "RANDOM": 12.8654,
+   "SOURCE": 10.4314,
+   "WRONG": 9.0886
+  },
+  {
+   "level": "L1",
+   "source": "EhrhartVolumeInequality",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 32.5,
+   "RANDOM": 11.8158,
+   "SOURCE": 9.4934,
+   "WRONG": 9.0886
+  },
+  {
+   "level": "L1",
+   "source": "GapCVP",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 32.5,
+   "RANDOM": 12.3127,
+   "SOURCE": 9.0204,
+   "WRONG": 9.0886
+  },
+  {
+   "level": "L1",
+   "source": "MetricCodes",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 32.5,
+   "RANDOM": 10.4535,
+   "SOURCE": 8.3189,
+   "WRONG": 9.0886
+  },
+  {
+   "level": "L1",
+   "source": "NonSoficGroup",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 32.5,
+   "RANDOM": 10.6236,
+   "SOURCE": 8.6475,
+   "WRONG": 9.0886
+  },
+  {
+   "level": "L1",
+   "source": "Permanent",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 32.5,
+   "RANDOM": 11.543,
+   "SOURCE": 9.1789,
+   "WRONG": 9.0886
+  },
+  {
+   "level": "L1",
+   "source": "QuantumParallelRepetition",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 32.5,
+   "RANDOM": 12.0974,
+   "SOURCE": 8.6227,
+   "WRONG": 9.0886
+  },
+  {
+   "level": "L1",
+   "source": "SpherePacking",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 32.5,
+   "RANDOM": 11.775,
+   "SOURCE": 9.0886,
+   "WRONG": 9.0886
+  },
+  {
+   "level": "L1",
+   "source": "CompactnessAndDegeneracy",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 32.5,
+   "RANDOM": 8.2143,
+   "SOURCE": 7.0212,
+   "WRONG": 8.4619
+  },
+  {
+   "level": "L1",
+   "source": "ConnesRigidity",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 32.5,
+   "RANDOM": 8.6264,
+   "SOURCE": 7.2424,
+   "WRONG": 8.4619
+  },
+  {
+   "level": "L1",
+   "source": "EhrhartVolumeInequality",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 32.5,
+   "RANDOM": 8.5065,
+   "SOURCE": 7.2315,
+   "WRONG": 8.4619
+  },
+  {
+   "level": "L1",
+   "source": "GapCVP",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 32.5,
+   "RANDOM": 9.6591,
+   "SOURCE": 7.6954,
+   "WRONG": 8.4619
+  },
+  {
+   "level": "L1",
+   "source": "MetricCodes",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 32.5,
+   "RANDOM": 9.0726,
+   "SOURCE": 7.4059,
+   "WRONG": 8.4619
+  },
+  {
+   "level": "L1",
+   "source": "MulticolorTriangleRamsey",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 32.5,
+   "RANDOM": 9.1529,
+   "SOURCE": 8.7728,
+   "WRONG": 8.4619
+  },
+  {
+   "level": "L1",
+   "source": "Permanent",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 32.5,
+   "RANDOM": 8.9482,
+   "SOURCE": 7.5341,
+   "WRONG": 8.4619
+  },
+  {
+   "level": "L1",
+   "source": "QuantumParallelRepetition",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 32.5,
+   "RANDOM": 9.0135,
+   "SOURCE": 7.4464,
+   "WRONG": 8.4619
+  },
+  {
+   "level": "L1",
+   "source": "SpherePacking",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 32.5,
+   "RANDOM": 9.8623,
+   "SOURCE": 8.4619,
+   "WRONG": 8.4619
+  },
+  {
+   "level": "L1",
+   "source": "CompactnessAndDegeneracy",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 32.5,
+   "RANDOM": 7.793,
+   "SOURCE": 7.1418,
+   "WRONG": 8.567
+  },
+  {
+   "level": "L1",
+   "source": "ConnesRigidity",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 32.5,
+   "RANDOM": 8.0535,
+   "SOURCE": 7.0065,
+   "WRONG": 8.567
+  },
+  {
+   "level": "L1",
+   "source": "EhrhartVolumeInequality",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 32.5,
+   "RANDOM": 8.3512,
+   "SOURCE": 7.1796,
+   "WRONG": 8.567
+  },
+  {
+   "level": "L1",
+   "source": "GapCVP",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 32.5,
+   "RANDOM": 7.8935,
+   "SOURCE": 6.5497,
+   "WRONG": 8.567
+  },
+  {
+   "level": "L1",
+   "source": "MetricCodes",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 32.5,
+   "RANDOM": 7.96,
+   "SOURCE": 6.4256,
+   "WRONG": 8.567
+  },
+  {
+   "level": "L1",
+   "source": "MulticolorTriangleRamsey",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 32.5,
+   "RANDOM": 8.8699,
+   "SOURCE": 8.8289,
+   "WRONG": 8.567
+  },
+  {
+   "level": "L1",
+   "source": "NonSoficGroup",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 32.5,
+   "RANDOM": 7.9266,
+   "SOURCE": 6.749,
+   "WRONG": 8.567
+  },
+  {
+   "level": "L1",
+   "source": "QuantumParallelRepetition",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 32.5,
+   "RANDOM": 8.532,
+   "SOURCE": 7.2181,
+   "WRONG": 8.567
+  },
+  {
+   "level": "L1",
+   "source": "SpherePacking",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 32.5,
+   "RANDOM": 10.0027,
+   "SOURCE": 8.567,
+   "WRONG": 8.567
+  },
+  {
+   "level": "L1",
+   "source": "CompactnessAndDegeneracy",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 32.5,
+   "RANDOM": 8.7548,
+   "SOURCE": 7.3344,
+   "WRONG": 7.1239
+  },
+  {
+   "level": "L1",
+   "source": "ConnesRigidity",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 32.5,
+   "RANDOM": 9.2403,
+   "SOURCE": 7.7941,
+   "WRONG": 7.1239
+  },
+  {
+   "level": "L1",
+   "source": "EhrhartVolumeInequality",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 32.5,
+   "RANDOM": 8.1969,
+   "SOURCE": 6.5811,
+   "WRONG": 7.1239
+  },
+  {
+   "level": "L1",
+   "source": "GapCVP",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 32.5,
+   "RANDOM": 9.3471,
+   "SOURCE": 7.1747,
+   "WRONG": 7.1239
+  },
+  {
+   "level": "L1",
+   "source": "MetricCodes",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 32.5,
+   "RANDOM": 8.0553,
+   "SOURCE": 6.1264,
+   "WRONG": 7.1239
+  },
+  {
+   "level": "L1",
+   "source": "MulticolorTriangleRamsey",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 32.5,
+   "RANDOM": 9.9687,
+   "SOURCE": 9.3768,
+   "WRONG": 7.1239
+  },
+  {
+   "level": "L1",
+   "source": "NonSoficGroup",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 32.5,
+   "RANDOM": 8.4801,
+   "SOURCE": 6.8453,
+   "WRONG": 7.1239
+  },
+  {
+   "level": "L1",
+   "source": "Permanent",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 32.5,
+   "RANDOM": 8.6259,
+   "SOURCE": 7.1239,
+   "WRONG": 7.1239
+  },
+  {
+   "level": "L1",
+   "source": "SpherePacking",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 32.5,
+   "RANDOM": 9.4416,
+   "SOURCE": 7.6357,
+   "WRONG": 7.1239
+  },
+  {
+   "level": "L1",
+   "source": "CompactnessAndDegeneracy",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 32.5,
+   "RANDOM": 9.8936,
+   "SOURCE": 8.3351,
+   "WRONG": 10.6936
+  },
+  {
+   "level": "L1",
+   "source": "ConnesRigidity",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 32.5,
+   "RANDOM": 11.275,
+   "SOURCE": 9.2317,
+   "WRONG": 10.6936
+  },
+  {
+   "level": "L1",
+   "source": "EhrhartVolumeInequality",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 32.5,
+   "RANDOM": 8.8048,
+   "SOURCE": 7.2548,
+   "WRONG": 10.6936
+  },
+  {
+   "level": "L1",
+   "source": "GapCVP",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 32.5,
+   "RANDOM": 13.0032,
+   "SOURCE": 10.8963,
+   "WRONG": 10.6936
+  },
+  {
+   "level": "L1",
+   "source": "MetricCodes",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 32.5,
+   "RANDOM": 9.4276,
+   "SOURCE": 7.44,
+   "WRONG": 10.6936
+  },
+  {
+   "level": "L1",
+   "source": "MulticolorTriangleRamsey",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 32.5,
+   "RANDOM": 9.8656,
+   "SOURCE": 9.1344,
+   "WRONG": 10.6936
+  },
+  {
+   "level": "L1",
+   "source": "NonSoficGroup",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 32.5,
+   "RANDOM": 9.9136,
+   "SOURCE": 8.545,
+   "WRONG": 10.6936
+  },
+  {
+   "level": "L1",
+   "source": "Permanent",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 32.5,
+   "RANDOM": 11.7231,
+   "SOURCE": 10.6936,
+   "WRONG": 10.6936
+  },
+  {
+   "level": "L1",
+   "source": "QuantumParallelRepetition",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 32.5,
+   "RANDOM": 9.9433,
+   "SOURCE": 8.2332,
+   "WRONG": 10.6936
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 126,
+   "NONE": 32.5,
+   "RANDOM": 9.1706,
+   "SOURCE": 6.9965,
+   "WRONG": null
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 221,
+   "NONE": 32.5,
+   "RANDOM": 8.1578,
+   "SOURCE": 6.1405,
+   "WRONG": null
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 300,
+   "NONE": 32.5,
+   "RANDOM": 6.8395,
+   "SOURCE": 5.2648,
+   "WRONG": null
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "GapCVP",
+   "n_target_proofs": 442,
+   "NONE": 32.5,
+   "RANDOM": 7.3009,
+   "SOURCE": 5.5374,
+   "WRONG": null
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "MetricCodes",
+   "n_target_proofs": 779,
+   "NONE": 32.5,
+   "RANDOM": 7.9452,
+   "SOURCE": 5.7311,
+   "WRONG": null
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 29,
+   "NONE": 32.5,
+   "RANDOM": 9.7325,
+   "SOURCE": 8.258,
+   "WRONG": null
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 209,
+   "NONE": 32.5,
+   "RANDOM": 7.7002,
+   "SOURCE": 5.8293,
+   "WRONG": null
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "Permanent",
+   "n_target_proofs": 170,
+   "NONE": 32.5,
+   "RANDOM": 6.9475,
+   "SOURCE": 5.7002,
+   "WRONG": null
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 363,
+   "NONE": 32.5,
+   "RANDOM": 7.6874,
+   "SOURCE": 5.4495,
+   "WRONG": null
+  },
+  {
+   "level": "L1",
+   "source": "__WITHIN__",
+   "target": "SpherePacking",
+   "n_target_proofs": 440,
+   "NONE": 32.5,
+   "RANDOM": 7.652,
+   "SOURCE": 5.5692,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "ConnesRigidity",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 6.5,
+   "RANDOM": 3.0768,
+   "SOURCE": 2.8394,
+   "WRONG": 2.9033
+  },
+  {
+   "level": "L2",
+   "source": "EhrhartVolumeInequality",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 6.5,
+   "RANDOM": 3.0728,
+   "SOURCE": 2.8868,
+   "WRONG": 2.9033
+  },
+  {
+   "level": "L2",
+   "source": "GapCVP",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 6.5,
+   "RANDOM": 3.0752,
+   "SOURCE": 2.8337,
+   "WRONG": 2.9033
+  },
+  {
+   "level": "L2",
+   "source": "MetricCodes",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 6.5,
+   "RANDOM": 3.0159,
+   "SOURCE": 2.7917,
+   "WRONG": 2.9033
+  },
+  {
+   "level": "L2",
+   "source": "MulticolorTriangleRamsey",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 6.5,
+   "RANDOM": 3.1258,
+   "SOURCE": 3.0224,
+   "WRONG": 2.9033
+  },
+  {
+   "level": "L2",
+   "source": "NonSoficGroup",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 6.5,
+   "RANDOM": 3.0161,
+   "SOURCE": 2.8161,
+   "WRONG": 2.9033
+  },
+  {
+   "level": "L2",
+   "source": "Permanent",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 6.5,
+   "RANDOM": 3.1325,
+   "SOURCE": 2.8888,
+   "WRONG": 2.9033
+  },
+  {
+   "level": "L2",
+   "source": "QuantumParallelRepetition",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 6.5,
+   "RANDOM": 3.074,
+   "SOURCE": 2.8407,
+   "WRONG": 2.9033
+  },
+  {
+   "level": "L2",
+   "source": "SpherePacking",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 6.5,
+   "RANDOM": 3.1801,
+   "SOURCE": 2.9033,
+   "WRONG": 2.9033
+  },
+  {
+   "level": "L2",
+   "source": "CompactnessAndDegeneracy",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 6.5,
+   "RANDOM": 2.9966,
+   "SOURCE": 2.7823,
+   "WRONG": 2.7823
+  },
+  {
+   "level": "L2",
+   "source": "EhrhartVolumeInequality",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 6.5,
+   "RANDOM": 3.0561,
+   "SOURCE": 2.8026,
+   "WRONG": 2.7823
+  },
+  {
+   "level": "L2",
+   "source": "GapCVP",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 6.5,
+   "RANDOM": 3.0511,
+   "SOURCE": 2.7419,
+   "WRONG": 2.7823
+  },
+  {
+   "level": "L2",
+   "source": "MetricCodes",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 6.5,
+   "RANDOM": 3.0061,
+   "SOURCE": 2.728,
+   "WRONG": 2.7823
+  },
+  {
+   "level": "L2",
+   "source": "MulticolorTriangleRamsey",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 6.5,
+   "RANDOM": 3.2353,
+   "SOURCE": 3.2567,
+   "WRONG": 2.7823
+  },
+  {
+   "level": "L2",
+   "source": "NonSoficGroup",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 6.5,
+   "RANDOM": 2.9343,
+   "SOURCE": 2.6665,
+   "WRONG": 2.7823
+  },
+  {
+   "level": "L2",
+   "source": "Permanent",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 6.5,
+   "RANDOM": 3.0164,
+   "SOURCE": 2.8,
+   "WRONG": 2.7823
+  },
+  {
+   "level": "L2",
+   "source": "QuantumParallelRepetition",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 6.5,
+   "RANDOM": 3.0092,
+   "SOURCE": 2.8235,
+   "WRONG": 2.7823
+  },
+  {
+   "level": "L2",
+   "source": "SpherePacking",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 6.5,
+   "RANDOM": 3.276,
+   "SOURCE": 2.9609,
+   "WRONG": 2.7823
+  },
+  {
+   "level": "L2",
+   "source": "CompactnessAndDegeneracy",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 6.5,
+   "RANDOM": 2.797,
+   "SOURCE": 2.6804,
+   "WRONG": 2.8076
+  },
+  {
+   "level": "L2",
+   "source": "ConnesRigidity",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 6.5,
+   "RANDOM": 2.8312,
+   "SOURCE": 2.731,
+   "WRONG": 2.8076
+  },
+  {
+   "level": "L2",
+   "source": "GapCVP",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 6.5,
+   "RANDOM": 2.9714,
+   "SOURCE": 2.8076,
+   "WRONG": 2.8076
+  },
+  {
+   "level": "L2",
+   "source": "MetricCodes",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 6.5,
+   "RANDOM": 2.8351,
+   "SOURCE": 2.6416,
+   "WRONG": 2.8076
+  },
+  {
+   "level": "L2",
+   "source": "MulticolorTriangleRamsey",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 6.5,
+   "RANDOM": 2.966,
+   "SOURCE": 2.99,
+   "WRONG": 2.8076
+  },
+  {
+   "level": "L2",
+   "source": "NonSoficGroup",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 6.5,
+   "RANDOM": 2.7796,
+   "SOURCE": 2.686,
+   "WRONG": 2.8076
+  },
+  {
+   "level": "L2",
+   "source": "Permanent",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 6.5,
+   "RANDOM": 2.9717,
+   "SOURCE": 2.7264,
+   "WRONG": 2.8076
+  },
+  {
+   "level": "L2",
+   "source": "QuantumParallelRepetition",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 6.5,
+   "RANDOM": 2.8971,
+   "SOURCE": 2.6688,
+   "WRONG": 2.8076
+  },
+  {
+   "level": "L2",
+   "source": "SpherePacking",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 6.5,
+   "RANDOM": 2.8854,
+   "SOURCE": 2.625,
+   "WRONG": 2.8076
+  },
+  {
+   "level": "L2",
+   "source": "CompactnessAndDegeneracy",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 6.5,
+   "RANDOM": 2.8339,
+   "SOURCE": 2.6275,
+   "WRONG": 2.7552
+  },
+  {
+   "level": "L2",
+   "source": "ConnesRigidity",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 6.5,
+   "RANDOM": 2.888,
+   "SOURCE": 2.6659,
+   "WRONG": 2.7552
+  },
+  {
+   "level": "L2",
+   "source": "EhrhartVolumeInequality",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 6.5,
+   "RANDOM": 2.9967,
+   "SOURCE": 2.7552,
+   "WRONG": 2.7552
+  },
+  {
+   "level": "L2",
+   "source": "MetricCodes",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 6.5,
+   "RANDOM": 2.7368,
+   "SOURCE": 2.5662,
+   "WRONG": 2.7552
+  },
+  {
+   "level": "L2",
+   "source": "MulticolorTriangleRamsey",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 6.5,
+   "RANDOM": 3.1723,
+   "SOURCE": 3.0669,
+   "WRONG": 2.7552
+  },
+  {
+   "level": "L2",
+   "source": "NonSoficGroup",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 6.5,
+   "RANDOM": 2.8968,
+   "SOURCE": 2.719,
+   "WRONG": 2.7552
+  },
+  {
+   "level": "L2",
+   "source": "Permanent",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 6.5,
+   "RANDOM": 2.7465,
+   "SOURCE": 2.6103,
+   "WRONG": 2.7552
+  },
+  {
+   "level": "L2",
+   "source": "QuantumParallelRepetition",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 6.5,
+   "RANDOM": 2.7588,
+   "SOURCE": 2.6197,
+   "WRONG": 2.7552
+  },
+  {
+   "level": "L2",
+   "source": "SpherePacking",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 6.5,
+   "RANDOM": 3.0973,
+   "SOURCE": 2.8619,
+   "WRONG": 2.7552
+  },
+  {
+   "level": "L2",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 6.5,
+   "RANDOM": 2.8786,
+   "SOURCE": 2.6785,
+   "WRONG": 2.64
+  },
+  {
+   "level": "L2",
+   "source": "ConnesRigidity",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 6.5,
+   "RANDOM": 2.979,
+   "SOURCE": 2.6816,
+   "WRONG": 2.64
+  },
+  {
+   "level": "L2",
+   "source": "EhrhartVolumeInequality",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 6.5,
+   "RANDOM": 2.9088,
+   "SOURCE": 2.6676,
+   "WRONG": 2.64
+  },
+  {
+   "level": "L2",
+   "source": "GapCVP",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 6.5,
+   "RANDOM": 2.9176,
+   "SOURCE": 2.64,
+   "WRONG": 2.64
+  },
+  {
+   "level": "L2",
+   "source": "MulticolorTriangleRamsey",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 6.5,
+   "RANDOM": 3.1095,
+   "SOURCE": 2.9732,
+   "WRONG": 2.64
+  },
+  {
+   "level": "L2",
+   "source": "NonSoficGroup",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 6.5,
+   "RANDOM": 2.8966,
+   "SOURCE": 2.6582,
+   "WRONG": 2.64
+  },
+  {
+   "level": "L2",
+   "source": "Permanent",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 6.5,
+   "RANDOM": 2.937,
+   "SOURCE": 2.6525,
+   "WRONG": 2.64
+  },
+  {
+   "level": "L2",
+   "source": "QuantumParallelRepetition",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 6.5,
+   "RANDOM": 2.8581,
+   "SOURCE": 2.5955,
+   "WRONG": 2.64
+  },
+  {
+   "level": "L2",
+   "source": "SpherePacking",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 6.5,
+   "RANDOM": 3.0085,
+   "SOURCE": 2.7362,
+   "WRONG": 2.64
+  },
+  {
+   "level": "L2",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 6.5,
+   "RANDOM": 3.1355,
+   "SOURCE": 2.8645,
+   "WRONG": 2.9708
+  },
+  {
+   "level": "L2",
+   "source": "ConnesRigidity",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 6.5,
+   "RANDOM": 3.5279,
+   "SOURCE": 3.1355,
+   "WRONG": 2.9708
+  },
+  {
+   "level": "L2",
+   "source": "EhrhartVolumeInequality",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 6.5,
+   "RANDOM": 3.2081,
+   "SOURCE": 3.0558,
+   "WRONG": 2.9708
+  },
+  {
+   "level": "L2",
+   "source": "GapCVP",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 6.5,
+   "RANDOM": 3.3924,
+   "SOURCE": 3.0709,
+   "WRONG": 2.9708
+  },
+  {
+   "level": "L2",
+   "source": "MetricCodes",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 6.5,
+   "RANDOM": 3.2285,
+   "SOURCE": 2.9469,
+   "WRONG": 2.9708
+  },
+  {
+   "level": "L2",
+   "source": "NonSoficGroup",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 6.5,
+   "RANDOM": 3.2852,
+   "SOURCE": 2.938,
+   "WRONG": 2.9708
+  },
+  {
+   "level": "L2",
+   "source": "Permanent",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 6.5,
+   "RANDOM": 3.4872,
+   "SOURCE": 3.054,
+   "WRONG": 2.9708
+  },
+  {
+   "level": "L2",
+   "source": "QuantumParallelRepetition",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 6.5,
+   "RANDOM": 3.364,
+   "SOURCE": 3.0009,
+   "WRONG": 2.9708
+  },
+  {
+   "level": "L2",
+   "source": "SpherePacking",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 6.5,
+   "RANDOM": 3.1975,
+   "SOURCE": 2.9708,
+   "WRONG": 2.9708
+  },
+  {
+   "level": "L2",
+   "source": "CompactnessAndDegeneracy",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 6.5,
+   "RANDOM": 2.9634,
+   "SOURCE": 2.8186,
+   "WRONG": 2.902
+  },
+  {
+   "level": "L2",
+   "source": "ConnesRigidity",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 6.5,
+   "RANDOM": 2.9811,
+   "SOURCE": 2.7112,
+   "WRONG": 2.902
+  },
+  {
+   "level": "L2",
+   "source": "EhrhartVolumeInequality",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 6.5,
+   "RANDOM": 2.974,
+   "SOURCE": 2.7881,
+   "WRONG": 2.902
+  },
+  {
+   "level": "L2",
+   "source": "GapCVP",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 6.5,
+   "RANDOM": 3.1103,
+   "SOURCE": 2.8285,
+   "WRONG": 2.902
+  },
+  {
+   "level": "L2",
+   "source": "MetricCodes",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 6.5,
+   "RANDOM": 3.0085,
+   "SOURCE": 2.7837,
+   "WRONG": 2.902
+  },
+  {
+   "level": "L2",
+   "source": "MulticolorTriangleRamsey",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 6.5,
+   "RANDOM": 3.0742,
+   "SOURCE": 3.0706,
+   "WRONG": 2.902
+  },
+  {
+   "level": "L2",
+   "source": "Permanent",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 6.5,
+   "RANDOM": 3.0717,
+   "SOURCE": 2.8291,
+   "WRONG": 2.902
+  },
+  {
+   "level": "L2",
+   "source": "QuantumParallelRepetition",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 6.5,
+   "RANDOM": 3.0299,
+   "SOURCE": 2.8126,
+   "WRONG": 2.902
+  },
+  {
+   "level": "L2",
+   "source": "SpherePacking",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 6.5,
+   "RANDOM": 3.1574,
+   "SOURCE": 2.902,
+   "WRONG": 2.902
+  },
+  {
+   "level": "L2",
+   "source": "CompactnessAndDegeneracy",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 6.5,
+   "RANDOM": 3.0081,
+   "SOURCE": 2.7846,
+   "WRONG": 2.9682
+  },
+  {
+   "level": "L2",
+   "source": "ConnesRigidity",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 6.5,
+   "RANDOM": 2.9373,
+   "SOURCE": 2.6478,
+   "WRONG": 2.9682
+  },
+  {
+   "level": "L2",
+   "source": "EhrhartVolumeInequality",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 6.5,
+   "RANDOM": 3.0522,
+   "SOURCE": 2.7854,
+   "WRONG": 2.9682
+  },
+  {
+   "level": "L2",
+   "source": "GapCVP",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 6.5,
+   "RANDOM": 2.9435,
+   "SOURCE": 2.7165,
+   "WRONG": 2.9682
+  },
+  {
+   "level": "L2",
+   "source": "MetricCodes",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 6.5,
+   "RANDOM": 2.9148,
+   "SOURCE": 2.6746,
+   "WRONG": 2.9682
+  },
+  {
+   "level": "L2",
+   "source": "MulticolorTriangleRamsey",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 6.5,
+   "RANDOM": 3.1948,
+   "SOURCE": 3.1179,
+   "WRONG": 2.9682
+  },
+  {
+   "level": "L2",
+   "source": "NonSoficGroup",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 6.5,
+   "RANDOM": 2.9177,
+   "SOURCE": 2.6629,
+   "WRONG": 2.9682
+  },
+  {
+   "level": "L2",
+   "source": "QuantumParallelRepetition",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 6.5,
+   "RANDOM": 2.8634,
+   "SOURCE": 2.6808,
+   "WRONG": 2.9682
+  },
+  {
+   "level": "L2",
+   "source": "SpherePacking",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 6.5,
+   "RANDOM": 3.2727,
+   "SOURCE": 2.9682,
+   "WRONG": 2.9682
+  },
+  {
+   "level": "L2",
+   "source": "CompactnessAndDegeneracy",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 6.5,
+   "RANDOM": 3.0169,
+   "SOURCE": 2.5813,
+   "WRONG": 2.4805
+  },
+  {
+   "level": "L2",
+   "source": "ConnesRigidity",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 6.5,
+   "RANDOM": 2.9912,
+   "SOURCE": 2.5915,
+   "WRONG": 2.4805
+  },
+  {
+   "level": "L2",
+   "source": "EhrhartVolumeInequality",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 6.5,
+   "RANDOM": 3.0207,
+   "SOURCE": 2.5804,
+   "WRONG": 2.4805
+  },
+  {
+   "level": "L2",
+   "source": "GapCVP",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 6.5,
+   "RANDOM": 2.9658,
+   "SOURCE": 2.5761,
+   "WRONG": 2.4805
+  },
+  {
+   "level": "L2",
+   "source": "MetricCodes",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 6.5,
+   "RANDOM": 2.8961,
+   "SOURCE": 2.4615,
+   "WRONG": 2.4805
+  },
+  {
+   "level": "L2",
+   "source": "MulticolorTriangleRamsey",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 6.5,
+   "RANDOM": 3.2112,
+   "SOURCE": 3.0434,
+   "WRONG": 2.4805
+  },
+  {
+   "level": "L2",
+   "source": "NonSoficGroup",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 6.5,
+   "RANDOM": 2.9416,
+   "SOURCE": 2.517,
+   "WRONG": 2.4805
+  },
+  {
+   "level": "L2",
+   "source": "Permanent",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 6.5,
+   "RANDOM": 2.8805,
+   "SOURCE": 2.4805,
+   "WRONG": 2.4805
+  },
+  {
+   "level": "L2",
+   "source": "SpherePacking",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 6.5,
+   "RANDOM": 3.2156,
+   "SOURCE": 2.8002,
+   "WRONG": 2.4805
+  },
+  {
+   "level": "L2",
+   "source": "CompactnessAndDegeneracy",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 6.5,
+   "RANDOM": 2.8878,
+   "SOURCE": 2.7817,
+   "WRONG": 2.9955
+  },
+  {
+   "level": "L2",
+   "source": "ConnesRigidity",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 6.5,
+   "RANDOM": 3.1863,
+   "SOURCE": 2.9766,
+   "WRONG": 2.9955
+  },
+  {
+   "level": "L2",
+   "source": "EhrhartVolumeInequality",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 6.5,
+   "RANDOM": 2.8285,
+   "SOURCE": 2.7295,
+   "WRONG": 2.9955
+  },
+  {
+   "level": "L2",
+   "source": "GapCVP",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 6.5,
+   "RANDOM": 3.2498,
+   "SOURCE": 2.9577,
+   "WRONG": 2.9955
+  },
+  {
+   "level": "L2",
+   "source": "MetricCodes",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 6.5,
+   "RANDOM": 2.9923,
+   "SOURCE": 2.7637,
+   "WRONG": 2.9955
+  },
+  {
+   "level": "L2",
+   "source": "MulticolorTriangleRamsey",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 6.5,
+   "RANDOM": 3.012,
+   "SOURCE": 2.9317,
+   "WRONG": 2.9955
+  },
+  {
+   "level": "L2",
+   "source": "NonSoficGroup",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 6.5,
+   "RANDOM": 2.9996,
+   "SOURCE": 2.862,
+   "WRONG": 2.9955
+  },
+  {
+   "level": "L2",
+   "source": "Permanent",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 6.5,
+   "RANDOM": 3.3657,
+   "SOURCE": 2.9955,
+   "WRONG": 2.9955
+  },
+  {
+   "level": "L2",
+   "source": "QuantumParallelRepetition",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 6.5,
+   "RANDOM": 3.1794,
+   "SOURCE": 2.8945,
+   "WRONG": 2.9955
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 126,
+   "NONE": 6.5,
+   "RANDOM": 3.0464,
+   "SOURCE": 2.8346,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 221,
+   "NONE": 6.5,
+   "RANDOM": 3.0132,
+   "SOURCE": 2.593,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 300,
+   "NONE": 6.5,
+   "RANDOM": 2.7631,
+   "SOURCE": 2.4717,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "GapCVP",
+   "n_target_proofs": 442,
+   "NONE": 6.5,
+   "RANDOM": 2.6898,
+   "SOURCE": 2.4552,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "MetricCodes",
+   "n_target_proofs": 779,
+   "NONE": 6.5,
+   "RANDOM": 2.7997,
+   "SOURCE": 2.5407,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 29,
+   "NONE": 6.5,
+   "RANDOM": 3.2006,
+   "SOURCE": 3.0064,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 209,
+   "NONE": 6.5,
+   "RANDOM": 2.9083,
+   "SOURCE": 2.5785,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "Permanent",
+   "n_target_proofs": 170,
+   "NONE": 6.5,
+   "RANDOM": 2.8341,
+   "SOURCE": 2.6044,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 363,
+   "NONE": 6.5,
+   "RANDOM": 2.8684,
+   "SOURCE": 2.3858,
+   "WRONG": null
+  },
+  {
+   "level": "L2",
+   "source": "__WITHIN__",
+   "target": "SpherePacking",
+   "n_target_proofs": 440,
+   "NONE": 6.5,
+   "RANDOM": 2.7906,
+   "SOURCE": 2.6072,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "ConnesRigidity",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 3.5,
+   "RANDOM": 2.7953,
+   "SOURCE": 2.55,
+   "WRONG": 2.6185
+  },
+  {
+   "level": "L3",
+   "source": "EhrhartVolumeInequality",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 3.5,
+   "RANDOM": 2.6774,
+   "SOURCE": 2.551,
+   "WRONG": 2.6185
+  },
+  {
+   "level": "L3",
+   "source": "GapCVP",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 3.5,
+   "RANDOM": 2.7386,
+   "SOURCE": 2.5557,
+   "WRONG": 2.6185
+  },
+  {
+   "level": "L3",
+   "source": "MetricCodes",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 3.5,
+   "RANDOM": 2.699,
+   "SOURCE": 2.5085,
+   "WRONG": 2.6185
+  },
+  {
+   "level": "L3",
+   "source": "MulticolorTriangleRamsey",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 3.5,
+   "RANDOM": 2.6717,
+   "SOURCE": 2.6248,
+   "WRONG": 2.6185
+  },
+  {
+   "level": "L3",
+   "source": "NonSoficGroup",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 3.5,
+   "RANDOM": 2.6774,
+   "SOURCE": 2.5291,
+   "WRONG": 2.6185
+  },
+  {
+   "level": "L3",
+   "source": "Permanent",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 3.5,
+   "RANDOM": 2.7953,
+   "SOURCE": 2.5785,
+   "WRONG": 2.6185
+  },
+  {
+   "level": "L3",
+   "source": "QuantumParallelRepetition",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 3.5,
+   "RANDOM": 2.75,
+   "SOURCE": 2.5177,
+   "WRONG": 2.6185
+  },
+  {
+   "level": "L3",
+   "source": "SpherePacking",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 252,
+   "NONE": 3.5,
+   "RANDOM": 2.7409,
+   "SOURCE": 2.6185,
+   "WRONG": 2.6185
+  },
+  {
+   "level": "L3",
+   "source": "CompactnessAndDegeneracy",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 3.5,
+   "RANDOM": 2.6547,
+   "SOURCE": 2.4033,
+   "WRONG": 2.4033
+  },
+  {
+   "level": "L3",
+   "source": "EhrhartVolumeInequality",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 3.5,
+   "RANDOM": 2.6274,
+   "SOURCE": 2.4355,
+   "WRONG": 2.4033
+  },
+  {
+   "level": "L3",
+   "source": "GapCVP",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 3.5,
+   "RANDOM": 2.6481,
+   "SOURCE": 2.3921,
+   "WRONG": 2.4033
+  },
+  {
+   "level": "L3",
+   "source": "MetricCodes",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 3.5,
+   "RANDOM": 2.624,
+   "SOURCE": 2.3497,
+   "WRONG": 2.4033
+  },
+  {
+   "level": "L3",
+   "source": "MulticolorTriangleRamsey",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 3.5,
+   "RANDOM": 2.6547,
+   "SOURCE": 2.7268,
+   "WRONG": 2.4033
+  },
+  {
+   "level": "L3",
+   "source": "NonSoficGroup",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 3.5,
+   "RANDOM": 2.6274,
+   "SOURCE": 2.3336,
+   "WRONG": 2.4033
+  },
+  {
+   "level": "L3",
+   "source": "Permanent",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 3.5,
+   "RANDOM": 2.5905,
+   "SOURCE": 2.3189,
+   "WRONG": 2.4033
+  },
+  {
+   "level": "L3",
+   "source": "QuantumParallelRepetition",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 3.5,
+   "RANDOM": 2.5936,
+   "SOURCE": 2.3351,
+   "WRONG": 2.4033
+  },
+  {
+   "level": "L3",
+   "source": "SpherePacking",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 441,
+   "NONE": 3.5,
+   "RANDOM": 2.7579,
+   "SOURCE": 2.5627,
+   "WRONG": 2.4033
+  },
+  {
+   "level": "L3",
+   "source": "CompactnessAndDegeneracy",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 3.5,
+   "RANDOM": 2.4098,
+   "SOURCE": 2.3235,
+   "WRONG": 2.377
+  },
+  {
+   "level": "L3",
+   "source": "ConnesRigidity",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 3.5,
+   "RANDOM": 2.4744,
+   "SOURCE": 2.3379,
+   "WRONG": 2.377
+  },
+  {
+   "level": "L3",
+   "source": "GapCVP",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 3.5,
+   "RANDOM": 2.4998,
+   "SOURCE": 2.377,
+   "WRONG": 2.377
+  },
+  {
+   "level": "L3",
+   "source": "MetricCodes",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 3.5,
+   "RANDOM": 2.3872,
+   "SOURCE": 2.3229,
+   "WRONG": 2.377
+  },
+  {
+   "level": "L3",
+   "source": "MulticolorTriangleRamsey",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 3.5,
+   "RANDOM": 2.4098,
+   "SOURCE": 2.5613,
+   "WRONG": 2.377
+  },
+  {
+   "level": "L3",
+   "source": "NonSoficGroup",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 3.5,
+   "RANDOM": 2.3638,
+   "SOURCE": 2.3045,
+   "WRONG": 2.377
+  },
+  {
+   "level": "L3",
+   "source": "Permanent",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 3.5,
+   "RANDOM": 2.4744,
+   "SOURCE": 2.3169,
+   "WRONG": 2.377
+  },
+  {
+   "level": "L3",
+   "source": "QuantumParallelRepetition",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 3.5,
+   "RANDOM": 2.4077,
+   "SOURCE": 2.2882,
+   "WRONG": 2.377
+  },
+  {
+   "level": "L3",
+   "source": "SpherePacking",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 599,
+   "NONE": 3.5,
+   "RANDOM": 2.4494,
+   "SOURCE": 2.3268,
+   "WRONG": 2.377
+  },
+  {
+   "level": "L3",
+   "source": "CompactnessAndDegeneracy",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 3.5,
+   "RANDOM": 2.5476,
+   "SOURCE": 2.3516,
+   "WRONG": 2.4127
+  },
+  {
+   "level": "L3",
+   "source": "ConnesRigidity",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 3.5,
+   "RANDOM": 2.4502,
+   "SOURCE": 2.3577,
+   "WRONG": 2.4127
+  },
+  {
+   "level": "L3",
+   "source": "EhrhartVolumeInequality",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 3.5,
+   "RANDOM": 2.5717,
+   "SOURCE": 2.4127,
+   "WRONG": 2.4127
+  },
+  {
+   "level": "L3",
+   "source": "MetricCodes",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 3.5,
+   "RANDOM": 2.4508,
+   "SOURCE": 2.3253,
+   "WRONG": 2.4127
+  },
+  {
+   "level": "L3",
+   "source": "MulticolorTriangleRamsey",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 3.5,
+   "RANDOM": 2.5476,
+   "SOURCE": 2.6091,
+   "WRONG": 2.4127
+  },
+  {
+   "level": "L3",
+   "source": "NonSoficGroup",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 3.5,
+   "RANDOM": 2.5717,
+   "SOURCE": 2.3918,
+   "WRONG": 2.4127
+  },
+  {
+   "level": "L3",
+   "source": "Permanent",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 3.5,
+   "RANDOM": 2.4502,
+   "SOURCE": 2.324,
+   "WRONG": 2.4127
+  },
+  {
+   "level": "L3",
+   "source": "QuantumParallelRepetition",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 3.5,
+   "RANDOM": 2.4626,
+   "SOURCE": 2.3275,
+   "WRONG": 2.4127
+  },
+  {
+   "level": "L3",
+   "source": "SpherePacking",
+   "target": "GapCVP",
+   "n_target_proofs": 883,
+   "NONE": 3.5,
+   "RANDOM": 2.6479,
+   "SOURCE": 2.5158,
+   "WRONG": 2.4127
+  },
+  {
+   "level": "L3",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 3.5,
+   "RANDOM": 2.6382,
+   "SOURCE": 2.3788,
+   "WRONG": 2.3998
+  },
+  {
+   "level": "L3",
+   "source": "ConnesRigidity",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 3.5,
+   "RANDOM": 2.6606,
+   "SOURCE": 2.3841,
+   "WRONG": 2.3998
+  },
+  {
+   "level": "L3",
+   "source": "EhrhartVolumeInequality",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 3.5,
+   "RANDOM": 2.601,
+   "SOURCE": 2.4004,
+   "WRONG": 2.3998
+  },
+  {
+   "level": "L3",
+   "source": "GapCVP",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 3.5,
+   "RANDOM": 2.6604,
+   "SOURCE": 2.3998,
+   "WRONG": 2.3998
+  },
+  {
+   "level": "L3",
+   "source": "MulticolorTriangleRamsey",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 3.5,
+   "RANDOM": 2.6382,
+   "SOURCE": 2.6561,
+   "WRONG": 2.3998
+  },
+  {
+   "level": "L3",
+   "source": "NonSoficGroup",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 3.5,
+   "RANDOM": 2.601,
+   "SOURCE": 2.3922,
+   "WRONG": 2.3998
+  },
+  {
+   "level": "L3",
+   "source": "Permanent",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 3.5,
+   "RANDOM": 2.6606,
+   "SOURCE": 2.3824,
+   "WRONG": 2.3998
+  },
+  {
+   "level": "L3",
+   "source": "QuantumParallelRepetition",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 3.5,
+   "RANDOM": 2.5858,
+   "SOURCE": 2.3258,
+   "WRONG": 2.3998
+  },
+  {
+   "level": "L3",
+   "source": "SpherePacking",
+   "target": "MetricCodes",
+   "n_target_proofs": 1557,
+   "NONE": 3.5,
+   "RANDOM": 2.6446,
+   "SOURCE": 2.4763,
+   "WRONG": 2.3998
+  },
+  {
+   "level": "L3",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 3.5,
+   "RANDOM": 2.7166,
+   "SOURCE": 2.5297,
+   "WRONG": 2.597
+  },
+  {
+   "level": "L3",
+   "source": "ConnesRigidity",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 3.5,
+   "RANDOM": 2.9965,
+   "SOURCE": 2.7422,
+   "WRONG": 2.597
+  },
+  {
+   "level": "L3",
+   "source": "EhrhartVolumeInequality",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 3.5,
+   "RANDOM": 2.7378,
+   "SOURCE": 2.6572,
+   "WRONG": 2.597
+  },
+  {
+   "level": "L3",
+   "source": "GapCVP",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 3.5,
+   "RANDOM": 2.8397,
+   "SOURCE": 2.6962,
+   "WRONG": 2.597
+  },
+  {
+   "level": "L3",
+   "source": "MetricCodes",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 3.5,
+   "RANDOM": 2.7467,
+   "SOURCE": 2.5988,
+   "WRONG": 2.597
+  },
+  {
+   "level": "L3",
+   "source": "NonSoficGroup",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 3.5,
+   "RANDOM": 2.7378,
+   "SOURCE": 2.628,
+   "WRONG": 2.597
+  },
+  {
+   "level": "L3",
+   "source": "Permanent",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 3.5,
+   "RANDOM": 2.9965,
+   "SOURCE": 2.7077,
+   "WRONG": 2.597
+  },
+  {
+   "level": "L3",
+   "source": "QuantumParallelRepetition",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 3.5,
+   "RANDOM": 2.8822,
+   "SOURCE": 2.6262,
+   "WRONG": 2.597
+  },
+  {
+   "level": "L3",
+   "source": "SpherePacking",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 57,
+   "NONE": 3.5,
+   "RANDOM": 2.744,
+   "SOURCE": 2.597,
+   "WRONG": 2.597
+  },
+  {
+   "level": "L3",
+   "source": "CompactnessAndDegeneracy",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 3.5,
+   "RANDOM": 2.593,
+   "SOURCE": 2.4151,
+   "WRONG": 2.5646
+  },
+  {
+   "level": "L3",
+   "source": "ConnesRigidity",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 3.5,
+   "RANDOM": 2.6224,
+   "SOURCE": 2.3824,
+   "WRONG": 2.5646
+  },
+  {
+   "level": "L3",
+   "source": "EhrhartVolumeInequality",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 3.5,
+   "RANDOM": 2.5617,
+   "SOURCE": 2.4236,
+   "WRONG": 2.5646
+  },
+  {
+   "level": "L3",
+   "source": "GapCVP",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 3.5,
+   "RANDOM": 2.6529,
+   "SOURCE": 2.4365,
+   "WRONG": 2.5646
+  },
+  {
+   "level": "L3",
+   "source": "MetricCodes",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 3.5,
+   "RANDOM": 2.5894,
+   "SOURCE": 2.4115,
+   "WRONG": 2.5646
+  },
+  {
+   "level": "L3",
+   "source": "MulticolorTriangleRamsey",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 3.5,
+   "RANDOM": 2.593,
+   "SOURCE": 2.6366,
+   "WRONG": 2.5646
+  },
+  {
+   "level": "L3",
+   "source": "Permanent",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 3.5,
+   "RANDOM": 2.6224,
+   "SOURCE": 2.3905,
+   "WRONG": 2.5646
+  },
+  {
+   "level": "L3",
+   "source": "QuantumParallelRepetition",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 3.5,
+   "RANDOM": 2.5903,
+   "SOURCE": 2.3676,
+   "WRONG": 2.5646
+  },
+  {
+   "level": "L3",
+   "source": "SpherePacking",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 418,
+   "NONE": 3.5,
+   "RANDOM": 2.6893,
+   "SOURCE": 2.5646,
+   "WRONG": 2.5646
+  },
+  {
+   "level": "L3",
+   "source": "CompactnessAndDegeneracy",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 3.5,
+   "RANDOM": 2.7151,
+   "SOURCE": 2.4867,
+   "WRONG": 2.6933
+  },
+  {
+   "level": "L3",
+   "source": "ConnesRigidity",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 3.5,
+   "RANDOM": 2.5317,
+   "SOURCE": 2.3659,
+   "WRONG": 2.6933
+  },
+  {
+   "level": "L3",
+   "source": "EhrhartVolumeInequality",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 3.5,
+   "RANDOM": 2.6662,
+   "SOURCE": 2.4674,
+   "WRONG": 2.6933
+  },
+  {
+   "level": "L3",
+   "source": "GapCVP",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 3.5,
+   "RANDOM": 2.6472,
+   "SOURCE": 2.4481,
+   "WRONG": 2.6933
+  },
+  {
+   "level": "L3",
+   "source": "MetricCodes",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 3.5,
+   "RANDOM": 2.616,
+   "SOURCE": 2.4063,
+   "WRONG": 2.6933
+  },
+  {
+   "level": "L3",
+   "source": "MulticolorTriangleRamsey",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 3.5,
+   "RANDOM": 2.7151,
+   "SOURCE": 2.831,
+   "WRONG": 2.6933
+  },
+  {
+   "level": "L3",
+   "source": "NonSoficGroup",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 3.5,
+   "RANDOM": 2.6662,
+   "SOURCE": 2.3648,
+   "WRONG": 2.6933
+  },
+  {
+   "level": "L3",
+   "source": "QuantumParallelRepetition",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 3.5,
+   "RANDOM": 2.5494,
+   "SOURCE": 2.3693,
+   "WRONG": 2.6933
+  },
+  {
+   "level": "L3",
+   "source": "SpherePacking",
+   "target": "Permanent",
+   "n_target_proofs": 340,
+   "NONE": 3.5,
+   "RANDOM": 2.8156,
+   "SOURCE": 2.6933,
+   "WRONG": 2.6933
+  },
+  {
+   "level": "L3",
+   "source": "CompactnessAndDegeneracy",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 3.5,
+   "RANDOM": 2.6944,
+   "SOURCE": 2.1858,
+   "WRONG": 2.1284
+  },
+  {
+   "level": "L3",
+   "source": "ConnesRigidity",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 3.5,
+   "RANDOM": 2.5016,
+   "SOURCE": 2.1658,
+   "WRONG": 2.1284
+  },
+  {
+   "level": "L3",
+   "source": "EhrhartVolumeInequality",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 3.5,
+   "RANDOM": 2.6228,
+   "SOURCE": 2.2463,
+   "WRONG": 2.1284
+  },
+  {
+   "level": "L3",
+   "source": "GapCVP",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 3.5,
+   "RANDOM": 2.6284,
+   "SOURCE": 2.2505,
+   "WRONG": 2.1284
+  },
+  {
+   "level": "L3",
+   "source": "MetricCodes",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 3.5,
+   "RANDOM": 2.5401,
+   "SOURCE": 2.1188,
+   "WRONG": 2.1284
+  },
+  {
+   "level": "L3",
+   "source": "MulticolorTriangleRamsey",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 3.5,
+   "RANDOM": 2.6944,
+   "SOURCE": 2.6648,
+   "WRONG": 2.1284
+  },
+  {
+   "level": "L3",
+   "source": "NonSoficGroup",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 3.5,
+   "RANDOM": 2.6228,
+   "SOURCE": 2.1445,
+   "WRONG": 2.1284
+  },
+  {
+   "level": "L3",
+   "source": "Permanent",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 3.5,
+   "RANDOM": 2.5016,
+   "SOURCE": 2.1284,
+   "WRONG": 2.1284
+  },
+  {
+   "level": "L3",
+   "source": "SpherePacking",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 726,
+   "NONE": 3.5,
+   "RANDOM": 2.7652,
+   "SOURCE": 2.4828,
+   "WRONG": 2.1284
+  },
+  {
+   "level": "L3",
+   "source": "CompactnessAndDegeneracy",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 3.5,
+   "RANDOM": 2.4812,
+   "SOURCE": 2.3973,
+   "WRONG": 2.5567
+  },
+  {
+   "level": "L3",
+   "source": "ConnesRigidity",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 3.5,
+   "RANDOM": 2.8448,
+   "SOURCE": 2.5436,
+   "WRONG": 2.5567
+  },
+  {
+   "level": "L3",
+   "source": "EhrhartVolumeInequality",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 3.5,
+   "RANDOM": 2.4458,
+   "SOURCE": 2.3821,
+   "WRONG": 2.5567
+  },
+  {
+   "level": "L3",
+   "source": "GapCVP",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 3.5,
+   "RANDOM": 2.7336,
+   "SOURCE": 2.5256,
+   "WRONG": 2.5567
+  },
+  {
+   "level": "L3",
+   "source": "MetricCodes",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 3.5,
+   "RANDOM": 2.5162,
+   "SOURCE": 2.4084,
+   "WRONG": 2.5567
+  },
+  {
+   "level": "L3",
+   "source": "MulticolorTriangleRamsey",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 3.5,
+   "RANDOM": 2.4812,
+   "SOURCE": 2.4852,
+   "WRONG": 2.5567
+  },
+  {
+   "level": "L3",
+   "source": "NonSoficGroup",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 3.5,
+   "RANDOM": 2.4458,
+   "SOURCE": 2.4861,
+   "WRONG": 2.5567
+  },
+  {
+   "level": "L3",
+   "source": "Permanent",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 3.5,
+   "RANDOM": 2.8448,
+   "SOURCE": 2.5567,
+   "WRONG": 2.5567
+  },
+  {
+   "level": "L3",
+   "source": "QuantumParallelRepetition",
+   "target": "SpherePacking",
+   "n_target_proofs": 880,
+   "NONE": 3.5,
+   "RANDOM": 2.6628,
+   "SOURCE": 2.464,
+   "WRONG": 2.5567
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 126,
+   "NONE": 3.5,
+   "RANDOM": 2.7444,
+   "SOURCE": 2.553,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 221,
+   "NONE": 3.5,
+   "RANDOM": 2.6891,
+   "SOURCE": 2.2884,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 300,
+   "NONE": 3.5,
+   "RANDOM": 2.3704,
+   "SOURCE": 2.1865,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "GapCVP",
+   "n_target_proofs": 442,
+   "NONE": 3.5,
+   "RANDOM": 2.4279,
+   "SOURCE": 2.2349,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "MetricCodes",
+   "n_target_proofs": 779,
+   "NONE": 3.5,
+   "RANDOM": 2.5342,
+   "SOURCE": 2.3212,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 29,
+   "NONE": 3.5,
+   "RANDOM": 2.7675,
+   "SOURCE": 2.629,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 209,
+   "NONE": 3.5,
+   "RANDOM": 2.558,
+   "SOURCE": 2.3153,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "Permanent",
+   "n_target_proofs": 170,
+   "NONE": 3.5,
+   "RANDOM": 2.5167,
+   "SOURCE": 2.3328,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 363,
+   "NONE": 3.5,
+   "RANDOM": 2.5088,
+   "SOURCE": 2.0959,
+   "WRONG": null
+  },
+  {
+   "level": "L3",
+   "source": "__WITHIN__",
+   "target": "SpherePacking",
+   "n_target_proofs": 440,
+   "NONE": 3.5,
+   "RANDOM": 2.3889,
+   "SOURCE": 2.284,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "ConnesRigidity",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 219,
+   "NONE": 2.5,
+   "RANDOM": 1.5221,
+   "SOURCE": 1.5124,
+   "WRONG": 1.5182
+  },
+  {
+   "level": "ENG",
+   "source": "EhrhartVolumeInequality",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 219,
+   "NONE": 2.5,
+   "RANDOM": 1.5221,
+   "SOURCE": 1.5075,
+   "WRONG": 1.5182
+  },
+  {
+   "level": "ENG",
+   "source": "GapCVP",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 219,
+   "NONE": 2.5,
+   "RANDOM": 1.5333,
+   "SOURCE": 1.5144,
+   "WRONG": 1.5182
+  },
+  {
+   "level": "ENG",
+   "source": "MetricCodes",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 219,
+   "NONE": 2.5,
+   "RANDOM": 1.5221,
+   "SOURCE": 1.5012,
+   "WRONG": 1.5182
+  },
+  {
+   "level": "ENG",
+   "source": "MulticolorTriangleRamsey",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 219,
+   "NONE": 2.5,
+   "RANDOM": 1.6555,
+   "SOURCE": 1.5586,
+   "WRONG": 1.5182
+  },
+  {
+   "level": "ENG",
+   "source": "NonSoficGroup",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 219,
+   "NONE": 2.5,
+   "RANDOM": 1.5221,
+   "SOURCE": 1.5027,
+   "WRONG": 1.5182
+  },
+  {
+   "level": "ENG",
+   "source": "Permanent",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 219,
+   "NONE": 2.5,
+   "RANDOM": 1.5333,
+   "SOURCE": 1.5348,
+   "WRONG": 1.5182
+  },
+  {
+   "level": "ENG",
+   "source": "QuantumParallelRepetition",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 219,
+   "NONE": 2.5,
+   "RANDOM": 1.5333,
+   "SOURCE": 1.5217,
+   "WRONG": 1.5182
+  },
+  {
+   "level": "ENG",
+   "source": "SpherePacking",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 219,
+   "NONE": 2.5,
+   "RANDOM": 1.5221,
+   "SOURCE": 1.5182,
+   "WRONG": 1.5182
+  },
+  {
+   "level": "ENG",
+   "source": "CompactnessAndDegeneracy",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 407,
+   "NONE": 2.5,
+   "RANDOM": 1.5423,
+   "SOURCE": 1.55,
+   "WRONG": 1.55
+  },
+  {
+   "level": "ENG",
+   "source": "EhrhartVolumeInequality",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 407,
+   "NONE": 2.5,
+   "RANDOM": 1.5423,
+   "SOURCE": 1.5309,
+   "WRONG": 1.55
+  },
+  {
+   "level": "ENG",
+   "source": "GapCVP",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 407,
+   "NONE": 2.5,
+   "RANDOM": 1.5922,
+   "SOURCE": 1.5519,
+   "WRONG": 1.55
+  },
+  {
+   "level": "ENG",
+   "source": "MetricCodes",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 407,
+   "NONE": 2.5,
+   "RANDOM": 1.5423,
+   "SOURCE": 1.5322,
+   "WRONG": 1.55
+  },
+  {
+   "level": "ENG",
+   "source": "MulticolorTriangleRamsey",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 407,
+   "NONE": 2.5,
+   "RANDOM": 1.6965,
+   "SOURCE": 1.5574,
+   "WRONG": 1.55
+  },
+  {
+   "level": "ENG",
+   "source": "NonSoficGroup",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 407,
+   "NONE": 2.5,
+   "RANDOM": 1.5423,
+   "SOURCE": 1.5428,
+   "WRONG": 1.55
+  },
+  {
+   "level": "ENG",
+   "source": "Permanent",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 407,
+   "NONE": 2.5,
+   "RANDOM": 1.5922,
+   "SOURCE": 1.6068,
+   "WRONG": 1.55
+  },
+  {
+   "level": "ENG",
+   "source": "QuantumParallelRepetition",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 407,
+   "NONE": 2.5,
+   "RANDOM": 1.5922,
+   "SOURCE": 1.5781,
+   "WRONG": 1.55
+  },
+  {
+   "level": "ENG",
+   "source": "SpherePacking",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 407,
+   "NONE": 2.5,
+   "RANDOM": 1.5423,
+   "SOURCE": 1.5529,
+   "WRONG": 1.55
+  },
+  {
+   "level": "ENG",
+   "source": "CompactnessAndDegeneracy",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 552,
+   "NONE": 2.5,
+   "RANDOM": 1.5186,
+   "SOURCE": 1.5747,
+   "WRONG": 1.5772
+  },
+  {
+   "level": "ENG",
+   "source": "ConnesRigidity",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 552,
+   "NONE": 2.5,
+   "RANDOM": 1.5186,
+   "SOURCE": 1.5762,
+   "WRONG": 1.5772
+  },
+  {
+   "level": "ENG",
+   "source": "GapCVP",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 552,
+   "NONE": 2.5,
+   "RANDOM": 1.5735,
+   "SOURCE": 1.5772,
+   "WRONG": 1.5772
+  },
+  {
+   "level": "ENG",
+   "source": "MetricCodes",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 552,
+   "NONE": 2.5,
+   "RANDOM": 1.5186,
+   "SOURCE": 1.5388,
+   "WRONG": 1.5772
+  },
+  {
+   "level": "ENG",
+   "source": "MulticolorTriangleRamsey",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 552,
+   "NONE": 2.5,
+   "RANDOM": 1.7163,
+   "SOURCE": 1.5766,
+   "WRONG": 1.5772
+  },
+  {
+   "level": "ENG",
+   "source": "NonSoficGroup",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 552,
+   "NONE": 2.5,
+   "RANDOM": 1.5186,
+   "SOURCE": 1.6695,
+   "WRONG": 1.5772
+  },
+  {
+   "level": "ENG",
+   "source": "Permanent",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 552,
+   "NONE": 2.5,
+   "RANDOM": 1.5735,
+   "SOURCE": 1.6006,
+   "WRONG": 1.5772
+  },
+  {
+   "level": "ENG",
+   "source": "QuantumParallelRepetition",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 552,
+   "NONE": 2.5,
+   "RANDOM": 1.5735,
+   "SOURCE": 1.5674,
+   "WRONG": 1.5772
+  },
+  {
+   "level": "ENG",
+   "source": "SpherePacking",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 552,
+   "NONE": 2.5,
+   "RANDOM": 1.5186,
+   "SOURCE": 1.5173,
+   "WRONG": 1.5772
+  },
+  {
+   "level": "ENG",
+   "source": "CompactnessAndDegeneracy",
+   "target": "GapCVP",
+   "n_target_proofs": 785,
+   "NONE": 2.5,
+   "RANDOM": 1.3558,
+   "SOURCE": 1.3624,
+   "WRONG": 1.3405
+  },
+  {
+   "level": "ENG",
+   "source": "ConnesRigidity",
+   "target": "GapCVP",
+   "n_target_proofs": 785,
+   "NONE": 2.5,
+   "RANDOM": 1.3558,
+   "SOURCE": 1.3554,
+   "WRONG": 1.3405
+  },
+  {
+   "level": "ENG",
+   "source": "EhrhartVolumeInequality",
+   "target": "GapCVP",
+   "n_target_proofs": 785,
+   "NONE": 2.5,
+   "RANDOM": 1.3558,
+   "SOURCE": 1.3405,
+   "WRONG": 1.3405
+  },
+  {
+   "level": "ENG",
+   "source": "MetricCodes",
+   "target": "GapCVP",
+   "n_target_proofs": 785,
+   "NONE": 2.5,
+   "RANDOM": 1.3558,
+   "SOURCE": 1.3328,
+   "WRONG": 1.3405
+  },
+  {
+   "level": "ENG",
+   "source": "MulticolorTriangleRamsey",
+   "target": "GapCVP",
+   "n_target_proofs": 785,
+   "NONE": 2.5,
+   "RANDOM": 1.7888,
+   "SOURCE": 1.4711,
+   "WRONG": 1.3405
+  },
+  {
+   "level": "ENG",
+   "source": "NonSoficGroup",
+   "target": "GapCVP",
+   "n_target_proofs": 785,
+   "NONE": 2.5,
+   "RANDOM": 1.3558,
+   "SOURCE": 1.3708,
+   "WRONG": 1.3405
+  },
+  {
+   "level": "ENG",
+   "source": "Permanent",
+   "target": "GapCVP",
+   "n_target_proofs": 785,
+   "NONE": 2.5,
+   "RANDOM": 1.3381,
+   "SOURCE": 1.341,
+   "WRONG": 1.3405
+  },
+  {
+   "level": "ENG",
+   "source": "QuantumParallelRepetition",
+   "target": "GapCVP",
+   "n_target_proofs": 785,
+   "NONE": 2.5,
+   "RANDOM": 1.3381,
+   "SOURCE": 1.3322,
+   "WRONG": 1.3405
+  },
+  {
+   "level": "ENG",
+   "source": "SpherePacking",
+   "target": "GapCVP",
+   "n_target_proofs": 785,
+   "NONE": 2.5,
+   "RANDOM": 1.3558,
+   "SOURCE": 1.3471,
+   "WRONG": 1.3405
+  },
+  {
+   "level": "ENG",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MetricCodes",
+   "n_target_proofs": 1375,
+   "NONE": 2.5,
+   "RANDOM": 1.4106,
+   "SOURCE": 1.438,
+   "WRONG": 1.4021
+  },
+  {
+   "level": "ENG",
+   "source": "ConnesRigidity",
+   "target": "MetricCodes",
+   "n_target_proofs": 1375,
+   "NONE": 2.5,
+   "RANDOM": 1.4106,
+   "SOURCE": 1.4168,
+   "WRONG": 1.4021
+  },
+  {
+   "level": "ENG",
+   "source": "EhrhartVolumeInequality",
+   "target": "MetricCodes",
+   "n_target_proofs": 1375,
+   "NONE": 2.5,
+   "RANDOM": 1.4106,
+   "SOURCE": 1.3992,
+   "WRONG": 1.4021
+  },
+  {
+   "level": "ENG",
+   "source": "GapCVP",
+   "target": "MetricCodes",
+   "n_target_proofs": 1375,
+   "NONE": 2.5,
+   "RANDOM": 1.4138,
+   "SOURCE": 1.4021,
+   "WRONG": 1.4021
+  },
+  {
+   "level": "ENG",
+   "source": "MulticolorTriangleRamsey",
+   "target": "MetricCodes",
+   "n_target_proofs": 1375,
+   "NONE": 2.5,
+   "RANDOM": 1.6999,
+   "SOURCE": 1.4871,
+   "WRONG": 1.4021
+  },
+  {
+   "level": "ENG",
+   "source": "NonSoficGroup",
+   "target": "MetricCodes",
+   "n_target_proofs": 1375,
+   "NONE": 2.5,
+   "RANDOM": 1.4106,
+   "SOURCE": 1.4576,
+   "WRONG": 1.4021
+  },
+  {
+   "level": "ENG",
+   "source": "Permanent",
+   "target": "MetricCodes",
+   "n_target_proofs": 1375,
+   "NONE": 2.5,
+   "RANDOM": 1.4138,
+   "SOURCE": 1.4123,
+   "WRONG": 1.4021
+  },
+  {
+   "level": "ENG",
+   "source": "QuantumParallelRepetition",
+   "target": "MetricCodes",
+   "n_target_proofs": 1375,
+   "NONE": 2.5,
+   "RANDOM": 1.4138,
+   "SOURCE": 1.4034,
+   "WRONG": 1.4021
+  },
+  {
+   "level": "ENG",
+   "source": "SpherePacking",
+   "target": "MetricCodes",
+   "n_target_proofs": 1375,
+   "NONE": 2.5,
+   "RANDOM": 1.4106,
+   "SOURCE": 1.4094,
+   "WRONG": 1.4021
+  },
+  {
+   "level": "ENG",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 49,
+   "NONE": 2.5,
+   "RANDOM": 1.533,
+   "SOURCE": 1.5428,
+   "WRONG": 1.5355
+  },
+  {
+   "level": "ENG",
+   "source": "ConnesRigidity",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 49,
+   "NONE": 2.5,
+   "RANDOM": 1.533,
+   "SOURCE": 1.5183,
+   "WRONG": 1.5355
+  },
+  {
+   "level": "ENG",
+   "source": "EhrhartVolumeInequality",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 49,
+   "NONE": 2.5,
+   "RANDOM": 1.533,
+   "SOURCE": 1.5281,
+   "WRONG": 1.5355
+  },
+  {
+   "level": "ENG",
+   "source": "GapCVP",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 49,
+   "NONE": 2.5,
+   "RANDOM": 1.5452,
+   "SOURCE": 1.5403,
+   "WRONG": 1.5355
+  },
+  {
+   "level": "ENG",
+   "source": "MetricCodes",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 49,
+   "NONE": 2.5,
+   "RANDOM": 1.533,
+   "SOURCE": 1.5257,
+   "WRONG": 1.5355
+  },
+  {
+   "level": "ENG",
+   "source": "NonSoficGroup",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 49,
+   "NONE": 2.5,
+   "RANDOM": 1.533,
+   "SOURCE": 1.5257,
+   "WRONG": 1.5355
+  },
+  {
+   "level": "ENG",
+   "source": "Permanent",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 49,
+   "NONE": 2.5,
+   "RANDOM": 1.5452,
+   "SOURCE": 1.5306,
+   "WRONG": 1.5355
+  },
+  {
+   "level": "ENG",
+   "source": "QuantumParallelRepetition",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 49,
+   "NONE": 2.5,
+   "RANDOM": 1.5452,
+   "SOURCE": 1.5428,
+   "WRONG": 1.5355
+  },
+  {
+   "level": "ENG",
+   "source": "SpherePacking",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 49,
+   "NONE": 2.5,
+   "RANDOM": 1.533,
+   "SOURCE": 1.5355,
+   "WRONG": 1.5355
+  },
+  {
+   "level": "ENG",
+   "source": "CompactnessAndDegeneracy",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 383,
+   "NONE": 2.5,
+   "RANDOM": 1.5638,
+   "SOURCE": 1.5096,
+   "WRONG": 1.5594
+  },
+  {
+   "level": "ENG",
+   "source": "ConnesRigidity",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 383,
+   "NONE": 2.5,
+   "RANDOM": 1.5638,
+   "SOURCE": 1.5118,
+   "WRONG": 1.5594
+  },
+  {
+   "level": "ENG",
+   "source": "EhrhartVolumeInequality",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 383,
+   "NONE": 2.5,
+   "RANDOM": 1.5638,
+   "SOURCE": 1.5342,
+   "WRONG": 1.5594
+  },
+  {
+   "level": "ENG",
+   "source": "GapCVP",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 383,
+   "NONE": 2.5,
+   "RANDOM": 1.598,
+   "SOURCE": 1.5301,
+   "WRONG": 1.5594
+  },
+  {
+   "level": "ENG",
+   "source": "MetricCodes",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 383,
+   "NONE": 2.5,
+   "RANDOM": 1.5638,
+   "SOURCE": 1.5257,
+   "WRONG": 1.5594
+  },
+  {
+   "level": "ENG",
+   "source": "MulticolorTriangleRamsey",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 383,
+   "NONE": 2.5,
+   "RANDOM": 1.6242,
+   "SOURCE": 1.5424,
+   "WRONG": 1.5594
+  },
+  {
+   "level": "ENG",
+   "source": "Permanent",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 383,
+   "NONE": 2.5,
+   "RANDOM": 1.598,
+   "SOURCE": 1.5961,
+   "WRONG": 1.5594
+  },
+  {
+   "level": "ENG",
+   "source": "QuantumParallelRepetition",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 383,
+   "NONE": 2.5,
+   "RANDOM": 1.598,
+   "SOURCE": 1.5679,
+   "WRONG": 1.5594
+  },
+  {
+   "level": "ENG",
+   "source": "SpherePacking",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 383,
+   "NONE": 2.5,
+   "RANDOM": 1.5638,
+   "SOURCE": 1.5594,
+   "WRONG": 1.5594
+  },
+  {
+   "level": "ENG",
+   "source": "CompactnessAndDegeneracy",
+   "target": "Permanent",
+   "n_target_proofs": 313,
+   "NONE": 2.5,
+   "RANDOM": 1.4323,
+   "SOURCE": 1.4512,
+   "WRONG": 1.4306
+  },
+  {
+   "level": "ENG",
+   "source": "ConnesRigidity",
+   "target": "Permanent",
+   "n_target_proofs": 313,
+   "NONE": 2.5,
+   "RANDOM": 1.4323,
+   "SOURCE": 1.4386,
+   "WRONG": 1.4306
+  },
+  {
+   "level": "ENG",
+   "source": "EhrhartVolumeInequality",
+   "target": "Permanent",
+   "n_target_proofs": 313,
+   "NONE": 2.5,
+   "RANDOM": 1.4323,
+   "SOURCE": 1.4339,
+   "WRONG": 1.4306
+  },
+  {
+   "level": "ENG",
+   "source": "GapCVP",
+   "target": "Permanent",
+   "n_target_proofs": 313,
+   "NONE": 2.5,
+   "RANDOM": 1.424,
+   "SOURCE": 1.427,
+   "WRONG": 1.4306
+  },
+  {
+   "level": "ENG",
+   "source": "MetricCodes",
+   "target": "Permanent",
+   "n_target_proofs": 313,
+   "NONE": 2.5,
+   "RANDOM": 1.4323,
+   "SOURCE": 1.4296,
+   "WRONG": 1.4306
+  },
+  {
+   "level": "ENG",
+   "source": "MulticolorTriangleRamsey",
+   "target": "Permanent",
+   "n_target_proofs": 313,
+   "NONE": 2.5,
+   "RANDOM": 1.6199,
+   "SOURCE": 1.4987,
+   "WRONG": 1.4306
+  },
+  {
+   "level": "ENG",
+   "source": "NonSoficGroup",
+   "target": "Permanent",
+   "n_target_proofs": 313,
+   "NONE": 2.5,
+   "RANDOM": 1.4323,
+   "SOURCE": 1.4582,
+   "WRONG": 1.4306
+  },
+  {
+   "level": "ENG",
+   "source": "QuantumParallelRepetition",
+   "target": "Permanent",
+   "n_target_proofs": 313,
+   "NONE": 2.5,
+   "RANDOM": 1.424,
+   "SOURCE": 1.428,
+   "WRONG": 1.4306
+  },
+  {
+   "level": "ENG",
+   "source": "SpherePacking",
+   "target": "Permanent",
+   "n_target_proofs": 313,
+   "NONE": 2.5,
+   "RANDOM": 1.4323,
+   "SOURCE": 1.4306,
+   "WRONG": 1.4306
+  },
+  {
+   "level": "ENG",
+   "source": "CompactnessAndDegeneracy",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 659,
+   "NONE": 2.5,
+   "RANDOM": 1.4582,
+   "SOURCE": 1.4532,
+   "WRONG": 1.4394
+  },
+  {
+   "level": "ENG",
+   "source": "ConnesRigidity",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 659,
+   "NONE": 2.5,
+   "RANDOM": 1.4582,
+   "SOURCE": 1.4461,
+   "WRONG": 1.4394
+  },
+  {
+   "level": "ENG",
+   "source": "EhrhartVolumeInequality",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 659,
+   "NONE": 2.5,
+   "RANDOM": 1.4582,
+   "SOURCE": 1.438,
+   "WRONG": 1.4394
+  },
+  {
+   "level": "ENG",
+   "source": "GapCVP",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 659,
+   "NONE": 2.5,
+   "RANDOM": 1.4376,
+   "SOURCE": 1.4217,
+   "WRONG": 1.4394
+  },
+  {
+   "level": "ENG",
+   "source": "MetricCodes",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 659,
+   "NONE": 2.5,
+   "RANDOM": 1.4582,
+   "SOURCE": 1.4313,
+   "WRONG": 1.4394
+  },
+  {
+   "level": "ENG",
+   "source": "MulticolorTriangleRamsey",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 659,
+   "NONE": 2.5,
+   "RANDOM": 1.6634,
+   "SOURCE": 1.5105,
+   "WRONG": 1.4394
+  },
+  {
+   "level": "ENG",
+   "source": "NonSoficGroup",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 659,
+   "NONE": 2.5,
+   "RANDOM": 1.4582,
+   "SOURCE": 1.4666,
+   "WRONG": 1.4394
+  },
+  {
+   "level": "ENG",
+   "source": "Permanent",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 659,
+   "NONE": 2.5,
+   "RANDOM": 1.4376,
+   "SOURCE": 1.4394,
+   "WRONG": 1.4394
+  },
+  {
+   "level": "ENG",
+   "source": "SpherePacking",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 659,
+   "NONE": 2.5,
+   "RANDOM": 1.4582,
+   "SOURCE": 1.4526,
+   "WRONG": 1.4394
+  },
+  {
+   "level": "ENG",
+   "source": "CompactnessAndDegeneracy",
+   "target": "SpherePacking",
+   "n_target_proofs": 745,
+   "NONE": 2.5,
+   "RANDOM": 1.5346,
+   "SOURCE": 1.6072,
+   "WRONG": 1.6219
+  },
+  {
+   "level": "ENG",
+   "source": "ConnesRigidity",
+   "target": "SpherePacking",
+   "n_target_proofs": 745,
+   "NONE": 2.5,
+   "RANDOM": 1.5346,
+   "SOURCE": 1.5948,
+   "WRONG": 1.6219
+  },
+  {
+   "level": "ENG",
+   "source": "EhrhartVolumeInequality",
+   "target": "SpherePacking",
+   "n_target_proofs": 745,
+   "NONE": 2.5,
+   "RANDOM": 1.5346,
+   "SOURCE": 1.5351,
+   "WRONG": 1.6219
+  },
+  {
+   "level": "ENG",
+   "source": "GapCVP",
+   "target": "SpherePacking",
+   "n_target_proofs": 745,
+   "NONE": 2.5,
+   "RANDOM": 1.6052,
+   "SOURCE": 1.6086,
+   "WRONG": 1.6219
+  },
+  {
+   "level": "ENG",
+   "source": "MetricCodes",
+   "target": "SpherePacking",
+   "n_target_proofs": 745,
+   "NONE": 2.5,
+   "RANDOM": 1.5346,
+   "SOURCE": 1.5573,
+   "WRONG": 1.6219
+  },
+  {
+   "level": "ENG",
+   "source": "MulticolorTriangleRamsey",
+   "target": "SpherePacking",
+   "n_target_proofs": 745,
+   "NONE": 2.5,
+   "RANDOM": 1.7551,
+   "SOURCE": 1.5977,
+   "WRONG": 1.6219
+  },
+  {
+   "level": "ENG",
+   "source": "NonSoficGroup",
+   "target": "SpherePacking",
+   "n_target_proofs": 745,
+   "NONE": 2.5,
+   "RANDOM": 1.5346,
+   "SOURCE": 1.6752,
+   "WRONG": 1.6219
+  },
+  {
+   "level": "ENG",
+   "source": "Permanent",
+   "target": "SpherePacking",
+   "n_target_proofs": 745,
+   "NONE": 2.5,
+   "RANDOM": 1.6052,
+   "SOURCE": 1.6219,
+   "WRONG": 1.6219
+  },
+  {
+   "level": "ENG",
+   "source": "QuantumParallelRepetition",
+   "target": "SpherePacking",
+   "n_target_proofs": 745,
+   "NONE": 2.5,
+   "RANDOM": 1.6052,
+   "SOURCE": 1.6063,
+   "WRONG": 1.6219
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 110,
+   "NONE": 2.5,
+   "RANDOM": 1.4984,
+   "SOURCE": 1.4899,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 204,
+   "NONE": 2.5,
+   "RANDOM": 1.565,
+   "SOURCE": 1.4933,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 276,
+   "NONE": 2.5,
+   "RANDOM": 1.5226,
+   "SOURCE": 1.518,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "GapCVP",
+   "n_target_proofs": 393,
+   "NONE": 2.5,
+   "RANDOM": 1.3547,
+   "SOURCE": 1.3391,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "MetricCodes",
+   "n_target_proofs": 688,
+   "NONE": 2.5,
+   "RANDOM": 1.3978,
+   "SOURCE": 1.3846,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 25,
+   "NONE": 2.5,
+   "RANDOM": 1.5143,
+   "SOURCE": 1.5371,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 192,
+   "NONE": 2.5,
+   "RANDOM": 1.5746,
+   "SOURCE": 1.5029,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "Permanent",
+   "n_target_proofs": 157,
+   "NONE": 2.5,
+   "RANDOM": 1.4091,
+   "SOURCE": 1.4207,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 330,
+   "NONE": 2.5,
+   "RANDOM": 1.4611,
+   "SOURCE": 1.4307,
+   "WRONG": null
+  },
+  {
+   "level": "ENG",
+   "source": "__WITHIN__",
+   "target": "SpherePacking",
+   "n_target_proofs": 373,
+   "NONE": 2.5,
+   "RANDOM": 1.5316,
+   "SOURCE": 1.5328,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "ConnesRigidity",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 209,
+   "NONE": 4.0,
+   "RANDOM": 1.8452,
+   "SOURCE": 1.6777,
+   "WRONG": 1.7758
+  },
+  {
+   "level": "MATH",
+   "source": "EhrhartVolumeInequality",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 209,
+   "NONE": 4.0,
+   "RANDOM": 1.8464,
+   "SOURCE": 1.7408,
+   "WRONG": 1.7758
+  },
+  {
+   "level": "MATH",
+   "source": "GapCVP",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 209,
+   "NONE": 4.0,
+   "RANDOM": 1.7901,
+   "SOURCE": 1.6807,
+   "WRONG": 1.7758
+  },
+  {
+   "level": "MATH",
+   "source": "MetricCodes",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 209,
+   "NONE": 4.0,
+   "RANDOM": 1.7615,
+   "SOURCE": 1.6954,
+   "WRONG": 1.7758
+  },
+  {
+   "level": "MATH",
+   "source": "MulticolorTriangleRamsey",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 209,
+   "NONE": 4.0,
+   "RANDOM": 1.8536,
+   "SOURCE": 1.7211,
+   "WRONG": 1.7758
+  },
+  {
+   "level": "MATH",
+   "source": "NonSoficGroup",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 209,
+   "NONE": 4.0,
+   "RANDOM": 1.7556,
+   "SOURCE": 1.703,
+   "WRONG": 1.7758
+  },
+  {
+   "level": "MATH",
+   "source": "Permanent",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 209,
+   "NONE": 4.0,
+   "RANDOM": 1.8511,
+   "SOURCE": 1.6975,
+   "WRONG": 1.7758
+  },
+  {
+   "level": "MATH",
+   "source": "QuantumParallelRepetition",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 209,
+   "NONE": 4.0,
+   "RANDOM": 1.7556,
+   "SOURCE": 1.6916,
+   "WRONG": 1.7758
+  },
+  {
+   "level": "MATH",
+   "source": "SpherePacking",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 209,
+   "NONE": 4.0,
+   "RANDOM": 1.8464,
+   "SOURCE": 1.7758,
+   "WRONG": 1.7758
+  },
+  {
+   "level": "MATH",
+   "source": "CompactnessAndDegeneracy",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 287,
+   "NONE": 4.0,
+   "RANDOM": 1.694,
+   "SOURCE": 1.6535,
+   "WRONG": 1.6535
+  },
+  {
+   "level": "MATH",
+   "source": "EhrhartVolumeInequality",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 287,
+   "NONE": 4.0,
+   "RANDOM": 1.7986,
+   "SOURCE": 1.7262,
+   "WRONG": 1.6535
+  },
+  {
+   "level": "MATH",
+   "source": "GapCVP",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 287,
+   "NONE": 4.0,
+   "RANDOM": 1.7044,
+   "SOURCE": 1.6414,
+   "WRONG": 1.6535
+  },
+  {
+   "level": "MATH",
+   "source": "MetricCodes",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 287,
+   "NONE": 4.0,
+   "RANDOM": 1.6991,
+   "SOURCE": 1.6682,
+   "WRONG": 1.6535
+  },
+  {
+   "level": "MATH",
+   "source": "MulticolorTriangleRamsey",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 287,
+   "NONE": 4.0,
+   "RANDOM": 1.8164,
+   "SOURCE": 1.7413,
+   "WRONG": 1.6535
+  },
+  {
+   "level": "MATH",
+   "source": "NonSoficGroup",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 287,
+   "NONE": 4.0,
+   "RANDOM": 1.694,
+   "SOURCE": 1.6645,
+   "WRONG": 1.6535
+  },
+  {
+   "level": "MATH",
+   "source": "Permanent",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 287,
+   "NONE": 4.0,
+   "RANDOM": 1.6535,
+   "SOURCE": 1.6431,
+   "WRONG": 1.6535
+  },
+  {
+   "level": "MATH",
+   "source": "QuantumParallelRepetition",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 287,
+   "NONE": 4.0,
+   "RANDOM": 1.694,
+   "SOURCE": 1.6588,
+   "WRONG": 1.6535
+  },
+  {
+   "level": "MATH",
+   "source": "SpherePacking",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 287,
+   "NONE": 4.0,
+   "RANDOM": 1.7986,
+   "SOURCE": 1.7828,
+   "WRONG": 1.6535
+  },
+  {
+   "level": "MATH",
+   "source": "CompactnessAndDegeneracy",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 453,
+   "NONE": 4.0,
+   "RANDOM": 1.616,
+   "SOURCE": 1.6099,
+   "WRONG": 1.601
+  },
+  {
+   "level": "MATH",
+   "source": "ConnesRigidity",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 453,
+   "NONE": 4.0,
+   "RANDOM": 1.7028,
+   "SOURCE": 1.5774,
+   "WRONG": 1.601
+  },
+  {
+   "level": "MATH",
+   "source": "GapCVP",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 453,
+   "NONE": 4.0,
+   "RANDOM": 1.646,
+   "SOURCE": 1.601,
+   "WRONG": 1.601
+  },
+  {
+   "level": "MATH",
+   "source": "MetricCodes",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 453,
+   "NONE": 4.0,
+   "RANDOM": 1.6202,
+   "SOURCE": 1.6037,
+   "WRONG": 1.601
+  },
+  {
+   "level": "MATH",
+   "source": "MulticolorTriangleRamsey",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 453,
+   "NONE": 4.0,
+   "RANDOM": 1.6327,
+   "SOURCE": 1.6556,
+   "WRONG": 1.601
+  },
+  {
+   "level": "MATH",
+   "source": "NonSoficGroup",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 453,
+   "NONE": 4.0,
+   "RANDOM": 1.616,
+   "SOURCE": 1.5957,
+   "WRONG": 1.601
+  },
+  {
+   "level": "MATH",
+   "source": "Permanent",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 453,
+   "NONE": 4.0,
+   "RANDOM": 1.7071,
+   "SOURCE": 1.6168,
+   "WRONG": 1.601
+  },
+  {
+   "level": "MATH",
+   "source": "QuantumParallelRepetition",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 453,
+   "NONE": 4.0,
+   "RANDOM": 1.616,
+   "SOURCE": 1.5698,
+   "WRONG": 1.601
+  },
+  {
+   "level": "MATH",
+   "source": "SpherePacking",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 453,
+   "NONE": 4.0,
+   "RANDOM": 1.5995,
+   "SOURCE": 1.5796,
+   "WRONG": 1.601
+  },
+  {
+   "level": "MATH",
+   "source": "CompactnessAndDegeneracy",
+   "target": "GapCVP",
+   "n_target_proofs": 664,
+   "NONE": 4.0,
+   "RANDOM": 1.8345,
+   "SOURCE": 1.757,
+   "WRONG": 1.8676
+  },
+  {
+   "level": "MATH",
+   "source": "ConnesRigidity",
+   "target": "GapCVP",
+   "n_target_proofs": 664,
+   "NONE": 4.0,
+   "RANDOM": 1.8383,
+   "SOURCE": 1.7482,
+   "WRONG": 1.8676
+  },
+  {
+   "level": "MATH",
+   "source": "EhrhartVolumeInequality",
+   "target": "GapCVP",
+   "n_target_proofs": 664,
+   "NONE": 4.0,
+   "RANDOM": 1.9665,
+   "SOURCE": 1.8676,
+   "WRONG": 1.8676
+  },
+  {
+   "level": "MATH",
+   "source": "MetricCodes",
+   "target": "GapCVP",
+   "n_target_proofs": 664,
+   "NONE": 4.0,
+   "RANDOM": 1.8245,
+   "SOURCE": 1.745,
+   "WRONG": 1.8676
+  },
+  {
+   "level": "MATH",
+   "source": "MulticolorTriangleRamsey",
+   "target": "GapCVP",
+   "n_target_proofs": 664,
+   "NONE": 4.0,
+   "RANDOM": 1.997,
+   "SOURCE": 1.8736,
+   "WRONG": 1.8676
+  },
+  {
+   "level": "MATH",
+   "source": "NonSoficGroup",
+   "target": "GapCVP",
+   "n_target_proofs": 664,
+   "NONE": 4.0,
+   "RANDOM": 1.8345,
+   "SOURCE": 1.7912,
+   "WRONG": 1.8676
+  },
+  {
+   "level": "MATH",
+   "source": "Permanent",
+   "target": "GapCVP",
+   "n_target_proofs": 664,
+   "NONE": 4.0,
+   "RANDOM": 1.8283,
+   "SOURCE": 1.7329,
+   "WRONG": 1.8676
+  },
+  {
+   "level": "MATH",
+   "source": "QuantumParallelRepetition",
+   "target": "GapCVP",
+   "n_target_proofs": 664,
+   "NONE": 4.0,
+   "RANDOM": 1.8345,
+   "SOURCE": 1.7666,
+   "WRONG": 1.8676
+  },
+  {
+   "level": "MATH",
+   "source": "SpherePacking",
+   "target": "GapCVP",
+   "n_target_proofs": 664,
+   "NONE": 4.0,
+   "RANDOM": 1.9665,
+   "SOURCE": 1.9053,
+   "WRONG": 1.8676
+  },
+  {
+   "level": "MATH",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MetricCodes",
+   "n_target_proofs": 1142,
+   "NONE": 4.0,
+   "RANDOM": 1.6975,
+   "SOURCE": 1.6857,
+   "WRONG": 1.6599
+  },
+  {
+   "level": "MATH",
+   "source": "ConnesRigidity",
+   "target": "MetricCodes",
+   "n_target_proofs": 1142,
+   "NONE": 4.0,
+   "RANDOM": 1.8765,
+   "SOURCE": 1.6708,
+   "WRONG": 1.6599
+  },
+  {
+   "level": "MATH",
+   "source": "EhrhartVolumeInequality",
+   "target": "MetricCodes",
+   "n_target_proofs": 1142,
+   "NONE": 4.0,
+   "RANDOM": 1.7483,
+   "SOURCE": 1.7132,
+   "WRONG": 1.6599
+  },
+  {
+   "level": "MATH",
+   "source": "GapCVP",
+   "target": "MetricCodes",
+   "n_target_proofs": 1142,
+   "NONE": 4.0,
+   "RANDOM": 1.7005,
+   "SOURCE": 1.6599,
+   "WRONG": 1.6599
+  },
+  {
+   "level": "MATH",
+   "source": "MulticolorTriangleRamsey",
+   "target": "MetricCodes",
+   "n_target_proofs": 1142,
+   "NONE": 4.0,
+   "RANDOM": 1.7694,
+   "SOURCE": 1.7331,
+   "WRONG": 1.6599
+  },
+  {
+   "level": "MATH",
+   "source": "NonSoficGroup",
+   "target": "MetricCodes",
+   "n_target_proofs": 1142,
+   "NONE": 4.0,
+   "RANDOM": 1.6975,
+   "SOURCE": 1.6743,
+   "WRONG": 1.6599
+  },
+  {
+   "level": "MATH",
+   "source": "Permanent",
+   "target": "MetricCodes",
+   "n_target_proofs": 1142,
+   "NONE": 4.0,
+   "RANDOM": 1.8755,
+   "SOURCE": 1.6907,
+   "WRONG": 1.6599
+  },
+  {
+   "level": "MATH",
+   "source": "QuantumParallelRepetition",
+   "target": "MetricCodes",
+   "n_target_proofs": 1142,
+   "NONE": 4.0,
+   "RANDOM": 1.6975,
+   "SOURCE": 1.685,
+   "WRONG": 1.6599
+  },
+  {
+   "level": "MATH",
+   "source": "SpherePacking",
+   "target": "MetricCodes",
+   "n_target_proofs": 1142,
+   "NONE": 4.0,
+   "RANDOM": 1.7483,
+   "SOURCE": 1.7309,
+   "WRONG": 1.6599
+  },
+  {
+   "level": "MATH",
+   "source": "CompactnessAndDegeneracy",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 52,
+   "NONE": 4.0,
+   "RANDOM": 1.9766,
+   "SOURCE": 1.796,
+   "WRONG": 1.8349
+  },
+  {
+   "level": "MATH",
+   "source": "ConnesRigidity",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 52,
+   "NONE": 4.0,
+   "RANDOM": 2.1978,
+   "SOURCE": 1.8941,
+   "WRONG": 1.8349
+  },
+  {
+   "level": "MATH",
+   "source": "EhrhartVolumeInequality",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 52,
+   "NONE": 4.0,
+   "RANDOM": 1.9626,
+   "SOURCE": 1.8676,
+   "WRONG": 1.8349
+  },
+  {
+   "level": "MATH",
+   "source": "GapCVP",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 52,
+   "NONE": 4.0,
+   "RANDOM": 2.0841,
+   "SOURCE": 1.7726,
+   "WRONG": 1.8349
+  },
+  {
+   "level": "MATH",
+   "source": "MetricCodes",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 52,
+   "NONE": 4.0,
+   "RANDOM": 1.9844,
+   "SOURCE": 1.7991,
+   "WRONG": 1.8349
+  },
+  {
+   "level": "MATH",
+   "source": "NonSoficGroup",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 52,
+   "NONE": 4.0,
+   "RANDOM": 1.9766,
+   "SOURCE": 1.8209,
+   "WRONG": 1.8349
+  },
+  {
+   "level": "MATH",
+   "source": "Permanent",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 52,
+   "NONE": 4.0,
+   "RANDOM": 2.2056,
+   "SOURCE": 1.9315,
+   "WRONG": 1.8349
+  },
+  {
+   "level": "MATH",
+   "source": "QuantumParallelRepetition",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 52,
+   "NONE": 4.0,
+   "RANDOM": 1.9766,
+   "SOURCE": 1.8769,
+   "WRONG": 1.8349
+  },
+  {
+   "level": "MATH",
+   "source": "SpherePacking",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 52,
+   "NONE": 4.0,
+   "RANDOM": 1.9626,
+   "SOURCE": 1.8349,
+   "WRONG": 1.8349
+  },
+  {
+   "level": "MATH",
+   "source": "CompactnessAndDegeneracy",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 328,
+   "NONE": 4.0,
+   "RANDOM": 1.7135,
+   "SOURCE": 1.6946,
+   "WRONG": 1.731
+  },
+  {
+   "level": "MATH",
+   "source": "ConnesRigidity",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 328,
+   "NONE": 4.0,
+   "RANDOM": 1.7663,
+   "SOURCE": 1.6594,
+   "WRONG": 1.731
+  },
+  {
+   "level": "MATH",
+   "source": "EhrhartVolumeInequality",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 328,
+   "NONE": 4.0,
+   "RANDOM": 1.7419,
+   "SOURCE": 1.7164,
+   "WRONG": 1.731
+  },
+  {
+   "level": "MATH",
+   "source": "GapCVP",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 328,
+   "NONE": 4.0,
+   "RANDOM": 1.764,
+   "SOURCE": 1.6929,
+   "WRONG": 1.731
+  },
+  {
+   "level": "MATH",
+   "source": "MetricCodes",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 328,
+   "NONE": 4.0,
+   "RANDOM": 1.7201,
+   "SOURCE": 1.6949,
+   "WRONG": 1.731
+  },
+  {
+   "level": "MATH",
+   "source": "MulticolorTriangleRamsey",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 328,
+   "NONE": 4.0,
+   "RANDOM": 1.7531,
+   "SOURCE": 1.764,
+   "WRONG": 1.731
+  },
+  {
+   "level": "MATH",
+   "source": "Permanent",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 328,
+   "NONE": 4.0,
+   "RANDOM": 1.7728,
+   "SOURCE": 1.6924,
+   "WRONG": 1.731
+  },
+  {
+   "level": "MATH",
+   "source": "QuantumParallelRepetition",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 328,
+   "NONE": 4.0,
+   "RANDOM": 1.7135,
+   "SOURCE": 1.6777,
+   "WRONG": 1.731
+  },
+  {
+   "level": "MATH",
+   "source": "SpherePacking",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 328,
+   "NONE": 4.0,
+   "RANDOM": 1.7419,
+   "SOURCE": 1.731,
+   "WRONG": 1.731
+  },
+  {
+   "level": "MATH",
+   "source": "CompactnessAndDegeneracy",
+   "target": "Permanent",
+   "n_target_proofs": 247,
+   "NONE": 4.0,
+   "RANDOM": 1.8604,
+   "SOURCE": 1.8501,
+   "WRONG": 1.9265
+  },
+  {
+   "level": "MATH",
+   "source": "ConnesRigidity",
+   "target": "Permanent",
+   "n_target_proofs": 247,
+   "NONE": 4.0,
+   "RANDOM": 1.86,
+   "SOURCE": 1.8016,
+   "WRONG": 1.9265
+  },
+  {
+   "level": "MATH",
+   "source": "EhrhartVolumeInequality",
+   "target": "Permanent",
+   "n_target_proofs": 247,
+   "NONE": 4.0,
+   "RANDOM": 1.9368,
+   "SOURCE": 1.8793,
+   "WRONG": 1.9265
+  },
+  {
+   "level": "MATH",
+   "source": "GapCVP",
+   "target": "Permanent",
+   "n_target_proofs": 247,
+   "NONE": 4.0,
+   "RANDOM": 1.8604,
+   "SOURCE": 1.8234,
+   "WRONG": 1.9265
+  },
+  {
+   "level": "MATH",
+   "source": "MetricCodes",
+   "target": "Permanent",
+   "n_target_proofs": 247,
+   "NONE": 4.0,
+   "RANDOM": 1.8489,
+   "SOURCE": 1.8131,
+   "WRONG": 1.9265
+  },
+  {
+   "level": "MATH",
+   "source": "MulticolorTriangleRamsey",
+   "target": "Permanent",
+   "n_target_proofs": 247,
+   "NONE": 4.0,
+   "RANDOM": 1.9671,
+   "SOURCE": 1.9203,
+   "WRONG": 1.9265
+  },
+  {
+   "level": "MATH",
+   "source": "NonSoficGroup",
+   "target": "Permanent",
+   "n_target_proofs": 247,
+   "NONE": 4.0,
+   "RANDOM": 1.8604,
+   "SOURCE": 1.8263,
+   "WRONG": 1.9265
+  },
+  {
+   "level": "MATH",
+   "source": "QuantumParallelRepetition",
+   "target": "Permanent",
+   "n_target_proofs": 247,
+   "NONE": 4.0,
+   "RANDOM": 1.8604,
+   "SOURCE": 1.8439,
+   "WRONG": 1.9265
+  },
+  {
+   "level": "MATH",
+   "source": "SpherePacking",
+   "target": "Permanent",
+   "n_target_proofs": 247,
+   "NONE": 4.0,
+   "RANDOM": 1.9368,
+   "SOURCE": 1.9265,
+   "WRONG": 1.9265
+  },
+  {
+   "level": "MATH",
+   "source": "CompactnessAndDegeneracy",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 505,
+   "NONE": 4.0,
+   "RANDOM": 1.7684,
+   "SOURCE": 1.7371,
+   "WRONG": 1.7189
+  },
+  {
+   "level": "MATH",
+   "source": "ConnesRigidity",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 505,
+   "NONE": 4.0,
+   "RANDOM": 1.8268,
+   "SOURCE": 1.6798,
+   "WRONG": 1.7189
+  },
+  {
+   "level": "MATH",
+   "source": "EhrhartVolumeInequality",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 505,
+   "NONE": 4.0,
+   "RANDOM": 1.7939,
+   "SOURCE": 1.7224,
+   "WRONG": 1.7189
+  },
+  {
+   "level": "MATH",
+   "source": "GapCVP",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 505,
+   "NONE": 4.0,
+   "RANDOM": 1.7918,
+   "SOURCE": 1.7118,
+   "WRONG": 1.7189
+  },
+  {
+   "level": "MATH",
+   "source": "MetricCodes",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 505,
+   "NONE": 4.0,
+   "RANDOM": 1.7708,
+   "SOURCE": 1.7101,
+   "WRONG": 1.7189
+  },
+  {
+   "level": "MATH",
+   "source": "MulticolorTriangleRamsey",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 505,
+   "NONE": 4.0,
+   "RANDOM": 1.8398,
+   "SOURCE": 1.8322,
+   "WRONG": 1.7189
+  },
+  {
+   "level": "MATH",
+   "source": "NonSoficGroup",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 505,
+   "NONE": 4.0,
+   "RANDOM": 1.7684,
+   "SOURCE": 1.7325,
+   "WRONG": 1.7189
+  },
+  {
+   "level": "MATH",
+   "source": "Permanent",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 505,
+   "NONE": 4.0,
+   "RANDOM": 1.8292,
+   "SOURCE": 1.7189,
+   "WRONG": 1.7189
+  },
+  {
+   "level": "MATH",
+   "source": "SpherePacking",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 505,
+   "NONE": 4.0,
+   "RANDOM": 1.7939,
+   "SOURCE": 1.7766,
+   "WRONG": 1.7189
+  },
+  {
+   "level": "MATH",
+   "source": "CompactnessAndDegeneracy",
+   "target": "SpherePacking",
+   "n_target_proofs": 776,
+   "NONE": 4.0,
+   "RANDOM": 1.6784,
+   "SOURCE": 1.6178,
+   "WRONG": 1.7181
+  },
+  {
+   "level": "MATH",
+   "source": "ConnesRigidity",
+   "target": "SpherePacking",
+   "n_target_proofs": 776,
+   "NONE": 4.0,
+   "RANDOM": 1.9484,
+   "SOURCE": 1.6651,
+   "WRONG": 1.7181
+  },
+  {
+   "level": "MATH",
+   "source": "EhrhartVolumeInequality",
+   "target": "SpherePacking",
+   "n_target_proofs": 776,
+   "NONE": 4.0,
+   "RANDOM": 1.6368,
+   "SOURCE": 1.5918,
+   "WRONG": 1.7181
+  },
+  {
+   "level": "MATH",
+   "source": "GapCVP",
+   "target": "SpherePacking",
+   "n_target_proofs": 776,
+   "NONE": 4.0,
+   "RANDOM": 1.7252,
+   "SOURCE": 1.6335,
+   "WRONG": 1.7181
+  },
+  {
+   "level": "MATH",
+   "source": "MetricCodes",
+   "target": "SpherePacking",
+   "n_target_proofs": 776,
+   "NONE": 4.0,
+   "RANDOM": 1.679,
+   "SOURCE": 1.6314,
+   "WRONG": 1.7181
+  },
+  {
+   "level": "MATH",
+   "source": "MulticolorTriangleRamsey",
+   "target": "SpherePacking",
+   "n_target_proofs": 776,
+   "NONE": 4.0,
+   "RANDOM": 1.6589,
+   "SOURCE": 1.6298,
+   "WRONG": 1.7181
+  },
+  {
+   "level": "MATH",
+   "source": "NonSoficGroup",
+   "target": "SpherePacking",
+   "n_target_proofs": 776,
+   "NONE": 4.0,
+   "RANDOM": 1.6784,
+   "SOURCE": 1.6211,
+   "WRONG": 1.7181
+  },
+  {
+   "level": "MATH",
+   "source": "Permanent",
+   "target": "SpherePacking",
+   "n_target_proofs": 776,
+   "NONE": 4.0,
+   "RANDOM": 1.949,
+   "SOURCE": 1.7181,
+   "WRONG": 1.7181
+  },
+  {
+   "level": "MATH",
+   "source": "QuantumParallelRepetition",
+   "target": "SpherePacking",
+   "n_target_proofs": 776,
+   "NONE": 4.0,
+   "RANDOM": 1.6784,
+   "SOURCE": 1.6391,
+   "WRONG": 1.7181
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "CompactnessAndDegeneracy",
+   "n_target_proofs": 105,
+   "NONE": 4.0,
+   "RANDOM": 1.7728,
+   "SOURCE": 1.6571,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "ConnesRigidity",
+   "n_target_proofs": 144,
+   "NONE": 4.0,
+   "RANDOM": 1.7371,
+   "SOURCE": 1.703,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "EhrhartVolumeInequality",
+   "n_target_proofs": 227,
+   "NONE": 4.0,
+   "RANDOM": 1.5913,
+   "SOURCE": 1.561,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "GapCVP",
+   "n_target_proofs": 332,
+   "NONE": 4.0,
+   "RANDOM": 1.8093,
+   "SOURCE": 1.6786,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "MetricCodes",
+   "n_target_proofs": 571,
+   "NONE": 4.0,
+   "RANDOM": 1.6916,
+   "SOURCE": 1.6586,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "MulticolorTriangleRamsey",
+   "n_target_proofs": 26,
+   "NONE": 4.0,
+   "RANDOM": 1.9942,
+   "SOURCE": 1.7666,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "NonSoficGroup",
+   "n_target_proofs": 164,
+   "NONE": 4.0,
+   "RANDOM": 1.6908,
+   "SOURCE": 1.6704,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "Permanent",
+   "n_target_proofs": 124,
+   "NONE": 4.0,
+   "RANDOM": 1.806,
+   "SOURCE": 1.7559,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "QuantumParallelRepetition",
+   "n_target_proofs": 253,
+   "NONE": 4.0,
+   "RANDOM": 1.7447,
+   "SOURCE": 1.6311,
+   "WRONG": null
+  },
+  {
+   "level": "MATH",
+   "source": "__WITHIN__",
+   "target": "SpherePacking",
+   "n_target_proofs": 388,
+   "NONE": 4.0,
+   "RANDOM": 1.632,
+   "SOURCE": 1.562,
+   "WRONG": null
+  }
+ ]
+}

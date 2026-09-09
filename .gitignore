@@ -12,3 +12,5 @@ leanboard/r/*.log
 leanboard/s/*.log
 leanboard/s/kinds.json
 leanboard/s/vocab_sets.json
+leanboard/t/*.log
+leanboard/t/trajectories.json

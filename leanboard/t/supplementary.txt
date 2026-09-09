@@ -1,0 +1,22 @@
+=== FINGERPRINT TEST: identify the source development from a held-out proof
+  L1    accuracy 0.453  (chance 0.100)  alphabet=64
+  L2    accuracy 0.300  (chance 0.100)  alphabet=12
+  L3    accuracy 0.272  (chance 0.100)  alphabet=6
+  MATH  accuracy 0.261  (chance 0.100)  alphabet=7
+
+=== DIRECTIONALITY excluding MulticolorTriangleRamsey (57 proofs)
+  L2    mean |asymmetry| = 0.0972  (n=36 unordered pairs)
+  MATH  mean |asymmetry| = 0.0633  (n=36 unordered pairs)
+
+=== QPR (section 18)
+  L2    QPR as source: SOURCE-vs-WRONG +0.0875   as target: -0.1453
+        QPR helps most: Permanent +0.287, EhrhartVolumeInequ +0.139, GapCVP +0.135
+  MATH  QPR as source: SOURCE-vs-WRONG +0.0399   as target: -0.0168
+        QPR helps most: GapCVP +0.101, CompactnessAndDege +0.084, Permanent +0.083
+  QPR's most over-represented L2 transitions vs the corpus mean:
+      APPLY->INTRO           QPR 0.0829 vs corpus 0.0409
+      REWRITE->REWRITE       QPR 0.1195 vs corpus 0.0906
+      INTRO->APPLY           QPR 0.0406 vs corpus 0.0235
+      REWRITE->APPLY         QPR 0.0669 vs corpus 0.0538
+      INTRO->REWRITE         QPR 0.0235 vs corpus 0.0143
+      CHAIN->APPLY           QPR 0.0150 vs corpus 0.0072
