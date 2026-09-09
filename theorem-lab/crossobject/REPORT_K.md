@@ -1,7 +1,7 @@
 # Report K — Cross-object holdout: breaking (and then examining) the ceiling
 
 Pre-registration: `PREREG.md`, written before the run. Code: `crossobject.py`
-(main), `disagreement.py` (post-hoc), `ablate_gift.py` (post-hoc). Results:
+(main), `probe_extension.py` (post-hoc), `ablate_gift.py` (post-hoc). Results:
 `freeze.json`, `result.json`, `disagreement.json`, `ablate_gift.json`.
 
 ## K.1 The ceiling this targets
@@ -56,7 +56,7 @@ inside the training set.
 ## K.5 The system can detect and repair it, unaided (post-hoc)
 
 Under-determination is detectable without the answer: two surviving hypotheses
-*disagree about a specific, nameable object*. `disagreement.py` keeps every op
+*disagree about a specific, nameable object*. `probe_extension.py` keeps every op
 tied for best on training, finds the smallest unobserved object where the
 survivors differ, and queries just that one.
 
