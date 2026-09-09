@@ -1,0 +1,330 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "sizes": {
+  "flt": 25413,
+  "ns": 2486,
+  "qpr": 581
+ },
+ "pairs": {
+  "qpr_flt": {
+   "shared": 487,
+   "jaccard": 0.0191,
+   "frac_of_qpr": 0.8382,
+   "frac_of_flt": 0.0192
+  },
+  "qpr_ns": {
+   "shared": 319,
+   "jaccard": 0.1161,
+   "frac_of_qpr": 0.5491,
+   "frac_of_ns": 0.1283
+  },
+  "flt_ns": {
+   "shared": 1948,
+   "jaccard": 0.0751,
+   "frac_of_flt": 0.0767,
+   "frac_of_ns": 0.7836
+  }
+ },
+ "qpr_only": 88,
+ "qpr_only_by_area": [
+  [
+   "LinearAlgebra.Matrix",
+   26
+  ],
+  [
+   "Data.Matrix",
+   10
+  ],
+  [
+   "Analysis.InnerProductSpace",
+   5
+  ],
+  [
+   "Analysis.Normed",
+   5
+  ],
+  [
+   "Logic.Equiv",
+   5
+  ],
+  [
+   "Analysis.CStarAlgebra",
+   4
+  ],
+  [
+   "Algebra.Star",
+   4
+  ],
+  [
+   "Analysis.SpecialFunctions",
+   4
+  ],
+  [
+   "Algebra.BigOperators",
+   3
+  ],
+  [
+   "Data.Finset",
+   3
+  ],
+  [
+   "InformationTheory.KullbackLeibler",
+   3
+  ],
+  [
+   "LinearAlgebra.UnitaryGroup",
+   2
+  ],
+  [
+   "Algebra.Notation",
+   2
+  ],
+  [
+   "Data.Fintype",
+   2
+  ],
+  [
+   "Data.Fin",
+   2
+  ]
+ ],
+ "qpr_shared_all_three": 313,
+ "qpr_by_area": [
+  [
+   "LinearAlgebra.Matrix",
+   68
+  ],
+  [
+   "Data.Matrix",
+   49
+  ],
+  [
+   "Algebra.Order",
+   44
+  ],
+  [
+   "Algebra.Group",
+   37
+  ],
+  [
+   "Analysis.SpecialFunctions",
+   34
+  ],
+  [
+   "Data.Finset",
+   32
+  ],
+  [
+   "Analysis.InnerProductSpace",
+   29
+  ],
+  [
+   "Logic.Equiv",
+   28
+  ],
+  [
+   "Algebra.BigOperators",
+   26
+  ],
+  [
+   "Order.Defs",
+   24
+  ],
+  [
+   "Data.Fintype",
+   21
+  ],
+  [
+   "Basic.Complex",
+   16
+  ],
+  [
+   "Analysis.Normed",
+   16
+  ],
+  [
+   "Data.Fin",
+   11
+  ],
+  [
+   "Algebra.GroupWithZero",
+   10
+  ]
+ ],
+ "ten_proofs_sizes": {
+  "CompactnessAndDegeneracy": 384,
+  "ConnesRigidity": 1120,
+  "EhrhartVolumeInequality": 1008,
+  "GapCVP": 640,
+  "MetricCodes": 1407,
+  "MulticolorTriangleRamsey": 146,
+  "NonSoficGroup": 609,
+  "Permanent": 867,
+  "QuantumParallelRepetition": 581,
+  "SpherePacking": 1208
+ },
+ "ten_proofs_pairwise_jaccard": {
+  "CompactnessAndDegeneracy": {
+   "CompactnessAndDegeneracy": 1.0,
+   "ConnesRigidity": 0.082,
+   "EhrhartVolumeInequality": 0.1056,
+   "GapCVP": 0.113,
+   "MetricCodes": 0.1131,
+   "MulticolorTriangleRamsey": 0.1726,
+   "NonSoficGroup": 0.1587,
+   "Permanent": 0.1022,
+   "QuantumParallelRepetition": 0.1557,
+   "SpherePacking": 0.0927
+  },
+  "ConnesRigidity": {
+   "CompactnessAndDegeneracy": 0.082,
+   "ConnesRigidity": 1.0,
+   "EhrhartVolumeInequality": 0.1337,
+   "GapCVP": 0.0993,
+   "MetricCodes": 0.1266,
+   "MulticolorTriangleRamsey": 0.042,
+   "NonSoficGroup": 0.1932,
+   "Permanent": 0.1082,
+   "QuantumParallelRepetition": 0.1257,
+   "SpherePacking": 0.1144
+  },
+  "EhrhartVolumeInequality": {
+   "CompactnessAndDegeneracy": 0.1056,
+   "ConnesRigidity": 0.1337,
+   "EhrhartVolumeInequality": 1.0,
+   "GapCVP": 0.0729,
+   "MetricCodes": 0.1365,
+   "MulticolorTriangleRamsey": 0.0539,
+   "NonSoficGroup": 0.1379,
+   "Permanent": 0.0788,
+   "QuantumParallelRepetition": 0.1675,
+   "SpherePacking": 0.2189
+  },
+  "GapCVP": {
+   "CompactnessAndDegeneracy": 0.113,
+   "ConnesRigidity": 0.0993,
+   "EhrhartVolumeInequality": 0.0729,
+   "GapCVP": 1.0,
+   "MetricCodes": 0.1216,
+   "MulticolorTriangleRamsey": 0.0752,
+   "NonSoficGroup": 0.1192,
+   "Permanent": 0.1382,
+   "QuantumParallelRepetition": 0.1348,
+   "SpherePacking": 0.0769
+  },
+  "MetricCodes": {
+   "CompactnessAndDegeneracy": 0.1131,
+   "ConnesRigidity": 0.1266,
+   "EhrhartVolumeInequality": 0.1365,
+   "GapCVP": 0.1216,
+   "MetricCodes": 1.0,
+   "MulticolorTriangleRamsey": 0.0529,
+   "NonSoficGroup": 0.1364,
+   "Permanent": 0.1728,
+   "QuantumParallelRepetition": 0.168,
+   "SpherePacking": 0.153
+  },
+  "MulticolorTriangleRamsey": {
+   "CompactnessAndDegeneracy": 0.1726,
+   "ConnesRigidity": 0.042,
+   "EhrhartVolumeInequality": 0.0539,
+   "GapCVP": 0.0752,
+   "MetricCodes": 0.0529,
+   "MulticolorTriangleRamsey": 1.0,
+   "NonSoficGroup": 0.0863,
+   "Permanent": 0.0508,
+   "QuantumParallelRepetition": 0.1082,
+   "SpherePacking": 0.0545
+  },
+  "NonSoficGroup": {
+   "CompactnessAndDegeneracy": 0.1587,
+   "ConnesRigidity": 0.1932,
+   "EhrhartVolumeInequality": 0.1379,
+   "GapCVP": 0.1192,
+   "MetricCodes": 0.1364,
+   "MulticolorTriangleRamsey": 0.0863,
+   "NonSoficGroup": 1.0,
+   "Permanent": 0.1156,
+   "QuantumParallelRepetition": 0.19,
+   "SpherePacking": 0.1161
+  },
+  "Permanent": {
+   "CompactnessAndDegeneracy": 0.1022,
+   "ConnesRigidity": 0.1082,
+   "EhrhartVolumeInequality": 0.0788,
+   "GapCVP": 0.1382,
+   "MetricCodes": 0.1728,
+   "MulticolorTriangleRamsey": 0.0508,
+   "NonSoficGroup": 0.1156,
+   "Permanent": 1.0,
+   "QuantumParallelRepetition": 0.1037,
+   "SpherePacking": 0.0663
+  },
+  "QuantumParallelRepetition": {
+   "CompactnessAndDegeneracy": 0.1557,
+   "ConnesRigidity": 0.1257,
+   "EhrhartVolumeInequality": 0.1675,
+   "GapCVP": 0.1348,
+   "MetricCodes": 0.168,
+   "MulticolorTriangleRamsey": 0.1082,
+   "NonSoficGroup": 0.19,
+   "Permanent": 0.1037,
+   "QuantumParallelRepetition": 1.0,
+   "SpherePacking": 0.1402
+  },
+  "SpherePacking": {
+   "CompactnessAndDegeneracy": 0.0927,
+   "ConnesRigidity": 0.1144,
+   "EhrhartVolumeInequality": 0.2189,
+   "GapCVP": 0.0769,
+   "MetricCodes": 0.153,
+   "MulticolorTriangleRamsey": 0.0545,
+   "NonSoficGroup": 0.1161,
+   "Permanent": 0.0663,
+   "QuantumParallelRepetition": 0.1402,
+   "SpherePacking": 1.0
+  }
+ },
+ "ten_vs_flt_ns": {
+  "CompactnessAndDegeneracy": {
+   "vs_flt": 0.8021,
+   "vs_ns": 0.4583
+  },
+  "ConnesRigidity": {
+   "vs_flt": 0.8313,
+   "vs_ns": 0.3152
+  },
+  "EhrhartVolumeInequality": {
+   "vs_flt": 0.7907,
+   "vs_ns": 0.5625
+  },
+  "GapCVP": {
+   "vs_flt": 0.825,
+   "vs_ns": 0.3219
+  },
+  "MetricCodes": {
+   "vs_flt": 0.7974,
+   "vs_ns": 0.3547
+  },
+  "MulticolorTriangleRamsey": {
+   "vs_flt": 0.8356,
+   "vs_ns": 0.6027
+  },
+  "NonSoficGroup": {
+   "vs_flt": 0.8391,
+   "vs_ns": 0.4401
+  },
+  "Permanent": {
+   "vs_flt": 0.8454,
+   "vs_ns": 0.2295
+  },
+  "QuantumParallelRepetition": {
+   "vs_flt": 0.8382,
+   "vs_ns": 0.5491
+  },
+  "SpherePacking": {
+   "vs_flt": 0.8626,
+   "vs_ns": 0.5497
+  }
+ }
+}

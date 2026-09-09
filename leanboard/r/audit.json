@@ -1,0 +1,746 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "repo": "openai/ten-proofs",
+ "lean_toolchain": "leanprover/lean4:v4.32.0",
+ "one_file_per_result": true,
+ "files": [
+  {
+   "file": "CompactnessAndDegeneracy.lean",
+   "bytes": 721769,
+   "lines": 18589,
+   "declarations": 941,
+   "by_kind": {
+    "structure": 4,
+    "def": 240,
+    "theorem": 406,
+    "lemma": 250,
+    "instance": 8,
+    "abbrev": 33
+   },
+   "theorems": 656,
+   "definitions": 277,
+   "imports_total": 1,
+   "mathlib_imports": 1,
+   "mathlib_import_list": [
+    "Mathlib"
+   ],
+   "namespaces": [
+    [
+     "CompactnessConjecture",
+     1
+    ],
+    [
+     "TwoDegenerateGraphs",
+     1
+    ],
+    [
+     "BinaryPairKernel",
+     1
+    ],
+    [
+     "ParentSystem",
+     1
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 0,
+   "proofs_by": 1701
+  },
+  {
+   "file": "ConnesRigidity.lean",
+   "bytes": 1449151,
+   "lines": 37375,
+   "declarations": 2776,
+   "by_kind": {
+    "theorem": 1930,
+    "abbrev": 76,
+    "structure": 29,
+    "def": 667,
+    "instance": 73,
+    "inductive": 1
+   },
+   "theorems": 1930,
+   "definitions": 773,
+   "imports_total": 1,
+   "mathlib_imports": 1,
+   "mathlib_import_list": [
+    "Mathlib"
+   ],
+   "namespaces": [
+    [
+     "CornulierUltralimit",
+     6
+    ],
+    [
+     "PositiveSpectralFunctional",
+     5
+    ],
+    [
+     "StabilizedBlockReduction",
+     3
+    ],
+    [
+     "MennickeIdentity",
+     2
+    ],
+    [
+     "CarryGroup",
+     2
+    ],
+    [
+     "ExponentFourExtension",
+     2
+    ],
+    [
+     "ConnesRigidity",
+     1
+    ],
+    [
+     "FeedbackBooleanPolynomial",
+     1
+    ],
+    [
+     "CountableDiscreteGroup",
+     1
+    ],
+    [
+     "UnitaryRepresentation",
+     1
+    ],
+    [
+     "FiniteIndex",
+     1
+    ],
+    [
+     "LocalElementaryProof",
+     1
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 0,
+   "proofs_by": 2952
+  },
+  {
+   "file": "EhrhartVolumeInequality.lean",
+   "bytes": 2163484,
+   "lines": 55756,
+   "declarations": 2361,
+   "by_kind": {
+    "abbrev": 21,
+    "def": 458,
+    "structure": 3,
+    "theorem": 1875,
+    "instance": 4
+   },
+   "theorems": 1875,
+   "definitions": 482,
+   "imports_total": 1,
+   "mathlib_imports": 1,
+   "mathlib_import_list": [
+    "Mathlib"
+   ],
+   "namespaces": [
+    [
+     "Ehrhart",
+     1
+    ],
+    [
+     "BodyMeasure",
+     1
+    ],
+    [
+     "LatticeAsymptotics",
+     1
+    ],
+    [
+     "SupportFunction",
+     1
+    ],
+    [
+     "MonomialIntegrability",
+     1
+    ],
+    [
+     "MonomialDivergence",
+     1
+    ],
+    [
+     "BergmanMonomials",
+     1
+    ],
+    [
+     "TorusCharacters",
+     1
+    ],
+    [
+     "WeightedTorusHilbert",
+     1
+    ],
+    [
+     "JetEnvelopeSlopeBridge",
+     1
+    ],
+    [
+     "JetEnvelopeSlopeConvergence",
+     1
+    ],
+    [
+     "BergmanNormalization",
+     1
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 0,
+   "proofs_by": 3819
+  },
+  {
+   "file": "GapCVP.lean",
+   "bytes": 5335203,
+   "lines": 130431,
+   "declarations": 8025,
+   "by_kind": {
+    "def": 4116,
+    "theorem": 3683,
+    "structure": 42,
+    "abbrev": 156,
+    "instance": 17,
+    "class": 1,
+    "inductive": 10
+   },
+   "theorems": 3683,
+   "definitions": 4325,
+   "imports_total": 1,
+   "mathlib_imports": 1,
+   "mathlib_import_list": [
+    "Mathlib"
+   ],
+   "namespaces": [
+    [
+     "PhysicalOrdinaryShiftedCheckBitInstantiation",
+     8
+    ],
+    [
+     "Core",
+     5
+    ],
+    [
+     "BinarySourceFieldMultiplicationTM",
+     4
+    ],
+    [
+     "Factor400BinaryConstructiveSourcePlaces",
+     3
+    ],
+    [
+     "BinaryEncoding",
+     2
+    ],
+    [
+     "OutputBoundedDependentRecordFold",
+     2
+    ],
+    [
+     "EffectiveBinaryGaussian",
+     2
+    ],
+    [
+     "BinaryCompactSourceFirstOccurrenceTM",
+     2
+    ],
+    [
+     "BinaryFieldInverseTM",
+     2
+    ],
+    [
+     "BinarySourceModularReductionFoldTM",
+     2
+    ],
+    [
+     "SourcePreprocessingTM",
+     2
+    ],
+    [
+     "GaussianAdaptivePhysicalColumnIterationBoundTM",
+     2
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 0,
+   "proofs_by": 6807
+  },
+  {
+   "file": "MetricCodes.lean",
+   "bytes": 4531268,
+   "lines": 114407,
+   "declarations": 5683,
+   "by_kind": {
+    "instance": 41,
+    "abbrev": 83,
+    "def": 1204,
+    "theorem": 4324,
+    "structure": 25,
+    "inductive": 2,
+    "lemma": 4
+   },
+   "theorems": 4328,
+   "definitions": 1314,
+   "imports_total": 1,
+   "mathlib_imports": 0,
+   "mathlib_import_list": [],
+   "namespaces": [
+    [
+     "HigherHarmonicYoung",
+     35
+    ],
+    [
+     "MetricCodes",
+     17
+    ],
+    [
+     "Spherical",
+     16
+    ],
+    [
+     "HigherHierarchy",
+     8
+    ],
+    [
+     "SpherePacking",
+     6
+    ],
+    [
+     "UniversalBGGRootComplex",
+     6
+    ],
+    [
+     "Johnson",
+     3
+    ],
+    [
+     "MixedSignature",
+     3
+    ],
+    [
+     "Boolean",
+     2
+    ],
+    [
+     "SpectralAsymptotics",
+     2
+    ],
+    [
+     "Numerics",
+     2
+    ],
+    [
+     "HigherHierarchyChebyshev",
+     2
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 0,
+   "proofs_by": 9076
+  },
+  {
+   "file": "MulticolorTriangleRamsey.lean",
+   "bytes": 125769,
+   "lines": 3054,
+   "declarations": 139,
+   "by_kind": {
+    "def": 42,
+    "theorem": 96,
+    "structure": 1
+   },
+   "theorems": 96,
+   "definitions": 43,
+   "imports_total": 1,
+   "mathlib_imports": 1,
+   "mathlib_import_list": [
+    "Mathlib"
+   ],
+   "namespaces": [
+    [
+     "ErdosProblems.MulticolourTriangleRamsey",
+     1
+    ],
+    [
+     "PaletteBlockCertificate",
+     1
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 0,
+   "proofs_by": 398
+  },
+  {
+   "file": "NonSoficGroup.lean",
+   "bytes": 1343031,
+   "lines": 34441,
+   "declarations": 1436,
+   "by_kind": {
+    "abbrev": 10,
+    "structure": 17,
+    "class": 3,
+    "theorem": 1061,
+    "def": 324,
+    "inductive": 2,
+    "instance": 19
+   },
+   "theorems": 1061,
+   "definitions": 356,
+   "imports_total": 1,
+   "mathlib_imports": 1,
+   "mathlib_import_list": [
+    "Mathlib"
+   ],
+   "namespaces": [
+    [
+     "KunLiteralSourceSelectedComponents",
+     4
+    ],
+    [
+     "ThompsonPrefixInsertion",
+     3
+    ],
+    [
+     "KunRootedWordPower",
+     3
+    ],
+    [
+     "SourceProductThroughAlpha",
+     3
+    ],
+    [
+     "KunActualBothTransportedOverlapScales",
+     2
+    ],
+    [
+     "SoficGroups",
+     1
+    ],
+    [
+     "LocalMultiplicativeOn",
+     1
+    ],
+    [
+     "MatrixCorner",
+     1
+    ],
+    [
+     "SourceGeneration",
+     1
+    ],
+    [
+     "PrefixCompressionU",
+     1
+    ],
+    [
+     "PrefixCompression",
+     1
+    ],
+    [
+     "CheegerPoincare",
+     1
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 0,
+   "proofs_by": 3025
+  },
+  {
+   "file": "Permanent.lean",
+   "bytes": 1131535,
+   "lines": 27564,
+   "declarations": 1393,
+   "by_kind": {
+    "theorem": 972,
+    "def": 372,
+    "inductive": 7,
+    "structure": 10,
+    "abbrev": 30,
+    "instance": 2
+   },
+   "theorems": 972,
+   "definitions": 419,
+   "imports_total": 1,
+   "mathlib_imports": 1,
+   "mathlib_import_list": [
+    "Mathlib"
+   ],
+   "namespaces": [
+    [
+     "Formula",
+     7
+    ],
+    [
+     "RationalFormula",
+     7
+    ],
+    [
+     "FreeAffineForm",
+     2
+    ],
+    [
+     "CircuitAdjoint",
+     2
+    ],
+    [
+     "MvPolynomial.IsWeightedHomogeneous",
+     1
+    ],
+    [
+     "Finset",
+     1
+    ],
+    [
+     "PermanentCircuitCompatibility",
+     1
+    ],
+    [
+     "PermanentRollout",
+     1
+    ],
+    [
+     "FreeAffineInput",
+     1
+    ],
+    [
+     "FreeAffineInstruction",
+     1
+    ],
+    [
+     "FreeAffineCircuit",
+     1
+    ],
+    [
+     "ReverseAdjoint",
+     1
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 0,
+   "proofs_by": 2204
+  },
+  {
+   "file": "QuantumParallelRepetition.lean",
+   "bytes": 2683872,
+   "lines": 70981,
+   "declarations": 2638,
+   "by_kind": {
+    "structure": 17,
+    "def": 747,
+    "theorem": 1813,
+    "abbrev": 58,
+    "instance": 3
+   },
+   "theorems": 1813,
+   "definitions": 822,
+   "imports_total": 1,
+   "mathlib_imports": 1,
+   "mathlib_import_list": [
+    "Mathlib"
+   ],
+   "namespaces": [
+    [
+     "Game",
+     2
+    ],
+    [
+     "Strategy",
+     2
+    ],
+    [
+     "QuantumParallelRepetition",
+     1
+    ],
+    [
+     "FiniteEventLaw",
+     1
+    ],
+    [
+     "ClassicalSampling",
+     1
+    ],
+    [
+     "Pinsker",
+     1
+    ],
+    [
+     "ClassicalInformation",
+     1
+    ],
+    [
+     "UnconditionalActualFairSourceRoundingContext",
+     1
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 0,
+   "proofs_by": 4292
+  },
+  {
+   "file": "SpherePacking.lean",
+   "bytes": 2096663,
+   "lines": 55617,
+   "declarations": 2220,
+   "by_kind": {
+    "abbrev": 6,
+    "def": 375,
+    "structure": 10,
+    "theorem": 1702,
+    "instance": 20,
+    "lemma": 107
+   },
+   "theorems": 1809,
+   "definitions": 391,
+   "imports_total": 1,
+   "mathlib_imports": 1,
+   "mathlib_import_list": [
+    "Mathlib"
+   ],
+   "namespaces": [
+    [
+     "SpherePacking.Alternative",
+     13
+    ],
+    [
+     "SpherePacking.CohnElkies",
+     7
+    ],
+    [
+     "SchwartzMap",
+     5
+    ],
+    [
+     "CohnElkies",
+     4
+    ],
+    [
+     "SpherePacking",
+     3
+    ],
+    [
+     "PeriodicConstantApprox",
+     3
+    ],
+    [
+     "PackingBounds",
+     3
+    ],
+    [
+     "PoissonSummation.Standard",
+     2
+    ],
+    [
+     "SchwartzMap.PoissonSummation.Standard",
+     2
+    ],
+    [
+     "ENat",
+     1
+    ],
+    [
+     "ZLattice",
+     1
+    ],
+    [
+     "PeriodicConstant",
+     1
+    ]
+   ],
+   "hazards": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "unsafe": 0,
+    "partial_def": 0,
+    "implemented_by": 0,
+    "extern": 0
+   },
+   "comment_lines": 1,
+   "proofs_by": 6170
+  }
+ ]
+}
