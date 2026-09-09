@@ -1,0 +1,244 @@
+PROBLEM SPECIFICATION
+A precise, self-contained statement of the problem follows. All definitions are
+given in full; do not substitute nearby or more convenient definitions.
+
+  [FORMAL STATEMENT: every object defined from scratch; all quantifiers explicit.]
+  [EDGE CASES: explicitly resolve degenerate instances — empty structures,
+   trivial sizes, disconnected/reducible cases — stating how each is handled.]
+
+  DECOMPOSITION: State explicitly whether the target factors into independent
+  sub-claims that are normally established by different mechanisms (e.g., an
+  obstruction/upper-bound half and a matching witness/construction half; a
+  necessity half and a sufficiency half). If so, declare separate sub-targets
+  and track them as independent registries (see ORCHESTRATION) until both are
+  complete; a proof of only one half is not a partial solution to be returned,
+  it is a labeled incomplete result for the gap ledger.
+
+  If the target's definition or exclusion list requires a CONJUNCTION of named
+  properties (e.g. "ICC AND property (T) AND non-isomorphic AND pairwise
+  non-conjugate AND torsion-free"), enumerate each conjunct explicitly and
+  register it as its own sub-target with its own gap-ledger entry, its own
+  audit, and its own certificate. A sub-target may not be marked complete by
+  asserting it follows "by the same argument," "by symmetry," "by an analogous
+  computation," or "by the same criterion" as a structurally different case
+  (e.g. a non-split extension argued to parallel a split one, a deformed object
+  argued to parallel its undeformed source, a case with a nontrivial center
+  argued to parallel a centerless case) without an independent, fully written
+  proof for that specific case. Establishing k−1 of k required conjuncts,
+  however strong the mechanism behind them, is not a partial solution — it is
+  routed to return-condition (c).
+
+  SCALE REGIME: State explicitly which quantifiers are asymptotic ("for all
+  sufficiently large n," "as ε→0 then n→∞," etc.) versus which are claimed for
+  every instance. Any argument that is only established on a subsequence,
+  parity class, or asymptotic regime must be accompanied by an explicit
+  interpolation/padding/boundary argument extending it to every instance the
+  target actually quantifies over, or the target must be restated with the
+  weaker scope made visible — it may not be silently absorbed into "for large n."
+
+TARGET AND NON-TARGETS
+A complete solution proves exactly: [EXACT CLAIM], with no auxiliary hypotheses.
+The following do NOT count and must not be returned as a solution:
+  - proofs for restricted subclasses: [LIST KNOWN PARTIAL CLASSES];
+  - weakened or approximate versions: [LIST KNOWN RELAXATIONS AND BEST BOUNDS];
+  - reductions to any unproved statement, including these statements known to be
+    equivalent to or stronger than the target: [LIST EQUIVALENT-STRENGTH TRAPS];
+  - computational verification up to any finite bound;
+  - candidate counterexamples without a complete, audited certificate;
+  - any argument whose central inequality, threshold, or gap depends on a
+    parameter choice justified only by "optimizing appropriately" — every such
+    choice must be pinned to an explicit closed form or a certified numerical
+    bound with the sign/positivity of the resulting margin proved outright;
+  - constructions satisfying only some of a conjunctively-required list of named
+    hypotheses (e.g., ICC AND property (T) AND non-isomorphic AND same factor,
+    or freeness AND minimality AND uniqueness) — each conjunct is its own proof
+    obligation with its own complete, independently audited certificate;
+    establishing all but one required property is not a solution, however
+    complete the rest of the construction is;
+  - constructions whose defining recipe is structurally incompatible with a
+    required property in principle (e.g. a central extension asserted to be
+    ICC, a construction with a marked global fixed point asserted to give a
+    free action) "explained away" by a case-by-case argument that never tests
+    the specific element(s) the recipe forces to be fixed, central, or
+    invariant.
+
+EPISTEMIC STANCE
+Do not assume the statement is true or false. Maintain both a proof track and a
+disproof track; the disproof track searches for counterexamples and for
+obstructions that would explain why proposed proof mechanisms must fail.
+Failed disproof attempts should be mined for structural constraints usable by
+the proof track, and vice versa. Every failed approach returned as an artifact
+must identify the specific invariant, quantity, or piece of structure it was
+unable to control (not merely that it "failed" or "lost a constant") — e.g.
+"this bound forgets the location of the negative mass," "this normalization is
+not preserved under transport," "this witness is not fixed before the
+adversarial choice is revealed," "this construction forces a nontrivial center
+and therefore cannot satisfy ICC." Approaches logged without this diagnosis are
+returned to the submitting agent as incomplete artifacts.
+Do not consult any source for the status, history, or attempted solutions of
+this exact problem; external search is permitted only for standard named
+theorems and ordinary background. Do not return an answer that consists of
+reporting the problem's open status.
+
+DERIVATION DISCIPLINE
+Any formula, recurrence, or coefficient obtained by analogy with a structurally
+similar known object (e.g. an associated orthogonal-polynomial recurrence, a
+classical determinant identity, a heuristic dimension/degree count) must be:
+  (a) independently re-derived from the actual defining maps or objects of the
+      problem at hand, not assumed to transfer from the analogous setting; and
+  (b) checked against at least one small explicit instance computed by hand or
+      by direct enumeration, with the check reported as part of the artifact.
+A formula that has not passed both (a) and (b) may not be used in any later
+step of the argument.
+
+Any construction obtained by a general recipe (extension, quotient, gluing,
+deformation, limit) that is required to satisfy a named auxiliary property
+(ICC, freeness, simplicity, torsion-freeness, primitivity, irreducibility,
+etc.) must first pass a STRUCTURAL COMPATIBILITY CHECK: verify, from the
+abstract shape of the recipe alone, that the property is even possible before
+attempting a detailed element-by-element or case-by-case proof. Examples of
+incompatibility that must be checked for by name: a nontrivial center rules out
+ICC; a global fixed point rules out a free action; a normal subgroup fixed
+setwise by the whole group rules out primitivity of certain actions; a nonzero
+kernel rules out injectivity claimed alongside it. This check precedes, and is
+independent of, any generic-element or generic-orbit argument for the same
+property, since such arguments can appear to succeed on every element tested
+while never being applied to the specific element(s) — central, fixed,
+marked, or distinguished — that the recipe itself introduces.
+
+ORCHESTRATION
+Up to [N] concurrent agents. Manage them by these rules:
+  - Maintain a registry with one entry per approach FAMILY (and, per
+    DECOMPOSITION, per sub-target or per conjunct of a required property list),
+    recording: the core mathematical mechanism (not its wording), the specific
+    invariant or structure this mechanism manages to control, agents assigned,
+    strongest lemma proved so far, the exact current gap stated as a formal
+    proposition, and a status of {active, blocked, merged, refuted}.
+  - An approach is BLOCKED when its gap is a proposition of strength comparable
+    to the target. Blocked approaches receive no agents unless a materially new
+    mechanism is proposed; log what the new mechanism is and what invariant it
+    controls that prior mechanisms did not.
+  - Preserve independence: in early rounds, do not disclose the favored approach
+    or other agents' progress to exploring agents. Cross-pollinate only between
+    approaches that have each produced at least one nontrivial proved lemma.
+  - If more than [K] agents converge on one family, forcibly reassign the excess
+    to the least-explored active families.
+  - When the problem has independent sub-targets or conjunctive-hypothesis
+    conjuncts (per DECOMPOSITION), do not treat progress on one as progress on
+    the whole; they are only combinable once each is separately complete and
+    audited. Progress on conjunct i of k must never be reported or logged as
+    "progress toward the target" without the explicit count of which conjuncts
+    remain unestablished.
+  - Agents must return artifacts only: proved lemmas with complete proofs,
+    explicit constructions, counterexamples to proposed sublemmas, small-case
+    verifications required by DERIVATION DISCIPLINE, structural compatibility
+    checks required by DERIVATION DISCIPLINE, or a formal statement of the
+    obstruction they hit, including the invariant it could not control.
+    Status reports, confidence estimates, and claims that an unproved step is
+    "routine," "standard," or "parallel to the previous case" are rejected and
+    the step is added to the gap ledger.
+
+ADVERSARIAL AUDIT
+Before anything else, a dedicated audit team must generate a domain-specific
+failure checklist: enumerate the known ways proofs of this and neighboring
+statements have historically been wrong, including at minimum:
+  [DOMAIN-SPECIFIC TRAPS: definitional near-misses, degenerate cases,
+   quantifier slips, operations that silently violate the hypotheses,
+   circular use of equivalent statements.]
+In addition, every audit must explicitly check for the following general
+failure modes, regardless of domain:
+  - CONFLATED OBJECTS: two quantities that agree at one point, share an initial
+    derivative, or look alike under an integral/expectation are silently
+    treated as identical when only an inequality (e.g. Jensen, convexity)
+    relates them.
+  - WITNESS/QUANTIFIER ORDER: any random, greedy, or existential object
+    (a matrix, a shift, a chosen index, a cutoff) is verified to be fixed
+    before — and independent of — the instance, adversarial choice, or later
+    conditioning event it is applied to; flag any step where ∃ and ∀ could be
+    silently swapped.
+  - PROBABILITY/DIVISION BLOWUP: any bound obtained "before conditioning" or
+    "in expectation" is checked for what happens when divided by a probability,
+    weight, or norm that can be made small by the instance; a bound that only
+    survives on the typical branch is not a bound on the rare branch.
+  - GENERICITY/HEURISTIC DEGREE COUNTS: any Bézout-type, volume, or dimension
+    heuristic is checked for base-locus, non-reduced, or non-generic
+    components that the heuristic silently assumes away.
+  - SCOPE CHECK: the proof mechanism is applied, as a sanity test, to a nearby
+    or structurally analogous statement with a KNOWN false, weaker, or tight
+    answer (a neighboring object, a boundary parameter value, a classical
+    special case). If the mechanism does not visibly break or weaken exactly
+    where it should, treat this as evidence of an error, not of extra strength.
+  - PARAMETER JUSTIFICATION: every optimized parameter, threshold, or cutoff
+    is traced to an explicit inequality proving it lies in the required range;
+    "choose parameters appropriately" is not accepted.
+  - STRUCTURAL/RECIPE INCOMPATIBILITY: before auditing the detailed case
+    argument for any required auxiliary property (ICC, simplicity, freeness,
+    torsion-freeness, primitivity, etc.), independently re-check whether the
+    *method* used to build the object (e.g. "central extension," "quotient by
+    a fixed subgroup," "extension by a lattice/marked point," "gluing along a
+    fixed boundary") is even structurally compatible with that property in
+    principle. A centre-introducing construction cannot be ICC; a construction
+    with a marked global fixed point cannot yield a free action; a construction
+    with a nontrivial common invariant subobject cannot be simple/primitive.
+    This check must be performed by an auditor who did not write the
+    detailed case argument, and it must be done before that detailed argument
+    is trusted, since a generic-position or generic-orbit argument can appear
+    to succeed on every case it happens to test while never touching the
+    specific element the construction was designed to introduce.
+  - FIXED/FORCED-ELEMENT CHECK: when a required property depends on an action
+    having no fixed points, only infinite orbits, or trivial stabilizers,
+    explicitly test the claim against any element that is distinguished,
+    central, invariant, or introduced as a "marker" by the construction (base
+    points, gluing elements, the lattice or subgroup used to build an
+    extension, a chosen generator). These are exactly the elements most likely
+    to be silently fixed, and generic-element arguments (e.g. "conjugate by
+    elementary matrices g_n and observe divergence") do not automatically cover
+    them; the audit must demand an explicit statement of what the argument does
+    on these elements, not an assumption that "the same bound applies."
+  - PARALLELISM CLAIMS: any step justified by "the same argument applies to
+    the other case," "by symmetry," or "an analogous computation shows" is
+    flagged and the parallel case is required to be written out in full,
+    independently, especially when the two cases differ in a structural
+    feature (split vs. non-split, trivial vs. nontrivial center, generic vs.
+    degenerate parameter) that plausibly affects exactly the property being
+    proved.
+Every candidate proof is audited against this checklist by agents who did not
+contribute to it, with an explicit mandate to break it. A candidate survives
+only if every audit objection is answered with a proof, not a clarification.
+Before formalization, the surviving proof must be reduced to a single compact
+mechanism statement (a short, self-contained restatement of exactly which
+objects, invariants, and inequalities compose the argument, and, if the target
+was conjunctive, an explicit list confirming each conjunct's independent
+certificate), produced and audited separately from the full exploration
+record; this compact statement, not the exploration record, is what proceeds
+to formalization.
+Any surviving proof must then be formalized in [PROOF ASSISTANT]; a proof that
+resists formalization at any step returns that step to the gap ledger and the
+proof is not considered complete.
+
+BUDGET AND RETURN CONDITIONS
+Total budget: [T] of compute time, with mandatory checkpoints every [T/8] at
+which the root agent must log the registry state, including, for each active
+family or conjunct, its controlled invariant and current gap. Early return
+before [T/2] is permitted only for: (a) a complete proof that has survived
+audit and formalization, with every conjunct of any conjunctive target
+independently certified, or (b) a verified counterexample with a complete
+certificate. Do not return early because approaches have failed; failure of a
+wave triggers a new wave with genuinely new mechanisms — record explicitly
+what invariant the new wave's approaches propose to control that the exhausted
+ones did not.
+At budget exhaustion, return exactly one of:
+  (a) a complete audited, formalized proof, together with its compact
+      mechanism statement, and, for conjunctive targets, an explicit checklist
+      confirming every conjunct was independently certified;
+  (b) a verified counterexample with certificate;
+  (c) a structured failure report: the registry (including controlled
+      invariants), the single strongest fully proved derivation, and its
+      remaining gap stated as one formal proposition, including explicit
+      identification of any conjunct(s) of a required property list that
+      remain unestablished — with an explicit declaration that this is NOT
+      a solution.
+Never return anything in the space between (a)/(b) and (c): no "essentially
+complete" proofs, no reductions presented as progress, no best-effort essays,
+and no constructions presented as solutions when one or more required
+conjuncts (e.g. ICC) has been asserted rather than proved.
