@@ -1,0 +1,214 @@
+{
+ "branches": {
+  "n mod 2 = 0": {
+   "atoms": 1,
+   "generalizing_before": 0,
+   "minimal_terms": 32,
+   "reserve_available": [],
+   "verdict": "NO_RESERVE"
+  },
+  "n mod 4 = 0": {
+   "atoms": 1,
+   "generalizing_before": 0,
+   "minimal_terms": 1,
+   "reserve_available": [],
+   "verdict": "NO_TIE"
+  },
+  "n mod 8 = 0": {
+   "atoms": 2,
+   "generalizing_after": 4,
+   "generalizing_before": 4,
+   "minimal_terms": 5,
+   "reserve_available": [
+    64,
+    128
+   ],
+   "selected": null,
+   "stage": {
+    "label": "COMPUTED",
+    "observations": {
+     "64": 16
+    },
+    "probes_used": 1,
+    "rounds": [
+     {
+      "observed": 16,
+      "predictions": {
+       "('count', ('mod', ('leaf', 16), ('var', 'k')))": 6,
+       "('count', ('mod', ('var', 'k'), ('const', 4)))": 16,
+       "('count', ('mod', ('var', 'k'), ('leaf', 18)))": 16,
+       "('count', ('mod', ('var', 'k'), ('leaf', 20)))": 16,
+       "('least', ('mod', ('var', 'k'), ('leaf', 21)))": 16
+      },
+      "probe": 64,
+      "survivors": [
+       "('count', ('mod', ('var', 'k'), ('const', 4)))",
+       "('count', ('mod', ('var', 'k'), ('leaf', 18)))",
+       "('count', ('mod', ('var', 'k'), ('leaf', 20)))",
+       "('least', ('mod', ('var', 'k'), ('leaf', 21)))",
+       "('count', ('mod', ('leaf', 16), ('var', 'k')))"
+      ],
+      "survivors_after": [
+       "('count', ('mod', ('var', 'k'), ('const', 4)))",
+       "('count', ('mod', ('var', 'k'), ('leaf', 18)))",
+       "('count', ('mod', ('var', 'k'), ('leaf', 20)))",
+       "('least', ('mod', ('var', 'k'), ('leaf', 21)))"
+      ]
+     },
+     {
+      "note": "no coordinate in the reserve separates the survivors",
+      "probe": null,
+      "survivors": [
+       "('count', ('mod', ('var', 'k'), ('const', 4)))",
+       "('count', ('mod', ('var', 'k'), ('leaf', 18)))",
+       "('count', ('mod', ('var', 'k'), ('leaf', 20)))",
+       "('least', ('mod', ('var', 'k'), ('leaf', 21)))"
+      ]
+     }
+    ],
+    "selected": null,
+    "stage": "disagreement_resolution",
+    "survivors": [
+     [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "const",
+        4
+       ]
+      ]
+     ],
+     [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "leaf",
+        18
+       ]
+      ]
+     ],
+     [
+      "count",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "leaf",
+        20
+       ]
+      ]
+     ],
+     [
+      "least",
+      [
+       "mod",
+       [
+        "var",
+        "k"
+       ],
+       [
+        "leaf",
+        21
+       ]
+      ]
+     ]
+    ],
+    "verdict": "UNDERDETERMINED"
+   },
+   "survivors_after": 4,
+   "verdict": "UNDERDETERMINED"
+  },
+  "otherwise": {
+   "atoms": 12,
+   "generalizing_after": 2,
+   "generalizing_before": 2,
+   "minimal_terms": 2,
+   "reserve_available": [
+    49,
+    81,
+    121,
+    125,
+    169,
+    243
+   ],
+   "selected": null,
+   "stage": {
+    "label": "COMPUTED",
+    "observations": {},
+    "probes_used": 0,
+    "rounds": [
+     {
+      "note": "no coordinate in the reserve separates the survivors",
+      "probe": null,
+      "survivors": [
+       "('least', ('mod', ('var', 'n'), ('sub', ('var', 'n'), ('var', 'k'))))",
+       "('count', ('div', ('var', 'n'), ('mul', ('var', 'k'), ('leaf', 4))))"
+      ]
+     }
+    ],
+    "selected": null,
+    "stage": "disagreement_resolution",
+    "survivors": [
+     [
+      "least",
+      [
+       "mod",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "sub",
+        [
+         "var",
+         "n"
+        ],
+        [
+         "var",
+         "k"
+        ]
+       ]
+      ]
+     ],
+     [
+      "count",
+      [
+       "div",
+       [
+        "var",
+        "n"
+       ],
+       [
+        "mul",
+        [
+         "var",
+         "k"
+        ],
+        [
+         "leaf",
+         4
+        ]
+       ]
+      ]
+     ]
+    ],
+    "verdict": "UNDERDETERMINED"
+   },
+   "survivors_after": 2,
+   "verdict": "UNDERDETERMINED"
+  }
+ }
+}

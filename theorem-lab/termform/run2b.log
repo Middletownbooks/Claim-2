@@ -1,0 +1,25 @@
+  stage 1: 35 formed terms
+  stage 2: 5329 formed terms total
+  forming took 40s
+
+nu: 1 minimal term(s), 1 generalize (1s)
+   size 4 count(k: (k // <count(k: (n % k))>))                 [1, 5, 1, 1, 1, 1] OK
+
+lambda / n mod 8 = 0    atoms=2 minimal terms=5 generalizing=4
+   size 4 count(k: (k % 4))                                -> [8] OK
+   size 4 count(k: (k % <count(k: (k - 4))>))              -> [8] OK
+   size 4 count(k: (k % <least(k: (k % 4))>))              -> [8] OK
+   size 4 least(k: (k % <count(k: (k % 4))>))              -> [8] OK
+
+lambda / n mod 4 = 0    atoms=1 minimal terms=1 generalizing=1
+   size 2 least(k: 0)                                      -> [] OK
+
+lambda / n mod 2 = 0    atoms=1 minimal terms=32 generalizing=8
+   size 4 count(k: (n - k))                                -> [] OK
+   size 4 count(k: (k // n))                               -> [] OK
+   size 4 count(k: (k % 2))                                -> [] OK
+   size 4 count(k: (k % <least(k: (n % k))>))              -> [] OK
+
+lambda / otherwise      atoms=12 minimal terms=2 generalizing=2
+   size 6 least(k: (n % (n - k)))                          -> [30, 36, 40, 42, 46] OK
+   size 6 count(k: (n // (k * <least(k: (n % k))>)))       -> [30, 36, 40, 42, 46] OK

@@ -1,0 +1,21 @@
+  stage 1: 35 formed terms
+  stage 2: 5329 formed terms total
+  forming took 40s
+    outer size 1 ...
+    outer size 2 ...
+    outer size 3 ...
+    outer size 4 ...
+    outer size 5 ...
+
+nu: 0 minimal term(s), 0 generalize (7s)
+
+lambda / n mod 8 = 0    atoms=2 minimal terms=1 generalizing=1
+   size 3 (n // 4)                                         -> [8] OK
+
+lambda / n mod 4 = 0    atoms=1 minimal terms=1 generalizing=1
+   size 1 2                                                -> [] OK
+
+lambda / n mod 2 = 0    atoms=1 minimal terms=1 generalizing=1
+   size 1 1                                                -> [] OK
+
+lambda / otherwise      atoms=12 minimal terms=0 generalizing=0
