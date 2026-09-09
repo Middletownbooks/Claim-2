@@ -1,0 +1,2178 @@
+{
+ "label": "EXPERIMENTAL_RESULT",
+ "seed": 20260909,
+ "direction": "FLT -> NS",
+ "rows": [
+  {
+   "pool": "TRANSPORT_flt_upstreamable",
+   "n_ns_statements": 16599,
+   "mean_best_jaccard": 0.6388,
+   "median": 0.5,
+   "ge_0.3": 14781,
+   "ge_0.5": 13254,
+   "ge_0.7": 6350,
+   "ge_0.9": 5946,
+   "pool_size": 4098
+  },
+  {
+   "pool": "CONTROL_C_random_flt",
+   "n_ns_statements": 16599,
+   "mean_best_jaccard": 0.5617,
+   "median": 0.5,
+   "ge_0.3": 12625,
+   "ge_0.5": 9965,
+   "ge_0.7": 5614,
+   "ge_0.9": 5549,
+   "pool_size": 4098
+  },
+  {
+   "pool": "CONTROL_E_architecture_contact",
+   "n_ns_statements": 16599,
+   "mean_best_jaccard": 0.5502,
+   "median": 0.5,
+   "ge_0.3": 13397,
+   "ge_0.5": 10379,
+   "ge_0.7": 4938,
+   "ge_0.9": 4873,
+   "pool_size": 390
+  },
+  {
+   "pool": "CONTROL_B_ns_itself",
+   "n_ns_statements": 16599,
+   "mean_best_jaccard": 0.9714,
+   "median": 1.0,
+   "ge_0.3": 16531,
+   "ge_0.5": 16513,
+   "ge_0.7": 15806,
+   "ge_0.9": 15342,
+   "pool_size": 16599
+  },
+  {
+   "pool": "CONTROL_D_most_cited_flt",
+   "n_ns_statements": 16599,
+   "mean_best_jaccard": 0.0376,
+   "median": 0.0,
+   "ge_0.3": 412,
+   "ge_0.5": 290,
+   "ge_0.7": 26,
+   "ge_0.9": 26,
+   "pool_size": 9
+  },
+  {
+   "pool": "CONTROL_A_generic_mathlib",
+   "n_ns_statements": 16599,
+   "mean_best_jaccard": 0.2621,
+   "median": 0.0,
+   "ge_0.3": 6039,
+   "ge_0.5": 4899,
+   "ge_0.7": 2695,
+   "ge_0.9": 2631,
+   "pool_size": 4098
+  }
+ ],
+ "high_matches": {
+  "TRANSPORT_flt_upstreamable": [
+   {
+    "ns": "localBase_mono",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "phase_errors_on_mesh",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "partialR_partialT_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "partialT_partialR_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "mixed_partial_pullback_comm",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "isOpen_trueCone",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "AlgebraicGeometry.isOpen_setOf_forall_preimage_mem_of_universallyClosed",
+    "jaccard": 1.0,
+    "shared": [
+     "IsOpen"
+    ]
+   },
+   {
+    "ns": "positiveTime_isOpen",
+    "ns_file": "NavierStokes/PhysicalCoordinateBounds.lean",
+    "match": "AlgebraicGeometry.isOpen_setOf_forall_preimage_mem_of_universallyClosed",
+    "jaccard": 1.0,
+    "shared": [
+     "IsOpen"
+    ]
+   },
+   {
+    "ns": "iteratedFDeriv_comp_linear_open",
+    "ns_file": "NavierStokes/PhysicalCoordinateBounds.lean",
+    "match": "deriv_deriv_deriv_reverse_of_contDiffOn",
+    "jaccard": 0.75,
+    "shared": [
+     "ContDiffOn",
+     "IsOpen",
+     "Set"
+    ]
+   },
+   {
+    "ns": "polynomial_native_jets",
+    "ns_file": "NavierStokes/ScaledParticularFrameJets.lean",
+    "match": "AlgebraicGeometry.Scheme.IdealSheafData.not_map_germ_ideal_le_of_specializes_of_notMem_support_of_mem_support",
+    "jaccard": 1.0,
+    "shared": [
+     "I",
+     "Set"
+    ]
+   },
+   {
+    "ns": "argument_smooth",
+    "ns_file": "NavierStokes/ScaledParticularFrameJets.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "frame_field_native_jets",
+    "ns_file": "NavierStokes/ScaledParticularFrameJets.lean",
+    "match": "Matrix.exists_const_forall_norm_le_mul_of_norm_sum_pow_smul_le",
+    "jaccard": 1.0,
+    "shared": [
+     "NormedAddCommGroup",
+     "NormedSpace"
+    ]
+   },
+   {
+    "ns": "bump_contDiff",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "correction_contDiff",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "compact_amplitude_bounds",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "deriv_deriv_deriv_reverse_of_contDiffOn",
+    "jaccard": 0.75,
+    "shared": [
+     "ContDiffOn",
+     "IsOpen",
+     "Set"
+    ]
+   },
+   {
+    "ns": "amplitudeDebt_bounds",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "deriv_deriv_deriv_reverse_of_contDiffOn",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiffOn",
+     "IsOpen",
+     "Set"
+    ]
+   },
+   {
+    "ns": "exists_uniform_parameter_compensation",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "deriv_deriv_deriv_reverse_of_contDiffOn",
+    "jaccard": 0.75,
+    "shared": [
+     "ContDiffOn",
+     "IsOpen",
+     "Set"
+    ]
+   },
+   {
+    "ns": "exists_heat_compensation",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "deriv_deriv_deriv_reverse_of_contDiffOn",
+    "jaccard": 0.75,
+    "shared": [
+     "ContDiffOn",
+     "IsOpen",
+     "Set"
+    ]
+   },
+   {
+    "ns": "missingWeight_smooth",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "memClass_of_finite_bands",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "Matrix.exists_const_forall_norm_le_mul_of_norm_sum_pow_smul_le",
+    "jaccard": 1.0,
+    "shared": [
+     "NormedAddCommGroup",
+     "NormedSpace"
+    ]
+   },
+   {
+    "ns": "cutAmplitude_tsupport_disjoint",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AlgebraicGeometry.Scheme.existsUnique_hom_sigma_of_disjoint_iSup_eq_top",
+    "jaccard": 1.0,
+    "shared": [
+     "Disjoint"
+    ]
+   },
+   {
+    "ns": "exactAmplitude_tsupport_disjoint",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AlgebraicGeometry.Scheme.existsUnique_hom_sigma_of_disjoint_iSup_eq_top",
+    "jaccard": 1.0,
+    "shared": [
+     "Disjoint"
+    ]
+   },
+   {
+    "ns": "velocity_tsupport_disjoint",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AlgebraicGeometry.Scheme.existsUnique_hom_sigma_of_disjoint_iSup_eq_top",
+    "jaccard": 1.0,
+    "shared": [
+     "Disjoint"
+    ]
+   },
+   {
+    "ns": "field_zero_of_support",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "wave_fields_zero_of_support",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "mean_input_of_transport",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "cross_perpendicular_left",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.Scheme.isSeparated_and_quasiCompact_of_isIntegralHom_of_surjective",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "cross_perpendicular_right",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.Scheme.isSeparated_and_quasiCompact_of_isIntegralHom_of_surjective",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "triple_product",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.Scheme.isSeparated_and_quasiCompact_of_isIntegralHom_of_surjective",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "tangent_double_cross",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.Scheme.isSeparated_and_quasiCompact_of_isIntegralHom_of_surjective",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "cross_smul",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.Scheme.isSeparated_and_quasiCompact_of_isIntegralHom_of_surjective",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "normalized_double_cross",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.IsFinite.of_smoothOfRelativeDimension_zero_of_field",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   },
+   {
+    "ns": "cylindrical_div_curl",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.Scheme.isSeparated_and_quasiCompact_of_isIntegralHom_of_surjective",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "radial_uniform_pullback",
+    "ns_file": "NavierStokes/AllBandBaseJets.lean",
+    "match": "Matrix.exists_const_forall_norm_le_mul_of_norm_sum_pow_smul_le",
+    "jaccard": 1.0,
+    "shared": [
+     "NormedAddCommGroup",
+     "NormedSpace"
+    ]
+   },
+   {
+    "ns": "coefficient_slice_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "factor_slice_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "kernel_contDiff_param",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "kernel_ae_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "kernel_jet_measurable",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_insertNth_mul_cexp_le_mul_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "iteratedFDeriv"
+    ]
+   },
+   {
+    "ns": "bounded_coefficient_jets",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_insertNth_mul_cexp_le_mul_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "iteratedFDeriv"
+    ]
+   },
+   {
+    "ns": "kernel_locallyDominated",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   }
+  ],
+  "CONTROL_C_random_flt": [
+   {
+    "ns": "localBase_mono",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isFiniteMeasure_domainMeasure",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "phase_errors_on_mesh",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isFiniteMeasure_domainMeasure",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "hasDerivAt_graph_radial",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "LanglandsTunnell.CubicInduction.WhittakerBlock.hasDerivAt_apply_mul_archRealLift3_of_isArchSmooth3",
+    "jaccard": 1.0,
+    "shared": [
+     "HasDerivAt"
+    ]
+   },
+   {
+    "ns": "hasDerivAt_graph_time",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "LanglandsTunnell.CubicInduction.WhittakerBlock.hasDerivAt_apply_mul_archRealLift3_of_isArchSmooth3",
+    "jaccard": 1.0,
+    "shared": [
+     "HasDerivAt"
+    ]
+   },
+   {
+    "ns": "partialR_partialT_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "partialT_partialR_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "mixed_partial_pullback_comm",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "continuous_coneBound",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "NumberField.TateGlobal.localChar_apply_neg_one_eq_one_of_isIdeleClassChar_of_isArchCompAt_zero_zero",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "argument_smooth",
+    "ns_file": "NavierStokes/ScaledParticularFrameJets.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "bump_contDiff",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "correction_contDiff",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "weighted_integrable",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "NumberField.TateGlobal.localChar_apply_neg_one_eq_one_of_isIdeleClassChar_of_isArchCompAt_zero_zero",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "pair_diagonal_common_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "NumberField.TateGlobal.localChar_apply_neg_one_eq_one_of_isIdeleClassChar_of_isArchCompAt_zero_zero",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "viewTangent_diagonal_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "NumberField.TateGlobal.localChar_apply_neg_one_eq_one_of_isIdeleClassChar_of_isArchCompAt_zero_zero",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "missingWeight_smooth",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "quotientPoint_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "NumberField.TateGlobal.localChar_apply_neg_one_eq_one_of_isIdeleClassChar_of_isArchCompAt_zero_zero",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "absoluteAuxiliary_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "NumberField.TateGlobal.localChar_apply_neg_one_eq_one_of_isIdeleClassChar_of_isArchCompAt_zero_zero",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "physicalPosition_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "NumberField.TateGlobal.localChar_apply_neg_one_eq_one_of_isIdeleClassChar_of_isArchCompAt_zero_zero",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "cutAmplitude_tsupport_disjoint",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AlgebraicGeometry.Scheme.existsUnique_hom_sigma_of_disjoint_iSup_eq_top",
+    "jaccard": 1.0,
+    "shared": [
+     "Disjoint"
+    ]
+   },
+   {
+    "ns": "exactAmplitude_tsupport_disjoint",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AlgebraicGeometry.Scheme.existsUnique_hom_sigma_of_disjoint_iSup_eq_top",
+    "jaccard": 1.0,
+    "shared": [
+     "Disjoint"
+    ]
+   },
+   {
+    "ns": "velocity_tsupport_disjoint",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AlgebraicGeometry.Scheme.existsUnique_hom_sigma_of_disjoint_iSup_eq_top",
+    "jaccard": 1.0,
+    "shared": [
+     "Disjoint"
+    ]
+   },
+   {
+    "ns": "classical_fourier_continuous",
+    "ns_file": "NavierStokes/R3RieszApproximation.lean",
+    "match": "NumberField.TateGlobal.localChar_apply_neg_one_eq_one_of_isIdeleClassChar_of_isArchCompAt_zero_zero",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "field_zero_of_support",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isFiniteMeasure_domainMeasure",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "wave_fields_zero_of_support",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isFiniteMeasure_domainMeasure",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "mean_input_of_transport",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isFiniteMeasure_domainMeasure",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "cross_perpendicular_left",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "GoodReductionJacobian.RelativeGroupLaw.isTorsionPoint_fst_schemeKer_and_existsUnique_comp_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "cross_perpendicular_right",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "GoodReductionJacobian.RelativeGroupLaw.isTorsionPoint_fst_schemeKer_and_existsUnique_comp_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "triple_product",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "GoodReductionJacobian.RelativeGroupLaw.isTorsionPoint_fst_schemeKer_and_existsUnique_comp_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "tangent_double_cross",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "GoodReductionJacobian.RelativeGroupLaw.isTorsionPoint_fst_schemeKer_and_existsUnique_comp_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "cross_smul",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "GoodReductionJacobian.RelativeGroupLaw.isTorsionPoint_fst_schemeKer_and_existsUnique_comp_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "normalized_double_cross",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.eq_of_isStandardSmoothOfRelativeDimension_appLE_of_smoothOfRelativeDimension",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   },
+   {
+    "ns": "cylindrical_div_curl",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "GoodReductionJacobian.RelativeGroupLaw.isTorsionPoint_fst_schemeKer_and_existsUnique_comp_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "coefficient_slice_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "factor_slice_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "kernel_contDiff_param",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "kernel_ae_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "kernel_locallyDominated",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "factor_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "primitive_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "exists_joint_smooth_factor",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   }
+  ],
+  "CONTROL_E_architecture_contact": [
+   {
+    "ns": "localBase_mono",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "phase_errors_on_mesh",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "partialR_partialT_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "partialT_partialR_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "mixed_partial_pullback_comm",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "continuous_coneBound",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "argument_smooth",
+    "ns_file": "NavierStokes/ScaledParticularFrameJets.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "bump_contDiff",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "correction_contDiff",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "weighted_integrable",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "pair_diagonal_common_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "viewTangent_diagonal_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "missingWeight_smooth",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "quotientPoint_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "absoluteAuxiliary_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "physicalPosition_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "classical_fourier_continuous",
+    "ns_file": "NavierStokes/R3RieszApproximation.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "field_zero_of_support",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "wave_fields_zero_of_support",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "label_waves_of_support",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.exists_inner_toL2_translateRight_ne_zero_of_isCosetEigenfunction_of_isCentreFinite",
+    "jaccard": 1.0,
+    "shared": [
+     "Finset",
+     "Set"
+    ]
+   },
+   {
+    "ns": "mean_input_of_transport",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "coefficient_slice_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "factor_slice_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "kernel_contDiff_param",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "kernel_ae_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "kernel_jet_measurable",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_insertNth_mul_cexp_le_mul_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "iteratedFDeriv"
+    ]
+   },
+   {
+    "ns": "bounded_coefficient_jets",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_insertNth_mul_cexp_le_mul_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "iteratedFDeriv"
+    ]
+   },
+   {
+    "ns": "kernel_locallyDominated",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "factor_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "factor_iteratedFDeriv",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_integral_insertNth_mul_cexp_le_mul_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "iteratedFDeriv"
+    ]
+   },
+   {
+    "ns": "primitive_contDiff",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "exists_joint_smooth_factor",
+    "ns_file": "NavierStokes/ParametricFlatFactor.lean",
+    "match": "MeasureTheory.exists_forall_contDiff_norm_iteratedFDeriv_setIntegral_insertNth_mul_cexp_le_prod",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "pull_periodicOn",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "context_operators_local",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "context_isSlow",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "contextOn_add",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "contextOn_native",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "LabelWavesOn.sum",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.exists_inner_toL2_translateRight_ne_zero_of_isCosetEigenfunction_of_isCentreFinite",
+    "jaccard": 1.0,
+    "shared": [
+     "Finset",
+     "Set"
+    ]
+   },
+   {
+    "ns": "gauge_on",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "rank_on",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.SlabL2.isSmoothingKernel_star_inv_and_inner_toL2_smoothingOperator_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   }
+  ],
+  "CONTROL_B_ns_itself": [
+   {
+    "ns": "referenceScale_bounds",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "angular_density_rescale",
+    "jaccard": 1.0,
+    "shared": [
+     "Real.sqrt"
+    ]
+   },
+   {
+    "ns": "localBase_mono",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "field_zero_of_support",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "localBase_of_normalized_error",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "local_first_derivative_close",
+    "jaccard": 1.0,
+    "shared": [
+     "Convex",
+     "DifferentiableAt",
+     "Set"
+    ]
+   },
+   {
+    "ns": "phase_errors_on_mesh",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "field_zero_of_support",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "frame_jets",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "copySolve_envelope_of_anchored",
+    "jaccard": 1.0,
+    "shared": [
+     "isOpen_Ioo"
+    ]
+   },
+   {
+    "ns": "pulse_jets",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "copySolve_envelope_of_anchored",
+    "jaccard": 1.0,
+    "shared": [
+     "isOpen_Ioo"
+    ]
+   },
+   {
+    "ns": "coefficient_jets",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "copySolve_envelope_of_anchored",
+    "jaccard": 1.0,
+    "shared": [
+     "isOpen_Ioo"
+    ]
+   },
+   {
+    "ns": "ordered_constants",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "positive_uniform_margin",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "ordered_target_constants",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "positive_uniform_margin",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "along_comm_of_cross_zero",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "linearResidual_mode_split_at",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiffAt",
+     "DifferentiableAt"
+    ]
+   },
+   {
+    "ns": "hasDerivAt_graph_radial",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "hasDerivAt_replaceCoord",
+    "jaccard": 1.0,
+    "shared": [
+     "HasDerivAt"
+    ]
+   },
+   {
+    "ns": "hasDerivAt_graph_time",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "hasDerivAt_replaceCoord",
+    "jaccard": 1.0,
+    "shared": [
+     "HasDerivAt"
+    ]
+   },
+   {
+    "ns": "partialR_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "correction_parameter_deriv",
+    "jaccard": 1.0,
+    "shared": [
+     "DifferentiableAt"
+    ]
+   },
+   {
+    "ns": "partialT_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "correction_parameter_deriv",
+    "jaccard": 1.0,
+    "shared": [
+     "DifferentiableAt"
+    ]
+   },
+   {
+    "ns": "contDiffAt_graph",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "qCoord_contDiffAt",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiffAt"
+    ]
+   },
+   {
+    "ns": "hasFDerivAt_radialVector",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "inverseCoordinates_hasFDerivAt",
+    "jaccard": 1.0,
+    "shared": [
+     "HasFDerivAt"
+    ]
+   },
+   {
+    "ns": "differentiableAt_radialVector",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "correction_parameter_deriv",
+    "jaccard": 1.0,
+    "shared": [
+     "DifferentiableAt"
+    ]
+   },
+   {
+    "ns": "radialOp_timeOp_comm",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "qCoord_contDiffAt",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiffAt"
+    ]
+   },
+   {
+    "ns": "differentiableAt_timeOp",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "linearResidual_mode_split_at",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiffAt",
+     "DifferentiableAt"
+    ]
+   },
+   {
+    "ns": "differentiableAt_radialOp",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "linearResidual_mode_split_at",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiffAt",
+     "DifferentiableAt"
+    ]
+   },
+   {
+    "ns": "contDiffAt_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "qCoord_contDiffAt",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiffAt"
+    ]
+   },
+   {
+    "ns": "partialR_partialT_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "argument_smooth",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "partialT_partialR_pullback",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "argument_smooth",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "mixed_partial_pullback_comm",
+    "ns_file": "NavierStokes/GraphCalculus.lean",
+    "match": "argument_smooth",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff"
+    ]
+   },
+   {
+    "ns": "continuousOn_max",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "copySolve_of_compatibleInputs",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "Set"
+    ]
+   },
+   {
+    "ns": "positive_uniform_margin",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "ordered_constants",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "compact_source_margins",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "ordered_constants",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "compact_normalized_cone",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "ordered_constants",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "compact_normalized_cone_gap",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "ordered_constants",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "compact_equation_eleven",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "ordered_constants",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "compact_equation_eleven_gap",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "ordered_constants",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "continuous_coneBound",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "weighted_integrable",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "isOpen_trueCone",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "positiveTime_isOpen",
+    "jaccard": 1.0,
+    "shared": [
+     "IsOpen"
+    ]
+   },
+   {
+    "ns": "compact_trueCone_margins",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "ordered_constants",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "compact_trueCone_stable",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "exists_small_physical_control",
+    "jaccard": 1.0,
+    "shared": [
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "compact_family_trueCone_stable",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "ordered_constants",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "compact_family_quadratic_stable",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "ordered_constants",
+    "jaccard": 1.0,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set"
+    ]
+   },
+   {
+    "ns": "positiveTime_isOpen",
+    "ns_file": "NavierStokes/PhysicalCoordinateBounds.lean",
+    "match": "isOpen_trueCone",
+    "jaccard": 1.0,
+    "shared": [
+     "IsOpen"
+    ]
+   },
+   {
+    "ns": "qCoord_contDiffAt",
+    "ns_file": "NavierStokes/PhysicalCoordinateBounds.lean",
+    "match": "contDiffAt_graph",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiffAt"
+    ]
+   },
+   {
+    "ns": "inverseCoordinates_contDiffAt",
+    "ns_file": "NavierStokes/PhysicalCoordinateBounds.lean",
+    "match": "contDiffAt_graph",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiffAt"
+    ]
+   }
+  ],
+  "CONTROL_D_most_cited_flt": [
+   {
+    "ns": "lp_distribution_eq_of_ae",
+    "ns_file": "NavierStokes/R3PressureFourier.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "lp_ae_of_distribution_eq",
+    "ns_file": "NavierStokes/R3PressureFourier.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "represents_lp",
+    "ns_file": "NavierStokes/R3WeakPressure.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "Field.mem_divergenceFree_of_angleIndependent",
+    "ns_file": "Euler/PacketCylinderMeanSolenoidal.lean",
+    "match": "pow_sq_eq_self_of_level_two_value_of_eq_zero_or_eq_1728",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact",
+     "Field"
+    ]
+   },
+   {
+    "ns": "wordBound_zero",
+    "ns_file": "Euler/PacketCylinderFieldBounds.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "physical_word_bounds",
+    "ns_file": "Euler/MeanPacketBudget.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "word_bounds",
+    "ns_file": "Euler/MeanPacketBudget.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "word_bounds_of_field",
+    "ns_file": "Euler/MeanPacketBudget.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "three_shift_bounds",
+    "ns_file": "Euler/MeanPacketBudget.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "grade_profile_bounds",
+    "ns_file": "Euler/MeanPacketBudget.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "WordBound.mono_radius",
+    "ns_file": "Euler/PacketCommonRadius.lean",
+    "match": "pow_sq_eq_self_of_level_two_value_of_eq_zero_or_eq_1728",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact",
+     "Field"
+    ]
+   },
+   {
+    "ns": "termPolynomial_eval",
+    "ns_file": "Euler/PacketCorrectionPrimitivePolynomial.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "primitivePolynomial_eval",
+    "ns_file": "Euler/PacketCorrectionPrimitivePolynomial.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "primitiveConstant_pos",
+    "ns_file": "Euler/PacketCorrectionPrimitivePolynomial.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "primitiveEnvelope_power",
+    "ns_file": "Euler/PacketCorrectionPrimitivePolynomial.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "primitive_components",
+    "ns_file": "Euler/PacketCorrectionPrimitivePolynomial.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "toFieldTower_eq_of_path_eq_forward",
+    "ns_file": "Euler/PacketForwardInitializedResidualEquation.lean",
+    "match": "pow_sq_eq_self_of_level_two_value_of_eq_zero_or_eq_1728",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact",
+     "Field"
+    ]
+   },
+   {
+    "ns": "top_blocks_time_norm",
+    "ns_file": "Euler/TopBlockTimeNorm.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "CoefficientBudget.linear_and_pressure_le",
+    "ns_file": "Euler/PacketTailLinearBounds.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "liftedInputConstant_one_le",
+    "ns_file": "Euler/PacketLiftedCoefficientBounds.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "liftedInputConstant_embedding_le",
+    "ns_file": "Euler/PacketLiftedCoefficientBounds.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "Field.sliceDifferentiable",
+    "ns_file": "Euler/PacketSourceRegularity.lean",
+    "match": "pow_sq_eq_self_of_level_two_value_of_eq_zero_or_eq_1728",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact",
+     "Field"
+    ]
+   },
+   {
+    "ns": "sourceMetricBudget_first_le_source",
+    "ns_file": "Euler/PacketCorrectionMetricBounds.lean",
+    "match": "padicPlace_liesOverPrime",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact"
+    ]
+   },
+   {
+    "ns": "toFieldTower_eq_of_path_eq",
+    "ns_file": "Euler/PacketInitializedResidualEquation.lean",
+    "match": "pow_sq_eq_self_of_level_two_value_of_eq_zero_or_eq_1728",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact",
+     "Field"
+    ]
+   },
+   {
+    "ns": "Field.changeTime_apply",
+    "ns_file": "Euler/PacketSourcePiola.lean",
+    "match": "pow_sq_eq_self_of_level_two_value_of_eq_zero_or_eq_1728",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact",
+     "Field"
+    ]
+   },
+   {
+    "ns": "childOfPacket",
+    "ns_file": "Euler/ParentPacketCorrectionParity.lean",
+    "match": "pow_sq_eq_self_of_level_two_value_of_eq_zero_or_eq_1728",
+    "jaccard": 1.0,
+    "shared": [
+     "Fact",
+     "Field"
+    ]
+   }
+  ],
+  "CONTROL_A_generic_mathlib": [
+   {
+    "ns": "localBase_mono",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "phase_errors_on_mesh",
+    "ns_file": "NavierStokes/BasePhaseGeometry.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "continuous_coneBound",
+    "ns_file": "NavierStokes/UniformCone.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "weighted_integrable",
+    "ns_file": "NavierStokes/TerminalCompensation.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "pair_diagonal_common_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "viewTangent_diagonal_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "quotientPoint_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "absoluteAuxiliary_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "physicalPosition_continuous",
+    "ns_file": "NavierStokes/ActualPrimaryCovariance.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "classical_fourier_continuous",
+    "ns_file": "NavierStokes/R3RieszApproximation.lean",
+    "match": "AutomorphicForm.exists_eq_archWeightCharReal_of_continuous",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous"
+    ]
+   },
+   {
+    "ns": "field_zero_of_support",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "wave_fields_zero_of_support",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "mean_input_of_transport",
+    "ns_file": "NavierStokes/ActualCycleCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "cross_perpendicular_left",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.PolarisedAbelianScheme.thetaPt_eq_of_pt_eq_of_forall_act_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "cross_perpendicular_right",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.PolarisedAbelianScheme.thetaPt_eq_of_pt_eq_of_forall_act_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "triple_product",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.PolarisedAbelianScheme.thetaPt_eq_of_pt_eq_of_forall_act_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "tangent_double_cross",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.PolarisedAbelianScheme.thetaPt_eq_of_pt_eq_of_forall_act_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "cross_smul",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.PolarisedAbelianScheme.thetaPt_eq_of_pt_eq_of_forall_act_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "normalized_double_cross",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.OModulePresheaf.exists_tensorProduct_sections_linearEquiv_sections_box_natural_of_isInvertible",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   },
+   {
+    "ns": "cylindrical_div_curl",
+    "ns_file": "NavierStokes/CurlGeometry.lean",
+    "match": "AlgebraicGeometry.PolarisedAbelianScheme.thetaPt_eq_of_pt_eq_of_forall_act_eq",
+    "jaccard": 1.0,
+    "shared": [
+     "CommRing"
+    ]
+   },
+   {
+    "ns": "pull_periodicOn",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "context_operators_local",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "context_isSlow",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "contextOn_add",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "contextOn_native",
+    "ns_file": "NavierStokes/CommonBaseContext.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "sum_eq_mul_sum_of_support",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.CubicInduction.card_le_ncard_of_linearIndependent_of_upperUnipotent3_of_diagonal3",
+    "jaccard": 1.0,
+    "shared": [
+     "Finset"
+    ]
+   },
+   {
+    "ns": "gauge_on",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "rank_on",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "CycleTransport.axis",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "CycleTransport.step",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "block_fields_next",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "iterate_block_fields",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "waveOn_of_positive_fibers",
+    "ns_file": "NavierStokes/CycleStateCoherence.lean",
+    "match": "LanglandsTunnell.casimir_pos_or_discrete_or_zero_of_weightSet",
+    "jaccard": 1.0,
+    "shared": [
+     "Set"
+    ]
+   },
+   {
+    "ns": "integrate_initial",
+    "ns_file": "NavierStokes/TransitionRamp.lean",
+    "match": "AlgebraicGeometry.OModulePresheaf.exists_tensorProduct_sections_linearEquiv_sections_box_natural_of_isInvertible",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   },
+   {
+    "ns": "integrate_congr",
+    "ns_file": "NavierStokes/TransitionRamp.lean",
+    "match": "AlgebraicGeometry.OModulePresheaf.exists_tensorProduct_sections_linearEquiv_sections_box_natural_of_isInvertible",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   },
+   {
+    "ns": "angularSlope_before",
+    "ns_file": "NavierStokes/TransitionRamp.lean",
+    "match": "AlgebraicGeometry.OModulePresheaf.exists_tensorProduct_sections_linearEquiv_sections_box_natural_of_isInvertible",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   },
+   {
+    "ns": "axialSlope_before",
+    "ns_file": "NavierStokes/TransitionRamp.lean",
+    "match": "AlgebraicGeometry.OModulePresheaf.exists_tensorProduct_sections_linearEquiv_sections_box_natural_of_isInvertible",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   },
+   {
+    "ns": "angularSlope_after",
+    "ns_file": "NavierStokes/TransitionRamp.lean",
+    "match": "AlgebraicGeometry.OModulePresheaf.exists_tensorProduct_sections_linearEquiv_sections_box_natural_of_isInvertible",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   },
+   {
+    "ns": "axialSlope_after",
+    "ns_file": "NavierStokes/TransitionRamp.lean",
+    "match": "AlgebraicGeometry.OModulePresheaf.exists_tensorProduct_sections_linearEquiv_sections_box_natural_of_isInvertible",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   },
+   {
+    "ns": "logField_before",
+    "ns_file": "NavierStokes/TransitionRamp.lean",
+    "match": "AlgebraicGeometry.OModulePresheaf.exists_tensorProduct_sections_linearEquiv_sections_box_natural_of_isInvertible",
+    "jaccard": 1.0,
+    "shared": [
+     "Field"
+    ]
+   }
+  ]
+ }
+}

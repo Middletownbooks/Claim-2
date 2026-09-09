@@ -1,0 +1,549 @@
+{
+ "label": "EXPERIMENTAL_RESULT",
+ "seed": 20260909,
+ "direction": "NS -> FLT, exportable surfaces only",
+ "rows": [
+  {
+   "pool": "TRANSPORT_ns_exportable",
+   "pool_size": 2829,
+   "queries": 11093,
+   "mean_best_jaccard": 0.1155,
+   "median": 0.1071,
+   "ge_0.4": 34,
+   "ge_0.6": 2,
+   "ge_0.8": 0
+  },
+  {
+   "pool": "CONTROL_B_flt_itself",
+   "pool_size": 11093,
+   "queries": 11093,
+   "mean_best_jaccard": 0.5735,
+   "median": 0.5556,
+   "ge_0.4": 8238,
+   "ge_0.6": 4983,
+   "ge_0.8": 2400
+  },
+  {
+   "pool": "CONTROL_C_random_ns_quarter",
+   "pool_size": 707,
+   "queries": 11093,
+   "mean_best_jaccard": 0.0999,
+   "median": 0.0909,
+   "ge_0.4": 11,
+   "ge_0.6": 1,
+   "ge_0.8": 0
+  }
+ ],
+ "high_matches": {
+  "TRANSPORT_ns_exportable": [
+   {
+    "ns": "LanglandsTunnell.integrableOn_and_integral_Ioi_exp_neg_pi_mul_sq_add_sq_div_sq_eq_half_exp",
+    "match": "integrableOn_shift_exp",
+    "jaccard": 0.6,
+    "shared": [
+     "IntegrableOn",
+     "Ioi",
+     "Real.exp"
+    ]
+   },
+   {
+    "ns": "exists_contDiff_even_sub_comp_neg_eq_two_mul_smul",
+    "match": "parameterIntegral_contDiff_nat",
+    "jaccard": 0.625,
+    "shared": [
+     "CompleteSpace",
+     "ContDiff",
+     "NormedAddCommGroup",
+     "NormedSpace",
+     "Type"
+    ]
+   }
+  ],
+  "CONTROL_B_flt_itself": [
+   {
+    "ns": "LanglandsTunnell.CubicInduction.isHomogeneous_two_and_sum_pderiv_pderiv_eq_zero_sameTwo_xi",
+    "match": "LanglandsTunnell.CubicInduction.isHomogeneous_sub_one_and_sum_pderiv_pderiv_eq_zero_lowerOne_xi",
+    "jaccard": 1.0,
+    "shared": [
+     "Fin",
+     "Matrix",
+     "MvPolynomial",
+     "MvPolynomial.pderiv",
+     "hharm",
+     "hp",
+     "p.IsHomogeneous"
+    ]
+   },
+   {
+    "ns": "AlgebraicGeometry.existsUnique_localRing_eq_localization_of_normal_affineModel_of_relDimOne_of_val_of_gen",
+    "match": "AlgebraicGeometry.exists_localRing_eq_localization_of_normal_affineModel_of_map_maximalIdeal_le",
+    "jaccard": 0.878,
+    "shared": [
+     "Algebra",
+     "B.FG",
+     "CommRing",
+     "CommRingCat.of",
+     "Field",
+     "Flat",
+     "Ideal",
+     "Ideal.map",
+     "IsDiscreteValuationRing",
+     "IsDomain"
+    ]
+   },
+   {
+    "ns": "AlgebraicGeometry.exists_isClosedImmersion_iff_comp_eq_of_isSeparated",
+    "match": "AlgebraicGeometry.exists_isClosedImmersion_locallyOfFinitePresentation_iff_comp_eq_of_isSeparated",
+    "jaccard": 0.75,
+    "shared": [
+     "IsClosedImmersion",
+     "IsSeparated",
+     "Scheme.",
+     "T'",
+     "hu",
+     "hv"
+    ]
+   },
+   {
+    "ns": "ModularCurve.exists_mem_periodLatticeOf_eq_sum_intCast_mul_edgeIntegral_of_isParabolicHom",
+    "match": "ModularCurve.exists_isParabolicHom_sum_intCast_mul_edgeIntegral_eq_periodOf",
+    "jaccard": 0.92,
+    "shared": [
+     "Additive",
+     "Additive.ofMul",
+     "Complex.I",
+     "Complex.exp",
+     "CuspForm",
+     "Fin",
+     "FiniteIndex",
+     "Fintype",
+     "GL",
+     "ModularCurve.Period.IsParabolicHom"
+    ]
+   },
+   {
+    "ns": "Algebra.Smooth.isDomain_and_isIntegrallyClosed_of_isIntegrallyClosed_of_isLocalization_atPrime",
+    "match": "Algebra.Smooth.isDomain_and_isIntegrallyClosed_of_isLocalization_atPrime",
+    "jaccard": 0.9,
+    "shared": [
+     "Algebra",
+     "Algebra.Smooth",
+     "CommRing",
+     "Ideal",
+     "IsDomain",
+     "IsIntegrallyClosed",
+     "IsLocalization.AtPrime",
+     "Type",
+     "p.IsPrime"
+    ]
+   },
+   {
+    "ns": "ModularCurve.isIntegral_adjoin_jqModC_inv_coeffMap_residue_of_isIntegral_of_not_dvd",
+    "match": "ModularCurve.isIntegral_adjoin_jqModC_coeffMap_residue_of_isIntegral_of_not_dvd",
+    "jaccard": 1.0,
+    "shared": [
+     "A.LiesOverPrime",
+     "A.subtype",
+     "Algebra.adjoin",
+     "AlgebraicClosure",
+     "Fact",
+     "IsIntegral",
+     "IsLocalRing.ResidueField",
+     "IsLocalRing.residue",
+     "LaurentSeries",
+     "ModularCurve.coeffEmb"
+    ]
+   },
+   {
+    "ns": "WeierstrassCurve.exists_int_transport_comp_sub_smul_add_eq_zero_of_natCard_stabilizer_eq_two",
+    "match": "WeierstrassCurve.exists_int_transport_comp_sub_smul_add_eq_zero_of_j_eq_1728_of_two_ne_zero",
+    "jaccard": 0.688,
+    "shared": [
+     "DecidableEq",
+     "Field",
+     "IsElliptic",
+     "Point.equivOfVariableChangeEq",
+     "Type",
+     "WeierstrassCurve",
+     "WeierstrassCurve.VariableChange",
+     "h2",
+     "symm",
+     "toAffine"
+    ]
+   },
+   {
+    "ns": "AlgebraicGeometry.mem_of_isSeparated_of_forall_smoothProperCurve_opens_mem",
+    "match": "AlgebraicGeometry.mem_of_isProper_of_forall_smoothProperCurve_mem",
+    "jaccard": 0.75,
+    "shared": [
+     "CommRingCat.of",
+     "Field",
+     "IsAlgClosed",
+     "IsIntegral",
+     "IsProper",
+     "Scheme.",
+     "Set",
+     "SmoothOfRelativeDimension",
+     "Spec",
+     "Type"
+    ]
+   },
+   {
+    "ns": "ModularCurve.FullLevel.AuxLevel.exists_ringEquiv_adicCompletion_stalk_drinfeldChart_levelAut_linearPart_inertia_of_mem_ssJSet_of_pow_eq_mul_of_isAlgClosed",
+    "match": "ModularCurve.FullLevel.AuxLevel.exists_ringEquiv_adicCompletion_stalk_drinfeldChart_of_mem_ssJSet_of_pow_eq_mul_moduliHasse_of_isAlgClosed",
+    "jaccard": 1.0,
+    "shared": [
+     "AdicCompletion",
+     "Algebra",
+     "AlgebraicCurve.TwoChartIntegralModel",
+     "AlgebraicCurve.TwoChartIntegralModel.",
+     "AlgebraicCurve.TwoChartIntegralModel.XFin",
+     "AlgebraicCurve.TwoChartIntegralModel.chartAlgFin",
+     "AlgebraicCurve.TwoChartIntegralModel.jChartFin",
+     "AlgebraicCurve.TwoChartIntegralModel.toBase",
+     "CMP",
+     "CharP"
+    ]
+   },
+   {
+    "ns": "ModularForm.alSlash_alSlash",
+    "match": "ModularForm.alSlash_slash_eq_self_of_mem_Gamma0",
+    "jaccard": 1.0,
+    "shared": [
+     "CongruenceSubgroup.Gamma0",
+     "Fin",
+     "Matrix.GeneralLinearGroup",
+     "ModularForm.AtkinLehnerDatum",
+     "ModularForm.alSlash",
+     "NeZero",
+     "SlashAction.map",
+     "Subgroup",
+     "UpperHalfPlane",
+     "hf"
+    ]
+   },
+   {
+    "ns": "ModularCurve.reductionQExpModL_gammaH_smul_of_isFrobeniusAt",
+    "match": "ModularCurve.surjOn_reductionQExpModL_gammaH_torsion_pow",
+    "jaccard": 0.737,
+    "shared": [
+     "A.LiesOverPrime",
+     "AlgebraicClosure",
+     "CohCarrier.GammaH",
+     "Fact",
+     "IsLocalRing.ResidueField",
+     "ModularCurve.JH",
+     "ModularCurve.ReductionInputsQExpModL",
+     "ModularCurve.reductionQExpModL",
+     "NeZero",
+     "Prime"
+    ]
+   },
+   {
+    "ns": "AutomorphicForm.exists_forall_lintegral_localHaar_eq_mul_lintegral_pi_norm_det_inv_sq",
+    "match": "AutomorphicForm.exists_forall_lintegral_semiLocalHaar_eq_mul_lintegral_pi_norm_algebraNorm_det_inv_sq",
+    "jaccard": 0.7,
+    "shared": [
+     "BorelSpace",
+     "ENNReal",
+     "ENNReal.ofReal",
+     "Field",
+     "Fin",
+     "GL",
+     "HeightOneSpectrum",
+     "IsAddHaarMeasure",
+     "Matrix",
+     "Measurable"
+    ]
+   },
+   {
+    "ns": "AutomorphicForm.adelicKernelLocalFiniteness",
+    "match": "AutomorphicForm.exists_isInducedSection_one_etaSnd_eq_on_maximalCompact_of_equivariant",
+    "jaccard": 0.6,
+    "shared": [
+     "Field",
+     "NumberField",
+     "Type"
+    ]
+   },
+   {
+    "ns": "AlgebraicGeometry.finite_setOf_not_isRegularLocalRing_stalk_of_isIso_stalkMap_of_isIntegral",
+    "match": "AlgebraicCurve.CurveModel.isFinite_of_isIso_stalkMap",
+    "jaccard": 0.8,
+    "shared": [
+     "Algebra",
+     "AlgebraicCurve.CurveModel",
+     "CommRingCat.of",
+     "Field",
+     "IsAlgClosed",
+     "IsIntegral",
+     "IsIso",
+     "IsProper",
+     "M.C",
+     "M.toBase"
+    ]
+   },
+   {
+    "ns": "FixedPoints.isDiscreteValuationRing_subring",
+    "match": "isLocalRing_subring_of_finite",
+    "jaccard": 0.667,
+    "shared": [
+     "CommRing",
+     "Finite",
+     "FixedPoints.subring",
+     "Group",
+     "MulSemiringAction",
+     "Type"
+    ]
+   },
+   {
+    "ns": "HopfAlgebra.exists_bialgHom_surjective_points_eq_of_submonoid_of_bijective_evalPoints_of_perfectField",
+    "match": "HopfAlgebra.bijective_evalPoints_hopfKer_of_bijective_evalPoints",
+    "jaccard": 0.821,
+    "shared": [
+     "Algebra.TensorProduct.lift",
+     "Algebra.ofId",
+     "AlgebraicClosure",
+     "Coalgebra.IsCocomm",
+     "CommRing",
+     "Commute.all",
+     "Field",
+     "Finite",
+     "Function.Bijective",
+     "Function.Surjective"
+    ]
+   },
+   {
+    "ns": "WeierstrassCurve.isResiduallyModularOfLevel_div_of_isGoodPrimeFor_of_dvd_apOfModel",
+    "match": "WeierstrassCurve.isResiduallyModularOfLevel_div_of_isGoodPrimeFor",
+    "jaccard": 0.875,
+    "shared": [
+     "W.",
+     "W.IsGoodPrimeFor",
+     "W.IsResiduallyModularOfLevel",
+     "W.ModRepIsIrreducible",
+     "WeierstrassCurve",
+     "hM",
+     "hgood",
+     "hirr",
+     "hmod",
+     "hp"
+    ]
+   },
+   {
+    "ns": "AlgebraicGeometry.exists_mem_and_isClosedImmersion_pullbackMap_opens_of_isFinite_morphismRestrict_of_isIso_fiberToSpecResidueField",
+    "match": "AlgebraicGeometry.isIso_fiberToSpecResidueField_and_exists_isFinite_morphismRestrict_of_isIso_pullbackMap_fromSpecResidueField",
+    "jaccard": 0.737,
+    "shared": [
+     "Category.comp_id",
+     "Category.id_comp",
+     "Flat",
+     "IsFinite",
+     "IsIso",
+     "IsProper",
+     "LocallyOfFinitePresentation",
+     "Scheme.",
+     "Y.Opens",
+     "h.fiberToSpecResidueField"
+    ]
+   },
+   {
+    "ns": "ModularCurve.relfinrank_qExpFunctionFieldC_gamma0_gammaH_eq_index_of_charZero",
+    "match": "ModularCurve.index_le_relfinrank_qExpFunctionFieldC_gamma0_gammaH_of_charZero",
+    "jaccard": 1.0,
+    "shared": [
+     "CharZero",
+     "CohCarrier.GammaH",
+     "CongruenceSubgroup.Gamma0",
+     "Field",
+     "ModularCurve.qExpFunctionFieldC",
+     "NeZero",
+     "Subgroup",
+     "Subgroup.zpowers",
+     "Type",
+     "ZMod"
+    ]
+   },
+   {
+    "ns": "AlgebraicCurve.exists_closedPoint_range_stalk_eq",
+    "match": "AlgebraicCurve.exists_place_range_stalk_eq",
+    "jaccard": 0.9,
+    "shared": [
+     "AlgebraicCurve.Place",
+     "AlgebraicCurve.baseToFunctionField",
+     "C.functionField",
+     "C.presheaf.stalk",
+     "CommRingCat.of",
+     "Field",
+     "IsClosed",
+     "IsIntegral",
+     "Scheme.",
+     "Set"
+    ]
+   },
+   {
+    "ns": "CongruenceSubgroup.exists_mem_Gamma_mem_Gamma0_mul_inv_mem_Gamma_of_not_dvd",
+    "match": "ModularCurve.FullLevel.exists_mem_gamma0_redQ_inv_smul_eq",
+    "jaccard": 0.636,
+    "shared": [
+     "CongruenceSubgroup.Gamma0",
+     "Fact",
+     "M'",
+     "NeZero",
+     "SL",
+     "hqM'",
+     "q.Prime"
+    ]
+   },
+   {
+    "ns": "AlgebraicGeometry.exists_adicCompletion_atPrime_ringEquiv_powerSeries_of_isInvariant_of_smoothOfRelativeDimension_one",
+    "match": "AlgebraicGeometry.smoothOfRelativeDimension_one_SpecMap_of_isInvariant_of_isAdicComplete_of_isAlgClosed_residueField",
+    "jaccard": 0.741,
+    "shared": [
+     "Algebra",
+     "Algebra.IsInvariant",
+     "CommRing",
+     "CommRingCat.ofHom",
+     "FaithfulSMul",
+     "Fintype",
+     "Group",
+     "IsAdicComplete",
+     "IsAlgClosed",
+     "IsDiscreteValuationRing"
+    ]
+   },
+   {
+    "ns": "Algebra.FormallyUnramified.of_residueField_baseChange_of_finite",
+    "match": "Algebra.Etale.of_formallyUnramified_residueField_baseChange",
+    "jaccard": 0.778,
+    "shared": [
+     "Algebra",
+     "Algebra.FormallyUnramified",
+     "CommRing",
+     "IsLocalRing",
+     "IsLocalRing.ResidueField",
+     "Module.Finite",
+     "Type"
+    ]
+   },
+   {
+    "ns": "ModularCurve.XOneP.genericPoint_mem_preimage_chartFinOpen_of_mem_irreducibleComponents_twoChartModel_x1_mul",
+    "match": "ModularCurve.XOneP.connectedSpace_pullback_modelTo_of_isAlgClosed_twoChartModel_x1_mul",
+    "jaccard": 0.8,
+    "shared": [
+     "Algebra",
+     "CharZero",
+     "CommRing",
+     "CommRingCat.of",
+     "Fact",
+     "Field",
+     "IntermediateField",
+     "IsAlgClosed",
+     "IsCyclotomicExtension",
+     "IsDiscreteValuationRing"
+    ]
+   },
+   {
+    "ns": "groupCohomology.cocycles1_conj_apply_sub_eq",
+    "match": "groupCohomology.forall_exists_conj_sub_eq_iff_of_forall_apply_eq",
+    "jaccard": 0.6,
+    "shared": [
+     "A.",
+     "CommRing",
+     "Group",
+     "Rep.",
+     "Type",
+     "cocycles"
+    ]
+   },
+   {
+    "ns": "ModularCurve.XOneGammaZeroP.exists_ringEquiv_residueField_x1FunctionFieldC_of_gaussPresentation_x1x0",
+    "match": "ModularCurve.XOneGammaZeroP.gaussReduction_mem_x1FunctionFieldC_of_x1x0",
+    "jaccard": 0.861,
+    "shared": [
+     "Algebra",
+     "CharZero",
+     "CommRing",
+     "Fact",
+     "Field",
+     "HahnSeries.ofPowerSeries",
+     "IntermediateField",
+     "IsCyclotomicExtension",
+     "IsDiscreteValuationRing",
+     "IsDomain"
+    ]
+   },
+   {
+    "ns": "AutomorphicForm.exists_isInducedSection_one_etaSnd_eq_on_maximalCompact_of_equivariant",
+    "match": "AutomorphicForm.setIntegral_normSq_pseudoEisenstein_sub_residualProj_eq_mul_sum_integral_normSq_add_weylIntertwining_of_principalLevel_slab",
+    "jaccard": 1.0,
+    "shared": [
+     "AdeleRing",
+     "Field",
+     "NumberField",
+     "Type"
+    ]
+   },
+   {
+    "ns": "AlgebraicGeometry.ProjSpace.exists_isClosedImmersion_comp_pi_eq_id",
+    "match": "AlgebraicGeometry.exists_isClosedImmersion_projSpace_pullback_of_isClosedImmersion",
+    "jaccard": 0.643,
+    "shared": [
+     "CommRing",
+     "CommRingCat.of",
+     "Fin",
+     "IsClosedImmersion",
+     "MvPolynomial.homogeneousSubmodule",
+     "Proj",
+     "ProjSpace.",
+     "Spec",
+     "Type"
+    ]
+   },
+   {
+    "ns": "ModPForms.smul_thetaPS_sub_smul_mem_modPMod_add_two",
+    "match": "ModPForms.heckePS_mem_modPMod",
+    "jaccard": 0.6,
+    "shared": [
+     "Field",
+     "ModPForms.modPMod",
+     "N'",
+     "NeZero",
+     "PowerSeries",
+     "Type"
+    ]
+   },
+   {
+    "ns": "ModularCurve.integral_petersson_gammaFundamentalSet_eq_sum_conj_period_mul_edgeIntegral",
+    "match": "ModularCurve.sum_period_mul_edgeIntegral_eq_zero",
+    "jaccard": 0.875,
+    "shared": [
+     "Complex.I",
+     "Complex.exp",
+     "CongruenceSubgroup.Gamma0",
+     "CuspForm",
+     "Fin",
+     "Fintype",
+     "GL",
+     "ModularCurve.period",
+     "ModularGroup.S",
+     "ModularGroup.T"
+    ]
+   }
+  ],
+  "CONTROL_C_random_ns_quarter": [
+   {
+    "ns": "exists_contDiff_even_sub_comp_neg_eq_two_mul_smul",
+    "match": "parameterIntegral_contDiff_nat",
+    "jaccard": 0.625,
+    "shared": [
+     "CompleteSpace",
+     "ContDiff",
+     "NormedAddCommGroup",
+     "NormedSpace",
+     "Type"
+    ]
+   }
+  ]
+ }
+}

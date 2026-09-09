@@ -1,0 +1,626 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "correction": "root matching restricted to names with an underscore or an uppercase letter; this removes 20 English-word entries in decls.json that the first pass ranked at the top of the shared list",
+ "flt_files": 60474,
+ "ns_files": 2484,
+ "flt_declarations": 25413,
+ "ns_declarations": 2486,
+ "shared_declarations": 1948,
+ "shared_over_ns": 0.7836,
+ "shared_over_flt": 0.0767,
+ "ns_only": 538,
+ "rarity_profile_flt_files_using": {
+  "<=1000": 473,
+  "<=30": 360,
+  "<=10000": 141,
+  "<=100": 325,
+  "<=10": 303,
+  "<=3": 183,
+  "<=1": 153,
+  ">10000": 10
+ },
+ "rare_shared_used_by_ns": [
+  {
+   "decl": "ContinuousLinearMap",
+   "flt_files": 10,
+   "ns_files": 647,
+   "module": "Mathlib.Topology.Algebra.Module.ContinuousLinearMap.Basic"
+  },
+  {
+   "decl": "HasDerivWithinAt",
+   "flt_files": 27,
+   "ns_files": 290,
+   "module": "Mathlib.Analysis.Calculus.Deriv.Basic"
+  },
+  {
+   "decl": "BoundedContinuousFunction",
+   "flt_files": 7,
+   "ns_files": 224,
+   "module": "Mathlib.Topology.ContinuousMap.Bounded.Basic"
+  },
+  {
+   "decl": "ContinuousMap.ext",
+   "flt_files": 5,
+   "ns_files": 124,
+   "module": "Mathlib.Topology.ContinuousMap.Defs"
+  },
+  {
+   "decl": "ContinuousMap.norm_le",
+   "flt_files": 11,
+   "ns_files": 99,
+   "module": "Mathlib.Topology.ContinuousMap.Compact"
+  },
+  {
+   "decl": "contDiffAt_const",
+   "flt_files": 30,
+   "ns_files": 92,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Basic"
+  },
+  {
+   "decl": "ContinuousLinearMap.fst",
+   "flt_files": 28,
+   "ns_files": 90,
+   "module": "Mathlib.Topology.Algebra.Module.ContinuousLinearMap.PiProd"
+  },
+  {
+   "decl": "sq_pos_of_pos",
+   "flt_files": 1,
+   "ns_files": 75,
+   "module": "Mathlib.Algebra.Order.GroupWithZero.Basic"
+  },
+  {
+   "decl": "EuclideanSpace.single",
+   "flt_files": 2,
+   "ns_files": 73,
+   "module": "Mathlib.Analysis.InnerProductSpace.PiL2"
+  },
+  {
+   "decl": "sq_le_sq",
+   "flt_files": 3,
+   "ns_files": 66,
+   "module": "Mathlib.Algebra.Order.Ring.Abs"
+  },
+  {
+   "decl": "ENat.natCast_le_of_coe_top_le_withTop",
+   "flt_files": 1,
+   "ns_files": 66,
+   "module": "Mathlib.Data.ENat.Monoid"
+  },
+  {
+   "decl": "ContinuousLinearMap.snd",
+   "flt_files": 23,
+   "ns_files": 64,
+   "module": "Mathlib.Topology.Algebra.Module.ContinuousLinearMap.PiProd"
+  },
+  {
+   "decl": "EuclideanSpace.proj",
+   "flt_files": 3,
+   "ns_files": 61,
+   "module": "Mathlib.Analysis.InnerProductSpace.PiL2"
+  },
+  {
+   "decl": "real_inner_self_eq_norm_sq",
+   "flt_files": 7,
+   "ns_files": 55,
+   "module": "Mathlib.Analysis.InnerProductSpace.Basic"
+  },
+  {
+   "decl": "ContinuousMap.evalCLM",
+   "flt_files": 3,
+   "ns_files": 54,
+   "module": "Mathlib.Topology.ContinuousMap.Algebra"
+  },
+  {
+   "decl": "iteratedFDerivWithin_of_isOpen",
+   "flt_files": 19,
+   "ns_files": 52,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.FTaylorSeries"
+  },
+  {
+   "decl": "contDiffAt_fst",
+   "flt_files": 8,
+   "ns_files": 50,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Comp"
+  },
+  {
+   "decl": "Interval",
+   "flt_files": 21,
+   "ns_files": 48,
+   "module": "Mathlib.Order.Interval.Basic"
+  },
+  {
+   "decl": "iteratedFDeriv_fun_zero",
+   "flt_files": 10,
+   "ns_files": 47,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Basic"
+  },
+  {
+   "decl": "contDiffOn_fst",
+   "flt_files": 2,
+   "ns_files": 45,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Comp"
+  },
+  {
+   "decl": "ContinuousLinearMap.contDiff",
+   "flt_files": 17,
+   "ns_files": 44,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Basic"
+  },
+  {
+   "decl": "Icc_mem_nhds",
+   "flt_files": 25,
+   "ns_files": 44,
+   "module": "Mathlib.Topology.Order.OrderClosed"
+  },
+  {
+   "decl": "iteratedFDerivWithin_univ",
+   "flt_files": 4,
+   "ns_files": 44,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.FTaylorSeries"
+  },
+  {
+   "decl": "isOpen_Ioo",
+   "flt_files": 18,
+   "ns_files": 43,
+   "module": "Mathlib.Topology.Order.OrderClosed"
+  },
+  {
+   "decl": "ContinuousLinearMap.id_apply",
+   "flt_files": 21,
+   "ns_files": 43,
+   "module": "Mathlib.Topology.Algebra.Module.ContinuousLinearMap.Basic"
+  },
+  {
+   "decl": "real_inner_comm",
+   "flt_files": 9,
+   "ns_files": 42,
+   "module": "Mathlib.Analysis.InnerProductSpace.Basic"
+  },
+  {
+   "decl": "ContinuousLinearMap.apply",
+   "flt_files": 17,
+   "ns_files": 42,
+   "module": "Mathlib.Analysis.Normed.Operator.Bilinear"
+  },
+  {
+   "decl": "norm_fst_le",
+   "flt_files": 22,
+   "ns_files": 42,
+   "module": "Mathlib.Analysis.Normed.Group.Constructions"
+  },
+  {
+   "decl": "contDiffAt_snd",
+   "flt_files": 7,
+   "ns_files": 41,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Comp"
+  },
+  {
+   "decl": "Cauchy",
+   "flt_files": 1,
+   "ns_files": 41,
+   "module": "Mathlib.Topology.UniformSpace.Cauchy"
+  },
+  {
+   "decl": "Real.rpow_mul_natCast",
+   "flt_files": 14,
+   "ns_files": 40,
+   "module": "Mathlib.Analysis.SpecialFunctions.Pow.Real"
+  },
+  {
+   "decl": "hasFDerivAt_id",
+   "flt_files": 15,
+   "ns_files": 39,
+   "module": "Mathlib.Analysis.Calculus.FDeriv.Basic"
+  },
+  {
+   "decl": "PiLp.norm_apply_le",
+   "flt_files": 13,
+   "ns_files": 39,
+   "module": "Mathlib.Analysis.Normed.Lp.PiLp"
+  },
+  {
+   "decl": "Complex.ofReal",
+   "flt_files": 27,
+   "ns_files": 37,
+   "module": "Mathlib.Basic.Complex.Basic"
+  },
+  {
+   "decl": "Nat.factorial_zero",
+   "flt_files": 12,
+   "ns_files": 37,
+   "module": "Mathlib.Data.Nat.Factorial.Basic"
+  },
+  {
+   "decl": "hasFDerivAt_const",
+   "flt_files": 19,
+   "ns_files": 36,
+   "module": "Mathlib.Analysis.Calculus.FDeriv.Const"
+  },
+  {
+   "decl": "uniqueDiffOn_Icc",
+   "flt_files": 9,
+   "ns_files": 36,
+   "module": "Mathlib.Analysis.Calculus.TangentCone.Real"
+  },
+  {
+   "decl": "ContDiffOn.sum",
+   "flt_files": 24,
+   "ns_files": 35,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Operations"
+  },
+  {
+   "decl": "real_inner_smul_left",
+   "flt_files": 8,
+   "ns_files": 35,
+   "module": "Mathlib.Analysis.InnerProductSpace.Basic"
+  },
+  {
+   "decl": "ext_inner_right",
+   "flt_files": 5,
+   "ns_files": 35,
+   "module": "Mathlib.Analysis.InnerProductSpace.Basic"
+  },
+  {
+   "decl": "norm_snd_le",
+   "flt_files": 18,
+   "ns_files": 34,
+   "module": "Mathlib.Analysis.Normed.Group.Constructions"
+  },
+  {
+   "decl": "convex_Icc",
+   "flt_files": 7,
+   "ns_files": 34,
+   "module": "Mathlib.Analysis.Convex.Basic"
+  },
+  {
+   "decl": "LinearIsometryEquiv.norm_map",
+   "flt_files": 1,
+   "ns_files": 33,
+   "module": "Mathlib.Analysis.Normed.Operator.LinearIsometry"
+  },
+  {
+   "decl": "continuous_projIcc",
+   "flt_files": 9,
+   "ns_files": 33,
+   "module": "Mathlib.Topology.Order.ProjIcc"
+  },
+  {
+   "decl": "derivWithin",
+   "flt_files": 8,
+   "ns_files": 33,
+   "module": "Mathlib.Analysis.Calculus.Deriv.Basic"
+  },
+  {
+   "decl": "PiLp.smul_apply",
+   "flt_files": 2,
+   "ns_files": 33,
+   "module": "Mathlib.Analysis.Normed.Lp.PiLp"
+  },
+  {
+   "decl": "contDiffAt_id",
+   "flt_files": 2,
+   "ns_files": 32,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Basic"
+  },
+  {
+   "decl": "ContinuousLinearMap.inl",
+   "flt_files": 19,
+   "ns_files": 32,
+   "module": "Mathlib.Topology.Algebra.Module.ContinuousLinearMap.PiProd"
+  },
+  {
+   "decl": "inner_zero_right",
+   "flt_files": 11,
+   "ns_files": 32,
+   "module": "Mathlib.Analysis.InnerProductSpace.Basic"
+  },
+  {
+   "decl": "iteratedFDeriv_const_smul_apply'",
+   "flt_files": 22,
+   "ns_files": 32,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Operations"
+  },
+  {
+   "decl": "innerSL",
+   "flt_files": 24,
+   "ns_files": 30,
+   "module": "Mathlib.Analysis.InnerProductSpace.LinearMap"
+  },
+  {
+   "decl": "div_nonpos_of_nonpos_of_nonneg",
+   "flt_files": 6,
+   "ns_files": 30,
+   "module": "Mathlib.Algebra.Order.GroupWithZero.Basic"
+  },
+  {
+   "decl": "ContinuousLinearEquiv.apply_symm_apply",
+   "flt_files": 15,
+   "ns_files": 29,
+   "module": "Mathlib.Topology.Algebra.Module.Equiv"
+  },
+  {
+   "decl": "inner_add_right",
+   "flt_files": 13,
+   "ns_files": 29,
+   "module": "Mathlib.Analysis.InnerProductSpace.Basic"
+  },
+  {
+   "decl": "BoundedContinuousFunction.norm_le",
+   "flt_files": 3,
+   "ns_files": 29,
+   "module": "Mathlib.Topology.ContinuousMap.Bounded.Normed"
+  },
+  {
+   "decl": "squeeze_zero",
+   "flt_files": 15,
+   "ns_files": 28,
+   "module": "Mathlib.Topology.MetricSpace.Pseudo.Lemmas"
+  },
+  {
+   "decl": "Fin.init",
+   "flt_files": 21,
+   "ns_files": 28,
+   "module": "Mathlib.Data.Fin.Tuple.Basic"
+  },
+  {
+   "decl": "Nat.sum_range_choose",
+   "flt_files": 25,
+   "ns_files": 28,
+   "module": "Mathlib.Data.Nat.Choose.Sum"
+  },
+  {
+   "decl": "nhdsWithin_univ",
+   "flt_files": 8,
+   "ns_files": 27,
+   "module": "Mathlib.Topology.NhdsWithin"
+  },
+  {
+   "decl": "intervalIntegrable_const",
+   "flt_files": 28,
+   "ns_files": 27,
+   "module": "Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic"
+  }
+ ],
+ "ns_heaviest_shared": [
+  {
+   "decl": "Set",
+   "ns_files": 1955,
+   "flt_files": 17444,
+   "module": "Mathlib.Data.Set.Defs"
+  },
+  {
+   "decl": "NormedAddCommGroup",
+   "ns_files": 1349,
+   "flt_files": 550,
+   "module": "Mathlib.Analysis.Normed.Group.Defs"
+  },
+  {
+   "decl": "ContDiff",
+   "ns_files": 1347,
+   "flt_files": 667,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Defs"
+  },
+  {
+   "decl": "InnerProductSpace",
+   "ns_files": 989,
+   "flt_files": 315,
+   "module": "Mathlib.Analysis.InnerProductSpace.Defs"
+  },
+  {
+   "decl": "NormedSpace",
+   "ns_files": 830,
+   "flt_files": 421,
+   "module": "Mathlib.Analysis.Normed.Module.Basic"
+  },
+  {
+   "decl": "Fact",
+   "ns_files": 803,
+   "flt_files": 22136,
+   "module": "Mathlib.Basic.Logic.Basic"
+  },
+  {
+   "decl": "mul_le_mul_of_nonneg_left",
+   "ns_files": 750,
+   "flt_files": 1241,
+   "module": "Mathlib.Algebra.Order.GroupWithZero.Defs"
+  },
+  {
+   "decl": "le_rfl",
+   "ns_files": 731,
+   "flt_files": 3308,
+   "module": "Mathlib.Order.Defs.PartialOrder"
+  },
+  {
+   "decl": "Filter",
+   "ns_files": 696,
+   "flt_files": 1657,
+   "module": "Mathlib.Order.Filter.Defs"
+  },
+  {
+   "decl": "mul_nonneg",
+   "ns_files": 692,
+   "flt_files": 1267,
+   "module": "Mathlib.Algebra.Order.GroupWithZero.Basic"
+  },
+  {
+   "decl": "ContinuousLinearMap",
+   "ns_files": 647,
+   "flt_files": 10,
+   "module": "Mathlib.Topology.Algebra.Module.ContinuousLinearMap.Basic"
+  },
+  {
+   "decl": "Continuous",
+   "ns_files": 589,
+   "flt_files": 4920,
+   "module": "Mathlib.Tactic.FunProp"
+  },
+  {
+   "decl": "CompleteSpace",
+   "ns_files": 579,
+   "flt_files": 671,
+   "module": "Mathlib.Topology.UniformSpace.Cauchy"
+  },
+  {
+   "decl": "mul_le_mul_of_nonneg_right",
+   "ns_files": 564,
+   "flt_files": 1074,
+   "module": "Mathlib.Algebra.Order.GroupWithZero.Defs"
+  },
+  {
+   "decl": "iteratedFDeriv",
+   "ns_files": 457,
+   "flt_files": 116,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.FTaylorSeries"
+  },
+  {
+   "decl": "by_cases",
+   "ns_files": 455,
+   "flt_files": 10071,
+   "module": "Mathlib.Basic.Logic.Basic"
+  },
+  {
+   "decl": "one_mul",
+   "ns_files": 447,
+   "flt_files": 9462,
+   "module": "Mathlib.Algebra.Group.Monoid"
+  },
+  {
+   "decl": "mul_one",
+   "ns_files": 415,
+   "flt_files": 10923,
+   "module": "Mathlib.Algebra.Group.Monoid"
+  },
+  {
+   "decl": "HasDerivAt",
+   "ns_files": 415,
+   "flt_files": 642,
+   "module": "Mathlib.Analysis.Calculus.Deriv.Basic"
+  },
+  {
+   "decl": "sq_nonneg",
+   "ns_files": 348,
+   "flt_files": 632,
+   "module": "Mathlib.Algebra.Order.Ring.Unbundled.Basic"
+  },
+  {
+   "decl": "Real.sqrt",
+   "ns_files": 344,
+   "flt_files": 950,
+   "module": "Mathlib.Analysis.Real.Sqrt"
+  },
+  {
+   "decl": "mul_comm",
+   "ns_files": 337,
+   "flt_files": 7737,
+   "module": "Mathlib.Algebra.Group.Semigroup"
+  },
+  {
+   "decl": "ContDiffOn",
+   "ns_files": 328,
+   "flt_files": 208,
+   "module": "Mathlib.Analysis.Calculus.ContDiff.Defs"
+  },
+  {
+   "decl": "Finset",
+   "ns_files": 310,
+   "flt_files": 11629,
+   "module": "Mathlib.Data.Finset.Defs"
+  },
+  {
+   "decl": "mul_assoc",
+   "ns_files": 308,
+   "flt_files": 8032,
+   "module": "Mathlib.Algebra.Group.Semigroup"
+  },
+  {
+   "decl": "continuous_const",
+   "ns_files": 301,
+   "flt_files": 2179,
+   "module": "Mathlib.Tactic.FunProp"
+  },
+  {
+   "decl": "mul_le_mul",
+   "ns_files": 296,
+   "flt_files": 825,
+   "module": "Mathlib.Algebra.Order.GroupWithZero.Defs"
+  },
+  {
+   "decl": "HasDerivWithinAt",
+   "ns_files": 290,
+   "flt_files": 27,
+   "module": "Mathlib.Analysis.Calculus.Deriv.Basic"
+  },
+  {
+   "decl": "IsOpen",
+   "ns_files": 290,
+   "flt_files": 2955,
+   "module": "Mathlib.Topology.Defs.Basic"
+  },
+  {
+   "decl": "Real.norm_eq_abs",
+   "ns_files": 285,
+   "flt_files": 956,
+   "module": "Mathlib.Analysis.Normed.Group.Real"
+  },
+  {
+   "decl": "map_smul",
+   "ns_files": 277,
+   "flt_files": 3261,
+   "module": "Mathlib.GroupTheory.GroupAction.Hom"
+  },
+  {
+   "decl": "I",
+   "ns_files": 263,
+   "flt_files": 9988,
+   "module": "Mathlib.Algebra.Group.UniqueProds.Basic"
+  },
+  {
+   "decl": "smul_eq_mul",
+   "ns_files": 260,
+   "flt_files": 6120,
+   "module": "Mathlib.Algebra.Group.Action.Defs"
+  },
+  {
+   "decl": "zero_le_one",
+   "ns_files": 253,
+   "flt_files": 846,
+   "module": "Mathlib.Algebra.Order.ZeroLEOne"
+  },
+  {
+   "decl": "mul_pos",
+   "ns_files": 251,
+   "flt_files": 826,
+   "module": "Mathlib.Algebra.Order.GroupWithZero.Basic"
+  },
+  {
+   "decl": "TopologicalSpace",
+   "ns_files": 241,
+   "flt_files": 2854,
+   "module": "Mathlib.Topology.Defs.Basic"
+  },
+  {
+   "decl": "ContinuousOn",
+   "ns_files": 234,
+   "flt_files": 984,
+   "module": "Mathlib.Topology.Defs.Filter"
+  },
+  {
+   "decl": "IsCompact",
+   "ns_files": 233,
+   "flt_files": 2277,
+   "module": "Mathlib.Topology.Defs.Filter"
+  },
+  {
+   "decl": "pow_nonneg",
+   "ns_files": 229,
+   "flt_files": 484,
+   "module": "Mathlib.Algebra.Order.GroupWithZero.Basic"
+  },
+  {
+   "decl": "BoundedContinuousFunction",
+   "ns_files": 224,
+   "flt_files": 7,
+   "module": "Mathlib.Topology.ContinuousMap.Bounded.Basic"
+  }
+ ]
+}

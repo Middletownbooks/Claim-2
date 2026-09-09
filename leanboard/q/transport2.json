@@ -1,0 +1,550 @@
+{
+ "label": "EXPERIMENTAL_RESULT",
+ "seed": 20260909,
+ "direction": "FLT -> NS, exportable surfaces only",
+ "rows": [
+  {
+   "pool": "TRANSPORT_flt_exportable",
+   "pool_size": 11093,
+   "queries": 2829,
+   "mean_best_jaccard": 0.1713,
+   "median": 0.1429,
+   "ge_0.4": 68,
+   "ge_0.6": 4,
+   "ge_0.8": 0
+  },
+  {
+   "pool": "CONTROL_B_ns_itself",
+   "pool_size": 2829,
+   "queries": 2829,
+   "mean_best_jaccard": 0.4156,
+   "median": 0.3333,
+   "ge_0.4": 1233,
+   "ge_0.6": 637,
+   "ge_0.8": 277
+  },
+  {
+   "pool": "CONTROL_C_random_flt_quarter",
+   "pool_size": 2773,
+   "queries": 2829,
+   "mean_best_jaccard": 0.1445,
+   "median": 0.125,
+   "ge_0.4": 16,
+   "ge_0.6": 0,
+   "ge_0.8": 0
+  },
+  {
+   "pool": "CONTROL_E_architecture_contact",
+   "pool_size": 101,
+   "queries": 2829,
+   "mean_best_jaccard": 0.1045,
+   "median": 0.0909,
+   "ge_0.4": 18,
+   "ge_0.6": 3,
+   "ge_0.8": 0
+  }
+ ],
+ "high_matches": {
+  "TRANSPORT_flt_exportable": [
+   {
+    "ns": "integrableOn_shift_exp",
+    "match": "LanglandsTunnell.integrableOn_and_integral_Ioi_exp_neg_pi_mul_sq_add_sq_div_sq_eq_half_exp",
+    "jaccard": 0.6,
+    "shared": [
+     "IntegrableOn",
+     "Ioi",
+     "Real.exp"
+    ]
+   },
+   {
+    "ns": "parameterIntegral_contDiff_nat",
+    "match": "exists_contDiff_even_sub_comp_neg_eq_two_mul_smul",
+    "jaccard": 0.625,
+    "shared": [
+     "CompleteSpace",
+     "ContDiff",
+     "NormedAddCommGroup",
+     "NormedSpace",
+     "Type"
+    ]
+   },
+   {
+    "ns": "polynomial_exp_integrable",
+    "match": "LanglandsTunnell.integrableOn_and_integral_Ioi_exp_neg_pi_mul_sq_add_sq_div_sq_eq_half_exp",
+    "jaccard": 0.6,
+    "shared": [
+     "IntegrableOn",
+     "Ioi",
+     "Real.exp"
+    ]
+   },
+   {
+    "ns": "const_polynomial_exp_integrable",
+    "match": "LanglandsTunnell.integrableOn_and_integral_Ioi_exp_neg_pi_mul_sq_add_sq_div_sq_eq_half_exp",
+    "jaccard": 0.6,
+    "shared": [
+     "IntegrableOn",
+     "Ioi",
+     "Real.exp"
+    ]
+   }
+  ],
+  "CONTROL_B_ns_itself": [
+   {
+    "ns": "positive_uniform_margin",
+    "match": "compact_positive_collar",
+    "jaccard": 0.6,
+    "shared": [
+     "ContinuousOn",
+     "IsCompact",
+     "Set",
+     "hK",
+     "hg",
+     "hpos"
+    ]
+   },
+   {
+    "ns": "weighted_integrable",
+    "match": "weighted_integrable",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous",
+     "Icc",
+     "Integrable",
+     "P.left",
+     "P.right",
+     "Patch",
+     "hg",
+     "hs",
+     "support"
+    ]
+   },
+   {
+    "ns": "continuous_slice",
+    "match": "continuous_slice",
+    "jaccard": 1.0,
+    "shared": [
+     "Continuous",
+     "ContinuousOn",
+     "Set",
+     "Space",
+     "hF",
+     "ht",
+     "univ"
+    ]
+   },
+   {
+    "ns": "normalized_correction_bound",
+    "match": "normalized_correction_bound",
+    "jaccard": 0.6,
+    "shared": [
+     "ContDiff",
+     "Inner",
+     "IsCompact",
+     "Set",
+     "hK",
+     "ha",
+     "hf",
+     "hh",
+     "y.2"
+    ]
+   },
+   {
+    "ns": "factor_slice_contDiff",
+    "match": "factor_contDiff",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "factor",
+     "hb",
+     "hc"
+    ]
+   },
+   {
+    "ns": "kernel_contDiff_param",
+    "match": "kernel_contDiff_x",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "hb",
+     "ht",
+     "kernel"
+    ]
+   },
+   {
+    "ns": "kernel_ae_contDiff",
+    "match": "kernel_ae_contDiff",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "Ioi",
+     "hb",
+     "kernel",
+     "volume.restrict"
+    ]
+   },
+   {
+    "ns": "kernel_jet_measurable",
+    "match": "kernel_iteratedDeriv_measurable",
+    "jaccard": 0.75,
+    "shared": [
+     "AEStronglyMeasurable",
+     "ContDiff",
+     "Ioi",
+     "hb",
+     "kernel",
+     "volume.restrict"
+    ]
+   },
+   {
+    "ns": "kernel_locallyDominated",
+    "match": "kernel_locallyDominated",
+    "jaccard": 0.75,
+    "shared": [
+     "ContDiff",
+     "Ioi",
+     "hb",
+     "hc",
+     "kernel",
+     "volume.restrict"
+    ]
+   },
+   {
+    "ns": "factor_contDiff",
+    "match": "factor_contDiff",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "factor",
+     "hb",
+     "hc"
+    ]
+   },
+   {
+    "ns": "factor_iteratedFDeriv",
+    "match": "factor_iteratedDeriv",
+    "jaccard": 0.75,
+    "shared": [
+     "ContDiff",
+     "Ioi",
+     "factor",
+     "hb",
+     "hc",
+     "kernel"
+    ]
+   },
+   {
+    "ns": "primitive_contDiff",
+    "match": "primitive_contDiff",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "hb",
+     "hc",
+     "primitive"
+    ]
+   },
+   {
+    "ns": "exists_joint_smooth_factor",
+    "match": "exists_smooth_factor_original",
+    "jaccard": 1.0,
+    "shared": [
+     "ContDiff",
+     "Real.exp",
+     "hb",
+     "hc"
+    ]
+   },
+   {
+    "ns": "factor_sqrt_contDiffAt_zero",
+    "match": "factor_sqrt_contDiffAt_zero",
+    "jaccard": 0.75,
+    "shared": [
+     "ContDiff",
+     "ContDiffAt",
+     "Real.sqrt",
+     "factor",
+     "hb",
+     "hc"
+    ]
+   },
+   {
+    "ns": "sum_eq_mul_sum_of_support",
+    "match": "sum_eq_mul_sum_of_support",
+    "jaccard": 0.833,
+    "shared": [
+     "Finset",
+     "Type",
+     "he",
+     "hf",
+     "hg"
+    ]
+   },
+   {
+    "ns": "along_sub",
+    "match": "fderiv_apply_eq_of_line_eq",
+    "jaccard": 0.667,
+    "shared": [
+     "DifferentiableAt",
+     "NormedAddCommGroup",
+     "NormedSpace",
+     "Type",
+     "hf",
+     "hg"
+    ]
+   },
+   {
+    "ns": "compact_scalar_jets",
+    "match": "compact_parameter_jet_bound",
+    "jaccard": 0.615,
+    "shared": [
+     "ContDiffOn",
+     "IsCompact",
+     "IsOpen",
+     "Set",
+     "hJ",
+     "hK",
+     "hKJ",
+     "iteratedDeriv"
+    ]
+   },
+   {
+    "ns": "directional_zero_of_factor",
+    "match": "fderiv_apply_eq_of_line_eq",
+    "jaccard": 0.667,
+    "shared": [
+     "DifferentiableAt",
+     "NormedAddCommGroup",
+     "NormedSpace",
+     "Type",
+     "fderiv",
+     "hf"
+    ]
+   },
+   {
+    "ns": "increment_twice_target",
+    "match": "increment_twice_target",
+    "jaccard": 1.0,
+    "shared": [
+     "Fin",
+     "SignedCovariance.increment",
+     "SmoothCovariance.Mat2",
+     "SmoothCovariance.StrictCone",
+     "SmoothCovariance.Vec2",
+     "SmoothCovariance.amplitudes",
+     "hc"
+    ]
+   },
+   {
+    "ns": "normal_pullback",
+    "match": "normal_pullback",
+    "jaccard": 1.0,
+    "shared": [
+     "DifferentiableAt",
+     "HarmonicCalculus.phaseNormal",
+     "PhaseCalculus.Slot",
+     "PhaseCalculus.Slow",
+     "PhaseCalculus.eR",
+     "PhaseCalculus.eTheta",
+     "PhaseCalculus.eZ",
+     "PhaseCalculus.phase",
+     "PhaseCalculus.phaseNormal",
+     "Vr"
+    ]
+   },
+   {
+    "ns": "frame_jets",
+    "match": "frame_jets",
+    "jaccard": 1.0,
+    "shared": [
+     "P.V",
+     "P.frame",
+     "P.openV",
+     "PhaseCalculus.Slow",
+     "PhaseJetBounds.Domain",
+     "PhaseJetBounds.FrameJets",
+     "PrimaryPulseBounds.PhaseConstruction",
+     "U.slot"
+    ]
+   },
+   {
+    "ns": "frame_tail_ne_zero",
+    "match": "frame_tail_ne_zero",
+    "jaccard": 1.0,
+    "shared": [
+     "MovingFrameODE.tail",
+     "P.V",
+     "P.openV",
+     "P.phase.normal",
+     "PhaseCalculus.Slow",
+     "PhaseJetBounds.Domain",
+     "PrimaryPulseBounds.PhaseConstruction",
+     "U.slot",
+     "carrier",
+     "hz"
+    ]
+   },
+   {
+    "ns": "frame_normal",
+    "match": "frame_normal",
+    "jaccard": 1.0,
+    "shared": [
+     "P.V",
+     "P.frame",
+     "P.openV",
+     "P.phase.normal",
+     "PhaseCalculus.Slow",
+     "PhaseJetBounds.Domain",
+     "PrimaryPulseBounds.PhaseConstruction",
+     "U.slot",
+     "carrier",
+     "hz"
+    ]
+   },
+   {
+    "ns": "initialized_oscillation",
+    "match": "initialized_oscillation",
+    "jaccard": 1.0,
+    "shared": [
+     "Context",
+     "Finset",
+     "Lift",
+     "Oscillation",
+     "PressureStream.Plane",
+     "PrimaryPiece",
+     "RankData",
+     "ReconstructionData",
+     "axial",
+     "baseError"
+    ]
+   },
+   {
+    "ns": "initialized_oscillation",
+    "match": "initialized_oscillation",
+    "jaccard": 1.0,
+    "shared": [
+     "Context",
+     "Finset",
+     "GaugeData",
+     "Oscillation",
+     "PressureStream.Lift",
+     "PressureStream.Plane",
+     "PrimaryPiece",
+     "RankData",
+     "axial",
+     "baseError"
+    ]
+   },
+   {
+    "ns": "insert_apply",
+    "match": "insert_apply",
+    "jaccard": 1.0,
+    "shared": [
+     "insert",
+     "norm_insert_le",
+     "rfl",
+     "theorem"
+    ]
+   },
+   {
+    "ns": "zeroMean_gr",
+    "match": "zeroMean_gr",
+    "jaccard": 1.0,
+    "shared": [
+     "Context",
+     "State",
+     "c.operators.dz",
+     "c.operators.invRadius",
+     "c.operators.radialDiv",
+     "hm",
+     "u.covariance",
+     "u.gr",
+     "u.mean"
+    ]
+   },
+   {
+    "ns": "zeroMean_theta",
+    "match": "zeroMean_theta",
+    "jaccard": 1.0,
+    "shared": [
+     "Context",
+     "State",
+     "c.operators.dz",
+     "c.operators.radialDiv",
+     "c.virtualTheta",
+     "hm",
+     "u.covariance",
+     "u.mean",
+     "u.thetaResidual"
+    ]
+   },
+   {
+    "ns": "zeroMean_axial",
+    "match": "zeroMean_axial",
+    "jaccard": 1.0,
+    "shared": [
+     "Context",
+     "State",
+     "c.operators.dz",
+     "c.operators.radialDiv",
+     "c.virtualAxial",
+     "hm",
+     "u.axialResidual",
+     "u.covariance",
+     "u.mean",
+     "u.pressure"
+    ]
+   },
+   {
+    "ns": "zeroMean_gr_shell",
+    "match": "zeroMean_gr_shell",
+    "jaccard": 1.0,
+    "shared": [
+     "Context",
+     "DefectIncrementBounds.PositiveOperators",
+     "DefectIncrementBounds.Shell",
+     "Lift",
+     "State",
+     "c.operators",
+     "hW",
+     "ha",
+     "hm",
+     "ho"
+    ]
+   }
+  ],
+  "CONTROL_C_random_flt_quarter": [],
+  "CONTROL_E_architecture_contact": [
+   {
+    "ns": "integrableOn_shift_exp",
+    "match": "LanglandsTunnell.integrableOn_and_integral_Ioi_exp_neg_pi_mul_sq_add_sq_div_sq_eq_half_exp",
+    "jaccard": 0.6,
+    "shared": [
+     "IntegrableOn",
+     "Ioi",
+     "Real.exp"
+    ]
+   },
+   {
+    "ns": "polynomial_exp_integrable",
+    "match": "LanglandsTunnell.integrableOn_and_integral_Ioi_exp_neg_pi_mul_sq_add_sq_div_sq_eq_half_exp",
+    "jaccard": 0.6,
+    "shared": [
+     "IntegrableOn",
+     "Ioi",
+     "Real.exp"
+    ]
+   },
+   {
+    "ns": "const_polynomial_exp_integrable",
+    "match": "LanglandsTunnell.integrableOn_and_integral_Ioi_exp_neg_pi_mul_sq_add_sq_div_sq_eq_half_exp",
+    "jaccard": 0.6,
+    "shared": [
+     "IntegrableOn",
+     "Ioi",
+     "Real.exp"
+    ]
+   }
+  ]
+ }
+}
