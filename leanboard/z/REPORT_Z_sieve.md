@@ -94,16 +94,20 @@ prime / in range.
 |---|---|---|---|
 | 3×10⁶ | 6,628 | 2,377 | — |
 | 10⁹ | 1,587,581 | 406,679 | **1** |
-| 2×10¹⁰ | 27,560,978 | 6,105,722 | 1125 after r ≤ 59; r ≤ 199 pass running |
+| 2×10¹⁰ | 27,560,978 | 6,105,722 | 1,432 after r ≤ 59, then **1** |
 
-**The single survivor below 10⁹ is 2521** — precisely the prime the Lean file
+**The single survivor below 2×10¹⁰ is 2521** — precisely the prime the Lean file
 hardcodes as `hsp : p ≠ 2521`, and which its own comment says condition (b)
 removes.
 
-Every one of the other 1,587,580 hard primes below 10⁹ is **proved** not
+Every one of the other 27,560,977 hard primes below 2×10¹⁰ is **proved** not
 rigid, by an explicit divisor witness. The repository claims emptiness only
-below 3×10⁶; this extends that by a factor of ~333 in range and ~240 in prime
-count, and turns up no new sporadic case.
+below 3×10⁶; this extends that by a factor of ~6,667 in range and ~4,158 in
+prime count (27,560,978 vs 6,628), and turns up no new sporadic case.
+
+**Correction to an earlier draft of this report**: a stage-3 count of 1,125
+was recorded from a file that was still being written. The completed figure
+is 1,432. The final survivor count of 1 is unaffected.
 
 **The claim survives.** This does not make the axiom a theorem — the rigid
 set is still not proved empty, and my witness families are a subset of the
