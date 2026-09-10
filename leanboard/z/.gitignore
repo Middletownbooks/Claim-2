@@ -17,3 +17,7 @@ survivors_rigid.txt
 # raw progress logs: \r-spam, only the final line matters and that is
 # transcribed into REPORT_Z_sieve.md
 *.log
+
+# progress/marker files from background runs
+*.prog
+*.done

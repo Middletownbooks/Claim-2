@@ -94,6 +94,7 @@ prime / in range.
 |---|---|---|---|
 | 3×10⁶ | 6,628 | 2,377 | — |
 | 10⁹ | 1,587,581 | 406,679 | **1** |
+| 2×10¹⁰ | 27,560,978 | 6,105,722 | 1125 after r ≤ 59; r ≤ 199 pass running |
 
 **The single survivor below 10⁹ is 2521** — precisely the prime the Lean file
 hardcodes as `hsp : p ≠ 2521`, and which its own comment says condition (b)
