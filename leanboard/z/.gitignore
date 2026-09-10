@@ -13,3 +13,7 @@ surv_conj2_*.txt
 surv_rigid_*.txt
 survivors_conj2.txt
 survivors_rigid.txt
+
+# raw progress logs: \r-spam, only the final line matters and that is
+# transcribed into REPORT_Z_sieve.md
+*.log

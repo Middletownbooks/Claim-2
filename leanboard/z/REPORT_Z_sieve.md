@@ -124,6 +124,13 @@ the right stage-3 test.
 So: **0 counterexamples below q = 10⁹** — which reproduces Ghermoul's own
 range (q ≤ 10⁹+2) rather than extending it. An extension run is in progress.
 
+## Run log (final lines, transcribed)
+
+```
+rigid, p <= 2e10 : rigid: tested 27560978, survivors 6105722
+conj2, q <= 1e11 : (in flight at time of writing)
+```
+
 ## Cost
 
 The 10⁹ passes took ~20 seconds each on 4 cores of a container, against the
