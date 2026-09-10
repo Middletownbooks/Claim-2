@@ -126,8 +126,39 @@ this: bounded (y,z) search is a poor filter because the required y can be
 seven digits for a nine-digit a; the divisor formulation a+u = z(4uy−u−1) is
 the right stage-3 test.
 
-So: **0 counterexamples below q = 10⁹** — which reproduces Ghermoul's own
-range (q ≤ 10⁹+2) rather than extending it. An extension run is in progress.
+So: 0 counterexamples below q = 10⁹ — which only reproduces Ghermoul's own
+range (q ≤ 10⁹+2).
+
+### Extension to q = 10¹¹ — a 100× extension of the published range
+
+| stage | test | remaining |
+|---|---|---|
+| candidates | q ≡ 0 mod 6, q < 10¹¹ (all Theorem 1 leaves open) | 16,666,666,666 |
+| 1 | sieve: p₁ (prime factor ≡ 3 mod 4), p₃ (≡ 5 mod 8), p₄ (square) | 24,409,696 |
+| 2 | p₂ bounded, y,z ≤ 40 | (inline) |
+| 3 | p₂ bounded, y,z ≤ 400 | 72,846 |
+| 4a | p₂ bounded, y,z ≤ 4000 | **17** |
+| 4b | p₂ **complete** (divisor formulation), x ≤ 60 | **3** |
+| 5 | p₂ complete, x ≤ 20000 | **0** |
+
+Stages 4a and 4b are independent finishers bounding different parameters, so
+they leave different residues — 17 and 3, disjoint sets. **All 20 clear**, each
+with a witness re-verified against the defining identity:
+
+```
+a =   3602392369   x=108  y=104478      z=20
+a =  97743119401   x=133  y=8016        z=5741
+a = 173441752969   x=96   y=5391078     z=21
+a = 286363236097   x=1    y=4772720602  z=5
+a = 379829793241   x=1    y=2877498434  z=11
+```
+
+**Result: 0 counterexamples to Conjecture 2 below q = 10¹¹**, extending
+Ghermoul's own verification by a factor of 100.
+
+The witnesses show why bounded search is the wrong instrument: y reaches
+4.77×10⁹ for a nine-digit-x case. No (y,z) grid can find these; only the
+divisor formulation a+u = z(4uy−u−1) does.
 
 ## Run log (final lines, transcribed)
 
