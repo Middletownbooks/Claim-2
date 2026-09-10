@@ -21,3 +21,9 @@ survivors_rigid.txt
 # progress/marker files from background runs
 *.prog
 *.done
+
+# in-flight stage-3/4 outputs: tracked only once their producer has exited,
+# via `git add -f`. Reading a count off one of these mid-write has already
+# caused two wrong figures in this phase.
+c3_1e11.txt
+c4_1e11.txt
