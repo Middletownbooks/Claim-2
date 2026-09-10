@@ -55,9 +55,20 @@ Section 3.2 introduces shortened filters. Applying the composite filters
 | 4 | 13 | 120120 | 442 | 194 | 192 |
 
 This also explains why 34 is not a multiple of 6: the reduction is a
-per-residue test, not a product. i=4 sits 2 above the paper for the same
-reason as the S₃₇ element — bounded search under-certifies — and in the safe
-direction.
+per-residue test, not a product.
+
+**i=4 is unresolved, and my first explanation of it was wrong.** I attributed
+the gap (194 computed vs 192 published) to bounded search under-certifying.
+That is refuted: raising the certification bound from CLIM = 60 to 200 to 600
+leaves the count at 194, unchanged. The cause is not the search bound.
+
+What survives is the *direction*: my implementation certifies strictly less
+than the paper's, keeping 2 residues the paper drops — the same direction as
+the missing element 15 ∈ S₃₇, and plausibly the same root cause, namely a case
+my derivation of the seven reference equations does not capture. Both are
+recorded as open rather than explained. The direction is the safe one:
+under-certifying makes the sieve check more integers than necessary and can
+never certify one falsely.
 
 ## Part 2 — the sieve core
 
