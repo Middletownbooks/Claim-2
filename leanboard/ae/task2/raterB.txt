@@ -1,0 +1,13 @@
+Q1: 4 | 4 | per-row control + implicit union bound replaced by a decoupling theorem giving joint control
+Q2: 1 | 3 | old Fourier/density-increment invariant tracked something multiplicative under Cartesian-product constructions, replaced by slice rank, a sum-over-slices quantity
+Q3: 2 | 3 | invariant is a direct property of the body itself (its Gaussian measure), no attached witness object
+Q4: 4 | 4 | per-round/per-scale descent with accumulating log-factor loss replaced by simultaneous joint congruence control
+Q5: 6 | 4 | a one-shot polynomial-vanishing argument replacing incidence geometry - no invariant/move/union-bound/witness structure to redescribe
+Q6: 2 | 3 | the body-measure invariant is replaced by "there exists a density attached to the body with bounded directional total variation"
+Q7: 5 | 4 | the LP framework's missing ingredient is replaced by an explicit, unconditionally-defined modular-form construction
+Q8: 6 | 3 | an explicit spectral/interlacing construction replacing weak combinatorial bounds - not any of the five
+
+RECOGNITION:
+Q1: UNKNOWN. Q2: cap set (Croot-Lev-Pach / Ellenberg-Gijswijt). Q3: UNKNOWN (plausibly Banaszczyk 1998).
+Q4: Vinogradov MVT via Wooley efficient congruencing. Q5: finite-field Kakeya, Dvir 2008. Q6: UNKNOWN.
+Q7: sphere packing dim 8, Viazovska. Q8: sensitivity conjecture, Huang 2019.
