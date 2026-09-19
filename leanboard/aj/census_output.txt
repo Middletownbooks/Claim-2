@@ -139,7 +139,32 @@
   sig   3  GPT 5.6 Sol, Fable          EMD $a^2$ jet threshold
 
 ==================================================================
-8. Anthropic / Fable presence
+8. Vendor mix, and the real independence axis
 ==================================================================
   entries involving an Anthropic model : 138  (20.8%)
   entries naming a Fable model         : 79  (11.9%)
+
+  A shared model family is NOT a contamination channel -- two unconnected
+  parties using the same commercial model share no information. The filter
+  that matters is the assistant's training cutoff, which is a date.
+
+  solveDate <= 2026-05 (may be in training data) :  188   28.3%
+  solveDate >  2026-05 (cannot be)               :  476   71.7%
+
+  audit queue within the clean post-cutoff set:
+    unreviewed          327
+    lean-verified        82
+    site-confirmed       38
+    lean-checked         22
+    expert-verified       6
+    contested             1
+
+  post-cutoff, sig >= 30, unreviewed or lean-checked : 55
+    sig  68 [lean-checked] 2026-08-10 Zeta zeros on the line
+    sig  65 [unreviewed  ] 2026-08-24 A Complex Structure on $S^6$
+    sig  62 [lean-checked] 2026-09-03 Prime gaps at most 212
+    sig  62 [unreviewed  ] 2026-09-01 Prime gaps at most 236
+    sig  62 [lean-checked] 2026-09-03 Prime Gaps at Most 186
+    sig  55 [lean-checked] 2026-07-10 Cycle Double Cover
+    sig  55 [lean-checked] 2026-08-19 Carathéodory conjecture (smooth)
+    sig  55 [unreviewed  ] 2026-08-17 Matrix multiplication exponent

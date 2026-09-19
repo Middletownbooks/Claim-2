@@ -90,8 +90,24 @@ for x in sorted((x for x in d if x.get("verification") == "lean-checked"),
                 key=lambda x: -sig(x)):
     print(f"  sig {sig(x):3d}  {str(x.get('model'))[:26]:26s}  {x['shortName'][:50]}")
 
-section("8. Anthropic / Fable presence")
+section("8. Vendor mix, and the real independence axis")
 anth = [x for x in d if "Anthropic" in str(x.get("modelMaker", ""))]
 fab = [x for x in d if "fable" in str(x.get("model", "")).lower()]
 print(f"  entries involving an Anthropic model : {len(anth)}  ({100*len(anth)/N:.1f}%)")
 print(f"  entries naming a Fable model         : {len(fab)}  ({100*len(fab)/N:.1f}%)")
+print("\n  A shared model family is NOT a contamination channel -- two unconnected")
+print("  parties using the same commercial model share no information. The filter")
+print("  that matters is the assistant's training cutoff, which is a date.")
+CUT = "2026-05"
+pre = [x for x in d if str(x.get("solveDate", ""))[:7] <= CUT]
+post = [x for x in d if str(x.get("solveDate", ""))[:7] > CUT]
+print(f"\n  solveDate <= {CUT} (may be in training data) : {len(pre):4d}  {100*len(pre)/N:5.1f}%")
+print(f"  solveDate >  {CUT} (cannot be)               : {len(post):4d}  {100*len(post)/N:5.1f}%")
+print("\n  audit queue within the clean post-cutoff set:")
+for k, n in Counter(x.get("verification") for x in post).most_common():
+    print(f"    {k:18s} {n:4d}")
+hi = [x for x in post if sig(x) >= 30
+      and x.get("verification") in ("unreviewed", "lean-checked")]
+print(f"\n  post-cutoff, sig >= 30, unreviewed or lean-checked : {len(hi)}")
+for x in sorted(hi, key=lambda x: -sig(x))[:8]:
+    print(f"    sig {sig(x):3d} [{x['verification']:12s}] {x['solveDate']} {x['shortName'][:44]}")

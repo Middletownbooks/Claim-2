@@ -110,14 +110,49 @@ OpenAI-made models dominate (329 entries name OpenAI alone). **Anthropic models 
 is visible in the data — 13 entries are "GPT-5.6 starships (Claude Fable 5 reviewer)", 4 are
 "GPT-5.6 Star Fleet (Claude Fable 5 referee)".
 
-**The contamination question is broader than I framed it.** I flagged, in arm AI, that the
-union-closed lead was Fable 5.1 while this programme holds Fable material. The user notes the
-two are the same family, possibly different versions. The census says Fable-family models are
-a *major producer across this whole corpus*, not a coincidence at one entry. So the question
-is not "is that one item related to our material" but **"can any Fable-produced entry serve
-in a prospective arm whose only value is independence?"** I do not think that can be answered
-from inside this programme. **Record the exposure at 11.9% of the corpus and treat every
-Fable-named entry as non-independent until someone outside decides otherwise.**
+**RETRACTED — the contamination claim in this section.** I wrote that Fable-family models
+are "a major producer across this whole corpus" and that therefore every Fable-named entry
+should be "treated as non-independent until someone outside decides otherwise." That is
+wrong, and the user's analogy is the refutation: a third of the races were won by Ferraris,
+and they once rode in a Ferrari Uber. **I conflated a shared model family with a shared
+information channel.** Contamination requires a channel — information flowing between this
+programme and the thing being measured. A commercial model used independently by two
+unconnected parties is not a channel; it is a mass-produced tool. Moffat's campaign and this
+programme share no data, no prompts and no people. There is nothing to control for.
+
+This is the same defect as the rank-429 badge, pointed the other way: a surface token (there
+a status label, here a model name) treated as evidence of underlying structure, with no check
+for whether a mechanism exists. Being over-cautious rather than over-confident does not make
+it a different error.
+
+### The real independence axis is the training cutoff, and it is computable
+
+Worrying about the model name obscured the variable that actually matters. For a prospective
+arm the question is *whether the answer is already in my context* — and that is a **date**,
+not a name.
+
+| filter | excludes | mechanism? |
+|---|---:|---|
+| Fable-named (what I proposed) | 79 (11.9%) | **none — withdrawn** |
+| `solveDate` ≤ 2026-05 (assistant knowledge cutoff) | 188 (28.3%) | training data |
+
+**476 of 664 entries (71.7%) post-date the cutoff and are clean on this axis.** Within that
+clean set the audit queue is 327 `unreviewed` and 22 `lean-checked`, and **55 entries sit at
+significance ≥ 30 while unreviewed or statement-unaudited**, including every one of the
+targets named in §2:
+
+| sig | tier | solved | entry |
+|---:|---|---|---|
+| 68 | `lean-checked` | 2026-08-10 | Zeta zeros on the line |
+| 65 | `unreviewed` | 2026-08-24 | A Complex Structure on S⁶ |
+| 62 | `lean-checked` | 2026-09-03 | Prime gaps at most 212 |
+| 62 | `unreviewed` | 2026-09-01 | Prime gaps at most 236 |
+| 55 | `lean-checked` | 2026-08-19 | Carathéodory conjecture (smooth) |
+| 55 | `unreviewed` | 2026-08-17 | Matrix multiplication exponent |
+
+So the bad filter would have thrown away 79 usable entries for no reason, and the good filter
+both *keeps* the whole target list and tells me exactly which 188 entries I must not treat as
+prospective. **Use the date. Retire the model-name control.**
 
 ---
 

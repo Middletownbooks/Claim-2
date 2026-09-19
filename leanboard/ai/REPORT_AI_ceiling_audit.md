@@ -120,15 +120,18 @@ record chain. ProofAtlas indexes *problems*; VibeMathed indexes *AI contribution
 problems, with verification status attached*. The second is this programme's actual subject.
 **Re-point the instrument.**
 
-## 6. Contamination flag — unresolved, do not assume either way
+## 6. Contamination flag — RETRACTED, there was never a channel
 
-The lead model is **Fable 5.1**. This programme holds Fable's code, its response to an
-earlier prompt, and its handoff. The dates are close: this result is 2026-09-08, and the
-handoff material is from this same campaign window. **I do not know whether there is any
-lineage overlap, and I am not going to infer one from a shared model name** — that is the
-rank-429 error in a new place. But if the prospective arm is to use this item, the
-independence question has to be settled first, because the prospective arm's only value is
-that it is uncontaminated. **Open; settle before use.**
+I flagged that the lead model is Fable 5.1 while this programme holds Fable material, and
+said the independence question "has to be settled" before the prospective arm could use this
+item. **Withdrawn.** Two unconnected parties using the same commercial model share no
+information; a shared model family is not a channel. Moffat's campaign and this programme
+have no data, prompts or people in common, and the flag should never have been raised.
+
+The variable I should have named is the **training cutoff** — whether the result is already
+in my context — which is a date, not a model name. This item is `solveDate` 2026-09-08, well
+past it, so it is clean. See `leanboard/aj/` §5 for the corrected axis and the 71.7% of the
+corpus it keeps.
 
 ## 7. Next on this arm
 
