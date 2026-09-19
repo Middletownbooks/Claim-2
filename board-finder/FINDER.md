@@ -17,8 +17,8 @@ whose proof is credited to an automated research agent.
 That is the fact a finder has to be built around. Searching for boards is searching
 for the abundant object.
 
-**What was scarce is visible in the trio's own encodings** (`leanboard/ae/task2/cases.json`),
-where K1 and K3 differ in exactly one slot:
+**What was scarce is visible in the trio's own encodings** (`leanboard/ae/task2/cases.json`).
+K1 and K3 differ in **two** slots, and it matters which:
 
 | | K1 Banaszczyk | K3 Guo–Fang–Lu |
 |---|---|---|
@@ -27,8 +27,17 @@ where K1 and K3 differ in exactly one slot:
 | invariant | Gaussian measure stays ≥ ½ | directional total variation ≤ a fixed constant, **and this constant survives the move unchanged** |
 | result | O(√log n) | **O(1)** |
 
-Same state, same move, different invariant — and the difference is that K1's
-invariant **degrades** under the move while K3's is **conserved**. K2 (Bansal–Jiang)
+**Same move, different state, different invariant** — and the load-bearing difference is
+that K1's invariant **degrades** under the move while K3's is **conserved**.
+
+An earlier version of this section said "same state, same move, different invariant" and
+"differ in exactly one slot", contradicting the table's own state row. Arm 3 is why it now
+says otherwise: an arm-3 respondent killed a board built on that reading by exploiting the
+very slot the prose denied had changed. K1's state is a **symmetric** convex body; K3's is a
+convex body plus a density, and the symmetry qualifier is not decoration — the terminal
+condition ("a nonempty symmetric convex body contains the origin") is the only place the
+origin gets anchored, and a total-variation invariant is exactly translation-invariant, so
+it cannot do that anchoring. See `controls/REPORT_ARM3.md`. K2 (Bansal–Jiang)
 does the other version of the same thing: it replaces per-round existence with a
 diffusion in which "existence of a legal move at each instant is itself a theorem".
 

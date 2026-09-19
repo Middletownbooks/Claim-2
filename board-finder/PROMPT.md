@@ -83,7 +83,10 @@ checkable object.
 > move *certified by this invariant* reaches O(1) — say so, and say where the cap sits.
 > Say also whether the move is **monotone** in the invariant: if the move can only degrade
 > it, the cap holds whatever the move does; if not, the cap is on the invariant and the
-> target may still be true by another certificate. If the invariant is not a threshold on
+> target may still be true by another certificate.
+> If min{C} comes back O(1), say **which way the threshold moves with the scale**. If the
+> invariant gets *easier* as the target grows, it is **not binding at any scale** — that is a
+> third answer, not a pass, and it means the whole burden has been moved into the move. If the invariant is not a threshold on
 > a scale — if its loss is (rounds) × (cost per step) instead — answer **does not parse for
 > this board** and say which it is. Do not manufacture a threshold to fill the field.
 > Then, per candidate, **the kill test**: the single computation that would refute it. Run
@@ -117,6 +120,7 @@ checkable object.
 | **T1** | all four responses in the reference corpus converged on the same board, and one **proved** that such a class exists *if and only if* the conjecture holds — reporting it as a find when it is the diagnosis. T1 is what separates a board from a restatement |
 | **T3** | added after the controls: T1 and T2 both **passed** on a board that provably cannot reach the target, so they are not sufficient. One line catches it — and it is the test a ratio-based tightness screen is blind to, because both sides can be O(1) while the constant is open |
 | T3's **monotone** clause, and its restraint about what a cap means | a blind coverage rater found the first wording overstated: it inferred "no improvement to the move can reach O(1)" from a cap that is only a cap **on the invariant**. On two of the six benchmark boards the incumbent move is itself lossy and the target is nonetheless **true** (Marcus–Spielman–Srivastava; Spencer), so the sound inference needs the monotonicity check. Only where the move can only degrade the invariant — Banaszczyk's measure board — is the original sentence literally right |
+| T3's **not binding at any scale** clause | arm 3 returned "no cap" **for the wrong reason**: min κ = Θ(1/C) on the target *decreases* in C, so the invariant is easier for bigger bodies and forces every state to be wide — a lower bound on size. An invariant that relaxes as the body grows cannot force the final object anywhere, so O(1) here meant "vacuous", not "clear". Three clauses of T3 are now patches from runs designed here, so **T3's next use should be scored on an item this project did not construct**; until then it is a question worth asking, not a validated screen |
 | T3's **does not parse** escape | measured, not argued: T3's question is well-posed on 3 of the 6 benchmark boards and undefined on the three whose loss is (rounds) × (cost per step). A rater forced to answer on one of those three produced a threshold pointing the **wrong way** — for fixed soundness the PCP repetition count is O(1), so "no cap" — which would have scored as a pass |
 | **T2** | most of the complexity difference between the two real papers in that corpus sits in exactly this gap: one needs an SDP feasibility theorem for a legal move at every step, the other's move is a formula |
 | T2 demanding the **named object**, not the label | the same distinction exists as a coded field in the protocol tree (`move_kind`) and was rated blind on 17 items: **κ = 0.430**, with all six disagreements running one way, because one rater asked whether the prose reads like a computation and the other whether the move can proceed before a good object is shown to exist. A label did not transfer between raters; a named theorem or a written-out formula is checkable by a third party |
