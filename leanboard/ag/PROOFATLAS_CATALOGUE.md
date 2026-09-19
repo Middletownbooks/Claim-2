@@ -614,11 +614,18 @@ right shape and too big.
   replication explicitly requested) — done, and it holds; see `leanboard/ah/`. Rank 429 was
   the second and is withdrawn: it is a positive lower-bound paper, not a checkable claim.
   **No second audit target is currently identified.**
-- **A second compiled-problem site exists, and it may be the better instrument.** Search
-  surfaced *VibeMathed*, whose items are titled as method ceilings directly — one is "The
-  ceiling of the single-letter entropy method for the union-closed sets conjecture." If a
-  site indexes barriers *by name*, it does by construction what I have been assembling by
-  hand one paper at a time. **Look at it before investing more in hand-assembly.**
+- **VibeMathed is the better instrument, and it is not close — see `leanboard/ai/`.** The
+  entropy-method ceiling item resolved to a real, public, Lean-checked artifact
+  (`moffatstudio/union-closed-constant`), audited in arm AI: 27/27 on the arithmetic, no
+  `sorry`, real Mathlib entropy, pinned toolchain. The site's records carry `AI
+  contribution`, `Model`, `Verification` tier, `Years open` and a numeric `frontier` object —
+  it indexes *AI contributions with verification status*, which is this programme's actual
+  subject, where ProofAtlas indexes problems. **Re-point the instrument.**
+- **The rank-403 entry above is now superseded by arm AI in one respect:** the barrier is not
+  merely "named by practitioners", it is a *theorem*, with two unconditional ceilings. And my
+  snippet-derived mechanism (Rényi entropies lacking the chain rule) is **not** the operative
+  one — the real mechanism is a product-law adversary plus *component hiding*. The unverified
+  flag on that paragraph earned its keep.
 - **Rank 429 moves to the prospective arm** as a dated, self-declared board-exhaustion
   instance with both routes capped at 2/3 and the ceiling sitting on Gallai 1966.
 - **Pull the three remaining `disputed claim` cards in full.** 372, 406, 480 — and pull them
