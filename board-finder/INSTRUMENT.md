@@ -1,4 +1,10 @@
-# The board-search instrument
+# The board-search instrument — design notes
+
+**The pasteable prompt is `PROMPT.md`.** This file is why it says what it says. The
+prompt there is self-contained and carries no reference to this programme's internal
+vocabulary: a respondent should never see `D25`, a kappa, or the names of the papers the
+design was derived from, because two of those would leak the answer and the third would
+mean nothing to them.
 
 *A second instrument, deliberately **not** an extension of v2.1. Two reasons, both
 measured: Phase V found the heaviest prompt produced the sloppiest derivation, and the
