@@ -33,7 +33,8 @@ checkable object.
 > steps combine, including any iteration or union. `TERMINAL` — the condition that ends
 > the argument, and what it yields.
 > Write **none recorded** where the source has no such slot. Do not invent one to fill
-> the table.
+> the table. A slot marked **none recorded** is not a licence: if a refutation later turns on
+> that slot, say so, because **refuting an absence refutes the write-up and not the board**.
 >
 > **2. The leak table.** One row for every log, dimension, iteration or union factor in
 > the current bound:
@@ -90,7 +91,9 @@ checkable object.
 > a scale — if its loss is (rounds) × (cost per step) instead — answer **does not parse for
 > this board** and say which it is. Do not manufacture a threshold to fill the field.
 > Then, per candidate, **the kill test**: the single computation that would refute it. Run
-> it if you can and report what happened.
+> it if you can and report what happened. State whether your refutation exploits a slot the
+> source **states** or a slot it leaves **empty** — the first kills the board, the second says
+> the board is not yet an argument, and they are different findings.
 >
 > **6. Three closing fields.**
 > (a) For each candidate: does it **remove** the obstruction or **relocate** it? A
@@ -125,6 +128,7 @@ checkable object.
 | **T2** | most of the complexity difference between the two real papers in that corpus sits in exactly this gap: one needs an SDP feasibility theorem for a legal move at every step, the other's move is a formula |
 | T2 demanding the **named object**, not the label | the same distinction exists as a coded field in the protocol tree (`move_kind`) and was rated blind on 17 items: **κ = 0.430**, with all six disagreements running one way, because one rater asked whether the prose reads like a computation and the other whether the move can proceed before a good object is shown to exist. A label did not transfer between raters; a named theorem or a written-out formula is checkable by a third party |
 | kill test | search fails by generating too little and verification by accepting too much. Asking for candidates *with* their refutation keeps both failure modes in one response |
+| the kill test naming **stated slot vs empty slot** | the best-evidenced clause in this prompt: two blind respondents given the *same* board found the *same* hole — a translation that preserves the invariant exactly while never reaching the terminal — and returned **opposite verdicts**, "dead" against "survives its kill test". The difference was entirely in how each read a COMPOSITION slot both had marked `none recorded`: as no constraint, or as unspecified. Identical mathematics, opposite conclusions, and the instrument caused it by never saying how an empty slot may be used |
 | **6(b)** | a confident impossibility claim asserted that all smooth certificates reduce to a moment class. A paper five days older reached the target with an L¹ derivative norm, outside that class |
 | **6(a)** | three of four responses reported, unprompted, that their own candidate relocated rather than removed the obstruction. It is a reliable signal, so ask for it |
 | **6(c)** last, read first | a rule-less rater ceilings the retrospective arm at J = 1.000 with 13/13 recognition. Contamination has to be measured, not assumed away |
