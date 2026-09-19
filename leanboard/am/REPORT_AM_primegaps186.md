@@ -176,6 +176,71 @@ Michel and Sawin, "Bilinear forms with Kloosterman sums and applications", Ann. 
 its constant unverified; (3) — the 152 numerical bounds — is untouched and remains the whole of
 the real exposure.
 
+## 6b. KMS17 supplies the mechanism — `verify_kms_mechanism.py`, 11/11
+
+Kowalski–Michel–Sawin, *Bilinear forms with Kloosterman sums and applications*
+(arXiv:1511.01636v5, Ann. of Math. 186 (2017) 413–500), supplied 2026-09-19, turns my
+§6 sketch into something citable and then lets me test it properly.
+
+**The citable statement is Proposition 1.8** — the correlation form of the Riemann
+Hypothesis over finite fields: for `F, G` geometrically irreducible, mixed of weights ≤ 0
+and pure of weight 0 on a dense open subset,
+
+> `Σ_x t_F(x)·conj(t_G(x)) ≪ √q` **unless `F` and `G` are geometrically isomorphic**,
+> and `Σ_x |t_F(x)|² = q + O(√q)`, with implied constants depending only on the conductors.
+
+Axiom 2 is exactly this, with `F = g₁*Kl₂`, `G = g₂*Kl₂` for the Möbius maps
+`g₁ : t ↦ A/t` and `g₂ : t ↦ B/(t+1)`.
+
+**And the non-isomorphism is cleaner than my ramification argument.** I argued in §6 that
+the wild loci `{0}` and `{−1}` are disjoint and independent of `A, B`. That is right, but
+KMS17's **Proposition 4.6(9)** says it in one line and in full generality: *for non-trivial
+`γ ∈ PGL₂(F_q)` there is no rank-1 sheaf `L` with `γ*Kl_k ≅ Kl_k ⊗ L` geometrically.* So the
+only thing to check is `g₁ ≠ g₂` in `PGL₂`, and as matrices `(0 A; 1 0)` versus `(0 B; 1 1)`
+that is immediate — entry `(2,1)` forces the scalar to be 1, and then entry `(2,2)` demands
+`0 = 1`. **Never equal, for any `A, B ≠ 0`**, verified exhaustively over every prime to 59
+and every pair. My argument is superseded; this one is citable and shorter.
+
+Also confirmed: `Kl₂` is real to machine precision, which is Proposition 4.6(6) at `k = 2`
+(`Kl_k` is arithmetically self-dual for even `k`), so the missing conjugate in the Lean
+statement is harmless.
+
+### The control experiment — the hypothesis is load-bearing
+
+Proposition 1.8's "unless geometrically isomorphic" is not decoration. Collapsing the two
+maps into one (`t ↦ A/t` on both sides) puts the sum in the second clause, `Σ|t_F|² = q + O(√q)`,
+so it should sit at `≈ p²` and blow past `8p^{3/2}`. It does:
+
+| p | axiom's shape / 8p^{3/2} | same-map control / 8p^{3/2} | control / p² |
+|---|---|---|---|
+| 23 | 0.408 | 0.572 | 0.955 |
+| 47 | 0.431 | 0.838 | 0.978 |
+| 61 | 0.445 | 0.960 | 0.983 |
+| **67** | 0.405 | **1.008** | 0.985 |
+| 79 | 0.499 | 1.097 | 0.987 |
+| 89 | 0.430 | 1.166 | 0.989 |
+
+The axiom's own shape stays **flat near 0.40–0.50**; the control climbs like `√p/8` and
+**breaks the bound at `p = 67`**, the first prime past the predicted crossover `p = 64`
+(`√p/8 > 1 ⟺ p > 64`). The control's ratio equals `(√p/8)·(control/p²)` exactly, and
+`control/p² → 0.989`. **So the control is `p²` to within a percent, precisely as Prop 1.8's
+second clause says — and the only thing separating the axiom from it is that `g₁ ≠ g₂`.**
+
+*(My first pass asserted the control breaks the bound at every prime tested. It does not:
+below `p = 64` the control is large but still under `8p^{3/2}`. Corrected.)*
+
+### The constant 8 is still nobody's
+
+KMS17's conductor is `rank + |Sing| + Σ Swan + dim H⁰_c` — **four terms, where I used three**
+in §6. With no punctual sections `H⁰_c = 0`, so my count of 11 stands and `(c−1) = 10 ≠ 8`.
+More to the point, **Proposition 1.8 states `≪ √q` with constants "depending only on the
+conductors" and never makes that dependence explicit**, so KMS17 does not pin 8 either.
+
+**Status of axiom 2 after two papers:** the mechanism is cited, the uniformity over all
+`A, B ≠ 0` is cited and independently verified, the bound holds on every case computable
+here, and the constant `8` remains unsourced — now demonstrably not recoverable from either
+of the two natural references. That is a much narrower gap than "needs a citation".
+
 ## 7. Next
 
 1. **Axiom 3 is now the whole exposure**, and is checkable in principle but expensive in practice — 152 bounds on
