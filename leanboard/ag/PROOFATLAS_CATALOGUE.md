@@ -614,6 +614,14 @@ right shape and too big.
   replication explicitly requested) — done, and it holds; see `leanboard/ah/`. Rank 429 was
   the second and is withdrawn: it is a positive lower-bound paper, not a checkable claim.
   **No second audit target is currently identified.**
+- **Instrument settled: see `leanboard/aj/` for the census.** 664 entries pulled from the
+  public repo (`/api/dataset` is blocked; the GitHub lane is not). 98.0% never seen by a named
+  human expert, 99.7% not peer reviewed, and the Lean-verified share *fell* from 76.9% in
+  January to ~20% by mid-2026 as monthly volume grew seventeen-fold. Checking is inversely
+  related to significance — 71.9% of the high-significance entries are unreviewed or
+  statement-unaudited, and the single highest-scoring entry in the whole corpus is one of
+  them. **This catalogue's ProofAtlas work stands as a negative result about the wrong
+  instrument.**
 - **VibeMathed is the better instrument, and it is not close — see `leanboard/ai/`.** The
   entropy-method ceiling item resolved to a real, public, Lean-checked artifact
   (`moffatstudio/union-closed-constant`), audited in arm AI: 27/27 on the arithmetic, no
