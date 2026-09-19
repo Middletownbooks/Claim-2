@@ -557,11 +557,46 @@ instances. Re-scope accordingly — index, not workshop. Still to confirm agains
 
 ### Two others worth naming
 
-**403 Frankl union-closed** is a **live numeric frontier**. Gilmer's 2022 breakthrough gave a
-positive constant, rapidly improved to `(3−√5)/2 ≈ 0.381966` by several groups
-independently, against a conjectured `0.5` — a remaining gap of **0.118**. Explicit
-constant, incremental, multiple groups actively pushing. That is the bound-improvement class
-exactly. *(Constants from background knowledge, not from the card — verify before use.)*
+**403 Frankl union-closed** — I called this a **live numeric frontier** with "multiple groups
+actively pushing," the bound-improvement class exactly. *Corrected 2026-09-19.* It is a
+**second barrier instance**, and the correction runs in the same direction as rank 429: I
+described movement where the practitioners describe a ceiling.
+
+*Provenance: web-search snippets, September 2026, **not verified against a paper**. Flagged
+because I have relayed a snippet wrongly before (the Shannon five-vs-six-vertices error).
+Everything in this paragraph needs a transcript before it is used.*
+
+- The constant I recorded is **stale, not merely unsourced**. `(3−√5)/2 ≈ 0.381966` was a
+  waypoint, not the front. Sawin showed it can be beaten; Yu and Cambie evaluate the convex
+  combination of the i.i.d. and max-entropy couplings at **≈ 0.38234** (one snippet says
+  0.38237). Gap to the conjectured `0.5` is therefore **≈ 0.1177**, not 0.118 from 0.381966.
+- **The barrier is named by the practitioners, with a stated mechanism.** Progress "appears
+  to require new ideas beyond the current entropy-based coupling approaches," and the
+  specific obstruction is **single-letterization**: Rényi entropies do not satisfy the chain
+  rule the way Shannon entropy does, so the multi-letter bound cannot be collapsed to a
+  single-letter one. That is a technical wall with a name, not a frontier.
+
+**This breaks my predicate, and I should say so before repairing it.** The rank-429 detector
+was *two independent routes capping at the same exponent, with one cap sitting on a named
+open problem*. Frankl does not have that form at all: it is **one** method, capped by a
+**failure of an algebraic identity**, at a **constant** rather than an exponent. Two
+instances, two different barrier mechanisms.
+
+The tempting move is to widen the predicate to "a named obstruction the practitioners state
+themselves, with a numerical ceiling attached." **That is how a predicate becomes
+unfalsifiable.** Nearly every discussion section names a limitation; if the widened version
+fires on all of them it measures rhetoric, not mathematics. So the widened form is recorded
+here as a *hypothesis to be tested against controls*, not as an instrument — and the control
+class (advances that came without a declared wall) is now the binding requirement before
+either version can be used for anything.
+
+**Not resolved, as far as search can tell.** A January 2026 preprint claims an algorithmic
+proof; other 2026 sources still describe the conjecture as open, and one September 2026
+source calls it wide open. Claimed proofs of Frankl are unusually frequent and the base rate
+of correctness among them is low, so "a claimed proof exists" and "the problem moved" are
+different statements. If ProofAtlas still ranks it `Open`, that is consistent with the
+claimed proof not having been accepted. **Worth checking on the site; do not assume either
+way from this note.**
 
 **393 projective planes of order 12** is the instructive negative. It is genuinely finite —
 and infeasible. Order 10 was ruled out by Lam et al. in 1989 at a cost of thousands of
@@ -579,6 +614,11 @@ right shape and too big.
   replication explicitly requested) — done, and it holds; see `leanboard/ah/`. Rank 429 was
   the second and is withdrawn: it is a positive lower-bound paper, not a checkable claim.
   **No second audit target is currently identified.**
+- **A second compiled-problem site exists, and it may be the better instrument.** Search
+  surfaced *VibeMathed*, whose items are titled as method ceilings directly — one is "The
+  ceiling of the single-letter entropy method for the union-closed sets conjecture." If a
+  site indexes barriers *by name*, it does by construction what I have been assembling by
+  hand one paper at a time. **Look at it before investing more in hand-assembly.**
 - **Rank 429 moves to the prospective arm** as a dated, self-declared board-exhaustion
   instance with both routes capped at 2/3 and the ceiling sitting on Gallai 1966.
 - **Pull the three remaining `disputed claim` cards in full.** 372, 406, 480 — and pull them
