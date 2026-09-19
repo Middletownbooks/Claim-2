@@ -191,7 +191,15 @@ prospective. **Use the date. Retire the model-name control.**
   was selected as the top of the audit queue, not for declaring a barrier — so it is the
   neutral control this section asked for, and it fires the predicate on the least exhausted
   board in the corpus. Barrier language indicates rigour, not exhaustion.
-- **Next on the queue:** the remaining 21 `lean-checked` post-cutoff entries, starting from
-  Prime gaps at most 212 / 186 (sig 62) and Carathéodory smooth (sig 55).
+- **The two large-gap entries (sig 60 each) are done — see `leanboard/al/`.** The record
+  ladder Rankin → FGKMT → Sol → Astra checks exactly, 14/14, as monomials in
+  `log X, log₂X, log₃X, log₄X`; both Lean statements say what their papers say; neither
+  development has a gap token. The arm's structural finding sharpens this census: the two
+  results have **disjoint** verification halves — Sol has Ben Green's reading but no build,
+  Astra has the kernel replay but no reader — and the *stronger* bound is the unread one.
+  Same problem, nine days apart, allocation still backwards.
+- **Next on the queue:** `Prime Gaps at Most 186` (`openai/PrimeGaps186`), whose site note
+  reports **three project-specific axioms** — the `lean-checked` failure mode at its most
+  explicit — then Carathéodory smooth (sig 55), then the remaining `lean-checked` entries.
 - **The control class is no longer outstanding.** Arm AK supplied it by accident and it went
   against the hypothesis. No further sampling pass is needed for that question.
