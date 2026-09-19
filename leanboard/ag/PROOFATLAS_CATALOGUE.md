@@ -6,7 +6,8 @@ egress-blocked from this container. Structure cross-checked against an independe
 reader's guide ([Moatazg/proofatlas-notes](https://github.com/Moatazg/proofatlas-notes),
 compiled 2026-09-13).
 
-**Seen so far:** ranks 076–079, 165–169, 200–224, 479–482. That is 38 of 482+.
+**Seen so far:** ranks 076–079, 165–169, 200–224, 479–482, plus expanded cards for
+200, 250, 300 and 400. That is 41 of 482+.
 
 ---
 
@@ -27,42 +28,71 @@ downstream.
 attention without implying high difficulty — the opposite of a progress- or
 readiness-ordering, which would have made "end of list" a proxy for "hardest".
 
-### The inference that relocates the target zone
+### The workspace-boundary hypothesis — RAISED, THEN REFUTED
 
-The Problems list runs past **482**. The collaboration workspaces number **243–268**. If
-workspaces are allocated top-down by rank, then **roughly ranks 1–250 have a workspace and
-the rest do not.**
+I proposed that since the Problems list runs past 482 while the collaboration workspaces
+number 243–268, workspaces must be allocated top-down by rank, putting the sweet spot at
+the last ranks that still carry one — plausibly 200–260. I flagged it as a hypothesis with
+a one-look test: open ranks 200, 250, 300, 400 and see which still show routes and tasks.
 
-A workspace is the context layer: routes, typed dependencies, prepared tasks, and — the
-part the reader's guide calls the only reason to read the site at all — the recorded
-eliminated routes. Without it you start cold and re-derive dead ends nobody logged.
+**The test was run. The hypothesis is wrong, and wrong in its premise.**
 
-So the sweet spot is **not the extreme tail**. It is the *last ranks that still carry a
-workspace* — plausibly **200–260**. Unwatched enough to be neglected, developed enough to
-inherit the context. **Check this before acting on it:** open rank 200, 250 and 300 and
-see which have routes and prepared tasks. One look settles it, and it decides whether the
-target zone is 200–260 or the 400s.
+Expanding a card at rank 200, 250, 300 or 400 gives the same four sections every time:
+**EXACT STATEMENT**, **WHY IT MATTERS**, **STATUS**, **SOURCES**. No routes. No dependency
+graph. No prepared tasks. No eliminated routes.
 
----
+So `/open-problems/` is not a ranked prefix of the workspaces — it is **a separate
+artifact**: an encyclopedia of problem statements, not a research record. Whether any given
+problem also has a `/collaboration/` workspace is an independent question, answerable only
+by checking for a matching slug there. Rank tells you nothing about it.
 
-## Selection filter
+Retracted in full. The target zone is not 200–260 on these grounds.
+
+### What replaced it: the card fields are the filter
+
+The expanded card carries three fields that are better selection signals than rank, and all
+three are machine-readable.
+
+**1. STATUS discriminates.** Rank 200 reads plain `Open`. Ranks 250, 300 and 400 all read
+`Open · subcases solved`. Rank 479 read `Open · disputed claim`. So the status field marks,
+in the site's own vocabulary, whether partial results exist — which is exactly the
+"finite checkable sub-target" test, pre-computed and filterable. Three values seen so far;
+there are likely more.
+
+**2. WHY IT MATTERS contains a pre-written counterexample specification.** Verbatim:
+
+> 250: "A counterexample would exhibit a compact set whose holomorphic hull escapes every
+> compact region."
+> 300: "A counterexample would establish a one-ended hyperbolic group lacking all the
+> prescribed surface subgroups."
+> 400: "A counterexample would be a convex body exceeding the simplex value; **neither
+> outcome requires classifying all equality cases**."
+
+Counterexamples are 2 of ProofAtlas's 9 advances and are the most agent-tractable outcome
+available, because the deliverable is a finite object you exhibit and check. The card
+states what that object is. Rank 400 goes further and says the sub-target is smaller than
+the conjecture looks.
+
+**3. SOURCES carry dates, so recency of activity is readable.** Rank 250 cites Annals 2012;
+rank 400 cites arXiv:2407.01353v2, 27 May 2025. A problem whose newest source is thirteen
+years old is in a different state from one with a paper from this year.
+
+## Selection filter (revised after the refutation)
 
 Grounded in ProofAtlas's own nine claimed advances, which are the only evidence of what
-actually lands there. All nine are counterexamples, explicit-constant improvements, or
-Lean formalizations of known arguments. **Not one is a conjecture resolved.** So:
+actually lands there. All nine are counterexamples, explicit-constant improvements, or Lean
+formalizations of known arguments. **Not one is a conjecture resolved.**
 
-1. **Rank** in the workspace-boundary zone (pending the check above).
-2. **Status badge present** — especially `disputed claim`, which is an audit target, not a
-   research target.
-3. **A numeric target in the statement** — an explicit constant, ratio or exponent, rather
-   than a qualitative existence claim. This is a regex over the card text, not a judgement.
-4. **Finite or computational sub-target available** — the discriminator that separates
-   "has a number in it" from "an agent can move the number".
+1. **STATUS is `subcases solved` or `disputed claim`.** Mechanical. The first says a
+   sub-target exists; the second says an audit target exists.
+2. **WHY IT MATTERS names a finite counterexample object.** Mechanical enough to grep for
+   "A counterexample would".
+3. **A numeric target in the EXACT STATEMENT** — an explicit constant, ratio or exponent.
+4. **Can an agent actually move it?** Not mechanical, and where most candidates die. A
+   sharp constant you can search for numerically passes; a sharp constant gated behind
+   Seiberg–Witten theory does not.
 
-Criterion 3 is mechanical; criterion 4 is not, and is where the assessment below does its
-work. Several items pass 3 and fail 4.
-
----
+Rank is demoted to a tiebreaker: it buys neglect, nothing else.
 
 ## Catalogue, ranks 200–224
 
@@ -98,7 +128,61 @@ work. Several items pass 3 and fail 4.
 
 ---
 
-## The four worth pursuing, in order
+## Expanded cards seen: 200, 250, 300, 400
+
+| # | Problem | Area | STATUS | newest source |
+|---|---|---|---|---|
+| 200 | Effective Roth Theorem | NT & arith geom | `Open` | arXiv:1601.02243, Jan 2016 |
+| 250 | Shafarevich universal-cover conjecture | Geom & topology | `Open · subcases solved` | Annals 176 (2012) 1545–1581 |
+| 300 | Gromov's Surface Subgroup Question | Geom & topology | `Open · subcases solved` | Gardam–Kielak–Logan |
+| 400 | **Strong Hyperplane Conjecture for Isotropic Constants** | Combinatorics & disc geom | `Open · subcases solved` | **arXiv:2407.01353v2, 27 May 2025** |
+
+Note the contrast at 200: plain `Open`, no subcases marker, and its newest source is a
+decade old. The field is doing real work.
+
+---
+
+## The new top pick: rank 400, Strong Hyperplane Conjecture
+
+It passes all four criteria, and it is the first thing seen on this list that passes the
+fourth.
+
+**The statement is a sharp constant, per dimension.** For a compact convex body K ⊂ ℝⁿ with
+X uniform on K, `L_K = (det Cov(X)/Vol_n(K)²)^(1/2n)`, and the claim is `L_K ≤ L_Δ_n` with
+Δ_n a nondegenerate n-simplex and `L_Δ_n = (n!)^(1/n)/((n+1)^((n+1)/(2n))·√(n+2))`. Bodies
+need not be symmetric or smooth.
+
+**Why the sub-target is small.** [BACKGROUND, not from the card and not verified here:] the
+*bounded* slicing problem — is L_K ≤ C for a universal C — was resolved through the Chen /
+Klartag–Lehec line of work. What remains open is this **sharp** version, that the simplex is
+extremal in each dimension. So the open part is a constant, not a growth rate. **Check this
+before relying on it**; it is my background knowledge, not a sourced claim.
+
+**Why an agent can move it.** A counterexample is a **finite, exhibitable object**: a convex
+body — a polytope suffices — in some fixed low dimension whose L_K exceeds the stated
+simplex value. L_K is computable from the body's volume and covariance matrix, which for a
+polytope in low dimension is an exact rational computation. So the attack is a *search*:
+enumerate or sample polytopes in dimensions 3–8, compute L_K exactly, compare against
+L_Δ_n. Either a counterexample falls out, or the search bounds the region where one cannot
+be.
+
+That is the same shape as this programme's Erdős–Straus sieve work — exhaustive verified
+search to 10^11, with the negative result stated as a bound rather than dressed up. The
+card even pre-authorises the reduced target: *"neither outcome requires classifying all
+equality cases."*
+
+**Stated risks.** L_K computation is #P-hard in general, so dimension is the binding
+constraint and the honest scope is small n. The simplex has been conjectured extremal for
+decades and low dimensions are the first place anyone would have looked, so the prior on a
+counterexample below n = 8 is low. The realistic deliverable is therefore a *verified
+negative* — "no counterexample among this enumerated class up to dimension d" — which is
+publishable in this programme's idiom and is exactly what the Erdős–Straus work produced.
+The newest source (May 2025, "Isotropic constants and regular polytopes") suggests someone
+is already computing in this space; read it before starting.
+
+---
+
+## The four from ranks 200–224, in order
 
 ### 1. Rank 209 — Sharp Erdős Distinct-Distances. *Already inside this programme.*
 
@@ -145,11 +229,14 @@ it and a problem an agent can move.
 
 ## Next
 
-- **Check the workspace boundary.** Open ranks 200, 250, 300, 400. Which still carry routes
-  and prepared tasks? That decides the target zone and is worth more than another hundred
-  cards.
-- **Is `disputed claim` filterable?** If so that subset is a pre-identified audit queue,
-  and auditing contested proofs is this programme's most demonstrated competence — three
-  audits, three distinct verdicts, from one cheap question.
-- **More of the list**, particularly 250–400, the untested middle of the workspace-boundary
-  hypothesis.
+- **Read arXiv:2407.01353** ("Isotropic constants and regular polytopes", May 2025) before
+  any search on rank 400. It is the newest source on the card and may already cover the
+  low-dimensional enumeration.
+- **Confirm the sharp-vs-bounded split** on the hyperplane conjecture from a source rather
+  than from my background knowledge.
+- **Enumerate the STATUS vocabulary.** Three values seen (`Open`, `Open · subcases solved`,
+  `Open · disputed claim`). If the site exposes a filter on it, that plus a grep for
+  "A counterexample would" is the whole selection instrument.
+- **Cross-check `/collaboration/`** for slugs matching high-rank problems, to find out
+  whether workspace coverage correlates with rank at all — the question my refuted
+  hypothesis assumed the answer to.
