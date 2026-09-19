@@ -6,7 +6,7 @@ egress-blocked from this container. Structure cross-checked against an independe
 reader's guide ([Moatazg/proofatlas-notes](https://github.com/Moatazg/proofatlas-notes),
 compiled 2026-09-13).
 
-**Seen so far:** ranks 076–079, 165–169, 200–224, 479–482, plus expanded cards for
+**Seen so far:** `/collaboration/` bottom-ten picks, plus `/open-problems/` ranks 076–079, 165–169, 200–224, 479–482, plus expanded cards for
 200, 250, 300 and 400. That is 41 of 482+.
 
 ---
@@ -259,21 +259,120 @@ it and a problem an agent can move.
 
 ---
 
+## The research / collaboration page — the layer that carries tasks
+
+The bottom ten "picks" from `/collaboration/` were obtained. **This resolves the two-artifact
+confusion: the selection instrument belongs here, not on `/open-problems/`.** These cards
+carry what the problem cards lack —
+
+- **`PRIORITY OPEN BRIDGE · NEXT TASK`**, a single stated next step in the site's own words;
+- **investigation-line count**, the neglect metric;
+- selected mapped statements, open-question count, and a progress bar;
+- sometimes an `EVIDENCE` line and separate `INDEPENDENT CHECKS STILL OPEN` block.
+
+Line counts across these ten run 60 to 1.3k, against the ~2,900 average the reader's guide
+reports over 268 workspaces — consistent with these being bottom picks.
+
+| workspace | area | lines | stated next task |
+|---|---|---|---|
+| **Berlekamp Domineering-Temperature** | comb. game theory | **60** | *(see below — it asks for replication, not research)* |
+| Elliptic-Curve DLP challenge instance | comp. number theory | 900 | obtain source/notebook/API evidence for how the private scalar was sampled |
+| Multiplicative persistence | digit dynamics | 1.0k | prove I¹⁰(Z)=∅ for the entire infinite positive zero boundary Z |
+| Minimum Overlap Problem | signed graphs, discrepancy | 1.1k | combine row and column one-point tests without double-counting shared entries |
+| Harary–Hill | crossings in K_n drawings | 1.1k | prove global accessibility through compatible nonincreasing moves |
+| Kobon triangle | line arrangements | 1.1k | prove a uniform Bellman potential on the complete reachable state domain |
+| Mutually unbiased bases, dim 6 | Hadamard matrices | 1.2k | exclude arbitrary nonsymmetric quartets, beyond triples with a shared conjugation |
+| Markov uniqueness | Diophantine | 1.2k | exclude every proper nonempty zero subsum of the marked sequence 4g_i |
+| Nakai conjecture | comm. algebra | 1.2k | establish the missing filtered presentation for the logarithmic fields |
+| McMullen projective convex-position | real proj. geometry | 1.3k | produce a real full-spark zero-hole construction continuing in every rank |
+
+---
+
+## The pick: Berlekamp's Domineering-Temperature Conjecture
+
+Every signal on the site points at this one, and it is the first candidate in this whole
+exercise that survives the convexity check — because **there is no search and no
+optimization in it at all.**
+
+**It is their weakest-evidence claim.** The reader's guide's transcription of `/advances/`
+lists nine claimed results. Eight are "Lean checked" or "Accepted in ProofAtlas". The ninth:
+
+> Combinatorial game theory | Rectangle-reachable Berlekamp counterexample | **Unverified
+> manuscript; adversarial audit attached**
+
+That is the only one of the nine without a machine check behind it.
+
+**The site is asking, in writing, for exactly what this programme does.** The card carries a
+dedicated block:
+
+> `INDEPENDENT CHECKS STILL OPEN` — **Specialist review and unrelated replication**
+
+**It is 60 investigation lines.** An order of magnitude below every other card here, and
+roughly 1/50th of the site average. Nobody has worked it.
+
+**The claim is finite, exact, and numerically specific.** Tagged `EXACT FINITE COMPUTATION`.
+Verbatim: *"Lech Mazur's manuscript gives a rectangle-reachable 28-cell Domineering position
+with exact game {17/8 | -2+*} and temperature 33/16 > 2."* So the replication task is
+completely determined: reconstruct that 28-cell position, compute its game value and
+temperature independently, and check whether they equal {17/8 | -2+*} and 33/16.
+
+**There is a second, sharper audit hook in the card's own hedging.** It says the Lean
+development kernel-checks the board–target equality, the thermograph, a 30-move replay and
+the existential statement *"through its narrow HasValueTemperature interface"*. That phrase
+is doing real work. The question an audit should ask first is not whether Lean accepted the
+proof — it did — but **whether that narrow interface states what the conjecture needs**.
+Alignment between a formal statement and the informal claim is precisely what the site says
+a Lean check does *not* establish, and it is the failure mode this programme has found three
+times (Ghermoul, auro-zera, Guo–Fang–Lu).
+
+**Two outcomes, both publishable.** Replication succeeds → the site's one unverified advance
+gains independent confirmation, which is worth more to them than another partial result.
+Replication fails, or the interface does not capture the claim → that is a finding of the
+exact kind this programme already has a track record of producing.
+
+**Stated risks.** Domineering game values are exactly computable but the state space grows
+fast; 28 cells is large enough that a naive implementation will not finish, and a correct
+one needs canonical-form simplification and transposition tables. The temperature
+computation needs thermograph arithmetic on loopfree games, which is standard but fiddly.
+And "rectangle-reachable" is a precise condition — get it wrong and the replication
+disproves nothing. None of these is a research obstacle; all are implementation care.
+
+### Runners-up
+
+**Multiplicative persistence** (1.0k lines) — elementary, digit-based, highly computational,
+and the next task is a precisely stated set-emptiness claim. Best of the rest.
+
+**Markov uniqueness** (1.2k) — elementary statement, rich computational structure in the
+Markov tree, precise next task.
+
+**Kobon triangle** and **Harary–Hill** (1.1k each) — both report *exact finite cases*, which
+is where an agent with compute can work.
+
+### One flag
+
+The **Elliptic-Curve DLP challenge instance** is not a mathematics task. Its stated next step
+is *"obtain exact source, notebook, archive or API evidence for how the private scalar was
+sampled"* — provenance archaeology, because a properly sampled instance is hard by
+construction and a badly sampled one is the only opening. That is a sound judgement by
+whoever wrote the workspace, but it means there is no mathematics to do, and it makes the
+item a cryptanalysis target rather than a conjecture. Published challenge instances exist to
+be attacked, so this is legitimate; anyone picking it up should just be clear which activity
+they are in.
+
+---
+
 ## Next
 
-- **Rank 400, target (a):** attempt zonotopes with **n+2 generators**. Check first whether
-  Lemma 6.4's parameterization extends, and whether the planar reduction in Lemma 6.2
-  survives the extra generator. If it does, the maximizer should again be the cube and the
-  question is what replaces `Q_n` as minimizer.
-- **Rank 400, target (b):** find the source for `L_Z ≤ 1/2` (Kipp cites Paouris [19] and
-  the Brazitikos–Giannopoulos–Valettas–Vritsiou monograph [3]) and see what the proof
-  actually loses. A √3 gap in a settled class is where an explicit-constant improvement
-  lives.
-- **Enumerate the STATUS vocabulary.** Three values seen (`Open`, `Open · subcases solved`,
-  `Open · disputed claim`). If the site filters on it, that plus a grep for "A
-  counterexample would" is the whole selection instrument.
-- **Do not repeat the search heuristic.** Before proposing an enumerate-and-compute attack
-  on any future candidate, check whether the target functional is convex or concave along
-  the natural deformations of the class. If it is convex and you are hunting a maximum,
-  sampling cannot work. That check is cheap and it would have killed the rank-400 proposal
-  before it was written.
+- **Berlekamp Domineering — the replication.** Reconstruct the 28-cell rectangle-reachable
+  position, compute its canonical game value and temperature independently, and compare
+  against {17/8 | -2+*} and 33/16. Then, separately, read the Lean `HasValueTemperature`
+  interface and ask whether it states what the conjecture needs. Those are two findings, not
+  one, and the second is the one this programme is best at.
+- **Get the Mazur manuscript and the Lean development** before writing any code. The card
+  says both exist and are attached.
+- **Run the selection instrument on `/collaboration/`, not `/open-problems/`.** The task and
+  line-count fields live there. The problems page is an encyclopedia.
+- **Standing check, from the rank-400 failure:** before proposing an enumerate-and-compute
+  attack, test whether the target functional is convex or concave along the natural
+  deformations of the class. If it is convex and you are hunting a maximum, sampling cannot
+  work. Berlekamp passes trivially — it is a fixed finite computation, not a search.
