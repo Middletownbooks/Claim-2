@@ -1,0 +1,23 @@
+{
+  "label": "CONSERVED_FUNCTIONAL_BENCHMARK_v1",
+  "what": "Six ACCUMULATION boards whose conserved replacement is already known. A proposer sees the before-board and its leak, never the after-board, and is scored on whether it names the functional that worked -- or one an adversary cannot kill.",
+  "why_six": "These are every ACCUMULATION item in the corpus (5) plus the trio's K1 -> K3, which is the exemplar the taxonomy was induced from. Six is small. It is six more than a pipeline with no benchmark has.",
+  "blinding": "The proposer is given: state, move, invariant, composition and the leak sentence. It is NOT given the after-board, the paper, the year, or the names. The recognition probe from the protocol tree applies -- ask it to name the problem, and record the answer, because D25 measured that a rater who recognises the problem needs no rule.",
+  "scoring": {
+    "hit": "names the functional that worked, or an equivalent one, before seeing the after-board",
+    "survivor": "names a functional the adversary cannot kill, which is not the historical one -- recorded separately, because a second conserved functional is a real result",
+    "relocation": "names a functional that moves the loss elsewhere; the agent is asked to say so itself (Check 3), and gets credit for saying it",
+    "miss": "no candidate survives the adversary",
+    "not_applicable": "declines. The NA rate is a first-class number, as prospective.py says of the diagnostic."
+  },
+  "items": [
+    {"id": "K1-to-K3", "degrading": "Gaussian measure of a symmetric convex body stays >= 1/2, and degrades under each application of the move", "move": "replace the body by a convex subset of the union of its two translates", "conserved_answer": "directional total variation of a density supported on the body, preserved exactly under the move", "source": "leanboard/ae/task2/cases.json K1 and K3; arXiv:2609.11189"},
+    {"id": "02-cap-set", "degrading": "density increment delta -> delta + c delta^2 over about 1/delta iterations, each costing one dimension", "move": "large Fourier coefficient, then restrict to a hyperplane", "conserved_answer": "slice rank -- a one-shot bound with no iteration at all", "source": "proof-protocol/p1-retrodiction/cases/02-cap-set"},
+    {"id": "04-kadison-singer", "degrading": "matrix Chernoff on E||Sigma_S||; the factor n in tr exp gives log n, tight on direct sums of independent blocks", "move": "random partition", "conserved_answer": "the largest root of the expected characteristic polynomial: for a direct sum it is the MAXIMUM over blocks, so the bound is dimension-free", "source": "proof-protocol/p1-retrodiction/cases/04-kadison-singer"},
+    {"id": "08-spencer", "degrading": "per-set Chernoff bound composed by a union bound over n sets, which is where the sqrt(log n) comes from", "move": "uniform random colouring", "conserved_answer": "entropy of a partial colouring -- a global count that does not pay per set", "source": "proof-protocol/p1-retrodiction/cases/08-spencer-discrepancy"},
+    {"id": "09-vinogradov", "degrading": "a recursive inequality on J where each iteration recovers a fixed fraction of the defect, so about log k rounds are needed", "move": "p-adic congruencing iteration", "conserved_answer": "efficient congruencing: maintain congruence conditions at every scale simultaneously, removing the accumulation over rounds", "source": "proof-protocol/p1-retrodiction/cases/09-vinogradov-mean-value"},
+    {"id": "13-pcp", "degrading": "value decay under k-fold repetition, with instance size multiplicative in the exponent (n^k)", "move": "k-fold parallel repetition", "conserved_answer": "graph powering on expanders plus alphabet reduction, with constant-factor size blow-up", "source": "proof-protocol/p1-retrodiction/cases/13-pcp-weak"}
+  ],
+  "not_runnable_here": "No ANTHROPIC_API_KEY and no model access in this container -- the same wall as debt D18. The harness to run it exists at proof-protocol/p2-ablation/, fidelity-tested against the published artifact's own JavaScript.",
+  "first_thing_to_check_when_it_runs": "the recognition probe. If a proposer names the problem, D25 applies and a hit tells you nothing about the screen -- it tells you the model remembers Ellenberg-Gijswijt. The only uncontaminated items would be boards whose transformation does not exist yet, which is why FINDER.md section 4 points at 2609.11189's own three open leaks."
+}

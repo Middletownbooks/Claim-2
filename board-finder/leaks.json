@@ -1,0 +1,73 @@
+{
+  "label": "LEAK_KINDS_v1",
+  "what": "A taxonomy of LEAKS, read off the BEFORE-board, with one prescription per kind. The five-transformation catalogue labels the AFTER-board and scored kappa = 0.048 with three raters giving three labels to the founding case. A leak is visible before any transformation exists, which is what a finder needs.",
+  "assignment_caveat": "Assigned by one instance (this session) from the `leak` field of proof-protocol/p1-retrodiction/cases/*/before.json, verbatim where possible. The after-boards were already known to me, so the fit in `matched` is a FIT, NOT A TEST. The test is a blind assignment by a rater who has not seen the after-boards, scored with the D20 instrument.",
+  "kinds": {
+    "ACCUMULATION": {
+      "signature": "the loss equals (number of rounds or items) x (per-step cost). The invariant degrades a fixed amount per application of the move.",
+      "prescription": "find a functional the move CONSERVES, or replace the round structure by a procedure that acts at all scales simultaneously.",
+      "exemplars_outside_the_corpus": "K1 -> K3: Banaszczyk's Gaussian measure degrades per move and gives sqrt(log n); Guo-Fang-Lu's directional total variation is preserved EXACTLY under the same move and gives O(1). K2: Bansal-Jiang replace per-round existence by a diffusion whose legal-move existence is itself a theorem."
+    },
+    "SATURATION": {
+      "signature": "the invariant caps at a value independent of the parameter you are trying to push. More of the same input cannot help.",
+      "prescription": "the board has to be left. Look for a sourced statement of where the cap is -- the ceiling register -- and for the level at which the cap sits, because the cap may be liftable one level down instead.",
+      "exemplars_outside_the_corpus": "GPY: rho_k(F) saturates at 4 for every k, so the criterion caps at 2*theta. Maynard-Tao left the sieve board; Zhang lifted the input a level down."
+    },
+    "WRONG_STATISTIC": {
+      "signature": "the invariant measures a quantity that is not the one being bounded -- a mean where a maximum is wanted, a relaxation that cannot see the obstruction, a law that is simply false.",
+      "prescription": "look for a certificate that sees the right quantity, and expect it to come from another field. This is the kind with the least guidance and the biggest jumps."
+    }
+  },
+  "items": [
+    {"id": "01-sensitivity", "kind": "WRONG_STATISTIC",
+     "leak_quote": "Counting controls the mean degree, not the maximum.",
+     "prescribed": "a certificate that sees the maximum", "actual": "signed adjacency with A^2 = nI; lambda_1 <= Delta bounds the MAXIMUM degree", "matched": true},
+    {"id": "02-cap-set", "kind": "ACCUMULATION",
+     "leak_quote": "The per-step gain delta^2 against the additive cost of one dimension per step forces delta >~ 1/n.",
+     "prescribed": "conserve, or act at all scales at once", "actual": "one-shot slice rank with NO iteration -- the accumulation is removed entirely", "matched": true},
+    {"id": "03-shannon-capacity-c5", "kind": "WRONG_STATISTIC",
+     "leak_quote": "The linear program sees only cliques ... Its product law is correct; its value is wrong.",
+     "prescribed": "a certificate that sees the right quantity", "actual": "the theta function via orthonormal representations", "matched": true},
+    {"id": "04-kadison-singer", "kind": "ACCUMULATION",
+     "leak_quote": "The factor n in tr exp gives log n. It is tight on direct sums of independent blocks.",
+     "prescribed": "conserve, or act at all scales at once", "actual": "interlacing families: the largest root of a direct sum is the MAXIMUM over blocks, so the bound stops accumulating and becomes dimension-free", "matched": true},
+    {"id": "05-finite-field-kakeya", "kind": "SATURATION",
+     "leak_quote": "Cauchy-Schwarz sees pairwise line interactions only, which caps the exponent near n/2.",
+     "prescribed": "leave the board", "actual": "the polynomial method -- a different board entirely", "matched": true},
+    {"id": "06-erdos-distinct-distances", "kind": "WRONG_STATISTIC",
+     "leak_quote": "Circle incidence bounds are weaker than line incidence bounds.",
+     "prescribed": "a certificate that sees the right quantity", "actual": "Elekes-Sharir lift turns distances into LINE incidences, then polynomial partitioning", "matched": true},
+    {"id": "07-small-prime-gaps", "kind": "SATURATION",
+     "leak_quote": "The ratio saturates at 2*theta*(1+o(1)) regardless of k.",
+     "prescribed": "leave the board, or lift the cap a level down", "actual": "BOTH happened, by two teams in one year: Maynard-Tao enlarged the move space (left the board), Zhang raised the level of distribution (lifted the input)", "matched": true},
+    {"id": "08-spencer-discrepancy", "kind": "ACCUMULATION",
+     "leak_quote": "The sqrt(log n) comes from the union bound over sets.",
+     "prescribed": "conserve, or act at all scales at once", "actual": "entropy / partial colouring -- the per-set union bound is replaced by a global entropy count", "matched": true},
+    {"id": "09-vinogradov-mean-value", "kind": "ACCUMULATION",
+     "leak_quote": "Each iteration recovers a fixed fraction of the defect, so about log k rounds are needed.",
+     "prescribed": "conserve, or act at all scales at once", "actual": "efficient congruencing maintains congruence conditions at every scale SIMULTANEOUSLY, removing the accumulation over rounds", "matched": true},
+    {"id": "10-parallel-repetition", "kind": "WRONG_STATISTIC",
+     "leak_quote": "Game value is not multiplicative. Provers correlate across coordinates.",
+     "prescribed": "a certificate that sees the right quantity", "actual": "information-theoretic embedding with per-coordinate relative entropy", "matched": true},
+    {"id": "11-kneser", "kind": "WRONG_STATISTIC",
+     "leak_quote": "Counting cannot see the obstruction, which is qualitative.",
+     "prescribed": "a certificate that sees the right quantity, probably from another field", "actual": "the neighbourhood complex with Borsuk-Ulam -- topology", "matched": true},
+    {"id": "12-geometrization", "kind": "WRONG_STATISTIC",
+     "leak_quote": "There is no control on collapsing at singular times.",
+     "prescribed": "a certificate that sees the right quantity", "actual": "W-entropy and reduced volume give kappa-noncollapsing -- new monotone invariants on the SAME move", "matched": true},
+    {"id": "13-pcp-weak", "kind": "ACCUMULATION",
+     "leak_quote": "Size is multiplicative in the exponent under product.",
+     "prescribed": "conserve, or act at all scales at once", "actual": "graph powering plus alphabet reduction with CONSTANT-factor blow-up -- the exponential accumulation is removed", "matched": true}
+  ],
+  "counts": {"ACCUMULATION": 5, "SATURATION": 2, "WRONG_STATISTIC": 6},
+  "live_case": {
+    "id": "guo-fang-lu-2609.11189",
+    "what": "Vector Balancing via Directional Total Variation, 10 Sep 2026, claimed 3*sqrt(2pi) Komlos bound, proof credited to an automated research agent. Verified REAL and accurately described in leanboard/ab/REPORT_AB_metagame_corpus.md.",
+    "leak_kind_of_what_it_replaced": "ACCUMULATION (K1's Gaussian measure degrades per move)",
+    "its_own_open_leaks": [
+      "the crux -- Minkowski convexity of the anisotropic Cheeger constant through the p->1, eps->0 double limit -- was flagged as externally questioned and verified by nobody in that corpus",
+      "the constant gap: 3*sqrt(2pi) = 7.52 against Kunisky's lower bound 1+sqrt2 = 2.414, a factor of 3.1",
+      "the result is explicitly EXISTENTIAL; no algorithm is given -- which is the Banaszczyk-to-Bansal-Jiang shape pointed at the newest paper"
+    ]
+  }
+}
