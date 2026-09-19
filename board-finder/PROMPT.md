@@ -77,11 +77,13 @@ checkable object.
 > **T2.** Is the legal move a **formula**, or does it need an **existence theorem**? If a
 > theorem, name it and say what it costs.
 > **T3.** Evaluate the invariant's threshold on the **target** state: compute
-> min{C : the invariant holds for the target at scale C}. Does that already cap the bound,
-> whatever the move does? If it is not O(1), no improvement to the move can reach O(1) —
-> say so, and say where the cap sits. If the invariant is not a threshold on a scale — if
-> its loss is (rounds) × (cost per step) instead — answer **does not parse for this board**
-> and say which it is. Do not manufacture a threshold to fill the field.
+> min{C : the invariant holds for the target at scale C}. If that is not O(1), then no
+> move *certified by this invariant* reaches O(1) — say so, and say where the cap sits.
+> Say also whether the move is **monotone** in the invariant: if the move can only degrade
+> it, the cap holds whatever the move does; if not, the cap is on the invariant and the
+> target may still be true by another certificate. If the invariant is not a threshold on
+> a scale — if its loss is (rounds) × (cost per step) instead — answer **does not parse for
+> this board** and say which it is. Do not manufacture a threshold to fill the field.
 > Then, per candidate, **the kill test**: the single computation that would refute it. Run
 > it if you can and report what happened.
 >
@@ -112,6 +114,8 @@ checkable object.
 | **run** the diagnostic, report the number | the five-transformation vocabulary scored **κ = 0.048** across three raters, who gave three different labels to the founding case, and one applied a label *backwards*. The computation needs no agreement on a word |
 | **T1** | all four responses in the reference corpus converged on the same board, and one **proved** that such a class exists *if and only if* the conjecture holds — reporting it as a find when it is the diagnosis. T1 is what separates a board from a restatement |
 | **T3** | added after the controls: T1 and T2 both **passed** on a board that provably cannot reach the target, so they are not sufficient. One line catches it — and it is the test a ratio-based tightness screen is blind to, because both sides can be O(1) while the constant is open |
+| T3's **monotone** clause, and its restraint about what a cap means | a blind coverage rater found the first wording overstated: it inferred "no improvement to the move can reach O(1)" from a cap that is only a cap **on the invariant**. On two of the six benchmark boards the incumbent move is itself lossy and the target is nonetheless **true** (Marcus–Spielman–Srivastava; Spencer), so the sound inference needs the monotonicity check. Only where the move can only degrade the invariant — Banaszczyk's measure board — is the original sentence literally right |
+| T3's **does not parse** escape | measured, not argued: T3's question is well-posed on 3 of the 6 benchmark boards and undefined on the three whose loss is (rounds) × (cost per step). A rater forced to answer on one of those three produced a threshold pointing the **wrong way** — for fixed soundness the PCP repetition count is O(1), so "no cap" — which would have scored as a pass |
 | **T2** | most of the complexity difference between the two real papers in that corpus sits in exactly this gap: one needs an SDP feasibility theorem for a legal move at every step, the other's move is a formula |
 | kill test | search fails by generating too little and verification by accepting too much. Asking for candidates *with* their refutation keeps both failure modes in one response |
 | **6(b)** | a confident impossibility claim asserted that all smooth certificates reduce to a moment class. A paper five days older reached the target with an L¹ derivative norm, outside that class |

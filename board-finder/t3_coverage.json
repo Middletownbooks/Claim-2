@@ -3,26 +3,63 @@
   "question": "Does T3's question -- min{C : the invariant holds for the target at scale C} -- even PARSE on each benchmark item? A screen that is undefined on most boards is not a screen, whatever arm 3 says about the boards where it is defined.",
   "assessed_by": "this session, single rater, with hindsight of every after-board. A coverage judgement (does the question parse?) rather than a verdict, which is why it is recorded despite that.",
   "items": [
-    {"id": "K1-to-K3", "applies": true,
-     "scale_parameter": "the side C of the target cube",
-     "computation": "min{C : gamma_n(cube_C) >= 1/2} = sqrt(2 ln n)(1-o(1)) for the measure invariant; O(1) for the directional-TV invariant",
-     "note": "the item T3 was derived from, so it cannot count as evidence for T3"},
-    {"id": "04-kadison-singer", "applies": true,
-     "scale_parameter": "delta, the bound on ||v||^2",
-     "computation": "min{delta : the matrix-Chernoff invariant certifies a 1/2+eps split} ~ 1/log n against a dimension-free truth -- so T3 locates the log n without reference to the move",
-     "note": "T3 would catch this board's cap, and the leak taxonomy independently calls it ACCUMULATION"},
-    {"id": "08-spencer", "applies": true,
-     "scale_parameter": "the discrepancy t being certified",
-     "computation": "min{t : per-set Chernoff plus a union bound over n sets certifies t} = Theta(sqrt(n log n)), against the truth 6 sqrt n -- the sqrt(log n) is in the threshold, not in the move"},
-    {"id": "02-cap-set", "applies": false,
-     "why_not": "the invariant is a density INCREMENT, delta -> delta + c delta^2, not a threshold on a scale. 'min{C : the invariant holds at scale C}' does not parse: the loss is rounds x per-round cost, so the question to ask is the ACCUMULATION one."},
-    {"id": "09-vinogradov", "applies": false,
-     "why_not": "the invariant is a recursive inequality on J with a fixed fraction recovered per round. Again rounds x cost, with no scale parameter for a threshold to sit on."},
-    {"id": "13-pcp", "applies": false,
-     "why_not": "value decay under k-fold repetition with size multiplicative in the exponent. The cap is the blow-up over rounds, not a threshold."}
+    {
+      "id": "K1-to-K3",
+      "applies": true,
+      "scale_parameter": "the side C of the target cube",
+      "computation": "min{C : gamma_n(cube_C) >= 1/2} = sqrt(2 ln n)(1-o(1)) for the measure invariant; O(1) for the directional-TV invariant",
+      "note": "the item T3 was derived from, so it cannot count as evidence for T3"
+    },
+    {
+      "id": "04-kadison-singer",
+      "applies": true,
+      "scale_parameter": "delta, the bound on ||v||^2",
+      "computation": "min{delta : the matrix-Chernoff invariant certifies a 1/2+eps split} ~ 1/log n against a dimension-free truth -- so T3 locates the log n without reference to the move",
+      "note": "T3 would catch this board's cap, and the leak taxonomy independently calls it ACCUMULATION"
+    },
+    {
+      "id": "08-spencer",
+      "applies": true,
+      "scale_parameter": "the discrepancy t being certified",
+      "computation": "min{t : per-set Chernoff plus a union bound over n sets certifies t} = Theta(sqrt(n log n)), against the truth 6 sqrt n -- the sqrt(log n) is in the threshold, not in the move"
+    },
+    {
+      "id": "02-cap-set",
+      "applies": false,
+      "why_not": "the invariant is a density INCREMENT, delta -> delta + c delta^2, not a threshold on a scale. 'min{C : the invariant holds at scale C}' does not parse: the loss is rounds x per-round cost, so the question to ask is the ACCUMULATION one."
+    },
+    {
+      "id": "09-vinogradov",
+      "applies": false,
+      "why_not": "the invariant is a recursive inequality on J with a fixed fraction recovered per round. Again rounds x cost, with no scale parameter for a threshold to sit on."
+    },
+    {
+      "id": "13-pcp",
+      "applies": false,
+      "why_not": "value decay under k-fold repetition with size multiplicative in the exponent. The cap is the blow-up over rounds, not a threshold."
+    }
   ],
-  "coverage": {"applies": 3, "does_not": 3, "of": 6},
+  "coverage": {
+    "applies": 3,
+    "does_not": 3,
+    "of": 6,
+    "restated": "1 literal (K1-to-K3), 2 by one step of interpretation (04-kadison-singer, 08-spencer), 3 declined (02-cap-set, 09-vinogradov, 13-pcp)"
+  },
   "finding": "T3 applies exactly where the invariant is a THRESHOLD ON A SCALE, and is undefined where the loss is rounds times per-step cost. So T3 and the leak taxonomy are COMPLEMENTARY rather than overlapping: T3 covers the boards whose cost is paid at initialisation, ACCUMULATION covers the boards whose cost is paid per step. Neither subsumes the other, and a board can be read by exactly one of them.",
   "consequence_for_the_prompt": "T3 must be askable and ANSWERABLE WITH 'does not parse for this board', the same way the five slots allow 'none recorded'. A respondent forced to produce a threshold where none exists will invent one, which is the failure mode the slot table's 'do not invent one to fill the table' clause exists to prevent.",
-  "what_would_change_this": "a second rater on the coverage column alone -- does T3's question parse, yes or no, on 6 items. Two categories, six items, and it is cheaper than any other test outstanding."
+  "what_would_change_this": "DONE, once: a second blind rater agreed 6/6 on the column, which retires the pre-registered failure conditions but not the ceiling the prereg named -- agreement between two raters of similar training is consistency. What would change it now is a rater who is NOT a language model, or a seventh board chosen by someone else.",
+  "second_rater": {
+    "who": "blind rater, fresh context, tools forbidden; PREREG_COVERAGE.md states what was withheld",
+    "verdicts_file": "controls/coverage_verdicts.json",
+    "scored_by": "controls/score_coverage.py, committed before the verdicts file existed",
+    "agreement": "6 of 6 on the parse/does-not-parse column: the same three decline (02-cap-set, 09-vinogradov, 13-pcp)",
+    "how_to_read_that": "PREREG_COVERAGE.md said in advance that 6/6 is CONSISTENCY, not truth: two raters with similar training on six famous boards can agree for reasons that have nothing to do with the boards. It does rule out the worse pre-registered outcome -- a DIFFERENT three declining, which would have made the dichotomy mine rather than the boards'.",
+    "one_quantity_disagreement": "on 04-kadison-singer the rater named a different scale parameter than I predicted: the constant C in the target's 1/2 + C sqrt(delta), where I had named delta itself. Both solve the SAME inequality t >= sqrt(2 delta ln 2n) -- mine for delta at fixed target constant, the rater's for the constant at fixed delta -- and both put Theta(sqrt(log n)) in the invariant. Prediction B-2 said 'wording may differ, the quantity may not', so on its own terms the quantity prediction MISSED while the cap agreed. score_coverage.py passed it on the substring 'delta' inside 'sqrt(delta)'; the rule is left as committed and the adjudication recorded beside it rather than the rule being edited after the fact.",
+    "corrections_the_rater_forced": [
+      "T3's inference sentence was overstated. A cap computed from the invariant is a cap ON THE INVARIANT; on 04-kadison-singer and 08-spencer the incumbent move is itself lossy and the target is nonetheless TRUE (Marcus-Spielman-Srivastava; Spencer). PROMPT.md's T3 now asks whether the move is MONOTONE in the invariant, and only then licenses 'whatever the move does'. On K1-to-K3 it is monotone -- the move can only shrink measure -- which is why the original wording was right there and nowhere else.",
+      "Of the three boards where T3 parses, only K1-to-K3 is a LITERAL fit. On 04-kadison-singer the rater flagged a reconstrual: a matrix Chernoff bound is a tail statement about a random process, not a predicate a state satisfies at scale C; what is scale-indexed is the certificate's resolution at the target norm. So the coverage number is better stated as 1 literal + 2 by interpretation + 3 declined than as 3 of 6.",
+      "13-pcp shows the decline clause earning its place in the sharpest way: forcing the most plausible scale (the size exponent) yields NO CAP -- for fixed constant soundness the repetition count is O(1) and the size polynomial -- so a forced answer there does not merely invent a threshold, it invents one pointing the WRONG WAY, and would have scored as a pass."
+    ],
+    "arithmetic_checked": "controls/verify_coverage_arithmetic.py reproduces all three thresholds independently: sqrt(2 ln 2n) for both union-bound boards, the variance step ||sum ||v||^2 v v^T|| <= delta verified numerically on isotropic random systems, and min C = sqrt(2 ln n)(1+o(1)) for the measure board, which controls/verify_arm3_mechanism.py had already fixed before either answer was read."
+  }
 }
