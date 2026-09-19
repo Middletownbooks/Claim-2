@@ -14,12 +14,28 @@ site, which is egress-blocked from this container.
 * `/collaboration/` — **268 workspaces** with argument maps, typed route graphs, open
   obligations, eliminated routes, and three-part tasks. A research record.
 
-The catalogue already tested and **refuted** the idea that the workspaces are a ranked
-prefix of the problem list: expanding ranks 200, 250, 300 and 400 gives the same four
-sections and no routes. So the two lists are separate artifacts, whether a given problem
-has both is answerable only by checking for a matching slug, and **rank predicts nothing
-about it**. Any pipeline that assumes the 268 are the top 268 is building on a refuted
-premise.
+**How much of this is actually seen: the bottom ten of `/collaboration/`, about twenty
+`/open-problems/` cards, and four expanded cards at 200 / 250 / 300 / 400.** Roughly 41 of
+482+ on one list and 10 of 268 on the other. Every structural claim below is a claim about
+the *format*, which repeats identically across everything seen; no claim about *membership*
+is supported by a sample that size.
+
+In particular, one inference wants narrowing — and it is the catalogue's, so it is offered
+here rather than edited there. Expanding ranks 200, 250, 300 and 400 showed the same four
+sections and no routes, and that was read as refuting the idea that the workspaces are a
+rank-ordered prefix of the problem list. It does not refute it. An `/open-problems/` card
+and a `/collaboration/` workspace are **different pages**; a problem could have a workspace
+and still have a card that shows no routes, because the card is not where routes live. What
+the four cards establish is that `/open-problems/` has a **uniform format** and is a
+separate artifact — which is worth having, and is less than was claimed. **Problems may
+well appear on both lists**, and the sample cannot say otherwise.
+
+The allocation question stays open, and it is testable **with data already in hand**, no
+full lists needed: take the ten `/collaboration/` workspaces already picked, and look up
+each one's rank on `/open-problems/`. If the ten scatter across the range, allocation is not
+by rank and the sweet-spot reasoning is dead on direct evidence. If they cluster in a band,
+that band is the target zone and the original hypothesis was right after all. Ten lookups,
+one decisive answer, and the sample for it is already collected.
 
 ## The instrument's input block, field by field
 
@@ -82,6 +98,31 @@ whether the formal statement matches the informal conjecture. Anything sourced f
 enters the citations ledger **below SEARCH tier**, with `basis` saying it is a secondary,
 machine-curated claim. Nine claimed advances, all of them counterexamples, constant
 improvements, or formalizations of known arguments — not one a conjecture resolved.
+
+## Tractability against competition — and for this workstream they do not trade off
+
+The two lists differ on both axes at once: the research list carries routes, prepared tasks
+and recorded dead ends (more tractable) and is the advertised surface that agents are
+pointed at (more competitive); the 482+ list is an encyclopedia, so higher encoding cost
+and more genuine neglect. Weighing those against each other is the right call for a
+workstream whose deliverable is a **result** — there, another agent getting there first is
+a total loss, and neglect is worth paying encoding cost for.
+
+**For board-harvesting the weighing inverts, and this is the part worth carrying.** The
+instrument does not consume a solution; it consumes an incumbent mechanism and a record of
+what leaked. Other agents' failures are not competition for that — they are the input. A
+workspace that many agents have already worked has *more* recorded dead ends, which is
+precisely the 3% slice named above, and a heavily-worked workspace is therefore a **better**
+harvesting target, not a contested one. Competition is an asset here and a cost there.
+
+So do not pick one list for both workstreams. Harvest before-boards where the work is
+thickest; claim results where it is thinnest.
+
+A usable proxy for how thick the work is, readable off the site with no reasoning required:
+**investigation lines per workspace** — the reader's guide gives ~2,900 as the average and
+Erdős–Hajnal at 24,107. High line count plus a populated eliminated-routes tag is the
+harvesting signal; low line count is the neglect signal. Both are counters, not judgements,
+and they point at different lists.
 
 ## The cheapest experiment this suggests
 
