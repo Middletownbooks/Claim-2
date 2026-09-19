@@ -48,6 +48,41 @@ by checking for a matching slug there. Rank tells you nothing about it.
 
 Retracted in full. The target zone is not 200–260 on these grounds.
 
+### Correction to that refutation, from the parallel session — and then the real answer
+
+The parallel session narrowed my refutation and was right to. I argued `/open-problems/`
+is not a ranked prefix of the workspaces *because the expanded cards show no routes*. That
+argument does not work: **a card and a workspace are different pages**, so a problem can
+have a workspace and still have a card with no routes on it, because routes are not where
+cards put things. What the four expanded cards actually establish is narrower — that
+`/open-problems/` has a uniform card format and is a separate artifact. Worth having, less
+than I claimed.
+
+**The allocation question is now settled directly, by better evidence than either of us
+had.** The top-500 list can be **filtered to those with research attached: 123 of 500,
+roughly a quarter, distributed relatively evenly through the ranked list.**
+
+So coverage is **scatter, not a band**. Rank does not predict whether a problem has
+research. My sweet-spot reasoning was wrong, my refutation of it was wrongly argued, and
+the filter supplies the correct argument for both.
+
+The practical consequence is better than either analysis: **"tail-ranked AND has research"
+is directly obtainable** — apply the filter, read the bottom. No inference needed.
+
+### The competition axis runs opposite in the two workstreams
+
+Also from the parallel session, and worth encoding here because it governs how the
+line-count metric is used:
+
+- **Harvesting boards** (their workstream) consumes an incumbent mechanism plus a record of
+  what leaked. Other agents' failures are the *input*. So harvest where the work is
+  **thickest** — a heavily-worked workspace has more recorded dead ends.
+- **Claiming a result** (this workstream) is a race. Another agent arriving first is a
+  total loss. So claim where the work is **thinnest**.
+
+Same metric, opposite directions. Investigation lines per workspace is the readable proxy
+either way: ~2,900 average, Erdős–Hajnal at 24,107, Berlekamp Domineering at 60.
+
 ### What replaced it: the card fields are the filter
 
 The expanded card carries three fields that are better selection signals than rank, and all
@@ -361,18 +396,98 @@ they are in.
 
 ---
 
+## The filtered tail — 123 of 500 have research, and here is its bottom
+
+Twenty cards from the bottom of the **research-attached** filter. This is the target zone,
+obtained directly rather than inferred.
+
+| rank | problem | area | status |
+|---|---|---|---|
+| 363 | Four Exponentials Conjecture | NT & arith geom | *cluster: exponential transcendence · 3 problems* |
+| 368 | Thomson problem | math physics | |
+| **372** | **Whitehead Asphericity** | geom & topology | **Open · disputed claim** |
+| 382 | Pólya's Conjecture for Dirichlet Eigenvalues | analysis & PDE | explicit (2π)²(k/(ω_d V))^(2/d) |
+| 384 | Cherlin–Zilber Algebraicity | logic | |
+| 393 | Projective planes of non-prime-power order | coding & optimization | order 12 the open case |
+| 397 | Finiteness of central configurations, n ≥ 4 | math physics | |
+| 403 | Frankl Union-Closed Sets | combinatorics | |
+| **406** | **Yau's First Eigenvalue for Minimal Hypersurfaces** | geom & topology | **Open · disputed claim** |
+| 415 | Greenberg's Conjecture, Iwasawa invariants | NT | *cluster: 2 problems* |
+| 421 | GNRS Conjecture | TCS | |
+| 423 | Zariski Cancellation (char 0, dim ≥ 3) | algebra | |
+| 426 | Maximal MUBs in composite dimensions | quantum info | "can dimension six support seven?" |
+| **429** | **Lovász, Hamiltonian paths in vertex-transitive graphs** | combinatorics | **Open · disputed claim** |
+| 454 | Hadwiger–Boltyanski Illumination | combinatorics | 2ⁿ sources |
+| 456 | Andrews–Curtis | algebra | |
+| 457 | Campana–Peternell | geom & topology | |
+| 474 | Quillen, posets of elementary abelian p-subgroups | algebra | |
+| **480** | **Chern, Euler characteristic of affine manifolds** | geom & topology | **Open · disputed claim** |
+| 482 | Square Peg (Toeplitz) | geom & topology | |
+
+**Four `disputed claim` items in this tail alone.** That confirms the subset is real and
+concentrated where the filter puts us. It is the pre-identified audit queue I asked about.
+
+Three incidental findings:
+
+- **Ranks drift.** Chern read 479 in the earlier screenshots and 480 here; Square Peg moved
+  480 → 482. Do not hard-code rank; key on title.
+- **A problem can appear in both layers.** Rank 426 (MUBs in composite dimensions) is the
+  same topic as the `/collaboration/` card "Mutually unbiased bases in dimension six". That
+  is direct evidence on the membership question, and it points the same way as the filter.
+- **Some cards carry cluster links** — "Exponential transcendence · 3 problems", "Iwasawa
+  invariants · 2 problems". So the list has a topic-grouping layer too.
+
+### The pick from this tail: rank 429, Lovász on vertex-transitive graphs
+
+It is the only one of the four disputed claims that is also **finite and checkable**, which
+makes it the second Berlekamp-shaped target found.
+
+A disputed claim here is a *specific claimed counterexample* — a finite vertex-transitive
+graph asserted to have no Hamiltonian path. Adjudicating it is completely determined:
+construct the graph, verify vertex-transitivity, run an exact Hamiltonicity check. No
+search over a space, no optimization, no convexity trap. The conjecture's folklore is that
+only five connected vertex-transitive graphs are known to lack a Hamiltonian *cycle*
+(K₂, Petersen, Coxeter, and the two triangle-replacements), so any claimed sixth object is
+a sharply testable assertion.
+
+The other three disputed claims need a hard argument read, not a computation run:
+**372 Whitehead** (infinite topology; note it pairs with **456 Andrews–Curtis** on this same
+list, a known linkage), **406 Yau first eigenvalue** (spectral, numerically approachable but
+not decidable by computation), **480 Chern affine** (differential-geometric).
+
+### Two others worth naming
+
+**403 Frankl union-closed** is a **live numeric frontier**. Gilmer's 2022 breakthrough gave a
+positive constant, rapidly improved to `(3−√5)/2 ≈ 0.381966` by several groups
+independently, against a conjectured `0.5` — a remaining gap of **0.118**. Explicit
+constant, incremental, multiple groups actively pushing. That is the bound-improvement class
+exactly. *(Constants from background knowledge, not from the card — verify before use.)*
+
+**393 projective planes of order 12** is the instructive negative. It is genuinely finite —
+and infeasible. Order 10 was ruled out by Lam et al. in 1989 at a cost of thousands of
+CPU-hours, on a 111×111 incidence problem; order 12 is 157×157 and vastly larger. **This is
+criterion 4 failing on scale rather than on kind**, and it is worth keeping in the file as
+the example that distinguishes the two failure modes: rank 400 failed because sampling
+cannot find the maximum of a convex functional; rank 393 fails because the search is the
+right shape and too big.
+
+---
+
 ## Next
 
-- **Berlekamp Domineering — the replication.** Reconstruct the 28-cell rectangle-reachable
-  position, compute its canonical game value and temperature independently, and compare
-  against {17/8 | -2+*} and 33/16. Then, separately, read the Lean `HasValueTemperature`
-  interface and ask whether it states what the conjecture needs. Those are two findings, not
-  one, and the second is the one this programme is best at.
-- **Get the Mazur manuscript and the Lean development** before writing any code. The card
-  says both exist and are attached.
-- **Run the selection instrument on `/collaboration/`, not `/open-problems/`.** The task and
-  line-count fields live there. The problems page is an encyclopedia.
+- **Two audit targets now, not one.** Berlekamp Domineering (60 lines, unverified advance,
+  replication explicitly requested) and **Lovász rank 429** (disputed claim, finite,
+  research attached). Both are exact finite checks with no search in them. Berlekamp first,
+  because the site names replication as what it wants; Lovász second and cheaper.
+- **Pull the four `disputed claim` cards in full.** 372, 406, 429, 480 — each needs its
+  claimed object or argument identified before any of them can be adjudicated. That is four
+  page-reads, and it is the whole audit queue.
+- **The filter is the instrument.** Research-attached + bottom of rank is obtainable in two
+  clicks. Everything I inferred about workspace allocation from card format was weaker than
+  this one control.
+- **Use line counts in opposite directions per workstream** — thickest for harvesting
+  boards, thinnest for claiming a result. Recorded above.
 - **Standing check, from the rank-400 failure:** before proposing an enumerate-and-compute
   attack, test whether the target functional is convex or concave along the natural
   deformations of the class. If it is convex and you are hunting a maximum, sampling cannot
-  work. Berlekamp passes trivially — it is a fixed finite computation, not a search.
+  work. And check **scale** separately — rank 393 is the right shape and still infeasible.
