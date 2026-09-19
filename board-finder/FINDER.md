@@ -100,6 +100,36 @@ just used it:
    K1 → K2: Banaszczyk's existence theorem to Bansal–Jiang's process. The trio's own
    transformation is available, unused, on the paper that closed the trio's problem.
 
+## 4b. The triage, which decides whether a board is real — and supersedes §4's framing
+
+The leak taxonomy says *which transformation to attempt*. It does not say whether a
+proposed board is worth anything. Two questions do, both from the line-by-line audit,
+and both readable from the statement of the board alone:
+
+> **T1. Can the invariant be verified on the starting state by an independent
+> computation?**
+> Guo–Fang–Lu: yes — Lemma 2.4 is three lines of calculus and a gamma integral, and you
+> can check the seed satisfies it *without knowing whether Komlós is true*.
+> Banaszczyk: yes — γ of a body is computable. Bansal–Jiang: yes, but only through an
+> SDP feasibility theorem. The convolution compiler: **no**.
+
+> **T2. Is the legal move a formula, or does it need an existence theorem?**
+> Odin's T_v is a formula. Bansal–Jiang needs SDP duality to guarantee a legal move
+> exists at each step, and most of the complexity difference between the two papers
+> sits in that gap.
+
+**T2 is already a field in the protocol tree** — `move_kind`, formula against
+existence-theorem, added for debt D9 from a completely different argument. Two
+derivations, one discriminator; that is the strongest evidence either has.
+
+**And T1 kills a framing this project has leaned on.** "Board change, not a better
+player" is not the discriminator: affine spectral independence *is* a board change by
+any definition that admits Guo–Fang–Lu's. **Checkability is the discriminator.** The
+restatement trap is what makes this sharp — all four models converged on a class closed
+under convolution with the terminal property, and one of them *proved* such a class
+exists **iff Komlós holds**. It reported that as a finding; it is the diagnosis. The
+board is a restatement, and T1 is what catches it.
+
 ## 5. How to run this at scale, and what stops it
 
 The screen costs two fields per board and one of them is already written in most
