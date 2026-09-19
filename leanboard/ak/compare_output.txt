@@ -1,0 +1,19 @@
+Challenge statements: 15   Solution statements: 16   shared: 15
+only in Solution (expected: the constant identity): ['cStar_one_eq_cMT']
+statements identical: 15/15
+
+counting functions compared: 9
+  MATCH   IsNontrivialZero
+  MATCH   N0
+  MATCH   N0simple
+  MATCH   N0star
+  MATCH   Ncount
+  MATCH   Ndist
+  MATCH   Nsimple
+  MATCH   zeroMult
+  MATCH   zerosIn
+
+NOT CHECKED HERE (needs a Lean toolchain): that the delegations typecheck, that the
+counting functions agree DEFINITIONALLY rather than textually, and the axiom set.
+
+PASS: textual statement audit clean

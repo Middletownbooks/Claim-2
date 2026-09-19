@@ -179,10 +179,19 @@ prospective. **Use the date. Retire the model-name control.**
 ## 7. Next
 
 - **Pull `/api/dataset` live** when reachable, to get past the 2026-09-03 snapshot.
-- **Work the `lean-checked` queue downward from sig 68.** Zeta zeros first: sorry-free
-  against real Mathlib `riemannZeta`, statement audit incomplete, highest significance in the
-  corpus. Arm AI is the template and took one session.
-- **Still outstanding, unchanged:** the control class. Every barrier instance so far —
-  Lovász 429, the union-closed ceiling — was selected *because* it declared a barrier. The
-  census does not fix that; `resolutionMethod` and `aiRole` might give a way to sample
-  neutrally, and that is worth one pass.
+- **Zeta zeros (sig 68) is done — see `leanboard/ak/`.** 33/33 on the arithmetic, clean at
+  source level, and the textual half of the missing statement audit completed (15/15
+  statements and 9/9 counting functions identical). Only the kernel re-run remains. The arm
+  also found that this census's praise of the site's labelling needs one qualification: the
+  site's source audit of that entry quotes a **superseded** `sorry` count from the
+  repository's own `AUDIT.md` (27, pre-XiPrime) where the true figure at the audited tag is
+  33. Conclusion sound, number inherited rather than recomputed.
+- **The barrier predicate is retired, refuted by that same arm.** The zeta paper doubles a
+  fifty-year record *and* proves its own method's ceiling, landing within 0.0152 of it. It
+  was selected as the top of the audit queue, not for declaring a barrier — so it is the
+  neutral control this section asked for, and it fires the predicate on the least exhausted
+  board in the corpus. Barrier language indicates rigour, not exhaustion.
+- **Next on the queue:** the remaining 21 `lean-checked` post-cutoff entries, starting from
+  Prime gaps at most 212 / 186 (sig 62) and Carathéodory smooth (sig 55).
+- **The control class is no longer outstanding.** Arm AK supplied it by accident and it went
+  against the hypothesis. No further sampling pass is needed for that question.
