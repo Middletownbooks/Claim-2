@@ -79,7 +79,9 @@ checkable object.
 > **T3.** Evaluate the invariant's threshold on the **target** state: compute
 > min{C : the invariant holds for the target at scale C}. Does that already cap the bound,
 > whatever the move does? If it is not O(1), no improvement to the move can reach O(1) —
-> say so, and say where the cap sits.
+> say so, and say where the cap sits. If the invariant is not a threshold on a scale — if
+> its loss is (rounds) × (cost per step) instead — answer **does not parse for this board**
+> and say which it is. Do not manufacture a threshold to fill the field.
 > Then, per candidate, **the kill test**: the single computation that would refute it. Run
 > it if you can and report what happened.
 >

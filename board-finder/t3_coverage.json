@@ -1,0 +1,28 @@
+{
+  "label": "T3_COVERAGE_v1",
+  "question": "Does T3's question -- min{C : the invariant holds for the target at scale C} -- even PARSE on each benchmark item? A screen that is undefined on most boards is not a screen, whatever arm 3 says about the boards where it is defined.",
+  "assessed_by": "this session, single rater, with hindsight of every after-board. A coverage judgement (does the question parse?) rather than a verdict, which is why it is recorded despite that.",
+  "items": [
+    {"id": "K1-to-K3", "applies": true,
+     "scale_parameter": "the side C of the target cube",
+     "computation": "min{C : gamma_n(cube_C) >= 1/2} = sqrt(2 ln n)(1-o(1)) for the measure invariant; O(1) for the directional-TV invariant",
+     "note": "the item T3 was derived from, so it cannot count as evidence for T3"},
+    {"id": "04-kadison-singer", "applies": true,
+     "scale_parameter": "delta, the bound on ||v||^2",
+     "computation": "min{delta : the matrix-Chernoff invariant certifies a 1/2+eps split} ~ 1/log n against a dimension-free truth -- so T3 locates the log n without reference to the move",
+     "note": "T3 would catch this board's cap, and the leak taxonomy independently calls it ACCUMULATION"},
+    {"id": "08-spencer", "applies": true,
+     "scale_parameter": "the discrepancy t being certified",
+     "computation": "min{t : per-set Chernoff plus a union bound over n sets certifies t} = Theta(sqrt(n log n)), against the truth 6 sqrt n -- the sqrt(log n) is in the threshold, not in the move"},
+    {"id": "02-cap-set", "applies": false,
+     "why_not": "the invariant is a density INCREMENT, delta -> delta + c delta^2, not a threshold on a scale. 'min{C : the invariant holds at scale C}' does not parse: the loss is rounds x per-round cost, so the question to ask is the ACCUMULATION one."},
+    {"id": "09-vinogradov", "applies": false,
+     "why_not": "the invariant is a recursive inequality on J with a fixed fraction recovered per round. Again rounds x cost, with no scale parameter for a threshold to sit on."},
+    {"id": "13-pcp", "applies": false,
+     "why_not": "value decay under k-fold repetition with size multiplicative in the exponent. The cap is the blow-up over rounds, not a threshold."}
+  ],
+  "coverage": {"applies": 3, "does_not": 3, "of": 6},
+  "finding": "T3 applies exactly where the invariant is a THRESHOLD ON A SCALE, and is undefined where the loss is rounds times per-step cost. So T3 and the leak taxonomy are COMPLEMENTARY rather than overlapping: T3 covers the boards whose cost is paid at initialisation, ACCUMULATION covers the boards whose cost is paid per step. Neither subsumes the other, and a board can be read by exactly one of them.",
+  "consequence_for_the_prompt": "T3 must be askable and ANSWERABLE WITH 'does not parse for this board', the same way the five slots allow 'none recorded'. A respondent forced to produce a threshold where none exists will invent one, which is the failure mode the slot table's 'do not invent one to fill the table' clause exists to prevent.",
+  "what_would_change_this": "a second rater on the coverage column alone -- does T3's question parse, yes or no, on 6 items. Two categories, six items, and it is cheaper than any other test outstanding."
+}
