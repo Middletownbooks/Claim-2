@@ -425,7 +425,9 @@ obtained directly rather than inferred.
 | 482 | Square Peg (Toeplitz) | geom & topology | |
 
 **Four `disputed claim` items in this tail alone.** That confirms the subset is real and
-concentrated where the filter puts us. It is the pre-identified audit queue I asked about.
+concentrated where the filter puts us. *(Written before I read one. See the retraction
+below: the badge does not mean what I took it to mean, so this is a set of four cards to
+open, not a pre-identified audit queue.)*
 
 Three incidental findings:
 
@@ -437,23 +439,107 @@ Three incidental findings:
 - **Some cards carry cluster links** — "Exponential transcendence · 3 problems", "Iwasawa
   invariants · 2 problems". So the list has a topic-grouping layer too.
 
-### The pick from this tail: rank 429, Lovász on vertex-transitive graphs
+### RETRACTED — "the pick from this tail: rank 429, Lovász on vertex-transitive graphs"
 
-It is the only one of the four disputed claims that is also **finite and checkable**, which
-makes it the second Berlekamp-shaped target found.
+**The claim below is withdrawn. It was wrong, and it was wrong in a way I should have
+caught before writing it.** I asserted, in the words committed to this file:
 
-A disputed claim here is a *specific claimed counterexample* — a finite vertex-transitive
-graph asserted to have no Hamiltonian path. Adjudicating it is completely determined:
-construct the graph, verify vertex-transitivity, run an exact Hamiltonicity check. No
-search over a space, no optimization, no convexity trap. The conjecture's folklore is that
-only five connected vertex-transitive graphs are known to lack a Hamiltonian *cycle*
-(K₂, Petersen, Coxeter, and the two triangle-replacements), so any claimed sixth object is
-a sharply testable assertion.
+> *"A disputed claim here is a specific claimed counterexample — a finite vertex-transitive
+> graph asserted to have no Hamiltonian path. Adjudicating it is completely determined:
+> construct the graph, verify vertex-transitivity, run an exact Hamiltonicity check. No
+> search over a space, no optimization, no convexity trap. Second Berlekamp-shaped target
+> found."*
 
-The other three disputed claims need a hard argument read, not a computation run:
-**372 Whitehead** (infinite topology; note it pairs with **456 Andrews–Curtis** on this same
-list, a known linkage), **406 Yau first eigenvalue** (spectral, numerically approachable but
-not decidable by computation), **480 Chern affine** (differential-geometric).
+The research attached to rank 429 is **Bucić, Christoph, Pokrovskiy and Steiner, *Towards
+the Lovász conjecture via sublinear expanders*, arXiv:2606.09742v2 (27 July 2026)**. It is
+a **positive lower-bound paper by four academics**, not a counterexample. Its result is
+
+  `ℓ(n) ≥ n^{2/3 − o(1)}`
+
+where `ℓ(n)` is the longest path guaranteed in an `n`-vertex connected vertex-transitive
+graph, improving the chain Babai `Ω(√n)` → DeVos `n^{3/5}` → Groenland et al `n^{13/21}`
+→ Norin et al `n^{9/14}`. There is no claimed object to construct and no Hamiltonicity
+check to run. **The "second Berlekamp-shaped target" claim is dead.**
+
+**What the error was.** I read a status badge reading `Open · disputed claim` and inferred
+its *content* — that a disputed claim must be a claimed counterexample — without opening
+the card. Everything downstream ("finite and checkable", "completely determined", "no
+convexity trap") was deduction from that single unchecked inference, stated with the
+confidence of a fact. The failure is not that the inference was unlikely; it is that I
+never marked it as an inference. This is the same defect as the rank-400 failure in a
+different costume: there I reasoned past a property of the object (convexity) I had not
+tested; here I reasoned past the object itself.
+
+**This is the third hypothesis of mine refuted in this exercise** — after the
+workspace-boundary band (retracted by me, then narrowed further by the parallel session as
+wrongly argued, then settled against me by the user's filter data) and the rank-400
+enumerate-and-compute attack (refuted by Thm 3.4 of its own source). Recording the count
+is the point: the retrospective instrument is measuring me as much as anything else, and
+three for three on the speculative picks is the number that belongs in the record.
+
+**Do not re-use the badge taxonomy.** Until a `disputed claim` card has been opened and
+read, the only thing the badge licenses is "the card says something is contested." It does
+not license "there is a claimed counterexample," it does not license finiteness, and it
+does not license checkability. The other three — 372 Whitehead, 406 Yau, 480 Chern — are
+now **unassessed**, not "needing a hard argument read": that characterization was built on
+the same inference and falls with it.
+
+### What rank 429 actually is: a dated, self-declared board-exhaustion instance
+
+The item's real value is different from and, for the programme, probably larger than the
+audit target I thought I had. The paper states that it **hits a natural barrier of the
+existing methods**, and the arithmetic confirms it. Both available routes cap at exactly
+2/3, from opposite directions:
+
+**Route A — longest path transversals.** With `lpt(G)` the longest-path transversal number,
+the standard reduction gives `ℓ ≥ n/lpt(G) − 1`. If `lpt(G) ≤ ℓ^β` then
+
+  `ℓ ≥ n/ℓ^β − 1`  ⟹  `ℓ^{1+β} ≳ n`  ⟹  `ℓ ≥ n^{1/(1+β)}`.
+
+This paper's Theorem 1.2 achieves `β = 1/2`, giving `1/(1 + 1/2) = 2/3` **exactly**. The
+exponent improves only as β → 0, and `β = 0` — `lpt` bounded by an absolute constant — is
+**Gallai's question, asked in 1966 and open ever since**. So the ceiling does not sit at an
+arbitrary technical limit; it sits precisely on a sixty-year-old open problem.
+
+**Route B — Smith's conjecture, local form.** If `s(k) = O(k^α)`, the reduction yields
+
+  `ℓ(n) ≥ Ω(n^{(1+α)/(1+2α)})`,
+
+which is *decreasing* in α, so one wants α small — but the trivial bound `s(k) ≥ k` forces
+`α ≥ 1`. The best conceivable α = 1 gives `(1+1)/(1+2) = 2/3` **exactly again**. And the
+current state of the art, Ma–Zhao's `α = 3/2`, gives only `(1 + 3/2)/(1 + 3) = 5/8 = 0.625`
+— *worse* than route A already delivers.
+
+Two independent routes, one capped at 2/3 by a 1966 open problem and the other capped at
+2/3 even under its own best possible hypothesis: that is a board on which the accessible
+moves have been played out and the next move requires a new piece. **That is exactly the
+shape the programme is trying to detect** — and here it is declared by the authors
+themselves, in a dated paper, in a field with no contamination from this project.
+
+Arithmetic checked in `leanboard/ag/lovasz_exponent_barrier.py` — 12/12, including the
+monotonicity of each route in its parameter, the four earlier links of the chain all falling
+below 2/3, and the coincidence of the two caps.
+
+**Therefore: rank 429 is a candidate for the prospective arm, not the retrospective corpus.**
+The prospective arm is the only uncontaminated instrument I have; a July 2026 paper whose
+own authors name the barrier is a legitimate entry for it. Filed as such.
+
+### Two observations to carry forward
+
+**The AI-role disclosures point in opposite directions.** This paper states *"ChatGPT 5.6
+was used to proofread this paper. All of the ideas and writing are due entirely to the
+authors."* Mazur's Domineering paper, replicated in `leanboard/ah/`, discloses a
+substantial AI role. Two 2026 papers, two opposite postures on the same question, both
+attached to ProofAtlas items. Any claim this project makes about AI contribution rates in
+the literature has to survive that spread; a single convention cannot be assumed.
+
+**"Research attached" is not yet defined.** arXiv:2606.09742 is ordinary independent
+literature by four academics — nothing ProofAtlas produced. If the filter's 123-of-500
+counts links to external papers, then "research attached" measures *what the site's curators
+found*, not *what the site generated*, and the even distribution through the ranking is
+evidence about curation coverage rather than about where effort has been spent. That
+distinction changes what the filter can be used for, and it is currently unresolved. **Open
+question; do not build on either reading until a card settles it.**
 
 ### Two others worth naming
 
@@ -475,13 +561,18 @@ right shape and too big.
 
 ## Next
 
-- **Two audit targets now, not one.** Berlekamp Domineering (60 lines, unverified advance,
-  replication explicitly requested) and **Lovász rank 429** (disputed claim, finite,
-  research attached). Both are exact finite checks with no search in them. Berlekamp first,
-  because the site names replication as what it wants; Lovász second and cheaper.
-- **Pull the four `disputed claim` cards in full.** 372, 406, 429, 480 — each needs its
-  claimed object or argument identified before any of them can be adjudicated. That is four
-  page-reads, and it is the whole audit queue.
+- **One audit target, not two.** Berlekamp Domineering (60 lines, unverified advance,
+  replication explicitly requested) — done, and it holds; see `leanboard/ah/`. Rank 429 was
+  the second and is withdrawn: it is a positive lower-bound paper, not a checkable claim.
+  **No second audit target is currently identified.**
+- **Rank 429 moves to the prospective arm** as a dated, self-declared board-exhaustion
+  instance with both routes capped at 2/3 and the ceiling sitting on Gallai 1966.
+- **Pull the three remaining `disputed claim` cards in full.** 372, 406, 480 — and pull them
+  before saying anything further about what they contain. Rank 429 is the demonstration that
+  the badge alone supports no conclusion at all.
+- **Standing check, from the rank-429 failure:** a status label is a pointer to content, not
+  content. Before building on what a card *is*, open it. If it cannot be opened, write the
+  inference down as an inference, with the word.
 - **The filter is the instrument.** Research-attached + bottom of rank is obtainable in two
   clicks. Everything I inferred about workspace allocation from card format was weaker than
   this one control.
