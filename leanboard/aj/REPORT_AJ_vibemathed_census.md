@@ -198,8 +198,19 @@ prospective. **Use the date. Retire the model-name control.**
   results have **disjoint** verification halves — Sol has Ben Green's reading but no build,
   Astra has the kernel replay but no reader — and the *stronger* bound is the unread one.
   Same problem, nine days apart, allocation still backwards.
-- **Next on the queue:** `Prime Gaps at Most 186` (`openai/PrimeGaps186`), whose site note
-  reports **three project-specific axioms** — the `lean-checked` failure mode at its most
-  explicit — then Carathéodory smooth (sig 55), then the remaining `lean-checked` entries.
+- **`Prime Gaps at Most 186` is done — see `leanboard/am/`.** 22/22, including a *complete*
+  finite check of the explicit admissible 40-tuple (40 elements, diameter exactly 186,
+  admissible at every prime). The three axioms assessed individually: one is Deligne's
+  hyper-Kloosterman bound exactly, one asserts square-root cancellation a factor ~`√p/2` past
+  the trivial bound uniformly over all pairs, and one is a package of **152 scalar numerical
+  bounds** on 39-/40-dimensional integrals with no literature to check it against. My count
+  independently reproduces the site's "104 outer, 45 inner, 3 cap".
+- **`lean-checked` is not one condition — it is at least four.** Four artifacts audited now
+  stop in four different places: statement fidelity (zeta), no human reader (LongGaps), a
+  patched external dependency (Erdős 4), and the axioms themselves (PrimeGaps186). Only the
+  last is visible from an axiom listing. **This census's single `lean-checked` bucket hides
+  that distinction**, and §4 of arm AM tabulates it.
+- **Next on the queue:** Carathéodory smooth (sig 55), Cycle Double Cover (sig 55), then the
+  remaining `lean-checked` entries.
 - **The control class is no longer outstanding.** Arm AK supplied it by accident and it went
   against the hypothesis. No further sampling pass is needed for that question.
