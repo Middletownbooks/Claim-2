@@ -76,6 +76,10 @@ checkable object.
 > common one.
 > **T2.** Is the legal move a **formula**, or does it need an **existence theorem**? If a
 > theorem, name it and say what it costs.
+> **T3.** Evaluate the invariant's threshold on the **target** state: compute
+> min{C : the invariant holds for the target at scale C}. Does that already cap the bound,
+> whatever the move does? If it is not O(1), no improvement to the move can reach O(1) —
+> say so, and say where the cap sits.
 > Then, per candidate, **the kill test**: the single computation that would refute it. Run
 > it if you can and report what happened.
 >
@@ -105,6 +109,7 @@ checkable object.
 | leak table with **named mechanisms** | the programme's recurring failure mode: every written step defensible, the quantifier doing the real work left unchecked. A named mechanism is a checkable object |
 | **run** the diagnostic, report the number | the five-transformation vocabulary scored **κ = 0.048** across three raters, who gave three different labels to the founding case, and one applied a label *backwards*. The computation needs no agreement on a word |
 | **T1** | all four responses in the reference corpus converged on the same board, and one **proved** that such a class exists *if and only if* the conjecture holds — reporting it as a find when it is the diagnosis. T1 is what separates a board from a restatement |
+| **T3** | added after the controls: T1 and T2 both **passed** on a board that provably cannot reach the target, so they are not sufficient. One line catches it — and it is the test a ratio-based tightness screen is blind to, because both sides can be O(1) while the constant is open |
 | **T2** | most of the complexity difference between the two real papers in that corpus sits in exactly this gap: one needs an SDP feasibility theorem for a legal move at every step, the other's move is a formula |
 | kill test | search fails by generating too little and verification by accepting too much. Asking for candidates *with* their refutation keeps both failure modes in one response |
 | **6(b)** | a confident impossibility claim asserted that all smooth certificates reduce to a moment class. A paper five days older reached the target with an L¹ derivative norm, outside that class |

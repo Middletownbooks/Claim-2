@@ -13,11 +13,13 @@
   },
   "T2_examples": {
    "Guo-Fang-Lu": "formula (T_v)",
-   "Bansal-Jiang": "existence theorem (SDP duality, Thm 2.12) -- most of the complexity difference between the two papers"
+   "Bansal-Jiang": "existence theorem (SDP duality, Thm 2.12) -- most of the complexity difference between the two papers",
+   "Banaszczyk": "EXISTENCE THEOREM -- corrected by the control runs, which killed both formula readings: K intersect (K-v) is legal but loses measure (slab 0.68 -> 0.5035, shifted 0.2 and intersected -> 0.3688), and conv((K+v) union (K-v)) keeps the measure but is not a SUBSET of the union. The move needs a lemma whose iteration IS the theorem. My prediction said formula and was wrong."
   },
   "secondary": "does the proposer itself say whether its candidate relocates or removes the obstruction",
   "not_applicable": "declines. A first-class number, not a footnote.",
-  "what_is_NOT_scored": "whether the board is 'a board change' rather than 'a better player'. The audit is right that this framing should go: affine spectral independence IS a board change by any definition that admits Odin's. CHECKABILITY is the discriminator, not board-change-versus-not."
+  "what_is_NOT_scored": "whether the board is 'a board change' rather than 'a better player'. The audit is right that this framing should go: affine spectral independence IS a board change by any definition that admits Odin's. CHECKABILITY is the discriminator, not board-change-versus-not.",
+  "T3": "ADDED BY THE CONTROL RUNS. Evaluate the invariant's threshold on the TARGET state: min{C : invariant holds at scale C}. T1 and T2 both pass on Banaszczyk's board, which is capped at Theta(sqrt log n) by this computation alone, so the two original discriminators are not sufficient."
  },
  "items": [
   {
@@ -82,8 +84,9 @@
   "negative": {
    "id": "convolution-compiler-restatement",
    "what": "the board all four models converged on: a class C closed under convolution with the terminal property.",
-   "why_it_is_a_trap": "one of them PROVED -- correctly -- that such a class exists IF AND ONLY IF Komlos holds. It called this a finding; it is the diagnosis. The board is a RESTATEMENT of the conjecture, so its invariant is not verifiable on the starting state and T1 fails.",
-   "why_it_fixes_the_benchmark": "this is the first negative control in the programme that RECALL CANNOT CRACK. D25 measured that a rule-less rater ceilings the retrospective arm at J = 1.000 with 13/13 recognition, because naming the problem is enough. An invariant equivalent to the theorem is not a famous problem to remember -- it is a generic trap, and telling it apart from Banaszczyk requires the computation rather than the memory."
+   "why_it_is_a_trap": "one of them proved that such a class exists if and only if Komlos holds, and reported it as a finding when it is the diagnosis. CORRECTED BY THE CONTROL RUN: the respondent declines the iff -- closure implies Komlos by unwinding, but the converse is not automatic, so this is a restatement-OR-STRONGER, a possibly-stronger certificate scheme rather than a literal logical restatement. The trap works either way, since the invariant still cannot be checked on the starting state until the class is named; but the reference corpus's 'if and only if' is now the claim needing a check.",
+   "why_it_fixes_the_benchmark": "this is the first negative control in the programme that RECALL CANNOT CRACK. D25 measured that a rule-less rater ceilings the retrospective arm at J = 1.000 with 13/13 recognition, because naming the problem is enough. An invariant equivalent to the theorem is not a famous problem to remember -- it is a generic trap, and telling it apart from Banaszczyk requires the computation rather than the memory.",
+   "input_defect": "the input as written said 'a class of SYMMETRIC convex bodies'. The gluing lemma's bodies are not symmetric and symmetry cannot be restored: with K = B_2 and v = e_1 the translates are externally tangent at 0, the union contains no ball around 0, so every symmetric convex subset is gamma-null. Caught by the respondent; fix the input before reuse."
   }
  },
  "contamination": "Withholding the paper does not work with tools: both tool-enabled models found the surrounding literature within minutes, and one retrieved three real arXiv ids with zero fabrications. Either run tools-off, or run a tool-enabled arm PURELY to measure contamination. The recognition probe is read first either way."

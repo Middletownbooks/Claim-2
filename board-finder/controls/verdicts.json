@@ -1,0 +1,68 @@
+{
+ "positive": {
+  "response_file": "response_positive.md",
+  "respondent": "fresh subagent context, tools forbidden, given only the triage prompt and this one input",
+  "T1": {
+   "value": "yes",
+   "quote": "Yes — and this is a clean pass, which is rare here."
+  },
+  "T2": {
+   "value": "existence theorem",
+   "quote": "Existence theorem, and an expensive one."
+  },
+  "kill_test_run": {
+   "value": "yes, and it refuted the board",
+   "quote": "Result: the proposal is refuted for the conjecture."
+  },
+  "restatement_declared": {
+   "value": "no",
+   "quote": "So this proposal is **not a restatement of the theorem**."
+  },
+  "recognised": {
+   "value": "yes",
+   "quote": "This is the **Komlós conjecture**"
+  },
+  "named": {
+   "value": "yes",
+   "quote": "the skeleton of **Banaszczyk's 1998 theorem**"
+  }
+ },
+ "negative": {
+  "response_file": "response_negative.md",
+  "respondent": "fresh subagent context, tools forbidden, given only the triage prompt and this one input; did not know another control existed",
+  "T1": {
+   "value": "no",
+   "quote": "**No — as recorded this is a RESTATEMENT.**"
+  },
+  "T2": {
+   "value": "existence theorem",
+   "quote": "**An existence theorem.**"
+  },
+  "kill_test_run": {
+   "value": "yes, and both readings of the board died",
+   "quote": "Ran it. Both halves fail"
+  },
+  "restatement_declared": {
+   "value": "yes",
+   "quote": "the only thing C is required to satisfy is precisely the property that makes the induction go through"
+  },
+  "recognised": {
+   "value": "yes",
+   "quote": "This is the Komlós conjecture"
+  },
+  "named": {
+   "value": "yes",
+   "quote": "the skeleton of **Banaszczyk's 1998 argument** (\"Balancing vectors and Gaussian measures of n-dimensional convex bodies\", Random Structures & Algorithms) with the class left abstract"
+  },
+  "reason_matches": {
+   "value": false,
+   "quote": "It is not quite equivalent to the theorem — the closure scheme implies Komlós by unwinding, but the converse is not automatic, so it is a possibly-stronger certificate scheme rather than a literal logical restatement.",
+   "note": "PREREG C-3 predicted the reason would be the IFF-equivalence, taken from the reference corpus. The respondent declines the iff and gives a more careful reason. So this is not the predicted reason -- and it is a BETTER one, which the scoring has to say rather than hide behind a matched verdict."
+  },
+  "reason_better": {
+   "value": true,
+   "quote": "the converse is not automatic",
+   "note": "PREREG section 5 says a correct verdict with a wrong reason is a wrong answer with a lucky verdict. It did not anticipate a reason that is DIFFERENT FROM THE PREDICTED ONE AND BETTER: the respondent declines the iff-equivalence that my prediction asserted, having taken it from the reference corpus. Scoring that as a lucky verdict would mark a respondent down for correcting me. So the rule needs a third case -- reason different and better, which fails the PREDICTION and not the response -- and this field records which way it was resolved rather than leaving the harness to pick the flattering reading."
+  }
+ }
+}
