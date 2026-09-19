@@ -541,6 +541,20 @@ evidence about curation coverage rather than about where effort has been spent. 
 distinction changes what the filter can be used for, and it is currently unresolved. **Open
 question; do not build on either reading until a card settles it.**
 
+*Partial answer, 2026-09-19, from the user, marked as their reading of the site and not as
+a settled fact:* ProofAtlas is a **read-only beta** as far as collaboration goes, and the
+problems and their status are **drawn from independent research, probably AI-rated or
+AI-compiled**. If that holds, the second reading above is the right one, and three things
+follow. (1) The 123-of-500 filter measures **curation coverage**, not effort spent — it is
+evidence about the compiler's reach, and the even spread through the ranking is what one
+would expect from a compiler working the whole list rather than from researchers
+concentrating anywhere. (2) There is **no site-generated work to audit**, so the
+retrospective audit-target hunt on this site is largely closed; Berlekamp/Mazur was findable
+because the *paper* requested replication, not because ProofAtlas produced anything. (3) What
+the site is actually good for is what rank 429 turned out to be: a **dated, compiled index of
+where problems stand**, which is the cheapest available way to find board-exhaustion
+instances. Re-scope accordingly — index, not workshop. Still to confirm against a card.
+
 ### Two others worth naming
 
 **403 Frankl union-closed** is a **live numeric frontier**. Gilmer's 2022 breakthrough gave a
