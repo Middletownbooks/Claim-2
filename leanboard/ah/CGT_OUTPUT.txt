@@ -1,0 +1,19 @@
+legal moves on B: 14 vertical, 14 horizontal
+game DAG built: 254560 board masks, 15770 interned game forms
+
+--- proposition 4.1: the two crossing followers -----------------
+  G(B - C-U) == 17/8      : True
+  G(B - C-W) == -2+*      : True
+
+--- dominance (4.2)/(4.3) and uniqueness of equality ------------
+  Left  options with G <= 17/8 : 14/14   attaining equality: 1
+  Right options with -2+* <= G : 14/14   attaining equality: 1
+
+--- the main value claim ----------------------------------------
+  G(B) == {17/8 | -2+*} : True
+
+--- route 4 cross-check: difference game is a second-player win --
+  G(B) + (-{17/8 | -2+*}) == 0 : True
+  -TARGET == {2+* | -17/8}     : True
+
+total interned game forms: 147749
