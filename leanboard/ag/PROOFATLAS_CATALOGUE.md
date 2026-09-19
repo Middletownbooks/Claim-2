@@ -142,43 +142,75 @@ decade old. The field is doing real work.
 
 ---
 
-## The new top pick: rank 400, Strong Hyperplane Conjecture
+## Rank 400 read against its source: Kipp, arXiv:2407.01353v2
 
-It passes all four criteria, and it is the first thing seen on this list that passes the
-fourth.
+The card's cited source was obtained in full. It confirms one thing I flagged as unverified
+and **refutes the attack I proposed**.
 
-**The statement is a sharp constant, per dimension.** For a compact convex body K ⊂ ℝⁿ with
-X uniform on K, `L_K = (det Cov(X)/Vol_n(K)²)^(1/2n)`, and the claim is `L_K ≤ L_Δ_n` with
-Δ_n a nondegenerate n-simplex and `L_Δ_n = (n!)^(1/n)/((n+1)^((n+1)/(2n))·√(n+2))`. Bodies
-need not be symmetric or smooth.
+### Confirmed
 
-**Why the sub-target is small.** [BACKGROUND, not from the card and not verified here:] the
-*bounded* slicing problem — is L_K ≤ C for a universal C — was resolved through the Chen /
-Klartag–Lehec line of work. What remains open is this **sharp** version, that the simplex is
-extremal in each dimension. So the open part is a constant, not a growth rate. **Check this
-before relying on it**; it is my background knowledge, not a sourced claim.
+My background claim was that the *bounded* slicing problem is resolved and only the sharp
+version remains. Kipp §1, verbatim: *"In December 2024, the isotropic constant conjecture
+was finally proven by Klartag and Lehec [13], building on a preprint by Guan [7]."* The
+open part is (1.1), `L_K ≤ L_Δn`, and Kipp's formula for L_Δn is character-for-character
+the one on the ProofAtlas card. The card is a faithful transcription. Promote the claim
+from background to sourced.
 
-**Why an agent can move it.** A counterexample is a **finite, exhibitable object**: a convex
-body — a polytope suffices — in some fixed low dimension whose L_K exceeds the stated
-simplex value. L_K is computable from the body's volume and covariance matrix, which for a
-polytope in low dimension is an exact rational computation. So the attack is a *search*:
-enumerate or sample polytopes in dimensions 3–8, compute L_K exactly, compare against
-L_Δ_n. Either a counterexample falls out, or the search bounds the region where one cannot
-be.
+Constants checked here: `1/√12 = 0.288675`; `L_Δn` rises from 0.288675 at n=1 to 0.352 at
+n=12; Kipp's asserted `L_{C*_n} ≤ 1/√12` holds at every n tested.
 
-That is the same shape as this programme's Erdős–Straus sieve work — exhaustive verified
-search to 10^11, with the negative result stated as a bound rather than dressed up. The
-card even pre-authorises the reduced target: *"neither outcome requires classifying all
-equality cases."*
+### Refuted: enumerate-and-compute does not work
 
-**Stated risks.** L_K computation is #P-hard in general, so dimension is the binding
-constraint and the honest scope is small n. The simplex has been conjectured extremal for
-decades and low dimensions are the first place anyone would have looked, so the prior on a
-counterexample below n = 8 is low. The realistic deliverable is therefore a *verified
-negative* — "no counterexample among this enumerated class up to dimension d" — which is
-publishable in this programme's idiom and is exactly what the Erdős–Straus work produced.
-The newest source (May 2025, "Isotropic constants and regular polytopes") suggests someone
-is already computing in this space; read it before starting.
+I proposed sampling or enumerating polytopes in dimensions 3–8, computing L_K exactly, and
+comparing against L_Δn. **That attack is dead, and the paper says why.**
+
+Theorem 3.4 (Campi–Colesanti–Gronchi): along any RS-movement, `t ↦ L²ⁿ_{K_t}` is
+**convex** — strictly so when the speed function is non-affine. *"In particular, every
+local maximizer of the isotropic constant is RS-indecomposable."*
+
+L_K is a convex function along these deformations. So from almost any polytope you can move
+and strictly **increase** L_K: generic polytopes are RS-decomposable and are therefore not
+even local maxima. A search over sampled bodies is hill-climbing on a convex function whose
+maxima sit at extreme points of a heavily constrained set. It finds nothing.
+
+Kipp then closes the obvious classes outright. Theorem 1.2: a polytopal local maximizer
+with a **simplicial vertex** is a simplex. Theorem 2.7: one whose ridges are all affine
+reflectors is a simplex. Theorem 1.3: a centrally symmetric local maximizer with a
+simplicial vertex is a cross-polytope. Remark 2.1: polytopal local *minimizers* do not
+exist at all.
+
+Retracted. This is the second hypothesis of mine this exchange has killed; the pattern is
+that positional and volumetric heuristics keep losing to reading the source.
+
+### What the paper hands over instead — three real targets
+
+**(a) Zonotopes with n+2 generators.** Kipp's §6 settles n+1: Lemma 6.4 shows every such
+zonotope is affinely equivalent to `C_n + [−y, y]` with `y ∈ [0,1]ⁿ` — an explicitly
+parameterized, compact, n-dimensional family. Proposition 6.1 gives the maximizer (the
+cube) and 6.5 the minimizer (`Q_n`, a hexagon at n=2, a rhombic dodecahedron at n=3). The
+**n+2 case is the visible next step**: still finite-dimensional, still compact, and the
+machinery — RS-movements plus reduction to the planar case — is laid out in full. Bounded,
+with a worked precedent. This is the best-shaped target on the list so far.
+
+**(b) Narrow the zonoid gap.** Kipp §1: the isotropic constant conjecture *is* known for
+zonoids [18], and *"it seems that the best known upper bound is L_Z ≤ 1/2"* against a
+conjectured `1/√12`. That is a factor of **√3 ≈ 1.732** between proved and conjectured, in
+a class where the qualitative question is already settled. Explicit constants, restricted
+class, incremental — the exact profile of ProofAtlas's own advances.
+
+**(c) Formalize §6 in Lean.** Propositions 6.1 and 6.5 are self-contained and largely
+computational. Formalization of a known argument is one of the three classes that actually
+lands there (2 of their 9).
+
+### What the paper also says about its own limits
+
+*"We emphasize that all theorems up to this point are hypothetical in the sense that it is
+unknown whether polytopes with the respective properties actually exist. In particular,
+Theorem 1.4 yields no upper bound on isotropic constants of zonotopes."* §6 opens by naming
+two reasons: the classes are not closed under Banach–Mazur distance, and the first-order
+condition (2.3) only holds for maximizers within a fixed facet count. That is why §6 moves
+to a **closed** subclass — and it is why (a) above is the tractable direction and the
+structure theorems are not.
 
 ---
 
@@ -229,14 +261,19 @@ it and a problem an agent can move.
 
 ## Next
 
-- **Read arXiv:2407.01353** ("Isotropic constants and regular polytopes", May 2025) before
-  any search on rank 400. It is the newest source on the card and may already cover the
-  low-dimensional enumeration.
-- **Confirm the sharp-vs-bounded split** on the hyperplane conjecture from a source rather
-  than from my background knowledge.
+- **Rank 400, target (a):** attempt zonotopes with **n+2 generators**. Check first whether
+  Lemma 6.4's parameterization extends, and whether the planar reduction in Lemma 6.2
+  survives the extra generator. If it does, the maximizer should again be the cube and the
+  question is what replaces `Q_n` as minimizer.
+- **Rank 400, target (b):** find the source for `L_Z ≤ 1/2` (Kipp cites Paouris [19] and
+  the Brazitikos–Giannopoulos–Valettas–Vritsiou monograph [3]) and see what the proof
+  actually loses. A √3 gap in a settled class is where an explicit-constant improvement
+  lives.
 - **Enumerate the STATUS vocabulary.** Three values seen (`Open`, `Open · subcases solved`,
-  `Open · disputed claim`). If the site exposes a filter on it, that plus a grep for
-  "A counterexample would" is the whole selection instrument.
-- **Cross-check `/collaboration/`** for slugs matching high-rank problems, to find out
-  whether workspace coverage correlates with rank at all — the question my refuted
-  hypothesis assumed the answer to.
+  `Open · disputed claim`). If the site filters on it, that plus a grep for "A
+  counterexample would" is the whole selection instrument.
+- **Do not repeat the search heuristic.** Before proposing an enumerate-and-compute attack
+  on any future candidate, check whether the target functional is convex or concave along
+  the natural deformations of the class. If it is convex and you are hunting a maximum,
+  sampling cannot work. That check is cheap and it would have killed the rank-400 proposal
+  before it was written.
