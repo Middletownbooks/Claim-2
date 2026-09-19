@@ -1,0 +1,42 @@
+{
+ "A3u": {
+  "atoms": 45,
+  "distinct_value_vectors": 383641,
+  "minimal_cost_or_null": {
+   "bit_length": null,
+   "even_divisors": null,
+   "is_prime": 3,
+   "is_prime_power": null,
+   "is_square": 3,
+   "is_squarefree": null,
+   "isqrt": null,
+   "n_div_spf": 3,
+   "odd_divisors": null,
+   "v_2": null
+  }
+ },
+ "B3u": {
+  "atoms": 52,
+  "distinct_value_vectors": 1173171,
+  "minimal_cost_or_null": {
+   "bit_length": 1,
+   "even_divisors": 1,
+   "is_prime": 3,
+   "is_prime_power": 5,
+   "is_square": 3,
+   "is_squarefree": 1,
+   "isqrt": 1,
+   "n_div_spf": 3,
+   "odd_divisors": 3,
+   "v_2": 1
+  }
+ },
+ "checks": {
+  "A3u cannot reach is_prime_power": true,
+  "A3u cannot reach odd_divisors": true,
+  "B3u reaches is_prime_power": true,
+  "B3u reaches odd_divisors": true,
+  "both reach is_prime, is_square, n_div_spf": true
+ },
+ "seconds": 112.8
+}

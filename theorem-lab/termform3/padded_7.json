@@ -1,0 +1,138 @@
+{
+ "atoms": 52,
+ "certified": {
+  "divisors_le_sqrt": {
+   "cost": 5,
+   "distinct_minimal_terms": 3,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "(<count(k: (n % k))> - (<count(k: (n % k))> // 2))",
+   "uses_carried": false
+  },
+  "floor_n_2": {
+   "cost": 1,
+   "distinct_minimal_terms": 1,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "<count(k: (k % 2))>",
+   "uses_carried": false
+  },
+  "floor_n_3": {
+   "cost": 3,
+   "distinct_minimal_terms": 5,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "(n // <least(k: (2 // k))>)",
+   "uses_carried": false
+  },
+  "floor_n_4": {
+   "cost": 1,
+   "distinct_minimal_terms": 1,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "<count(k: (k % 4))>",
+   "uses_carried": false
+  },
+  "is_even": {
+   "cost": 3,
+   "distinct_minimal_terms": 50,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "(n // <count(k: (n % 2))>)",
+   "uses_carried": false
+  },
+  "is_prime": {
+   "cost": 3,
+   "distinct_minimal_terms": 13,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "(1 // <count(k: (<least(k: (n % k))> - k))>)",
+   "uses_carried": false
+  },
+  "is_square": {
+   "cost": 3,
+   "distinct_minimal_terms": 5,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "(<count(k: (n % k))> % 2)",
+   "uses_carried": false
+  },
+  "n": {
+   "cost": 1,
+   "distinct_minimal_terms": 2,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "n",
+   "uses_carried": false
+  },
+  "n_div_spf": {
+   "cost": 3,
+   "distinct_minimal_terms": 2,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "(n // <least(k: (n % k))>)",
+   "uses_carried": false
+  },
+  "n_minus_1": {
+   "cost": 1,
+   "distinct_minimal_terms": 1,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "<count(k: (k // n))>",
+   "uses_carried": false
+  },
+  "n_minus_n_div_spf": {
+   "cost": 5,
+   "distinct_minimal_terms": 3,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "(n - (n // <least(k: (n % k))>))",
+   "uses_carried": false
+  },
+  "spf": {
+   "cost": 1,
+   "distinct_minimal_terms": 1,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "<least(k: (n % k))>",
+   "uses_carried": false
+  },
+  "tau": {
+   "cost": 1,
+   "distinct_minimal_terms": 1,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "<count(k: (n % k))>",
+   "uses_carried": false
+  },
+  "tau_minus_1": {
+   "cost": 3,
+   "distinct_minimal_terms": 2,
+   "is_a_carried_atom": false,
+   "reachable_without_carried": true,
+   "term": "(<count(k: (n % k))> - 1)",
+   "uses_carried": false
+  }
+ },
+ "certified_count": 14,
+ "classes": 651547,
+ "exhausted": true,
+ "extra_units": 7,
+ "label": "PADDED_CONTROL",
+ "net_new": [
+  "divisors_le_sqrt",
+  "floor_n_2",
+  "floor_n_3",
+  "floor_n_4",
+  "is_even",
+  "is_prime",
+  "is_square",
+  "n",
+  "n_div_spf",
+  "n_minus_1",
+  "n_minus_n_div_spf",
+  "spf",
+  "tau",
+  "tau_minus_1"
+ ]
+}

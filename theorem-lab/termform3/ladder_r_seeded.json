@@ -1,0 +1,1221 @@
+{
+ "config": {
+  "beam": "off (exhaustive)",
+  "body_budget": 3,
+  "outer_cost": 5,
+  "seed": 20260919,
+  "unit_cap": 40
+ },
+ "label": "LADDER_R_SEEDED",
+ "prereg_sha256": "f99d46ab0132c86d0a978c01563ef7bafeee41bf20579e8bd798bb9d97087055",
+ "rungs": [
+  {
+   "atoms": 45,
+   "carried": 0,
+   "carried_classification": [],
+   "carried_terms": [],
+   "certified": {
+    "divisors_le_sqrt": {
+     "cost": 5,
+     "distinct_minimal_terms": 3,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(<count(k: (n % k))> - (<count(k: (n % k))> // 2))",
+     "uses_carried": false
+    },
+    "floor_n_2": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<count(k: (k % 2))>",
+     "uses_carried": false
+    },
+    "floor_n_3": {
+     "cost": 3,
+     "distinct_minimal_terms": 5,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(n // <least(k: (2 // k))>)",
+     "uses_carried": false
+    },
+    "floor_n_4": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<count(k: (k % 4))>",
+     "uses_carried": false
+    },
+    "is_even": {
+     "cost": 3,
+     "distinct_minimal_terms": 46,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(n // <count(k: (n % 2))>)",
+     "uses_carried": false
+    },
+    "is_prime": {
+     "cost": 3,
+     "distinct_minimal_terms": 6,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(2 // <count(k: (n % k))>)",
+     "uses_carried": false
+    },
+    "is_square": {
+     "cost": 3,
+     "distinct_minimal_terms": 4,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(<count(k: (n % k))> % 2)",
+     "uses_carried": false
+    },
+    "n": {
+     "cost": 1,
+     "distinct_minimal_terms": 2,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "n",
+     "uses_carried": false
+    },
+    "n_div_spf": {
+     "cost": 3,
+     "distinct_minimal_terms": 2,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(n // <least(k: (n % k))>)",
+     "uses_carried": false
+    },
+    "n_minus_1": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<count(k: (k // n))>",
+     "uses_carried": false
+    },
+    "n_minus_n_div_spf": {
+     "cost": 5,
+     "distinct_minimal_terms": 3,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(n - (n // <least(k: (n % k))>))",
+     "uses_carried": false
+    },
+    "spf": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<least(k: (n % k))>",
+     "uses_carried": false
+    },
+    "tau": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<count(k: (n % k))>",
+     "uses_carried": false
+    },
+    "tau_minus_1": {
+     "cost": 3,
+     "distinct_minimal_terms": 2,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(<count(k: (n % k))> - 1)",
+     "uses_carried": false
+    }
+   },
+   "certified_count": 14,
+   "classes": 383641,
+   "exhausted": true,
+   "expansions": 2623185,
+   "formed": 599,
+   "lost": [],
+   "net_new": [
+    "divisors_le_sqrt",
+    "floor_n_2",
+    "floor_n_3",
+    "floor_n_4",
+    "is_even",
+    "is_prime",
+    "is_square",
+    "n",
+    "n_div_spf",
+    "n_minus_1",
+    "n_minus_n_div_spf",
+    "spf",
+    "tau",
+    "tau_minus_1"
+   ],
+   "newly_net_new": [
+    "divisors_le_sqrt",
+    "floor_n_2",
+    "floor_n_3",
+    "floor_n_4",
+    "is_even",
+    "is_prime",
+    "is_square",
+    "n",
+    "n_div_spf",
+    "n_minus_1",
+    "n_minus_n_div_spf",
+    "spf",
+    "tau",
+    "tau_minus_1"
+   ],
+   "note": "carry nothing",
+   "rung": 0,
+   "tag": "R0"
+  },
+  {
+   "atoms": 52,
+   "carried": 7,
+   "carried_classification": [
+    {
+     "invariant": "bit_length",
+     "kind": "REACH EXTENSION",
+     "term": "least(k: (n // (2 ^ k)))"
+    },
+    {
+     "invariant": "even_divisors",
+     "kind": "REACH EXTENSION",
+     "term": "count(k: (n % (k + k)))"
+    },
+    {
+     "invariant": "isqrt",
+     "kind": "REACH EXTENSION",
+     "term": "count(k: (k - (n // k)))"
+    },
+    {
+     "invariant": "n_minus_n_div_spf",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 5,
+     "term": "count(k: (n // (k * least(k: (n % k)))))"
+    },
+    {
+     "invariant": "v_2",
+     "kind": "REACH EXTENSION",
+     "term": "count(k: (n % (2 ^ k)))"
+    },
+    {
+     "invariant": "is_squarefree",
+     "kind": "REACH EXTENSION",
+     "term": "(1 // count(k: (n % (k * k))))"
+    },
+    {
+     "invariant": null,
+     "kind": "REACH EXTENSION",
+     "term": "count(k: (n % (k * k)))"
+    }
+   ],
+   "carried_terms": [
+    "<least(k: (n // (2 ^ k)))>",
+    "<count(k: (n % (k + k)))>",
+    "<count(k: (k - (n // k)))>",
+    "<count(k: (n // (k * least(k: (n % k)))))>",
+    "<count(k: (n % (2 ^ k)))>",
+    "<(1 // count(k: (n % (k * k))))>",
+    "<count(k: (n % (k * k)))>"
+   ],
+   "certified": {
+    "bit_length": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<least(k: (n // (2 ^ k)))>",
+     "uses_carried": true
+    },
+    "divisors_le_sqrt": {
+     "cost": 5,
+     "distinct_minimal_terms": 3,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(<count(k: (n % k))> - (<count(k: (n % k))> // 2))",
+     "uses_carried": false
+    },
+    "even_divisors": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n % (k + k)))>",
+     "uses_carried": true
+    },
+    "floor_n_2": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<count(k: (k % 2))>",
+     "uses_carried": false
+    },
+    "floor_n_3": {
+     "cost": 3,
+     "distinct_minimal_terms": 2,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(n // <least(k: (2 // k))>)",
+     "uses_carried": false
+    },
+    "floor_n_4": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<count(k: (k % 4))>",
+     "uses_carried": false
+    },
+    "is_even": {
+     "cost": 3,
+     "distinct_minimal_terms": 64,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(n // <count(k: (n % 2))>)",
+     "uses_carried": false
+    },
+    "is_prime": {
+     "cost": 3,
+     "distinct_minimal_terms": 15,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(1 // <count(k: (<least(k: (n % k))> - k))>)",
+     "uses_carried": false
+    },
+    "is_prime_power": {
+     "cost": 5,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": false,
+     "term": "((2 * <count(k: (n % (k * k)))>) // <count(k: (n % k))>)",
+     "uses_carried": true
+    },
+    "is_square": {
+     "cost": 3,
+     "distinct_minimal_terms": 4,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(<count(k: (n % k))> % 2)",
+     "uses_carried": false
+    },
+    "is_squarefree": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(1 // count(k: (n % (k * k))))>",
+     "uses_carried": true
+    },
+    "isqrt": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (k - (n // k)))>",
+     "uses_carried": true
+    },
+    "n": {
+     "cost": 1,
+     "distinct_minimal_terms": 2,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "n",
+     "uses_carried": false
+    },
+    "n_div_spf": {
+     "cost": 3,
+     "distinct_minimal_terms": 8,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(n - <count(k: (n // (k * least(k: (n % k)))))>)",
+     "uses_carried": true
+    },
+    "n_minus_1": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<count(k: (k // n))>",
+     "uses_carried": false
+    },
+    "n_minus_n_div_spf": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n // (k * least(k: (n % k)))))>",
+     "uses_carried": true
+    },
+    "odd_divisors": {
+     "cost": 3,
+     "distinct_minimal_terms": 3,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": false,
+     "term": "gcd(<count(k: (n % (k + k)))>, <count(k: (n % k))>)",
+     "uses_carried": true
+    },
+    "spf": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<least(k: (n % k))>",
+     "uses_carried": false
+    },
+    "tau": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "<count(k: (n % k))>",
+     "uses_carried": false
+    },
+    "tau_minus_1": {
+     "cost": 3,
+     "distinct_minimal_terms": 2,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": true,
+     "term": "(<count(k: (n % k))> - 1)",
+     "uses_carried": false
+    },
+    "v_2": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n % (2 ^ k)))>",
+     "uses_carried": true
+    }
+   },
+   "certified_count": 21,
+   "classes": 1173171,
+   "exhausted": true,
+   "expansions": 5864976,
+   "formed": 6970,
+   "lost": [
+    "n_minus_n_div_spf"
+   ],
+   "net_new": [
+    "divisors_le_sqrt",
+    "floor_n_2",
+    "floor_n_3",
+    "floor_n_4",
+    "is_even",
+    "is_prime",
+    "is_prime_power",
+    "is_square",
+    "n",
+    "n_div_spf",
+    "n_minus_1",
+    "odd_divisors",
+    "spf",
+    "tau",
+    "tau_minus_1"
+   ],
+   "newly_net_new": [
+    "is_prime_power",
+    "odd_divisors"
+   ],
+   "note": "carry promote(certified of rung 0)",
+   "random_control": {
+    "certified": 14,
+    "net_new": 14,
+    "net_new_list": [
+     "divisors_le_sqrt",
+     "floor_n_2",
+     "floor_n_3",
+     "floor_n_4",
+     "is_even",
+     "is_prime",
+     "is_square",
+     "n",
+     "n_div_spf",
+     "n_minus_1",
+     "n_minus_n_div_spf",
+     "spf",
+     "tau",
+     "tau_minus_1"
+    ]
+   },
+   "rung": 1,
+   "tag": "R1"
+  },
+  {
+   "atoms": 70,
+   "carried": 25,
+   "carried_classification": [
+    {
+     "invariant": "tau",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (n % k))>"
+    },
+    {
+     "invariant": "tau_minus_1",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 3,
+     "term": "(<count(k: (n % k))> - 1)"
+    },
+    {
+     "invariant": "spf",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<least(k: (n % k))>"
+    },
+    {
+     "invariant": "is_prime",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 3,
+     "term": "(1 // <count(k: (<least(k: (n % k))> - k))>)"
+    },
+    {
+     "invariant": "is_prime_power",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 5,
+     "term": "((2 * <count(k: (n % (k * k)))>) // <count(k: (n % k))>)"
+    },
+    {
+     "invariant": "is_squarefree",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<(1 // count(k: (n % (k * k))))>"
+    },
+    {
+     "invariant": "is_square",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 3,
+     "term": "(<count(k: (n % k))> % 2)"
+    },
+    {
+     "invariant": "is_even",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 3,
+     "term": "(n // <count(k: (n % 2))>)"
+    },
+    {
+     "invariant": "v_2",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (n % (2 ^ k)))>"
+    },
+    {
+     "invariant": "n_div_spf",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 3,
+     "term": "(n - <count(k: (n // (k * least(k: (n % k)))))>)"
+    },
+    {
+     "invariant": "n_minus_n_div_spf",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (n // (k * least(k: (n % k)))))>"
+    },
+    {
+     "invariant": "odd_divisors",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 3,
+     "term": "gcd(<count(k: (n % (k + k)))>, <count(k: (n % k))>)"
+    },
+    {
+     "invariant": "even_divisors",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (n % (k + k)))>"
+    },
+    {
+     "invariant": "divisors_le_sqrt",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 5,
+     "term": "(<count(k: (n % k))> - (<count(k: (n % k))> // 2))"
+    },
+    {
+     "invariant": "n",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "n"
+    },
+    {
+     "invariant": "n_minus_1",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (k // n))>"
+    },
+    {
+     "invariant": "floor_n_2",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (k % 2))>"
+    },
+    {
+     "invariant": "floor_n_3",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 3,
+     "term": "(n // <least(k: (2 // k))>)"
+    },
+    {
+     "invariant": "floor_n_4",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (k % 4))>"
+    },
+    {
+     "invariant": "isqrt",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (k - (n // k)))>"
+    },
+    {
+     "invariant": "bit_length",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<least(k: (n // (2 ^ k)))>"
+    },
+    {
+     "invariant": null,
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": null,
+     "term": "count(k: (<least(k: (n % k))> - k))"
+    },
+    {
+     "invariant": null,
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": null,
+     "term": "count(k: (n % (k * k)))"
+    },
+    {
+     "invariant": null,
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": null,
+     "term": "count(k: (n % 2))"
+    },
+    {
+     "invariant": null,
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": null,
+     "term": "least(k: (2 // k))"
+    }
+   ],
+   "carried_terms": [
+    "<count(k: (n % k))>",
+    "<(count(k: (n % k)) - 1)>",
+    "<least(k: (n % k))>",
+    "<(1 // count(k: (least(k: (n % k)) - k)))>",
+    "<((2 * count(k: (n % (k * k)))) // count(k: (n % k)))>",
+    "<(1 // count(k: (n % (k * k))))>",
+    "<(count(k: (n % k)) % 2)>",
+    "<(n // count(k: (n % 2)))>",
+    "<count(k: (n % (2 ^ k)))>",
+    "<(n - count(k: (n // (k * least(k: (n % k))))))>",
+    "<count(k: (n // (k * least(k: (n % k)))))>",
+    "<gcd(count(k: (n % (k + k))), count(k: (n % k)))>",
+    "<count(k: (n % (k + k)))>",
+    "<(count(k: (n % k)) - (count(k: (n % k)) // 2))>",
+    "<n>",
+    "<count(k: (k // n))>",
+    "<count(k: (k % 2))>",
+    "<(n // least(k: (2 // k)))>",
+    "<count(k: (k % 4))>",
+    "<count(k: (k - (n // k)))>",
+    "<least(k: (n // (2 ^ k)))>",
+    "<count(k: (least(k: (n % k)) - k))>",
+    "<count(k: (n % (k * k)))>",
+    "<count(k: (n % 2))>",
+    "<least(k: (2 // k))>"
+   ],
+   "certified": {
+    "bit_length": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<least(k: (n // (2 ^ k)))>",
+     "uses_carried": true
+    },
+    "divisors_le_sqrt": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(count(k: (n % k)) - (count(k: (n % k)) // 2))>",
+     "uses_carried": true
+    },
+    "even_divisors": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n % (k + k)))>",
+     "uses_carried": true
+    },
+    "floor_n_2": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (k % 2))>",
+     "uses_carried": true
+    },
+    "floor_n_3": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(n // least(k: (2 // k)))>",
+     "uses_carried": true
+    },
+    "floor_n_4": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (k % 4))>",
+     "uses_carried": true
+    },
+    "is_cube": {
+     "cost": 5,
+     "distinct_minimal_terms": 21,
+     "is_a_carried_atom": false,
+     "reachable_without_carried": false,
+     "term": "(<((2 * count(k: (n % (k * k)))) // count(k: (n % k)))> % gcd(<(count(k: (n % k)) - 1)>, <least(k: (2 // k))>))",
+     "uses_carried": true
+    },
+    "is_even": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(n // count(k: (n % 2)))>",
+     "uses_carried": true
+    },
+    "is_prime": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(1 // count(k: (least(k: (n % k)) - k)))>",
+     "uses_carried": true
+    },
+    "is_prime_power": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<((2 * count(k: (n % (k * k)))) // count(k: (n % k)))>",
+     "uses_carried": true
+    },
+    "is_square": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(count(k: (n % k)) % 2)>",
+     "uses_carried": true
+    },
+    "is_squarefree": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(1 // count(k: (n % (k * k))))>",
+     "uses_carried": true
+    },
+    "isqrt": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (k - (n // k)))>",
+     "uses_carried": true
+    },
+    "n": {
+     "cost": 1,
+     "distinct_minimal_terms": 3,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": true,
+     "term": "n",
+     "uses_carried": false
+    },
+    "n_div_spf": {
+     "cost": 1,
+     "distinct_minimal_terms": 2,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(n - count(k: (n // (k * least(k: (n % k))))))>",
+     "uses_carried": true
+    },
+    "n_minus_1": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (k // n))>",
+     "uses_carried": true
+    },
+    "n_minus_n_div_spf": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n // (k * least(k: (n % k)))))>",
+     "uses_carried": true
+    },
+    "odd_divisors": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<gcd(count(k: (n % (k + k))), count(k: (n % k)))>",
+     "uses_carried": true
+    },
+    "spf": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<least(k: (n % k))>",
+     "uses_carried": true
+    },
+    "tau": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n % k))>",
+     "uses_carried": true
+    },
+    "tau_minus_1": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(count(k: (n % k)) - 1)>",
+     "uses_carried": true
+    },
+    "v_2": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n % (2 ^ k)))>",
+     "uses_carried": true
+    }
+   },
+   "certified_count": 22,
+   "classes": 3431327,
+   "exhausted": true,
+   "expansions": 15476580,
+   "formed": 8414,
+   "lost": [
+    "divisors_le_sqrt",
+    "floor_n_2",
+    "floor_n_3",
+    "floor_n_4",
+    "is_even",
+    "is_prime",
+    "is_prime_power",
+    "is_square",
+    "n",
+    "n_div_spf",
+    "n_minus_1",
+    "odd_divisors",
+    "spf",
+    "tau",
+    "tau_minus_1"
+   ],
+   "net_new": [
+    "is_cube"
+   ],
+   "newly_net_new": [
+    "is_cube"
+   ],
+   "note": "carry promote(certified of rung 1)",
+   "random_control": {
+    "certified": 14,
+    "net_new": 14,
+    "net_new_list": [
+     "divisors_le_sqrt",
+     "floor_n_2",
+     "floor_n_3",
+     "floor_n_4",
+     "is_even",
+     "is_prime",
+     "is_square",
+     "n",
+     "n_div_spf",
+     "n_minus_1",
+     "n_minus_n_div_spf",
+     "spf",
+     "tau",
+     "tau_minus_1"
+    ]
+   },
+   "rung": 2,
+   "tag": "R2"
+  },
+  {
+   "atoms": 68,
+   "carried": 23,
+   "carried_classification": [
+    {
+     "invariant": "tau",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (n % k))>"
+    },
+    {
+     "invariant": "tau_minus_1",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<(count(k: (n % k)) - 1)>"
+    },
+    {
+     "invariant": "spf",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<least(k: (n % k))>"
+    },
+    {
+     "invariant": "is_prime",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<(1 // count(k: (least(k: (n % k)) - k)))>"
+    },
+    {
+     "invariant": "is_prime_power",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<((2 * count(k: (n % (k * k)))) // count(k: (n % k)))>"
+    },
+    {
+     "invariant": "is_squarefree",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<(1 // count(k: (n % (k * k))))>"
+    },
+    {
+     "invariant": "is_square",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<(count(k: (n % k)) % 2)>"
+    },
+    {
+     "invariant": "is_cube",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 5,
+     "term": "(<((2 * count(k: (n % (k * k)))) // count(k: (n % k)))> % gcd(<(count(k: (n % k)) - 1)>, <least(k: (2 // k))>))"
+    },
+    {
+     "invariant": "is_even",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<(n // count(k: (n % 2)))>"
+    },
+    {
+     "invariant": "v_2",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (n % (2 ^ k)))>"
+    },
+    {
+     "invariant": "n_div_spf",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<(n - count(k: (n // (k * least(k: (n % k))))))>"
+    },
+    {
+     "invariant": "n_minus_n_div_spf",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (n // (k * least(k: (n % k)))))>"
+    },
+    {
+     "invariant": "odd_divisors",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<gcd(count(k: (n % (k + k))), count(k: (n % k)))>"
+    },
+    {
+     "invariant": "even_divisors",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (n % (k + k)))>"
+    },
+    {
+     "invariant": "divisors_le_sqrt",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<(count(k: (n % k)) - (count(k: (n % k)) // 2))>"
+    },
+    {
+     "invariant": "n",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "n"
+    },
+    {
+     "invariant": "n_minus_1",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (k // n))>"
+    },
+    {
+     "invariant": "floor_n_2",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (k % 2))>"
+    },
+    {
+     "invariant": "floor_n_3",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<(n // least(k: (2 // k)))>"
+    },
+    {
+     "invariant": "floor_n_4",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (k % 4))>"
+    },
+    {
+     "invariant": "isqrt",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<count(k: (k - (n // k)))>"
+    },
+    {
+     "invariant": "bit_length",
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": 1,
+     "term": "<least(k: (n // (2 ^ k)))>"
+    },
+    {
+     "invariant": null,
+     "kind": "COST COMPRESSION",
+     "previous_min_cost": null,
+     "term": "least(k: (2 // k))"
+    }
+   ],
+   "carried_terms": [
+    "<count(k: (n % k))>",
+    "<(count(k: (n % k)) - 1)>",
+    "<least(k: (n % k))>",
+    "<(1 // count(k: (least(k: (n % k)) - k)))>",
+    "<((2 * count(k: (n % (k * k)))) // count(k: (n % k)))>",
+    "<(1 // count(k: (n % (k * k))))>",
+    "<(count(k: (n % k)) % 2)>",
+    "<(((2 * count(k: (n % (k * k)))) // count(k: (n % k))) % gcd((count(k: (n % k)) - 1), least(k: (2 // k))))>",
+    "<(n // count(k: (n % 2)))>",
+    "<count(k: (n % (2 ^ k)))>",
+    "<(n - count(k: (n // (k * least(k: (n % k))))))>",
+    "<count(k: (n // (k * least(k: (n % k)))))>",
+    "<gcd(count(k: (n % (k + k))), count(k: (n % k)))>",
+    "<count(k: (n % (k + k)))>",
+    "<(count(k: (n % k)) - (count(k: (n % k)) // 2))>",
+    "<n>",
+    "<count(k: (k // n))>",
+    "<count(k: (k % 2))>",
+    "<(n // least(k: (2 // k)))>",
+    "<count(k: (k % 4))>",
+    "<count(k: (k - (n // k)))>",
+    "<least(k: (n // (2 ^ k)))>",
+    "<least(k: (2 // k))>"
+   ],
+   "certified": {
+    "bit_length": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<least(k: (n // (2 ^ k)))>",
+     "uses_carried": true
+    },
+    "divisors_le_sqrt": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(count(k: (n % k)) - (count(k: (n % k)) // 2))>",
+     "uses_carried": true
+    },
+    "even_divisors": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n % (k + k)))>",
+     "uses_carried": true
+    },
+    "floor_n_2": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (k % 2))>",
+     "uses_carried": true
+    },
+    "floor_n_3": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(n // least(k: (2 // k)))>",
+     "uses_carried": true
+    },
+    "floor_n_4": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (k % 4))>",
+     "uses_carried": true
+    },
+    "is_cube": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(((2 * count(k: (n % (k * k)))) // count(k: (n % k))) % gcd((count(k: (n % k)) - 1), least(k: (2 // k))))>",
+     "uses_carried": true
+    },
+    "is_even": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(n // count(k: (n % 2)))>",
+     "uses_carried": true
+    },
+    "is_prime": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(1 // count(k: (least(k: (n % k)) - k)))>",
+     "uses_carried": true
+    },
+    "is_prime_power": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<((2 * count(k: (n % (k * k)))) // count(k: (n % k)))>",
+     "uses_carried": true
+    },
+    "is_square": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(count(k: (n % k)) % 2)>",
+     "uses_carried": true
+    },
+    "is_squarefree": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(1 // count(k: (n % (k * k))))>",
+     "uses_carried": true
+    },
+    "isqrt": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (k - (n // k)))>",
+     "uses_carried": true
+    },
+    "n": {
+     "cost": 1,
+     "distinct_minimal_terms": 3,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": true,
+     "term": "n",
+     "uses_carried": false
+    },
+    "n_div_spf": {
+     "cost": 1,
+     "distinct_minimal_terms": 2,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(n - count(k: (n // (k * least(k: (n % k))))))>",
+     "uses_carried": true
+    },
+    "n_minus_1": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (k // n))>",
+     "uses_carried": true
+    },
+    "n_minus_n_div_spf": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n // (k * least(k: (n % k)))))>",
+     "uses_carried": true
+    },
+    "odd_divisors": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<gcd(count(k: (n % (k + k))), count(k: (n % k)))>",
+     "uses_carried": true
+    },
+    "spf": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<least(k: (n % k))>",
+     "uses_carried": true
+    },
+    "tau": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n % k))>",
+     "uses_carried": true
+    },
+    "tau_minus_1": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<(count(k: (n % k)) - 1)>",
+     "uses_carried": true
+    },
+    "v_2": {
+     "cost": 1,
+     "distinct_minimal_terms": 1,
+     "is_a_carried_atom": true,
+     "reachable_without_carried": false,
+     "term": "<count(k: (n % (2 ^ k)))>",
+     "uses_carried": true
+    }
+   },
+   "certified_count": 22,
+   "classes": 3011111,
+   "exhausted": true,
+   "expansions": 13861800,
+   "formed": 8868,
+   "lost": [
+    "is_cube"
+   ],
+   "net_new": [],
+   "newly_net_new": [],
+   "note": "carry promote(certified of rung 2)",
+   "rung": 3,
+   "tag": "R3"
+  }
+ ],
+ "seeded": true,
+ "wall_seconds": 1260.6
+}

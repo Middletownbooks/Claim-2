@@ -1,0 +1,36 @@
+{
+ "label": "ABLATION_R",
+ "minus_enabled": {
+  "atoms": 68,
+  "carried": 23,
+  "certified": 21,
+  "classes": 3185774,
+  "exhausted": true,
+  "is_cube": false,
+  "net_new": [
+   "is_prime_power",
+   "odd_divisors"
+  ]
+ },
+ "minus_other": {
+  "atoms": 68,
+  "carried": 23,
+  "certified": 22,
+  "classes": 3283554,
+  "dropped": [
+   "count(k: (<least(k: (n % k))> - k))",
+   "count(k: (n % 2))"
+  ],
+  "exhausted": true,
+  "is_cube": true,
+  "net_new": [
+   "is_cube"
+  ]
+ },
+ "rung2_baseline": {
+  "carried": 25,
+  "certified": 22,
+  "is_cube": true
+ },
+ "verdict": "compounding chain confirmed"
+}
