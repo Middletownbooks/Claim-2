@@ -74,8 +74,10 @@ checkable object.
 > computation, *without knowing whether the target theorem is true*? If no, you have
 > proposed a **restatement** of the theorem. Say so plainly — it is a valid finding and a
 > common one.
-> **T2.** Is the legal move a **formula**, or does it need an **existence theorem**? If a
-> theorem, name it and say what it costs.
+> **T2.** Is the legal move a **formula**, or does it need an **existence theorem**?
+> **Name the object either way**: if a theorem, which theorem and what it costs; if a
+> formula, write it down. The label on its own is not an answer — two raters agreeing on
+> a word is not evidence, and two raters applying the same criterion to a named object is.
 > **T3.** Evaluate the invariant's threshold on the **target** state: compute
 > min{C : the invariant holds for the target at scale C}. If that is not O(1), then no
 > move *certified by this invariant* reaches O(1) — say so, and say where the cap sits.
@@ -117,6 +119,7 @@ checkable object.
 | T3's **monotone** clause, and its restraint about what a cap means | a blind coverage rater found the first wording overstated: it inferred "no improvement to the move can reach O(1)" from a cap that is only a cap **on the invariant**. On two of the six benchmark boards the incumbent move is itself lossy and the target is nonetheless **true** (Marcus–Spielman–Srivastava; Spencer), so the sound inference needs the monotonicity check. Only where the move can only degrade the invariant — Banaszczyk's measure board — is the original sentence literally right |
 | T3's **does not parse** escape | measured, not argued: T3's question is well-posed on 3 of the 6 benchmark boards and undefined on the three whose loss is (rounds) × (cost per step). A rater forced to answer on one of those three produced a threshold pointing the **wrong way** — for fixed soundness the PCP repetition count is O(1), so "no cap" — which would have scored as a pass |
 | **T2** | most of the complexity difference between the two real papers in that corpus sits in exactly this gap: one needs an SDP feasibility theorem for a legal move at every step, the other's move is a formula |
+| T2 demanding the **named object**, not the label | the same distinction exists as a coded field in the protocol tree (`move_kind`) and was rated blind on 17 items: **κ = 0.430**, with all six disagreements running one way, because one rater asked whether the prose reads like a computation and the other whether the move can proceed before a good object is shown to exist. A label did not transfer between raters; a named theorem or a written-out formula is checkable by a third party |
 | kill test | search fails by generating too little and verification by accepting too much. Asking for candidates *with* their refutation keeps both failure modes in one response |
 | **6(b)** | a confident impossibility claim asserted that all smooth certificates reduce to a moment class. A paper five days older reached the target with an L¹ derivative norm, outside that class |
 | **6(a)** | three of four responses reported, unprompted, that their own candidate relocated rather than removed the obstruction. It is a reliable signal, so ask for it |

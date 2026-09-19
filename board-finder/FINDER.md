@@ -120,7 +120,31 @@ and both readable from the statement of the board alone:
 
 **T2 is already a field in the protocol tree** — `move_kind`, formula against
 existence-theorem, added for debt D9 from a completely different argument. Two
-derivations, one discriminator; that is the strongest evidence either has.
+derivations, one discriminator.
+
+**But the coded field does not reproduce, and that is now measured** (D35, run blind on
+all 17 items): Cohen's κ = **0.430** on the 15 items whose recorded text does not state
+its own answer, and 0.286 on the two-class subset. All six disagreements run one way —
+the first column says *formula* where a blind rater says *existence-theorem* or *no move
+recorded* — because the first column asked whether the record's prose reads like a
+computation while the rater asked whether the move can proceed before a good object is
+shown to exist. The rater's criterion is the better one, and under it the
+existence-theorem class goes from 2 of 17 to 6 of 17.
+
+Two consequences, and the second is the one to carry:
+
+* The screen's output is **unchanged** by that reclassification — it still fires on
+  `02-cap-set` and `04-kadison-singer` alone — because it is gated on a second, sparser
+  field (tightness) that only 2 of 17 items have. The unreliability is masked by the
+  coverage bottleneck named in §5, and will bite as soon as coverage improves.
+* **Precision 2/2 = 1.000 was never a measurement.** Every case in the corpus is a
+  success whose board changed, so with no negative in the scored set every fire is a true
+  positive by construction. A figure that survives redefining a third of its input is
+  arithmetic, not evidence. Do not quote it as one.
+
+So T2 must be scored on **the object named**, not on the label chosen: the theorem, or the
+formula written out. That is the same remedy the D20 run forced on the five-transformation
+vocabulary, which scored κ = 0.048 while the computations underneath it were fine.
 
 **And T1 kills a framing this project has leaned on.** "Board change, not a better
 player" is not the discriminator: affine spectral independence *is* a board change by
