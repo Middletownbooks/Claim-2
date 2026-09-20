@@ -1,0 +1,99 @@
+
+============================================================================
+1. Claim (A): 'S is a Golomb ruler' -- decidable, and cheap
+============================================================================
+  order  1  length   0   0 pairwise differences, all distinct: True
+  order  2  length   1   1 pairwise differences, all distinct: True
+  order  3  length   3   3 pairwise differences, all distinct: True
+  order  4  length   6   6 pairwise differences, all distinct: True
+  order  5  length  11  10 pairwise differences, all distinct: True
+  order  6  length  17  15 pairwise differences, all distinct: True
+  order  7  length  25  21 pairwise differences, all distinct: True
+  order  8  length  34  28 pairwise differences, all distinct: True
+  order  9  length  44  36 pairwise differences, all distinct: True
+  order 10  length  55  45 pairwise differences, all distinct: True
+  order 11  length  72  55 pairwise differences, all distinct: True
+  PASS  every candidate is a genuine Golomb ruler
+  a near miss [0, 1, 4, 9, 11, 12]: False   (3-1 = 4-0 ... repeated difference)
+  PASS  a repeated difference is caught
+  cost of one order-11 check: 4.3 microseconds
+  PASS  claim (A) is microseconds and needs no provenance
+
+============================================================================
+2. Claim (B): 'S is OPTIMAL' -- exhaustive, and this is the wall
+============================================================================
+  order  optimal length        nodes   seconds  matches candidate
+      2               1            2      0.00  True
+      3               3            5      0.00  True
+      4               6           20      0.00  True
+      5              11          174      0.00  True
+      6              17        1,447      0.01  True
+      7              25       15,914      0.08  True
+      8              34      156,136      0.77  True
+      9              44    1,437,602      8.21  True
+     10              55   12,574,140     84.99  True
+     11                  -- not attempted, budget spent --
+  PASS  the exhaustive search reproduces the candidate lengths it reaches   [optimality independently re-established, not taken on trust]
+
+============================================================================
+3. Where the wall is
+============================================================================
+  order 6 -> 7: nodes x11.0, time x11.6
+  order 7 -> 8: nodes x9.8, time x9.7
+  order 8 -> 9: nodes x9.2, time x10.7
+  order 9 -> 10: nodes x8.7, time x10.4
+
+  last order completed here: 10, at 12,574,140 nodes in 85.0s
+  per-order node growth near the end: about x9
+  at that rate, order 15 is roughly 5e+04 times this run.
+
+  For reference, OGR-24 through OGR-28 were each settled by distributed
+  projects running for YEARS of aggregate CPU time. The optimality half of
+  a Golomb result is not a laptop computation at the frontier.
+  PASS  claim (B) leaves the affordable range within a few orders
+
+============================================================================
+4. So the AW limit statement was wrong, and here is the right one
+============================================================================
+  AW said: 'It will not resolve a famous open problem. Those are famous
+  because no small parameter settles them.' Hadamard and Golomb refute it.
+
+  THE CORRECT DISTINCTION IS NOT FAME. It is whether the famous problem has
+  been decomposed into a PARAMETRIZED FAMILY OF FINITE EXISTENCE QUESTIONS:
+
+    Hadamard    'does a matrix of order n exist?'   -> yes, decomposed
+    Golomb      'is there a ruler of length L?'     -> yes, decomposed
+    SSUF const  'how large is C?'                   -> yes, decomposed
+    CDC         'every bridgeless multigraph...'    -> NO
+    Riemann     'every nontrivial zero...'          -> NO
+
+  Famous problems of the first kind are exactly the ones this strategy
+  reaches. Fame was never the obstruction; QUANTIFIER STRUCTURE is.
+  PASS  the limit is restated as quantifier structure, not fame
+
+============================================================================
+5. A third deliverable category, and the strategic consequence
+============================================================================
+  I  EXISTENCE WITNESS    claim coextensive with a check
+     Hadamard matrix at order n; a counterexample; a Golomb ruler
+     -> 100% verifiable, cheap, no provenance needed
+
+  II RECORD / OPTIMALITY  witness is checkable, optimality is not
+     an OPTIMAL Golomb ruler; a best-known bound
+     -> the witness half is category I; the optimality half is category III
+
+  III UNIVERSAL THEOREM   no finite witness exists
+      CDC, Rota's basis conjecture
+      -> 0% reachable by this strategy at any budget
+
+  THE CONSEQUENCE FOR A CONSTRAINED BUDGET: category II SPLITS, and you may
+  ship the half you can afford. A ruler shorter than the best known is a
+  category I deliverable and a genuine result; you need not prove it
+  optimal. The SSUF ladder in the corpus is exactly this pattern -- each of
+  C >= 1.17353 and C >= 1.28249 is a record WITNESSED BY AN INSTANCE, with
+  no optimality claimed. Nobody had to close the problem to publish.
+  PASS  category II is separable, which is the affordable move
+
+============================================================================
+RESULT   7/7 checks passed
+============================================================================
