@@ -4,6 +4,13 @@ Two parts. **Part A is the prompt** — paste it verbatim, with the input templa
 in, and nothing else. **Part B is for the operator** and must not be pasted: it names
 the failures each clause is built against, the controls, and the scoring.
 
+> **Scope.** This prompt screens boards whose **bound leaks**, so it needs a
+> quantitative target with a pushable parameter. On the ProofAtlas top-500 that is
+> at most 54% of records, and it misses **23 of the 35 playable ones**, which are
+> pure yes/no questions with no log factor to attribute.
+> `playability/PROMPT_WITNESS.md` is the companion instrument for those; the scope
+> rule and the twelve records that take both are in `playability/RANKING_FIT.md` §3.
+
 The prompt is deliberately short. In this programme's own record the heaviest prompt
 produced the sloppiest derivation, and no clause survives here that does not force a
 checkable object.

@@ -7,6 +7,14 @@ the fields the instrument consumes?** Read off the reader's guide
 2026-09-13) and the catalogue's own findings. Nothing here was checked against the live
 site, which is egress-blocked from this container.
 
+> **Checked since, against the live payload.** The v16 ranking JSON is now in hand as
+> `playability/ranking_v16.json` (499 records). `playability/RANKING_FIT.md` tests this
+> file's claims against it: the registered workspace-allocation test is **settled at
+> n=123** (density falls monotonically 54% → 12% with rank — neither a prefix nor a
+> scatter), and the "one of four fields is supplied" verdict is **confirmed and
+> sharpened** (row 2 is *absent*, not partial; 0 of 499 records describe the incumbent
+> mechanism).
+
 ## Two artifacts, and the overlap is not knowable from either
 
 * `/open-problems/` — **482+ rank-ordered cards**, four sections each: EXACT STATEMENT, WHY
