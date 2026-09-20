@@ -6608,9 +6608,9 @@
    "workspaceCount": 1,
    "quantitative": false,
    "quantifierPrefix": "E",
-   "witnessCheckFeasible": "FEASIBLE",
+   "witnessCheckFeasible": "DEMONSTRATED",
    "searchMechanismClass": "b",
-   "feasibilityNote": "smallest open orders are few; 668 was settled by an explicit construction",
+   "feasibilityNote": "TWELVE previously-open orders closed in a weekend by an agent sweeping construction families; see FEASIBILITY.md section 6",
    "exactTarget": "Prove that there exists a Hadamard matrix of order 4k for every positive integer k."
   },
   {

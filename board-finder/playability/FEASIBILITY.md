@@ -157,3 +157,64 @@ rather than tasks.**
   — admissible patterns of diameter y beating π(y) — is the computation that should
   have been run, is cheap, and is not written.** That is the obvious next job and it
   is a few hours of work, not a research programme.
+
+## 6. Hadamard is not an estimate — it is the demonstrated case
+
+Added after this file's first version rated `331` at roughly 8% and filed it under
+*specialists have saturated this*. That was wrong, and the evidence against it was
+already in `ranking_v16.json` — in a sentence quoted elsewhere in this project
+without its implication being read:
+
+> "The ranking project checked the order-668 matrix, **not all twelve matrices**,
+> and did not execute the supplied construction or verification scripts."
+
+**Twelve matrices.** Order 668 is the one the ranking verified; it is not the whole
+artifact. *[User-reported, and the count is corroborated by the payload above:
+twelve previously-open Hadamard orders were closed over a weekend, with Claude
+credited alongside other researchers. The credit itself is **unverified here** —
+this container is egress-blocked. The sources the ranking cites are
+`github.com/bbeartheancient/hoa64` and `epoch.ai/frontiermath/open-problems/hadamard`.]*
+
+So `331` is reclassified **DEMONSTRATED**: an agent has produced witnesses on this
+board, at multiple previously-open parameters, in a weekend.
+
+### The discriminator this breaks, and the one that replaces it
+
+The first version of this analysis screened on **"has specialist compute saturated
+the obvious computation?"** Hadamard scored as saturated — decades of design theory,
+specialists sweeping orders — and that screen would have told you to walk away from
+the only target here that has actually paid.
+
+The screen that survives is **deep or broad?**
+
+Hadamard construction at a given order is not a blind search. It is a library of
+parameterized families — Paley, Williamson, Baumert–Hall, Goethals–Seidel, Turyn,
+cocyclic — and an open order is one where no known family's parameters happen to
+fit. Closing it means sweeping **many families at once**, each needing a small
+implementation and its own parameter search.
+
+**Specialists saturate depth. They do not saturate breadth.** A hundred small
+construction families, each cheap to implement and bookkeep, is exactly where an
+agent has an edge that no individual researcher has — and it is invisible to a
+"has this been worked?" heuristic, because every family individually *has* been.
+
+### What it re-rates
+
+| record | under the old screen | under deep-vs-broad |
+|---|---|---|
+| `331` Hadamard | saturated, ~8% | **demonstrated** |
+| `235` Zauner SIC | ~20% | **~35%** — same shape: many dimensions, each a fiducial search plus integer-relation recovery |
+| `49` Inverse Galois | ~10%, insight-bound | **~20%** — per-group constructions across many families is breadth bookkeeping, not theory |
+| `295`/`355` Tutte, `335` Jones | ~5% | unchanged — genuinely deep: one pipeline, exhaustively generate one class |
+| `287`/`300`/`356`/`472` blocks | ~6% | unchanged — family-by-family, but each family is hard theory rather than code |
+
+### The operating rule
+
+Not "look up the frontier to find out whether this is dead." It is:
+
+> **Look up the frontier to find out whether the remaining work is deep or broad,
+> then build the harness if and only if it is broad.**
+
+Depth is where specialist compute already lives and an agent arrives late with less.
+Breadth is where the work is a hundred small things nobody has had the patience to
+do at once, and that is the shape of the one win on this board.

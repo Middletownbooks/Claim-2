@@ -109,6 +109,7 @@ VERDICTS = {
 # witnessCheckFeasible -- the tractability field, for the playable records only.
 # rank -> (verdict, mechanism class, one line)
 #
+#   DEMONSTRATED an agent has already produced witnesses here -- not an estimate
 #   FEASIBLE    a search at reachable scale could plausibly find it
 #   BOUNDED     the search space is cut by a classification or reduction theorem,
 #               so the frontier -- not the space -- is the binding constraint
@@ -141,7 +142,7 @@ FEASIBILITY = {
   300: ('BOUNDED',  'a', 'reduction to finite simple groups, as for Alperin-McKay'),
   307: ('FRONTIER', 'c', 'one n; a linear push, and the prime gap frontier is far out'),
   322: ('HOPELESS', 'b', 'exhaustive to n=11 [recall]; graphs on 12 vertices are already ~1.65e11'),
-  331: ('FEASIBLE', 'b', 'smallest open orders are few; 668 was settled by an explicit construction'),
+  331: ('DEMONSTRATED', 'b', 'TWELVE previously-open orders closed in a weekend by an agent sweeping construction families; see FEASIBILITY.md section 6'),
   335: ('BOUNDED',  'b', 'knot tabulation by crossing number is the method; frontier is crossing count'),
   345: ('HOPELESS', 'b', 'ES(7) needs 33 points; order types on 33 points are super-exponentially many'),
   348: ('FRONTIER', 'c', 'one 6-tuple; a bounded linear search over exponents and bases'),
@@ -247,7 +248,7 @@ def main():
     fc = collections.Counter(x['witnessCheckFeasible'] for x in play)
     mc = collections.Counter(x['searchMechanismClass'] for x in play)
     print('\nwitnessCheckFeasible over the 35 playable:')
-    for k in ['FEASIBLE','BOUNDED','FRONTIER','HOPELESS']:
+    for k in ['DEMONSTRATED','FEASIBLE','BOUNDED','FRONTIER','HOPELESS']:
         print(f'  {k:9s} {fc[k]:2d}')
     print('search mechanism class:', dict(sorted(mc.items())))
 
