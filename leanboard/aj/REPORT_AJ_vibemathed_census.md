@@ -210,7 +210,15 @@ prospective. **Use the date. Retire the model-name control.**
   patched external dependency (Erdős 4), and the axioms themselves (PrimeGaps186). Only the
   last is visible from an axiom listing. **This census's single `lean-checked` bucket hides
   that distinction**, and §4 of arm AM tabulates it.
-- **Next on the queue:** Carathéodory smooth (sig 55), Cycle Double Cover (sig 55), then the
-  remaining `lean-checked` entries.
+- **Cycle Double Cover (sig 55) is done — see `leanboard/an/`.** `openai/cdc-lean` is clean at
+  source with **no project axioms at all**, and its three custom definitions (`Cycle`,
+  `Bridgeless`, `CycleDoubleCover`) were brute-forced against their textbook meanings over
+  4,860 small multigraphs with **zero mismatches** — `Cycle` really is a graphic-matroid
+  circuit, not the weaker "even subgraph". The sibling paper's construction was implemented and
+  produces valid covers on Petersen, Blanuša and flower snarks J₅/J₇/J₉. **The one scope
+  finding: the theorem is the *loopless* case**, since `loopless` is a structure field, and the
+  loop reduction — trivial but real — is not formalized. Both README and VERIFICATION.md
+  disclose this; the site's entry does not.
+- **Next on the queue:** Carathéodory smooth (sig 55), then the remaining `lean-checked` entries.
 - **The control class is no longer outstanding.** Arm AK supplied it by accident and it went
   against the hypothesis. No further sampling pass is needed for that question.
