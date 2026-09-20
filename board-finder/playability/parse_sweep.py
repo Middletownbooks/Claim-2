@@ -126,19 +126,28 @@ ADJUDICATION = {
     "493": dict(quoteSupportsCell=True, tier="SECONDARY-RELAYED", rerate=None,
                 why="Quote supports d = 5. The d = 6 block is upstream of the proof "
                     "technique, which needs the complete type list in hand."),
-    "331": dict(quoteSupportsCell=True, tier="SECONDARY-RELAYED",
-                rerate=("DEMONSTRATED", "ANNOUNCED-UNVERIFIED"),
-                why="THE CLAIM THIS PROJECT BUILT A SCREEN ON IS OVERSTATED. The "
-                    "announcement is real and independently covered (Aug 2026, Alpoge "
-                    "plus two collaborators plus Claude), and the user reported it "
-                    "first-hand. What is NOT established is verification: epoch.ai, one "
-                    "of the two sources the record names, still lists order 668 as "
-                    "unsolved, and a separate account has a different researcher failing "
-                    "to reproduce a 668 matrix the same weekend. DEMONSTRATED asserts an "
-                    "agent produced verified witnesses; the sourced status is announced. "
-                    "The deep-vs-broad SCREEN survives on its own reasoning — "
-                    "specialists saturate depth, not breadth — but its headline evidence "
-                    "is weaker than FEASIBILITY.md section 6 records."),
+    "331": dict(quoteSupportsCell=True, tier="PRIMARY-VERIFIED-LOCALLY",
+                rerate=("DEMONSTRATED", "WITNESSES-VERIFIED"),
+                why="UPGRADED after reading github.com/bbeartheancient/hoa64 directly "
+                    "(commit d825201). THE MATRICES ARE VERIFIED HERE, NOT RELAYED: all 13 "
+                    "shipped files pass shape (n,n), entries in {-1,+1} and H H^T = nI in "
+                    "exact integer arithmetic -- 668, 716, 892, 1132, 1244, 1388, 1436, 1676, "
+                    "1772, 1852, 1916, 1948, 1964. The mathematical content of the claim "
+                    "therefore stands whatever epoch.ai reports about its own verifier, and "
+                    "the sweep's ANNOUNCED-UNVERIFIED was too weak ON THE OBJECTS. THREE "
+                    "THINGS STILL DO NOT FOLLOW, the repo's own README being the source for "
+                    "the first two. (1) PROVENANCE: it lists these as 'CSV import -- 12 "
+                    "Alpoge matrices (668-1964, formerly open) plus Djokovic H.1852', so the "
+                    "repo CONSUMES them, 1852 is a 1992 solution rather than new, and the "
+                    "method that closed 668-1964 is NOT in the repository. (2) The README "
+                    "says gaps below 2000 remain at 1212 and 1940, contradicting 'filled in "
+                    "all remaining gaps below 2000' on the repo's own terms. (3) Whether each "
+                    "order was previously OPEN is a literature question and stays relayed -- "
+                    "arm AV in this project had already separated exactly these two claims. "
+                    "So: the witnesses are verified, the history is not. FEASIBILITY.md "
+                    "section 6's deep-vs-broad screen now rests on verified objects rather "
+                    "than a press report, which strengthens it; its attribution of the work "
+                    "to an agent sweep remains relayed. See HOA64_ASSESSMENT.md."),
 }
 
 
