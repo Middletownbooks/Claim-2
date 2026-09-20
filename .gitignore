@@ -14,3 +14,5 @@ leanboard/s/kinds.json
 leanboard/s/vocab_sets.json
 leanboard/t/*.log
 leanboard/t/trajectories.json
+__pycache__/
+*.pyc
