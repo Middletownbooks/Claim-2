@@ -230,6 +230,20 @@ prospective. **Use the date. Retire the model-name control.**
   `exp(−r^(−1/4))` flatness that only becomes visible below `r ≈ 10⁻⁸⁰`, where floats underflow.
   Every other arm's numerics worked because the object was finite; this one is not. It is the
   clearest case in the series for what a Lean proof buys.
-- **Next on the queue:** the remaining `lean-checked` entries.
+- **Sampling rule changed after six arms — see `leanboard/ap/`.** Descending by significance
+  samples on the confound this census identified, and five top arms returned zero mathematical
+  errors while finding only audit-trail and scope issues. Switched to **auditability**:
+  `disproved` + construction/computation, where a counterexample is a finite object and an arm
+  can end in a verdict. 141 such entries post-cutoff, **107 of them `unreviewed`**.
+- **First arm under the new rule: Marton's inner bound (sig 50, `unreviewed`) — 38/38.** Every
+  published number reproduced from the paper's own constants, including a **22-digit** agreement
+  on the core functional `G_T` and two exact-rational Appendix tables summing to 1. The one
+  number that would not reconstruct was a 17-digit display truncation, resolved from the authors'
+  shipped 320-bit MPFR intervals, and it ran in the safe direction. **An `unreviewed` entry turned
+  out to be the best-evidenced artifact in the series** — SHA256SUMS, Dockerfile, provenance
+  manifest, exact-rational certificates — and its refuted conjecture's own authors (Nair, Gohari)
+  verified it. The tier badly understates it.
+- **Next on the queue:** more `disproved` + construction entries, and 2–3 `lean-verified` as an
+  instrument check.
 - **The control class is no longer outstanding.** Arm AK supplied it by accident and it went
   against the hypothesis. No further sampling pass is needed for that question.
