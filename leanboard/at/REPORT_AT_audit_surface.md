@@ -89,6 +89,87 @@ made the omission dangerous.
    Harvey–Király–Lau 2011, leaving a reader unable to tell the result sits in the open range
    `b > n/3` — which it does.
 
+## Part 2 — the CDC prompt tests the prediction, and it holds
+
+A fourth process artifact arrived after part 1 was written: the full prompt OpenAI gave
+GPT-5.6 Sol Ultra for the Cycle Double Cover Conjecture. Its output was audited here in arm
+AN, so the loop is closed the same way — prompt on record, artifact audited by this
+programme. `cdc_prompt_comparison.py`, 7/7.
+
+**This is the best available test, because at the search stage the CDC prompt is by far the
+most elaborate of the four.** Six mechanisms have no counterpart in the Nevanlinna prompt:
+
+1. **Definitions pinned in the prompt** — *"A cycle is a connected 2-regular submultigraph;
+   thus two parallel edges form a cycle of length two."*
+2. **An insufficiency list**, seven named near-misses that do not count.
+3. **A domain-specific adversarial checklist**, seven named failure modes: exact-two
+   multiplicity, repeated-edge closed trails masquerading as cycles, parallel-edge 2-cycles,
+   disconnected graphs, cutvertices, bridges introduced by reductions, circular use of an
+   equivalent CDC statement.
+4. **An anti-circularity guard** — *"A route that ends at a lemma equivalent in strength to
+   the original conjecture is not close to completion."*
+5. **An approach registry** with forced redistribution away from crowded families.
+6. **Output-form requirements** — concrete lemmas or constructions only; status reports and
+   "routine" claims rejected.
+
+It shares with Nevanlinna: presumed existence, multi-agent independence, adversarial agents,
+and **the ban on the negative answer** (*"do not answer that it is open"*). Neither prompt
+has an upper bound on effort; CDC states a **floor** (*"at least 8 hours"*).
+
+### Scored on the part-1 specification
+
+| | CDC |
+|---|---|
+| 1 finite object as deliverable | **no** — a universal statement admits none |
+| 2 separately written checker | partial — adversarial agents inside the same run |
+| 3 **control returning a known negative** | **no** — "computational sanity checks" is one portfolio item, never required |
+| 4 proof standing without machine work | formally yes; arm AN found the surface is 4,880 lines of Lean with no external reference |
+| 5 which steps are least secure | **substituted** — the prompter supplies the failure modes rather than asking. Better when the prompter knows the domain; cannot surface one they did not anticipate |
+| 6 literature placement | **forbidden** |
+
+### The result
+
+Arm AN: 9/9 properties across 15 graphs, 4,860 multigraphs with zero definitional mismatches
+— and its own verdict, *"I verified its local lemmas by hand and its output by computation on
+15 graphs; neither is a proof."* **CDC lands with N: high check count, core unreached.** The
+prediction holds on the fourth artifact.
+
+### The finding this forces
+
+**Search-stage rigour and audit-stage rigour are different investments, and this set shows no
+trade between them.**
+
+| | search stage | output stage | core reached |
+|---|---|---|---|
+| N | elaborate | nothing | **0%** |
+| **CDC** | **the most elaborate of the four** | nothing | **0%** |
+| P | modest | four cheap features | **100%** |
+| L | modest | four cheap features | **100%** |
+
+The CDC prompt is the strongest counterexample available to the idea that a better search
+prompt yields a more checkable result. Six mechanisms N lacks entirely, and the artifact is
+exactly as unreachable as the one with none of them.
+
+**What the search-stage work did buy should be credited precisely.** Arm AN found *zero*
+mismatches between `minimal_even` and `connected_2regular` across 4,860 multigraphs. Pinning
+the definitions in the prompt closed the statement-fidelity surface that arm AK found **open**
+on the zeta paper. That is a real return — on **correctness of the target**, not on
+**checkability of the result**. The two are separable and this set separates them.
+
+### An unresolved tension, linking back to arm AR
+
+CDC forbids the search that would reveal concurrent work: *"do not search the public web
+merely to determine whether CDC is open."* The purpose is benchmark hygiene and it is
+legitimate. The side effect is that the run cannot detect anyone else on the problem —
+Kintali's paper appeared three days after the 10 July announcement, citing it.
+
+The Nevanlinna prompt takes the opposite stance — *"If you find that my result is already
+covered by the literature, tell me"* — and that single instruction is the only thing in any
+of the four prompts that could surface a collision.
+
+**Contamination control and priority awareness want opposite instructions, and none of the
+four prompts resolves it.**
+
 ## Prediction, and how to falsify it
 
 An artifact carrying features 1–4 is verifiable at roughly the cost of reading it; one
@@ -97,6 +178,6 @@ lacking them absorbs an arm and leaves the core untouched, **whatever its check 
 Falsified by: an artifact with all four whose core an auditor still cannot reach, or one with
 none that verifies end to end.
 
-**n = 3. This is a taxonomy, not a rate.** The way to make it a rate is more process
+**n = 4. This is a taxonomy, not a rate.** The way to make it a rate is more process
 artifacts, which remain the highest-value input this programme can receive — and which the
 corpora do not carry.

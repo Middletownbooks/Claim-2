@@ -1,0 +1,137 @@
+
+============================================================================
+1. What the CDC prompt does that the Nevanlinna prompt does not
+============================================================================
+  + definitions pinned in the prompt itself
+     'A cycle is a connected 2-regular submultigraph; thus two parallel edges
+     form a cycle of length two.' Also loopless, bridge, multiset, exactly
+     two occurrences counted with multiplicity, disconnected allowed, the
+     edgeless graph.
+  + an explicit INSUFFICIENCY list (7 named near-misses)
+     special classes; covers with edges covered other than twice; bounded-length
+     or prescribed-cycle variants; reduction to another unproved conjecture;
+     computational verification to a fixed size; counterexamples without a
+     nonexistence certificate; partial progress not implying the statement.
+  + a domain-specific ADVERSARIAL CHECKLIST (7 named failure modes)
+     exact-two multiplicity; repeated-edge closed trails masquerading as cycles;
+     parallel-edge 2-cycles; disconnected graphs; cutvertices; bridges
+     introduced by reductions; circular use of an equivalent CDC statement.
+  + an anti-circularity guard on reductions
+     'A route that ends at a lemma equivalent in strength to the original
+     conjecture is not close to completion unless it supplies a genuinely new
+     proof of that lemma.' Plus: mark stalled routes BLOCKED, reopen only on
+     a materially new mechanism.
+  + an approach REGISTRY with forced redistribution
+     'Group agents by the mathematical idea, not by superficial wording. If many
+     agents converge to one family, redirect some toward underexplored
+     formulations.'
+  + output-form requirements on agents
+     'Require agents to return concrete lemmas, constructions, equations, or
+     counterexamples. Reject status reports, vague optimism, and claims that
+     an unproved global compatibility statement is routine.'
+  PASS  the CDC prompt is materially more elaborate at the search stage than N   [six mechanisms with no counterpart in the Nevanlinna prompt]
+
+============================================================================
+2. What it shares with the Nevanlinna prompt
+============================================================================
+  = existence presumed: 'Assume for purposes of this task that a complete
+     affirmative proof exists' / 'Presume a counterexample exists'
+  = multi-agent portfolio, independence preserved to avoid early convergence
+  = adversarial agents assigned against every candidate
+  = the NEGATIVE ANSWER IS BANNED: 'do not answer that it is open'; no
+     reduction, partial result, missing lemma, best-effort summary, or
+     explanation of why the problem is hard
+  = no upper bound on effort (CDC states a FLOOR: 'at least 8 hours')
+  PASS  both prompts ban the negative answer   [the feature that makes a missing control dangerous]
+
+============================================================================
+3. Scoring CDC on the part-1 specification
+============================================================================
+  1 finite object as the deliverable     NO
+      CDC is a universal statement; no finite certificate exists. Same as N.
+  2 separately written checker           PARTIAL
+      adversarial agents with a named checklist -- but inside the same run, not an
+      independently written program.
+  3 control returning a known negative   NO
+      'computational sanity checks' appears once, as one item in a portfolio of
+      approaches for agents to explore. Nothing requires the apparatus to be
+      run on a case with a known answer and checked against it.
+  4 proof standing without machine work  FORMALLY YES
+      the deliverable is a proof -- but arm AN found the audit surface is
+      NashWilliams.lean + JaegerKilpatrick.lean at 4,880 lines, 68% of the
+      development, with no external reference to check against.
+  5 ask which steps are least secure     SUBSTITUTED
+      the prompter SUPPLIES the failure modes instead of asking the model to name
+      them. Better when the prompter knows the domain; it cannot surface a
+      failure mode the prompter did not anticipate.
+  6 literature placement                 FORBIDDEN
+      'not to search for a solution to this exact conjecture or benchmark. Do not
+      search the public web merely to determine whether CDC is open.'
+  PASS  CDC carries none of features 1-3 outright   [no finite object, no independent checker, no control]
+
+============================================================================
+4. The prediction, tested against arm AN's actual result
+============================================================================
+  PART-1 PREDICTION: lacking features 1-4, an artifact absorbs an arm and
+  leaves the core untouched, whatever the check count.
+
+  ARM AN RESULT: 9/9 properties on 15 graphs for the construction, plus
+  4,860 multigraphs with zero definitional mismatches. And its own verdict:
+    'I verified its local lemmas by hand and its output by computation on
+     15 graphs; neither is a proof.'
+    'NashWilliams.lean + JaegerKilpatrick.lean are the audit surface, at
+     4,880 lines and no external reference to check against.'
+
+  So CDC lands with N: high check count, core unreached.
+  PASS  the prediction holds on the fourth artifact   [N and CDC: elaborate search prompts, 0% of core reached]
+  PASS  the two artifacts whose cores WERE reached are the two with cheap
+        output-stage features   [P and L]
+
+============================================================================
+5. The finding this fourth case forces
+============================================================================
+  SEARCH-STAGE RIGOR AND AUDIT-STAGE RIGOR ARE DIFFERENT INVESTMENTS, AND
+  THIS SET SHOWS NO TRADE BETWEEN THEM.
+
+    N    elaborate search prompt, nothing at the output stage   -> core unreached
+    CDC  the MOST elaborate search prompt of the four, nothing  -> core unreached
+         at the output stage
+    P    modest process, four cheap output-stage features       -> core verified
+    L    modest process, four cheap output-stage features       -> core verified
+
+  The CDC prompt is the strongest counterexample available to the idea that
+  a better search prompt yields a more checkable result. Six mechanisms with
+  no counterpart in N -- pinned definitions, an insufficiency list, a
+  seven-item adversarial checklist, an anti-circularity guard, an approach
+  registry, output-form requirements -- and the artifact is exactly as
+  unreachable as the one with none of them.
+
+  What the search-stage work DID buy is real and should be credited: arm AN
+  found ZERO mismatches between `minimal_even` and `connected_2regular`
+  across 4,860 multigraphs. Pinning the definitions in the prompt closed
+  the statement-fidelity surface that arm AK found open on the zeta paper.
+  That is a genuine return -- on CORRECTNESS OF THE TARGET, not on
+  CHECKABILITY OF THE RESULT.
+  PASS  search-stage investment is credited where it paid, and not beyond
+
+============================================================================
+6. A side effect worth recording, and its link to arm AR
+============================================================================
+  The CDC prompt forbids the literature search that would reveal concurrent
+  work: 'do not search the public web merely to determine whether CDC is
+  open'. The purpose is benchmark hygiene and it is legitimate.
+
+  Its side effect is that the run CANNOT detect that anyone else is on the
+  problem. Kintali's paper appeared three days after the 10 July
+  announcement, citing it (arm AR). The Nevanlinna prompt takes the
+  opposite stance -- 'If you find that my result is already covered by the
+  literature, tell me' -- and that instruction is the only thing in any of
+  the four prompts that could surface a collision.
+
+  These two goals are in direct tension and no prompt here resolves it:
+  contamination control and priority awareness want opposite instructions.
+  PASS  the tension is recorded as unresolved rather than adjudicated
+
+============================================================================
+RESULT   7/7 checks passed   (n = 4 process artifacts)
+============================================================================
