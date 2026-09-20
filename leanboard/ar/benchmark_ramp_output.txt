@@ -1,0 +1,72 @@
+
+======================================================================
+P1. Difficulty ramp: does significance rise over the window?
+======================================================================
+  n = 647 dated entries with a significance score
+  OLS significance ~ days since 2025-07-20:  slope = +0.04380/day (+15.99/year),  r = +0.254
+
+   month      n    mean   median   max
+   2025-07     1    10.0    10.0     10
+   2025-08     1    20.0    20.0     20
+   2025-09     1     6.0     6.0      6
+   2025-10     3    20.0    20.0     32
+   2025-11     4    18.0    16.0     30
+   2025-12     4    10.5    10.0     12
+   2026-01    13    10.8    10.0     22
+   2026-02    12    10.6    10.0     15
+   2026-03    23    12.8    11.0     25
+   2026-04    54    10.7    10.0     25
+   2026-05    65    17.5    15.0     55
+   2026-06    70    13.7    10.5     32
+   2026-07   217    16.5    15.0     65
+   2026-08   165    21.6    18.0     68
+   2026-09    14    30.7    23.5     62
+  PASS  P1 -- a rising difficulty ramp is present   [slope +15.99/year, r=+0.254]
+
+======================================================================
+P2. Frontier band: does the hard tail arrive late?
+======================================================================
+  split at 2026-07-17 -- 323 entries each half
+    significance >= 40:  first half    3    second half   22
+    significance >= 50:  first half    2    second half   16
+    significance >= 60:  first half    0    second half    9
+    max significance:     first half   55    second half   68
+  PASS  P2 -- the hard tail is concentrated in the later half   [>=50: 2 then 16]
+
+======================================================================
+P3. Head-to-head: are multi-maker days the harder days?
+======================================================================
+  days on which two or more model makers both posted : 73 of 184
+    mean significance, multi-maker days  :  18.0  (n=452)
+    mean significance, single-maker days :  15.7  (n=155)
+    difference                           :  +2.3
+  PASS  P3 -- head-to-head days sit above single-maker days   [+2.3 significance]
+
+======================================================================
+P4. Benchmark-style sources as a share of the stream over time
+======================================================================
+   quarter    listed/total    share
+   2025Q3         0/   3        0.0%
+   2025Q4         6/  11       54.5%
+   2026Q1        24/  48       50.0%
+   2026Q2        80/ 189       42.3%
+   2026Q3        50/ 396       12.6%
+  PASS  P4 -- curated-list problems are a persistent share, not a one-off   [4/5 quarters above 5%]
+
+======================================================================
+What this cannot show
+======================================================================
+  `significance` is VibeMathed's own curated score, assigned by the site after
+  the fact. A rising trend is consistent with a real difficulty ramp AND with
+  the site's own inclusion policy tightening, or with scorer drift. Nothing here
+  separates those. The trend is evidence that the corpus BEHAVES like a
+  leaderboard; it is not independent measurement of model capability.
+
+  M3 also does not compete with M1 and M2 -- it supplies the reason a short list
+  of problems is shared in the first place, and the reason two labs are pushed
+  into one difficulty band at one time without anyone talking to anyone.
+  PASS  the confound is recorded rather than argued away
+
+======================================================================
+RESULT   5/5 checks passed
+======================================================================

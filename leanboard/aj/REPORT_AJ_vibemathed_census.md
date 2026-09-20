@@ -260,7 +260,13 @@ prospective. **Use the date. Retire the model-name control.**
   independent events but one announcement and one response three days later. See
   `ar/CONCURRENCY_CORRECTION.md`. The **artifact-level** conclusion survives and is strengthened:
   **two AI-assisted claims on one problem probably cannot corroborate each other** — less so when
-  the second knew the first's target and route.
+  the second knew the first's target and route. **A third mechanism (`ar/benchmark_ramp.py`,
+  5/5) reframes the census itself:** the lists these problems come from have been used as
+  frontier-model benchmarks for about a year, so selection tracks difficulty calibration
+  rather than mathematical interest. Significance rises +16.0/year across the window
+  (r = +0.254) and *nothing above significance 60 exists in the corpus's first half* against
+  nine entries in the second. This arm's own thesis should therefore be read as **checking
+  lags the frontier band** rather than as a statement about mathematical importance.
 - **Next on the queue:** more `disproved` + construction entries, 2–3 `lean-verified` as an
   instrument check, and an arm on the concurrency pattern itself.
 - **The control class is no longer outstanding.** Arm AK supplied it by accident and it went

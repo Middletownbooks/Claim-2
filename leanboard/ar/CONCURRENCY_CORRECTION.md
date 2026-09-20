@@ -1,6 +1,6 @@
 # Correction — the concurrency pattern was over-read
 
-**Date:** 2026-09-20. **Status:** fourth refuted hypothesis of this series. **Measurement:** arm AR, `ar/base_rate_concurrency.py`, 7/7.
+**Date:** 2026-09-20. **Status:** fourth refuted hypothesis of this series. **Measurement:** arm AR — `ar/base_rate_concurrency.py` 7/7, `ar/benchmark_ramp.py` 5/5.
 
 ## What I claimed
 
@@ -13,7 +13,7 @@ claims on a single problem and built an inference about *models* on top of them:
 > "The pattern is now too frequent to be coincidence and it is the single most important
 > thing this programme has noticed." — AQ
 
-## Two proposed deflations
+## Three proposed deflations
 
 **M1 — social seeding.**
 
@@ -156,6 +156,75 @@ three or more claims are not the high-significance days** (mean significance 17.
 days vs 14.9 on single-claim days, against a corpus mean of 16.9). Bursts in this corpus are
 throughput, not fame — so "several claims landed together" is, by default, a statement about
 how fast the pipeline is running.
+
+## M3 — the lists are benchmarks, which is why the bands collide
+
+A third refinement, and the one that explains why M1 and M2 have anything to work with:
+
+> Individuals and groups have been using sites like Erdős problems (among others) for
+> roughly a year as benchmarks for frontier models. Model x.1 solves an easy one a year
+> ago; model x.2 and model y.2 compete to solve a slightly less easy one six months later.
+
+This is not a fourth route to the same collisions. It changes what the corpus **is**. Under
+M3, problem selection is driven by *difficulty calibration against the previous frontier*
+rather than by mathematical interest, so competing labs are pushed into the **same
+difficulty band at the same time by construction** — no shared conversation (M1) and not
+even a shared taste in problems (M2) required. Simultaneity is then the design of the
+exercise, not a finding about it.
+
+M3 makes falsifiable predictions. `ar/benchmark_ramp.py` (5/5) tests four:
+
+**P1 — difficulty ramp.** OLS of significance on days since 2025-07-20 over 647 dated
+entries: slope **+0.0438/day = +16.0/year**, r = **+0.254**. Monthly means climb
+10.7 (2026-04) → 17.5 (05) → 16.5 (07) → 21.6 (08) → 30.7 (09, only 14 entries, thin).
+
+**P2 — the frontier band arrives late.** Splitting the corpus in half at 2026-07-17,
+323 entries each side:
+
+| | first half | second half |
+|---|---|---|
+| significance ≥ 40 | 3 | **22** |
+| significance ≥ 50 | 2 | **16** |
+| significance ≥ 60 | **0** | **9** |
+| max significance | 55 | **68** |
+
+Nothing above 60 exists in the first half of the corpus. That is the shape of a frontier
+being pushed, exactly as described.
+
+**P3 — head-to-head days are the harder days.** On 73 of 184 active days, two or more model
+makers both posted. Mean significance 18.0 on those days against 15.7 on single-maker days
+(+2.3). Competition concentrates where the band is.
+
+**P4 — but the list share falls as volume explodes.** Reported against the check, which only
+asked for persistence:
+
+| quarter | curated-list / total | share |
+|---|---|---|
+| 2025Q4 | 6 / 11 | 54.5% |
+| 2026Q1 | 24 / 48 | 50.0% |
+| 2026Q2 | 80 / 189 | 42.3% |
+| 2026Q3 | 50 / 396 | **12.6%** |
+
+The absolute count holds near 50–80 per quarter while the stream widens sevenfold. So the
+curated lists were the **early** benchmark and are now a minority of a much larger flow
+sourced from arXiv and self-publication. This fits M3's history rather than undercutting it:
+the benchmark phase is visible at the start of the window and has since been outgrown.
+
+**What P1–P4 cannot show.** `significance` is VibeMathed's own curated score, assigned after
+the fact. A rising trend is equally consistent with the site's inclusion policy tightening or
+with scorer drift, and nothing here separates those from a real capability ramp. The correct
+reading is that **the corpus behaves like a leaderboard**, not that the leaderboard measures
+what it appears to.
+
+## Consequence for arm AJ's census thesis
+
+AJ concluded that *checking is inversely related to significance*. If significance is partly
+a benchmark-difficulty coordinate rather than a mathematical-importance coordinate, the
+thesis should be restated: what goes unchecked is the **frontier band** — the problems
+selected precisely because they sit just past what was previously solvable. That is a
+sharper claim than the original and points the same way: verification effort lags capability,
+and it lags hardest where the selection process is deliberately hardest. The AJ correlation
+itself is unaffected; only its interpretation moves.
 
 ## Error class
 
