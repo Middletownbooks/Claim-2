@@ -8,6 +8,7 @@ Shared area. Four documents, one instrument, one dataset.
 | **`RANKING_FIT.md`** | audit against `../PROOFATLAS_FIT.md`. Settles its registered workspace-allocation test at n=123, confirms and sharpens its "one of four fields" verdict, and measures where `../PROMPT.md` does not apply |
 | **`FEASIBILITY.md`** | the tractability pass. `witnessCheckFeasible` for all 35, three search mechanisms, and one sweep run end to end (`sweeps/`) rather than recalled |
 | **`PROMPT_WITNESS.md`** | the companion prompt for the yes/no half of the corpus, where the leak table has no row to write. Part A / Part B, same shape as `../PROMPT.md` |
+| **`PROMPT_FRONTIER.md`** | **the next run.** The frontier-verification pass, for a Claude with web search rather than a coding agent: it replaces the `[recall]` cells with sourced ones, settles `RANKING_FIT.md` §4's registered prediction, and answers deep-or-broad per record — the gate `FEASIBILITY.md` §6 puts in front of building any harness |
 | **`classify.py`** | the instrument. Hand-adjudicated verdict table plus the lexical recall sweeps, kept so the candidate pool is auditable |
 | **`classification.json`** | 499 records with class, named witness object, playable / hasWorkspace / quantitative flags, and full `exactTarget` |
 | **`ranking_v16.json`** | the input payload, `proofatlas.open-problem-ranking.top500.v16`, edition 2026-09-19 |
@@ -48,6 +49,9 @@ Regenerate: `python3 classify.py`.
   remedy, applied prospectively and unrun.
 * **`FEASIBILITY.md` rests heavily on recall.** Every cell tagged `[recall]` is
   unverified — this container is egress-blocked and no literature search was run.
+  **`PROMPT_FRONTIER.md` is written to fix exactly this** and is ready to hand to an
+  executor with network access; it also measures, in its §C, what the `[recall]` tag is
+  worth, which nothing in this project currently does.
   They are the first thing to check with a network connection, along with
   `RANKING_FIT.md` §4's four-record recommendation, which is a **prediction to
   verify, not a finding**.
