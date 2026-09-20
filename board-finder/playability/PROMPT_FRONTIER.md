@@ -1,6 +1,6 @@
 # The frontier-verification prompt
 
-**For a Claude with web search and fetch, not for a coding agent.** The task is lookup
+**For a Claude with web search and fetch, not for a coding agent.** *(For a subscription chat surface, use `PROMPT_SWEEP.md` — the executable cut of this one, with fetch discipline in place of the API's `max_content_tokens` and a `transcribeThis` hand-off for cells the web cannot settle.)* The task is lookup
 and quotation, not computation. A code sandbox would invite sweeping when the whole point
 is to find out what bounds a sweep before anyone runs one.
 
