@@ -181,6 +181,54 @@ def prefix(t):
     return 'E' if e else ('U' if u else None)
 
 # --------------------------------------------------------------------------
+def merge_sweep(rows):
+    """Attach the frontier sweep (frontier_sweep.json) and apply its re-rates.
+
+    The sweep is an INPUT to this pipeline, not a hand-edit of its output, so
+    regenerating classification.json keeps the sourced frontiers and the verdict
+    changes instead of silently reverting them to the [recall] values. Derived from
+    sources/SWEEP_RESPONSE_RAW.md by parse_sweep.py; every field is RELAYED except
+    488b, which was verified locally by sieve.
+
+    488b is a SUB-TARGET of record 488, not a record of its own: the direct sweep on
+    488 stays HOPELESS and the combinatorial factor is attached beside it. Collapsing
+    the two would assert that the record is feasible when only one of its two factors
+    is, which is the inflation FEASIBILITY.md section 3(d) warns about.
+    """
+    import pathlib
+    f = pathlib.Path(__file__).resolve().parent / 'frontier_sweep.json'
+    if not f.exists():
+        return
+    sweep = json.loads(f.read_text(encoding='utf-8'))
+    by = {r['rank']: r for r in sweep['records']}
+    idx = {str(r['rank']): r for r in rows}
+    applied = []
+    for rank, sr in by.items():
+        keep = {k: sr[k] for k in
+                ('verdict', 'frontier', 'wall', 'url', 'date', 'quote',
+                 'depthOrBreadth', 'tier', 'quoteSupportsCell', 'adjudication')
+                if k in sr}
+        if rank.endswith('b'):
+            host = idx.get(rank[:-1])
+            if host is not None:
+                host['subTarget'] = dict(id=rank, **keep,
+                                         witnessCheckFeasible=sr.get('witnessCheckFeasibleNow'))
+                applied.append(f'{rank}->subTarget of {rank[:-1]}')
+            continue
+        row = idx.get(rank)
+        if row is None:
+            continue
+        row['frontierSweep'] = keep
+        if 'witnessCheckFeasibleNow' in sr:
+            row['witnessCheckFeasibleWas'] = sr['witnessCheckFeasibleWas']
+            row['witnessCheckFeasible'] = sr['witnessCheckFeasibleNow']
+            applied.append(f"{rank}: {sr['witnessCheckFeasibleWas']} -> "
+                           f"{sr['witnessCheckFeasibleNow']}")
+    print('\nfrontier sweep merged: %d records carry sourced frontiers' % len(by))
+    for a in applied:
+        print('  re-rate', a)
+
+
 def main():
     d = json.load(open(SRC))
     recs = d['records']
@@ -204,6 +252,7 @@ def main():
             exactTarget=r['exactTarget'],
         ))
     rows.sort(key=lambda x: x['rank'])
+    merge_sweep(rows)
     json.dump(dict(
         source=d['publicationId'], releaseVersion=d['releaseVersion'],
         editionDate=d['editionDate'], classes=CLASSES, records=rows,
@@ -247,9 +296,15 @@ def main():
     q = [x for x in rows if x['quantitative']]
     fc = collections.Counter(x['witnessCheckFeasible'] for x in play)
     mc = collections.Counter(x['searchMechanismClass'] for x in play)
-    print('\nwitnessCheckFeasible over the 35 playable:')
-    for k in ['DEMONSTRATED','FEASIBLE','BOUNDED','FRONTIER','HOPELESS']:
-        print(f'  {k:9s} {fc[k]:2d}')
+    # Count every value PRESENT, not a hard-coded list: the frontier sweep added
+    # NARROWED / NOT-A-SEARCH / ANNOUNCED-UNVERIFIED, and a fixed list silently
+    # printed 31 of 35 while looking complete.
+    print(f'\nwitnessCheckFeasible over the {len(play)} playable:')
+    shown = 0
+    for k, v in sorted(fc.items(), key=lambda kv: (-kv[1], kv[0])):
+        print(f'  {k:22s} {v:2d}')
+        shown += v
+    assert shown == len(play), f'{shown} counted, {len(play)} playable -- a value was dropped'
     print('search mechanism class:', dict(sorted(mc.items())))
 
     print(f'\nleak-table applicable (quantitative target, lexical upper bound): '
