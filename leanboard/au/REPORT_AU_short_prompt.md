@@ -101,13 +101,77 @@ What happened next, from the same corpus:
 | 2026-08-04 | Four-terminal scenario ladder | exact envelope ladder |
 | 2026-08-13 | 1.17353 planar bound | C ≥ 1.17353 for planar instances |
 
-**The artifact was first** — the disproof of C = 1 is its own — **and was overtaken on the
-constant within nine days.** Neither fact is visible from the document, which carries no
-references and no statement of what was known. A reader cannot tell whether it is first,
-current, or superseded.
+**The artifact was first** — the disproof of C = 1 is its own.
 
-That is the same gap flagged in arm AQ's prompt translation and again in arm AS on the Chow
-LaTeX. Across five process artifacts it is the most consistently absent instruction, and the
-only one whose absence has now cost something observable in three separate cases.
+### Correction: the successors are descendants, not competitors
+
+I first wrote that it "was overtaken on the constant within nine days" and that "a reader
+cannot tell whether it is first, current, or superseded", presenting the missing references
+as a cost. **That is wrong, and the corpus says so in the entries' own words.**
+
+This was immediate big news, and the later results were built on it. `relations` edges in the
+corpus, unprompted by me:
+
+- *Common-Point Interval Systems* → **`builds-on`** → `dinitz-garg-goemans-unsplittable-flow`:
+  *"The optimal-constant question this entry attacks is exactly what the Dinitz–Garg–Goemans
+  disproof left open."*
+- *Four-terminal scenario ladder* → `related` → the same slug.
+- *1.17353 planar bound* → `continues` → the 1.28249 entry: *"Part III of the same programme."*
+
+Being superseded in nine days by work your own result enabled is impact, not a cost. The
+absence of references cost nothing, because the field already knew.
+
+### What has to be withdrawn
+
+The claim that literature placement's absence "cost something observable in three separate
+cases". Re-examined, **none of the three is a cost**:
+
+- **Nevanlinna** — the instruction was *present*. Prompt 3 asks *"if you find that my result
+  is already covered by the literature, tell me"*, and the model reported a negative search
+  honestly and recommended expert confirmation. It worked.
+- **Chow LaTeX** — omits Harvey–Király–Lau, but was sent directly to the conjecture's author,
+  who knows his own literature.
+- **SSUF** — big news from the outset.
+
+**Confirmed costs: zero.** Withdrawn entirely, not softened. What survives is only a fact
+about the prompts: literature placement is the most consistently absent instruction across
+the five. Its consequence is unevidenced.
+
+### The same error, for the third time
+
+1. **Concurrency** — I read near-simultaneous claims as evidence about models converging. The
+   channel was social. (arm AR)
+2. **M4** — I wrote that two independent refutations could both exist and *"the dependent
+   literature never learn"*. A preprint existed and the author was written to by **both**
+   researchers. (arm AR)
+3. **SSUF** — I read missing references as a cost. The result was news and the successors
+   built on it. (here)
+
+**I keep treating the document and the corpus as the channel. The channel is social.** Each
+time, what I called missing from the world was only missing from my instrument.
+
+### What the corpus is good and bad at — `cascade_visibility.py`, 8/8
+
+**Only 14 of 664 entries (2.1%) carry a `relations` field at all. Five of those fourteen are
+this one chain** — 36% of the corpus's entire relation graph, on a single cascade.
+
+| | seed | entries | relation edges |
+|---|---|---|---|
+| **SSUF** | loud — immediate news | **5** across three weeks | **5** |
+| **Chow C(3)** | quiet — preprint + a letter | **0** | **0** |
+
+Chow's C(3) is not in the corpus at all, though White's conjecture and Rota flat unimodality
+are. Both cascades are real and comparably structured — a seed, a second independent finder,
+downstream work. The difference in visibility is **newsworthiness of the seed**, not anything
+about the work.
+
+### Where the instruction would matter
+
+Not where it has been shown to cost — nowhere has. Where the social channel is thin: a quiet
+result on an obscure target. That is exactly the M4 class from arm AR, and exactly where the
+operator's own case sits, in which the two independent finders learned of each other only
+because both wrote to the same author.
+
+Stated as a conditional with no confirming instance, which is what the evidence supports.
 
 **n = 5. Still a taxonomy, not a rate.**
