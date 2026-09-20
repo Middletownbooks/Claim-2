@@ -1,6 +1,6 @@
 # Correction — the concurrency pattern was over-read
 
-**Date:** 2026-09-20. **Status:** fourth refuted hypothesis of this series. **Measurement:** arm AR — `ar/base_rate_concurrency.py` 7/7, `ar/benchmark_ramp.py` 5/5, `ar/verify_hezhang.py` 27/27.
+**Date:** 2026-09-20. **Status:** fourth refuted hypothesis of this series. **Measurement:** arm AR — `ar/base_rate_concurrency.py` 7/7, `ar/benchmark_ramp.py` 5/5, `ar/verify_hezhang.py` 27/27, `ar/m4_incidental_refutation.py` 6/6 (null result).
 
 ## What I claimed
 
@@ -13,7 +13,7 @@ claims on a single problem and built an inference about *models* on top of them:
 > "The pattern is now too frequent to be coincidence and it is the single most important
 > thing this programme has noticed." — AQ
 
-## Three proposed deflations
+## Four proposed mechanisms
 
 **M1 — social seeding.**
 
@@ -282,6 +282,78 @@ communication between the groups is required, and none is in evidence.
 artifact's own text, the prime-gap day is three different results on a public ladder, and
 Nevanlinna is two different constructions from one shared ancestor. **No instance remains
 unexplained.** The hypothesis is fully retracted, not merely demoted.
+
+## M4 — incidental refutation, and why the corpus cannot see it
+
+A fourth mechanism, reported first-hand by this programme's operator:
+
+> Independent researchers X and Y attempt, with LLM assistance, to make progress on a
+> well-known open problem. In the course of work each LLM finds a twenty-year-old paper
+> carrying a conjecture which, if true, makes the problem at hand more tractable. While
+> stress-testing that conjecture, each LLM finds a counterexample to it — and the two
+> counterexamples are different.
+
+**M4 is structurally unlike the other three.** The collision target is not the problem
+either party set out to solve; it is an auxiliary conjecture surfaced by the *retrieval
+layer* as relevant prior art. That target is typically obscure, carries no list membership
+and has no audience. The two parties need not share a top-level goal at all — only a
+sub-goal their tools chose for them.
+
+**It is also the one mechanism in this series that is genuinely about models — narrowly.**
+Shared retrieval over a shared literature produces correlated *sub-target selection*. It
+does **not** produce correlated error: the operator's account has the two counterexamples
+differing, which is the same signature M2 leaves on the same-object test. So M4 revives a
+strict subset of what I originally claimed and refutes the rest. My claim was "shared method
+plus shared training data produces correlated discovery **and therefore correlated error**."
+The second half stays dead.
+
+### The test, and its null result
+
+`ar/m4_incidental_refutation.py` (6/6 checks, but **4 of 5 declared predictions did not
+survive**). Every comparison carries a significance test, because the hypothesis this whole
+document exists to correct was an uncounted eyeball pattern.
+
+| prediction | result | statistic |
+|---|---|---|
+| **P1** disproved problems are younger | **null** | Mann–Whitney z = −1.48, **p = 0.138** (medians 27y vs 31y) |
+| **P2** disproved entries sit lower in significance | **refuted, opposite direction** | z = +2.61, **p = 0.009**; disproofs mean 18.2 vs 16.4 |
+| **P3** disproved entries are less list-sourced | **marginal** | z = −1.88, **p = 0.060** (22.4% vs 29.5%) |
+| **P4** an M4 band: age 10–30, sig ≤ 20, unlisted | **null** | z = +1.10, **p = 0.271** (12.7% vs 9.8%) |
+| **P5** construction dominates disproofs | confirmed but **definitional** | z = +18.6, p ≈ 5·10⁻⁷⁷ — a counterexample *is* a construction |
+
+**P4 is the one this arm came closest to publishing as a finding.** The band is populated —
+26 entries, and they read exactly like the mechanism: *Carlitz–Wieferich primes* (11y),
+*AdaBoost cycling* (14y), *Steurer's conjecture* (16y), *Strong Graph Reconstruction* (16y),
+all `construction`. A populated band whose contents look like the story is not evidence for
+the story when the same band is almost as populated among proofs. p = 0.271. Killed by its
+own test, one step before it would have gone into a report.
+
+### Why the null is uninformative about M4, and what that itself shows
+
+The corpus cannot see this mechanism, for three reasons that are themselves the finding:
+
+1. **M4's own logic predicts non-publication.** These refutations are working byproducts of
+   an unfinished attack on something else. That is exactly what does not get written up. The
+   corpus indexes published claims.
+2. **P2 measures the selection directly.** Refutations here skew toward *famous* conjectures
+   (p = 0.009) — a corpus assembled from newsworthy results hides the obscure-auxiliary
+   class by construction. The failed prediction is better evidence than the passed ones.
+3. **The decisive field does not exist in the schema:** what the session was *originally*
+   after. Nothing distinguishes a conjecture attacked on purpose from one met on the way to
+   something else.
+
+**What would test it:** process artifacts, not outcome records. The Nevanlinna transcript in
+arm AQ is the only one this programme has seen, and one transcript is not a rate.
+
+### The consequence, which holds whatever the rate turns out to be
+
+Under M1–M3 the colliding artifacts sit on a famous problem, so the community eventually
+looks. **Under M4 the collision is on an obscure conjecture nobody is watching, which may
+have been load-bearing for conditional results for twenty years.** Two independent
+refutations can both exist, neither be published, and the dependent literature never learn.
+
+That is a worse failure mode than anything the original concurrency hypothesis described,
+and it is invisible to every instrument this programme has used so far.
 
 ## Error class
 
