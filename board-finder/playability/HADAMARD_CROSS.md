@@ -1,4 +1,10 @@
-# Crossing the two Hadamard repos: 2060 and 2884 reduce to one 103-length search
+# Crossing the two Hadamard repos
+
+> **RETRACTED IN PART — see §8.** This file first argued that 2060 and 2884 reduce to one
+> search for W(103). The operator's non-existence argument kills two of the five routes
+> outright, and a test I should have run first shows the Cooper–Wallis assembly cannot
+> consume the weaker object I hoped to substitute. §§1–4 stand as written; §7's
+> recommendation is withdrawn. §8 is what survives.
 
 Two repos read together:
 
@@ -123,3 +129,79 @@ object rather than trusting the call.
 Note what this does *not* touch: the eight prime v, where no product route exists at all and the
 SDS programme's architecture/symmetry split is the only game. `FINDING_105` ranks v = 647 first
 there, and nothing here changes that.
+
+
+## 8. Retraction, and what the test showed
+
+**The operator's argument, verified.** A Williamson quadruple of order m hands you H(4m)
+immediately. **716 = 4·179 and 892 = 4·223 were open until 2026** — they are two of the
+twelve Alpöge matrices. So **W(179) and W(223) cannot be known**, and the routes for
+v = 537 and v = 669 are dead on arrival.
+
+That is also an independent check on the inference chain I used in §4 ("open ⇒ the
+ingredient is unknown"), in exactly the two cases where it can be checked from the shipped
+data alone. It confirms the chain — and immediately shows the chain was the wrong thing to
+be pleased about, because the same logic makes the remaining ingredients unlikely rather
+than merely missing.
+
+**W(103) is doubtful for a reason I can now state.** H(412) is known, and I had treated that
+as neutral. It is better than neutral evidence *against* W(103): 412 = 4·103 is exactly what
+a four-circulant Goethals–Seidel quadruple of length 103 produces, which is a far weaker and
+more plentiful object than a Williamson quadruple. H(412) known is fully consistent with
+W(103) not existing.
+
+**The substitution I hoped for does not work, and this is the test that settles it.**
+Enumerating every ±1 quadruple of order m with ΣAAᵀ = 4mI:
+
+| m | all-symmetric (Williamson) | not all symmetric (GS-type) |
+|---|---|---|
+| 3 | 64 | 1,664 |
+| 5 | 192 | 119,808 — **624× more** |
+
+Feeding both into each assembly:
+
+| object | plain Goethals–Seidel array | Williamson / Cooper–Wallis assembly |
+|---|---|---|
+| all-symmetric | **Hadamard** | **Hadamard** |
+| not all symmetric | **Hadamard** | **not Hadamard** |
+
+So the sum condition alone is *not* sufficient for the Cooper–Wallis composition — symmetry
+is genuinely required — while the plain GS array consumes the 624×-larger class happily.
+My §7 proposal to swap the weaker object into the CW route is withdrawn.
+
+## 9. So can hoa64's generator be improved? Yes — and it still opens nothing
+
+Two real improvements, both measured:
+
+1. **It searches the wrong class.** `williamson_search` samples `symmetric_random()` and
+   flips greedily, hunting the *small* class. The GS array needs only four circulants, which
+   at m=5 is 624× more targets, and hoa64 already ships `gs_assemble` and
+   `gs_circulant_search` to use them.
+2. **It ignores a free necessary condition.** For odd order m the four row sums satisfy
+   r₁²+r₂²+r₃²+r₄² = 4m exactly. At m = 103 that has **10** odd representations, so a search
+   can solve ten weight-pinned subproblems instead of one flat 208-bit space. hoa64 uses
+   neither the filter nor the decomposition — which is why it cannot rediscover W(11), an
+   entry in its own database.
+
+**But neither improvement reaches the thirteen.** A GS quadruple of length m gives H(4m), so
+what the open orders need is a GS quadruple of length **v itself** — 515, 523, 571, … —
+yielding H(4v) directly, with no T-sequences and no Williamson matrices anywhere. That is
+precisely the object `Cooperative-AI-Defense/hadamard` is already searching for, with orbit
+and multiplier reduction plus CP-SAT that hoa64 has nothing comparable to.
+
+**Honest conclusion: the two repos are not complementary on the open orders.** hoa64's value
+is its verified library and its classical constructions; the SDS programme is the only one of
+the two attacking the right object. Improving hoa64's search would make it better at
+rediscovering things its database already holds.
+
+## 10. The methodological lesson, which is the part worth keeping
+
+I validated the *machinery* — the T5 and T7 paths really do build Hadamard matrices, checked
+end to end — and then treated the missing *ingredient* as merely absent. Those are different
+claims. A construction pipeline that provably works is evidence about the pipeline and no
+evidence at all about whether its inputs exist; and when the input is itself a hard open
+object, "only one thing is missing" is not a small gap, it is the whole problem restated.
+
+The check that would have caught it cost one line of arithmetic: **W(m) ⇒ H(4m), so look up
+whether 4m was open.** The operator ran it and it killed two routes immediately. I had the
+shipped order list in hand the entire time.
