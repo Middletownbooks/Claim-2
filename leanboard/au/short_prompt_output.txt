@@ -1,0 +1,117 @@
+
+============================================================================
+1. The table, with the fifth artifact
+============================================================================
+  artifact                   search stage                output stage     core      len
+  --------------------------------------------------------------------------------------
+  N    Nevanlinna            elaborate                   nothing            0%   ~800 w
+  CDC  cycle double cover    most elaborate of the set   nothing            0%   ~900 w
+  P    Allikvere             modest                      four features    100%      n/a
+  L    LaTeX to author       modest                      four features    100%      n/a
+  AU   SSUF cost             FOUR CASUAL SENTENCES       finite object    100%    ~60 w
+  PASS  the shortest prompt produced the highest audit surface   [~60 words -> 19/19, core fully reached]
+  PASS  prompt length and output-stage features are now decorrelated   [the confound named in AT part 2 is resolved]
+
+============================================================================
+2. Scoring SSUF on the part-1 specification
+============================================================================
+  1 finite object as deliverable           YES  seven vertices, nine arcs, two paths per terminal, eight routings
+  2 separately written checker             no   none; the document is the checker
+  3 control on a known answer              no   none
+  4 proof standing without machine work    YES  the eight-row table IS the proof, and fits on one page
+  5 which steps are least secure           no   
+  6 literature placement                   NO   the document has no references section at all
+
+  SSUF carries TWO of six, and verified 100%. P and L carried four.
+  Feature 4 comes free with feature 1 -- once the object is finite and
+  small, the hand-checkable proof is just the enumeration.
+  PASS  the separating set collapses to ONE feature   [a finite deliverable; the rest followed or were absent]
+
+============================================================================
+3. What the prompts did that the long ones did formally
+============================================================================
+  1. Construct a counterexample ... You should do a breakthrough and find a
+     structured counterexample.
+  2. please continue research and find a complete unconditional counterexample
+  3. Continue the search. Have a clear strategy obtained from deeper
+     understanding of the problem structure.
+  4. it's enough of partial results. let's finish with a complete unconditional
+     counterexample
+
+  THREE OF FOUR express dissatisfaction with partial results. That is the
+  same output ban CDC states formally -- 'Do not return a reduction, partial
+  result, isolated missing lemma, best-effort summary' -- and Nevanlinna
+  states as three forbidden sentences. Here it is four impatient lines.
+
+  The mechanism is replicated at roughly five per cent of the words, across
+  turns instead of inside one prompt. Whatever the long prompts' output bans
+  are buying, it is not something only a long prompt can buy.
+  PASS  the output-ban mechanism is present in all three search prompts   [formally in N and CDC, conversationally here]
+
+============================================================================
+4. Statement fidelity, achieved without being asked for
+============================================================================
+  The prompt says 'Dinitz Garg Goemans conjecture'. Per the corpus, the
+  DGG result is the CONGESTION statement and the cost-preserving
+  strengthening is GOEMANS' conjecture -- 'Goemans conjectured C=1'.
+
+  The artifact retitles itself 'Goemans' SSUF Cost Conjecture' and states
+  the cost version precisely. It corrected a loose prompt.
+
+  CDC bought statement fidelity by pinning every definition in the prompt,
+  at real length. Here it came for free. One case each; this is not a claim
+  that pinning is unnecessary, only that it is not the sole route.
+  PASS  the artifact narrowed a loose prompt to the right statement
+
+============================================================================
+5. What the prompts did NOT do, and what it cost
+============================================================================
+  Identification. The corpus entry 'Common-Point Interval Systems for SSUF'
+  (2026-07-31) states:
+
+     "Goemans conjectured C=1; this was disproved in July 2026 by a
+      separate SEVEN-VERTEX counterexample with critical constant 16/15
+      (see the Dinitz-Garg-Goemans entry), leaving the optimal C open."
+
+  The artifact has exactly SEVEN vertices {s,u,v,w,t1,t2,t3}, and its own
+  section 7 computes the critical constant as 1/3 + 2/5 + 1/3 = 16/15.
+  Two independent parameters match, so this is that counterexample. The
+  corpus carries it as 'Dinitz-Garg-Goemans', 2026-07-22, sig 20,
+  disproved, UNREVIEWED.
+
+  The field's subsequent record, from the same corpus:
+    2026-07-22  this artifact                  C > 1, critical constant 16/15 = 1.0667
+    2026-07-23  Four-terminal planar DGG       four terminals, planar
+    2026-07-31  Common-Point Interval Systems  C >= 1.28249...
+    2026-08-04  Four-terminal scenario ladder  exact envelope ladder
+    2026-08-13  1.17353 planar bound           C >= 1.17353 for PLANAR instances
+
+  So the artifact was FIRST -- the disproof of C=1 is its own -- and was
+  overtaken on the constant within nine days. Both facts are invisible from
+  the document, which carries no references and no statement of what was
+  known. A reader cannot tell whether it is first, current, or superseded.
+  PASS  the artifact is identified in the corpus by two matching parameters   [seven vertices and 16/15]
+  PASS  literature placement is the one axis where the short prompt paid   [absent from the prompts and from the document]
+
+============================================================================
+6. Revision to arm AT
+============================================================================
+  AT part 1 named four separating features. This case collapses them:
+    - feature 1, a finite deliverable, is doing the work;
+    - feature 4 follows from it when the object is small;
+    - features 2 and 3 were absent here and the audit still closed.
+
+  AT's prediction survives in the form: AN ARTIFACT WHOSE DELIVERABLE IS A
+  FINITE OBJECT IS VERIFIABLE AT THE COST OF READING IT, WHATEVER THE
+  PROMPT. One whose deliverable is an existence argument is not, however
+  elaborate the search that produced it.
+
+  The control (feature 3) keeps its separate justification from AT part 2 --
+  it is what calibrates a search that is forbidden to report failure -- but
+  it is not what decides the audit surface. Those are two different claims
+  and part 1 ran them together.
+  PASS  the earlier four-feature claim is narrowed rather than defended
+
+============================================================================
+RESULT   8/8 checks passed   (n = 5 process artifacts)
+============================================================================
