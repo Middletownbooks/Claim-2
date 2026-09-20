@@ -243,7 +243,21 @@ prospective. **Use the date. Retire the model-name control.**
   out to be the best-evidenced artifact in the series** — SHA256SUMS, Dockerfile, provenance
   manifest, exact-rational certificates — and its refuted conjecture's own authors (Nair, Gohari)
   verified it. The tier badly understates it.
-- **Next on the queue:** more `disproved` + construction entries, and 2–3 `lean-verified` as an
-  instrument check.
+- **Nevanlinna half-plane (sig 45, `unreviewed`) — see `leanboard/aq/`. 22/22 on everything
+  computable**, including a graph bound that is *identically* `(|X|−2ε)²/2` and therefore tight
+  with nothing to spare, exact `Γ(2)` membership across the orbit, and the elementary totient
+  divergence. **The non-computational core — cusp reflection, the Farey-path limit, Jordan-domain
+  boundary behaviour — is untouched and needs a complex analyst.** The input was the **raw 7-hour
+  agentic session** behind the paper, the first process artifact this programme has seen: it
+  carries exact token accounting, a prompt engineered against confabulation, and a human
+  quality-control checklist for AI paper-writing that is more useful than most of these audits.
+- **The concurrency pattern is now the most important observation in the series.** Three instances
+  of near-simultaneous AI-assisted claims on one problem: two CDC proofs in a week, two `H₁`
+  bounds on one day, and Nevanlinna with He–Zhang one day earlier — each with its own
+  AI-assistance statement. Shared method plus shared training data produces correlated discovery,
+  and therefore correlated error. **Independent AI-assisted claims probably cannot corroborate
+  each other**, which undercuts the natural reading of any two of them agreeing.
+- **Next on the queue:** more `disproved` + construction entries, 2–3 `lean-verified` as an
+  instrument check, and an arm on the concurrency pattern itself.
 - **The control class is no longer outstanding.** Arm AK supplied it by accident and it went
   against the hypothesis. No further sampling pass is needed for that question.
