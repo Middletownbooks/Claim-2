@@ -345,15 +345,58 @@ The corpus cannot see this mechanism, for three reasons that are themselves the 
 **What would test it:** process artifacts, not outcome records. The Nevanlinna transcript in
 arm AQ is the only one this programme has seen, and one transcript is not a rate.
 
-### The consequence, which holds whatever the rate turns out to be
+### Correction: the gap is in the instrument, not in mathematics
 
-Under M1–M3 the colliding artifacts sit on a famous problem, so the community eventually
-looks. **Under M4 the collision is on an obscure conjecture nobody is watching, which may
-have been load-bearing for conditional results for twenty years.** Two independent
-refutations can both exist, neither be published, and the dependent literature never learn.
+I first concluded that under M4 *"two independent refutations can both exist, neither be
+published, and the dependent literature never learn."* **The operator's own case refutes
+that.** What actually happened:
 
-That is a worse failure mode than anything the original concurrency hypothesis described,
-and it is invisible to every instrument this programme has used so far.
+- the researcher who found a counterexample first **wrote a preprint**;
+- the author of the disproven conjecture **received messages from both researchers**,
+  independently.
+
+The result propagated through ordinary scholarly channels, reaching the one party with the
+most expertise and the most incentive to find a flaw in it. It simply did not make headlines,
+and so it is absent from the corpora this programme has been measuring.
+
+**That inverts the concern.** Not *"mathematics may not learn"* but *"the AI-progress
+measurement layer systematically undercounts"* — and specifically undercounts the
+unglamorous, load-bearing contributions. P2 above measures that bias from the inside:
+refutations that do get indexed skew toward famous conjectures (p = 0.009).
+
+### The schema has no tier for the state that case reached
+
+| tier | whole corpus | among disproofs |
+|---|---|---|
+| `unreviewed` | 418 | **138** |
+| `lean-verified` | 137 | 34 |
+| `site-confirmed` | 64 | 24 |
+| `lean-checked` | 30 | 4 |
+| `expert-verified` | 13 | 5 |
+| `contested` | 2 | 0 |
+
+**67% of disproofs sit in `unreviewed`.** There is no tier meaning *"the author of the
+refuted conjecture has been notified and accepts it."* That state is strictly stronger than
+`unreviewed` — the person best placed to find a flaw has looked — and is not the same as
+`expert-verified`, which in this corpus means someone reviewed the *proof*. The one entry
+that comes close, *Chip-firing middle stair*, earns `expert-verified` because two of the
+conjecture's posers helped **review the argument**: a different and rarer event.
+
+So `unreviewed` conflates *"nobody has looked"* with *"the one person with the most expertise
+and the most incentive to object has looked and agreed."* Across 138 disproofs that is a
+large amount of hidden variance, and the operator's case shows the stronger state occurs and
+goes unrecorded.
+
+Being told **independently by two researchers, with two different counterexamples**, is
+stronger still — arguably the best practical verification a refutation can have short of
+formalization. The schema cannot express it at all.
+
+### What survives of the M4 consequence
+
+Not the failure-of-propagation claim. What survives is narrower and better supported: **a
+class of real, correctly-propagated, author-acknowledged results is invisible to every
+instrument this programme has used**, and the instruments are what this programme has been
+drawing conclusions from.
 
 ## Error class
 
