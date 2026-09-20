@@ -116,10 +116,16 @@ produces cycle double covers on hard inputs. What I did not check, and cannot:
    output by computation on 15 graphs; neither is a proof.
 
 `lean-checked` is the correct tier, and the site's caution — *"the Cycle Double Cover Conjecture
-has a history of claimed proofs later found to have gaps"* — is the right posture. **Two
-independent AI-assisted claims in the same week, sharing a high-level method, is a pattern worth
-watching rather than a confirmation:** common-mode error is exactly what shared methodology
-produces.
+has a history of claimed proofs later found to have gaps"* — is the right posture.
+
+**Correction.** I originally wrote that two *independent* claims in the same week sharing a
+high-level method was a pattern worth watching, and read the shared method as common-mode error.
+The word "independent" is contradicted by a fact recorded three paragraphs up in this same report:
+Kintali's **§11 cites OpenAI's proof by name and compares against it**. The second artifact knew
+the first. The shared "flow to label" route is therefore explained by transmission and says nothing
+about models converging. See `ar/CONCURRENCY_CORRECTION.md`. **The caution itself survives and gets
+stronger, not weaker:** these are not two independent confirmations of CDC. One is an announcement,
+the other a response that had read it.
 
 ## 6. Next
 

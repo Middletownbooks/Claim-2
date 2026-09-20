@@ -251,12 +251,16 @@ prospective. **Use the date. Retire the model-name control.**
   agentic session** behind the paper, the first process artifact this programme has seen: it
   carries exact token accounting, a prompt engineered against confabulation, and a human
   quality-control checklist for AI paper-writing that is more useful than most of these audits.
-- **The concurrency pattern is now the most important observation in the series.** Three instances
-  of near-simultaneous AI-assisted claims on one problem: two CDC proofs in a week, two `H₁`
-  bounds on one day, and Nevanlinna with He–Zhang one day earlier — each with its own
-  AI-assistance statement. Shared method plus shared training data produces correlated discovery,
-  and therefore correlated error. **Independent AI-assisted claims probably cannot corroborate
-  each other**, which undercuts the natural reading of any two of them agreeing.
+- **The concurrency pattern — demoted, and the conclusion rebuilt on a different footing.** Three
+  instances of near-simultaneous AI-assisted claims on one problem: two CDC proofs in a week, two
+  `H₁` bounds on one day, and Nevanlinna with He–Zhang one day earlier. I read this as evidence
+  about *models* — shared method plus shared training data producing correlated discovery. That
+  reading is not supported, and one of my own reports contains the disconfirming fact: Kintali's
+  §11 **cites OpenAI's proof and compares against it**, so the two CDC artifacts are not two
+  independent events but one announcement and one response three days later. See
+  `ar/CONCURRENCY_CORRECTION.md`. The **artifact-level** conclusion survives and is strengthened:
+  **two AI-assisted claims on one problem probably cannot corroborate each other** — less so when
+  the second knew the first's target and route.
 - **Next on the queue:** more `disproved` + construction entries, 2–3 `lean-verified` as an
   instrument check, and an arm on the concurrency pattern itself.
 - **The control class is no longer outstanding.** Arm AK supplied it by accident and it went

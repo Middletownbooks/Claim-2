@@ -96,12 +96,16 @@ a construction is confabulated.** That is real evidence and it is not a verifica
 
 ## 4. Two provenance observations
 
-**Concurrent independent work again.** The site's note records He–Zhang, arXiv:2608.24829, dated
-**25 August** — one day before this paper — *also* carrying an AI-assistance statement. That is the
-third instance in this series of near-simultaneous AI-assisted claims on one problem, after the two
-CDC proofs and the two `H₁` bounds of the same day. **The pattern is now too frequent to be
-coincidence and it is the single most important thing this programme has noticed.** Shared method
-plus shared training data produces correlated discovery — and correlated error.
+**Concurrent work again — but "independent" was my word, not the evidence's.** The site's note
+records He–Zhang, arXiv:2608.24829, dated **25 August** — one day before this paper — *also*
+carrying an AI-assistance statement. That is the third instance after the two CDC proofs and the
+two `H₁` bounds of the same day. I called the pattern too frequent to be coincidence and read it as
+shared method plus shared training data producing correlated discovery. **That inference is
+withdrawn**; a mundane social mechanism accounts for at least the CDC pair and needs no claim about
+models at all. See `ar/CONCURRENCY_CORRECTION.md`. What the prompts in
+`PROMPTS_nevanlinna_translated.md` do show is the *shape* that mechanism predicts: prompt 2 is
+"write the proof up as complete English LaTeX code for me" — the find and the write-up are separate
+steps by separate models — and prompt 3 carries the priority anxiety explicitly.
 
 **The priority chain is checkable, and the site checked it.** A timestamped GitHub release of 24
 August anchors the claim, and the site verified it resolves. That is better provenance than most
@@ -121,5 +125,7 @@ the mathematics and the site says so.
    step is where to look.
 2. **Ask for more process artifacts.** The transcript was worth more than the paper. If the other
    corpus entries have sessions behind them, those are the highest-value inputs available.
-3. **The concurrency pattern deserves its own arm** — three instances now, and it bears directly on
-   whether independent AI-assisted claims can corroborate each other. They probably cannot.
+3. **The concurrency pattern deserves its own arm, with the model-level reading withdrawn** — see
+   `ar/CONCURRENCY_CORRECTION.md`. The arm's question is no longer "why do models converge" but "which
+   of three mechanisms — social seeding, standing scoreboard, or genuine coincidence — produced each
+   pair", and the corroboration conclusion holds regardless of the answer.
