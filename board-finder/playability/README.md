@@ -12,6 +12,8 @@ Shared area. Four documents, one instrument, one dataset.
 | **`PROMPT_SWEEP.md`** | the executable cut of it for a subscription chat surface — fetch discipline in place of the API's `max_content_tokens`, and a `transcribeThis` hand-off for cells the web cannot settle |
 | **`REPORT_SWEEP.md`** | **the sweep ran.** 23/23 records sourced: the registered prediction confirmed (and retired by confirming), five re-rates, three cells whose quote does not carry them, two mechanism claims of mine corrected, the Hadamard claim downgraded, and the first measurement of what a `[recall]` tag is worth |
 | **`frontier_sweep.json`** | the parsed sweep, derived from `sources/SWEEP_RESPONSE_RAW.md` by `parse_sweep.py` and merged into `classification.json` by `classify.py`, so a regeneration keeps the sourced frontiers |
+| **`TARGET_DECISION.md`** | the first target after the sweep: record 235 Zauner/SIC, why the other four FEASIBLE-and-unworkspaced records lose, and the gate it is contingent on |
+| **`PROMPT_GATE_SIC.md`** | that gate, as a pasteable prompt — exact vs numerical vs WH-covariant kept apart, `PREFIX` or `SCATTERED` with the hole list, and the model call (Opus) argued in Part B |
 | **`sources/`** | paper transcripts and the verbatim sweep reply. Text, never PDF |
 | **`classify.py`** | the instrument. Hand-adjudicated verdict table plus the lexical recall sweeps, kept so the candidate pool is auditable |
 | **`classification.json`** | 499 records with class, named witness object, playable / hasWorkspace / quantitative flags, and full `exactTarget` |
