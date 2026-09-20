@@ -106,6 +106,61 @@ VERDICTS = {
 }
 
 # --------------------------------------------------------------------------
+# witnessCheckFeasible -- the tractability field, for the playable records only.
+# rank -> (verdict, mechanism class, one line)
+#
+#   FEASIBLE    a search at reachable scale could plausibly find it
+#   BOUNDED     the search space is cut by a classification or reduction theorem,
+#               so the frontier -- not the space -- is the binding constraint
+#   FRONTIER    per-item check is cheap and the space is linearly ordered;
+#               value depends entirely on where the published sweep stopped
+#   HOPELESS    finite and out of reach at any scale a search can carry
+#
+# Mechanism classes: (a) reduction-bounded, (b) known computational method,
+# (c) frontier-limited linear search, (d) per-instance only.
+#
+# EVERY entry tagged [recall] below is UNVERIFIED -- this container is
+# egress-blocked and no literature was consulted. See FEASIBILITY.md.
+# --------------------------------------------------------------------------
+FEASIBILITY = {
+    9: ('HOPELESS', 'c', 'a zero off the line needs rigorous interval arithmetic at heights far past any new sweep'),
+   22: ('FRONTIER', 'c', 'Goldbach verification is a linear push; frontier is the whole question [recall: ~4e18]'),
+   49: ('FEASIBLE', 'b', 'per-group: exhibit a polynomial with that Galois group; solved for many families'),
+   79: ('BOUNDED',  'b', 'counterexample is one graph, but minor-closed structure cuts the candidates'),
+  106: ('FEASIBLE', 'b', 'exhibit a curve plus independent points; the record is pushed by explicit search'),
+  132: ('FEASIBLE', 'd', 'per-n descent settles instances; does NOT settle the ranked characterization'),
+  161: ('FRONTIER', 'c', 'a cycle is finite; the divergence branch is not certifiable at all'),
+  235: ('FEASIBLE', 'b', 'the Weyl-Heisenberg fiducial ansatz cuts d^2 vectors to one; exactness is the wall'),
+  239: ('FRONTIER', 'c', 'odd perfect N is a linear push against a very large known lower bound'),
+  257: ('FEASIBLE', 'b', 'a finite H plus a rational step graphon; small cases are directly computable'),
+  273: ('FRONTIER', 'c', 'h+ computation per prime is expensive; frontier is the binding constraint'),
+  275: ('BOUNDED',  'b', 'isogeny classes and mod-p representations are computable over small conductor'),
+  280: ('FEASIBLE', 'b', 'e^2=e on a fixed finite support is a finite algebraic system; SAT-tractable'),
+  287: ('BOUNDED',  'a', 'reduction to finite simple groups; search is a classified list, not a explosion'),
+  295: ('BOUNDED',  'b', 'reduces to snarks; exhaustive snark generation is the method and it is pushed'),
+  300: ('BOUNDED',  'a', 'reduction to finite simple groups, as for Alperin-McKay'),
+  307: ('FRONTIER', 'c', 'one n; a linear push, and the prime gap frontier is far out'),
+  322: ('HOPELESS', 'b', 'exhaustive to n=11 [recall]; graphs on 12 vertices are already ~1.65e11'),
+  331: ('FEASIBLE', 'b', 'smallest open orders are few; 668 was settled by an explicit construction'),
+  335: ('BOUNDED',  'b', 'knot tabulation by crossing number is the method; frontier is crossing count'),
+  345: ('HOPELESS', 'b', 'ES(7) needs 33 points; order types on 33 points are super-exponentially many'),
+  348: ('FRONTIER', 'c', 'one 6-tuple; a bounded linear search over exponents and bases'),
+  355: ('BOUNDED',  'b', 'as for the 5-flow: structured graph generation, known wall'),
+  356: ('BOUNDED',  'a', 'finite groups and blocks, but the reduction is weaker than the McKay family'),
+  390: ('HOPELESS', 'b', 'the 2-colour case was a 200TB SAT proof [recall]; 3 colours is vastly larger'),
+  393: ('HOPELESS', 'b', 'order 12: the incidence-structure space is astronomically large'),
+  401: ('FEASIBLE', 'b', 'Bruhat intervals in small Coxeter groups; KL polynomials are directly computable'),
+  426: ('FEASIBLE', 'b', 'D=6 MUBs: a small nonlinear system, heavily attacked numerically'),
+  429: ('BOUNDED',  'b', 'vertex-transitive graphs are generable from group data; frontier is order'),
+  458: ('BOUNDED',  'b', 'the two extremal candidates are explicit; a counterexample must beat both'),
+  472: ('BOUNDED',  'a', 'reduction to finite simple groups; GAP character table library covers much of it'),
+  488: ('HOPELESS', 'c', 'MEASURED HERE: margin pi(y)-W_far(y) grows 4 -> 184 over y=50..3000'),
+  493: ('BOUNDED',  'b', 'proven to d<=5 [recall]; d=6 parallelohedron enumeration is the wall'),
+  495: ('FEASIBLE', 'b', 'small multigraphs; list chromatic index is directly computable'),
+  500: ('FRONTIER', 'c', 'tau(p) per prime is cheap; purely a question of where the sweep stopped'),
+}
+
+# --------------------------------------------------------------------------
 # Recall sweeps -- kept so the candidate pool is auditable, not used to classify
 # --------------------------------------------------------------------------
 EX = re.compile(r'(there exists?\b|there is a\b|there are\b|\bexhibit\b|\bconstruct\b'
@@ -132,6 +187,7 @@ def main():
     for r in recs:
         rank = r['releaseRank']
         cls, why = VERDICTS.get(rank, ('U', ''))
+        feas = FEASIBILITY.get(rank)
         ws = r.get('researchWorkspaces') or []
         rows.append(dict(
             rank=rank, problemId=r['problemId'], title=r['canonicalTitle'],
@@ -141,6 +197,9 @@ def main():
             hasWorkspace=bool(ws), workspaceCount=len(ws),
             quantitative=bool(QUANT.search(r['exactTarget'])),
             quantifierPrefix=prefix(r['exactTarget']),
+            witnessCheckFeasible=(feas[0] if feas else None),
+            searchMechanismClass=(feas[1] if feas else None),
+            feasibilityNote=(feas[2] if feas else None),
             exactTarget=r['exactTarget'],
         ))
     rows.sort(key=lambda x: x['rank'])
@@ -185,6 +244,13 @@ def main():
             print(f"  {x['rank']:3d} [{x['cls']:3s}] {x['title'][:62]}")
 
     q = [x for x in rows if x['quantitative']]
+    fc = collections.Counter(x['witnessCheckFeasible'] for x in play)
+    mc = collections.Counter(x['searchMechanismClass'] for x in play)
+    print('\nwitnessCheckFeasible over the 35 playable:')
+    for k in ['FEASIBLE','BOUNDED','FRONTIER','HOPELESS']:
+        print(f'  {k:9s} {fc[k]:2d}')
+    print('search mechanism class:', dict(sorted(mc.items())))
+
     print(f'\nleak-table applicable (quantitative target, lexical upper bound): '
           f'{len(q)}/{n} = {100*len(q)/n:.0f}%')
     print(f'  of the {len(play)} playable: {sum(1 for x in play if x["quantitative"])} quantitative, '

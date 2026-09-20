@@ -1,0 +1,36 @@
+sieved to N = 20,000,000   pi(N) = 1,270,607   [1.0s]
+window lengths y = 2 .. 3,000
+windows restricted to x >= X0 = 1,000,000 (the boundary window at x=2 is
+excluded: it ties pi(y) automatically and tells you nothing)
+
+scanned 2,999 window lengths [124.6s]
+
+==============================================================
+NO COUNTEREXAMPLE in this range. The conjecture survives.
+==============================================================
+
+ties (W_far(y) == pi(y), the real near-miss frontier): 5
+  y=    2  pi(y)=   1  window (x,x+y] at x=1,000,001 holds 1
+  y=    3  pi(y)=   2  window (x,x+y] at x=1,000,036 holds 2
+  y=    4  pi(y)=   2  window (x,x+y] at x=1,000,035 holds 2
+  y=    9  pi(y)=   4  window (x,x+y] at x=1,002,340 holds 4
+  y=   10  pi(y)=   4  window (x,x+y] at x=1,002,339 holds 4
+
+margin D_far(y) = pi(y) - W_far(y), sampled:
+       y   pi(y)    W(y)   D(y)
+      10       4       4      0
+      50      15      11      4
+     100      25      18      7
+     250      53      33     20
+     500      95      52     43
+    1000     168      94     74
+    1500     239     132    107
+    2000     303     170    133
+    2500     367     207    160
+    3000     430     246    184
+
+smallest margin over the whole range: D = 0, first at y = 2
+  mean D over first half of range:  56.66
+  mean D over second half of range: 146.80
+
+wrote /home/user/Claim-2/board-finder/playability/sweeps/hl2_result.json

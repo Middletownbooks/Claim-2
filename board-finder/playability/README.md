@@ -6,6 +6,7 @@ Shared area. Four documents, one instrument, one dataset.
 |---|---|
 | **`PLAYABILITY.md`** | the census. 499 ranked problems classified by witness reachability; 35 playable (7.0%); two classes the I/I\*/II/III taxonomy had no cell for |
 | **`RANKING_FIT.md`** | audit against `../PROOFATLAS_FIT.md`. Settles its registered workspace-allocation test at n=123, confirms and sharpens its "one of four fields" verdict, and measures where `../PROMPT.md` does not apply |
+| **`FEASIBILITY.md`** | the tractability pass. `witnessCheckFeasible` for all 35, three search mechanisms, and one sweep run end to end (`sweeps/`) rather than recalled |
 | **`PROMPT_WITNESS.md`** | the companion prompt for the yes/no half of the corpus, where the leak table has no row to write. Part A / Part B, same shape as `../PROMPT.md` |
 | **`classify.py`** | the instrument. Hand-adjudicated verdict table plus the lexical recall sweeps, kept so the candidate pool is auditable |
 | **`classification.json`** | 499 records with class, named witness object, playable / hasWorkspace / quantitative flags, and full `exactTarget` |
@@ -13,7 +14,7 @@ Shared area. Four documents, one instrument, one dataset.
 
 Regenerate: `python3 classify.py`.
 
-## The four things worth knowing without reading further
+## The five things worth knowing without reading further
 
 1. **7.0% of the ranked corpus is playable.** 35 of 499 admit a single finite
    object that settles a branch. Six of twelve domains are at exactly zero — TCS,
@@ -34,15 +35,25 @@ Regenerate: `python3 classify.py`.
    are the whole intersection (`PLAYABILITY.md` §3, or
    `playable: true, hasWorkspace: false`).
 
+5. **Of the 35, only 10 are feasible now** — 12 more pend a frontier lookup that
+   takes minutes online, 6 are playable in principle and dead in practice. The
+   strongest single target is **280, Kaplansky's idempotent conjecture**: an
+   unworkspaced P2 record where the adjacent unit conjecture already fell to a
+   computer search. See `FEASIBILITY.md`.
+
 ## What is not done
 
 * The 35 verdicts are **one rater, no blind second pass**. Every verdict names its
   witness object so a second rater scores the object and not the label — the D35
   remedy, applied prospectively and unrun.
-* **`witnessCheckFeasible` is unanswered for every record.** Everything here is
-  classified on whether a check terminates, not on whether it terminates in a
-  usable time. That is the field that decides whether any of this is playable in
-  practice, and closing it is what `PROMPT_WITNESS.md` step 4 is for.
-* Nothing was checked against the live ProofAtlas site or any literature — this
-  container is egress-blocked. `RANKING_FIT.md` §4's four-record recommendation is
-  a **prediction to verify, not a finding**.
+* **`FEASIBILITY.md` rests heavily on recall.** Every cell tagged `[recall]` is
+  unverified — this container is egress-blocked and no literature search was run.
+  They are the first thing to check with a network connection, along with
+  `RANKING_FIT.md` §4's four-record recommendation, which is a **prediction to
+  verify, not a finding**.
+* The one measured feasibility verdict (`488`, HOPELESS) covers one record of the
+  nine whose value depends purely on a sweep frontier. The other eight have
+  recalled frontiers only.
+* `sweeps/sweep_hl2.py` measured the x-dependent half of its problem and the
+  cheap half — admissible patterns of diameter y beating pi(y) — **is the
+  computation that should have been run and is not written**. `FEASIBILITY.md` §1.
