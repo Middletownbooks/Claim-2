@@ -107,6 +107,18 @@ models at all. See `ar/CONCURRENCY_CORRECTION.md`. What the prompts in
 "write the proof up as complete English LaTeX code for me" — the find and the write-up are separate
 steps by separate models — and prompt 3 carries the priority anxiety explicitly.
 
+**Settled (2026-09-20).** He–Zhang arXiv:2608.24829v1 was supplied and audited in
+`ar/verify_hezhang.py` (27/27). The two papers are **not the same mathematical object**: the
+domain (Farey-edge chain vs Gaussian-perturbed graph), the obstruction (Green energy /
+spherical area vs the Blaschke condition) and the divergence engine (log-mean of λ via
+coprime lattice counting vs `Σ φ(2m)/(m² log m)`) all differ. What they share — the target,
+λ, and Schwarz reflection — is exactly what EKS26 (arXiv:2604.06136, revised 24 July 2026)
+hands out: it poses this as its Question 2 and names λ as the half-plane counterexample.
+He–Zhang cite it, thank its authors, prove their Lemma 3.1 "following the idea of [EKS26,
+Lemma 6]", and record accessing the revised PDF on 24 August — the same day as the other
+paper's timestamped release. Shared ancestor, independent constructions, no communication
+required or in evidence.
+
 **The priority chain is checkable, and the site checked it.** A timestamped GitHub release of 24
 August anchors the claim, and the site verified it resolves. That is better provenance than most
 mathematics offers, AI-assisted or not.

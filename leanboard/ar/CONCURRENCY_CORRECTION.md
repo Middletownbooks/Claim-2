@@ -1,6 +1,6 @@
 # Correction — the concurrency pattern was over-read
 
-**Date:** 2026-09-20. **Status:** fourth refuted hypothesis of this series. **Measurement:** arm AR — `ar/base_rate_concurrency.py` 7/7, `ar/benchmark_ramp.py` 5/5.
+**Date:** 2026-09-20. **Status:** fourth refuted hypothesis of this series. **Measurement:** arm AR — `ar/base_rate_concurrency.py` 7/7, `ar/benchmark_ramp.py` 5/5, `ar/verify_hezhang.py` 27/27.
 
 ## What I claimed
 
@@ -90,12 +90,12 @@ Re-read against the deflation, the instances separate by mechanism:
 |---|---|---|---|
 | CDC — `openai/cdc-lean` (10 Jul) vs Kintali (13 Jul) | 3 days | same conjecture, shared high-level route, **second cites first** | **social transmission — established, not inferred** |
 | prime gaps, 2026-09-03 — **three** claims, not two: `H₁ ≤ 212` (Axiom Math, sig 62), `H₁ ≤ 186` (OpenAI, sig 62), *Maximal prime-gap lower bound* (OpenAI, sig 60) | same day | **no** — three distinct objects, different bounds, different conditionality, different methods | **M2.** Polymath8b's 246 is a public record with a known ladder. Counting this as a "pair" was itself an error: one of the three is a lower-bound result on a different question |
-| Nevanlinna — He–Zhang (25 Aug) vs this paper (26 Aug; release 24 Aug) | 1 day | unknown — He–Zhang not obtained | **undetermined.** The release predates He–Zhang, so simple seeding in that direction does not fit |
+| Nevanlinna — He–Zhang (25 Aug) vs 2608.26062 (26 Aug; release 24 Aug) | 1 day | **no** — different domain, different obstruction, different divergence engine | **M2, settled below.** Both descend from EKS26 (revised 24 Jul 2026), which poses the question as a numbered Question and names λ as the starting point. `ar/verify_hezhang.py`, 27/27 |
 
 **The count collapses.** Of three instances: one has transmission established from the
 artifact's own text, one is three different results descending a public ladder on a busy
-day, and one is undetermined for want of a paper this session cannot fetch. That leaves
-**n = 1 unexplained**. "Too frequent to be coincidence" required n = 3 independent events,
+day, and and one is two different constructions from one shared ancestor (settled below once
+He–Zhang arrived). That leaves **n = 0 unexplained**. "Too frequent to be coincidence" required n = 3 independent events,
 and there were never three.
 
 ## Supporting evidence for the deflation, from the Nevanlinna transcript
@@ -225,6 +225,63 @@ selected precisely because they sit just past what was previously solvable. That
 sharper claim than the original and points the same way: verification effort lags capability,
 and it lags hardest where the selection process is deliberately hardest. The AJ correlation
 itself is unaffected; only its interpretation moves.
+
+## The Nevanlinna instance is settled: M2
+
+He–Zhang, arXiv:2608.24829v1, arrived after the discriminator was declared. Scaffolding
+checked in `ar/verify_hezhang.py` (**27/27**), then the test run.
+
+**Twenty-seven checks on He–Zhang's computable content.** λ = ϑ₂⁴/ϑ₃⁴ real on the imaginary
+axis, 2-periodic, omitting 0 and 1; the cusp expansion λ = 16q + O(q²) with the remainder
+ratio settling on **128** exactly; Lemma 4.1's Stern–Brocot bounds `q+s ≥ m+2`, `qs ≥ m+1`
+**attained at every depth** by the spine (1, m+1), so the estimate is tight rather than
+slack; children inside the parent half-disk, checked in exact rationals; the bays
+`B_n = [6n, 6n+4]` disjoint with `J_n ⋐ int B_n`; `Im z_{c,d} = 1/(c²+d²)` over 89 primitive
+pairs with the fourfold stabiliser multiplicity; `N(R) = (6/π)R² + O(R log R)` to **0.1%** at
+R = 160; the anharmonic group (3.1) closed and of order 6; Lemma 6.2's Möbius identities
+`A(v+it) = a/q + i/(q²t)` and `A(u) − a/q = −s/(q(qr−ps))` exact; and §8's Edrei bound
+`ρ(F) ≤ 1`, forcing infinite order and `δ(0) = δ(1) = δ(∞) = 0`.
+
+**Two checks failed on the first run; both were my test's fault, not the paper's.** I used
+`6/π²` for the lattice count where the paper says `6/π` — `6/π²` is the coprime *density*,
+`6/π` the count in a disk of area `πR²`, and the paper is right. And I computed the
+determinant of `A = [[a,b],[q,−p]]` as `aq − bp` instead of `−(ap+bq)`. Corrected, both pass.
+
+**The same-object test.**
+
+| | He–Zhang (25 Aug) | AQ paper 2608.26062 (26 Aug) | |
+|---|---|---|---|
+| target | Nevanlinna half-plane, Question 1.1 | same | **same** |
+| common ancestor | EKS26 Question 2, arXiv:2604.06136 | EKS26 | **same** |
+| starting function | modular λ, Γ(2) | modular λ, Γ(2) | **same** |
+| **the domain** | boundary is a chain of **Farey edges**, Stern–Brocot mediant refinement in disjoint bays, chosen by a diagonal procedure | boundary is the **graph of a Gaussian-perturbed function**, bi-Lipschitz with δ = 2ε/√π ≈ 0.00113 | **different** |
+| **the obstruction** | **Green energy / spherical area**: `∫_Ω G_Ω(i,z)(λ^#)² dA = ∞`, via Ahlfors–Shimizu and Riesz decomposition | **Blaschke condition**: `Σ G_ℍ(i,z_n) = ∞` over an explicit Γ(2) orbit | **different** |
+| **the divergence engine** | log-mean of λ via Jensen plus coprime lattice counting | `Σ φ(2m)/(m² log m)`, a totient series | **different** |
+| extension to ℂ | Schwarz reflection across Farey edges | Schwarz reflection | same (forced) |
+| authorship | 2 named humans, Fudan + Xi'an Jiaotong | 7 human collaborators | different |
+
+**All three load-bearing components differ.** What the two share is precisely what EKS26
+hands out for free: the target, its question number, and λ as the function that already
+omits three values on ℍ without being of bounded type.
+
+**M1 predicted the same object, a shared route, and an asymmetry in polish. None is
+present. M2 predicted different objects on a common famous target. That is what is there.**
+
+The shared ancestor is cited rather than inferred: He–Zhang's Lemma 3.1 is proved *"following
+the idea of [EKS26, Lemma 6]"*, they thank Eremenko, Kulikov and Sodin in the
+acknowledgements, and they record accessing the revised EKS26 PDF on **24 August 2026** — the
+same day as the other paper's timestamped release. EKS26 was revised 24 July 2026. Two groups
+read a month-old preprint that *poses the question as a numbered Question* and *names the
+starting function*, and posted a day apart.
+
+This is the list mechanism at its highest resolution: not a generic catalogue of open
+problems but a specific recent paper that supplied the target and the first move. No
+communication between the groups is required, and none is in evidence.
+
+**The count is now zero.** Of three instances: CDC is established transmission from the
+artifact's own text, the prime-gap day is three different results on a public ladder, and
+Nevanlinna is two different constructions from one shared ancestor. **No instance remains
+unexplained.** The hypothesis is fully retracted, not merely demoted.
 
 ## Error class
 
