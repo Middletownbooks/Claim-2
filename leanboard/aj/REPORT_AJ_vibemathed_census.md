@@ -219,6 +219,17 @@ prospective. **Use the date. Retire the model-name control.**
   finding: the theorem is the *loopless* case**, since `loopless` is a structure field, and the
   loop reduction — trivial but real — is not formalized. Both README and VERIFICATION.md
   disclose this; the site's entry does not.
-- **Next on the queue:** Carathéodory smooth (sig 55), then the remaining `lean-checked` entries.
+- **Carathéodory smooth (sig 55) is done — see `leanboard/ao/`.** The mathematics checks: the
+  seed function's trace-free Hessian has `inf |q_E(f)| = 0.140000` exactly, so it has no
+  umbilics, and `g_2`'s winding number is exactly 4 at four radii, giving index 2 ≠ 1 — the
+  property that contradicts Loewner. **But the artifact is still not merged**: a month after the
+  site's own unmerged finding, there are **zero** Carathéodory, Loewner or sphere-immersion files
+  among the repository's 1,533 `.lean`, and PR #5066 has not landed. The formalisation is a
+  self-described reconstruction from an **X post** whose referenced writeup was never public.
+- **Where formalization beats computation, demonstrated.** The `C^∞`-at-the-origin claim rests on
+  `exp(−r^(−1/4))` flatness that only becomes visible below `r ≈ 10⁻⁸⁰`, where floats underflow.
+  Every other arm's numerics worked because the object was finite; this one is not. It is the
+  clearest case in the series for what a Lean proof buys.
+- **Next on the queue:** the remaining `lean-checked` entries.
 - **The control class is no longer outstanding.** Arm AK supplied it by accident and it went
   against the hypothesis. No further sampling pass is needed for that question.
