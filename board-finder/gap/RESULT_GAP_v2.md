@@ -1,6 +1,9 @@
 # Gap analysis v2 — result, scored against the prompt's own criterion
 
-Run 20 Sep 2026. Response stored at `sources/GAP_V2_RESPONSE_RAW.md`.
+Run 20 Sep 2026. Response stored verbatim at `sources/GAP_V2_RESPONSE_RAW.md` — that path was
+cited here from the start but the file was not actually written until 21 Sep, when it was
+recovered from the session transcript. A citation to a file that did not exist is the same
+defect class as a number that cannot fall.
 
 ## 1. Did it pass?
 
@@ -95,6 +98,14 @@ Nothing should start before that runs. This is precisely the SIC-gate pattern: a
 decides whether a programme has a target at all, and the one lesson this project has paid for
 twice is to run it *first*.
 
+> **[21 Sep 2026 — the gate has run. See `GATE_EPOCH.md`.]** The zip would not open on the user's
+> machine, so the list came in as nine screenshots; all 41 unsolved entries are transcribed at
+> `sources/EPOCH_UNSOLVED_LIST.md`. **PTE 11, MOLS(10) and Costas 32/33 all clear.** Two *pool*
+> items do not: U6 (114 as a sum of three cubes) and U7 (lonely runner at n = 8) are both on
+> Epoch's list by name, and are dead. The near-miss worth knowing: Epoch lists the rank of the
+> **4×4** matmul tensor, and candidate #4 is the **3×3** tensor — not the same problem, so the
+> anti-criterion does not fire, but it is a third independent reason to leave #4 dropped.
+
 **Costas should drop below PTE until its status is refreshed.** Its most recent *dated* status
 source is Jedwab–Wodlinger **2014**, and the response itself notes the corroborating sources are
 *"less precise about the 32/33 frontier."* This project has measured what a stale frontier source
@@ -110,8 +121,8 @@ That is the rubric working as designed.
 
 ## 6. Recommendation
 
-1. **Run the Epoch gate.** Download the data zip, diff the full fifty against 3 MOLS(10), PTE 11,
-   Costas 32/33. Cheap, and it decides whether anything here survives.
+1. ~~**Run the Epoch gate.**~~ **DONE, 21 Sep 2026 — `GATE_EPOCH.md`.** All three cleared; U6
+   and U7 excluded; C4 flagged again. The zip never opened, so it ran off screenshots.
 2. **Then PTE size 11**, symmetric-ansatz extension first — bounded, publishable either way, and
    the asymmetric region is genuinely unswept.
 3. **Refresh Costas status** before spending anything on it; the Rickard database check the

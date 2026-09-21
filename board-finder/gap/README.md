@@ -10,6 +10,11 @@ are being swept by agent pipelines, so off-list is where the value is.
 | `REVIEW_JULY_GAP_ANALYSIS.md` | check of the July 2026 response. Four claims verified here (Kalai 3^d, Tuza K₄/K₅, Ball at p=2, the Kaplansky nesting); four defects, the worst being that its dimension F rewards exactly the property that made Zauner/SIC worthless; three things kept verbatim |
 | `PROMPT_GAP_v2.md` | the rebuilt prompt. Part A pasteable, Part B operator notes with each clause traced to what it is built against |
 | `RESULT_GAP_v2.md` | **it ran.** Passed its own bar narrowly — four candidates at D=5, two of them killed by their own falsification lines. Closes two unverified-pool items from work on this branch, and carries one correction to the prompt itself |
+| `sources/GAP_V2_RESPONSE_RAW.md` | the verbatim response. Cited by `RESULT_GAP_v2.md` from the start, actually written on 21 Sep after the citation was found dangling |
+| `sources/EPOCH_UNSOLVED_LIST.md` | all 41 unsolved FrontierMath: Open Problems entries, transcribed from nine screenshots because the site's zip would not open. Carries its own completeness argument, including the one entry the relayed counts cannot account for |
+| `epoch_exclusions.json` | derived from the transcription by script, not typed twice |
+| `epoch_gate.py` | the diff. Screens 22 live items on distinctive object tokens, then refuses to return a verdict until every collision carries a reasoned adjudication. Two positive controls abort the run if the matcher breaks |
+| `GATE_EPOCH.md` | **the gate result.** PTE 11, MOLS(10) and Costas 32/33 clear; pool items U6 and U7 are on the list and dead; the 3×3-vs-4×4 matmul near-miss; and why Epoch's type tags are a different axis from our screen's |
 
 ## The one-line version of what changed
 
@@ -38,3 +43,18 @@ are both already on FrontierMath: Open Problems for exactly that reason.
 Four agent-facing databases are now known — FrontierMath: Open Problems, TheoremDB,
 Horizon/HorizonMath, erdosproblems.com. Epoch's own submission criteria paraphrase this
 commission. v3 should enumerate those first and build the exclusion set before casting the net.
+
+## The gate that was outstanding is closed
+
+`RESULT_GAP_v2.md` §5 said nothing should start until the four ranked candidates were diffed
+against Epoch's full fifty rather than the ten that were readable. That ran on 21 Sep against all
+41 unsolved entries. **PTE size 11 is cleared and is the first target.** The gate also paid for
+itself twice over by retiring two unverified-pool items that would each have needed a promoting
+search.
+
+One finding from it belongs here rather than in the result file: **Epoch's list contains no
+Hadamard-family problem at all** — not Hadamard, skew-Hadamard, Williamson, propus or D-optimal
+designs, and those five items return no token collision with any of the 41. The Hadamard
+*problem* is on TheoremDB and Horizon; the thirteen open orders between 2000 and 3000 are on
+none of the four known databases. That is the one asset on this board the commons has not
+already enumerated.
