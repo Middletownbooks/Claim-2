@@ -1,0 +1,32 @@
+{
+  "_note": "Chunk D, 27 records, classified against the corrected metric registered in RESULT_MAPPING_C.md section 3: tracked quantity is a NUMBER and WHAT MOVES IT is CONSTRUCTION or COMPUTATION. quantity: number | class-list | binary | not-found. mover: construction | computation | algorithm-asymptotic | proof. Classification is mine, from the searcher's own cells; the cells are not re-adjudicated here.",
+  "records": [
+    {"rank": 125, "short": "Tarski exponential", "quantity": "binary", "none": true, "mover": "proof"},
+    {"rank": 126, "short": "unconditional classical verification of BQP", "quantity": "binary", "none": true, "mover": "construction"},
+    {"rank": 152, "short": "NP vs existential theory of the reals", "quantity": "class-list", "none": false, "mover": "construction"},
+    {"rank": 167, "short": "P_R vs NP_R (BSS)", "quantity": "binary", "none": true, "mover": "proof"},
+    {"rank": 172, "short": "symmetric-group HSP", "quantity": "binary", "none": true, "mover": "algorithm-asymptotic"},
+    {"rank": 174, "short": "inhomogeneous Landau-Coulomb regularity", "quantity": "number", "none": false, "mover": "proof"},
+    {"rank": 176, "short": "non-radial soliton resolution", "quantity": "class-list", "none": false, "mover": "proof"},
+    {"rank": 183, "short": "anisotropic Calderon uniqueness", "quantity": "class-list", "none": false, "mover": "proof"},
+    {"rank": 191, "short": "relativistic Vlasov-Maxwell", "quantity": "number", "none": false, "mover": "proof"},
+    {"rank": 205, "short": "dihedral HSP", "quantity": "number", "none": false, "mover": "algorithm-asymptotic"},
+    {"rank": 208, "short": "density of hyperbolicity", "quantity": "class-list", "none": false, "mover": "proof"},
+    {"rank": 212, "short": "Skolem problem", "quantity": "number", "none": false, "mover": "proof"},
+    {"rank": 215, "short": "De Giorgi / Allen-Cahn dims 4-8", "quantity": "number", "none": false, "mover": "proof"},
+    {"rank": 221, "short": "random 3-SAT threshold r_3", "quantity": "number", "none": false, "mover": "algorithm-asymptotic"},
+    {"rank": 223, "short": "Vaught's conjecture", "quantity": "class-list", "none": false, "mover": "proof"},
+    {"rank": 235, "short": "Zauner / SIC existence", "quantity": "number", "none": false, "mover": "construction"},
+    {"rank": 253, "short": "Witten WRT asymptotic expansion", "quantity": "class-list", "none": false, "mover": "proof"},
+    {"rank": 266, "short": "2D inviscid Boussinesq regularity", "quantity": "binary", "none": false, "mover": "computation"},
+    {"rank": 269, "short": "QMA vs QMA(2)", "quantity": "class-list", "none": false, "mover": "proof"},
+    {"rank": 282, "short": "qubit depolarizing channel capacity", "quantity": "number", "none": false, "mover": "computation"},
+    {"rank": 294, "short": "Lions small-time global null controllability", "quantity": "class-list", "none": false, "mover": "proof"},
+    {"rank": 306, "short": "planar Mumford-Shah local structure", "quantity": "number", "none": false, "mover": "proof"},
+    {"rank": 320, "short": "Positivity problem for LRS", "quantity": "number", "none": false, "mover": "proof"},
+    {"rank": 326, "short": "Calderon for bounded measurable conductivities", "quantity": "class-list", "none": false, "mover": "proof"},
+    {"rank": 328, "short": "Potts discontinuity threshold q_0(d)", "quantity": "not-found", "none": false, "mover": "proof"},
+    {"rank": 344, "short": "Koebe circle-domain uniformization", "quantity": "class-list", "none": false, "mover": "proof"},
+    {"rank": 346, "short": "corona problem for the polydisc", "quantity": "binary", "none": true, "mover": "proof"}
+  ]
+}
