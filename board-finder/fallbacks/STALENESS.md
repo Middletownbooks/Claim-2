@@ -1,7 +1,6 @@
 # The frontier is moving faster than the screening cycle
 
-**Measured 21 Sep 2026, prompted by the user finding that rank 234 was resolved.** Three of the
-candidates named in `QUEUE_V3.md` and the tail screen were already gone when I named them, all
+**Measured 21 Sep 2026, prompted by the user finding that rank 234 was resolved.** **All five** of the candidates named in `QUEUE_V3.md`, plus one from the tail screen, were already gone when I named them, all
 within the preceding eight days.
 
 ## 1. What moved
@@ -10,6 +9,8 @@ within the preceding eight days.
 |---:|---|---|---|
 | **234** | k-Server Conjecture, general metrics | **RESOLVED.** arXiv:2609.15979, Coester–Koutsoupias–Zbysiński (Oxford), *"The k-server conjecture is true"* — WFA is *k*-competitive on every metric space | **14 Sep 2026** |
 | **438** | Matroid Secretary Conjecture | **RESOLVED.** arXiv:2609.14555, Singla (Georgia Tech), *"The Matroid Secretary Conjecture is True"*, 1/4-competitive. Three follow-ups within days (2609.17782 → 3.7321-competitive; 2609.19118; 2609.20797) | **13 Sep 2026** |
+| **310** | Deterministic poly-time exact bipartite matching | **claimed RESOLVED** — arXiv:2604.01571, Du, deterministic O(n⁶) with machine-checked formalization | **Apr 2026** |
+| **283** | Polynomial-time explicit log-Ramsey graphs | **closed up to polylog** — Li, ECCC TR23-023, K = log^O(1) N | 2023 |
 | **337** | Capacity of the binary deletion channel | **effectively closed as a target.** arXiv:2609.19412, *"Binary Deletion Channel Capacity to Within One Hundredth of a Bit"*, plus 2609.13351 and 2604.05867 in the same window | **Sep 2026** |
 
 I named 337 six hours before writing this as *"the best single mid-band candidate… no
