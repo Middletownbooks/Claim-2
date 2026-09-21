@@ -1,0 +1,24 @@
+{
+ "heights_attempted": [
+  {
+   "H": 32,
+   "seconds": 472.0,
+   "rc": 0,
+   "tail": "{\"n\": 11, \"H\": 32, \"split\": [5, 6], \"equations\": [1, 3, 5, 7, 9], \"left_table_keys\": 7061121, \"right_enumerated\": 82598880, \"right_expected\": 82598880, \"exhaustive\": true, \"seconds\": 471.1, \"seconds_b"
+  },
+  {
+   "H": 36,
+   "seconds": 1003.6,
+   "rc": 0,
+   "tail": "{\"n\": 11, \"H\": 36, \"split\": [5, 6], \"equations\": [1, 3, 5, 7, 9], \"left_table_keys\": 13065937, \"right_enumerated\": 170230452, \"right_expected\": 170230452, \"exhaustive\": true, \"seconds\": 1001.7, \"secon"
+  }
+ ],
+ "mem_cap_gb": 12.0,
+ "budget_seconds": 3600,
+ "prior_seconds": 314.0,
+ "memory_headroom": true,
+ "note": "H=40 hit the clock after 1811s",
+ "stopped_by": "clock",
+ "budget_exhausted": true,
+ "total_seconds": 3600.4
+}

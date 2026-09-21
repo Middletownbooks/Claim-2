@@ -11,7 +11,10 @@ it first to *work on* — above two candidates with higher scores — because it
 | `verify.py` | exact integer verification of a PTE pair, the two readings of "symmetric", and three controls on objects found here rather than recalled |
 | `search_symmetric.py` | meet-in-the-middle over the reduced system. Every hit is turned back into an explicit (A, B) and checked against all ten power sums before it is reported |
 | `score_pte11.py` | the scorer, committed before the data. A prediction with no evidence is NOT-SCORED, never a pass |
-| `runs/`, `evidence/` | empty by design at registration |
+| `run_n11.py` | drives the height ladder inside a stated budget, each height a child process under an address-space cap so the stop reason is observed rather than inferred |
+| `RESULT_PTE11.md` | **the first result.** A-1 confirmed, **A-2 falsified**, A-3 confirmed and much weaker than it sounds; A-4 and A-5 still unrun |
+| `runs/` | five exhaustive n=11 runs, H = 20…36, plus the operator log |
+| `evidence/` | still empty — A-4 and A-5 need their promoting searches |
 
 ## The one-line version
 
@@ -40,3 +43,14 @@ survey. All of it from `../gap/sources/GAP_V2_RESPONSE_RAW.md`.
 
 Two promoting searches (A-4, A-5) decide whether the target exists at all. They are named in
 `PREREG_PTE11.md` §5 before the run, so they cannot be re-scoped after it.
+
+## What the first hour bought
+
+Exhaustive to **H = 36**, zero solutions, at a rate constant to within 3 % across a 38× range.
+And a calibration that puts the null in its place: the classic size-**7** solution
+{0,18,27,58,64,89,101} / {1,13,38,44,75,84,102} has primitive centred height **51**, so this run
+did not reach the height at which the smallest known size-7 solution lives — let alone a size-11
+one. The null is exhaustive over its region and the region is small.
+
+Which makes **A-4 the prediction that matters**: one number from the Borwein–Lisoněk–Percival
+lineage decides whether this direction is inside somebody else's null.
