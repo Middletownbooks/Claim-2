@@ -77,7 +77,23 @@ generating them *is* the entire cost. The reduction in §3 of `PREREG_PTE11.md` 
 5 of the 11 degrees of freedom on the power-sum equations, leaving 6 — and C(*H*,6) is what six
 free parameters cost. That is the floor for any method that enumerates rather than solves.
 
-## 6. What this says about the height-3500 frontier
+## 6. What this says about the height-3500 frontier — **THIS SECTION IS WRONG, see `CMSV2024.md` §3**
+
+> **[Corrected 21 Sep 2026, same day, on reading the actual paper.]** The conclusion below —
+> that the published frontier is compute rather than method — is **false**. Coppersmith et al.
+> §4.1 use the divisibility structure as the **generator** of the enumeration, not as a filter
+> on it: every newly selected element is forced into a residue class mod *p*₁ = 31 or *p*₂ = 29,
+> so it has ≈2*H*/*p* candidates instead of 2*H*. Their enumeration is **52,684×** smaller than
+> this project's at *H* = 90 and 1,599× smaller at *H* = 3500, before the checks mod 19, 17, 13,
+> the moment table mod 23, and the polynomial *F*₁₁. §5 above names exactly that use case and
+> then fails to imagine it had been implemented. The divisor set used here was also the weak
+> one — Kleiman alone gives 2, 3, 5, 7, while their Table 1 gives 2⁸·3⁴·5³·7²·11·13·17·19 for
+> *C*₁₁ and 31 more for *C′*₁₁.
+>
+> The text below is kept as written, because it is the record of a wrong inference made
+> confidently from a partial source.
+
+
 
 At C(*H*,6) and ~170 k/s, height 3500 is ≈ 2.5 × 10¹⁸ tuples. In tight C at 10⁹–10¹⁰ ops per
 core-second that is **tens to hundreds of core-years** — a large but entirely ordinary budget for

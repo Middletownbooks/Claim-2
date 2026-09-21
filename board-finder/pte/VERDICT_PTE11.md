@@ -58,6 +58,21 @@ H = 36 null carried almost no weight because it never reached the primitive cent
 the smallest known size-**7** solution. The published bound makes the point quantitative: we are
 short by a factor that a sixth power turns into nine orders of magnitude.
 
+> **[Corrected 21 Sep 2026, on the actual paper — `CMSV2024.md`.]** §3's arithmetic is right
+> about *this* project's method and wrong about theirs. Coppersmith et al. do not enumerate
+> C(*H*,6) anything: their §4.1 chains the divisibility conditions to force each selected element
+> into a residue class, giving an enumeration 52,684× smaller than ours at *H* = 90. The 3500
+> frontier is a method result. The verdict is unchanged; the reason in §3 is not the right one.
+>
+> Also settled by the paper: **height means largest element in absolute value**, so their figure
+> and our *H* are the same quantity — the "diameter" row of §2's table is struck, and the ratio
+> is 50× at the *H* = 70 now on file. A-4 still lands in the unregistered band.
+>
+> And **A-5 is FALSIFIED**: the paper searches symmetric solutions only, as did
+> Borwein–Lisoněk–Percival, so `RESULT_GAP_v2.md` §6's "genuinely unswept" survives. The
+> asymmetric region is nonetheless not a target — 10 degrees of freedom against 6, so 10²⁰
+> candidates at *H* = 100. §6's branch assumed unswept implies attackable.
+
 ## 4. §6 does not fire, and the target is dead anyway
 
 `PREREG_PTE11.md` §6 registered: *"If A-3, A-4 and A-5 all hold, PTE 11 is dead… the registered
