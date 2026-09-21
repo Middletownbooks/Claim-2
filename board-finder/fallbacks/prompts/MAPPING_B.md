@@ -20,7 +20,7 @@ The corpus never names that quantity. Your job is to supply it, for 26 records.
 | "Prove every metric space admits a k-competitive deterministic k-server algorithm" | the best known competitive ratio for general metrics (2k−1) |
 | "Determine the exact least integer ES(n) forcing n points in convex position" | the bounds on ES(7) |
 
-## For each record below, answer exactly four questions
+## For each record below, answer exactly five questions
 
 1. **TRACKED QUANTITY** — what number (or object) does the working literature actually report
    progress on? One clause. If there is none — the problem is structural and nobody reports a
@@ -30,6 +30,12 @@ The corpus never names that quantity. Your job is to supply it, for 26 records.
    stated, say so with the original year.
 4. **WHAT MOVES IT** — in one clause: a construction, an algorithm, a proof technique, or raw
    computation. This is the single most useful field; be specific about which.
+5. **STATUS AS OF TODAY** — is the *problem itself* still open? Check for a resolution,
+   refutation or effective closure posted in the **last 90 days**, not just a movement in the
+   tracked quantity. These are different events and they often diverge: a structural conjecture
+   can be proved without any number changing, and a bound can be narrowed to the point where the
+   problem stops being a target without anyone calling it resolved. Answer `OPEN`, `RESOLVED
+   <date, arXiv id>`, `CLOSED IN PRACTICE <date, arXiv id>`, or `UNKNOWN`.
 
 ## Rules
 
@@ -53,6 +59,7 @@ TRACKED QUANTITY | <one clause, or NONE>
 CURRENT VALUE    | <value, or NOT FOUND>
 LAST MOVED       | <year, by whom, or NEVER MOVED since <year>>
 WHAT MOVES IT    | construction | algorithm | proof technique | computation | N/A
+STATUS TODAY     | OPEN | RESOLVED <date, id> | CLOSED IN PRACTICE <date, id> | UNKNOWN
 TIER             | PRIMARY | SECONDARY | RECALL
 SOURCE           | <citation with a date, or NOT FOUND>
 ```
@@ -140,4 +147,4 @@ SOURCE           | <citation with a date, or NOT FOUND>
 
 ---
 
-When finished, state how many of the 26 records returned `NONE` and how many returned `NOT FOUND`. Those two counts are the headline result of this chunk.
+When finished, state how many of the 26 records returned `NONE` and how many returned `NOT FOUND`. Those two counts, plus every record you marked RESOLVED or CLOSED IN PRACTICE, are the headline result of this chunk.
