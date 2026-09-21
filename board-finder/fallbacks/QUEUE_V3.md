@@ -74,9 +74,9 @@ sample of what is in it:
 
 | rank | record | shape |
 |---:|---|---|
-| 337 | Capacity of the binary deletion channel | bounds on a constant — no collaboration route |
+| ~~337~~ | ~~Capacity of the binary deletion channel~~ | **DEAD** — arXiv:2609.19412 narrows it to a hundredth of a bit, Sep 2026. See `STALENESS.md` |
 | 283 | Polynomial-time explicit logarithmic Ramsey graphs | pure algorithmic-idea gap |
-| 234 | k-Server Conjecture, general metrics **[collab]** | best known competitive ratio |
+| ~~234~~ | ~~k-Server Conjecture, general metrics~~ | **RESOLVED 14 Sep 2026**, arXiv:2609.15979 — five days before the corpus that lists it `open` shipped |
 | 310 | Deterministic polynomial-time exact bipartite matching | algorithmic-idea gap |
 | 345 | Erdős–Szekeres / Happy Ending | exact ES(7) |
 
@@ -103,8 +103,8 @@ value → when it last moved. One question per record, 106 records, independent,
 required. That is precisely the breadth-shaped task `../gap/GAP_V3.md` §6 says gets cheaper, and it
 is the highest-value thing a cheap instance could do next.
 
-**Best single mid-band candidate visible without that layer: rank 337, the binary deletion
-channel.** Δ is clean (a bounds table), the gap is analytic rather than compute, and it carries
+**~~Best single mid-band candidate: rank 337.~~ WRONG, and corrected within six hours — see
+`STALENESS.md`. 337 is among the most actively worked problems on the list.** Δ is clean (a bounds table), the gap is analytic rather than compute, and it carries
 **no collaboration route** — so on this corpus's own signal nobody has flagged it.
 
 ### Why U13 is still first
