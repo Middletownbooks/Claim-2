@@ -101,3 +101,37 @@ Next, in order:
 2. **The A-5 promoting search**, on whether the asymmetric region is as unswept as
    `../gap/RESULT_GAP_v2.md` §6 claims.
 3. Only if A-4 fails — i.e. there is real room — rebuild the left side to get past H ≈ 44.
+
+---
+
+## 7. The pattern ladder landed — B-1…B-4 all confirmed
+
+| H | right tuples | left keys | seconds | peak RSS | solutions |
+|---:|---:|---:|---:|---:|---:|
+| 40 | 3,838,380 | 658,008 | 22.2 | 275 MB | 0 |
+| 50 | 15,890,700 | 2,118,760 | 95.8 | 878 MB | 0 |
+| 60 | 50,063,860 | 5,461,512 | 284.9 | 2,202 MB | 0 |
+| 70 | 131,115,985 | 12,103,014 | 743.4 | 5,158 MB | 0 |
+| 80 | 300,500,200 | 24,040,016 | 1,703.0 | 10,278 MB | 0 |
+| 90 | — | — | 221.2 | **MemoryError** | — |
+
+```
+B-1  CONFIRMED  exhaustive to H=80: at or above 70, below 100
+B-2  CONFIRMED  the left table is what ran out
+B-3  CONFIRMED  no solution in 5 run(s); exhaustive at H in [40, 50, 60, 70, 80]
+B-4  CONFIRMED  pooled rate 176k/s, inside 86k-344k
+```
+
+**B-2 is the one worth keeping.** It re-registered the same mechanism claim A-2 got wrong — that
+memory binds rather than the clock — and this time it is right, because it was made from
+measured constants rather than from a guess. §3 registered *"the 12 GB cap is reached around
+H ≈ 85."* Measured: H = 80 peaked at 10,278 MB and H = 90 died. The left table turns out to hold
+**exactly** C(*H*,5) keys — five odd power sums of five distinct values never collide — at 428
+bytes each, which puts the true wall at *H* ≈ 82–83. Predicted 85, off by two rungs.
+
+So the same prediction, made twice: **wrong when guessed, right when costed.** That is the whole
+difference between A-2 and B-2, and it is cheaper to learn here than on a target that mattered.
+
+None of this changes anything about the target, which `VERDICT_PTE11.md` closed. The instrument
+is the thing that survives: `search_pattern.py` is exhaustive to *H* = 80 at *n* = 11 in half an
+hour, against *H* = 36 in an hour for the registered search.
