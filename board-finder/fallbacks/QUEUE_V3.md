@@ -60,6 +60,64 @@ orbit-reduction route stopping at *m* = 82 with failures that are emptiness rath
 weakness. **Question for the original instance, not a proposal from me:** is the *b* > 2 region
 open, or closed by something I did not read?
 
+## Direction B — CORRECTED. The rejection was an aggregate used as a per-record verdict
+
+> **[21 Sep, after challenge.]** The section below rejects "items closer to the head" on a
+> density statistic. **That is not a valid rejection of any individual record**, and it was worse
+> than it looked: the tail scan started at rank 250 and the collaboration check stopped at 120, so
+> **ranks 121–250 were never screened at all.** A collaboration route also does not imply heavy
+> competition — everything on a top-500 list has some by definition.
+
+**Now screened.** 230 records in ranks 120–350; **106 carry record or algorithmic-deficit
+language** — the two gap types `../gap/GAP_V3.md` §3 says improve. The band is not barren. A
+sample of what is in it:
+
+| rank | record | shape |
+|---:|---|---|
+| 337 | Capacity of the binary deletion channel | bounds on a constant — no collaboration route |
+| 283 | Polynomial-time explicit logarithmic Ramsey graphs | pure algorithmic-idea gap |
+| 234 | k-Server Conjecture, general metrics **[collab]** | best known competitive ratio |
+| 310 | Deterministic polynomial-time exact bipartite matching | algorithmic-idea gap |
+| 345 | Erdős–Szekeres / Happy Ending | exact ES(7) |
+
+### And the structural reason the band *looked* barren
+
+**The corpus records headline statements, not the record tables underneath them.** Every one of
+the five above is recorded as *"determine the exact value"* or *"prove the conjecture"* — the
+hopeless form. The live, movable quantity is never mentioned:
+
+| headline as recorded | what the literature actually tracks |
+|---|---|
+| "determine C_del(*d*) exactly" | best known **upper and lower bounds** on the deletion-channel capacity |
+| "prove the competitive ratio is *k*" | best known **upper bound** (2*k*−1, Koutsoupias–Papadimitriou) |
+| "determine ES(*n*) exactly" | the **bounds on ES(7)**, lower 33 by construction |
+
+This is the same limitation that made the writable-unknown-set regex return zero: the corpus is a
+statement catalogue, not a status inventory. **Screening it alone cannot surface a record problem,
+because the record is a sub-problem of the headline and the headline is what is written down.**
+
+### The missing piece, and it is the cheap kind
+
+What is needed is a **mapping layer**: headline → the quantity the literature tracks → its current
+value → when it last moved. One question per record, 106 records, independent, no reasoning depth
+required. That is precisely the breadth-shaped task `../gap/GAP_V3.md` §6 says gets cheaper, and it
+is the highest-value thing a cheap instance could do next.
+
+**Best single mid-band candidate visible without that layer: rank 337, the binary deletion
+channel.** Δ is clean (a bounds table), the gap is analytic rather than compute, and it carries
+**no collaboration route** — so on this corpus's own signal nobody has flagged it.
+
+### Why U13 is still first
+
+D-optimal designs have the one property none of the above do: **the record table is explicitly
+maintained and public** (the Hadamard maximal-determinant tables, Orrick–Solomon lineage), so H
+and Δ are computable on day one instead of after a 106-record mapping exercise. And the objects
+are ±1 matrices with the same PAF and orbit apparatus already built for Hadamard.
+
+---
+
+## Direction B, as originally written — superseded by the correction above
+
 ## Direction B, answered with a number rather than a hunch
 
 "Items closer to the head" was worth testing because collaboration routes concentrate there:
