@@ -158,3 +158,37 @@ A scorer that cannot fail is not a scorer, and two checks written earlier today 
 The fourth matters most: a planted solution is not taken at face value even though it arrived
 through the harness's own file format. It is re-verified against every power sum, and the scorer
 reports *which* one fails.
+
+## 10. Addendum, registered 21 Sep 2026 — a second instrument, and four more predictions
+
+The user pointed at Cançado–Coutinho–Spier, *Orthogonal polynomials, quantum walks and the
+Prouhet–Tarry–Escott problem* (arXiv:2509.09948, 12 Sep 2025). Its Corollary 21 — Caley's
+interlacing theorem — **forces the sign pattern of the centred set**, which the registered
+search in §3 used not at all. See `CCS2025.md`. `search_pattern.py` implements it. Same n = 7
+control, same two solutions, **1.2 s against 21.0 s**.
+
+These are registered before the first n = 11 run of the new instrument. They do **not** re-score
+A-1…A-3, which were about `search_symmetric.py` and are already settled in `RESULT_PTE11.md`.
+
+| id | prediction | falsified by |
+|---|---|---|
+| **B-1** | one hour, split 5 + 6: the pattern search reaches **H ≥ 70** exhaustively and **does not reach H = 100** | completing 100, or failing 70 |
+| **B-2** | **memory** binds this time, not the clock — the roles reverse relative to the registered run | stopping on the clock with memory headroom |
+| **B-3** | still **no** solution anywhere in the covered region | finding one |
+| **B-4** | the gain is from enumerating **fewer** tuples, not faster ones: the per-right-tuple rate stays within 2× of the registered search's 172 k/s | a rate outside 86 k–344 k/s |
+
+**B-2 is the same mechanism claim that A-2 got wrong**, registered again because the arithmetic
+now points the other way: at 445 bytes/key the 12 GB cap is reached around H ≈ 85, while one hour
+at 172 k/s reaches C(H,6) ≈ 620 M, i.e. H ≈ 90. If that is right the walls have swapped order.
+Registering it a second time is the point — the first version was a guess, this one has the
+measured constants behind it, and it can fail the same way.
+
+**B-1's floor of 70 is what makes this worth running at all.** §4 of `RESULT_PTE11.md` showed the
+registered run's H = 36 never reached the primitive centred height 51 at which the smallest known
+size-**7** solution sits. H ≥ 70 clears that bar; it is the first region this project would cover
+that a solved case of the same shape would have been found in.
+
+**Scope is narrower in one way, and it is not a free win.** The pattern derivation needs *C* and
+−*C* disjoint, which is exactly PTE⁰ — Theorem 18's variant for odd *d*. Solutions with a
+repeated element (PTE¹, PTE) are **not** covered by `search_pattern.py` and remain
+`search_symmetric.py`'s business. A B-3 null is a null about PTE⁰ only.

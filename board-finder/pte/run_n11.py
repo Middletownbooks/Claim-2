@@ -15,9 +15,9 @@ CHILD = r'''
 import json, os, resource, sys
 resource.setrlimit(resource.RLIMIT_AS, (%d, %d))
 sys.path.insert(0, %r)
-import search_symmetric
+import %s as searcher
 try:
-    r = search_symmetric.search(11, %d, 5)
+    r = searcher.search(11, %d, 5)
 except MemoryError:
     print(json.dumps({"failed": "MemoryError"})); sys.exit(0)
 r["peak_rss_mb"] = round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024, 1)
@@ -31,6 +31,10 @@ def main():
     ap.add_argument("--heights", default="20,24,28,32")
     ap.add_argument("--budget", type=int, default=3600, help="seconds for the whole ladder")
     ap.add_argument("--mem-gb", type=float, default=10.0)
+    ap.add_argument("--module", default="search_symmetric",
+                    help="search_symmetric (registered) or search_pattern (Corollary 21)")
+    ap.add_argument("--log-name", default="RUN_LOG.json")
+    ap.add_argument("--tag", default="n11")
     ap.add_argument("--prior-seconds", type=float, default=0.0,
                     help="budget already spent by an earlier segment of the same ladder")
     a = ap.parse_args()
@@ -46,12 +50,12 @@ def main():
             stopped_by, log["memory_headroom"] = "clock", True
             log["note"] = f"stopped before H={H}: {left:.0f}s of budget left"
             break
-        out = os.path.join(HERE, "runs", f"n11_H{H}.json")
+        out = os.path.join(HERE, "runs", f"{a.tag}_H{H}.json")
         print(f"\n=== H={H}  ({left:.0f}s of budget left) ===", flush=True)
         t0 = time.time()
         try:
             p = subprocess.run([sys.executable, "-c",
-                                CHILD % (cap, cap, HERE, H, out)],
+                                CHILD % (cap, cap, HERE, a.module, H, out)],
                                capture_output=True, text=True, timeout=left)
         except subprocess.TimeoutExpired:
             stopped_by, log["memory_headroom"] = "clock", True
@@ -71,7 +75,7 @@ def main():
     log["stopped_by"] = stopped_by
     log["budget_exhausted"] = (time.time() - started) >= a.budget - 60
     log["total_seconds"] = round(time.time() - started, 1)
-    json.dump(log, open(os.path.join(HERE, "runs", "RUN_LOG.json"), "w"), indent=1)
+    json.dump(log, open(os.path.join(HERE, "runs", a.log_name), "w"), indent=1)
     print("\n" + json.dumps(log, indent=1))
 
 

@@ -13,7 +13,7 @@ import glob, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import verify, search_symmetric
+import verify, search_symmetric, search_pattern
 
 CONFIRMED, FALSIFIED, NOT_SCORED = "CONFIRMED", "FALSIFIED", "NOT-SCORED"
 
@@ -22,8 +22,34 @@ def load(pattern):
     return [json.load(open(p)) for p in sorted(glob.glob(os.path.join(HERE, pattern)))]
 
 
-def n11_runs():
-    return [r for r in load("runs/*.json") if isinstance(r, dict) and r.get("n") == 11]
+def n11_runs(pattern=False):
+    want = "PTE^0 symmetric (C and -C disjoint)"
+    return [r for r in load("runs/*.json")
+            if isinstance(r, dict) and r.get("n") == 11
+            and (r.get("variant") == want) == pattern]
+
+
+def score_B1(runs, log):
+    done = [r["H"] for r in runs if r.get("exhaustive")]
+    if not done:
+        return NOT_SCORED, "no exhaustive pattern-search run on file"
+    hi = max(done)
+    if hi >= 100:
+        return FALSIFIED, f"reached H={hi} exhaustively, predicted not to reach 100"
+    if hi < 70:
+        if not log.get("budget_exhausted"):
+            return NOT_SCORED, f"best exhaustive run is H={hi}, but the hour is not recorded as spent"
+        return FALSIFIED, f"hour spent, best exhaustive run only H={hi}, predicted >= 70"
+    return CONFIRMED, f"exhaustive to H={hi}: at or above 70, below 100"
+
+
+def score_B4(runs):
+    if not runs:
+        return NOT_SCORED, "no pattern-search run on file"
+    rate = sum(r["right_enumerated"] for r in runs) / sum(r["seconds"] for r in runs)
+    if 86_000 <= rate <= 344_000:
+        return CONFIRMED, f"pooled rate {rate/1000:.0f}k/s, inside 86k-344k"
+    return FALSIFIED, f"pooled rate {rate/1000:.0f}k/s, outside 86k-344k"
 
 
 def score_A1(runs, log):
@@ -108,16 +134,25 @@ def main():
     verify.controls()
     for line in search_symmetric.controls()[0]:
         print("  ok   " + line)
+    for line in search_pattern.controls()[0]:
+        print("  ok   " + line)
 
     runs = n11_runs()
+    pruns = n11_runs(pattern=True)
     logs = load("runs/RUN_LOG.json")
     log = logs[0] if logs else {}
+    plogs = load("runs/RUN_LOG_pattern.json")
+    plog = plogs[0] if plogs else {}
     scores = {
         "A-1": score_A1(runs, log),
         "A-2": score_A2(log),
         "A-3": score_A3(runs),
         "A-4": score_A4(load("evidence/A4_literature.json")),
         "A-5": score_A5(load("evidence/A5_asymmetric.json")),
+        "B-1": score_B1(pruns, plog),
+        "B-2": score_A2(plog),
+        "B-3": score_A3(pruns),
+        "B-4": score_B4(pruns),
     }
 
     print(f"\n{'id':5}{'verdict':12}why")
