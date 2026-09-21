@@ -1,0 +1,13 @@
+{
+ "published_height_bound": 3500,
+ "our_height": 50,
+ "source": "relayed by the user, 21 Sep 2026: 'They found 11 empty under a height of 3500.' The paper meant is Coppersmith-Mossinghoff-Scheinerman-VanderKam, Ideal solutions in the Prouhet-Tarry-Escott problem, Mathematics of Computation 93(349):2473-2501, 2024, located via reference [5] of arXiv:2509.09948.",
+ "provenance_tier": "SECONDARY-RELAYED",
+ "not_verified_here": [
+  "the number 3500 itself -- no copy of the paper was read in this session",
+  "whether the bound is on max|element| of the centred solution or on the diameter; under the first reading our comparable figure is H, under the second it is 2H",
+  "whether the search covers all ideal solutions of size 11 or only the symmetric ones -- this decides whether it also bears on A-5"
+ ],
+ "our_height_basis": "best exhaustive height on file at scoring time: search_pattern.py runs/n11p_H50.json. The registered search reached 36; the pattern ladder is still climbing and is projected to reach about 80-90. Every one of those lands the ratio in the same band.",
+ "ratio_under_both_readings": {"height_is_max_abs": 70.0, "height_is_diameter": 35.0}
+}

@@ -68,11 +68,11 @@ def score_A1(runs, log):
     return CONFIRMED, f"exhaustive to H={hi}: at or above 20, below 50"
 
 
-def score_A2(log):
+def score_A2(log, name="runs/RUN_LOG.json"):
     """Memory, not the clock, is what stops it."""
     stopped = log.get("stopped_by")
     if stopped is None:
-        return NOT_SCORED, "runs/RUN_LOG.json has no `stopped_by` field"
+        return NOT_SCORED, f"{name} has no `stopped_by` field"
     if stopped == "memory":
         return CONFIRMED, "the left table is what ran out"
     if stopped == "clock":
@@ -150,7 +150,7 @@ def main():
         "A-4": score_A4(load("evidence/A4_literature.json")),
         "A-5": score_A5(load("evidence/A5_asymmetric.json")),
         "B-1": score_B1(pruns, plog),
-        "B-2": score_A2(plog),
+        "B-2": score_A2(plog, "runs/RUN_LOG_pattern.json"),
         "B-3": score_A3(pruns),
         "B-4": score_B4(pruns),
     }
