@@ -9,6 +9,7 @@ are being swept by agent pipelines, so off-list is where the value is.
 |---|---|
 | `REVIEW_JULY_GAP_ANALYSIS.md` | check of the July 2026 response. Four claims verified here (Kalai 3^d, Tuza K₄/K₅, Ball at p=2, the Kaplansky nesting); four defects, the worst being that its dimension F rewards exactly the property that made Zauner/SIC worthless; three things kept verbatim |
 | `PROMPT_GAP_v2.md` | the rebuilt prompt. Part A pasteable, Part B operator notes with each clause traced to what it is built against |
+| `RESULT_GAP_v2.md` | **it ran.** Passed its own bar narrowly — four candidates at D=5, two of them killed by their own falsification lines. Closes two unverified-pool items from work on this branch, and carries one correction to the prompt itself |
 
 ## The one-line version of what changed
 
@@ -23,3 +24,17 @@ Three smaller changes, each with a receipt: witness polarity is declared rather 
 line, run during triage** (one line of arithmetic killed a route here after a day's work); and
 only status-verified candidates are ranked, because 20 of the July response's 31 rows were
 unconfirmed recall in a field turning over at ~40 AI-resolution claims a month.
+
+
+## What the run changed about the prompt
+
+The v2 prompt put the public-list anti-criterion in the anti-criteria section, i.e. applied at
+exclusion time. The run showed that is the wrong place: **the properties that score well on A–C
+and G–H are the same properties a benchmark designer selects for**, so the list check is in
+direct tension with the scoring function and belongs at **step 0**, as a filter. Conway's
+99-graph and the missing Moore graph are the two best problems in mathematics by this rubric and
+are both already on FrontierMath: Open Problems for exactly that reason.
+
+Four agent-facing databases are now known — FrontierMath: Open Problems, TheoremDB,
+Horizon/HorizonMath, erdosproblems.com. Epoch's own submission criteria paraphrase this
+commission. v3 should enumerate those first and build the exclusion set before casting the net.
