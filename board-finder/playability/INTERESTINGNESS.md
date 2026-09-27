@@ -189,24 +189,68 @@ The leanboard arm already computes dependency closures, so this is available her
 infrastructure — and it breaks the shared-`V` coupling of §3(a) less badly than `|D| · V`
 does, because the sum is over *other* declarations' difficulty.
 
-### P4. The join this board needs: multiply by reachability class.
+### P4. The join this board needs — with the sign corrected by `GAP_V3.md`
 
 Their metric says what is **worth** settling. `classification.json` says what is **possible**
-to settle. Neither is sufficient alone, and selection wants the product:
+to settle. Neither is sufficient alone, so selection wants a product. My first version of this
+proposal read
 
 ```
-    Select(T)  =  I_irred(T | P)  ×  w(class(T))
+    Select(T)  =  I_irred(T | P)  ×  w(class(T))          # WRONG, see below
 ```
 
-with `w` read off the witness class: P1/P2 finite and feasible → high; P1/P2 finite and
-hopeless → discounted by `bits_search`; **W → 0** (the witness is exhibitable and the
-predicate undecidable, so no amount of interestingness helps); **A → 0** (an algorithm is a
-finite string but its correctness is universal); **U → gated on `V̂` alone**, which is where
-their framework is the only tool and where its extrapolation is least trustworthy.
+with `w` high on feasible P1/P2. **That has the sign backwards on the class term**, and
+`../fallbacks/QUEUE_V3.md` (written in parallel, read after I drafted this) says why:
 
-The W and A zeroes are the contribution `classification.json` makes that no proof-length
-metric can: both classes look tractable to any screen reading the quantifier vocabulary, and
-both are dead.
+> *"a problem settled by one explicit finite object in a huge space is, almost by definition,
+> one whose frontier is set by search capacity. So the finite-witness screen systematically
+> selects for compute gaps, which are the one category that does not improve when models get
+> better or cheaper — a model does not add FLOPs."*
+
+So weighting **up** on finite-witness class selects for the gaps that never close. The v3
+queue's empty predecessor is the evidence: three targets cleared v2 and all three died on
+properties of our position, not of the problem. The corrected form carries a third term:
+
+```
+    Select(T)  =  I_irred(T | P)  ×  w_class(T)  ×  g(gap_type(T))
+```
+
+* `w_class` stays as a **veto**, not a bonus. **W → 0** (the witness is exhibitable and the
+  predicate undecidable, so no amount of interestingness helps); **A → 0** (an algorithm is a
+  finite string but its correctness is universal); **U → gated on `V̂` alone**, which is where
+  their framework is the only tool and where its extrapolation is least trustworthy. Those two
+  zeroes are the contribution `classification.json` makes that no proof-length metric can:
+  both classes look tractable to any screen reading the quantifier vocabulary, and both are
+  dead.
+* `g(gap_type)` is where the *positive* weight lives, and `GAP_V3.md` already defines it:
+  algorithmic-idea and breadth gaps over compute gaps. FunSearch improving the cap-set record
+  is the existence proof that the first two move under model capability.
+
+**The witness class says what can be settled. The gap type says what will move.** My draft
+conflated them and put the weight on the wrong one.
+
+### P4b. Two convergent confirmations, recorded because they were independent
+
+The frontier sweep added a `depthOrBreadth` field to `classification.json` in the same week I
+derived a deep-versus-broad screen in `FEASIBILITY.md` §6 from the Hadamard correction. Two
+derivations, one discriminator — the same pattern `FINDING.md` §4b notes for `move_kind`. The
+sweep's verdicts on the two records I had staked claims on:
+
+| record | sweep | my claim | outcome |
+|---|---|---|---|
+| `331` Hadamard | **BROAD**, PRIMARY-VERIFIED-LOCALLY | breadth-shaped, demonstrated | confirmed |
+| `280` Kaplansky idempotent | **DEEP**, CORRECTED | "the strongest single target" | **corrected** |
+
+The Kaplansky correction matters: its wall note records that nobody has pointed a search at
+the idempotent conjecture specifically, and that the field's own next target is elsewhere. A
+DEEP gap with no community search behind it is not the same as a breadth gap an agent can
+sweep, and I rated it as though it were.
+
+The sweep also picked up `FEASIBILITY.md` §1's factorization of record `488` and rated the
+combinatorial factor **`488b`: FEASIBLE** while leaving the direct record **HOPELESS** — as a
+sub-target rather than a re-rate, with the reason stated in `classify.py`'s `merge_sweep`
+docstring: collapsing them would assert the record is feasible when only one factor is. That
+is P1 (report the pair, do not collapse) applied before P1 was written down.
 
 ### P5. Use the ladder to *calibrate* difficulty estimates, not to train a predictor.
 
@@ -231,6 +275,8 @@ restart** rather than a time, because the distributions are bimodal.
   unknown and needs their data.
 * P2's decomposition test is untried. The failure mode to watch is statements where the
   `↔` halves are genuinely interdependent, which the test would wrongly flag as bolted.
+* P4's corrected form is untested. `g(gap_type)` exists as a rubric in `GAP_V3.md` and has
+  never been scored against outcomes, because the v3 queue has not run.
 * P1's `bits_search` is only defined where a search space and a density estimate exist. That
   is true for the Hadamard ladder (`density4.py`, `validate2.py`, validated to ≤0.3 bits at
   D=3,5,7) and false for most of the 35 playable records.

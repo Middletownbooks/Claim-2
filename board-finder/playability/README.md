@@ -7,7 +7,7 @@ Shared area. Four documents, one instrument, one dataset.
 | **`PLAYABILITY.md`** | the census. 499 ranked problems classified by witness reachability; 35 playable (7.0%); two classes the I/I\*/II/III taxonomy had no cell for |
 | **`RANKING_FIT.md`** | audit against `../PROOFATLAS_FIT.md`. Settles its registered workspace-allocation test at n=123, confirms and sharpens its "one of four fields" verdict, and measures where `../PROMPT.md` does not apply |
 | **`FEASIBILITY.md`** | the tractability pass. `witnessCheckFeasible` for all 35, three search mechanisms, and one sweep run end to end (`sweeps/`) rather than recalled |
-| **`INTERESTINGNESS.md`** | Patel et al. (arXiv:2609.28603) on proof-length interestingness: what the `V(T\|P)` primitive gives us, why the metric is blind to every finite-witness problem, and five proposals for the selection metric |
+| **`INTERESTINGNESS.md`** | Patel et al. (arXiv:2609.28603) on proof-length interestingness: what the `V(T\|P)` primitive gives us, why the metric is blind to every finite-witness problem, and five proposals for the selection metric (P4's sign corrected by `../fallbacks/QUEUE_V3.md`) |
 | **`PROMPT_WITNESS.md`** | the companion prompt for the yes/no half of the corpus, where the leak table has no row to write. Part A / Part B, same shape as `../PROMPT.md` |
 | **`PROMPT_FRONTIER.md`** | the frontier-verification instrument, full version: what each clause is built against and how to score it |
 | **`PROMPT_SWEEP.md`** | the executable cut of it for a subscription chat surface — fetch discipline in place of the API's `max_content_tokens`, and a `transcribeThis` hand-off for cells the web cannot settle |
