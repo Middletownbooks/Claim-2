@@ -1,0 +1,15 @@
+{
+ "published_height_bound": 3500,
+ "our_height": 80,
+ "source": "Coppersmith, Mossinghoff, Scheinerman, VanderKam, Ideal solutions in the Prouhet-Tarry-Escott problem, arXiv:2304.11254 / Math. Comp. 93(349):2473-2501, 2024. Full transcript supplied by the user 21 Sep 2026. Table 2: n=11, H=3500, zero solutions; section 4.1 Results confirms 'no symmetric ideal solutions for n = 11 with this bound'.",
+ "provenance_tier": "PRIMARY-VERIFIED-LOCALLY for the paper's own data (all seven printed solutions re-verified here as ideal, all satisfy their Table 1 divisors); SECONDARY-RELAYED for the 3500 search result itself, which cannot be reproduced here.",
+ "not_verified_here": [
+  "the 3500 search itself -- it is a C program plus Magma and is not reproducible in this session"
+ ],
+ "our_height_basis": "best exhaustive height on file: search_pattern.py runs/n11p_H80.json. The registered search reached 36; the pattern ladder finished at 80, stopped by the 12 GB memory cap at H=90.",
+ "resolved": {
+  "height convention": "SETTLED. The paper: 'by the height of a solution we mean its largest element in absolute value'. For odd n symmetric B = -A, so A is already centred and their height IS our H. Verified on Letac I: height 99, primitive centred form = A itself.",
+  "scope": "SETTLED. Symmetric solutions only -- see evidence/A5_asymmetric.json."
+ },
+ "ratio": 43.75
+}

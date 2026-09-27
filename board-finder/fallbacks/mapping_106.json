@@ -1,0 +1,850 @@
+[
+ {
+  "rank": 120,
+  "title": "Aspherical Manifolds Admit No Metric of Positive Scalar Curvature",
+  "domain": "Geometry & topology",
+  "target": "Prove or disprove that no closed aspherical manifold admits a Riemannian metric of positive scalar curvature.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 125,
+  "title": "Tarski's Exponential Function Problem",
+  "domain": "Logic, foundations & set theory",
+  "target": "Determine whether the first-order theory of the real exponential field (R; 0, 1, +, *, exp, <, =) is decidable.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 126,
+  "title": "Unconditional Single-Prover Classical Verification of BQP Computations",
+  "domain": "Quantum information & computation",
+  "target": "Determine whether every language L in BQP admits a polynomial-round interactive proof with only classical messages between a probabilistic classical polynomial-time verifier and a single honest uniform quantum polynomial-time prover, with completeness at least 2/3 and soundness at most 1/3 against every computationally unbounded cheating prover.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 128,
+  "title": "NP-Completeness of the Minimum Circuit Size Problem (MCSP)",
+  "domain": "Theoretical computer science",
+  "target": "Prove or disprove that MCSP is NP-hard under deterministic polynomial-time many-one reductions, where an input is the truth table of a Boolean function and a size bound and asks whether a circuit of at most that size computes the function.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 129,
+  "title": "Polynomial pivot rule for the simplex method",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "Construct a deterministic or randomized simplex pivot rule and a polynomial p such that, for every bounded nondegenerate rational linear program with m equality constraints and n variables and every feasible starting basis, the rule reaches an optimal basis in at most p(m,n) pivots, in expectation when the rule is randomized; or prove that no such rule exists.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 131,
+  "title": "Planted Clique Conjecture",
+  "domain": "Theoretical computer science",
+  "target": "For every fixed real alpha with 0<alpha<1/2, set k_n=floor(n^(1/2-alpha)). Sample a uniform k_n-subset S of n labeled vertices, put every edge inside S, and independently include each other edge with probability1/2. There is no randomized algorithm running in time polynomial in n that, given this graph, outputs exactly S with probability tending to1 as n tends to infinity, over S, remaining edges and its internal coins. Algorithms may depend on the fixed alpha but receive no advice depending on n.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 133,
+  "title": "Cannon's conjecture",
+  "domain": "Geometry & topology",
+  "target": "Prove or disprove that every Gromov-hyperbolic group whose boundary at infinity is homeomorphic to the two-sphere acts properly discontinuously, cocompactly, and isometrically on hyperbolic three-space, equivalently is virtually a cocompact Kleinian group.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 134,
+  "title": "Superlinear Circuit Lower Bounds for Explicit Boolean Functions",
+  "domain": "Theoretical computer science",
+  "target": "There exists a Boolean function family f_n:{0,1}^n->{0,1}, n>=1, evaluated by a single deterministic polynomial-time algorithm on (1^n,x), whose minimum gate count C_B2(f_n) over single-output fan-in-two circuits using arbitrary binary Boolean gates satisfies C_B2(f_n)=omega(n): for every c>0 there is N such that C_B2(f_n)>c*n for every n>=N. The circuits have unrestricted depth and fan-out; no fixed linear constant counts as superlinear.",
+  "rec": 1,
+  "alg": 3
+ },
+ {
+  "rank": 136,
+  "title": "Indistinguishability Obfuscation from Constant-Degree Homomorphic Assumptions",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "Construct indistinguishability obfuscation based purely on standard polynomial-time assumptions (such as standard LWE, LPN, and degree-2 multilinear pairings) without sub-exponential loss.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 137,
+  "title": "Log-Rank Conjecture in Communication Complexity",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "Prove that there is a universal constant C >= 1 such that, for every Boolean function f:X x Y -> {-1,1} on finite nonempty sets X,Y, D(f) <= C[log_2 max{2,rank_R(M_f)}]^C, where M_f(x,y)=f(x,y) is its sign communication matrix and D(f) is deterministic two-party communication complexity in bits.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 139,
+  "title": "Torsion Conjecture for Abelian Varieties of Dimension at Least Two",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "For every integer g>=2 and every number field K, there exists a finite constant B(g,K) such that every abelian variety A defined over K of dimension g satisfies #A(K)_tors <= B(g,K). Here A(K)_tors is the subgroup of K-rational torsion points. The bound is uniform over all such A, without dependence on A, its height, endomorphisms, polarization degree or reduction type; it may depend on g and K. No effective formula, explicit numerical value or classification of torsion groups is required.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 140,
+  "title": "Residual Finiteness of Hyperbolic Groups",
+  "domain": "Algebra, representation & category theory",
+  "target": "For every word-hyperbolic group G and every nonidentity element g in G, prove that there is a finite group F and a homomorphism φ:G→F with φ(g)≠1.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 142,
+  "title": "Asymptotic tightness of the binary Gilbert–Varshamov bound",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "For integers n>=1 and d>=0, let A_2(n,d) be the maximum cardinality of a binary code C subset {0,1}^n, not necessarily linear, with Hamming distance at least d between distinct codewords. For each fixed real 0<delta<1/2 define R_2(delta)=limsup_{n->infinity} n^(-1) log_2 A_2(n,floor(delta n)) and H_2(delta)=-delta log_2(delta)-(1-delta)log_2(1-delta). Is R_2(delta)=1-H_2(delta) for every such delta?",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 147,
+  "title": "The Generalized Sato-Tate Conjecture for Higher-Dimensional Abelian Varieties",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Prove that the normalized Frobenius conjugacy classes of an abelian variety A of dimension g over a number field K are equidistributed in the Sato-Tate group ST(A).",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 149,
+  "title": "Manins Conjecture on the Asymptotic Density of Rational Points on Fano Varieties",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Prove that for any smooth Fano variety X over a number field K with ample anticanonical bundle, the number of rational points of anticanonical height <= B on a Zariski open subset satisfies N(U, B) ~ c B (log B)^{rho(X)-1}.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 151,
+  "title": "Leopoldt's conjecture",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Prove or disprove that for every number field K and every prime p, the Leopoldt defect of K at p is zero, equivalently that the p-adic regulator has the conjectured full rank.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 152,
+  "title": "NP versus the Existential Theory of the Reals",
+  "domain": "Applied & computational mathematics",
+  "target": "Determine whether every problem decidable in the existential theory of the reals (exists R) can be decided in nondeterministic polynomial time, i.e., decide whether NP = exists R.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 154,
+  "title": "Cramer Conjecture on the Limsup of Normalized Prime Gaps",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Prove that lim sup_{n -> infinity} (p_{n+1} - p_n) / (log p_n)^2 = 1, where p_n is the n-th prime.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 156,
+  "title": "Randomized Integer Word-RAM 3SUM Conjecture",
+  "domain": "Theoretical computer science",
+  "target": "For every epsilon>0, there is no uniform Las Vegas randomized integer word-RAM algorithm that, on every set S of n distinct integers in [-n^3,n^3], decides whether three distinct elements sum to zero in worst-case expected O(n^(2-epsilon)) time. Use the standard logarithmic-word model of Abboud–Vassilevska Williams Conjecture 1, with enough Theta(log n) bits for the input universe, unit-cost word arithmetic, comparisons, Boolean operations, shifts and indirect memory access; no real-number oracle or free input-dependent preprocessing is permitted. Las Vegas means an always-correct answer with almost-sure termination, expectation over internal randomness, and a bound uniform over all valid inputs. Constants may depend on the algorithm and epsilon. This is not a literal quadratic lower bound.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 158,
+  "title": "BPL = L (Derandomizing Bounded-Error Logspace)",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "Prove or disprove that every language decidable by a probabilistic Turing machine using O(log n) workspace, polynomial time, and bounded two-sided error is decidable by a deterministic Turing machine using O(log n) workspace.",
+  "rec": 0,
+  "alg": 3
+ },
+ {
+  "rank": 159,
+  "title": "Smooth Four-Dimensional Schoenflies Problem",
+  "domain": "Geometry & topology",
+  "target": "Determine whether every smooth embedding of S^3 in S^4 is smoothly unknotted; equivalently, whether each of its two complementary closures is diffeomorphic to the standard 4-ball B^4.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 160,
+  "title": "Grothendieck's Variational Hodge Conjecture",
+  "domain": "Geometry & topology",
+  "target": "For every smooth projective morphism f:X->S of smooth connected complex algebraic varieties, every integer p>=0, and every global algebraic horizontal section xi of the relative algebraic de Rham cohomology bundle R^(2p)f_*Omega^._(X/S) for the Gauss-Manin connection, if xi(s0) is the de Rham cycle class of a rational algebraic codimension-p cycle on one fiber X_s0, then xi(s) is such a rational algebraic cycle class on every fiber X_s for s in S(C).",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 163,
+  "title": "Metric TSP Subtour LP Integrality Gap Conjecture",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "Prove or disprove that the integrality gap of the subtour (Held-Karp) LP relaxation of the symmetric metric traveling salesman problem equals 4/3.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 164,
+  "title": "Weinstein Conjecture on periodic orbits of Reeb flows",
+  "domain": "Geometry & topology",
+  "target": "Prove that every closed contact manifold admits a periodic orbit of the Reeb flow of any contact form, in all dimensions.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 166,
+  "title": "Arnold Conjecture on Hamiltonian Fixed Points",
+  "domain": "Geometry & topology",
+  "target": "Prove that every Hamiltonian diffeomorphism of an arbitrary closed connected symplectic manifold has at least Crit(M) fixed points, where Crit(M) is the minimum number of critical points of a smooth function on M.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 167,
+  "title": "Separation of P_R from NP_R in the Blum–Shub–Smale Model",
+  "domain": "Applied & computational mathematics",
+  "target": "In the standard ordered-real Blum–Shub–Smale model, machines use finitely many built-in real constants, real-valued registers, exact field operations (+,-,multiplication,division where defined) and order/equality tests at unit cost. Inputs are finite real vectors and size is vector length. Let P_R be decision problems solved by deterministic machines in polynomially many steps, and NP_R those with polynomial-length real witnesses verifiable in P_R. The assertion is P_R != NP_R.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 170,
+  "title": "Murre's Chow-Kunneth Conjectures",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "For every smooth projective irreducible complex variety X of dimension d, let CH^j(X)_Q denote cycles modulo rational equivalence, with Betti Q-cohomology. A correspondence pi in CH^d(X x X)_Q acts by pi_*(a)=(p_2)_*(p_1^*(a).pi). Murre's full A-D package asserts: (A) there exists a Chow-Kunneth decomposition, namely mutually orthogonal composition-idempotents pi_0,...,pi_(2d) in CH^d(X x X)_Q summing to the diagonal and inducing projection onto H^i(X,Q) for pi_i; (B) for EVERY such decomposition and 0<=j<=d, pi_i acts as zero on CH^j when i<j or i>2j; (C) for EVERY such decomposition define F^r CH^j as the intersection of ker(pi_i)_* for max(0,2j-r+1)<=i<=2j, r>=0, with empty intersection F^0=CH^j; these filtrations are equal for ALL decompositions satisfying A; (D) for EVERY such decomposition, F^1 CH^j equals ker(CH^j(X)_Q -> H^(2j)(X,Q)). Under A and B, F^(j+1)=0. No multiplicative or self-dual decomposition, explicit construction algorithm, functorial-extra requirement, or arbitrary-base-field enlargement is included.",
+  "rec": 1,
+  "alg": 2
+ },
+ {
+  "rank": 172,
+  "title": "Polynomial-Time Quantum Algorithm for Symmetric-Group Hidden Subgroups",
+  "domain": "Quantum information & computation",
+  "target": "Give a polynomial-time quantum algorithm that recovers a subgroup hidden by an oracle over the symmetric group S_n.",
+  "rec": 0,
+  "alg": 3
+ },
+ {
+  "rank": 173,
+  "title": "Tate's rational leading-term Stark conjecture",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "For every finite Galois extension L/K of number fields with group G, let S be any finite set of places of K containing the archimedean and ramified places. Let X be the augmentation kernel of the free Q-module on places of L above S, U=Q tensor_Z O_(L,S)^*, and f:X->U any Q[G]-isomorphism. Define lambda:R tensor U->R tensor X by lambda(u)=-sum_w log|u|_w w, using product-formula normalized absolute values. For each irreducible complex character chi of G, set R_S(chi,f)=det_C(lambda f acting by postcomposition on Hom_C[G](V_(dual chi),C tensor X)) and A_S(chi,f)=R_S(chi,f)/L_S^*(0,chi), where L_S^* is the first nonzero Laurent coefficient of the S-truncated Artin L-function and an empty determinant is1. Is A_S(chi,f) in Q(chi), with sigma(A_S(chi,f))=A_S(chi^sigma,f) for every sigma in Aut(C)?",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 174,
+  "title": "Inhomogeneous Landau–Coulomb Global Regularity (HST All-Moment Data)",
+  "domain": "Analysis & PDE",
+  "target": "Fix a positive physical constant a. On [0,infinity) times R^3_x times R^3_v consider the classical Landau equation (partial_t+v dot grad_x)f=Q(f,f), where Q(f,f)=div_v integral_{R^3} A(v-w)[f(t,x,w) grad_v f(t,x,v)-f(t,x,v) grad_w f(t,x,w)]dw and A(z)=a |z|^(-1)(I-z tensor z/|z|^2) for z!=0. For every nonnegative initial datum f_0 on R^6 with f_0 in the global Holder space C^alpha for some 0<alpha<1, sup_{x,v}<v>^k f_0(x,v)<infinity for every k>=0, and constants delta,r_0,R>0 such that for every x there exists |v_x|<R with f_0>=delta on the Euclidean R^6 ball B_{r_0}(x,v_x), does the classical solution branch constructed in HST Theorems 1.2–1.4 have maximal continuation time T_E=infinity? Here <v>=(1+|v|^2)^(1/2); the branch matches f_0 as t decreases to zero, is smooth for positive time, and has all polynomial velocity weights bounded on every finite time slab of its existence. The exact question is global extension of that branch, with the sufficiently decaying uniformly continuous kinetic weak uniqueness convention in HST Section 5, not uniqueness among all generalized weak solutions. The HST Coulomb continuation quantity is Psi(T)=esssup_{0<=t<=T,x} integral f(t,x,v)dv + esssup_{0<=t<=T,x,v} f(t,x,v). Finite Psi on every finite time slab is the associated continuation criterion, not an extra hypothesis presumed true. No smallness near equilibrium, finite total spatial mass or uniform bound across different initial data is imposed.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 175,
+  "title": "Beilinson-Soule Vanishing Conjecture for Rational Motivic Cohomology",
+  "domain": "Algebra, representation & category theory",
+  "target": "Prove that for every smooth scheme X over a field k the rational motivic cohomology groups H^(n,i)(X), defined as the i-th graded piece for the gamma filtration on K_(2i-n)(X) tensored with the rationals, vanish whenever n <= 0 and the pair (n,i) is not (0,0).",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 176,
+  "title": "Soliton Resolution for the Focusing Energy-Critical Wave Equation without Radial Symmetry",
+  "domain": "Analysis & PDE",
+  "target": "For d in {3,4,5}, consider the real focusing wave equation u_tt-Delta u=|u|^(4/(d-2))u on R^d, with energy data in dot-H1 x L2 and the usual strong energy solution on [0,infinity), uniformly bounded in that norm. Assertion: every such solution has, for all t->infinity, a decomposition of (u,u_t) into a finite-energy free wave, finitely many scaled and translated Lorentz transforms of fixed nonzero finite-energy stationary solutions, and a remainder tending to zero in dot-H1 x L2. More precisely, use the global CaseII decomposition(1.10) of DJKM1601.01871v3 with t replacing t_n: J>=0 is finite, each velocity ell_j has |ell_j|<1, lambda_j(t)>0 with lambda_j(t)/t->0, c_j(t)/t->ell_j, and for j!=k the sum lambda_j/lambda_k+lambda_k/lambda_j+|c_j-c_k|/lambda_j tends to infinity as in(1.9). No radiality, compact support, ground-state-only or distinct-velocity hypothesis is imposed.",
+  "rec": 1,
+  "alg": 1
+ },
+ {
+  "rank": 181,
+  "title": "Berman-Hartmanis Isomorphism Conjecture",
+  "domain": "Theoretical computer science",
+  "target": "Prove or disprove that for every two languages A and B complete for NP under polynomial-time many-one reductions, there is a bijection h on binary strings such that h(A)=B and both h and its inverse are computable in polynomial time.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 182,
+  "title": "Transcendence of Apery's Constant",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Prove or disprove that the value zeta(3) is transcendental over the rational numbers.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 183,
+  "title": "Smooth anisotropic Calderón uniqueness from full boundary data",
+  "domain": "Analysis & PDE",
+  "target": "For every compact connected smooth manifold M of dimension n>=3 with smooth nonempty boundary and every pair of smooth Riemannian metrics g1,g2 on that same M, let Lambda_gj f be the outward metric-unit normal derivative of the unique solution of Delta_gj u=0 with u|boundary=f. If Lambda_g1=Lambda_g2 as operators C-infinity(boundary M) to C-infinity(boundary M), compared under the identity marking on the whole boundary, must there be a smooth diffeomorphism Phi:M->M fixing the boundary pointwise with g2=Phi^*g1?",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 185,
+  "title": "Polynomial Freiman-Ruzsa Conjecture for General Abelian Groups",
+  "domain": "Combinatorics & discrete geometry",
+  "target": "Prove that there is an absolute constant C such that for every finite subset A of an arbitrary abelian group with |A+A| <= K|A|, the set A can be covered by exp(C log K) translates of a centred convex coset progression of dimension at most C log K and size at most exp(C log K)|A|.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 189,
+  "title": "Nonvanishing conjecture for projective log canonical pairs",
+  "domain": "Geometry & topology",
+  "target": "Let (X, Delta) be a projective log canonical pair over the complex numbers, with Delta a Q-divisor and K_X+Delta Q-Cartier. If K_X+Delta is pseudo-effective, prove that kappa(K_X+Delta) >= 0; equivalently, some sufficiently divisible positive multiple of K_X+Delta is linearly equivalent to an effective divisor.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 191,
+  "title": "Global Existence of Classical Solutions to the Relativistic Vlasov-Maxwell System",
+  "domain": "Analysis & PDE",
+  "target": "Prove or disprove that the Cauchy problem for the three-dimensional relativistic Vlasov-Maxwell system has a global classical solution (f,E,B) for every sufficiently regular finite-energy initial datum.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 192,
+  "title": "Artin's primitive root conjecture",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Prove or disprove that every integer a other than -1 that is not a perfect square is a primitive root modulo p for a positive natural density of primes p, with the density given by Artin's predicted correction factor.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 200,
+  "title": "Rank One Abelian Stark Conjecture",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Let K/F be an abelian extension of number fields with Galois group G, and let S be a finite set of places of F containing the archimedean and ramified places, with |S| >= 2 and at least one place v of S splitting completely in K. Prove that, for a fixed place w of K above v, there exists a unit u in U_{v,S} such that zeta'_{K/F,S}(sigma, 0) = -(1/e) log |u^sigma|_w for all sigma in G, where e is the number of roots of unity in K, and K(u^{1/e})/F is abelian.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 203,
+  "title": "Effective Roth Theorem",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "There exists one total computable algorithm which, given a real algebraic irrational alpha by its integer minimal polynomial and a rational isolating interval, and a positive rational epsilon, returns an integer Q>=1 such that every reduced rational p/q, with p an integer and q>=1 an integer, satisfying |alpha-p/q|<q^(-2-epsilon) has q<=Q. The algorithm must halt with this guarantee on every valid input. No time, space, practical-size or software-implementation requirement is imposed.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 205,
+  "title": "Polynomial-Time Quantum Algorithm for the Dihedral Hidden Subgroup Problem",
+  "domain": "Quantum information & computation",
+  "target": "Find a polynomial-time quantum algorithm with poly(log N) operations and space for the hidden subgroup problem in dihedral groups D_N.",
+  "rec": 0,
+  "alg": 3
+ },
+ {
+  "rank": 208,
+  "title": "Density of Hyperbolicity for Complex Polynomials",
+  "domain": "Probability, ergodic theory & dynamics",
+  "target": "For each complex polynomial T of degree at least two, determine whether T can be approximated by polynomials of the same degree all of whose critical points converge under iteration to attracting periodic cycles, that is, whether hyperbolic polynomials are dense in the space of complex polynomials of each degree.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 211,
+  "title": "Brauer-Manin obstruction for number-field curves: Hasse-principle form",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "For every number field k and every smooth projective geometrically connected curve C/k of genus at least two, if C(A_k)^Br is nonempty then C(k) is nonempty. Here Br(C)=H^2_et(C,G_m) is the full cohomological Brauer group, and C(A_k)^Br consists of adelic tuples (P_v) for which sum_v inv_v(alpha(P_v))=0 for every alpha in Br(C). Constants obey global reciprocity. Passing at archimedean places to connected components does not change nonemptiness. No rational base point, degree-one divisor class, Sha finiteness, rank bound or effective Jacobian presentation is assumed.",
+  "rec": 1,
+  "alg": 1
+ },
+ {
+  "rank": 212,
+  "title": "Skolem Problem for Linear Recurrence Sequences",
+  "domain": "Logic, foundations & set theory",
+  "target": "Decide algorithmically, given an integer (or algebraic) linear recurrence sequence, whether it has a zero term.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 215,
+  "title": "De Giorgi Conjecture for the Allen-Cahn Equation in Dimensions 4 to 8",
+  "domain": "Analysis & PDE",
+  "target": "For each ambient dimension N with 4 <= N <= 8, prove that every bounded entire C^2 solution u from R^N to (-1,1) of the Allen-Cahn equation Laplacian u = u^3 - u that is strictly monotone in one direction is one-dimensional, that is, u(x) = g(a . x) for some unit vector a and one-variable profile g.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 216,
+  "title": "Moonshine Uniqueness Conjecture (Strongly Rational Holomorphic VOA Form)",
+  "domain": "Algebra, representation & category theory",
+  "target": "Every strongly rational, holomorphic vertex operator algebra V of central charge 24 with V_1=0 is isomorphic to the moonshine vertex operator algebra V-natural. Here strongly rational means simple, of CFT type (V=sum_{n>=0} V_n and V_0=C1), self-contragredient, C_2-cofinite, and rational in the sense that every admissible V-module is completely reducible; holomorphic means that V is the only irreducible V-module up to isomorphism in this rational setting.",
+  "rec": 1,
+  "alg": 1
+ },
+ {
+  "rank": 217,
+  "title": "All-Pairs Shortest Paths in Truly Subcubic Time",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "Determine whether exact all-pairs shortest paths on weighted n-vertex graphs can be computed in O(n^(3-epsilon)) time for some fixed epsilon greater than zero.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 220,
+  "title": "Polynomial-Time Distribution-Free PAC Learning of DNF Formulas",
+  "domain": "Theoretical computer science",
+  "target": "Given an unknown s-term DNF f on {0,1}^n and random labeled examples drawn from an arbitrary unknown distribution D, construct a possibly improper hypothesis in time polynomial in n, s, 1/epsilon, and log(1/delta) whose D-error is at most epsilon with probability at least 1-delta.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 221,
+  "title": "Exact satisfiability threshold for random k-SAT for small k (k = 3)",
+  "domain": "Probability, ergodic theory & dynamics",
+  "target": "In the uniform random 3-SAT model, choose a 3-CNF formula with n variables and m clauses uniformly from formulas whose clauses contain three distinct literals. Determine the exact constant r_3 such that, as n tends to infinity with m/n tending to r, satisfiability has probability tending to 1 for r < r_3 and tending to 0 for r > r_3.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 223,
+  "title": "Vaught's conjecture",
+  "domain": "Logic, foundations & set theory",
+  "target": "Prove or disprove that for every complete theory T in a countable first-order language, the number I(T,aleph_0) of pairwise nonisomorphic countable models of T is either at most countable or exactly 2^{aleph_0}.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 230,
+  "title": "Shafarevich Freeness Conjecture over Qab",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Let Qab be the maximal abelian extension of Q in an algebraic closure Qbar (equivalently the maximal cyclotomic extension). The absolute Galois group Gal(Qbar/Qab) is a free profinite group of countably infinite rank, in the standard profinite convention of a free basis converging to the identity.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 234,
+  "title": "The k-Server Conjecture for General Metric Spaces",
+  "domain": "Theoretical computer science",
+  "target": "For every integer k >= 1 and every metric space, prove that there is a deterministic online k-server algorithm whose movement cost on every request sequence is at most k times the offline optimum, up to an additive constant.",
+  "rec": 1,
+  "alg": 2
+ },
+ {
+  "rank": 235,
+  "title": "Zauner's Conjecture: Unrestricted Complex SIC Existence in Every Dimension",
+  "domain": "Quantum information & computation",
+  "target": "Decide whether for EVERY integer d>=2 there exist d^2 unit vectors v_1,...,v_(d^2) in the standard complex Hilbert space C^d with |<v_i,v_j>|^2=1/(d+1) whenever i!=j. Their complex lines are distinct. Equivalently, their rank-one projectors P_i=v_i v_i^* have sum_i P_i=d I_d and define SIC-POVM elements M_i=P_i/d; for i!=j the normalized trace is Tr(M_i M_j)=1/[d^2(d+1)]. No Weyl-Heisenberg covariance, order-three symmetry, explicit coordinates or uniform construction algorithm is imposed.",
+  "rec": 1,
+  "alg": 2
+ },
+ {
+  "rank": 236,
+  "title": "Perfect-Matching Search in Deterministic NC (General Graphs)",
+  "domain": "Theoretical computer science",
+  "target": "Assert the existence of one logspace-uniform family (C_n) of deterministic Boolean AND/OR/NOT circuits which, for every n>=1 and every finite simple undirected graph G on labelled vertices 1,...,n given by its n-by-n adjacency matrix, outputs a perfect matching of G if one exists and outputs a distinguished NO flag if none exists. Matching output is an n-by-n edge-indicator matrix, required to encode disjoint edges covering every vertex and belonging to G; its bits are ignored when NO is output. Circuit size is bounded by C n^c and depth by C (log(n+2))^k for constants C,c,k independent of n and G, and AND/OR fan-in is at most two. A deterministic logspace transducer on unary 1^n outputs the complete circuit description, including all designated outputs. This fixes ordinary logspace-uniform NC for the multi-output search relation. It does not conflate a search algorithm with an unweighted decision algorithm or restrict the input to bipartite or planar graphs.",
+  "rec": 0,
+  "alg": 3
+ },
+ {
+  "rank": 238,
+  "title": "Chromatic Number of the Plane (Hadwiger-Nelson Problem)",
+  "domain": "Combinatorics & discrete geometry",
+  "target": "Determine the chromatic number of the plane: the minimum number of colors needed to color every point of the Euclidean plane so that any two points at Euclidean distance exactly 1 receive distinct colors.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 239,
+  "title": "Existence of an odd perfect number",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Determine whether there exists an odd positive integer N satisfying sigma(N)=2N, where sigma is the sum-of-positive-divisors function; equivalently, prove that every perfect number is even or construct an odd perfect number.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 244,
+  "title": "K(pi,1) conjecture for Artin groups",
+  "domain": "Geometry & topology",
+  "target": "For every Coxeter system (W,S) with S finite and arbitrary Coxeter labels, let A_(W,S) be the associated Artin group and X_(W,S) its quotient Salvetti CW complex, with one |T|-cell for each T subset of S whose parabolic group W_T is finite and the standard attaching maps in Paolini Theorem 3.3 or Boyd's Salvetti construction modulo W. Prove that X_(W,S) is aspherical, hence a K(A_(W,S),1). Equivalently, prove the Deligne complex of cosets aA_T with W_T finite, ordered by inclusion, contractible. If an arrangement model is used, it is the W-quotient of the reflection-arrangement complement restricted using the interior of the Tits cone as in those sources, not an unrestricted complexified arrangement for infinite W. No spherical, affine, FC or other diagram-type restriction is imposed on W.",
+  "rec": 0,
+  "alg": 3
+ },
+ {
+  "rank": 248,
+  "title": "Universal Optimality of the Hexagonal Lattice in Dimension Two",
+  "domain": "Combinatorics & discrete geometry",
+  "target": "Let A2 be the triangular lattice scaled to density1 in R^2. A configuration C is a discrete closed subset with lim(R->infinity)|C intersect B_R(0)|/area(B_R(0))=1. For p(r)=f(r^2), where f:(0,infinity)->R is C-infinity and (-1)^k f^(k)>=0 for every integer k>=0, define lower energy by liminf(R->infinity) |C intersect B_R|^(-1) sum_{x,y in C intersect B_R,x!=y} p(|x-y|), allowing +infinity. Assertion: for every such f and C, this lower energy is at least the corresponding lattice energy E_p(A2), defined by the limit of the same averages (extended values allowed).",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 249,
+  "title": "RL versus L",
+  "domain": "Theoretical computer science",
+  "target": "Let L be the languages of binary strings decided by deterministic Turing machines using O(log(N+2)) work space on length-N inputs. Let RL use the same read-only input and read-write work-tape convention but allow fresh unbiased read-once random bits, retaining an old bit only by storing it in counted work space. The machine must halt for every input and every random tape, use O(log(N+2)) work space, accept each yes input with probability at least2/3, and accept each no input with probability0. Is every language in RL in L, equivalently RL=L?",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 250,
+  "title": "All groups are good: the four-dimensional disc-embedding conjecture",
+  "domain": "Geometry & topology",
+  "target": "Every group Gamma is good in the four-dimensional disc-embedding sense: for every based height1.5 disc-like capped grope G^c (with its standard smooth four-dimensional thickening and framed attaching region) and every homomorphism phi:pi_1(G^c)->Gamma, there exists an immersed disc D->G^c whose framed boundary coincides with that attaching region and whose double-point loops, based by paths in G^c, all map to the identity under phi. The universal assertion is equivalently goodness of the rank-two free group F2, and equivalently goodness of every finitely presented group. Its disc-embedding consequence is in the locally flat topological category, not arbitrary smooth disc embedding.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 251,
+  "title": "Shafarevich Holomorphic-Convexity Conjecture",
+  "domain": "Geometry & topology",
+  "target": "For every connected smooth complex projective variety X, its universal covering complex manifold X-tilde is holomorphically convex: for every compact K contained in X-tilde, the set {z in X-tilde: |f(z)|<=sup_{w in K}|f(w)| for every global holomorphic function f on X-tilde} is compact. This is the classical universal-cover conjecture, not the stronger assertion that X-tilde is Stein and not a statement restricted to linear fundamental groups.",
+  "rec": 1,
+  "alg": 1
+ },
+ {
+  "rank": 252,
+  "title": "Dynamical Mordell–Lang Conjecture",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "For every field K of characteristic zero, every quasiprojective variety X over K, every K-morphism f:X->X, every closed K-subvariety V of X and every point x in X(K), the set {n in Z_{≥0}: f^n(x) is in V(K)} is a finite union of arithmetic progressions {a+bm:m in Z_{≥0}} with a,b nonnegative integers. A zero step b=0 permits a singleton, and an empty union permits no returns. All iterates are defined because f is a morphism. No dominance, etaleness, smoothness, automorphism or degree restriction is imposed.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 253,
+  "title": "Witten's Asymptotic Expansion Conjecture for SU(2) WRT Invariants",
+  "domain": "Mathematical physics",
+  "target": "For every closed oriented three-manifold Y, let WRT_k(Y) be the SU(2) Witten-Reshetikhin-Turaev invariant at level k-2 in the standard compact-gauge normalization WRT_k(S^3)=1. For every value S in CS(Y), the set of Chern-Simons actions modulo Z of flat SU(2) connections, there should exist a formal Puiseux Laurent series W_S(tau) in union_{n>=1} C((tau^(1/n))) such that WRT_k(Y) ~ sum_{S in CS(Y)} exp(2*pi*i*k*S) W_S(1/k) as integer k tends to infinity, as a full Poincare asymptotic expansion. The separately named growth-rate and explicit leading-coefficient conjectures are not additional requirements.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 254,
+  "title": "Morrison-Kawamata Cone Conjecture",
+  "domain": "Geometry & topology",
+  "target": "For every projective Q-factorial klt pair (X, Delta) over the complex numbers with K_X + Delta numerically trivial, prove both that Aut(X, Delta) acting on the effective nef cone Nef^e(X) and that PsAut(X, Delta) acting on the effective movable cone Mov^e(X) have rational polyhedral fundamental domains.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 256,
+  "title": "Michel Boundary Rigidity Conjecture for Simple Manifolds",
+  "domain": "Geometry & topology",
+  "target": "Let M be a compact smooth manifold with nonempty boundary of dimension n>=3, and g,g' smooth simple Riemannian metrics: the boundary is strictly convex, every two points are joined by a unique geodesic, and there are no conjugate points. Assert that whenever d_g(x,y)=d_g'(x,y) for all boundary points x,y, there exists a diffeomorphism phi:M->M equal to the identity pointwise on the boundary with g'=phi^*g.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 259,
+  "title": "Polynomial-Time Decidability of Semidefinite Programming Feasibility",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "Determine whether feasibility of a semidefinite program with rational symmetric input matrices can be decided in polynomial time in the Turing bit model.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 262,
+  "title": "Classical Worst-Case Hardness Reduction for LWE",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "Determine whether there is a classical (non-quantum) worst-case hardness reduction for the Learning With Errors problem that fully subsumes Regev's quantum reduction, i.e. reducing both GapSVP_gamma and SIVP_gamma to LWE for the same parameters, with polynomial modulus and no loss in lattice dimension.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 264,
+  "title": "MAJORITY is not in ACC0",
+  "domain": "Theoretical computer science",
+  "target": "Let MAJORITY_n(x)=1 exactly when sum_i x_i>=n/2. Define nonuniform ACC0 as Boolean families computed, for every input length n>=1, by circuits of polynomial size and some fixed constant depth using unbounded-fan-in AND, OR and MOD_m gates and fan-in-one NOT gates, with constants allowed and one fixed integer modulus m>=2 across all lengths; MOD_m outputs1 exactly when the input sum is divisible by m. Size counts input and internal gates; depth counts gate layers. The depth, modulus and polynomial size bound may depend on the family, not on n. Is the family (MAJORITY_n) outside ACC0?",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 266,
+  "title": "Global Regularity of the 2D Inviscid Boussinesq Equations",
+  "domain": "Analysis & PDE",
+  "target": "Determine whether all smooth, finite-energy solutions of the two-dimensional inviscid Boussinesq equations (velocity coupled to a temperature or density by buoyancy, without dissipation) on R^2 remain smooth for all time, or whether finite-time singularity formation occurs for some C^infinity initial data; finite-time blow-up is known for some data on domains with corners and near half-space type domains.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 269,
+  "title": "Equivalence or Strict Containment of QMA and QMA(2)",
+  "domain": "Quantum information & computation",
+  "target": "Determine whether QMA(2)=QMA in the ordinary unrelativized, uniform polynomial-time quantum verification model. For a promise problem (Y,N), QMA(2) allows two polynomial-size quantum witnesses, required to be a product across the two prover registers: each YES input has some such witness accepted with probability at least 2/3, and each NO input is accepted with probability at most 1/3 for every such witness. QMA allows one unrestricted polynomial-size quantum witness with the same bounds. There is no requirement outside the promise. The verifier uses a fixed standard universal quantum computation model, with no oracle or advice. The two complete outcomes are equality and strict containment QMA properly contained in QMA(2).",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 272,
+  "title": "Kuznetsov Rationality Conjecture for Cubic Fourfolds",
+  "domain": "Geometry & topology",
+  "target": "For every smooth cubic fourfold X contained in P^5_C, let Ku(X) be the full right-orthogonal subcategory of D^b(coh X) consisting of objects E with Hom(O_X(i),E[j])=0 for i=0,1,2 and all integers j. The Kuznetsov rationality conjecture asserts: X is rational, meaning birational over C to P^4_C, if and only if there exists a smooth projective complex K3 surface S and an exact C-linear triangulated equivalence Ku(X) ~= D^b(coh S). The K3 category is untwisted: no nonzero chosen Brauer twist is permitted; this does not require Br(S)=0. No polarization, marking, chosen kernel, explicit algorithm or separately imposed Fourier-Mukai condition is added. The assertion quantifies over ALL smooth complex cubic fourfolds, not only general points of a special divisor.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 276,
+  "title": "Zagier Conjecture on Dedekind Zeta Values",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "For every number field F of signature (r1,r2) and every integer k>=2, put n=r2 for even k and n=r1+r2 for odd k. There exist xi_1,...,xi_n in A_k(F) tensor Q, using the allowable-symbol group defined by Zagier--Gangl section2, such that zeta_F(k) belongs to Q^times times sqrt(abs(D_F)) pi^{k([F:Q]-n)} det(L_k(sigma_i(xi_j)))_{1<=i,j<=n}. Here L_k is the single-valued polylogarithm defined there by the Bernoulli-number combination of classical polylogarithms (imaginary part for even k, real part for odd k), extended Q-linearly to symbols. For even k take one embedding from each conjugate complex pair; for odd k also take all real embeddings. The empty determinant is1. This is existence of the determinant formula, not the stronger regulator-lattice or Bloch-group rank assertion.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 282,
+  "title": "Exact Unassisted Quantum Capacity of the Qubit Depolarizing Channel",
+  "domain": "Quantum information & computation",
+  "target": "For every p in [0,1], determine the exact unassisted quantum capacity Q(D_p) of the memoryless qubit channel D_p(rho)=(1-p)rho+pI/2. Capacity is the supremum of asymptotically achievable rates in qubits per channel use for quantum-information transmission with vanishing error and arbitrary block coding, without preshared entanglement or auxiliary classical communication.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 283,
+  "title": "Polynomial-time explicit logarithmic Ramsey graphs",
+  "domain": "Theoretical computer science",
+  "target": "Does there exist one deterministic algorithm A and constants C,c>0 such that, for every integer N>=2 given in unary, A outputs the adjacency matrix of a simple N-vertex graph in time at most O(N^c), with both its clique number and independence number at most C log_2 N? This is ordinary output-size polynomial explicitness, not poly(log N)-time adjacency queries.",
+  "rec": 0,
+  "alg": 5
+ },
+ {
+  "rank": 287,
+  "title": "Alperin–McKay Conjecture",
+  "domain": "Algebra, representation & category theory",
+  "target": "For every finite group G, every prime p, every p-block B of G with defect group D, and its Brauer correspondent b in N_G(D), the numbers k_0(B) and k_0(b) of ordinary irreducible complex characters of height zero are equal. For a character chi in a p-block of a finite group H with defect group D, height zero means chi(1)_p=|H:D|_p, where a_p is the largest power of p dividing the positive integer a.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 288,
+  "title": "Complex linearity of closed-surface mapping class groups by genus",
+  "domain": "Geometry & topology",
+  "target": "For every integer g >= 3, let S_g be the closed connected orientable surface of genus g and Mod(S_g) its group of isotopy classes of orientation-preserving homeomorphisms. Determine exactly the set of such genera g for which there exist an integer n >= 1 and an injective homomorphism Mod(S_g) -> GL_n(C), with n allowed to depend on g. A complete resolution proves the answer for every g >= 3; one nonlinear genus, a bounded-dimensional obstruction, or an isolated family of representations without the remaining genus answers is partial progress.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 289,
+  "title": "Montgomery's Large Value Conjecture for Dirichlet Polynomials",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "For every fixed sigma > 1/2 and N <= T <= N^{O(1)}, prove that if D(t) = sum_{N<n<=2N} b_n exp(it log n) has |b_n| <= 1 and W is a 1-separated subset of [0,T] on which |D(t)| > N^sigma, then |W| <= C(sigma) T^{o(1)} N^{2-2sigma}.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 294,
+  "title": "Lions' Open Problem on Small-Time Global Exact Null Controllability of the Navier-Stokes Equations with Dirichlet Boundary Conditions",
+  "domain": "Applied & computational mathematics",
+  "target": "Let Omega be a bounded domain, Gamma a nonempty open subset of its boundary, and T > 0. For every divergence-free initial velocity u_0 in the natural L^2 phase space, does there exist boundary data f supported on Gamma and a weak solution of the incompressible Navier-Stokes equations with u=f on Gamma, u=0 on the uncontrolled boundary, u(0)=u_0, and u(T)=0?",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 297,
+  "title": "Hartshorne Conjecture on complete intersections in codimension two",
+  "domain": "Geometry & topology",
+  "target": "Prove that for every integer N >= 7, every smooth codimension-two subvariety X of complex projective space P^N is the scheme-theoretic intersection of two hypersurfaces.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 298,
+  "title": "Vassiliev Separation by Abelian-Valued Finite-Type Invariants",
+  "domain": "Geometry & topology",
+  "target": "For every pair of non-isotopic smooth closed oriented unframed knots K_1,K_2 in S^3, assert that there exist an abelian group A, a nonnegative integer d and an A-valued Vassiliev invariant v of order at most d with v(K_1) != v(K_2). Knots are taken up to ambient isotopy respecting their orientation, so a knot and its reverse are included when they are distinct oriented knot types. Extend v linearly from the free abelian group on oriented knot types to singular knots by the usual alternating positive/negative crossing-resolution relation; order at most d means vanishing on every singular knot with d+1 transverse double points. The coefficient group and finite order may depend on the pair. Rational-valued, integer-valued and Kontsevich-injectivity variants are related but are not asserted equivalent here.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 299,
+  "title": "Slice-Ribbon Conjecture",
+  "domain": "Geometry & topology",
+  "target": "Is every smoothly slice knot in S^3 (one that bounds a smoothly embedded disk in the 4-ball) a ribbon knot (one bounding an immersed disk in S^3 with only ribbon singularities)?",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 301,
+  "title": "Normality of Pi",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Prove that pi is a normal number: in every integer base b >= 2, every block of k digits occurs in the base-b expansion of pi with asymptotic frequency b^{-k}.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 306,
+  "title": "Planar homogeneous Mumford–Shah local-structure conjecture",
+  "domain": "Analysis & PDE",
+  "target": "Let Omega be any open subset of R^2. Consider every reduced absolute local minimizer (u,K) of E0(u,K;U)=integral_{U minus K}|grad u|^2 dx+H^1(K intersect U): K is relatively closed and countably 1-rectifiable, u is real and in W^{1,2}_loc(Omega minus K), E0 is finite on each relatively compact open U, and H^1(K intersect V)=0 implies K intersect V is empty for every open V contained in Omega. Absolute local minimality means E0(u,K;U)<=E0(v,J;U) for every relatively compact open U and every admissible locally finite-energy pair (v,J) for which (J symmetric-difference K) union the support of u-v is compactly contained in U; equality of functions off that compact set is understood almost everywhere on their common domain. There is no component-count or separation restriction on competitors. Must every x in K have a disk B_r(x) compactly contained in Omega and a C1 diffeomorphism Phi:B_r(x)->B_r(x), with Phi(x)=x and D Phi(x)=Id, such that Phi(K intersect B_r(x)) is one of: a diameter through x, one radius ending at x, or three radii ending at x with mutual120-degree angles?",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 309,
+  "title": "Bodirsky-Pinsker Tractability Conjecture for Infinite-Domain Constraint Satisfaction",
+  "domain": "Theoretical computer science",
+  "target": "For every finite-signature first-order reduct A of a countable finitely bounded homogeneous relational structure, determine whether absence of a primitive-positive construction of the three-vertex complete graph K3 implies that CSP(A), the finite-input homomorphism problem to the fixed template A, has a polynomial-time algorithm.",
+  "rec": 0,
+  "alg": 3
+ },
+ {
+  "rank": 310,
+  "title": "Deterministic polynomial-time exact bipartite matching",
+  "domain": "Theoretical computer science",
+  "target": "Does there exist a deterministic algorithm which, for every explicitly encoded finite simple bipartite graph G=(U∪V,E), a red/blue colouring of E and an integer k encoded in binary, decides in time polynomial in the total input bit length whether G has a perfect matching with exactly k red edges? Unequal side sizes or k outside 0,...,|U| are immediate No instances.",
+  "rec": 0,
+  "alg": 3
+ },
+ {
+  "rank": 313,
+  "title": "Iwasawa mu = 0 Conjecture for Cyclotomic Z_p-Extensions",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "For every number field F and every prime p, prove that the Iwasawa mu-invariant mu(X_infinity) of the unramified Iwasawa module for the cyclotomic Z_p-extension F_infinity/F is zero. The case in which F is abelian over Q is excluded as proved.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 315,
+  "title": "The Dynamic Optimality Conjecture for Splay Trees",
+  "domain": "Theoretical computer science",
+  "target": "Prove that there is a universal constant C such that, for every access sequence, the cost of the splay-tree algorithm is at most C times the minimum cost of any offline dynamic binary search tree algorithm, up to the standard additive initialization term.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 319,
+  "title": "The Atiyah Conjecture on the Integrality of L2-Betti Numbers",
+  "domain": "Algebra, representation & category theory",
+  "target": "Prove that for every finite CW-complex X whose group G = π_1(X) is torsion-free, the L2-Betti numbers of the universal covering of X, i.e. the von Neumann dimensions of its L2-homology, are integers.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 320,
+  "title": "Positivity Problem for Linear Recurrence Sequences",
+  "domain": "Logic, foundations & set theory",
+  "target": "Select arbitrary finite order k>=1, rational constant coefficients a_1,...,a_k and rational initial values u_0,...,u_(k-1), each finitely encoded in binary, with u_(n+k)=sum_(i=1)^k a_i u_(n+k-i) for all n>=0. The assertion is that a total algorithm exists which, for EVERY such input, halts and correctly decides whether u_n>=0 for EVERY n>=0. There is no running-time bound. All coefficient values, including a_k=0, are permitted.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 325,
+  "title": "Broues Abelian Defect Group Conjecture",
+  "domain": "Algebra, representation & category theory",
+  "target": "Prove that if B is a p-block of a finite group G with abelian defect group D and b is the Brauer correspondent block in N_G(D), then the bounded derived categories D^b(mod B) and D^b(mod b) are equivalent as triangulated categories.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 326,
+  "title": "Calderón uniqueness for bounded measurable real isotropic conductivities",
+  "domain": "Analysis & PDE",
+  "target": "For every integer n>=3, every bounded connected Lipschitz domain Omega in R^n and every pair of real scalar conductivities gamma_1,gamma_2 in L-infinity(Omega) with 0<c<=gamma_j<=C<infinity almost everywhere for some constants c,C, equality Lambda_gamma_1=Lambda_gamma_2 of the full weak Dirichlet-to-Neumann operators H^(1/2)(boundary Omega)->H^(-1/2)(boundary Omega) implies gamma_1=gamma_2 almost everywhere. For trace f, u is the unique H^1 solution of div(gamma grad u)=0 with trace f, and <Lambda_gamma f,g>=integral_Omega gamma grad u dot grad v for any H^1 extension v of test trace g. No coefficient derivatives, boundary agreement, connected-complement, smallness or nonzero-frequency hypothesis is imposed.",
+  "rec": 1,
+  "alg": 1
+ },
+ {
+  "rank": 328,
+  "title": "Discontinuity of the q-State Potts Phase Transition on Z^d for d >= 3 and q >= 3",
+  "domain": "Mathematical physics",
+  "target": "Prove that the order/disorder phase transition of the nearest-neighbor q-state Potts model on Z^d with d >= 3 is discontinuous (first-order) for every integer q >= 3.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 329,
+  "title": "Černý Conjecture on Shortest Reset Words of Synchronizing Automata",
+  "domain": "Theoretical computer science",
+  "target": "Prove or refute that every synchronizing deterministic finite automaton with n states admits a reset (synchronizing) word of length at most (n-1)^2, i.e., that the reset threshold of every n-state synchronizing automaton does not exceed (n-1)^2.",
+  "rec": 1,
+  "alg": 1
+ },
+ {
+  "rank": 330,
+  "title": "Original Dubrovin conjecture for Fano manifolds",
+  "domain": "Geometry & topology",
+  "target": "For every smooth projective complex Fano manifold F, prove the original Dubrovin conjecture in the form recalled in Galkin-Golyshev-Iritani Section 4.6: (1) the (big) quantum cohomology of F is generically semisimple if and only if the bounded derived category D^b_coh(F) admits a full exceptional collection; and, if the quantum cohomology is semisimple (quantum product convergent and semisimple at some point tau, with the monodromy data taken at tau and an admissible phase in that paper's conventions of Sections 2 and 4.5), there exists a full exceptional collection E_1,...,E_N such that (2) the Stokes matrix satisfies S_ij = chi(E_i,E_j) for all i,j, and (3) the central connection matrix factors as C = C'C'' where the columns of C'' are the components of the modified Chern characters Ch(E_j) and C' is an operator on cohomology commuting with cup product by c_1(F). The explicit Gamma-class formula for C' (Gamma Conjecture II) and the Hodge-Tate refined versions are not part of this target.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 335,
+  "title": "Jones Unknot Conjecture",
+  "domain": "Geometry & topology",
+  "target": "Prove or disprove: a knot K in S^3 has Jones polynomial V_K = 1 if and only if K is the unknot (equivalently, every nontrivial knot has nontrivial Jones polynomial).",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 337,
+  "title": "Capacity of the binary deletion channel",
+  "domain": "Cryptography, coding, information & optimization",
+  "target": "Determine the exact average-error Shannon capacity C_del(d) of the binary deletion channel for every fixed deletion probability d with 0 < d < 1.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 339,
+  "title": "Polynomial-time unknot recognition",
+  "domain": "Geometry & topology",
+  "target": "Determine whether there is a polynomial-time algorithm that, given a knot diagram or an equivalent finite encoding of a knot in three-space, decides whether the knot is the unknot.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 340,
+  "title": "The Online Boolean Matrix-Vector Multiplication Conjecture",
+  "domain": "Theoretical computer science",
+  "target": "Prove or refute that for every epsilon > 0 there is no randomized algorithm which, given an n by n Boolean matrix and then n Boolean query vectors one at a time, outputs each Boolean-semiring product before receiving the next vector in total time O(n^(3-epsilon)) with error probability at most 1/3.",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 341,
+  "title": "Existence of a p-Optimal Propositional Proof System",
+  "domain": "Theoretical computer science",
+  "target": "Determine whether there exists a Cook-Reckhow propositional proof system that polynomially simulates every other propositional proof system, including a polynomial-time translation of proofs.",
+  "rec": 0,
+  "alg": 2
+ },
+ {
+  "rank": 342,
+  "title": "Arnold Chord Conjecture in Higher Dimensions",
+  "domain": "Geometry & topology",
+  "target": "Prove that for every closed co-oriented contact manifold (Y, xi) of dimension 2n+1 with n >= 2, every contact form alpha for xi, and every closed Legendrian submanifold Lambda of Y, there exists a Reeb chord of Lambda: a non-constant trajectory of the Reeb vector field of alpha starting and ending on Lambda. Hutchings-Taubes proved the three-dimensional case (all Legendrian knots in all closed contact 3-manifolds); the conjecture is open in higher dimensions apart from special cases (subcritical Stein boundaries, conormal bundles, convex hypersurfaces).",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 343,
+  "title": "Bott Conjecture: nonnegatively curved simply connected manifolds are rationally elliptic",
+  "domain": "Geometry & topology",
+  "target": "Prove that every compact simply connected manifold M admitting a metric of nonnegative sectional curvature is rationally elliptic, i.e., the Betti numbers of its loop space grow at most polynomially for every field of coefficients.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 344,
+  "title": "Koebe circle-domain uniformization conjecture",
+  "domain": "Analysis & PDE",
+  "target": "For every nonempty connected open domain Omega of the Riemann sphere, there exist a circle domain D in the Riemann sphere and a conformal homeomorphism Omega -> D. A circle domain means a nonempty connected open set each of whose complementary components is a closed round disk or a point. Allow arbitrary connectivity, including uncountably many complementary components and point components; the whole sphere (empty complement) and a sphere minus one point are included as trivial circle-domain cases. Conformal homeomorphism means a bijective conformal map, not a possibly noninjective holomorphic covering. No uniqueness, Mobius rigidity, quantitative distortion, explicit construction or boundary-extension requirement is appended. The universal statement is retained, not replaced by only an uncountable-connectivity or otherwise difficult subclass.",
+  "rec": 2,
+  "alg": 1
+ },
+ {
+  "rank": 345,
+  "title": "Erdos-Szekeres Convex Polygon Problem (Happy Ending Problem)",
+  "domain": "Combinatorics & discrete geometry",
+  "target": "Determine the exact least integer ES(n) such that every set of ES(n) points in general position in the plane contains n points in convex position; prove or disprove ES(n)=2^(n-2)+1 for every n >= 3.",
+  "rec": 1,
+  "alg": 0
+ },
+ {
+  "rank": 346,
+  "title": "Corona problem for the unit polydisc",
+  "domain": "Analysis & PDE",
+  "target": "For every integer n>=2 and every finite integer m>=1, let f_1,...,f_m be scalar bounded holomorphic functions on the unit polydisc D^n={z in C^n: |z_k|<1 for all k}. If inf_{z in D^n} sum_{j=1}^m |f_j(z)|>0, then there exist scalar bounded holomorphic g_1,...,g_m on D^n such that sum_{j=1}^m f_j g_j=1 identically. No boundary extension, regularity, operator inequality or sharp solution-norm bound is required. Equivalently, for every n>=2, point evaluations from D^n are dense in the maximal ideal space of H-infinity(D^n).",
+  "rec": 0,
+  "alg": 1
+ },
+ {
+  "rank": 348,
+  "title": "Beal's Conjecture (Tijdeman-Zagier Conjecture)",
+  "domain": "Number theory & arithmetic geometry",
+  "target": "Prove that if A^x + B^y = C^z with A, B, C, x, y, z positive integers and x, y, z all greater than 2, then A, B, and C have a common prime factor.",
+  "rec": 1,
+  "alg": 0
+ }
+]

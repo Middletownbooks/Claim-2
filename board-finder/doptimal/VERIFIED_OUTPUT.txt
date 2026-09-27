@@ -1,0 +1,37 @@
+=== 1. invariants (0 violations expected) ===
+violations: 0
+  route H: k=4 blocks, target=0, sum a_i^2 = 4v
+      residual = 0 mod 4 for v=1 mod 4: True ; v=3 mod 4: True
+  route D: k=2 blocks, target=2, a^2 + b^2 = 4v - 2
+      residual = 0 mod 4 for v=1 mod 4: True ; v=3 mod 4: True
+  sum of residuals over s=1..v-1 is 0 for BOTH routes (derived above)
+
+=== 2. the cost floor, by exhaustion, for the D-optimal condition ===
+  v=  3 n=  6  exact solutions=   12  smallest non-zero cost=None  at row sums None
+  v=  5 n= 10  exact solutions=   75  smallest non-zero cost=None  at row sums None
+  v=  7 n= 14  exact solutions=  392  smallest non-zero cost=64  at row sums (-5, -1)
+  v=  9 n= 18  exact solutions= 1944  smallest non-zero cost=64  at row sums (-5, -3)
+  v= 11 n= 22  exact solutions=    0  smallest non-zero cost=None  at row sums None
+
+=== 3. orbit-ansatz admissibility, H (4 blocks) vs D (2 blocks) ===
+  v   4v-2 is a^2+b^2 |  H: (d,r,D) admissible        |  D: (d,r,D) admissible
+  487  False            |  9/55/27, 3/163/81, 1/487/243 |  none
+  523  False            |  9/59/29, 3/175/87, 1/523/261 |  none
+  571  False            |  5/115/57, 3/191/95, 1/571/285 |  none
+  643   True            |  3/215/107, 1/643/321         |  3/215/107, 1/643/321
+  659  False            |  7/95/47, 1/659/329           |  none
+  739  False            |  9/83/41, 3/247/123, 1/739/369 |  none
+
+=== 4. per-equation cost in bits, orbit-constant sequences ===
+  v=  67 d=3 r= 23 D= 11 | H  3.50 bits/eq | D  2.86 bits/eq | diff -0.64
+      H: free bits   88 - equations    38.5 = log2 E[#sol]    +49.5  (per unit of (r-1): +2.25)
+      D: free bits   44 - equations    31.4 = log2 E[#sol]    +12.6  (per unit of (r-1): +0.57)
+  v=  79 d=3 r= 27 D= 13 | H  3.56 bits/eq | D  3.00 bits/eq | diff -0.57
+      H: free bits  104 - equations    46.3 = log2 E[#sol]    +57.7  (per unit of (r-1): +2.22)
+      D: free bits   52 - equations    39.0 = log2 E[#sol]    +13.0  (per unit of (r-1): +0.50)
+  v= 103 d=3 r= 35 D= 17 | H  3.76 bits/eq | D  3.19 bits/eq | diff -0.57
+      H: free bits  136 - equations    64.0 = log2 E[#sol]    +72.0  (per unit of (r-1): +2.12)
+      D: free bits   68 - equations    54.3 = log2 E[#sol]    +13.7  (per unit of (r-1): +0.40)
+  v= 151 d=3 r= 51 D= 25 | H  4.02 bits/eq | D  3.47 bits/eq | diff -0.55
+      H: free bits  200 - equations   100.5 = log2 E[#sol]    +99.5  (per unit of (r-1): +1.99)
+      D: free bits  100 - equations    86.9 = log2 E[#sol]    +13.1  (per unit of (r-1): +0.26)

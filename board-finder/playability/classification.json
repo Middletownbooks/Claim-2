@@ -191,7 +191,19 @@
    "witnessCheckFeasible": "HOPELESS",
    "searchMechanismClass": "c",
    "feasibilityNote": "a zero off the line needs rigorous interval arithmetic at heights far past any new sweep",
-   "exactTarget": "For every integer q>=1 and every Dirichlet character chi modulo q, including principal and imprimitive characters, every zero s of the meromorphic continuation of L(s,chi)=sum_{n>=1}chi(n)n^(-s) in 0<Re(s)<1 satisfies Re(s)=1/2. The continuation is from Re(s)>1. Only open-strip zeros are quantified: principal-character poles and boundary zeros of imprimitive Euler factors are not counterexamples. No simplicity or central nonvanishing requirement is added."
+   "exactTarget": "For every integer q>=1 and every Dirichlet character chi modulo q, including principal and imprimitive characters, every zero s of the meromorphic continuation of L(s,chi)=sum_{n>=1}chi(n)n^(-s) in 0<Re(s)<1 satisfies Re(s)=1/2. The continuation is from Re(s)>1. Only open-strip zeros are quantified: principal-character poles and boundary zeros of imprimitive Euler factors are not counterexamples. No simplicity or central nonvanishing requirement is added.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "All zeros of Dirichlet L-functions for primitive characters of modulus q <= 400,000 have been rigorously verified to lie on the critical line up to height H_q = max(10^8/q, c_q\u00b710^7/q + 200) (c_q=7.5 even, 3.75 odd) \u2014 and separately, no Dirichlet L-function of modulus q <= 2,000,000 vanishes at its central point.",
+    "wall": "rigorous interval-arithmetic computation of each L-function's zeros \u2014 cost scales with both modulus q and height, so the two-parameter search space (q x height) is the wall, not a single linear frontier.",
+    "url": "https://www.doi.org/10.1090/MCOM/3077",
+    "date": "Math. Comp. 85 (2016), 3009\u20133027 (Platt)",
+    "quote": "\"We describe two new algorithms for the efficient and rigorous computation of Dirichlet L-functions and their use to verify the Generalised Riemann Hypothesis for all such L-functions associated with primitive characters of modulus $q\\leq 400 000$.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Quote supports q <= 400,000. The 2026 quadratic zero-free-strip result at q <= 1e10 is correctly kept separate as a weaker claim."
+   }
   },
   {
    "rank": 10,
@@ -451,7 +463,19 @@
    "witnessCheckFeasible": "FRONTIER",
    "searchMechanismClass": "c",
    "feasibilityNote": "Goldbach verification is a linear push; frontier is the whole question [recall: ~4e18]",
-   "exactTarget": "Prove or disprove that every even integer n greater than 2 is the sum of two primes."
+   "exactTarget": "Prove or disprove that every even integer n greater than 2 is the sum of two primes.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "Every even n > 2 as a sum of two primes, verified for n up to 4\u00d710^18.",
+    "wall": "purely computational \u2014 a segmented sieve pushed as far as distributed hardware allows; the source's own framing shows the wall is \"the sizes of the largest counterexamples\" search space, not any theoretical obstruction.",
+    "url": "https://www.ams.org/journals/mcom/2014-83-288/S0025-5718-2013-02787-1",
+    "date": "Math. Comp. 83 (2014), 2033\u20132060 (computation completed April 2012)",
+    "quote": "\"This paper describes how the even Goldbach conjecture was confirmed to be true for all even numbers not larger than $4\\cdot 10^{18}$.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Quote contains 4e18. The 2025-26 informal claims are correctly excluded from the frontier."
+   }
   },
   {
    "rank": 23,
@@ -1591,7 +1615,19 @@
    "witnessCheckFeasible": "BOUNDED",
    "searchMechanismClass": "b",
    "feasibilityNote": "counterexample is one graph, but minor-closed structure cuts the candidates",
-   "exactTarget": "Prove that every simple graph with no K_{t+1} minor is t-colourable for every integer t >= 1."
+   "exactTarget": "Prove that every simple graph with no K_{t+1} minor is t-colourable for every integer t >= 1.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "Proved for t <= 6 (t=5 and t=6 both equivalent to and proved via the Four Colour Theorem, the latter by Robertson\u2013Seymour\u2013Thomas). t=7 is open. A weaker \"Linear Hadwiger\" version (Ct-colourable for some constant C, rather than exactly t-1) has been reduced to a finite coloring check on small graphs, and the current general upper bound is O(t log log t)-colourable.",
+    "wall": "t=7 \"appears to be out of reach at the moment,\" per a late-2025 paper \u2014 the wall isn't computational exhaustion (the Four-Colour-Theorem-style case checks worked for t<=6) but a genuine proof-technique gap for t>=7; no one has a reduction of the exact (non-linear) conjecture to a finite check the way t=5,6 reduced to 4CT.",
+    "url": "https://arxiv.org/pdf/2512.20392",
+    "date": "arXiv:2512.20392 (December 2025)",
+    "quote": "\"It is only known to hold [44] for $t \\leq 6$, with the cases t = 5 and t = 6 both shown to be equivalent to the Four-Color theorem, and even the t = 7 case appears to be out of reach at the moment.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Mechanism correction: 'minor-closed structure cuts the candidates' describes LINEAR Hadwiger, which has a finite-check reduction. The exact conjecture has none beyond t <= 6."
+   }
   },
   {
    "rank": 80,
@@ -3231,7 +3267,19 @@
    "witnessCheckFeasible": "FRONTIER",
    "searchMechanismClass": "c",
    "feasibilityNote": "a cycle is finite; the divergence branch is not certifiable at all",
-   "exactTarget": "Prove or disprove that, for every positive integer N, repeated application of N -> N/2 when N is even and N -> 3N+1 when N is odd eventually reaches 1."
+   "exactTarget": "Prove or disprove that, for every positive integer N, repeated application of N -> N/2 when N is even and N -> 3N+1 when N is odd eventually reaches 1.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "Convergence verified for all starting values below 2^71, up from 2^68 (2023-era yoyo@home/Ba\u0159ina result) and 2^66 before that.",
+    "wall": "purely computational, GPU/supercomputer throughput \u2014 each starting value must be individually traced to 1; there's no shortcut that certifies a whole range without walking every trajectory in it.",
+    "url": "https://link.springer.com/article/10.1007/s11227-025-07337-0",
+    "date": "Journal of Supercomputing 81(1), 2025 (Ba\u0159ina)",
+    "quote": "\"we introduce a new result that pushes the limit for which the conjecture is verified up to 2^71.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Quote contains 2^71, superseding the 2^68 this project recalled."
+   }
   },
   {
    "rank": 162,
@@ -4791,7 +4839,19 @@
    "witnessCheckFeasible": "FRONTIER",
    "searchMechanismClass": "c",
    "feasibilityNote": "odd perfect N is a linear push against a very large known lower bound",
-   "exactTarget": "Determine whether there exists an odd positive integer N satisfying sigma(N)=2N, where sigma is the sum-of-positive-divisors function; equivalently, prove that every perfect number is even or construct an odd perfect number."
+   "exactTarget": "Determine whether there exists an odd positive integer N satisfying sigma(N)=2N, where sigma is the sum-of-positive-divisors function; equivalently, prove that every perfect number is even or construct an odd perfect number.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "No odd perfect number below 10^1500 (also: at least 101 not-necessarily-distinct prime factors, largest prime-power component > 10^62).",
+    "wall": "computational tree-search cost \u2014 each improvement extends a large branching proof-tree of factorization cases; pushing the bound further requires factoring increasingly large composite numbers, which is the bottleneck (explicitly named in the follow-up radical paper: \"we have encountered composite numbers with no known factors\").",
+    "url": "https://www.ams.org/mcom/2012-81-279/S0025-5718-2012-02563-4/",
+    "date": "Math. Comp. 81 (2012), 1869\u20131877",
+    "quote": "\"Brent, Cohen, and te Riele proved in 1991 that an odd perfect number N is greater than $10^{300}$. We modify their method to obtain $N>10^{1500}$.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Quote contains 10^1500. Static since 2012, which is the finding."
+   }
   },
   {
    "rank": 240,
@@ -5491,7 +5551,19 @@
    "witnessCheckFeasible": "BOUNDED",
    "searchMechanismClass": "b",
    "feasibilityNote": "isogeny classes and mod-p representations are computable over small conductor",
-   "exactTarget": "For every prime p>17 and elliptic curves E,E\u2032 over Q, prove that an isomorphism E[p]\u2245E\u2032[p] as G_Q-modules implies that E and E\u2032 are Q-isogenous."
+   "exactTarget": "For every prime p>17 and elliptic curves E,E\u2032 over Q, prove that an isomorphism E[p]\u2245E\u2032[p] as G_Q-modules implies that E and E\u2032 are Q-isogenous.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "For elliptic curves over Q of conductor <= 500,000, the strong Frey\u2013Mazur conjecture is verified with C=17 \u2014 i.e. every p-congruence with p>=19 between curves in that conductor range comes from an isogeny (Cremona\u2013Freitas). Congruences are known to exist for all primes up to 17 (e.g. an explicit 17-torsion congruence between two non-isogenous curves, Billerey), consistent with the conjectured cutoff.",
+    "wall": "exhaustive computation over the LMFDB elliptic-curve database \u2014 checking every pair of curves up to a conductor bound for shared mod-p Galois representations; extending past conductor 500,000 is a database-size/compute problem, not a theoretical one. The conjecture itself, for arbitrary conductor, remains open in general.",
+    "url": "https://arxiv.org/pdf/2404.07319",
+    "date": "arXiv:2404.07319, cited result Cremona\u2013Freitas 2022",
+    "quote": "\"Over the rationals (i.e. $K = \\mathbb{Q}$), Cremona and Freitas [CF22, Theorem 1.3.] have shown that for curves of conductor at most 500 000, the strong version of the Frey-Mazur Conjecture holds with C = 17.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Quote contains conductor 500,000 and C = 17."
+   }
   },
   {
    "rank": 276,
@@ -5591,7 +5663,19 @@
    "witnessCheckFeasible": "FEASIBLE",
    "searchMechanismClass": "b",
    "feasibilityNote": "e^2=e on a fixed finite support is a finite algebraic system; SAT-tractable",
-   "exactTarget": "For every field K of arbitrary characteristic and every torsion-free group G, prove that each idempotent e in the ordinary scalar group ring K[G] is 0 or 1. Here K[G] consists of finite formal K-linear combinations of elements of G, with the group multiplication extended bilinearly, and idempotent means e^2=e. The group need not be finitely generated. This is not a claim that matrix rings over K[G], completed operator algebras or integral quandle rings have no nontrivial idempotents."
+   "exactTarget": "For every field K of arbitrary characteristic and every torsion-free group G, prove that each idempotent e in the ordinary scalar group ring K[G] is 0 or 1. Here K[G] consists of finite formal K-linear combinations of elements of G, with the group multiplication extended bilinearly, and idempotent means e^2=e. The group need not be finitely generated. This is not a claim that matrix rings over K[G], completed operator algebras or integral quandle rings have no nontrivial idempotents.",
+   "frontierSweep": {
+    "verdict": "CORRECTED",
+    "frontier": "The recalled citation is confirmed exactly: Gardam (2021) found an explicit non-trivial unit in F_2[P] where P is Promislow's group (the fundamental group of the Hantzsche\u2013Wendt flat 3-manifold), disproving the unit conjecture in characteristic 2. This is the top of a three-step implication chain \u2014 unit => zero-divisor => idempotent \u2014 so disproving unit did not automatically disprove the two weaker conjectures below it: P itself is known to satisfy the zero-divisor conjecture (it's supersoluble), so Gardam's counterexample gives no idempotent counterexample \"for free.\"",
+    "wall": "Nobody has pointed a search at the idempotent conjecture specifically. Instead, the field's actual next target \u2014 logically and in practice \u2014 is the intermediate zero-divisor conjecture, since a zero-divisor counterexample would automatically hand you an idempotent counterexample too. That search is explicitly ongoing and unresolved: a 2025 paper states \"the zero-divisor conjecture still remains open,\" and a Bar-Ilan University AI-algebra lab (partnering with Miasnikov, Stevens Institute) lists \"Kaplansky's zero divisor conjecture\" as a live target for algorithmic/reinforcement-learning search as of early 2026, without reporting success.",
+    "url": "https://arxiv.org/pdf/2501.07646",
+    "date": "arXiv:2501.07646, January 2025 (zero-divisor status); Gardam's original result: 2021",
+    "quote": "\"While the zero-divisor conjecture still remains open, the unit conjecture was disproven by Gardam in 2021. The search for more counterexamples remains an open problem.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "The recalled Gardam citation is confirmed, and the recommendation SURVIVES BUT CHANGES SHAPE: the implication chain is unit => zero-divisor => idempotent, Promislow's group is known to satisfy the zero-divisor conjecture, so Gardam's unit counterexample yields no idempotent one. The live target is the intermediate zero-divisor conjecture, and an AI-algebra lab is already on it."
+   }
   },
   {
    "rank": 281,
@@ -5728,10 +5812,23 @@
    "workspaceCount": 0,
    "quantitative": false,
    "quantifierPrefix": "U",
-   "witnessCheckFeasible": "BOUNDED",
+   "witnessCheckFeasible": "NARROWED",
    "searchMechanismClass": "a",
    "feasibilityNote": "reduction to finite simple groups; search is a classified list, not a explosion",
-   "exactTarget": "For every finite group G, every prime p, every p-block B of G with defect group D, and its Brauer correspondent b in N_G(D), the numbers k_0(B) and k_0(b) of ordinary irreducible complex characters of height zero are equal. For a character chi in a p-block of a finite group H with defect group D, height zero means chi(1)_p=|H:D|_p, where a_p is the largest power of p dividing the positive integer a."
+   "exactTarget": "For every finite group G, every prime p, every p-block B of G with defect group D, and its Brauer correspondent b in N_G(D), the numbers k_0(B) and k_0(b) of ordinary irreducible complex characters of height zero are equal. For a character chi in a p-block of a finite group H with defect group D, height zero means chi(1)_p=|H:D|_p, where a_p is the largest power of p dividing the positive integer a.",
+   "frontierSweep": {
+    "verdict": "CORRECTED",
+    "frontier": "Sp\u00e4th's 2013 reduction theorem (J. Reine Angew. Math. 680) reduces AM to the \"inductive Alperin\u2013McKay condition\" (iAM) on quasi-simple groups. That reduction has now been fully discharged for the prime \u2113=2: Ruhstorfer's paper states \"Our main objective in this paper is to prove this conjecture for the prime 2,\" concluding \"Theorem A. The Alperin\u2013McKay conjecture holds for the prime \u2113=2.\" So the prediction in the claim is right, but understates the result \u2014 this isn't just \"someone swept the small groups,\" the whole classified list has been cleared for \u2113=2 and Alperin\u2013McKay is now a theorem at that prime.",
+    "wall": "for odd primes, \"the inductive McKay condition only remains open for simple groups of type D,\" and the analogous iAM verification for odd \u2113 is still incomplete across Lie-type families \u2014 stated by the sources, not inferred.",
+    "url": "https://ar5iv.labs.arxiv.org/html/2204.06373",
+    "date": "2022 (arXiv); published Annals of Math. 201(2), 2025",
+    "quote": "\"Theorem A. The Alperin\u2013McKay conjecture holds for the prime \u2113=2.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "A counterexample search cannot succeed at l=2, because the conjecture is now a THEOREM there. The witness target survives only at odd primes, where the inductive condition is incomplete. That is a narrowing of the search space by a proof, not a bound on a search."
+   },
+   "witnessCheckFeasibleWas": "BOUNDED"
   },
   {
    "rank": 288,
@@ -5891,7 +5988,19 @@
    "witnessCheckFeasible": "BOUNDED",
    "searchMechanismClass": "b",
    "feasibilityNote": "reduces to snarks; exhaustive snark generation is the method and it is pushed",
-   "exactTarget": "Prove that every finite bridgeless graph admits an orientation and a flow f on its edges with integer values in {-4,-3,-2,-1,1,2,3,4}, such that the sum of outgoing values equals the sum of incoming values at every vertex."
+   "exactTarget": "Prove that every finite bridgeless graph admits an orientation and a flow f on its edges with integer values in {-4,-3,-2,-1,1,2,3,4}, such that the sum of outgoing values equals the sum of incoming values at every vertex.",
+   "frontierSweep": {
+    "verdict": "CORRECTED",
+    "frontier": "The classical benchmark (Brinkmann\u2013Goedgebeur\u2013H\u00e4gglund\u2013Markstr\u00f6m, 2013) generated all snarks up to 36 vertices \u2014 but this has just been superseded: a March 2026 paper reports complete generation of all girth->=5 snarks up to 38 vertices and all girth-exactly-4 snarks up to 40 vertices, using a new algorithm 14\u201329x faster than prior ones.",
+    "wall": "stated explicitly and quantitatively \u2014 the old algorithm would have needed roughly 840 CPU-years to reach 38 vertices (vs. 73 CPU-years actually spent reaching 36), which is why a faster algorithm had to be developed first; the wall is combinatorial explosion in graph count (over 400 million cyclically-4-edge-connected snarks already at 36 vertices) against available compute.",
+    "url": "https://arxiv.org/html/2603.17789v1",
+    "date": "arXiv:2603.17789, March 2026",
+    "quote": "\"One algorithm is for snarks with girth exactly 4 and is used for generating complete lists of girth 4 snarks on up to 40 vertices. The second algorithm lists snarks with girth at least 5 and is used for generating complete lists of such snarks on up to 38 vertices.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Frontier moved this year: 38 vertices at girth >= 5, 40 at girth 4, on a 14-29x faster algorithm, superseding the 2013 record of 36. The wall is quantified (840 CPU-years for the old algorithm)."
+   }
   },
   {
    "rank": 296,
@@ -5991,7 +6100,19 @@
    "witnessCheckFeasible": "BOUNDED",
    "searchMechanismClass": "a",
    "feasibilityNote": "reduction to finite simple groups, as for Alperin-McKay",
-   "exactTarget": "Prove that the number of isomorphism classes of simple modules of a p-block B of a finite group G equals the number of G-conjugacy classes of B-weights."
+   "exactTarget": "Prove that the number of isomorphism classes of simple modules of a p-block B of a finite group G equals the number of G-conjugacy classes of B-weights.",
+   "frontierSweep": {
+    "verdict": "CORRECTED",
+    "frontier": "Navarro\u2013Tiep reduced AWC to the \"inductive AW condition\" (Invent. Math. 184, 2011). Sporadic groups specifically were swept and published: \"An and Dietrich [7] dealt with sporadic groups,\" and Lie-type groups in defining characteristic plus groups with abelian Sylow 2-subgroups were done in the original Navarro\u2013Tiep paper. So the prediction is right for the sporadic/GAP-checkable slice \u2014 but unlike Alperin\u2013McKay at \u2113=2, the full conjecture is explicitly still open: a 2024 source states plainly it is \"out of reach\" in general.",
+    "wall": "the blockwise refinement (BAW) and the general AW condition remain unverified for large families of Lie-type groups at non-defining characteristic; a 2025 source lists this as still being chased prime-by-prime, family-by-family.",
+    "url": "https://par.nsf.gov/servlets/purl/10501234",
+    "date": "April 18, 2024",
+    "quote": "\"Despite the fact that certain families of simple groups have been shown to satisfy the inductive AWC condition (see [BS, FLZ, FM, Li, Ma], etc.), it is fair to say that a full proof of AWC seems yet, unfortunately, out of reach.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Stays BOUNDED and is now the ONLY one of the four block conjectures still open in the shape the record assumed: sporadics swept, general case sourced as 'out of reach'."
+   }
   },
   {
    "rank": 301,
@@ -6131,7 +6252,19 @@
    "witnessCheckFeasible": "FRONTIER",
    "searchMechanismClass": "c",
    "feasibilityNote": "one n; a linear push, and the prime gap frontier is far out",
-   "exactTarget": "Prove that for every positive integer n there exists a prime p with n^2 < p < (n+1)^2."
+   "exactTarget": "Prove that for every positive integer n there exists a prime p with n^2 < p < (n+1)^2.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "Verified for all n <= 7.05\u00d710^13 (Sorenson & Webster), up from the previous record of 2\u00d710^9.",
+    "wall": "purely computational \u2014 algorithm runtime O(N log N log log N); the published paper reports it \"ran for about half a year\" on hundreds of cores, so the wall is compute-time/parallelism, not a theoretical obstruction.",
+    "url": "https://link.springer.com/article/10.1007/s40993-024-00589-4",
+    "date": "Res. Number Theory (2024), s40993-024-00589-4",
+    "quote": "\"We implemented a parallel version of our algorithm and improved the empirical verification of Oppermann's conjecture from the previous $N = 2\\cdot 10^{9}$ up to $N = 7.05\\cdot 10^{13} > 2^{46}$, so we were finding 27 digit primes.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": "PARTLY",
+    "adjudication": "THE QUOTE IS ABOUT OPPERMANN'S CONJECTURE, NOT LEGENDRE'S. Oppermann is strictly stronger (primes in both (n^2-n, n^2) and (n^2, n^2+n)), so verifying it to 7.05e13 does verify Legendre to that bound \u2014 the inference is sound but it IS an inference, and a later reader must not think the quoted sentence names Legendre."
+   }
   },
   {
    "rank": 308,
@@ -6608,10 +6741,23 @@
    "workspaceCount": 1,
    "quantitative": false,
    "quantifierPrefix": "E",
-   "witnessCheckFeasible": "DEMONSTRATED",
+   "witnessCheckFeasible": "WITNESSES-VERIFIED",
    "searchMechanismClass": "b",
    "feasibilityNote": "TWELVE previously-open orders closed in a weekend by an agent sweeping construction families; see FEASIBILITY.md section 6",
-   "exactTarget": "Prove that there exists a Hadamard matrix of order 4k for every positive integer k."
+   "exactTarget": "Prove that there exists a Hadamard matrix of order 4k for every positive integer k.",
+   "frontierSweep": {
+    "verdict": "CORRECTED",
+    "frontier": "Before this event, 668 was the smallest open order (open since 2005, when Kharaghani & Tayfeh-Rezaie resolved the prior smallest case, 428); as of a 2025 paper, the open cases <=1000 were specifically 668, 716, and 892. Multiple independent sources \u2014 a well-known math blog (John D. Cook, Aug 13, 2026) and Chinese tech-press coverage (\u91cf\u5b50\u4f4d/QbitAI, Aug 2026) \u2014 report that Anthropic researcher and mathematician Levent Alp\u00f6ge, working with two human collaborators and Claude, announced a genuine order-668 Hadamard matrix and \"filled in all remaining gaps below 2000,\" described elsewhere as twelve orders.",
+    "wall": "this is exactly where the claim needs a caveat. The epoch.ai FrontierMath page itself \u2014 one of the two named sources \u2014 still shows the order-668 problem marked \"Solved: No,\" with both listed automated model attempts (GPT-5.2 Pro, Gemini 3 Deep Think, tested alone) failing on the full problem. Chinese coverage independently describes epoch.ai's own listing as only \"temporarily\" (\u6682\u65f6) marked solved by AI. So the claim that \"only 668 was independently checked\" is itself optimistic \u2014 even 668 doesn't appear to have cleared the benchmark's own official verifier as of my search.",
+    "url": "https://www.johndcook.com/blog/2026/08/13/constructing-hadamard-matrices/",
+    "date": "August 13, 2026 (blog); underlying announcement via X/Twitter by Levent Alp\u00f6ge, same window",
+    "quote": "\"Until yesterday, the smallest multiple of 4 for which nobody had found a corresponding Hadamard matrix was 668. Then Levent Alp\u00f6ge announced that he and his and collaborators found an example of size 668 and filled in all remaining gaps below 2000.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "PRIMARY-VERIFIED-LOCALLY",
+    "quoteSupportsCell": true,
+    "adjudication": "UPGRADED after reading github.com/bbeartheancient/hoa64 directly (commit d825201). THE MATRICES ARE VERIFIED HERE, NOT RELAYED: all 13 shipped files pass shape (n,n), entries in {-1,+1} and H H^T = nI in exact integer arithmetic -- 668, 716, 892, 1132, 1244, 1388, 1436, 1676, 1772, 1852, 1916, 1948, 1964. The mathematical content of the claim therefore stands whatever epoch.ai reports about its own verifier, and the sweep's ANNOUNCED-UNVERIFIED was too weak ON THE OBJECTS. THREE THINGS STILL DO NOT FOLLOW, the repo's own README being the source for the first two. (1) PROVENANCE: it lists these as 'CSV import -- 12 Alpoge matrices (668-1964, formerly open) plus Djokovic H.1852', so the repo CONSUMES them, 1852 is a 1992 solution rather than new, and the method that closed 668-1964 is NOT in the repository. (2) The README says gaps below 2000 remain at 1212 and 1940, contradicting 'filled in all remaining gaps below 2000' on the repo's own terms. (3) Whether each order was previously OPEN is a literature question and stays relayed -- arm AV in this project had already separated exactly these two claims. So: the witnesses are verified, the history is not. FEASIBILITY.md section 6's deep-vs-broad screen now rests on verified objects rather than a press report, which strengthens it; its attribution of the work to an agent sweep remains relayed. See HOA64_ASSESSMENT.md."
+   },
+   "witnessCheckFeasibleWas": "DEMONSTRATED"
   },
   {
    "rank": 332,
@@ -6691,7 +6837,19 @@
    "witnessCheckFeasible": "BOUNDED",
    "searchMechanismClass": "b",
    "feasibilityNote": "knot tabulation by crossing number is the method; frontier is crossing count",
-   "exactTarget": "Prove or disprove: a knot K in S^3 has Jones polynomial V_K = 1 if and only if K is the unknot (equivalently, every nontrivial knot has nontrivial Jones polynomial)."
+   "exactTarget": "Prove or disprove: a knot K in S^3 has Jones polynomial V_K = 1 if and only if K is the unknot (equivalently, every nontrivial knot has nontrivial Jones polynomial).",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "The Jones polynomial has been verified to distinguish the unknot from every non-trivial knot with a diagram of up to 24 crossings (Tuzun & Sikora).",
+    "wall": "pure combinatorial explosion in diagram count \u2014 the 23-crossing step alone required testing over 10.7 trillion candidate diagrams (~9x the 22-crossing count), consuming 2,744 core-days; the growth rate is roughly 5\u201310x CPU time per additional crossing, which is the explicit bottleneck.",
+    "url": "https://arxiv.org/pdf/2003.06724",
+    "date": "arXiv:2003.06724 (2020); published Journal of Knot Theory and its Ramifications, 2021",
+    "quote": "\"The verification for 23 crossings required testing 10,675,582,685,989 non-algebraic knot diagrams and 43,356,077,900 algebraic knot diagrams, for a total of 10,718,938,763,889 knot diagrams \u2013 approximately 9 times the number of knot diagrams for 22 crossings.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Quote gives the 23-crossing diagram count; frontier is 24 crossings. Kronheimer-Mrowka on Khovanov homology narrows what a counterexample could look like."
+   }
   },
   {
    "rank": 336,
@@ -6951,7 +7109,19 @@
    "witnessCheckFeasible": "FRONTIER",
    "searchMechanismClass": "c",
    "feasibilityNote": "one 6-tuple; a bounded linear search over exponents and bases",
-   "exactTarget": "Prove that if A^x + B^y = C^z with A, B, C, x, y, z positive integers and x, y, z all greater than 2, then A, B, and C have a common prime factor."
+   "exactTarget": "Prove that if A^x + B^y = C^z with A, B, C, x, y, z positive integers and x, y, z all greater than 2, then A, B, and C have a common prime factor.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "The most rigorous published computational result found is an exhaustive search of exponential Diophantine equations of this shape up to C^z <= 2^100 (Townsend, 2010), with no counterexample. Separately, the informally-cited (Beal's own and follow-on) search checked all six variables (A,B,C,x,y,z) up to 1000.",
+    "wall": "purely combinatorial/computational \u2014 a modular-arithmetic filter that \"eliminate[s] over 99% of inputs with a single array lookup,\" so the wall is how far the residue-table search can be pushed with available compute, not a theoretical obstruction.",
+    "url": "https://arxiv.org/pdf/1004.0430",
+    "date": "arXiv:1004.0430, submitted April 3, 2010",
+    "quote": "\"This algorithm is used to show the largest min/gcd value for all equations with $C^z \\leq 2^{100}$.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": "PARTLY",
+    "adjudication": "The quote establishes the SEARCH BOUND (C^z <= 2^100) and reports a min/gcd statistic; it does not itself say 'no counterexample was found'. The bound is sourced, the null result is adjacent."
+   }
   },
   {
    "rank": 349,
@@ -7088,10 +7258,23 @@
    "workspaceCount": 0,
    "quantitative": false,
    "quantifierPrefix": "U",
-   "witnessCheckFeasible": "BOUNDED",
+   "witnessCheckFeasible": "NOT-A-SEARCH",
    "searchMechanismClass": "b",
    "feasibilityNote": "as for the 5-flow: structured graph generation, known wall",
-   "exactTarget": "Every finite loopless multigraph G that is 4-edge-connected admits a nowhere-zero integer 3-flow: there exist an orientation D of E(G) and a function f:E(G)->{-2,-1,1,2} such that at each vertex the sum of f on incoming edges equals the sum on outgoing edges. Four-edge-connected means G remains connected after deletion of any set of at most3 edges. Parallel edges are allowed. Trivial one-vertex loopless graphs have the empty flow. This is the ordinary zero-boundary flow assertion, not the stronger claim of realizing every admissible prescribed boundary modulo3."
+   "exactTarget": "Every finite loopless multigraph G that is 4-edge-connected admits a nowhere-zero integer 3-flow: there exist an orientation D of E(G) and a function f:E(G)->{-2,-1,1,2} such that at each vertex the sum of f on incoming edges equals the sum on outgoing edges. Four-edge-connected means G remains connected after deletion of any set of at most3 edges. Parallel edges are allowed. Trivial one-vertex loopless graphs have the empty flow. This is the ordinary zero-boundary flow assertion, not the stronger claim of realizing every admissible prescribed boundary modulo3.",
+   "frontierSweep": {
+    "verdict": "CORRECTED",
+    "frontier": "The best unconditional result is that every 6-edge-connected graph has a nowhere-zero 3-flow (Lov\u00e1sz\u2013Thomassen\u2013Wu\u2013Zhang, 2013) \u2014 down from Thomassen's original 8-edge-connected bound. The conjecture claims this should hold already at 4-edge-connected, so the open gap is exactly \"5-edge-connected\" and \"4-edge-connected.\"",
+    "wall": "this is not shaped like the 5-flow problem. It reduces to 5-regular graphs, not to cubic snarks, and there is no known finite-checkable/exhaustive-search reduction the way the 5-flow conjecture reduces to snark generation \u2014 progress here has come from edge-connectivity threshold-lowering proofs (8->6, with the target at 4), not from a combinatorial search over a structured family.",
+    "url": "https://arxiv.org/pdf/1611.02231",
+    "date": "theorem due to Lov\u00e1sz, Thomassen, Wu & Zhang, 2013; this citation 2016",
+    "quote": "\"In 2013 Lov\u00e1sz, Thomassen, Wu, and Zhang [8] refined Theorem 1 as the follows, concluding that every 6-edge-connected graph admits a nowhere-zero 3-flow. They also remarked that if the edge-connectivity needed in the following theorem can be reduced by 1, then Tutte's 3-Flow Conjecture is true.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "MECHANISM WRONG IN THE RECORD. 3-flow does NOT reduce to snarks and has no finite-checkable reduction; it reduces to 5-regular graphs and is chased by edge-connectivity theorems (8 -> 6, target 4). The record grouped it with the 5-flow, and that grouping was mine to make and wrong."
+   },
+   "witnessCheckFeasibleWas": "BOUNDED"
   },
   {
    "rank": 356,
@@ -7111,7 +7294,19 @@
    "witnessCheckFeasible": "BOUNDED",
    "searchMechanismClass": "a",
    "feasibilityNote": "finite groups and blocks, but the reduction is weaker than the McKay family",
-   "exactTarget": "For every finite group G, every prime p, and every p-block B of G with defect group D, prove that k(B)=|Irr(B)|, the number of ordinary complex irreducible characters belonging to B, satisfies k(B)<=|D|."
+   "exactTarget": "For every finite group G, every prime p, and every p-block B of G with defect group D, prove that k(B)=|Irr(B)|, the number of ordinary complex irreducible characters belonging to B, satisfies k(B)<=|D|.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "The reduction here is genuinely weaker than the McKay-style inductive conditions \u2014 it's a \"minimal counterexample must be a quasi-simple group\" argument (Navarro's Theorem 2.2), not a normalizer-compatible bijection requiring cohomological/equivariance data. The classified-list sweep the prediction expects has been published: sporadics, the Tits group, alternating groups A6/A7, and exceptional covers of Lie-type groups are all done directly from GAP character tables.",
+    "wall": "what remains is groups of Lie type in non-defining characteristic and small primes (p=2,3) with non-abelian defect groups \u2014 stated directly: Malle's paper proves quasi-simple groups aren't minimal counterexamples \"for p >= 5 nor in the case of abelian defect,\" leaving small p with non-abelian defect as the open wall.",
+    "url": "https://arxiv.org/pdf/1709.05068",
+    "date": "2017 (arXiv:1709.05068)",
+    "quote": "\"The character tables of all the groups G in the statement are known and available in GAP [30]; since the block-subdivision of Irr(G) and the defect of a block can be computed from a knowledge of the character table, the claim can easily be verified automatically.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Stays BOUNDED. The pre-registered low confidence was on the MECHANISM (the reduction is a minimal-counterexample argument, not a normalizer-compatible bijection) and that flag was right; the sweep itself exists. The quote is the strongest GAP evidence in the whole sweep and it is on this record."
+   }
   },
   {
    "rank": 357,
@@ -8571,7 +8766,19 @@
    "witnessCheckFeasible": "BOUNDED",
    "searchMechanismClass": "b",
    "feasibilityNote": "vertex-transitive graphs are generable from group data; frontier is order",
-   "exactTarget": "Prove or disprove that every finite connected vertex-transitive graph contains a Hamiltonian path."
+   "exactTarget": "Prove or disprove that every finite connected vertex-transitive graph contains a Hamiltonian path.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "No counterexample is known. Complete computer-generated censuses of vertex-transitive graphs exist and have been checked: cubic vertex-transitive graphs are completely enumerated up to order 1280 (Poto\u010dnik\u2013Spiga\u2013Verret) with none violating the conjecture, and general vertex-transitive graphs have complete classifications for structured orders (kp for k<=5, p^j for j<=4, 2p^2, 6p, where p is prime) \u2014 all confirmed Hamiltonian-path-possessing. Only five connected vertex-transitive graphs are known to lack a Hamilton cycle (the stronger property) at all: K_2, the Petersen graph, the Coxeter graph, and their two \"triangle-replacement\" derivatives \u2014 and even these have Hamilton paths.",
+    "wall": "pure computation/classification \u2014 extending complete graph censuses to higher orders, or proving the path property for more structured order-classes (currently kp, p^j, 6p, 2p^2 are done; general composite orders are not).",
+    "url": "https://arxiv.org/pdf/1201.5317.pdf",
+    "date": "cubic census: arXiv:1201.5317 (2012); order-6p case: arXiv:math/0702182 (2007)",
+    "quote": "\"we combine some new theoretical results with computer calculations to construct all cubic vertex-transitive graphs of order at most 1280.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Quote supports the cubic census to order 1280. The respondent explicitly declined an unsourced 'verified to order 100' wiki claim, and flagged a near-collision with an unrelated disproved Lovasz conjecture \u2014 both are the discipline working."
+   }
   },
   {
    "rank": 430,
@@ -9151,7 +9358,19 @@
    "witnessCheckFeasible": "BOUNDED",
    "searchMechanismClass": "b",
    "feasibilityNote": "the two extremal candidates are explicit; a counterexample must beat both",
-   "exactTarget": "For all positive integers k,s,n with n>=ks, let F be a family of distinct k-element subsets of [n]={1,...,n} containing no s pairwise disjoint members. The conjecture asserts |F|<=max{binom(ks-1,k), binom(n,k)-binom(n-s+1,k)}. Here binom(a,k)=0 for integers 0<=a<k. For s=1 the family is empty, and k=1 is included as a trivial case. The two terms are attained by all k-subsets of a fixed (ks-1)-set and by all k-subsets meeting a fixed (s-1)-set, respectively. Their role is sharpness of the bound, not an additional classification of all equality families."
+   "exactTarget": "For all positive integers k,s,n with n>=ks, let F be a family of distinct k-element subsets of [n]={1,...,n} containing no s pairwise disjoint members. The conjecture asserts |F|<=max{binom(ks-1,k), binom(n,k)-binom(n-s+1,k)}. Here binom(a,k)=0 for integers 0<=a<k. For s=1 the family is empty, and k=1 is included as a trivial case. The two terms are attained by all k-subsets of a fixed (ks-1)-set and by all k-subsets meeting a fixed (s-1)-set, respectively. Their role is sharpness of the bound, not an additional classification of all equality families.",
+   "frontierSweep": {
+    "verdict": "CORRECTED",
+    "frontier": "The established, multiply-cited proven ranges are: n >= n_0(k,s) (Erd\u0151s, original); n >= 2sk^3 (Bollob\u00e1s\u2013Daykin\u2013Erd\u0151s); n >= 3sk^2 (Huang\u2013Loh\u2013Sudakov); n >= (2s+1)k-s (Frankl); the boundary case n=sk (Kleitman); k=3 for n>=4s (Frankl\u2013R\u00f6dl\u2013Ruci\u0144ski); and k>=5, s>100k^3, sk<=n<s(k+100/k) (Kolupaev\u2013Kupavskii, 2023).",
+    "wall": "none of these papers found a single unified argument \u2014 each pushed a different (n,k,s) regime, and as of the survey cited, \"despite this extensive body of work, the conjecture has remained open in its entirety.\"",
+    "url": "https://arxiv.org/html/2602.01471v5",
+    "date": "survey of prior results as compiled in a February\u2013March 2026 preprint",
+    "quote": "\"Despite this extensive body of work, the conjecture has remained open in its entirety. In this paper, we provide a complete proof.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": "PARTLY",
+    "adjudication": "The quote's own next sentence is the preprint claiming a full proof, so the quote simultaneously sources 'open in its entirety' and an unverified refutation of that. Recorded as DISPUTED: a community tracker reports a specific gap on page 11 within days of posting."
+   }
   },
   {
    "rank": 459,
@@ -9428,10 +9647,23 @@
    "workspaceCount": 0,
    "quantitative": false,
    "quantifierPrefix": null,
-   "witnessCheckFeasible": "BOUNDED",
+   "witnessCheckFeasible": "NARROWED",
    "searchMechanismClass": "a",
    "feasibilityNote": "reduction to finite simple groups; GAP character table library covers much of it",
-   "exactTarget": "Prove the McKay-Navarro (Galois-McKay) conjecture: for a finite group G, a prime p and a Sylow p-subgroup P of G, the p'-degree irreducible characters of G and of N_G(P) can be counted compatibly with the action of Galois automorphisms on character values, generalizing the McKay conjecture blockwise for odd primes."
+   "exactTarget": "Prove the McKay-Navarro (Galois-McKay) conjecture: for a finite group G, a prime p and a Sylow p-subgroup P of G, the p'-degree irreducible characters of G and of N_G(P) can be counted compatibly with the action of Galois automorphisms on character values, generalizing the McKay conjecture blockwise for odd primes.",
+   "frontierSweep": {
+    "verdict": "CORRECTED",
+    "frontier": "Navarro\u2013Sp\u00e4th\u2013Vallejo (2020, Trans. AMS 373) reduced the Galois\u2013McKay conjecture to \"inductive McKay\u2013Navarro\" conditions on simple groups. As with the other two block conjectures above, this has now gone further than a sweep \u2014 it's a completed theorem at \u2113=2: Ruhstorfer & Schaeffer Fry state plainly they \"complete the proof of the McKay-Navarro conjecture... for the prime 2,\" published in Advances in Mathematics (2025). Sporadic and alternating groups specifically were handled via direct computation, credited to Carolina Vallejo.",
+    "wall": "odd primes remain open in general; even at \u2113=2 the completion required extending case-by-case through untwisted, then twisted, Lie-type families \u2014 each family its own paper.",
+    "url": "https://arxiv.org/html/2211.14237v2",
+    "date": "arXiv v1 2022; published Advances in Mathematics 477 (2025), 110369",
+    "quote": "\"We complete the proof of the McKay\u2013Navarro conjecture (also known as the Galois\u2013McKay conjecture) for the prime 2, by completing the proof of the inductive McKay\u2013Navarro conditions introduced by Navarro\u2013Sp\u00e4th\u2013Vallejo for this prime.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Same as 287: a theorem at l=2 closes the witness search there."
+   },
+   "witnessCheckFeasibleWas": "BOUNDED"
   },
   {
    "rank": 473,
@@ -9751,7 +9983,33 @@
    "witnessCheckFeasible": "HOPELESS",
    "searchMechanismClass": "c",
    "feasibilityNote": "MEASURED HERE: margin pi(y)-W_far(y) grows 4 -> 184 over y=50..3000",
-   "exactTarget": "Prove or disprove that pi(x+y) <= pi(x)+pi(y) for all integers x,y >= 2, where pi is the prime-counting function."
+   "exactTarget": "Prove or disprove that pi(x+y) <= pi(x)+pi(y) for all integers x,y >= 2, where pi is the prime-counting function.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "There's no brute-force 2-variable numerical sweep the way Goldbach has; instead the \"frontier\" is the proven analytic range where subadditivity is guaranteed. A 2025/2026 paper gives unconditional improvements to that range and, under RH, proves it holds whenever y >= (2+eps)sqrt(x)\u00b7log^2(x) / (8pi) for x large.",
+    "wall": "the inequality is expected to be false in general (see 488b) \u2014 so \"verification\" here really means \"how wide a proven-safe range can be carved out,\" not a search for a counterexample; the wall is the error term in the Prime Number Theorem, which is what bounds how far the safe range can be pushed.",
+    "url": "https://www.arxiv.org/pdf/2503.02766",
+    "date": "arXiv March 2025; published online Acta Arithmetica, April 2026",
+    "quote": "\"we obtain unconditional improvements on the range of y for which \u03c0(x) is known to be subadditive.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Correctly reframed: there is no 2-variable sweep, the 'frontier' is a proven-safe analytic range. Note the conjecture is expected FALSE, which inverts what a witness means here."
+   },
+   "subTarget": {
+    "id": "488b",
+    "verdict": "CONFIRMED",
+    "frontier": "An explicit admissible 447-tuple of diameter 3158 (spanning y=3159 consecutive integers) is known, while pi(3159) = 446 < 447. If the prime k-tuple conjecture holds, this pattern is realized by primes infinitely often, which would make pi(x+3159) >= pi(x) + 447 > pi(x) + pi(3159) \u2014 a genuine counterexample to the second Hardy\u2013Littlewood conjecture.",
+    "wall": "the smaller-y search is a discrete optimization (densest admissible k-tuple for each k) that gets combinatorially harder as k grows; per an MIT prime-gaps database, exhaustive/near-exhaustive search has pushed some of Engelsma's k-tuple records narrower for k>342, but I did not find a published y smaller than 3159 for a subadditivity-violating pattern.",
+    "url": "https://klein.mit.edu/~drew/PrimeGapsOberwolfach3.pdf",
+    "date": "result originally due to Engelsma, 2005; slide deck citing it undated (MIT prime-gaps project, active database)",
+    "quote": "\"Theorem (Engelsma 2005) H(447) <= 3158 < p447 = 3163.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "PRIMARY-VERIFIED-LOCALLY",
+    "quoteSupportsCell": true,
+    "adjudication": "VERIFIED HERE, NOT RELAYED: sieved locally, pi(3159) = 446 and p_447 = 3163, so the Engelsma 447-tuple of diameter 3158 gives 447 > 446 = pi(3159) with margin exactly 1. Under the prime k-tuple conjecture that refutes HL2. The record's HOPELESS verdict was measured against the WRONG FACTOR of the question \u2014 the sweep this project ran pushed x, and the deciding factor is combinatorial in y. The recalled 'past y ~ 1600' is 1.97x optimistic.",
+    "witnessCheckFeasible": "FEASIBLE"
+   }
   },
   {
    "rank": 489,
@@ -9851,7 +10109,19 @@
    "witnessCheckFeasible": "BOUNDED",
    "searchMechanismClass": "b",
    "feasibilityNote": "proven to d<=5 [recall]; d=6 parallelohedron enumeration is the wall",
-   "exactTarget": "Prove or disprove that every parallelohedron (a convex polytope that tiles R^d by translations) is an affine image of the Dirichlet-Voronoi polytope of some lattice."
+   "exactTarget": "Prove or disprove that every parallelohedron (a convex polytope that tiles R^d by translations) is an affine image of the Dirichlet-Voronoi polytope of some lattice.",
+   "frontierSweep": {
+    "verdict": "CONFIRMED",
+    "frontier": "The Voronoi conjecture (every parallelohedron is affinely equivalent to a Dirichlet\u2013Voronoi polytope of some lattice) is proved through dimension 5 \u2014 the d=5 case was closed by Garber (published in Inventiones Mathematicae, 2025), building on a complete computational classification of all 110,244 combinatorial types of 5-dimensional Delaunay subdivisions (Dutour Sikiri\u0107, Garber, Sch\u00fcrmann & Waldmann).",
+    "wall": "exactly the enumeration bottleneck the claim names \u2014 a 2004-era source states plainly that the number of inequivalent Delaunay subdivisions in dimension 6 \"is not known and will be much larger\" than the 5-dimensional count (already 110,000+); no d=6 computer classification analogous to the d<=5 ones has been completed as far as I found.",
+    "url": "https://arxiv.org/pdf/1906.05193",
+    "date": "arXiv:1906.05193 (2019, v6 Jan 2025); published Inventiones Math. 2025, pp. 587\u2013631",
+    "quote": "\"We prove the Voronoi conjecture for five-dimensional parallelohedra. Namely, we show that if a convex five-dimensional polytope P tiles $\\mathbb{R}^5$ with translations, then P is an affine image of the Dirichlet-Voronoi polytope for a five-dimensional lattice.\"",
+    "depthOrBreadth": "BROAD",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": true,
+    "adjudication": "Quote supports d = 5. The d = 6 block is upstream of the proof technique, which needs the complete type list in hand."
+   }
   },
   {
    "rank": 494,
@@ -9991,7 +10261,19 @@
    "witnessCheckFeasible": "FRONTIER",
    "searchMechanismClass": "c",
    "feasibilityNote": "tau(p) per prime is cheap; purely a question of where the sweep stopped",
-   "exactTarget": "Prove that Ramanujan's tau function never vanishes: tau(n) != 0 for every positive integer n, where tau(n) are the Fourier coefficients of the weight-12 cusp form Delta(z) = q prod_{k>=1} (1-q^k)^24."
+   "exactTarget": "Prove that Ramanujan's tau function never vanishes: tau(n) != 0 for every positive integer n, where tau(n) are the Fourier coefficients of the weight-12 cusp form Delta(z) = q prod_{k>=1} (1-q^k)^24.",
+   "frontierSweep": {
+    "verdict": "CORRECTED",
+    "frontier": "Verified for all n < 816,212,624,008,487,344,127,999 (~8.16\u00d710^23).",
+    "wall": "Not a simple per-prime sweep \u2014 the record method computes tau(n) mod small primes l (e.g. l=31) via Galois representations attached to modular forms / point-counting on modular curves, which lets researchers jump to astronomically large individual n rather than walking through every integer. The wall is how large a prime l (and how efficient the associated modular-curve computation) can be handled, not raw per-integer cost.",
+    "url": "https://arxiv.org/pdf/1311.0577",
+    "date": "arXiv:1311.0577, 2013",
+    "quote": "\"we show that $\\tau(n) \\neq 0$, for all $n < 982149821766199295999$. This improves Bosman's bound by a factor approximately equal to 43.\"",
+    "depthOrBreadth": "DEEP",
+    "tier": "SECONDARY-RELAYED",
+    "quoteSupportsCell": false,
+    "adjudication": "THE QUOTE DOES NOT CONTAIN THE CLAIMED NUMBER. Quote gives n < 982,149,821,766,199,295,999 (2013); the cell claims 816,212,624,008,487,344,127,999, which is 831x larger and whose source the respondent could not pin down. By this prompt's own rule the sourced frontier is the QUOTED figure; the larger one is recorded as unsourced."
+   }
   }
  ]
 }

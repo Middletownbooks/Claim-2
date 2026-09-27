@@ -1,0 +1,36 @@
+{
+ "n": 11,
+ "H": 80,
+ "split": [
+  5,
+  6
+ ],
+ "equations": [
+  1,
+  3,
+  5,
+  7,
+  9
+ ],
+ "signs": [
+  1,
+  1,
+  -1,
+  -1,
+  1,
+  1,
+  -1,
+  -1,
+  1,
+  1,
+  -1
+ ],
+ "left_table_keys": 24040016,
+ "right_enumerated": 300500200,
+ "right_expected": 300500200,
+ "exhaustive": true,
+ "solutions": [],
+ "seconds": 1703.0,
+ "variant": "PTE^0 symmetric (C and -C disjoint)",
+ "peak_rss_mb": 10277.9
+}
