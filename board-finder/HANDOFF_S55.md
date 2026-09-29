@@ -26,9 +26,9 @@ engine work (a Hadamard search at order 2092) is running elsewhere and is not yo
 yourself writing a search, you have left the scope.
 
 **Your run scores a registered prediction, and the way you can fail it is specific.**
-`proof-protocol/ledger.json` (this repo) P-31 A-1 claims that gate *execution* can move to a cheaper tier
-without loss, because all the judgment in one of this project's gates is spent when the bar is
-written. The registered threshold:
+`proof-protocol/ledger.json` P-31 A-1 claims that gate *execution* can move to a cheaper tier without
+loss, because all the judgment in one of this project's gates is spent when the bar is written. The
+registered threshold:
 
 > **If one or more verdicts below is issued on a bar the run could not actually evaluate, A-1 is
 > FALSE.**
