@@ -240,3 +240,32 @@ NOTES       | Dim 9 has a "believed-complete" census (131 classes at 191) per RE
 
 ---
 
+## TABLE 4 — D-optimal designs: the smallest open order (movement history only)
+
+```
+TABLE       | The Hadamard maximal determinant problem site maintained by William P. Orrick (with B. Solomon), http://www.indiana.edu/~maxdet/ (URL from a search summary; blocked/not read; last update NOT FOUND). Secondary reference read only through search summaries: P. Browne, "A Survey of the Hadamard Maximal Determinant Problem", Electron. J. Combin. 28(4) (2021), arXiv:2104.06756. Koukouvinos–Seberry lineage not consulted. | SEARCH-SUMMARY
+AI ACTIVITY | NONE FOUND — searched "D-optimal design order 198 Ehlich-Wojtas bound attained construction new" and "D-optimal designs orders 2 mod 4 new order constructed ... 2015 2019 2022"; nothing LLM/RL-driven surfaced. The 2022 result (orders 222, 234, 258, 278, arXiv:2210.03931 "A few new orders for D-optimal matrices") is described in the summary as a construction of matrices, method not seen. Not searched: "AlphaEvolve"/"FunSearch" + Hadamard/D-optimal specifically. | SEARCH-SUMMARY
+```
+
+```
+RECORD      | Table 4 — smallest order n = 2 (mod 4) with 2n-2 a sum of two squares at which no +-1 matrix attaining the Ehlich–Wojtas bound (2n-2)(n-2)^((n-2)/2) is known
+QUANTITY    | that order n (an existence frontier, not a bound)
+LOWER       | frontier = 198 as of Browne's 2021 survey (search summary: "the smallest undecided order for DO-designs is 198, and DO-designs of order 2v < 200, v odd, exist for all feasible orders except v = 99") | SEARCH-SUMMARY | EXACT ; REFEREED (survey, EJC 2021). Status after 2021: NOT FOUND.
+UPPER       | not applicable (no counterpart side); the negative side (nonexistence at a feasible order) is not known for any feasible order in the summaries I saw.
+BOUND OBJ   | positive side: WITNESS — a +-1 matrix (in the cited constructions two commuting/circulant +-1 blocks of order n/2, i.e. supplementary difference sets, giving a block matrix whose Gram matrix is checked exactly); negative side: PROOF (nonexistence argument) — none known
+S0 OPEN     | PASS (weak) — an open feasible order existed in 2021 (198) and no resolution claim for it surfaced in two targeted searches; but I could not read Orrick's table, so I cannot confirm 198 is still the smallest open order in Sept 2026. Also a contradictory older search summary says "the lowest order for which the question has not been settled is n = 138"; that predates the 2015 paper that supplied order 138 (below), so I treat it as stale. Derived feasibility list (my computation, all n = 2 mod 4 up to 234 with 2n-2 = a^2+b^2): 2, 6, 10, 14, 18, 26, 30, 38, 42, 46, 50, 54, 62, 66, 74, 82, 86, 90, 98, 102, 110, 114, 118, 122, 126, 138, 146, 150, 154, 158, 170, 174, 182, 186, 194, 198, 206, 222, 226, 230, 234 (198 = 394 = 13^2+15^2 is the only feasible order below 200 flagged open by the survey summary) | PRIMARY-VERIFIED-LOCALLY (list) / SEARCH-SUMMARY (status)
+S1 COUPLED  | PASS — route (b): earlier frontier cases were settled by finite certificates checked by terminating computation (Djoković–Kotsireas 2015 gave supplementary difference sets, e.g. (59;28,22;21) for order 118 and (69;31,27;24), (75;36,29;28), (77;34,31;27), (87;38,36;31) for orders 138, 150, 154, 174 — the summary states these "give D-optimal designs of two-circulant type"). Route (a) also holds for the relaxed quantity max det over +-1 matrices. | SEARCH-SUMMARY
+S2 VETO     | PASS — a +-1 matrix's determinant / Gram condition is decidable exactly.
+MOVE-1      | 2015 | Djoković, Kotsireas | orders 118, 138, 150, 154, 174 ("until that time no DO-designs of orders 138, 154 and 174 were known") | UNKNOWN | the summary says they "constructed supplementary difference sets with parameters ..." — how (which computer method) not stated in what I saw | SEARCH-SUMMARY. Note: this is NOT the paper that settled the order just below 198; that one (orders 182, 186, and 194 — the last presumably Djoković's earlier 194) I could not identify.
+MOVE-2      | 2022 | (arXiv:2210.03931 "A few new orders for D-optimal matrices"; authors not seen) | orders 222, 234, 258, 278 — all above the frontier 198, so not moves of the smallest-open frontier | UNKNOWN | summary: "the first examples of D-optimal matrices of orders 222, 234, 258 and 278 are constructed" | SEARCH-SUMMARY. Also: earlier "158, 194, 290" first constructed by Djoković (year not seen; a 2011-era arXiv 1103.3626 "New results on D-optimal matrices" appears in results).
+S3 IDEA     | CANNOT EVALUATE — the paper that most recently moved the frontier is not identified, so no kind is available.
+S4 CROWDED  | CANNOT EVALUATE — I found no AI-system activity but searched only by table/construction keywords, did not search the AI systems' names against this record, and could not see the site's recent update log. Searches listed above.
+S5 DELIVER  | PASS — Orrick's maxdet table would change (order 198 entry), as would the survey's statement. Sentence: "We construct a D-optimal design of order 198 attaining the Ehlich–Wojtas bound, the smallest order previously unresolved." (if 198 is still open — see S0)
+DIVERGENCE  | NONE FOUND — no two dated methods with a >=2 ratio in order: the 2015 SDS method reached 174 and the 2022 method 278 (ratio 1.6). Searches above.
+BITS_SEARCH | UNDEFINED — no named search ansatz with a published density estimate found (the two-circulant / supplementary-difference-set ansatz is named, density not seen).
+VERIF CLASS | CHECK — exact integer determinant/Gram computation of a 198x198 +-1 matrix.
+NOTES       | The brief says a separate run does the promoting search for this record; I did not attempt any. One conceptual point for the adjudicator: "n up to 198" phrasing in one summary ("pair of circulants ... exists at all orders n with 2n-2 a sum of two squares up to n = 198") and "198 is the smallest undecided" from another are mutually inconsistent as written; I read them as 'below 198' and 'first undecided is 198'. Also n=22 and n=34 show up in the summaries as orders excluded by the sum-of-two-squares condition (22: 42 no; 34: 66 no; both confirmed in my list of infeasible orders).
+```
+
+---
+

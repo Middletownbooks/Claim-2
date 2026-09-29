@@ -1,0 +1,90 @@
+{
+ "testable": 10,
+ "excluded": {
+  "known-optimal": [
+   15,
+   17,
+   19,
+   29,
+   63,
+   65,
+   67
+  ],
+  "no-record": [
+   9,
+   27,
+   51,
+   53
+  ],
+  "unknown-kind": [
+   1,
+   3,
+   5,
+   7,
+   11,
+   21,
+   25,
+   31,
+   33,
+   39,
+   57,
+   61
+  ],
+  "unparsed": [
+   49
+  ]
+ },
+ "G-1": {
+  "value": null,
+  "verdict": "UNEVALUABLE -> NOT VALIDATED",
+  "a": "2/10",
+  "b": "0/0",
+  "a_list": [
+   13,
+   23,
+   35,
+   37,
+   41,
+   43,
+   45,
+   47,
+   55,
+   59
+  ],
+  "b_list": []
+ },
+ "G-2": {
+  "value": null,
+  "verdict": "UNEVALUABLE -> NOT VALIDATED",
+  "a": "1/2",
+  "b": "1/8",
+  "a_list": [
+   47,
+   59
+  ],
+  "b_list": [
+   13,
+   23,
+   35,
+   37,
+   41,
+   43,
+   45,
+   55
+  ]
+ },
+ "by_kind": {
+  "ANALYTIC": [
+   1,
+   8
+  ],
+  "SEARCH-NEW": [
+   1,
+   2
+  ],
+  "SEARCH-REPEAT": [
+   0,
+   0
+  ]
+ }
+}
