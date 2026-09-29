@@ -7,6 +7,7 @@ Shared area. Four documents, one instrument, one dataset.
 | **`PLAYABILITY.md`** | the census. 499 ranked problems classified by witness reachability; 35 playable (7.0%); two classes the I/I\*/II/III taxonomy had no cell for |
 | **`RANKING_FIT.md`** | audit against `../PROOFATLAS_FIT.md`. Settles its registered workspace-allocation test at n=123, confirms and sharpens its "one of four fields" verdict, and measures where `../PROMPT.md` does not apply |
 | **`FEASIBILITY.md`** | the tractability pass. `witnessCheckFeasible` for all 35, three search mechanisms, and one sweep run end to end (`sweeps/`) rather than recalled |
+| **`INTERESTINGNESS.md`** | Patel et al. (arXiv:2609.28603) on proof-length interestingness: what the `V(T\|P)` primitive gives us, why the metric is blind to every finite-witness problem, and five proposals for the selection metric (P4's sign corrected by `../fallbacks/QUEUE_V3.md`) |
 | **`PROMPT_WITNESS.md`** | the companion prompt for the yes/no half of the corpus, where the leak table has no row to write. Part A / Part B, same shape as `../PROMPT.md` |
 | **`PROMPT_FRONTIER.md`** | the frontier-verification instrument, full version: what each clause is built against and how to score it |
 | **`PROMPT_SWEEP.md`** | the executable cut of it for a subscription chat surface — fetch discipline in place of the API's `max_content_tokens`, and a `transcribeThis` hand-off for cells the web cannot settle |
@@ -21,7 +22,7 @@ Shared area. Four documents, one instrument, one dataset.
 
 Regenerate: `python3 classify.py`.
 
-## The five things worth knowing without reading further
+## The six things worth knowing without reading further
 
 1. **7.0% of the ranked corpus is playable.** 35 of 499 admit a single finite
    object that settles a branch. Six of twelve domains are at exactly zero — TCS,
@@ -53,6 +54,13 @@ Regenerate: `python3 classify.py`.
    strongest single target is **280, Kaplansky's idempotent conjecture**: an
    unworkspaced P2 record where the adjacent unit conjecture already fell to a
    computer search. See `FEASIBILITY.md`.
+
+6. **The published interestingness metric (proof length ÷ statement length) cannot see
+   this board.** It is at its floor for every finite-witness problem — the Shannon witness
+   is ~10^154 elements behind a few lines of Lean; Hadamard 668 is a `decide` one-liner or
+   a 668x668 literal. Demonstrated on the b=0 ladder, where the ratio ranks all seven
+   instances equally and the real difficulty spans 75 bits. `INTERESTINGNESS.md` proposes
+   splitting difficulty into (deductive cost, search cost) and gating on witness class.
 
 ## What is not done
 
