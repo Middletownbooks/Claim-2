@@ -9,6 +9,12 @@ on this project cited repository paths that turned out to be private and a gate 
 provisional because of it; that is not repeated here. Paths are given as corroboration, never as a
 dependency.
 
+**One repository.** Everything is in the private repo you are working in — `board-finder/` holds the
+research, `proof-protocol/` holds the ledger, debts and the 14 consistency checks. All paths below
+are relative to the repository root. (Until recently the ledger lived on a branch of a public fork
+of an unrelated upstream project; it has been consolidated here, so ignore any older document that
+sends you to a second repository.)
+
 ---
 
 ## 0. Why you, and why this scope
@@ -169,8 +175,6 @@ and produced two candidates, both of which are in this queue.
 justification. This project has shipped two checks that could not fail. In
 `proof-protocol/tools/` there are 14 consistency checks; in `board-finder/` there are gate and
 verifier scripts including `gap/epoch_gate.py`, `pte/verify.py` and `doptimal/transfer_check.py`.
-**Everything is in this one repository** — an earlier arrangement kept the protocol ledger in a
-separate public fork and it has been consolidated here.
 
 > For each check: break it deliberately, confirm it fails, and record the break you used. Report
 > any check that passes when it should not. **Do not fix a check without reporting it first** — a
@@ -180,10 +184,10 @@ separate public fork and it has been consolidated here.
 
 ## 6. What to write, and where
 
-One document per search, under claim-2/board-finder/fallbacks/, named
-"RESULT_S55_A_TABLE.md", "RESULT_S55_B_239.md" and "RESULT_S55_C_345.md" (plain quotes, not
-backticks — this tree runs a check that every backticked path resolves, and these three do not exist
-yet). Each one:
+One document per search, under board-finder/fallbacks/, named "RESULT_S55_A_TABLE.md",
+"RESULT_S55_B_239.md" and "RESULT_S55_C_345.md" (plain quotes deliberately, not backticks — this
+tree runs a check that every backticked path resolves, and these three do not exist yet). Each
+one:
 
 1. **The verdict line first** — `A-1: PASS` / `A-1: FAIL` / `A-1: CANNOT EVALUATE`, then the bar
    quoted verbatim, then the evidence, then the tier.
@@ -195,11 +199,16 @@ yet). Each one:
 Then update the queue table in `fallbacks/QUEUE_V3.md` and, if A-2 fails, say so at the top of
 `doptimal/README.md`.
 
-**Git.** Work on branch `lab`, push to `claude/theorem-discovery-lab-jpbph1`:
-`git push -u origin lab:claude/theorem-discovery-lab-jpbph1`. **Another instance is working on this
-branch.** If the push is rejected, `git fetch` and **merge — never rebase, never force-push.** If
-`claim-2` is not in your session, add it (`Middletownbooks/Claim-2`); if you cannot, write the three
-documents into the repository you do have and say where they went.
+**Git.** Push to `claude/theorem-discovery-lab-jpbph1` — from whatever local branch your session
+starts you on: `git push -u origin HEAD:claude/theorem-discovery-lab-jpbph1`.
+
+**Another instance is working on that branch.** If the push is rejected, `git fetch origin
+claude/theorem-discovery-lab-jpbph1` then `git merge FETCH_HEAD` — **never rebase, never
+force-push.** Note that this repo only tracks `main`, so `origin/claude/...` is not a valid
+revision locally; use `FETCH_HEAD` to compare.
+
+**Before you finish**, run `proof-protocol/tools/check_consistency.py` — check 14 fails the build if
+any backticked path you wrote does not resolve.
 
 **Do not open a pull request** unless asked.
 
