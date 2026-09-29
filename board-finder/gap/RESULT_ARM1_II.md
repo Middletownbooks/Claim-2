@@ -4,6 +4,17 @@ Bars: `SELECT_v1.md` Part I, registered in commit fab89d8 before dispatch. Raw w
 `discovery/A1_a.md` (ranks 17–368) and `discovery/A1_b.md` (ranks 375–479, plus 221/282/337 as
 checks). Briefs: `discovery/prompts/A1_a.md`, `discovery/prompts/A1_b.md`.
 
+
+> **[29 Sep 2026 — crowding screen against EinsteinArena's Table 1, `discovery/RESULT_GATE_C1.md` §6.]**
+> arXiv:2606.10402v2 Table 1 is a maintained public list of the record problems AI agents are actively
+> working, with prior-best and current-best columns — the per-record crowding instrument this run said
+> it lacked. Screened against these 22 records on distinctive object tokens, with every collision
+> adjudicated: **1 genuine of 22.** **368 Thomson problem is STRUCK** — Thomson at *n* = 282 is on the
+> active board, AlphaEvolve prior best 37147.29442, no platform improvement yet. 428 site-percolation
+> collided with "circles packing in a square" on the word *square* alone and is spurious: a lattice
+> percolation threshold and a circle-packing density are different objects. **One of twenty-two is a
+> low crowding rate and it is the first positive signal this arm has produced.**
+
 ## 1. The contradiction in the handoff dissolves, and what is left is sharper
 
 The handoff reads the situation as "the playability screen says record problems are unplayable, and

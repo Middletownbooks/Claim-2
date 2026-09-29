@@ -57,6 +57,31 @@ re-scoped afterwards.
 > is not in its bar and re-scoping after the fact is what D44 exists to prevent; recorded there as a
 > bar-design gap instead. Run C-1's remaining conjunct first.
 
+> **[29 Sep 2026 — gate C-1 run, `../gap/discovery/RESULT_GATE_C1.md`. C-1 is DEAD, and the queue is
+> empty below U13.]** Both papers the bar named were read. **EinsteinArena** (arXiv:2606.10402v2)
+> works the kissing number at **dimension 11 only** — fifteen problems on its board, curated from
+> AlphaEvolve. **Qiushi Engine** (arXiv:2609.35051v1) reports nineteen new bounds at 25, 27, 32–39,
+> 43, 45, 49–55. Neither attempted *d* = 13, so the bar fires: **FAIL**.
+>
+> **What the papers say that the bars did not ask.** Qiushi produced nineteen dimensions in one
+> paper with machine-checkable certificates; EinsteinArena produced eleven SOTA results in two months
+> from a 19 March 2026 launch. **The record-problem niche is being swept at industrial rate**, which
+> is the crowding gate's subject, now measured. But every system's dimension range tracks *where
+> algebraic structure exists* — Leech, E₈, Golay, P48 — hence 25–55, with *d* = 11 worked only
+> because AlphaEvolve seeded it. **Dimensions 13–14 have nothing to lift from**, which is plausibly
+> why Zinoviev–Ericson 1999 still stands. That is a hardness reading the bar could not see, and it is
+> recorded rather than used: the verdict stands as the bar gave it.
+>
+> **One free instrument gained.** EinsteinArena's Table 1 is a maintained public list of record
+> problems AI agents are actively working, with prior-best and current-best columns — the crowding
+> instrument this board lacked. Screened against the 22 `II` records with every collision
+> adjudicated: **1 genuine of 22.** **368 Thomson is on the active board — struck.** 428
+> site-percolation collided on the word "square" only and is spurious. One of twenty-two is the first
+> positive signal arm 1 has produced.
+>
+> **Queue now: U13 alone, still pending S55.** C-1, C-2 and C-3 are all struck. 239 and 345 unchanged,
+> pending S55. All three bars tested crowding and none was decided by it — **D47**.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
