@@ -45,6 +45,18 @@ re-scoped afterwards.
 > **check that its table exists and contains the claimed row** — one lookup each, and it is the
 > cheapest kill available.
 
+> **[29 Sep 2026 — Cohn's table checked, `../gap/discovery/TABLE_KISSING.md`.]** D46's check run on
+> C-1 and C-2: **the table exists and rows 13 and 14 carry exactly 1154 and 1932.** Passed, where
+> Edel's failed. The reference column then split the two candidates on a criterion neither bar
+> mentions: **d = 13's lower bound is Zinoviev–Ericson 1999 — 27 years frozen, clearing this
+> document's own ten-year rule by 17 — while d = 14's is Ganzhinov (LAA 2025, arXiv 2022) and fails
+> it on either dating.** Both upper bounds are de Laat–Leijenhorst's 2024 SDP, so at d = 13 the
+> ceiling is actively worked and the floor has not moved in a generation, with a factor of 1.79
+> between them. **C-1's bar is now half discharged** — 1154 stands at primary tier; the attempt
+> conjunct is untouched and a record table cannot supply it. **C-2 is not struck**, because headroom
+> is not in its bar and re-scoping after the fact is what D44 exists to prevent; recorded there as a
+> bar-design gap instead. Run C-1's remaining conjunct first.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
