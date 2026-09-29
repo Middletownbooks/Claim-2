@@ -143,7 +143,7 @@ searches in §5 are not housekeeping — if the first of them comes back wrong, 
 ## 9. Negative tests on the scorer, run before registration
 
 A scorer that cannot fail is not a scorer, and two checks written earlier today could not fail
-(`../../..` → the fermats-last-theorem ledger, D43). Seven perturbations, all behaving correctly:
+(`../../../proof-protocol` → the ledger, D43). Seven perturbations, all behaving correctly:
 
 | perturbation | result |
 |---|---|

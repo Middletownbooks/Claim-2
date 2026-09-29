@@ -20,7 +20,7 @@ engine work (a Hadamard search at order 2092) is running elsewhere and is not yo
 yourself writing a search, you have left the scope.
 
 **Your run scores a registered prediction, and the way you can fail it is specific.**
-`proof-protocol/ledger.json` P-31 A-1 claims that gate *execution* can move to a cheaper tier
+`proof-protocol/ledger.json` (this repo) P-31 A-1 claims that gate *execution* can move to a cheaper tier
 without loss, because all the judgment in one of this project's gates is spent when the bar is
 written. The registered threshold:
 
@@ -167,9 +167,10 @@ and produced two candidates, both of which are in this queue.
 
 **Spend the remainder on a verification sweep instead**, which is named work with a measured
 justification. This project has shipped two checks that could not fail. In
-`fermats-last-theorem/proof-protocol/tools/` there are 14 consistency checks; in
-`claim-2/board-finder/` there are gate and verifier scripts including `gap/epoch_gate.py`,
-`pte/verify.py` and `doptimal/transfer_check.py`.
+`proof-protocol/tools/` there are 14 consistency checks; in `board-finder/` there are gate and
+verifier scripts including `gap/epoch_gate.py`, `pte/verify.py` and `doptimal/transfer_check.py`.
+**Everything is in this one repository** — an earlier arrangement kept the protocol ledger in a
+separate public fork and it has been consolidated here.
 
 > For each check: break it deliberately, confirm it fails, and record the break you used. Report
 > any check that passes when it should not. **Do not fix a check without reporting it first** — a
