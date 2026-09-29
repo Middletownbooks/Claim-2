@@ -10,14 +10,14 @@
   "n": 2,
   "title": "2. An autocorrelation problem related to Sidon sets",
   "statement": "Let $C$ denote the largest constant for which one has $$ \\max_{-1/2 \\leq t \\leq 1/2} \\int_\\mathbb{R} f(t-x) f(x)\\ dx \\geq C \\left(\\int_{-1/4}^{1/4} f(x)\\ dx\\right)^2 $$ for all non-negative $f \\colon \\mathbb{R} \\to \\mathbb{R}$. What is $C$?",
-  "comments": "Upper bounds for $C$ Bound Source Date $\\pi/2 = 1.57059$ Schinzel-Schmidt 2002 $1.50992$ Matolcsi-Vinuesa 8 Jul 2009 $1.5053$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 14 May 2025 $1.5032$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 20 Dec 2025 $1.5029$ Yuksekgonul et al. Jan 2026 Lower bounds for $C$ Bound Source Date $1$ Trivial $1.182778$ Martin-O'Bryant 30 Sep 2004 $1.262$ Martin-O'Bryant 1 Apr 2009 $1.2748$ Matolcsi-Vinuesa 8 Jul 2009 See also Damek Davis's meta-analysis of this problem .",
+  "comments": "<caption> Upper bounds for $C$ </caption> Bound Source Date $\\pi/2 = 1.57059$ Schinzel-Schmidt 2002 $1.50992$ Matolcsi-Vinuesa 8 Jul 2009 $1.5053$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 14 May 2025 $1.5032$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 20 Dec 2025 $1.5029$ Yuksekgonul et al. Jan 2026 <caption> Lower bounds for $C$ </caption> Bound Source Date $1$ Trivial $1.182778$ Martin-O'Bryant 30 Sep 2004 $1.262$ Martin-O'Bryant 1 Apr 2009 $1.2748$ Matolcsi-Vinuesa 8 Jul 2009 See also Damek Davis's meta-analysis of this problem .",
   "paperText": ""
  },
  {
   "n": 3,
   "title": "3. How much can an autocorrelation of a non-negative function resemble an indicator function?",
   "statement": "Let $C$ be the best constant for which one has $$ \\|f\\ * f\\|_{L^2(\\mathbb{R})}^2 \\leq C \\|f*f\\|_{L^1(\\mathbb{R})} \\|f * f\\|_{L^\\infty(\\mathbb{R})}$$ for non-negative $f \\colon \\mathbb{R} \\to \\mathbb{R}$. What is $C$?",
-  "comments": "Upper bounds for $C$ Bound Source Date $1$ Trivial Lower bounds for $C$ Bound Source Date $\\log 16/\\pi =0.88254$ Martin-O'Bryant 1 Apr 2009 $0.88922$ Matolcsi-Vinuesa 8 Jul 2009 $0.8962$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 14 May 2025 $0.901564$ Boyer-Li Nov 2024 / 10 Aug 2025",
+  "comments": "<caption> Upper bounds for $C$ </caption> Bound Source Date $1$ Trivial <caption> Lower bounds for $C$ </caption> Bound Source Date $\\log 16/\\pi =0.88254$ Martin-O'Bryant 1 Apr 2009 $0.88922$ Matolcsi-Vinuesa 8 Jul 2009 $0.8962$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 14 May 2025 $0.901564$ Boyer-Li Nov 2024 / 10 Aug 2025",
   "paperText": ""
  },
  {
@@ -31,7 +31,7 @@
   "n": 5,
   "title": "5. Erd\u0151s minimum overlap problem",
   "statement": "Let $C$ be the largest constant for which $$ \\sup_{x \\in [-2,2]} \\int_{-1}^1 f(t) g(x+t)\\ dt\\geq C$$ for all non-negative $f,g: [-1,1] \\to [0,1]$ with $f+g=1$ on $[-1,1]$ and $\\int_\\mathbb{R} f = 1$, where we extend $f,g$ by zero outside of $[-1,1]$. What is $C$?",
-  "comments": "Upper bounds for $C$ Bound Source Date $0.380927$ Haugland 2016 $0.380924$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 14 May 2025 $0.380876$ Yuksekgonul et al. Jan 2026 Lower bounds for $C$ Bound Source Date $1$ Trivial $0.379005$ White 2022",
+  "comments": "<caption> Upper bounds for $C$ </caption> Bound Source Date $0.380927$ Haugland 2016 $0.380924$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 14 May 2025 $0.380876$ Yuksekgonul et al. Jan 2026 <caption> Lower bounds for $C$ </caption> Bound Source Date $1$ Trivial $0.379005$ White 2022",
   "paperText": ""
  },
  {
@@ -72,8 +72,8 @@
  {
   "n": 11,
   "title": "11. Uncertainty principle",
-  "statement": "Given a function $f \\in L^1(\\mathbb{R})$, set $$ A(f) \\coloneqq \\inf \\{r > 0: f(x) \\geq 0 \\hbox{ for all } |x| \\geq r \\}.$$ Let $C$ be the largest constant for which one has $$ A(f) A(\\hat f) \\geq C$$ for all even $f$ with $f(0), \\hat f(0)",
-  "comments": "Upper bounds for $C$ Bound Source Date $0.353$ Goncalves-Oliveira e Silva-Steinerberger February 2016 $0.32831$ Cohn-Goncalves December 2017 $0.321591$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 14 May 2025 $0.3102$ Cohn-de Laat-Goncalves ( unpublished ) 2025 Lower bounds for $C$ Bound Source Date $0.2025$ Goncalves-Oliveira e Silva-Steinerberger February 2016",
+  "statement": "Given a function $f \\in L^1(\\mathbb{R})$, set $$ A(f) \\coloneqq \\inf \\{r > 0: f(x) \\geq 0 \\hbox{ for all } |x| \\geq r \\}.$$ Let $C$ be the largest constant for which one has $$ A(f) A(\\hat f) \\geq C$$ for all even $f$ with $f(0), \\hat f(0) < 0$. Establish upper and lower bounds for $C$ that are as strong as possible.",
+  "comments": "<caption> Upper bounds for $C$ </caption> Bound Source Date $0.353$ Goncalves-Oliveira e Silva-Steinerberger February 2016 $0.32831$ Cohn-Goncalves December 2017 $0.321591$ Georgiev-G\u00f3mez-Serrano-Tao-Wagner [ Colab 1 ] [ Colab 2 ] 14 May 2025 $0.3102$ Cohn-de Laat-Goncalves ( unpublished ) 2025 <caption> Lower bounds for $C$ </caption> Bound Source Date $0.2025$ Goncalves-Oliveira e Silva-Steinerberger February 2016",
   "paperText": ""
  },
  {
@@ -100,14 +100,14 @@
  {
   "n": 15,
   "title": "15. Gagliardo-Nirenberg Inequality",
-  "statement": "Let $1 \\leq q \\leq \\infty$, and let $j$ and $m$ be non-negative integers such that $j",
+  "statement": "Let $1 \\leq q \\leq \\infty$, and let $j$ and $m$ be non-negative integers such that $j < m$. Furthermore, let $1 \\leq r \\leq \\infty, p \\geq 1$ be real and $\\theta \\in [0, 1]$ such that the following relations hold: $$\\frac{1}{p} = j + \\theta \\left( \\frac{1}{r} - m \\right) + \\frac{1 - \\theta}{q}, \\quad \\frac{j}{m} \\leq \\theta < 1.$$ Let $C(j,p,q,r,m)$ be the best constant such that $$\\|D^j u\\|_{L^p(\\mathbb{R})} \\leq C(j,p,q,r,m) \\|D^m u\\|_{L^r(\\mathbb{R})}^\\theta \\|u\\|_{L^q(\\mathbb{R})}^{1-\\theta}$$ for all test functions $u$, where $D$ denotes the derivative operator $\\frac{d}{dx}$. Establish upper and lower bounds for $C(j,p,q,r,m)$ that are as strong as possible.",
   "comments": "",
   "paperText": ""
  },
  {
   "n": 16,
   "title": "16. Special Case of Gagliardo-Nirenberg Inequality",
-  "statement": "Let $2",
+  "statement": "Let $2 < p < \\infty$. Let $C(p)$ denote the supremum of the quantities $$ Q(f) \\coloneqq \\frac{\\|f\\|_{L^p(\\mathbb{R})}^{4p}}{\\|f\\|_{L^2(\\mathbb{R})}^{2(p+2)} \\|f'\\|_{L^2(\\mathbb{R})}^{2(p-2)}}$$ for all smooth rapidly decaying $f$, not identically zero. Establish upper and lower bounds for $C(p)$ that are as strong as possible.",
   "comments": "",
   "paperText": ""
  },
@@ -226,14 +226,14 @@
  {
   "n": 33,
   "title": "33. The Thomson Problem",
-  "statement": "For any $N>1$, let $C(N)$ denote the infimum of the Coulomb energy $$ E(z_1,\\ldots,z_N) \\coloneqq \\sum_{1 \\leq i",
+  "statement": "For any $N>1$, let $C(N)$ denote the infimum of the Coulomb energy $$ E(z_1,\\ldots,z_N) \\coloneqq \\sum_{1 \\leq i < j \\leq N} \\frac{1}{\\|z_i - z_j\\|} $$ where $z_1, \\dots, z_N$ ranges over the unit sphere $\\mathbb{S}^2$. Establish upper and lower bounds on $C(N)$ that are as strong as possible. What type of configurations $z_1,\\dots,z_N$ come close to achieving the infimal (ground state) energy?",
   "comments": "",
   "paperText": ""
  },
  {
   "n": 34,
   "title": "34. Tammes problem",
-  "statement": "For $N \\geq 2$, let $C(N)$ denote the maximal value of the energy $$E(z_1,\\dots,z_N) \\coloneqq \\min_{1 \\leq i",
+  "statement": "For $N \\geq 2$, let $C(N)$ denote the maximal value of the energy $$E(z_1,\\dots,z_N) \\coloneqq \\min_{1 \\leq i < j \\leq N} \\|z_i-z_j\\|$$ where $z_1,\\dots,z_N$ range over points in $\\mathbb{S}^2$. Establish upper and lower bounds on $C(N)$ that are as strong as possible. What type of configurations $z_1,\\dots,z_N$ come close to achieving the maximal energy?",
   "comments": "",
   "paperText": ""
  },
@@ -268,7 +268,7 @@
  {
   "n": 39,
   "title": "39. Beat the average game",
-  "statement": "Let $C$ denote the quantity $$C \\coloneqq \\sup_{\\mu} \\mathbb{P}[X_1 + X_2 + X_3",
+  "statement": "Let $C$ denote the quantity $$C \\coloneqq \\sup_{\\mu} \\mathbb{P}[X_1 + X_2 + X_3 < 2X_4]$$ where $\\mu$ ranges over probability measures on $[0, \\infty)$ and let $X_1, \\ldots, X_4 \\sim \\mu$ are independent random variables with law $\\mu$. Establish upper and lower bounds on $C$ that are as strong as possible.",
   "comments": "",
   "paperText": ""
  },
@@ -345,7 +345,7 @@
  {
   "n": 50,
   "title": "50. Max to min ratios",
-  "statement": "Let $n,d \\geq 2$. Let $C(d,n)$ denote the largest quantity such that, given any $n$ distinct points $x_1,\\dots,x_n$ in $\\R^d$, the maximum distance $\\max_{1 \\leq i",
+  "statement": "Let $n,d \\geq 2$. Let $C(d,n)$ denote the largest quantity such that, given any $n$ distinct points $x_1,\\dots,x_n$ in $\\R^d$, the maximum distance $\\max_{1 \\leq i < j \\leq n} \\|x_i-x_j\\|$ between the points is at least $C(d,n)$ times the minimum distance $\\min_{1 \\leq i < j \\leq n} \\|x_i-x_j\\|$. Establish upper and lower bounds for $C(d,n)$. What are the configurations that attain the minimal ratio between the two distances?",
   "comments": "",
   "paperText": ""
  },
