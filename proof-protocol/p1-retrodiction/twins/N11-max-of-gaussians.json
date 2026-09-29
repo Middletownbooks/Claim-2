@@ -1,0 +1,30 @@
+{
+  "id": "N11-max-of-gaussians",
+  "problem": "Maximum of n independent Gaussians",
+  "twin_of": null,
+  "surface_leak": "A union bound over n tail events contributes sqrt(log n).",
+  "verdict": "tight",
+  "wrongly_fires": "collectivize-a-union-bound",
+  "why_negative": "E max of n iid standard Gaussians is (1+o(1)) sqrt(2 log n). The union bound gives the right answer; there is nothing to collectivize.",
+  "sources": [
+    {
+      "cite": "Standard extreme-value asymptotics; E max of n iid standard Gaussians is (1+o(1))sqrt(2 log n), asymptotically tight (both bounds converge)",
+      "date": "classical",
+      "verified": true,
+      "citation_row": "TWINS-batch2",
+      "tier": "SEARCH (search snippets; no PDF fetched in this container)",
+      "basis": "Row TWINS-batch2 upgraded N11: the max of n iid standard Gaussians is asymptotically tight at sqrt(2 log n)."
+    }
+  ],
+  "verification": "VERIFIED by search",
+  "role": "negative-twin",
+  "expected_diagnostic_behaviour": "fires",
+  "encoder": "opus-5-session-2026-09-18",
+  "encoding_pass": "twin-expansion-v1",
+  "blind_reencoding": {
+    "done": false,
+    "encoder": null,
+    "kappa": null
+  },
+  "recheck_by": "2027-09-18"
+}

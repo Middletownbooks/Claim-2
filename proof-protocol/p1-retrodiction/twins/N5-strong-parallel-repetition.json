@@ -1,0 +1,28 @@
+{
+  "id": "N5-strong-parallel-repetition",
+  "problem": "Strong parallel repetition",
+  "twin_of": "10-parallel-repetition",
+  "surface_leak": "Product structure suggests the eps^2 loss is an artefact of the analysis.",
+  "verdict": "tight",
+  "expected_diagnostic_behaviour": "fires",
+  "why_negative": "The eps^2 against eps loss is real even for unique games (Raz 2008, the odd-cycle game).",
+  "sources": [
+    {
+      "cite": "Raz 2008 (odd-cycle game)",
+      "date": "2008",
+      "verified": true,
+      "citation_row": "N5",
+      "tier": "SEARCH (search snippets; no PDF fetched in this container)",
+      "basis": "Row N5 verifies Raz's odd-cycle counterexample and that the game is simultaneously projection, unique and XOR."
+    }
+  ],
+  "role": "negative-twin",
+  "encoder": "seed-chat-instance-2026-09-18",
+  "encoding_pass": "v0-single-encoder-contaminated",
+  "blind_reencoding": {
+    "done": false,
+    "encoder": null,
+    "kappa": null
+  },
+  "recheck_by": "2027-09-18"
+}

@@ -1,0 +1,139 @@
+# The baseline (task 2): the diagnostic loses to no diagnostic at all
+
+`DIAGNOSTIC.md` reported its 2×2s as **raw accuracies**. This programme's own rule, inherited from
+the seed and written into `p1-retrodiction/README.md`, is: *"scores are lift over the telegraph
+baseline, never raw accuracy."* So the headline result was stated in a unit the repo forbids. This is
+the baseline it should have been stated against.
+
+## The baselines, chosen and stated before running
+
+The seed's telegraph arm was "the leak table with no procedure". The rebuilt diagnostic reads **no
+leak table**, so that exact arm does not apply. Three baselines were fixed in `tools/baseline.py`
+before any was run:
+
+| | baseline | what it tests |
+|---|---|---|
+| **B0** | fire on everything in domain | a floor |
+| **B1** | fire on nothing in domain | the other floor |
+| **B2** | a rater given the **same item text**, asked only *"was that bound superseded by a fundamentally different approach, or was it essentially the best available?"* — no rule, no vocabulary, no mention that a rule exists | whether the diagnostic **adds** anything |
+
+Scored with **Youden's J = sensitivity + specificity − 1**, because a constant rule cannot game it:
+B0 and B1 both score J = 0 by construction, whatever the class balance.
+
+## Results
+
+~~~
+13 in-domain items: 5 positive, 8 negative
+
+  B0  fire on everything      TP 5  FN 0  FP 8  TN 0   J = +0.000
+  B1  fire on nothing         TP 0  FN 5  FP 0  TN 8   J = +0.000
+  B1b coin flip (20k trials)  mean J = -0.001, 95% within [-0.550, +0.550]
+
+  product-law matching        TP 4  FN 1  FP 1  TN 7   J = +0.675
+  B2  rule-less rater         TP 5  FN 0  FP 0  TN 8   J = +1.000
+~~~
+
+**Recomputed after the N9 audit removed the two hypercube items from the domain** (11 items,
+4 positive, 7 negative):
+
+~~~
+  product-law matching        TP 3  FN 1  FP 1  TN 6   J = +0.607
+  B2  rule-less rater         TP 4  FN 0  FP 0  TN 7   J = +1.000   (recognition 11/11)
+
+  LIFT: -0.393
+~~~
+
+- **Against the floors:** the diagnostic clears them, and only 0.97% of coin flips reach J ≥ 0.675
+  on 13 items. Necessary, and not impressive — clearing a constant rule is the minimum.
+- **Against B2: the lift is −0.325.** The rule-less rater scored **perfectly**: 5 of 5 positives,
+  8 of 8 negatives, no errors. The diagnostic is **worse than no diagnostic**.
+
+## Why B2 was perfect, and what that costs the whole benchmark
+
+**The recognition probe came back 13 of 13.** The rater named every problem: *"the sensitivity
+conjecture"*, *"cap set problem"*, *"Kadison–Singer / Weaver KS₂"*, *"Shannon capacity of the
+7-cycle"*, *"Sauer–Shelah lemma"*. It was not inferring from the product structure. **It was
+recalling the answers.**
+
+That is step D's 100%-recognition finding and L2's 5-of-5, reproduced a third time, and this time
+with the consequence made explicit:
+
+> **A contaminated rater ceilings this benchmark perfectly. So the benchmark cannot measure a
+> diagnostic's value at all.** Every retrospective number in this programme — the withdrawn 4/0, the
+> corrected 4/1, the union-bound 2/2 and 6/6 — is a *weaker* version of recall, measured against a
+> ceiling that recall already reaches.
+
+This does **not** show product-law matching is mathematically worthless. The Huang signing really
+does change the product law of the cube spectrum. It shows something narrower and worse for the
+programme: **retrospective cases cannot tell us whether it helps**, because anything that can compute
+the diagnostic can also just remember the answer.
+
+## What survives
+
+- **The seed was right about L4, and it is now measured rather than argued.** *"The only fully clean
+  estimate is prospective."* Three independent measurements now say the retrospective arm is
+  saturated by recall.
+- **`prospective/` is not one instrument among several. It is the only one.** Its five sealed
+  predictions are worth more than every 2×2 in this tree.
+- **The negative twins still do real work** — just not the work claimed. They cannot validate a
+  diagnostic against a recalling rater, but they did catch N8, which exposed the domain defect
+  (D23). Falsification survives where measurement does not.
+- **D20's field κ still stands.** Whether two raters agree on `target_law` is a question about
+  reproducibility of an encoding, not about predictive value, and recall does not inflate it.
+
+## What must change in how this repo is read
+
+1. **Do not quote any retrospective 2×2 as evidence that a diagnostic works.** Quote it, if at all,
+   as evidence that a diagnostic is *self-consistent*, against a baseline that beats it.
+2. **The headline claim of the rebuild is withdrawn twice over** — once by D20 (the
+   zero-false-positive figure), and once here (the remaining figures have negative lift).
+3. **n = 1 rater on 13 items.** This is a single observation, not a rate. But the direction is
+   stark, the recognition probe explains it, and it agrees with two prior measurements. It would take
+   a strong result to overturn it, not a noisy one.
+
+---
+
+## D28: a one-line test beats the diagnostic
+
+The N9 audit noticed that product-law matching's verdicts on the hypercube boards were reproduced by
+a far simpler rule, and recommended scoring that rule everywhere before any further work on the
+diagnostic. Done — `d28_bound_strength.json` carries the per-item assignments and the ratio for each,
+so they can be checked.
+
+> **The rule:** fire iff the best known bound is **not tight to within a constant factor**.
+> No product operation, no law vocabulary, no domain condition.
+
+On the same 11 in-domain items:
+
+| | TP | FN | FP | TN | sens | spec | **J** |
+|---|---|---|---|---|---|---|---|
+| rule-less rater (no rule at all) | 4 | 0 | 0 | 7 | 1.000 | 1.000 | **+1.000** |
+| **one-line bound-strength test** | 3 | 1 | **0** | 7 | 0.750 | **1.000** | **+0.750** |
+| product-law matching | 3 | 1 | **1** | 6 | 0.750 | 0.857 | **+0.607** |
+
+**The one-line test beats the diagnostic, with zero false positives where the diagnostic takes one.**
+The two differ on exactly one item — **N8**, which is precisely where product-law matching is wrong.
+
+So the product-law machinery is **surplus**: more complicated, worse-performing, and it required two
+post-hoc domain patches (D23, D27) that the one-line test does not need at all.
+
+Both rules share the same false negative, **case 3** (Shannon C5): α\* is within a constant factor of
+√5 *and* its product law is already correct, so neither test can see that board change. That is a
+property of the case, not of either rule — and it is the one place where the rebuilt diagnostic's
+"principled false negative" story still holds up.
+
+### The ordering, and what is left of the rebuild
+
+~~~
+no rule at all        J = +1.000     (but 11/11 recognition: this is recall, not inference)
+one line              J = +0.750
+product-law matching  J = +0.607
+~~~
+
+The rebuild's defensible residue is **not** the rule. It is two things:
+
+1. **D20's field κ.** That `target_law` and `bound_law` reproduce at +0.811 and +0.755 against the
+   transformation label's 0.048 is a real result about *encoding reproducibility*, and recall does not
+   inflate it.
+2. **The falsifications.** N8 and N9 broke the rule, and breaking it produced D23, D27 and D28 — three
+   findings worth more than the rule was. The twins did their job; it was the rule that did not.

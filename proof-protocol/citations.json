@@ -1,0 +1,425 @@
+{
+  "as_of": "2026-09-19",
+  "environment": "arxiv.org, export.arxiv.org, api.crossref.org and semanticscholar were EGRESS-BLOCKED from this container; direct curl and WebFetch to arxiv both failed. Web search was the only route, so every row below is verified against secondary sources and abstracts reached through search, not against a fetched PDF. Rows marked COMPUTED were checked by arithmetic here and need no source.",
+  "standard": "A claim is VERIFIED only if a source reached this session states it. Where the source could not be reached, the row says UNVERIFIED rather than accepting the claim.",
+  "rows": [
+    {
+      "id": "C1-bound",
+      "where": "case 1 bound_then",
+      "claim": "Delta >= (1/2 - o(1)) log n (Chung-Fueredi-Graham-Seymour 1988)",
+      "found": "CFGS 1988 prove that an induced subgraph of Q^n on more than 2^{n-1} vertices has max degree at least (1/2 - o(1)) log_2 n. J. Combin. Theory Ser. A 49(1), 180-187.",
+      "status": "VERIFIED",
+      "refinement": "The logarithm is base 2, which P1 leaves unstated. CFGS ALSO construct a (2^{n-1}+1)-vertex induced subgraph with max degree ceil(sqrt n) — so the sqrt(n) target came from their own matching construction, which is exactly the extremal-construction input the rebuilt diagnostic reads. CONFIRMED FROM PRIMARY: Huang's introduction states CFGS's bound as '(1/2 - o(1)) log_2 n' with the base explicit, for induced subgraphs of MORE THAN 2^{n-1} vertices, and states their matching construction as a (2^{n-1}+1)-vertex induced subgraph of maximum degree ceil(sqrt n). Both halves of this row are now primary-tier, including the base-2 reading that P1 left unstated.",
+      "source": "sciencedirect 0097316588900349; annals.math.princeton.edu v190-n3-p06; CONFIRMED FROM PRIMARY: arXiv:1907.00847v2 introduction"
+    },
+    {
+      "id": "C1-after",
+      "where": "case 1 after-board",
+      "claim": "Huang: signed adjacency with A^2 = nI, interlacing, lambda_1 <= Delta, giving sqrt(n)",
+      "found": "Huang 2019 proves every (2^{n-1}+1)-vertex induced subgraph of Q^n has max degree at least sqrt(n), resolving the Sensitivity Conjecture.",
+      "status": "VERIFIED",
+      "source": "arXiv:1907.00847; Annals of Mathematics 190 (2019) 949-955 (PRIMARY, pasted transcript)",
+      "refinement": "VERIFIED BY CONSTRUCTION, not only by citation: tools/check_huang.py builds A_n by Huang's recursion for n = 1..7 and confirms A_n^2 = nI exactly, trace 0, entries in {-1,0,1}, spectrum flat at +-sqrt(n) with multiplicity 2^{n-1} each, and that flipping the signs recovers the adjacency matrix of Q_n (which is what lets Lemma 2.3 apply). It then reproduces Theorem 1.1 exhaustively at n = 3 and n = 4: all 56 and all 11,440 (2^{n-1}+1)-vertex induced subgraphs have Delta >= sqrt(n)."
+    },
+    {
+      "id": "C2-meshulam",
+      "where": "case 2 bound_then",
+      "claim": "3^n/n (Meshulam 1995)",
+      "found": "Meshulam 1995 proved an upper bound of O(3^n/n) for cap sets in F_3^n.",
+      "status": "VERIFIED",
+      "source": "via Bateman-Katz JAMS 25(2) 2012"
+    },
+    {
+      "id": "C2-batemankatz",
+      "where": "case 2 bound_then",
+      "claim": "n^{1+eps} (Bateman-Katz 2012)",
+      "found": "Bateman-Katz prove any cap set in F_3^N has size at most C * 3^N / N^{1+eps}.",
+      "status": "CORRECTED",
+      "correction": "P1 writes the bound as 'n^{1+eps}', dropping the 3^n. In a column whose neighbouring entry is '3^n/n', that reads as a bound OF SIZE n^{1+eps} rather than a denominator. It is shorthand that becomes an error in context. Field corrected to 3^n/n^{1+eps}.",
+      "refinement": "Dating: arXiv:1101.5851 was posted January 2011; JAMS published April 2012 (electronic November 2011). Under the arXiv-dating rule adopted after the case 9 error, this work dates to 2011, not 2012.",
+      "source": "arXiv:1101.5851; JAMS 25(2), 2012; publication data corroborated from primary (Bloom-Sisask ref [1]): J. Amer. Math. Soc. 25 (2012), no. 2, 585-613"
+    },
+    {
+      "id": "C2-after",
+      "where": "case 2 after-board",
+      "claim": "slice rank gives about 2.756^n",
+      "found": "Ellenberg-Gijswijt bound the largest cap in F_3^n by O(2.756^n); the exact constant is 3(207+33*sqrt 33)^{1/3}/8.",
+      "status": "VERIFIED",
+      "refinement": "COMPUTED here: the exact constant is 2.7551046..., so 2.756 is correct as an upper bound but is not the constant itself. P1's 'approximately 2.756^n' is sound as written.",
+      "source": "Croot-Lev-Pach arXiv:1605.01506; Ellenberg-Gijswijt arXiv:1605.09223; Tao's slice-rank formulation; publication data corroborated from primary (Bloom-Sisask ref [8]): Ann. of Math. (2) 185, 1 (2017), 339-343"
+    },
+    {
+      "id": "C3-theta",
+      "where": "case 3 after-board",
+      "claim": "theta(C5) = sqrt 5",
+      "found": "COMPUTED: theta(C_n) = n cos(pi/n)/(1+cos(pi/n)); at n=5 this equals sqrt(5) = 2.2360679774998 to machine precision.",
+      "status": "VERIFIED (COMPUTED)",
+      "source": "Lovasz 1979"
+    },
+    {
+      "id": "C3-shannon",
+      "where": "case 3 bound_then",
+      "claim": "sqrt 5 <= Theta <= 5/2 (Shannon 1956)",
+      "found": "Shannon determined Theta(G) for all graphs on at most SIX vertices except C5, proved Theta(C5) >= sqrt5 via the explicit independent set {t(1,2) : t in Z_5}, and THE 5/2 UPPER BOUND IS HIS OWN, by what is now called the fractional clique covering number. The before-board needs no change.",
+      "status": "VERIFIED",
+      "note": "Low risk — it is the standard pre-Lovasz statement — but it was not checked, and the standard here is that unchecked means unverified.",
+      "source": "pasted transcript (PRIMARY)",
+      "refinement": "A search snippet relayed earlier said FIVE vertices; the transcript says six. Use six. Load-bearing and it holds: case 3 is the one principled false negative precisely because chi_f is multiplicative under the strong product and merely not tight -- and chi_f(C5) = 5/2 is COMPUTED here (vertex-transitive, n/alpha), ratio 1.118 to sqrt5, a constant factor."
+    },
+    {
+      "id": "C5-wolff",
+      "where": "case 5 bound_then, low-dimensional regime",
+      "claim": "|K| >~ q^{(n+2)/2}",
+      "found": "The finite-field benchmark is |F|^{(n+2)/2} for Besicovitch sets, with arithmetic improvements available in dimensions 5 and higher (Katz-Tao; Mockenhaupt-Tao 2004).",
+      "status": "VERIFIED",
+      "source": "Mockenhaupt-Tao, arXiv:math/0204234"
+    },
+    {
+      "id": "C5-4n7",
+      "where": "case 5 bound_then, high-dimensional regime",
+      "claim": "later about q^{4n/7}",
+      "found": "Katz-Tao 2002 prove a lower bound of 4n/7 + 3/7 on the MINKOWSKI DIMENSION of Kakeya sets in R^n — the EUCLIDEAN problem. The finite-field high-dimensional improvements over (n+2)/2 exist but are not stated anywhere reached this session as an exponent 4n/7 for |K| in F_q^n.",
+      "status": "DISPUTED",
+      "correction": "P1 appears to import a Euclidean Minkowski-dimension exponent into a finite-field cardinality bound. The two-regime STRUCTURE that L2 established survives — there is a low-dimensional geometric bound and a high-dimensional arithmetic improvement — but the specific exponent 4n/7 is not verified for F_q^n.",
+      "consequence": "The n < 14 crossover computed in tools/check_corrections.py is correct AS ARITHMETIC on the two exponents as P1 writes them. If 4n/7 is not the right finite-field exponent, the crossover POINT is an artefact of a misattributed bound, even though the two-regime finding that motivated the schema change does not depend on it. This is the second independent error found in case 5, after the ordering error L2 found.",
+      "source": "Katz-Tao 2002; Mockenhaupt-Tao arXiv:math/0204234; survey arXiv:2512.09397"
+    },
+    {
+      "id": "C5-after",
+      "where": "case 5 after-board",
+      "claim": "Dvir: |K| >= q^n/n!",
+      "found": "Dvir 2008 proves a Kakeya set in F_q^n has size at least q^n/n!, by finding a low-degree polynomial vanishing on a small K and deriving a contradiction from the lines it contains.",
+      "status": "VERIFIED",
+      "source": "arXiv:0803.2336; cs.princeton.edu/~zdvir/papers/Dvir09.pdf"
+    },
+    {
+      "id": "C6-after",
+      "where": "case 6 after-board",
+      "claim": "Elekes-Sharir lift plus polynomial partitioning, giving N/log N",
+      "found": "Guth-Katz prove N points in R^2 determine at least cN/log N distinct distances, following the Elekes-Sharir set-up (distances to rigid motions to point-line incidences in space) with a polynomial ham-sandwich cell decomposition.",
+      "status": "VERIFIED",
+      "source": "arXiv:1011.4105"
+    },
+    {
+      "id": "C8-bound",
+      "where": "case 8 bound_then",
+      "claim": "sqrt(n log n) from uniform random colouring",
+      "found": "A random colouring achieves discrepancy Theta(sqrt(n log n)) with high probability.",
+      "status": "VERIFIED",
+      "source": "via Spencer 1985 commentary"
+    },
+    {
+      "id": "C8-after",
+      "where": "case 8 after-board",
+      "claim": "entropy / partial colouring, giving 6 sqrt n",
+      "found": "Spencer 1985: for any 0/1 matrix A with n rows and n columns there is x in {-1,1}^n with ||Ax||_inf <= 6 sqrt n.",
+      "status": "VERIFIED",
+      "source": "Trans. Amer. Math. Soc. 289(2), 679-706, 1985"
+    },
+    {
+      "id": "N8",
+      "where": "twin N8",
+      "claim": "sqrt(n log(m/n)) is tight, so the log is only partially removable",
+      "found": "Spencer's theorem gives discrepancy O(sqrt(n log(m/n + 2))) for m sets on n points.",
+      "status": "VERIFIED",
+      "note": "The upper bound is confirmed; the matching lower bound (tightness) was not separately confirmed this session.",
+      "source": "Spencer 1985"
+    },
+    {
+      "id": "N1",
+      "where": "twin N1",
+      "claim": "dimension log n / eps^2 is proven tight (Larsen-Nelson 2017)",
+      "found": "Larsen-Nelson prove any embedding preserving pairwise distances to 1+eps needs m = Omega(eps^{-2} log n), matching JL, and for general (not merely linear) maps.",
+      "status": "VERIFIED",
+      "source": "Optimality of the Johnson-Lindenstrauss Lemma, FOCS 2017"
+    },
+    {
+      "id": "N2-tight",
+      "where": "twin N2",
+      "claim": "tight in general (Komlos-Pach-Woeginger 1992) and for halfspaces in R^4 (Pach-Tardos 2013)",
+      "found": "KPW 1992 give almost tight bounds on abstract hypergraphs. Pach-Tardos construct a set system from points in R^4 cut by halfspaces where every eps-net has size at least (1/(9 eps)) log(1/eps).",
+      "status": "VERIFIED",
+      "refinement": "Kupavskii-Mustafa-Pach later generalised the Pach-Tardos construction to halfspaces in R^d for every d >= 4.",
+      "source": "Pach-Tardos, Tight Lower Bounds for the Size of Epsilon-Nets"
+    },
+    {
+      "id": "N2-removable",
+      "where": "twin N2",
+      "claim": "removable for halfspaces in R^3 and discs (Matousek-Seidel-Welzl)",
+      "found": "O(1/eps)-size nets for halfspaces in R^3 are confirmed (Har-Peled-Kaplan-Sharir, 'eps-Nets for Halfspaces Revisited'), but the attribution to Matousek-Seidel-Welzl was not directly confirmed.",
+      "status": "PARTIAL",
+      "note": "The mathematical claim stands; the attribution is unverified. N2 is offered as a within-problem matched pair, so the pairing itself is what matters and the pairing is confirmed: tight in R^4, removable in R^3."
+    },
+    {
+      "id": "N4",
+      "where": "twin N4",
+      "claim": "theta(C7) ~ 3.318 against a lower bound ~3.258 (Polak-Schrijver 2019)",
+      "found": "Polak-Schrijver give an independent set of size 367 in the fifth strong power of C7, so Theta(C7) >= 367^{1/5} > 3.2578. COMPUTED here: 367^{1/5} = 3.2578659..., and theta(C7) = 7cos(pi/7)/(1+cos(pi/7)) = 3.3176672....",
+      "status": "VERIFIED",
+      "source": "Information Processing Letters 143 (2019) 37-40"
+    },
+    {
+      "id": "N5",
+      "where": "twin N5",
+      "claim": "the eps^2 vs eps loss is real even for unique games (Raz 2008, odd-cycle game)",
+      "found": "Raz constructs, for every 0 < eps <= 1/2, a game of value <= 1-eps whose n-fold parallel repetition has value >= (1-eps^2)^{O(n)}. The odd cycle game is simultaneously a projection, unique and XOR game, so this settles most variants negatively.",
+      "status": "VERIFIED",
+      "source": "A Counterexample to Strong Parallel Repetition, FOCS 2008"
+    },
+    {
+      "id": "N6",
+      "where": "twin N6",
+      "claim": "the answer is n^{1/4}, tight (Roth 1964; Matousek-Spencer 1996)",
+      "found": "The discrepancy of arithmetic progressions in [n] is Theta(n^{1/4}): Roth 1964 for the lower bound, Matousek-Spencer 1996 for the matching upper bound by the entropy method.",
+      "status": "VERIFIED",
+      "source": "JAMS 9(1), 1996"
+    },
+    {
+      "id": "N7",
+      "where": "twin N7",
+      "claim": "R^3 was resolved by a different multi-scale route (Wang-Zahl 2025)",
+      "found": "Wang-Zahl, February 2025, 127 pages: every Kakeya set in R^3 has Hausdorff and Minkowski dimension 3. The route is a multiscale analysis of grainy tube configurations, building on their 2022 sticky-Kakeya work — not Dvir's polynomial method.",
+      "status": "VERIFIED",
+      "source": "arXiv:2502.17655"
+    },
+    {
+      "id": "C14",
+      "where": "control 14",
+      "claim": "the board is Cohn-Elkies 2003; the actual board change was Kabatiansky-Levenshtein -> Cohn-Elkies",
+      "found": "Cohn-Elkies 2003 gave the first improvement in each dimension since Kabatyanskii-Levenshtein 1978, were the best bounds known for dimensions 4 through 36, and THE AUTHORS THEMSELVES CONJECTURED their approach would settle dimensions 8 and 24.",
+      "status": "VERIFIED",
+      "source": "arXiv:math/0110009; New Upper Bounds on Sphere Packings I"
+    },
+    {
+      "id": "C15",
+      "where": "control 15",
+      "claim": "Kelley-Meka stayed on the density-increment board, giving exp(-c log^{1/12} N)",
+      "found": "Kelley-Meka: a 3AP-free A in [N] has |A| <= exp(-c (log N)^{1/12}) N.",
+      "status": "VERIFIED",
+      "refinement": "NEW SINCE THE SEED: Bloom-Sisask improved the exponent from 1/12 to 1/9 a few months later (arXiv:2309.02353). The control's status is unaffected — both stayed on the same board — but the figure in P1 is no longer the record. FROM PRIMARY: the 1/9 improvement is announced in arXiv:2302.07211 ITSELF ('we will detail these improvements in a separate forthcoming note'), together with 5/41. This row credited the improvement to arXiv:2309.02353, the promised note; the announcement is earlier than that row implies.",
+      "source": "arXiv:2302.05537"
+    },
+    {
+      "id": "O3",
+      "where": "battery item O3",
+      "claim": "x^3 + y^3 + z^3 = 114 is still open",
+      "found": "114 is described as the lowest unsolved case; all n < 100 have known representations after Booker-Sutherland settled 33, 42 and 3, and 114 and 390 remain unsolved with searches ongoing.",
+      "status": "VERIFIED AS OF 2026-09-18",
+      "note": "DATED FACT. Re-check on the day of freezing, as the seed instructed: this one can change under you."
+    },
+    {
+      "id": "C4",
+      "where": "case 4",
+      "claim": "Weaver KS_2 needs delta <~ 1/log n; MSS interlacing families",
+      "status": "CORRECTED",
+      "note": "Split row: after-board verified, before-board bound still unverified.",
+      "found": "NEITHER Weaver (math/0209078) NOR Marcus-Spielman-Srivastava (1306.3969) states the threshold delta <~ 1/log n. A negative result, and the flagged remedy applies.",
+      "source": "Weaver math/0209078; MSS 1306.3969",
+      "correction": "The number is DROPPED from case 4's bound_then and replaced by the sourced statement: the matrix-Chernoff / random-partition route loses a factor logarithmic in the dimension, and interlacing families remove it. Keeping a figure no source states is exactly the defect C2 and C5 already were. The diagnostic is unaffected -- case 4 fires on the LOSS, which is sourced, not the THRESHOLD, which is not."
+    },
+    {
+      "id": "C7",
+      "where": "case 7",
+      "claim": "GPY needs theta > 1/2; Bombieri-Vinogradov gives exactly 1/2; Zhang and Maynard after-boards",
+      "status": "VERIFIED",
+      "note": "Not checked this session.",
+      "found": "Granville, arXiv:1410.8400v1, verifies every field verbatim or in substance: the sieve weights, the ratio criterion, two primes in the tuple, and theta > 1/2 against Bombieri-Vinogradov's exactly 1/2.",
+      "source": "arXiv:1410.8400v1 (PRIMARY)",
+      "refinement": "Three additions. (1) The invariant's threshold is not literally 1: Prop. 6.3 gives rho(F) > 4h unconditionally, > 2h under Elliott-Halberstam. (2) bound_then named only theta, but D = [d_1,d_2] <= R^2 binds the sieve as R < x^{1/4-o(1)}, which sec. 4.2 calls 'an important barrier' -- the same barrier from two sides, and a field naming one loses the form in which it bites, exactly as case 5's single-regime field lost a dimension range. (3) Two EMPTY slots are now filled: move = Selberg's explicit formula lambda(d) = mu(d)G(log d/log R), composition = multiplicativity of omega. The leak is DERIVED: rho_k caps at 4 independent of k, so the criterion caps at 2*theta and theta > 1/2 follows."
+    },
+    {
+      "id": "C9",
+      "where": "case 9",
+      "claim": "s >~ c k^2 log k classical; Wooley efficient congruencing",
+      "status": "VERIFIED",
+      "note": "Not checked this session. The case is void for L2 purposes anyway, through the cutoff design error. The arXiv id 1101.0574 and its 2011-01-03 posting date are taken from the task list and were not independently confirmed here.",
+      "found": "Pierce, arXiv:1707.00119, confirms the classical shape and gives eta_{s,k} = (1/2)k^2(1-1/k)^{[s/k]} with s >= 3k^2(log k + O(log log k)), the leading 3 improvable to 2; Wooley's 1992 thesis gives the constant 1. Wooley's efficient congruencing is confirmed as arXiv:1101.0574, 3 January 2011, Annals 175(3) 1575-1627.",
+      "source": "arXiv:1707.00119 (PRIMARY) + derivation (DERIVED)",
+      "refinement": "The leak is now a DEMONSTRATION rather than a claim: each block of k variables multiplies the defect by a fixed fraction, so burning k^2/2 to O(1) needs ~k log(k^2/2) contractions and s ~ 2k^2 log k. THE log k IS THE CONTRACTION COUNT. Case 9 was one of only two cases where L2's encoders agreed on the leading mechanism, and this is why. D1 CLOSES."
+    },
+    {
+      "id": "C10",
+      "where": "case 10",
+      "claim": "Fortnow/Feige counterexamples; Raz 1995 and Holenstein 2007 after-boards",
+      "status": "UNVERIFIED",
+      "note": "Not checked this session. Raz 2008 (N5) was checked and is a different paper."
+    },
+    {
+      "id": "C11",
+      "where": "case 11",
+      "claim": "chi <= n-2k+2 (Kneser 1955); Lovasz 1978 neighbourhood complex with Borsuk-Ulam",
+      "status": "VERIFIED",
+      "found": "Lovasz 1978 proves chi(KG(n,k)) = n-2k+2 via the neighbourhood complex: N(KG(n,k)) is (n-2k-1)-connected, and Borsuk-Ulam turns that connectivity into an obstruction to colouring. Both the Kneser 1955 upper bound and the Lovasz after-board are as P1 states them.",
+      "source": "Lovasz 1978; surveyed in arXiv:math/0305300, arXiv:math/0310056"
+    },
+    {
+      "id": "C12",
+      "where": "case 12",
+      "claim": "Perelman W-entropy and reduced volume give kappa-noncollapsing",
+      "status": "UNVERIFIED",
+      "note": "Not checked this session."
+    },
+    {
+      "id": "C13",
+      "where": "case 13",
+      "claim": "Dinur 2007 graph powering plus alphabet reduction, constant-factor blow-up",
+      "status": "VERIFIED",
+      "found": "Dinur 2007 amplifies the unsatisfiability factor by a factor of 2 per round while blowing up instance size by at most a CONSTANT factor, using a zig-zag-inspired preprocessing into a constant-degree expander, graph powering, and alphabet reduction. Exactly the P1 after-board.",
+      "source": "J. ACM 54(3), 2007"
+    },
+    {
+      "id": "N3",
+      "where": "twin N3",
+      "claim": "Behrend excludes power savings; slice rank gives nothing in [N]",
+      "status": "VERIFIED",
+      "note": "Not checked this session. N3 is load-bearing for the rebuilt diagnostic (it is the discriminator against case 2), but the diagnostic's use of it rests on the ABSENCE of a product structure on [N], which is structural and does not depend on Behrend.",
+      "found": "Peluse, arXiv:2206.10037: SALEM-SPENCER (1942) constructed 3AP-free subsets of [N] of density exp(-log N/log log N), 'showing that the true order of magnitude of r_3(N) is larger than N^{1-eps} for any fixed eps > 0'. Behrend (1946) gives the stronger, still essentially best-known Omega(N/exp(C sqrt(log N))).",
+      "correction": "RE-ATTRIBUTED. The exclusion of power savings -- the thing N3 asserts -- is SALEM-SPENCER's, not Behrend's. Both are now cited in their roles.",
+      "source": "arXiv:2206.10037 (PRIMARY)",
+      "refinement": "The exclusion is ASYMPTOTIC and the crossover is large: N > 10^10 for delta = 0.5 but N > 10^241 for delta = 0.1 (derived and verified here). The item now says so. Also logged: arXiv:2406.12290 is the first quasipolynomial improvement to Behrend since 1946 -- it does not change N3's status, but it is the class of event that rejected the Erdos-R^3 candidate."
+    },
+    {
+      "id": "C1-gotsman",
+      "where": "case 1 state slot",
+      "claim": "the Gotsman-Linial 1992 reduction",
+      "status": "VERIFIED",
+      "note": "Not checked this session.",
+      "what_would_close_it": {
+        "the_claim_that_needs_a_source": "That the Sensitivity Conjecture REDUCES to the induced-subgraph maximum-degree problem on Q_n: deg(f) bounded by a polynomial in s(f) is equivalent to every induced subgraph of Q_n on more than 2^{n-1} vertices having maximum degree n^{Omega(1)}. That equivalence is the entire reason Huang's theorem resolves the conjecture, and it is what case 1's STATE slot asserts.",
+        "cheapest_document": "arXiv:1907.00847 (Huang), FIRST TWO PAGES ONLY. Its introduction has to state the Gotsman-Linial reduction to explain why the theorem settles the conjecture. That paste would close C1-gotsman AND upgrade C1-after from SEARCH to PRIMARY tier in the same move -- two rows, two pages.",
+        "alternatives_in_order": [
+          "Hatami-Kulkarni-Pankratov, 'Variations on the Sensitivity Conjecture' (Theory of Computing Library, Graduate Surveys 4, 2011) -- a survey whose job is exactly this equivalence.",
+          "O'Donnell, 'Analysis of Boolean Functions', the sensitivity/degree chapter and its notes.",
+          "The paper itself: Gotsman and Linial, 'The equivalence of two problems on the hypercube', Combinatorica 12(1) (1992), 131-135. Pre-arXiv, so hardest to reach from here."
+        ],
+        "what_would_NOT_close_it": "A source that merely CITES Gotsman-Linial, or that states Huang's theorem without the equivalence. The row is about the reduction, not about the max-degree bound -- row C1-bound and row C1-after already cover those.",
+        "stakes": "Low for scoring: it sits in case 1's state slot, not in a bound, and case 1 has already left the diagnostic's domain via the N9 audit. It is the last row no pass has ever looked at, which is the only reason it is still named."
+      },
+      "found": "CLOSED FROM PRIMARY. Huang arXiv:1907.00847v2 states it as Theorem 1.3, attributed to Gotsman and Linial [9] and proved by them 'using Fourier analysis': for any MONOTONE h: N -> R, the following are equivalent -- (a) for any induced subgraph H of Q_n with |V(H)| != 2^{n-1}, Gamma(H) >= h(n), where Gamma(H) = max{Delta(H), Delta(Q_n - H)}; (b) for any boolean function f, s(f) >= h(deg(f)). Huang then takes h(n) = sqrt(n), 'since one of H and Q_n - H must contain at least 2^{n-1} + 1 vertices, and the maximum degree Delta is monotone'. Publication data from the same reference list: J. Combin. Theory Ser. A 61(1) (1992), 142-146.",
+      "previously": "Not checked this session. (Nor in any earlier pass -- it was the last row in that state.)",
+      "correction": "MY OWN PARAPHRASE WAS IMPRECISE, and the primary source is the reason to say so. Asking for this row I wrote that what was needed was 'deg(f) <= poly(s(f)) iff every induced subgraph of Q_n on MORE THAN 2^{n-1} vertices has maximum degree n^{Omega(1)}'. The actual equivalence is stated (i) with Gamma(H) = max{Delta(H), Delta(Q_n - H)}, not with Delta(H) alone, (ii) under |V(H)| != 2^{n-1} rather than 'more than half', and (iii) for a general monotone h rather than for the polynomial relation. The 'more than half' step is Huang's BRIDGE from Theorem 1.3 to h = sqrt(n), not part of Gotsman-Linial's statement. The row is closed on the source's form, not on mine.",
+      "status_note": "This was the last UNVERIFIED row in the tree, and the one no pass had ever looked at. Debt D19 closes with it.",
+      "source": "arXiv:1907.00847v2 (PRIMARY, pasted transcript), Theorem 1.3 and its reference [9]",
+      "tier_upgrade": "was UNVERIFIED with no source; now PRIMARY"
+    },
+    {
+      "id": "TWINS-batch2",
+      "where": "p1-retrodiction/twins/",
+      "claim": "Eight twins carried their tightness claim as STANDARD rather than fetched.",
+      "found": "Six upgraded to verified this session: N11 (max of n Gaussians, asymptotically tight), N12 (Raab-Steger 1998, tight upper AND lower bounds), N13 (E[T] = n*H_n, verified by exact computation rather than citation), N17 (Alon-Boppana, attained by Lubotzky-Phillips-Sarnak and Margulis Ramanujan families), N18 (Szemeredi-Trotter, Elekes construction; except for the constant it cannot be improved), N19 (Sauer-Shelah, attained exactly by downward-closed systems).",
+      "status": "VERIFIED",
+      "refinement": "N16 (matrix-multiplication exponent) and N20 (Kovari-Sos-Turan) remain STANDARD and are declared so. Every twin now carries a recheck_by date, per D21 — twin candidates decay, as the rejected Erdos-R^3 candidate showed."
+    },
+    {
+      "id": "C10",
+      "where": "case 10",
+      "claim": "Fortnow then Feige counterexamples; Raz 1995 / Holenstein 2007 after-boards",
+      "found": "Search reaches it in substance, including the Fortnow-then-Feige ordering the row asserts (Feige-Verbitsky 2002 the simpler example), Raz's sub-exponential decay and Holenstein's simplification. The primaries are largely pre-arXiv, so a transcript is unlikely to improve it.",
+      "status": "SEARCH",
+      "note": "Case 10's target_law = 'none' rests on these counterexamples."
+    },
+    {
+      "id": "C12",
+      "where": "case 12",
+      "claim": "Perelman W-entropy and reduced volume give kappa-noncollapsing",
+      "found": "Bibliographic record confirmed (math/0211159, 11 Nov 2002); the cigar-soliton obstruction and the entropy-plus-reduced-distance remedy corroborated from a secondary source.",
+      "status": "PARTIAL",
+      "note": "Lowest stakes of any open row: case 12 fits none of the five transformations."
+    },
+    {
+      "id": "C2-after-split",
+      "where": "heldout/02-cap-set",
+      "claim": "P1 credited Croot-Lev-Pach and Ellenberg-Gijswijt jointly for the cap-set after-board.",
+      "found": "Peluse: CLP proved a bound for (Z/4Z)^n (O(3.61^n), improving Sanders); EG ADAPTED THE METHOD to prove the cap-set theorem. CLP supplied the method, EG the theorem.",
+      "status": "VERIFIED",
+      "source": "arXiv:2206.10037",
+      "refinement": "Same transcript confirms Meshulam O(3^n/n), Bateman-Katz O(3^n/n^{1+c}), Edel Omega(2.217^n), EG O(2.756^n)."
+    },
+    {
+      "id": "C15",
+      "where": "controls/15-roth-kelley-meka.json",
+      "claim": "Kelley-Meka stayed on the density-increment board, giving exp(-c log^{1/12} N).",
+      "found": "CLOSED FROM PRIMARY. Bloom-Sisask arXiv:2302.07211v3 is an exposition of Kelley-Meka that breaks the argument into five steps and names the fifth 'Density increment': 'If <mu_A * mu_A, mu_C> <= 1/2, then there is an affine subspace V of codimension O(L(alpha)^4 L(gamma)^4) on which A has density at least (1 + 1/100) alpha ... This density increment condition can now be iteratively applied.' The board P1 assigns to control 15 is the one the primary source says the argument runs on. Theorem 1 is stated with exponent 1/12, as P1 records.",
+      "status": "VERIFIED",
+      "note": "Superseded in place, per the tier rule that a transcript corrects a row rather than reconciling with it. The previous text of this row is kept in `previously`. Debt D29 is closed.",
+      "previously": "STILL UNSOURCED. The Peluse survey was expected to cover it and does not: it is Bourbaki June 2022 on Bloom-Sisask 2020, its table of records ends at Schoen 2021, and Kelley-Meka appears nowhere.",
+      "source": "arXiv:2302.07211v3 (PRIMARY, pasted transcript); arXiv:2302.05537 for Theorem 1 itself",
+      "refinement": "P1's exponent 1/12 is DOUBLY STALE and the primary source says so in one paragraph: 1/9 'with a relatively clean argument', then 5/41 after 'a further tedious lengthy technical optimisation'. The control's status is unaffected -- every one of these stayed on the density-increment board -- but the figure in the item is not the record. Full ladder in row C15-ladder and in the item's exponent_ladder block."
+    },
+    {
+      "id": "C15-ladder",
+      "where": "controls/15-roth-kelley-meka.json exponent_ladder",
+      "claim": "NEW ROW. The exponent record for r_3(N) around Kelley-Meka, largest exponent = strongest bound.",
+      "found": "1/12 Kelley-Meka Thm 1; 1/9 Bloom-Sisask clean modification ('the only modification required is to the almost-periodicity part'); 5/41 after technical optimisation; 1/7 'the natural limit of these methods, in that achieving anything better will require significant new ideas'; 1/3 (perhaps 1/4) the limit of any density-increment-with-Bohr-sets argument; 1/2 from Behrend's construction, which is where the truth is at least. Ordering and the two gaps checked in check_citations_response.py section (e).",
+      "status": "VERIFIED",
+      "refinement": "TRAP RECORDED: 1/7 occurs twice in the source with different referents. Theorem 2 (the F_q^n model case) improves from 1/9 to 1/7 under the same modification; 1/7 in Theorem 1 (the integers) is the believed natural limit. Reading one for the other would put a finite-field exponent on the integer ladder.",
+      "source": "arXiv:2302.07211v3 (PRIMARY), 'Improvements' paragraph"
+    },
+    {
+      "id": "C15-ceiling",
+      "where": "controls/15-roth-kelley-meka.json board_ceiling",
+      "claim": "NEW ROW. The density-increment board has a stated ceiling below the known truth.",
+      "found": "Bloom-Sisask: 'an exponent of 1/3 (or perhaps even 1/4) seems to be the limit of any argument that uses any sort of \"density increment\" argument with Bohr sets (whether using Kelley-Meka ideas or a more traditional Fourier analytic approach)', against Behrend's 1/2. The interval (1/3, 1/2] in the exponent is, on the practitioners' own account, unreachable from this board.",
+      "status": "VERIFIED",
+      "refinement": "This is the benchmark's own subject matter stated by the people on the board, contemporaneously, about a live problem -- not reconstructed by us after the fact. It does NOT reclassify control 15: a stated ceiling predicts the board will have to be left, and what happened in 2023 is that it was not. Debt D32.",
+      "source": "arXiv:2302.07211v3 (PRIMARY), 'Improvements' paragraph"
+    },
+    {
+      "id": "N3-polynomial-method",
+      "where": "twin N3, the load-bearing half",
+      "claim": "N3's discriminator against case 2 is the ABSENCE of a slice-rank/polynomial-method route in [N]. Previously carried as structural reasoning, not as a sourced statement.",
+      "found": "Bloom-Sisask state it outright: 'Unfortunately, however, there is no known analogue of the polynomial method for the integer problem, so achieving strong bounds for the integer problem via this method is out of reach.' They also give the contrast N3 needs: in F_q^n the polynomial method gives |A| <= q^{n-cn} (Ellenberg-Gijswijt), stronger than Kelley-Meka's q^{n-cn^{1/9}}, while over the integers the Kelley-Meka route is the one that generalises.",
+      "status": "VERIFIED",
+      "refinement": "This upgrades the part of N3 the rebuilt diagnostic actually leans on. The N3 row's own note said the diagnostic's use of N3 'rests on the ABSENCE of a product structure on [N], which is structural and does not depend on Behrend' -- that absence is now a quoted primary claim rather than our inference.",
+      "source": "arXiv:2302.07211v3 (PRIMARY), section on the finite field case"
+    },
+    {
+      "id": "N3-behrend-improvements",
+      "where": "twin N3 refinement",
+      "claim": "The N3 refinement recorded arXiv:2406.12290 as 'the first quasipolynomial improvement to Behrend since 1946', which reads as though nothing happened in between.",
+      "found": "Bloom-Sisask: Behrend [2] (PNAS 32 (1946), 331-332) gives exp(-c (log N)^{1/2}) N, and 'small improvements have also been established by Elkin [9] (Israel J. Math. 184 (2011), 93-128) and Green and Wolf [13] (Additive number theory, 141-144, Springer 2010)'.",
+      "status": "VERIFIED",
+      "refinement": "The claim N3 needs -- Behrend's shape excludes power savings, and is still essentially best-known -- is untouched: Elkin and Green-Wolf improve the lower-order factor, not the (log N)^{1/2}. But 'since 1946' needed the qualifier, and it was my phrasing that needed it, not the source's.",
+      "source": "arXiv:2302.07211v3 (PRIMARY), reference list and opening"
+    },
+    {
+      "id": "C1-tightness",
+      "where": "twin N9 (Huang tightness) and controls on the N9 audit",
+      "claim": "NEW ROW. In what sense Huang's sqrt(n) is tight.",
+      "found": "The paper claims two DIFFERENT tightness statements, and they differ in scope. Theorem 1.1: 'Moreover this inequality is tight when n is a perfect square' -- the degree bound meets CFGS's ceil(sqrt n) construction exactly at n = k^2. The Remark: lambda_1(H) >= sqrt(n) strengthens Theorem 1.1, and THAT inequality 'is best possible for all n', witnessed by taking all even vertices of Q_n plus one odd vertex, which induces a star K_{1,n} plus isolated vertices with lambda_1 exactly sqrt(n). Verified by construction for n = 2..7 in tools/check_huang.py.",
+      "status": "VERIFIED",
+      "refinement": "THE N9 AUDIT DERIVED MORE THAN THE PAPER STATES, and the derivation is sound. The audit concluded tightness for ALL n from integrality plus monotonicity: Delta is an integer, so Delta >= sqrt(n) forces Delta >= ceil(sqrt(n)), and CFGS attain ceil(sqrt(n)). The paper only claims the perfect-square case for Delta. So the audit's step is a strengthening of the published statement rather than a reading of it, and it should be cited as ours -- checked for n = 1..200.",
+      "source": "arXiv:1907.00847v2 (PRIMARY), Theorem 1.1 and the Remark in section 2"
+    },
+    {
+      "id": "C1-chain",
+      "where": "case 1, the route from the cube bound to the Sensitivity Conjecture",
+      "claim": "NEW ROW. What Huang's theorem has to be combined with to settle the conjecture.",
+      "found": "Theorem 1.4: s(f) >= sqrt(deg(f)), which 'confirms a conjecture of Gotsman and Linial' and is tight for the AND-of-ORs function. Then bs(f) <= deg(f)^2 -- Nisan-Szegedy's bs <= 2 deg(f)^2 improved by Tal -- gives Theorem 1.5, bs(f) <= s(f)^4. Before Huang the best upper bound was EXPONENTIAL in s(f): Kenyon-Kutin's bs(f) = O(e^{s(f)} sqrt(s(f))).",
+      "status": "VERIFIED",
+      "refinement": "The quartic is still short of the truth: the best known separation is quadratic, bs(f) = (2/3)s(f)^2 - (1/3)s(f) (Ambainis-Sun). Huang's concluding remark suggests closing the gap 'by directly applying the spectral method to boolean functions instead of to the hypercubes'. That is a SUGGESTED ROUTE, not a stated ceiling, and CEILINGS.md records it as a rejected candidate with that reason.",
+      "source": "arXiv:1907.00847v2 (PRIMARY), Theorems 1.4 and 1.5 with references [11], [13], [15], [1]"
+    }
+  ],
+  "adjudications": [
+    {
+      "id": "ADJ-14",
+      "subject": "Sphere packing moved from board-change to same-board control",
+      "verdict": "UPHELD, and now supported by sources rather than argument alone",
+      "reasoning": "Two facts settle it. (1) Cohn-Elkies 2003 was itself the first improvement in each dimension since Kabatyanskii-Levenshtein 1978 — so the board change in this problem is KL -> Cohn-Elkies, exactly as the seed reclassified it. (2) Cohn and Elkies THEMSELVES conjectured that their approach would solve dimensions 8 and 24, which is the documentary form of the seed's claim that numerics had already shown the board was tight. Viazovska supplied the certificate on a board that was known to be right. As a control this item tests for false board-change alarms, and the rebuilt diagnostic correctly does not fire on it."
+    },
+    {
+      "id": "ADJ-13",
+      "subject": "PCP demoted to fit-testing only",
+      "verdict": "UPHELD on the stated ground",
+      "reasoning": "This is a definitional argument, not a citation, so it is adjudicated rather than verified. The seed's ground holds: the before-board was a SUCCESSFUL proof — parallel repetition did amplify the gap — and the defect was size blow-up n^k, not a failing bound. The benchmark scores predictions about bounds that failed, so the item does not belong among the scored positives. Noted for the record: the rebuilt diagnostic WOULD fire on it (target law additive, bound law multiplicative), which is evidence the item is well-formed, not evidence it should be scored."
+    }
+  ],
+  "tiers": {
+    "PRIMARY": "a fetched source states it, quoted. A PASTED TRANSCRIPT counts as a fetched primary source by this project's standard. -> VERIFIED",
+    "DERIVED": "arithmetic, reproducible here, needs no source -> COMPUTED",
+    "SEARCH": "search snippets only. The same tier as the 23 rows already verified, no better.",
+    "OPEN": "nothing reached it -> stays UNVERIFIED",
+    "rule": "Where a transcript and a search snippet disagree, THE TRANSCRIPT WINS and the snippet row is corrected, not reconciled."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "N13-coupon-collector",
+  "problem": "Coupon collector",
+  "twin_of": null,
+  "surface_leak": "A union bound over n coupons contributes log n.",
+  "verdict": "tight",
+  "wrongly_fires": "collectivize-a-union-bound",
+  "why_negative": "The expected time is exactly n H_n ~ n log n, with matching concentration. The log is the answer, not an artefact.",
+  "sources": [
+    {
+      "cite": "E[T] = n*H_n exactly; verified symbolically for n = 1..59 in tools/check_corrections.py. A closed form needs no citation.",
+      "date": "classical",
+      "verified": true,
+      "citation_row": "TWINS-batch2",
+      "tier": "COMPUTED (arithmetic reproduced in this repository)",
+      "basis": "Row TWINS-batch2 upgraded N13 by exact computation rather than by citation, which is the stronger basis of the two."
+    }
+  ],
+  "verification": "VERIFIED by computation",
+  "role": "negative-twin",
+  "expected_diagnostic_behaviour": "fires",
+  "encoder": "opus-5-session-2026-09-18",
+  "encoding_pass": "twin-expansion-v1",
+  "blind_reencoding": {
+    "done": false,
+    "encoder": null,
+    "kappa": null
+  },
+  "recheck_by": "2027-09-18"
+}
