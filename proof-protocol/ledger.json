@@ -258,6 +258,46 @@
       "outcome": "OPEN. Neither component can be settled until the four queued promoting searches (U13 D1, the D-optimal transfer audit's item 1, 239's two risks, 345's arXiv:2512.24061 read) have been run on the cheap tier. Registered now specifically to avoid D45's failure, which was scoring a metric against a slice nobody had reserved in advance.",
       "status": "open",
       "cost": "nothing yet. The fan-out it predicts about is work already queued and would have been run either way; this only fixes what counts as a pass before the outputs exist."
+    },
+    {
+      "id": "P-32",
+      "by": "Opus 5.5 discovery run (Claim-2 board-finder/gap/SELECT_v1.md sec 8, committed and pushed before any worker was dispatched)",
+      "predicted": "About the II exclusion in playability/classification.json (22 records, all playable:false, witnessCheckFeasible null). The screen classifies HEADLINES; a record's deliverable is a SUB-PROBLEM of its headline, so each of the 19 unexamined II records is decomposed (tracked quantity, its two sides, the bound object that moves each side) and gated. P-32a: the exclusion is an instrument DEFECT -- at least 4 of the 19 are COUPLED (a finite witness moves a published bound on the headline quantity itself) and NOT VETOED (the witness predicate is decidable, not class A or W). Threshold 4 because 19 x the corpus playable rate 7.0% is 1.3, and 4 is three times that. P-32b: but it is a correct rejection IN YIELD -- at most 1 of the 19 survives all of SELECT v1's gates S0-S5.",
+      "outcome": "UNSCORED. Arm 1 has not run. Credences at registration: 0.65 for a, 0.7 for b.",
+      "status": "unscored",
+      "cost": "none yet"
+    },
+    {
+      "id": "P-33",
+      "by": "Opus 5.5 discovery run (Claim-2 board-finder/gap/SELECT_v1.md sec 8, committed and pushed before any worker was dispatched)",
+      "predicted": "Test G, the first outcome-scored test of g(gap_type). Population: the 67 problems of Georgiev, Gomez-Serrano, Tao, Wagner (arXiv:2511.02864), outcome read mechanically from the repository's status grid (green/blue IMPROVED, red/light NOT-IMPROVED, dark excluded as known optimal; snapshot committed). Predictor: the kind of the most recent pre-2025 move on the construction side, labelled by a worker not told the hypothesis. ODD-numbered problems are the test slice; EVEN-numbered are RESERVED, labelled by a separate worker and not read until ODD is scored and any revision is committed. G-1: the handoff's sec 3.1 (IDEA = hand construction or new search method; COMPUTE = the same search method rerun bigger) is NOT validated: P(improved|IDEA) - P(improved|COMPUTE) <= 0, or a class has fewer than 4 problems. G-2: P(improved|new search method) - P(improved|hand construction) > 0.",
+      "outcome": "UNSCORED. Credences at registration: 0.6 for G-1 as stated (not validated), 0.6 for G-2.",
+      "status": "unscored",
+      "cost": "none yet"
+    },
+    {
+      "id": "P-34",
+      "by": "Opus 5.5 discovery run (Claim-2 board-finder/gap/SELECT_v1.md sec 8, committed and pushed before any worker was dispatched)",
+      "predicted": "Arm 2 is the held-out slice for SELECT v1 as a generator: 15 maintained tables outside the 499-record corpus, one record each, fixed in SELECT_v1.md sec 7 before dispatch (the queue's four plus eleven of lesson 22's absent topics; PTE excluded as already dead). Prediction: between 1 and 4 tables yield a triage survivor of S0-S5. 0 means SELECT v1 fails as a generator on held-out data; 5 or more means it is too loose to function as a gate.",
+      "outcome": "UNSCORED. Credence 0.55.",
+      "status": "unscored",
+      "cost": "none yet"
+    },
+    {
+      "id": "P-35",
+      "by": "Opus 5.5 discovery run (Claim-2 board-finder/gap/SELECT_v1.md sec 8, committed and pushed before any worker was dispatched)",
+      "predicted": "The handoff's sec 3.2 works as a GENERATIVE signal: a directed search finds at least one divergence meeting the registered definition -- two dated published methods on the same object whose reach differs by a factor of at least 2 in the frontier parameter itself (order, dimension, length; not runtime), both read at SECONDARY-RELAYED or better; search-summary-only divergences are reported as leads and not counted; Hadamard 2092 excluded.",
+      "outcome": "UNSCORED. Credence 0.5. Registered knowing that this environment's egress makes SECONDARY-RELAYED hard to reach, which biases this toward failing for a provenance reason; if it fails that way it will be recorded as such, not as evidence about sec 3.2.",
+      "status": "unscored",
+      "cost": "none yet"
+    },
+    {
+      "id": "P-36",
+      "by": "Opus 5.5 discovery run (Claim-2 board-finder/gap/SELECT_v1.md sec 8, committed and pushed before any worker was dispatched)",
+      "predicted": "Arm 3, conjecture generation, bounded at exactly 12 generated statements by one worker: 0 of 12 survive SELECT v1's S0-S5, because a freshly generated statement has no movement history and S3 cannot be evaluated on it. Registered despite being predicted by argument, because the argument has a named hole: a generator can rediscover an existing open record that does have a history.",
+      "outcome": "UNSCORED. Credence 0.9. Bolted count (P2 decomposition, judged not measured -- no Lean here) and rediscovered count are recorded as measurements with no threshold.",
+      "status": "unscored",
+      "cost": "none yet"
     }
   ],
   "lessons": [
