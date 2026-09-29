@@ -1,6 +1,6 @@
 # A2_c — record tables outside the corpus (Tables 11-15)
 
-Worker: Arm 2c. Date of run: 2026-09-29. **Draft in progress; summary table below is filled in at the end.**
+Worker: Arm 2c. Date of run: 2026-09-29. **Complete.**
 
 Environment note (applies to every block): WebFetch to arxiv.org, boolean.wiki.uib.no and langevin.univ-tln.fr
 returned EGRESS_BLOCKED on the single attempt each. No mirrors were tried. Every factual cell below that is not
@@ -9,7 +9,15 @@ first-hand unless a cell says otherwise. Nothing here is PRIMARY-VERIFIED-LOCALL
 
 ## SUMMARY TABLE
 
-(pending)
+| table | S0 | S1 | S2 | S3 | S4 | S5 |
+|---|---|---|---|---|---|---|
+| 11 APN permutation, dim 8 | PASS | PASS (degenerate: min-delta reading, flagged) | PASS | PASS on headline side (1993 move, degenerate); count side conditional on tentative SEARCH-NEW | PASS headline side; CANNOT EVALUATE count side | PASS |
+| 12 Perfect 1-factorisation, smallest open order (K_64) | PASS | PASS (route b) | PASS | FAIL (SEARCH-REPEAT, single-sourced) | PASS | PASS |
+| 13 K(n,1), smallest open length (n=10, RECALL) | CANNOT EVALUATE | PASS (route a, definitional; bound values RECALL) | PASS | CANNOT EVALUATE | CANNOT EVALUATE | PASS (RECALL) |
+| 14 Moore graph (57,2) | CANNOT EVALUATE | CANNOT EVALUATE | PASS | CANNOT EVALUATE | CANNOT EVALUATE | PASS (RECALL) |
+| 15 SRG smallest open feasible set | CANNOT EVALUATE | CANNOT EVALUATE | PASS | CANNOT EVALUATE | CANNOT EVALUATE | CANNOT EVALUATE |
+
+Tables 13-15 were written after WebSearch became unavailable (session budget exhausted, then a further search was declined). They rest on RECALL and local computation only. CANNOT EVALUATE there means no current source was read this session, not that the recalled value is doubted.
 
 ---
 
@@ -65,7 +73,86 @@ S5 DELIVER  | PASS — named published claim: "the smallest open case of Kotzig'
 DIVERGENCE  | NONE FOUND — the frontier order moved 52 -> 56 -> 64 across Wolfe (~2009) and Pike (2019): ratios 1.08 and 1.14, well under 2; both used starter searches. The infinite algebraic families (p+1, 2p) reach arbitrarily large n and some large sporadic orders appear in a summary (e.g. 6,967,872 ... 22,665,188, construction not seen), but those are constructions for orders in different residue classes and do not attack the smallest-open cell, so I do not count them as two methods on the same object with a factor-2 reach gap. Searches as listed above.
 BITS_SEARCH | UNDEFINED — a named ansatz exists (even starters over Z_{n-2} plus two fixed points; starters derived from starters over Z_{(n-2)/2}), but I found no published density estimate (only effort figures: 7.494 billion starter pairs / 10,000 CPU-hours for K_52, which are not a density).
 VERIF CLASS | CHECK — a proposed P1F of K_64 is verified by an exact finite computation (all C(63,2) = 1953 pairs of matchings checked for a single 64-cycle).
-NOTES       | (1) WEB SEARCH BUDGET: the WebSearch tool refused further calls after ~26 of mine ("200 of 200 used" — a session-wide budget, likely shared with other workers); this table was finished before that, but Tables 13-15 had NO searches — see their blocks. (2) One search summary listed "56" among unsettled orders next to 64, 66,...; that is the pre-2019 list; the summaries that mention Pike's K_56 say 64 is the smallest open case now. (3) Local arithmetic (Python, this container): even n in [4,130) not of the form p+1 or 2p (p odd prime) and not in {16,28,36,40,50,52,56}: 64, 66, 70, 76, 78, 88, 92, 96, 100, 112, 116, 120, 124, 126 (126 and larger sporadic orders such as 126, 170 were not fed in; 126 is a known sporadic order by RECALL). Without 56 the first uncovered order is 56; without 52 and 56 it is 52. This checks that 64 is the first uncovered order *given* the family theorems and the sporadic list; it does not verify that no other P1F (e.g. K_64) has been found — that rests on the searches above. (4) 'n_open' counts orders by this arithmetic; the 14 orders listed in (3) were derived, not quoted.
+NOTES       | (1) WEB SEARCH BUDGET: the WebSearch tool refused further calls after about 28 of my calls ("200 of 200 used" — a session-wide budget, likely shared with other workers); this table was finished before that, but Tables 13-15 had NO searches — see their blocks. (2) One search summary listed "56" among unsettled orders next to 64, 66,...; that is the pre-2019 list; the summaries that mention Pike's K_56 say 64 is the smallest open case now. (3) Local arithmetic (Python, this container): even n in [4,130) not of the form p+1 or 2p (p odd prime) and not in {16,28,36,40,50,52,56}: 64, 66, 70, 76, 78, 88, 92, 96, 100, 112, 116, 120, 124, 126 (126 and larger sporadic orders such as 126, 170 were not fed in; 126 is a known sporadic order by RECALL). Without 56 the first uncovered order is 56; without 52 and 56 it is 52. This checks that 64 is the first uncovered order *given* the family theorems and the sporadic list; it does not verify that no other P1F (e.g. K_64) has been found — that rests on the searches above. (4) 'n_open' counts orders by this arithmetic; the 14 orders listed in (3) were derived, not quoted.
 ```
 
 ---
+
+## Table 13. Binary covering codes, radius 1 — the smallest open length
+
+No web search was possible for this table. Everything is RECALL unless stated.
+
+```
+TABLE       | Kéri's tables of bounds on covering codes (Gerzson Kéri, SZTAKI, Budapest; hosted at old.sztaki.hu/~keri/codes — URL RECALL); lineage: Cohen-Honkala-Litsyn-Lobstein, "Covering Codes" (1997). Last update date NOT FOUND; table not read | RECALL
+AI ACTIVITY | CANNOT EVALUATE — not searched (search budget gone before this table). Not "NONE FOUND".
+
+RECORD      | 13 — smallest n with K(n,1) unknown
+QUANTITY    | K(n,1) = min size of a binary code of length n with covering radius 1
+LOWER       | K(10,1) >= 107 (attribution not recalled) | RECALL | EXACT / UNKNOWN
+UPPER       | K(10,1) <= 120 (attribution not recalled; possibly Östergård-Kaikkonen 1998, unsure) | RECALL | EXACT / UNKNOWN
+            | Recalled exact values for n <= 9: K = 1,2,2,4,7,12,16,32,62 for n=1..9 (K(9,1)=62 by Östergård-Blass 2001). Recalled only; this is why n=10 is the claimed smallest open length. Not verified.
+BOUND OBJ   | lower: PROOF (I do not know whether by exhaustive computer search or counting argument) ; upper: WITNESS — a code with fewer than 120 words, covering radius checked by terminating computation over 2^10 words
+S0 OPEN     | CANNOT EVALUATE — RECALL says 107-120 is open, but no source read this session; a stale recall is the failure mode this run warns of. No resolution claims checked.
+S1 COUPLED  | PASS — route (a): K(n,1) is by definition a minimum over finitely describable objects (codes), so any covering code is a one-sided (upper) bound. The published value 120 is RECALL only. | RECALL
+S2 VETO     | PASS — covering radius of an explicit code is computable by finite computation.
+MOVE-1      | NOT FOUND — attribution and method of the 120 bound not established.
+MOVE-2      | NONE / NOT FOUND
+S3 IDEA     | CANNOT EVALUATE — kind of the latest move unknown.
+S4 CROWDED  | CANNOT EVALUATE — did not search.
+S5 DELIVER  | PASS (RECALL) — Kéri's table entry for n=10 would change. Sentence: "We construct a binary code of length 10 and covering radius 1 with 119 codewords, improving the upper bound K(10,1) <= 120." (The value 119 is just one step below the recalled bound.)
+DIVERGENCE  | CANNOT EVALUATE — not searched.
+BITS_SEARCH | UNDEFINED — no search ansatz plus published density estimate seen.
+VERIF CLASS | CHECK
+NOTES       | Bound values and the identity of the smallest open length are RECALL. The brief also asks for "Kéri's tables lineage"; I could not read it.
+```
+
+---
+
+## Table 14. Moore graphs — degree 57, diameter 2
+
+```
+TABLE       | No maintained table for this record identified. Nearest: the degree-diameter problem tables (Combinatorics Wiki; RECALL, not read; I believe they only cover small degrees) | RECALL
+AI ACTIVITY | CANNOT EVALUATE — not searched.
+
+RECORD      | 14 — Moore graph of degree 57, diameter 2 (3250 vertices, srg(3250,57,0,1))
+QUANTITY    | existence of a 57-regular graph of diameter 2 and girth 5 on 3250 vertices (equivalently: the degree-diameter maximum order for (57,2) attains the Moore bound 3250)
+LOWER       | best known order of a (57,2) graph: NOT FOUND (not read) | - | -
+UPPER       | 3250 (Moore bound, 57^2+1) | derived locally (57*57+1 = 3250) | EXACT / REFEREED (standard)
+BOUND OBJ   | lower: WITNESS — a graph, checkable by finite computation ; upper: PROOF (Moore bound is a counting argument). Nonexistence of the Moore graph would be PROOF.
+S0 OPEN     | CANNOT EVALUATE — RECALL: open since Hoffman-Singleton 1960 (only degrees 2, 3, 7, 57 possible). No source read; resolution or withdrawn claims not searched.
+S1 COUPLED  | CANNOT EVALUATE — the natural reading is route (a) with the degree-diameter maximum, but that needs a published lower bound on the (57,2) order and I do not have one. A witness at 3250 would settle the question itself.
+S2 VETO     | PASS — a graph on 3250 vertices with the stated degree and diameter is checkable by terminating computation.
+MOVE-1      | NOT FOUND
+S3 IDEA     | CANNOT EVALUATE — no move identified.
+S4 CROWDED  | CANNOT EVALUATE — did not search.
+S5 DELIVER  | PASS (RECALL) — the Hoffman-Singleton 1960 question. Sentence: "We construct a Moore graph of degree 57, a 57-regular graph of diameter 2 on 3250 vertices."
+DIVERGENCE  | CANNOT EVALUATE — not searched.
+BITS_SEARCH | UNDEFINED
+VERIF CLASS | CHECK (for a witness)
+NOTES       | Local check (PRIMARY-VERIFIED-LOCALLY): the ported Sage seems_feasible returns True for (3250,57,0,1), so parameters alone do not rule it out (feasibility only, not existence).
+```
+
+---
+
+## Table 15. Strongly regular graphs — the smallest open feasible parameter set
+
+```
+TABLE       | Andries Brouwer's table of SRG parameters (www.win.tue.nl/~aeb/graphs/srg/srgtab.html; URL read in the Sage source docstring, SECONDARY-RELAYED). Successor: Brouwer and Van Maldeghem, "Strongly Regular Graphs" (CUP 2022) — RECALL. Last update date NOT FOUND; page not fetched (blocked host; I also did NOT fetch the copy of Brouwer's database that Sage loads from a JSON data package, because that would be a mirror of a blocked table). | SECONDARY-RELAYED (URL), otherwise RECALL
+AI ACTIVITY | CANNOT EVALUATE — not searched.
+
+RECORD      | 15 — smallest v with a feasible SRG parameter set of open existence
+QUANTITY    | existence of an srg(v,k,lambda,mu) for the smallest such open v
+LOWER/UPPER | no bound quantity: an existence question | - | -
+BOUND OBJ   | WITNESS for existence (the graph); nonexistence would be PROOF
+S0 OPEN     | CANNOT EVALUATE — I could not identify the record from a source. RECALL only: the smallest open is v=65, conference parameters (65,32,15,16); next (69,20,7,5). Not verified.
+S1 COUPLED  | CANNOT EVALUATE — record unidentified; existence-only question with no bound quantity.
+S2 VETO     | PASS — an SRG on v vertices is checkable by finite computation.
+MOVE-1      | NOT FOUND
+S3 IDEA     | CANNOT EVALUATE
+S4 CROWDED  | CANNOT EVALUATE — did not search.
+S5 DELIVER  | CANNOT EVALUATE — depends on the unidentified record and table date.
+DIVERGENCE  | CANNOT EVALUATE
+BITS_SEARCH | UNDEFINED
+VERIF CLASS | CHECK
+NOTES       | LOCAL COMPUTATION (PRIMARY-VERIFIED-LOCALLY, feasibility only): I ported Sage's seems_feasible (Brouwer-Lint 1984 conditions: integrality, Krein, absolute bound, claw bound, mu=1 and mu=2 cases, conference sum of two squares), read from raw.githubusercontent.com/sagemath/sage/develop/src/sage/graphs/strongly_regular_db.pyx, and ran it for v <= 100 (script in the scratchpad, srgfeas.py). Result: 156 feasible tuples, 88 with k <= (v-1)/2. Feasible parameter sets with 60 <= v <= 70 (k <= (v-1)/2): (61,30,14,15), (63,30,13,15), (64,14,6,2), (64,18,2,6), (64,21,8,6), (64,27,10,12), (64,28,12,12), (65,32,15,16), (66,20,10,4), (69,20,7,5), (70,27,12,9). Also feasible below 60 and worth a source check: (50,21,8,9), (57,14,1,4), (57,24,11,9). This shows which sets are candidates; it says NOTHING about which are open. Sage's docstring says that for v<60 all apparently feasible sets have existence True except that (49,16,3,6) does not exist, which suggests none open below 60, but that is a snapshot of unknown date and I did not read it as a table. Status of (50,21,8,9), (57,24,11,9), (63,30,13,15) is not something I can state from a source. I later ran (3250,57,0,1) through the ported checker: True. Sage's database snapshot statistics (462 impossible, 2911 undecided, 1165 realizable entries) are from the docstring; date unknown.
+```

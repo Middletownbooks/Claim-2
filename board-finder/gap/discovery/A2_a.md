@@ -8,7 +8,42 @@ read from raw.githubusercontent.com. Nothing here is `PRIMARY-VERIFIED-LOCALLY` 
 
 ## SUMMARY TABLE
 
-(to be filled at the end of the run — blocks below are written incrementally)
+Every cell below is derived from the block of the same name further down. CE = CANNOT EVALUATE.
+"(weak)" = PASS resting on thin evidence, explained in the block. Table 1 and Table 2 are split by cell
+because gates differ between cells.
+
+| table | S0 | S1 | S2 | S3 | S4 | S5 |
+|---|---|---|---|---|---|---|
+| 1a Kissing, dim 11 (604) | PASS | PASS | PASS | CE | FAIL | PASS |
+| 1b Kissing, dim 12 (841) | PASS | PASS (witness numerical; precision caveat) | PASS | CE | CE | PASS |
+| 1c Kissing, dim 13 (1154) | PASS | PASS | PASS | PASS | PASS | PASS |
+| 1d Kissing, dim 14 (1932) | PASS | PASS | PASS | PASS | PASS | PASS |
+| 2a Caps AG(7,3) (236) | PASS (weak) | PASS | PASS | CE | PASS (weak) | PASS |
+| 2b Caps AG(8,3) (512) | PASS | PASS | PASS | PASS | PASS (weak) | PASS |
+| 2c Cap-set capacity (2.2203) | PASS | PASS (via Edel/Tyrrell lifting) | PASS | PASS | FAIL | PASS |
+| 3 Snake-in-the-box n=9,10,11 (191/379/746) | PASS | PASS | PASS | CE | CE | PASS |
+| 4 D-optimal smallest open order (198 per 2021 survey) | PASS (weak) | PASS | PASS | CE | CE | PASS |
+| 5 Skew-Hadamard smallest open order (356) | PASS (weak) | PASS | PASS | CE | PASS (weak) | PASS |
+
+Counts derived from the rows above (10 rows): S3 PASS = {1c, 1d, 2b, 2c} = 4; S3 FAIL = 0; S3 CE = {1a, 1b, 2a, 3, 4, 5} = 6.
+S4 PASS (incl. weak) = {1c, 1d, 2a, 2b, 5} = 5; S4 FAIL = {1a, 2c} = 2; S4 CE = {1b, 3, 4} = 3.
+Rows with S1, S2 and S3 all PASS: {1c, 1d, 2b, 2c}; of those S4 PASS: {1c, 1d, 2b}; S4 FAIL: {2c}. (No ranking implied.)
+
+Contradictions with, or observations about, the brief (details in the blocks):
+* WebSearch was exhausted mid-run (200/200 session budget) and, after the coordinator's resume message,
+  worked again; Tables 3-5 were done after it came back, and Table 2's S4 gates and 2c S3 were revised
+  after two re-run searches (X-evolve: A(27,19), size 1,270,863, capacity 2.2203; no n=7/n=8 move found).
+* Table 4: the brief's definition and my sources agree, but the identified frontier (198) comes from one
+  2021 survey summary; the record may have moved since. Table 5: the frontier is 356 per 2024 sources,
+  not the pre-2023 value 276.
+* Table 2: the model-case lifting (cap of size s gives s^(1/n)) gives only 2.183 (n=7) and 2.181 (n=8),
+  below the 2.218 record, so the n=7/n=8 caps do not move the capacity bound; capacity moves through
+  admissible sets (Edel/Tyrrell recipe), which I treated as the published lifting theorem.
+* Table 1: dim 12's current record (841) is described as numerical; dim 11's 604 as exact (Z[sqrt 2]).
+  Table 1's dim-11 cell is the only one with a repeated AI move (AlphaEvolve 2025, EinsteinArena 2026).
+* Only PRIMARY-VERIFIED-LOCALLY items in the file: the FunSearch 512-cap in AG(8,3) (executed and
+  independently brute-forced), the capacity arithmetic 2.2202337 / 2.2200406, the s^(1/n) values, the
+  sum-of-two-squares order list in Table 4, and the snake upper-formula values in Table 3.
 
 ---
 
@@ -125,7 +160,7 @@ NOTES       | Ganzhinov's paper has been the human counter-example in press ("Hu
 
 ## TABLE 2 — Caps in AG(n,3): largest known cap for n = 7 and n = 8 (and the cap-set capacity)
 
-**Tool-budget note that affects Tables 2-5.** The WebSearch tool's session budget ran out (`200 of 200`
+**Tool-budget note (updated: WebSearch came back after the coordinator's resume message; the two Table-2 S4 queries were rerun then and Table 2's S4 / 2c S3 gates were revised accordingly).** Original note: The WebSearch tool's session budget ran out (`200 of 200`
 calls, shared across workers) after I had used ~26 searches, all on Table 1 plus three on Table 2.
 Three further Table-2 queries were refused (listed under each block). For Tables 3-5 I have no
 WebSearch at all; those blocks rest on `RECALL`, on files read from raw.githubusercontent.com or the
@@ -134,7 +169,7 @@ use them to read repositories (the brief names only WebSearch and raw.githubuser
 
 ```
 TABLE       | Edel's tables of caps in AG(n,3) (Yves Edel, "Caps" pages) — the brief's named lineage. I did NOT see the table page in any search result or fetch; its location and last-update date are NOT FOUND this session. What I did read: the FunSearch repository notebook (raw.githubusercontent.com/google-deepmind/funsearch/main/cap_set/cap_set.ipynb) which states the previous best n=8 construction had size 496 and the largest known for n=9 is 1082 (SECONDARY-RELAYED). No other maintained cap table found. | table itself: NOT FOUND; notebook statements: SECONDARY-RELAYED
-AI ACTIVITY | (i) FunSearch (Romera-Paredes et al., Nature 625 (2024), online Dec 2023): 512-cap in AG(8,3), previous best 496 (SECONDARY-RELAYED: notebook text; I re-ran the notebook code locally and verified the 512-cap, PRIMARY-VERIFIED-LOCALLY); also cap-set capacity 2.2202 via admissible set A(24,17) of size 237,984 (SECONDARY-RELAYED + arithmetic recomputed locally = 2.220234). (ii) X-evolve (arXiv:2508.07932, 2025, LLM-driven "solution space evolution"): cap-set capacity "2.2203" (SEARCH-SUMMARY only; paper unread; whether it also reported anything for n=7 or n=8: NOT FOUND — the query that would have checked this was refused by the exhausted search budget). (iii) "Generative Modeling for Mathematical Discovery" (arXiv:2503.11061, March 2025): its search-summary lists the largest known caps n=3..8 as 9, 20, 45, 112, 236, 512, i.e. no move on n=7 or n=8 as of that paper (SEARCH-SUMMARY). (iv) AlphaEvolve's problem repository (local dump of its 67 problem statements, aerp_problems_2026-09-29.json, read by regex): no entry mentions cap sets or admissible sets — SECONDARY-RELAYED, negative. | mixed, tagged inline
+AI ACTIVITY | (i) FunSearch (Romera-Paredes et al., Nature 625 (2024), online Dec 2023): 512-cap in AG(8,3), previous best 496 (SECONDARY-RELAYED: notebook text; I re-ran the notebook code locally and verified the 512-cap, PRIMARY-VERIFIED-LOCALLY); also cap-set capacity 2.2202 via admissible set A(24,17) of size 237,984 (SECONDARY-RELAYED + arithmetic recomputed locally = 2.220234). (ii) X-evolve (arXiv:2508.07932, Aug 2025, LLM-driven "solution space evolution"): cap-set capacity 2.2203 via admissible set A(27,19), size 1,270,863; other reported result: independent set in C_15^{⊠5} of size 19,946 (Shannon capacity); nothing on n=7 or n=8 in the summaries (SEARCH-SUMMARY; paper unread). (iii) "Generative Modeling for Mathematical Discovery" (arXiv:2503.11061, March 2025): its search-summary lists the largest known caps n=3..8 as 9, 20, 45, 112, 236, 512, i.e. no move on n=7 or n=8 as of that paper (SEARCH-SUMMARY). (iv) AlphaEvolve's problem repository (local dump of its 67 problem statements, aerp_problems_2026-09-29.json, read by regex): no entry mentions cap sets or admissible sets — SECONDARY-RELAYED, negative. | mixed, tagged inline
 ```
 
 ### 2a. AG(7,3)
@@ -151,7 +186,7 @@ S2 VETO     | PASS — "no three distinct points with a+b+c = 0 (mod 3)" is deci
 MOVE-1      | 1994 (RECALL) | Calderbank, Fishburn (search-summary attribution; year RECALL) | 236 | UNKNOWN | I did not read the paper; one summary says they "constructed a 7-cap of size 236" | SEARCH-SUMMARY
 MOVE-2      | NONE (earlier history not found)
 S3 IDEA     | CANNOT EVALUATE — kind of the 236 construction UNKNOWN (paper unread). Missing: the Calderbank–Fishburn paper or Edel's table notes.
-S4 CROWDED  | CANNOT EVALUATE — searched: "largest known cap AG(7,3) 236 AG(8,3) 512 FunSearch Edel table caps affine space" (n=7 still 236, in a March-2025 paper's summary), "Edel Extensions of generalized product caps ... dimension 7" (nothing on n=7 after 2025). Refused by the exhausted search budget: any query on 2025-2026 n=7 improvements, and the X-evolve query. "Did not search" for the period after March 2025 -> the gate cannot be evaluated.
+S4 CROWDED  | PASS (weak) — no AI-driven or large-scale-tooling move of the n=7 record found. Searches: "largest known cap AG(7,3) 236 AG(8,3) 512 FunSearch Edel table caps affine space" (n=7 still 236 in a March-2025 paper's summary), "Edel Extensions of generalized product caps ... dimension 7", "new cap set AG(8,3) larger than 512 OR AG(7,3) larger than 236 2025 2026 LLM evolutionary search cap sets" (the summary itself says it found nothing new for AG(7,3)), "X-evolve solution space evolution cap set capacity 2.2203 ..." (X-evolve reports capacity and C_15^5 only). Weak because summaries, not full texts, were read and the last query's summary says recent developments "may not yet be widely indexed".
 S5 DELIVER  | PASS — a named published bound (c(7) >= 236) and, if it exists as I recall, Edel's table would change. Sentence: "We construct a cap of size 237 in AG(7,3), improving the 236-cap of Calderbank and Fishburn." | SEARCH-SUMMARY
 DIVERGENCE  | NONE FOUND — for the cap-size cell itself; see 2c for the one candidate on the asymptotic object. Searches: those above.
 BITS_SEARCH | UNDEFINED — no published density estimate for a named ansatz found.
@@ -173,7 +208,7 @@ S2 VETO     | PASS — decidable check; I ran it locally.
 MOVE-1      | 2023-12 (online; Nature print 2024) | Romera-Paredes, Barekatain, Novikov, Balog, Kumar, Dupont, Ruiz, Ellenberg, Wang, Fawzi, Kohli, Fawzi et al. (FunSearch) | 512 (was 496) | SEARCH-NEW +AI-SEARCH | notebook: "This function discovered by FunSearch results in a cap set of size 512 in n = 8 dimensions, thus improving upon the previously known best construction (which had size 496)"; the authors then noticed regularities (weight distribution of the 512 vectors) "and were able to manually find the following explicit construction" (an ANALYTIC description written after the search) | SECONDARY-RELAYED
 MOVE-2      | earlier: the 496 construction (attribution "Edel 2004" is the brief's lineage and my RECALL; not confirmed this session) | | 496 | UNKNOWN | not read | RECALL
 S3 IDEA     | PASS — MOVE-1 is SEARCH-NEW (a method introduced by the paper, first applied to this record: LLM-evolved priority function driving a greedy cap construction; the repository skeleton shows it). Note the ANALYTIC post-hoc explicit construction does not change the kind of the move.
-S4 CROWDED  | CANNOT EVALUATE — the last known move (Dec 2023) predates 2025-01-01, and a March-2025 paper summary still lists 512 as the largest known n=8 cap; but I could not run any query covering March 2025 - September 2026 for AG(8,3): the query "cap set AG(8,3) size 512 FunSearch improved 496 Edel; new cap AG(8,3) larger than 512" was refused by the exhausted search budget, and X-evolve (2025, LLM-driven, cap-set work) is unread, so I cannot say whether it or any other AI system moved n=8. "Did not search" = CANNOT EVALUATE. Partial negative: AlphaEvolve's problem repository has no cap-set problem (local dump, SECONDARY-RELAYED).
+S4 CROWDED  | PASS (weak) — the last known move (Dec 2023) predates 2025-01-01, and no later AI-driven or large-scale-tooling move was found. Searches: the four listed under 2a (the "new cap set AG(8,3) larger than 512 ..." query returned only FunSearch's 512 as the newest n=8 result; X-evolve, the 2025 LLM system that worked on cap sets, reports only the capacity bound A(27,19) and C_15^5 per its summary). AlphaEvolve's problem repository has no cap-set problem (local dump, SECONDARY-RELAYED). Weak: summaries only; a March-2025 paper still lists 512.
 S5 DELIVER  | PASS — named published bound c(8) >= 512 (FunSearch, Nature 2024); Edel's table would change too if maintained (not confirmed). Sentence: "We construct a cap of size 513 in AG(8,3), improving the 512-cap found by FunSearch."
 DIVERGENCE  | NONE FOUND for the cap-size cell — 496 vs 512 (ratio 1.03). Searches: those above.
 BITS_SEARCH | UNDEFINED — FunSearch's greedy-with-evolved-priority ansatz is named, but no published density estimate for it was found (the FunSearch paper may contain scaling data I have not read).
@@ -187,6 +222,7 @@ NOTES       | The FunSearch repository (raw.githubusercontent.com) is the best-e
 RECORD      | Table 2 / capacity — cap-set capacity lower bound C = sup_n c(n)^(1/n)
 QUANTITY    | asymptotic growth rate of the largest cap in AG(n,3) (capacity)
 LOWER       | 2.2203, X-evolve, arXiv:2508.07932 (2025) | SEARCH-SUMMARY (one search summary: "a further incremental improvement to 2.2203 through X-evolve"; the exact digits and construction unread) | UNKNOWN ; PREPRINT
+              (search summary later confirmed: X-evolve reports C >= 2.2203 from admissible set A(27,19) of size 1,270,863, see MOVE-1)
               before that: 2.2202, FunSearch (Dec 2023): admissible set A(24,17) of size 237,984, recipe of the repo notebook gives 2.2202336... — I recomputed this locally: compute_capacity_bound(24,17,237984,m=4) = 2.2202337 [PRIMARY-VERIFIED-LOCALLY for the arithmetic; the size 237,984 itself is a stated file count, I checked only that the pre-admissible file has 736 rows]; A(21,15) size 43,596 gives 2.2200406 (local recompute) | RIGOROUS-NUMERIC? no — closed-form of finite integers, i.e. EXACT up to rounding | REFEREED (Nature)
               before that: 2.218021, Tyrrell, "New lower bounds for cap sets" (arXiv:2209.10045; Discrete Analysis 2023) — the notebook calls 2.218021 "the previous state-of-the-art" | SECONDARY-RELAYED (notebook), SEARCH-SUMMARY (paper title/venue)
 UPPER       | about 2.756, Ellenberg–Gijswijt (2016) via the polynomial method (RECALL; improved explicit forms exist, e.g. arXiv:2103.06481 title seen only) | RECALL | EXACT ; REFEREED
@@ -194,16 +230,16 @@ BOUND OBJ   | lower: WITNESS — finite admissible set A(n,w) plus a finite exte
 S0 OPEN     | PASS — gap 2.2203 vs about 2.756; no resolution claim found.
 S1 COUPLED  | PASS — via a published lifting theorem, not via small-n caps: the notebook's recipe follows Edel (2004) and Tyrrell (2022): a finite admissible set A(n,w) applied to an extendable collection of caps yields a 6mn-dimensional cap of size |A|·b0^(n-w)·b1^w, hence capacity >= size^(1/(6mn)). Note the model case in the brief (cap of size s in AG(n,3) gives s^(1/n)) gives only 236^(1/7)=2.1827 (n=7) and 512^(1/8)=2.1810 (n=8) [local arithmetic], both below the 2.218 record — so the n=7/n=8 caps by themselves do not move the capacity bound. | SECONDARY-RELAYED (recipe) + local arithmetic
 S2 VETO     | PASS — admissible-set predicate and the size formula are finite and decidable.
-MOVE-1      | 2025 (arXiv 2508.07932, Aug 2025 by id) | X-evolve authors | 2.2203 (from 2.2202) | UNKNOWN +AI-SEARCH | only "an LLM-powered approach" per one summary; what it searched over (admissible sets? which n,w?) not seen | SEARCH-SUMMARY
+MOVE-1      | 2025 (arXiv 2508.07932, Aug 2025 by id) | X-evolve authors | 2.2203 (from 2.2202) | SEARCH-NEW +AI-SEARCH | search summary of the paper: "discovering a larger partial admissible set in a previously unexplored dimension A(27,19)", size 1,270,863, giving C >= 2.2203; the method is new: LLMs generate tunable programs whose parameters define a solution space, explored by a score-based search, "up to two orders of magnitude fewer LLM calls than prior leading methods". I recomputed the capacity with the repo notebook's recipe: compute_capacity_bound(27,19,1270863,m=4) = 2.2203085 (m=3: 2.2181, m=5: 2.2202) [PRIMARY-VERIFIED-LOCALLY for the arithmetic; the size 1,270,863 and m=4 are the summary's / my choice, the admissible set itself unchecked] | SEARCH-SUMMARY
 MOVE-2      | 2023-12 | FunSearch | 2.2202 (from 2.2180) | SEARCH-NEW +AI-SEARCH | notebook: FunSearch-discovered programs construct admissible sets A(12,7), I(15,10), A(21,15), A(24,17); A(24,17) "implies a new state-of-the-art lower bound of 2.220234"; "solve(24,17) takes ~7 hours" (a C++ reimplementation was used in practice); search restricted to *symmetric* admissible sets | SECONDARY-RELAYED
               (and 2022: Tyrrell 2.218021, kind ANALYTIC by search-summary: introduced constant-weight admissible sets as the tool | SEARCH-SUMMARY)
-S3 IDEA     | CANNOT EVALUATE — MOVE-1 (X-evolve) kind UNKNOWN: it may be SEARCH-REPEAT (same LLM-program-search class as FunSearch on the same admissible-set object) or SEARCH-NEW (new "solution-space evolution" method); the paper is unread.
+S3 IDEA     | PASS — MOVE-1 is SEARCH-NEW by the paper's own description (a new search method, applied to a dimension A(27,19) no earlier work had reached), evidence at SEARCH-SUMMARY tier (abstract-level; paper body unread). Caveat: one could argue same-class-as-FunSearch (LLM program search on the same object) makes it SEARCH-REPEAT; the paper claims a new method, and I follow the definition ("method the paper introduces").
 S4 CROWDED  | FAIL — the coupled side moved on/after 2025-01-01 by an LLM-driven system (X-evolve, 2025, 2.2203). | SEARCH-SUMMARY
 S5 DELIVER  | PASS — named published bound (capacity >= 2.2203, X-evolve 2025). Sentence: "We construct a symmetric admissible set A(n,w) of size N, which by the Edel–Tyrrell recipe gives cap-set capacity at least 2.2204, improving the 2.2203 of X-evolve."
 DIVERGENCE  | CANDIDATE, unverified — one search summary (about Edel's "Extensions of generalized product caps", DCC 31, 5-14, 2004) says the asymptotic improvement over Calderbank–Fishburn "becomes visible in dimensions as low as 62, whereas the bound from Calderbank and Fishburn is based on caps in dimension 13,500": if that reading is right, reach in dimension 62 vs 13,500 = ratio 217.7 (13,500/62; derived by me). I did not read the source and cannot tell whether "dimension at which the record constant is realised" is the frontier parameter the gate means, so I do not assert a DIVERGENCE. | SEARCH-SUMMARY
 BITS_SEARCH | UNDEFINED — named ansatz (symmetric admissible sets, FunSearch) exists; no published density estimate found.
 VERIF CLASS | CHECK — exact integer arithmetic on the size of a finite admissible set (plus checking admissibility, a finite check of cost polynomial in |A|).
-NOTES       | Precision caution: "2.2202" (FunSearch) is the rounded closed form 2.220234; "2.2203" for X-evolve is a search-summary digit string. Recomputing the rounding: 2.2202337 rounds to 2.2202 (4 d.p.), so a bound reported as 2.2203 from X-evolve must come from a different (larger) admissible set or recipe, not from a rounding of FunSearch's number.
+NOTES       | Precision caution: "2.2202" (FunSearch) is the rounded closed form 2.220234; "2.2203" for X-evolve is a search-summary digit string. Recomputing the rounding: 2.2202337 rounds to 2.2202 (4 d.p.), so a bound reported as 2.2203 from X-evolve must come from a different (larger) admissible set or recipe, not from a rounding of FunSearch's number — consistent with X-evolve's A(27,19) (my recompute 2.2203085).
 ```
 
 ---
@@ -265,6 +301,35 @@ DIVERGENCE  | NONE FOUND — no two dated methods with a >=2 ratio in order: the
 BITS_SEARCH | UNDEFINED — no named search ansatz with a published density estimate found (the two-circulant / supplementary-difference-set ansatz is named, density not seen).
 VERIF CLASS | CHECK — exact integer determinant/Gram computation of a 198x198 +-1 matrix.
 NOTES       | The brief says a separate run does the promoting search for this record; I did not attempt any. One conceptual point for the adjudicator: "n up to 198" phrasing in one summary ("pair of circulants ... exists at all orders n with 2n-2 a sum of two squares up to n = 198") and "198 is the smallest undecided" from another are mutually inconsistent as written; I read them as 'below 198' and 'first undecided is 198'. Also n=22 and n=34 show up in the summaries as orders excluded by the sum-of-two-squares condition (22: 42 no; 34: 66 no; both confirmed in my list of infeasible orders).
+```
+
+---
+
+## TABLE 5 — Skew-Hadamard matrices: the smallest open order
+
+```
+TABLE       | No single maintained table of skew-Hadamard existence found. Nearest: (i) M. Cati, D. Pasechnik, "A database of constructions of Hadamard matrices" (arXiv:2411.18897, Nov 2024; also surfaced as SageMath's hadamard_matrix documentation), whose search summaries say 2023 additions made "all known orders <= 1208 available" and that skew orders are tracked with a list of unknown values v (one summary: 36 entries from v=89 to 299 unknown, 89 covering orders 356 and 712); (ii) D. Đoković's construction papers (below); (iii) the designtheory.org encyclopedia chapter "Hadamard matrices". Last update: 2024-11 for (i); the other two undated. None read directly. | SEARCH-SUMMARY
+AI ACTIVITY | (i) 12 Aug 2026: L. Alpöge, P. Voinov, S. Reynolds-Haertle, "using Anthropic's Claude", announced explicit (ordinary) Hadamard matrices of all twelve previously open orders below 2000 (668, 716, 892, 1132, 1244, 1388, 1436, 1676, 1772, 1916, 1948, 1964); reported via Epoch AI's FrontierMath open-problem page and X posts (SEARCH-SUMMARY). This is the neighbouring Hadamard record, not the skew one: none of the twelve orders is 356, and no summary says any of the matrices is skew-type. (ii) On the skew record itself: NONE FOUND — searched "skew-Hadamard matrix of order 356 constructed ... 2025 2026", "Alpöge Claude skew-Hadamard matrix order 356 ...", "skew-Hadamard smallest unknown order 356 89 ... 2026". Disclosure for the adjudicator: I am a Claude model; item (i) concerns Claude-assisted work and I report it as found. | SEARCH-SUMMARY
+```
+
+```
+RECORD      | Table 5 — smallest order 4k for which no skew-Hadamard matrix is known
+QUANTITY    | that order (existence frontier)
+LOWER       | frontier = 356 (v = 89, order 4v); stated by a 2024 source ("the smallest unknown order of a skew Hadamard matrix is 356", arXiv:2402.11074, Feb 2024, on classification of skew Hadamard matrices of orders 36 and 40) and by an arXiv:2301.02751 summary ("after constructing skew-Hadamard matrices of order 276 the smallest v with existence undecided is v = 89") | SEARCH-SUMMARY | EXACT ; REFEREED status unknown (arXiv preprints seen)
+UPPER       | not applicable (existence frontier; the conjecture is that skew-Hadamard matrices exist for every order divisible by 4 — a conjecture, not a bound)
+BOUND OBJ   | positive side: WITNESS — a +-1 matrix H with H + H^T = 2I and H H^T = nI, checked exactly; negative side: PROOF of nonexistence — none exists at any open order
+S0 OPEN     | PASS (weak) — 356 open as of the 2024 sources; three targeted searches for a 2025-2026 construction found none. The most recent source that states the frontier is 2024; I could not read the maintained database to confirm a Sept-2026 state.
+S1 COUPLED  | PASS — route (b): frontier orders have been closed by finite certificates checked by terminating computation: Đoković (arXiv:2301.02751) builds the matrix from the Goethals–Seidel array with circulants from a cyclic difference family {X0,X1,X2,X3} (abstract, via search summary), i.e. a finite object checked by computation. Not route (a): existence at one order is not an extremum. | SEARCH-SUMMARY
+S2 VETO     | PASS — skew-Hadamard property (H + H^T = 2I, H H^T = nI) is a decidable finite check.
+MOVE-1      | 2023-01 | D. Ž. Đoković, "Hadamard matrices: skew of orders 276, 292 and symmetric 372", arXiv:2301.02751 | closed order 276 (v = 69, previously the smallest v with no skew-Hadamard matrix known) | UNKNOWN | abstract: constructs several such matrices via the Goethals–Seidel array with circulants from a cyclic difference family; how the difference family was found (computer search method) not stated in what I saw. Caution: version 1's title includes order 292 ("presumably the first example"), version 2's title reads "skew of order 276 and symmetric of order 372" — the 292 claim appears to have been dropped between versions (reason not seen); I treat 292 as NOT established by this paper | SEARCH-SUMMARY
+MOVE-2      | 2007 | D. Ž. Đoković, "Skew-Hadamard matrices of orders 188 and 388 exist" (arXiv:0704.0640): difference families on cyclic groups of orders 47 and 97 | 188, 388 | UNKNOWN | summary: "constructed several difference families on cyclic groups of orders 47 and 97 and used them to construct skew-Hadamard matrices of orders 188 and 388" — this is not the paper that closed the frontier just before 276 (that one, for orders between 188 and 276, is not identified); also Đoković, arXiv:0706.1973 (2007), orders 436, 580, 988 | SEARCH-SUMMARY
+S3 IDEA     | CANNOT EVALUATE — MOVE-1 kind UNKNOWN.
+S4 CROWDED  | PASS (weak) — no move of the skew frontier on/after 2025-01-01 was found. Searches: the three skew-specific queries above plus "skew-Hadamard matrices smallest order unknown existence 4k open orders" and "Đoković skew-Hadamard ... smallest unknown order". Caveat: the same window contains AI-driven work on the neighbouring Hadamard problem (item (i) in AI ACTIVITY), so absence of a skew move here is a finding about search coverage, not about AI attention.
+S5 DELIVER  | PASS — the Cati–Pasechnik / Sage Hadamard database (and Đoković-style tables of known skew orders) would change. Sentence: "We construct a skew-Hadamard matrix of order 356, the smallest order for which none was previously known."
+DIVERGENCE  | CANDIDATE, unverified — exhaustive classification of skew-Hadamard matrices reaches order 36/40 (arXiv:2402.11074; and an order-32 classification, Wiley J. Combin. Des., seen as a title) while difference-family/GS-array constructions reach order 988 (Đoković 2007) and beyond: ratio 988/40 = 24.7. Caveat: classification and existence are different tasks on the same object; whether the gate counts that pair is for the adjudicator. Also 92 (a 1990s-era skew-Hadamard order-92 paper) vs 188 (2007), ratio 2.04, but methods not compared. | SEARCH-SUMMARY
+BITS_SEARCH | UNDEFINED — the named ansatz (Goethals–Seidel array with cyclic difference families / supplementary difference sets) exists, but no published density estimate was found.
+VERIF CLASS | CHECK — exact integer verification of a 356x356 +-1 matrix.
+NOTES       | Two search summaries give the frontier as "v = 69 (order 276)" (pre-2023) and "v = 89 (order 356)" (post-2023); the intermediate orders (292, 308, ..., 340) are asserted closed without my seeing who closed them, and the 292 point is shaky (see MOVE-1 caution). The Aug 2026 Claude-assisted result is on Hadamard, not skew-Hadamard, orders; I did not find any statement that it touches 356.
 ```
 
 ---
