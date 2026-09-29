@@ -208,3 +208,35 @@ NOTES       | Precision caution: "2.2202" (FunSearch) is the rounded closed form
 
 ---
 
+## TABLE 3 — Snake-in-the-box: longest known snake in Q_n for n = 9, 10, 11
+
+(WebSearch came back after the spend-limit interruption; Tables 3-5 use it again.)
+
+```
+TABLE       | No single maintained table found. Nearest items: (i) the dataset repository Math-AI-Caltech/Snake-in-the-Box (record_snakes.csv, record_coils.csv, record_symmetric_coils.csv; README read via raw.githubusercontent.com, states records for n=9..13 and that a(n) is known only for n<=8; dataset paper arXiv:2607.15270 "A Census of New Snake-in-the-Box Records", July 2026 (v2 seen)); (ii) OEIS A099155-type sequences (exact terms only, n<=8; blocked, not read); (iii) Ace 2025 (Zenodo record 21728434, dims 14-17) and Taylor arXiv:2609.27483 (Sept 2026, dims 13-20). Last update: the Caltech README/paper, July 2026; the repository's own last-commit date NOT FOUND. | README: SECONDARY-RELAYED; others SEARCH-SUMMARY
+AI ACTIVITY | NONE FOUND that is attributable — searched "snake-in-the-box records 2025 LLM OR reinforcement learning OR AlphaEvolve ...", "Census ... method AI search AlphaEvolve ...", "Census ... beam search reinforcement learning". Results never state what search method the Census paper used; the authors are at Caltech's Math-AI group (a search-summary side note links one author to RL research: that is not evidence about this paper). One summary says the 732 coil package in dim 11 implements Ace (2025) heuristically-pruned breadth-first search. AlphaEvolve does not appear in any snake result. AI use in this table: UNKNOWN, not "none". | SEARCH-SUMMARY
+```
+
+```
+RECORD      | Table 3 / n=9,10,11 — longest known snake (induced path) in Q_n
+QUANTITY    | a(n) = max number of edges of an induced path (snake) in the n-cube
+LOWER       | n=9: 191 (was 190; 131 symmetry classes at 191, conjectured complete) ; n=10: 379 (was 376; >=12 classes) ; n=11: 746 (was 737; >=72 classes) — Orland, Fagan, Tarquini, Passaro, Manko, Heyes, Gruen, Butbaia, Tan, Gukov, arXiv:2607.15270, July 2026 | SECONDARY-RELAYED (dataset README read raw); confirmed in several search summaries | EXACT (explicit vertex lists, machine-checkable) ; PREPRINT. NOT locally verified: the csv files were not at the root path I tried (404), so I could not re-check a snake.
+              (a conflicting older set in one search summary — 188 Wynn 2012 for n=9, 373 and 732 "Ace 2025" for n=10, 11 — matches earlier or coil values; the README's "previous" column 190/376/737 is what the Census paper reports as prior best; who set 190/376/737 and when: NOT FOUND.)
+UPPER       | no useful upper bound beyond a formula: one search summary gives 2^n - 1 - 2^n/(n^2+n+2), which I evaluated as n=9: 505.4, n=10: 1013.9, n=11: 2031.7 (attribution and applicable range not seen; summary says "best estimate for n>7") | SEARCH-SUMMARY (formula), local arithmetic | EXACT (as a formula) ; UNKNOWN
+BOUND OBJ   | lower: WITNESS — a vertex sequence, checked by a linear scan for chords; upper: PROOF (a counting argument), never moved by a witness
+S0 OPEN     | PASS — a(n) known exactly only for n<=8 (README, SECONDARY-RELAYED, and search summaries). No resolution claim found.
+S1 COUPLED  | PASS — route (a): a(n) is a maximum over induced paths of Q_n, so any snake of length L gives a(n) >= L; the 2026 records are exactly such lists. | SECONDARY-RELAYED
+S2 VETO     | PASS — "consecutive vertices adjacent, no other pair adjacent" is decidable in O(L*n) by scan.
+MOVE-1      | 2026-07 | Orland et al. (Census) | 191 / 379 / 746 (n=9/10/11) | UNKNOWN | README: "machine-verifiable list of vertices", counts of distinct symmetry classes sampled "across millions of sampled length-191 snakes" (suggests heavy sampling search); the search method itself is not stated in anything I read | SECONDARY-RELAYED (README), rest SEARCH-SUMMARY
+MOVE-2      | date and authors of 190 / 376 / 737: NOT FOUND | | 190 / 376 / 737 | UNKNOWN | not found | 
+S3 IDEA     | CANNOT EVALUATE — MOVE-1 kind UNKNOWN (method not stated in sources I could read; the arXiv text is blocked).
+S4 CROWDED  | CANNOT EVALUATE — the coupled side moved in July 2026 (after 2025-01-01) by a large computational search, but whether that was an "AI-driven search system or large-scale optimisation tooling" is exactly what I could not read. Searches: the three above plus "Ace 2025 ... pruned breadth-first search", "Constructing longer snakes ...". 
+S5 DELIVER  | PASS — named published bounds a(9)>=191, a(10)>=379, a(11)>=746 (Census 2026) and the Caltech record dataset would change. Sentence: "We exhibit a snake of length 192 in Q_9, improving the previous record of 191." (OEIS lists only exact terms n<=8, so it would not change.)
+DIVERGENCE  | CANDIDATE — exhaustive computer determination of a(n) reaches n=8 (RECALL: Ostergard–Pettersson 2014), heuristic/explicit snake constructions reach n=20 (Taylor arXiv:2609.27483, Sept 2026: snakes of 371,711 edges in dim 20; SEARCH-SUMMARY): ratio 20/8 = 2.5. Caveat: the two methods bound different things (exact value vs lower bound). Within lower-bound methods alone: Census dims 9-13 (2026-07) vs Taylor dims 13-20 (2026-09) ratio 1.5, Ace dims 14-17 (2026) — below 2.
+BITS_SEARCH | UNDEFINED — no named ansatz with a published density estimate found.
+VERIF CLASS | CHECK — exact finite computation.
+NOTES       | Dim 9 has a "believed-complete" census (131 classes at 191) per README — a conjecture, not a proof. Ace 2025 (dims 14-17: 5750, 11249, 21411, 40835 vs Abbott–Katchalski 4932, 9866, 19738, 39478) and Taylor 2026 show the frontier for large n is moved by explicit finite constructions of very different flavours. The Taylor abstract is the only one I saw that says which technique (controlled overlaps of paths).
+```
+
+---
+
