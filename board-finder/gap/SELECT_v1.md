@@ -246,4 +246,57 @@ answer when it is true. A-2 is protected by §2's last paragraph.
 
 # Part II — as operationalised
 
-*Appended after the runs. Empty at registration.*
+*Appended after the runs, 2026-09-29. Part I above is byte-identical to commit fab89d8 (checked by diff);
+no line of it was edited. Results: `RESULT_DISCOVERY.md`.*
+
+## II.1 What the run actually was
+
+The run was interrupted twice. At ~14:05 UTC the account's spend limit stopped all nine workers.
+After it reset, concurrency was capped at three at the user's request, and the session-wide
+web-search budget (200 calls) ran out part-way through. It completed:
+* Test G ODD;
+* Arm 1, with 9 of 19 records only partly evaluated;
+* Arm 2, tables 1–5 and 11–15.
+
+It left unrun:
+* Arm 2 tables 7–10;
+* Arm 2b, the divergence search;
+* Arm 3 beyond generation;
+* Test G EVEN, which is still unread.
+
+Every statement below is scoped to that.
+
+## II.2 Clause by clause
+
+| clause | status after contact |
+|---|---|
+| **§1 decomposition** | **Survives, and is the main result.** `II` = P1 ∧ U for extremal headlines. It turns the handoff's "contradiction" into a missing step (`RESULT_ARM1_II.md` §1). |
+| **S0 open** | Survives. It was live three times: 308, 368 and 385 all moved in Aug–Sep 2026. |
+| **S1 coupled** | Survives. It separated extremal from asymptotic headlines cleanly. One refinement is needed: **a coupled side can stop being the side that moves.** 308's 2026 lower bound came from an asymptotic argument, not from a witness. |
+| **S2 veto** | Survives. It fired as designed on 410, where a universal polynomial is an ALGORITHM. |
+| **S3 idea gap (§3.1)** | **Does not survive as a discriminator.** Test G: the COMPUTE class is empty (0 of 10 testable problems; 0 of 4 S3 calls in Arm 2a). In practice S3 measured whether a move kind is *knowable*, and killed records on UNKNOWN rather than on gap type. The likely cause is structural: record papers must claim novelty, so the literature never labels a move "the same method, run bigger". |
+| **S4 crowding** | **Survives, but scoped wrongly.** It did the most real work: it killed 308, kissing dimension 11 and cap-set capacity. Registered per record, it passed kissing dimensions 13 and 14 inside a table that three AI systems moved within twelve months. It should be scoped per table. Not applied retroactively. |
+| **S5 deliverable** | Survives. It was never the binding gate. |
+| **§3.2 divergence** | **Untested.** The generative search did not run to completion (P-35 open). |
+| **§4 coordinates** | `bits_search` was UNDEFINED for every candidate: no named ansatz with a published density estimate exists for any of them. The verification class was reported in place of `V_arg`. The pair was never collapsed. |
+| **§5 tiers** | **Internal inconsistency found in my own registration.** It calls `SEARCH-SUMMARY` RECALL-grade "for every gate" and also lets "triage survivors" exist. Strictly read, Arm 2 returns 0 survivors. P-34 was scored on the looser reading its own text names, with the strict count reported beside it. |
+
+## II.3 Corrections made during the run (none to Part I's text)
+
+* The AlphaEvolve problem snapshot committed with the registration had **7 truncated statements**,
+  because the extraction stripped anything between `<` and `>`. It was fixed before any worker ran;
+  the outcome labels were unaffected (commit 282b6b9).
+* **Blinding:** the Test G ODD worker glimpsed `discovery/aerp_outcomes.json`. Future briefs must
+  keep outcome files out of the worker's tree.
+
+## II.4 What v2 should change, registered here as proposals, not applied
+
+1. **Replace S3.** Movement history cannot supply the COMPUTE label. Use a direct question instead:
+   *has a general-purpose AI search system been pointed at this record and failed to move it?*
+   That is outcome evidence, not a label. Its sign is ambiguous: failure says either "hard" or
+   "not search-shaped". So it needs its own Test G-style scoring before it gates anything.
+2. **Scope S4 to the table.**
+3. **Make `SEARCH-SUMMARY` explicitly triage-only in one place**, and have the scorer compute both
+   counts.
+4. **Keep §1's decomposition** as a standing step in `../playability/classify.py`'s `II` handling.
+   Record the extremal/asymptotic split per record, so the class stops being a bin.

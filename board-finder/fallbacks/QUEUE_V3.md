@@ -4,6 +4,34 @@ Built on `../gap/GAP_V3.md`. Everything below is **recall, not verified**; the f
 for each is the promoting search that decides it, and is named before anyone looks so it cannot be
 re-scoped afterwards.
 
+> **[29 Sep 2026 — discovery run, `../gap/RESULT_DISCOVERY.md`.]** Read this box first.
+>
+> **What the run found about this queue:**
+> * **Its record-shaped items do not contradict the playability screen.** Each is the P1 conjunct
+>   of an `II` headline, since "determine the value" = ∃ ∧ ∀ (`../gap/RESULT_ARM1_II.md` §1). So
+>   each has to pass gap type and crowding on its own.
+> * **Queue #2 (kissing, dimensions 11–14) is split.**
+>   * Dimension 11 is **dead** — moved by AI twice since 2025, now 604.
+>   * Dimension 12 is dead too: a numerical 841 (June 2026) with an unknown method.
+>   * **Dimensions 13 and 14 survive as triage candidates C-1 and C-2**, with promoting bars
+>     written. The whole table is under active AI attack, so treat both as fragile.
+> * **Queue #3 (caps).**
+>   * AG(8,3) = 512 survives only as **C-3**, the weakest of the three — the neighbouring capacity
+>     record was AI-moved in 2025.
+>   * AG(7,3) fails: its move kind is unknown.
+> * **Queue #4 (snakes): fails.** The records moved in July 2026 (arXiv:2607.15270) by a method
+>   that could not be read.
+> * **Queue #1 (U13 D-optimal): no verdict here.** The promoting search belongs to the Sonnet S55
+>   run, whose results (RESULT_S55_A_TABLE.md and siblings) were **not present** on the branch at
+>   the end of this run. Their outcome is unknown and not assumed.
+>
+> **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
+> candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
+> enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
+> pending S55. **No candidate carries a measured idea gap.** The run's main result is negative and
+> concerns the instruments: movement-history gap typing cannot see compute gaps, and crowding is the
+> gate that works.
+
 ## The move, in one line
 
 v2's E dimension asked *"is the null publishable?"*, which rejects by construction the class where
