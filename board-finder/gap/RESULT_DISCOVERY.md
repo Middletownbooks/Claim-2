@@ -64,12 +64,15 @@ Each has a promoting bar written here, by the adjudicating instance, before it e
 
 ### C-3. Caps in AG(8,3): 512
 
+> **GATED 29 Sep 2026: FAIL.** `discovery/RESULT_GATE_C3.md`. The bar fired on X-evolve's direct *n* = 8 runs. Two independent further problems were found: the deliverable table appears not to exist, and the 512 figure itself may be stale.
+
+
 | field | value |
 |---|---|
 | pair | bits_search UNDEFINED. V_arg class: **CHECK** — verified locally by an all-pairs check (PRIMARY-VERIFIED-LOCALLY) |
 | gap type | IDEA (SEARCH-NEW + AI-SEARCH): FunSearch, Dec 2023 |
 | veto | not vetoed |
-| table / sentence | Edel's cap tables, n = 8. *"A cap of size 513 in AG(8,3)."* |
+| table / sentence | ~~Edel's cap tables, n = 8.~~ **WRONG, and not checked when written — see `discovery/RESULT_GATE_C3.md` §3.** The page was last changed in 2010 and tabulates *projective* caps; there is no affine *n* = 8 row. Deliverable sentence was *"A cap of size 513 in AG(8,3)."* |
 | **first check that kills it** | **FAIL if any AI search system published after 2023 (AlphaEvolve, X-evolve, others) reports attempting AG(8,3) caps directly.** X-evolve moved the adjacent capacity record in 2025, so the neighbourhood is already worked by the systems this project would be imitating. This is the weakest of the three, and it is the flagship instance `../fallbacks/QUEUE_V3.md` already called taken. |
 
 **Ranking:** C-1 > C-2 > C-3, on one criterion only: how strong the evidence is that AI search has

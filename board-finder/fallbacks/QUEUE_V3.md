@@ -25,6 +25,26 @@ re-scoped afterwards.
 >   run, whose results (RESULT_S55_A_TABLE.md and siblings) were **not present** on the branch at
 >   the end of this run. Their outcome is unknown and not assumed.
 >
+> **[29 Sep 2026 — gate C-3 run, `../gap/discovery/RESULT_GATE_C3.md`.] C-3 is DEAD.** The bar fired
+> on positive evidence: X-evolve (arXiv:2508.07932) reports direct AG(8,3) runs reaching 512 — an
+> *n* = 8 column in Table 2, three of five runs at 512 in §3.1, an *n* = 8 ablation in Table 5 — and
+> two further post-2023 systems ran *n* = 8 directly and fell short. The prompt's hedge that X-evolve
+> had moved only the capacity was wrong: it worked both objects.
+>
+> **Two things the bar did not ask about, and both outrank the verdict.**
+> * **C-3's deliverable table may not exist.** Edel's page was last changed 28 April 2010, tabulates
+>   *projective* m₂(*k*,*q*) — row 8, *q* = 3 is **541**, a PG(8,3) cap — and gives no affine *n* = 8
+>   row at all. Relayed; this container's egress proxy blocks the page. **No candidate on this board
+>   has ever had its "table it moves" field checked. See debt D46.**
+> * **512 may never have been the frontier.** One unattributed search summary gives an affine AG(8,3)
+>   lower bound of **532**. Not promoted — the obvious source, Elsholtz–Lipnik, covers p ≡ 5 (mod 6)
+>   and so not p = 3. Promoting search named in §4 of the gate result.
+>
+> **Queue now:** U13 still pending S55, holding its place. **C-1 τ₁₃ ≥ 1154**, then **C-2 τ₁₄ ≥ 1932**.
+> C-3 struck. 239 and 345 unchanged, pending S55. Before either surviving candidate is gated,
+> **check that its table exists and contains the claimed row** — one lookup each, and it is the
+> cheapest kill available.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
