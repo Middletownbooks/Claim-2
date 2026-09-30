@@ -1,6 +1,26 @@
 # P-40, the retrodiction test — and the paper overturns my first answer
 
-> **[CORRECTED 30 Sep 2026, after the operator supplied the paper's transcript. Two corrections, and
+> **[CORRECTED AGAIN 30 Sep 2026 — the scooping preprint arrived and it refutes the premise, not just my
+> analysis. This is the fourth reading and the first built on complete evidence. P-40 is now WRONG, not
+> partly.]**
+>
+> **Conjecture 2 was not an open twenty-one-year-old conjecture.** Allikvere's preprint (27 July 2026) is
+> explicit: **Harvey, Király and Lau (2011) disproved C(b) for 2 ≤ b ≤ n/3.** For b = 3 that is n ≥ 9.
+> **So C(3), as a statement about all n, fell in 2011 — fifteen years ago.** What remained open was the
+> small-rank range n ∈ {4,…,8}, which HKL flagged: *"Chow's conjecture remains open when b > n/3."*
+> Allikvere closed it, and the status is now complete: **true at n = 3, false for every n ≥ 4.**
+>
+> **And that makes the target textbook record-shaped.** *"The smallest rank n at which C(3) fails"* was a
+> **bracketed integer, 4 ≤ n_fail ≤ 9**, with **both bounds established by finite certificates** — Chow's
+> n = 3 verification below, HKL's construction above. Two sides, both moved by witnesses, both from
+> terminating computation. **That is exactly what SELECT v1 is built for**, and all six gates pass:
+> S0 (bracket unresolved), S1 via route (b), S2 (decidable), S3 (HKL 2011 is ANALYTIC — S3 asks kind, not
+> date), S4 (no AI-search move since 2025-01-01, before Allikvere), S5 (HKL's upper bracket is a named
+> published bound that a counterexample moves).
+>
+> **So the screen's GATES would have surfaced this target. §2, §2a and §3 below are all superseded.**
+
+> **[Earlier correction, 30 Sep 2026, after the operator supplied Chow's transcript. Two corrections, and
 > the second retracts a verdict I had already pushed.]**
 >
 > **(1) The search summary lied about Chow's stance, and I leaned on it.** It said Chow *"notes that
@@ -116,6 +136,34 @@ It is this:
 **And P-40's threshold is therefore unevaluable as worded** — *"if the target passes all of S0–S5"*
 presupposes a decomposition, and the decomposition is the thing in dispute. **D54's shape for the second
 time:** a threshold whose answer is fixed by a prior choice the prediction did not fix.
+
+## 2b. Final reading: the gates were never the problem. The corpus was.
+
+**Allikvere's Theorem 1.2 is verified exactly here** (`rota/verify_allikvere.py`): H = K₅ with edge 34
+tripled, I₁ = {01,23,24}, I₂ = {02,13,14}, I₃ = I₄ = ∅. Of the **2304** ordered partitions of E(H) into
+three spanning trees — **matching his reported count to the digit** — **zero** make both prescribed rows
+rainbow. By his Lemma 2.1 the instance is unsolvable, so C(3) fails at (n,b) = (4,3).
+
+And the contrast that makes Proposition 2.3 vivid: **576 of the 2304 make I₁ *alone* rainbow.** One
+prescribed row never obstructs; two already can. **The obstruction lives in the interaction, not the
+rows.**
+
+**So the corrected verdict on the retrodiction is:**
+
+> **SELECT v1's gates would have passed this target. It never saw it because its CORPUS is a list of
+> tabulated records, and "the smallest rank at which Chow's C(3) fails" — a bracketed integer with both
+> bounds from finite certificates — is in no table.**
+
+**The binding constraint is corpus coverage, not gate design.** Seven screens ran over 499 tabulated
+records; the one target that nearly worked was perfectly record-shaped and untabulated. That is a
+different problem from every one I diagnosed above, and the only one supported by the full evidence.
+
+**One further datum, and it is sobering.** Allikvere's acknowledgement states that **Claude and GPT
+models were used as assistive tools**, including *"proposing candidate constructions and draft
+arguments."* So the cell was not merely contested — **it was contested by another independent researcher
+using the same class of tool, who shipped first.** The crowding lesson sharpens accordingly: the
+competitor for an LLM-assisted attack on a small open case is now another LLM-assisted researcher, and
+that contest is invisible to any literature-based screen until it resolves.
 
 ## 3. My first answer, left standing for the record — and superseded by §2a
 
