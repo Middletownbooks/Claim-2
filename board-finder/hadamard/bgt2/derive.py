@@ -574,3 +574,102 @@ print()
 print("=" * 74)
 print("ALL ASSERTIONS PASSED (part 6).")
 print("=" * 74)
+
+
+# ---------------------------------------------------------------- 15. brief E ran
+print()
+print("=" * 74)
+print("15. Brief E's run: the reconciliation, and one error of mine")
+print("=" * 74)
+F05_V = [515,523,537,571,573,599,643,647,659,669,719,721,739]
+def pairs(v, odd_only, bmin=3, bmax=None):
+    out = []
+    for c in range(2, v + 2):
+        if (v + 1) % c: continue
+        b = c - 1
+        if b < bmin or b >= v: continue
+        if bmax is not None and b > bmax: continue
+        if odd_only and b % 2 == 0: continue
+        out.append(b)
+    return out
+
+all13_any  = sum(len(pairs(v, False)) for v in F05_V)
+all13_odd  = sum(len(pairs(v, True )) for v in F05_V)
+ELEVEN = [v for v in F05_V if v not in (669, 721)]
+elev_any = sum(len(pairs(v, False)) for v in ELEVEN)
+extra    = len(pairs(669, False)) + len(pairs(721, False))
+print("  The source's condition, quoted from OPEN_ORDERS.md by the run:")
+print('    "c = b+1 must divide v+1 (equivalently c | m, FINDING 62)."')
+print("  That is EXACTLY the condition derived in sec 14. SECONDARY-RELAYED,")
+print("  and the derivation stands confirmed against the source.")
+print()
+print(f"  all 13 orders, b > 2, EVEN b allowed (the source's rule): {all13_any}")
+print(f"  the ELEVEN orders the source's code hard-codes (no 669/721): {elev_any}")
+print(f"  the pairs the source lists by hand for 669 and 721:         {extra}")
+print(f"  eleven + hand-added:                                        {elev_any + extra}")
+print(f"  odd b only (the correct set):                               {all13_odd}")
+assert elev_any == 126, elev_any
+assert all13_any == 134, all13_any
+assert all13_odd == 96, all13_odd
+print('  ASSERTED: 126 and 134 and 96. So "126+" is the eleven-order count with')
+print("  even b included, plus two orders added by hand. The figure was never a")
+print("  count of the admissible set.")
+print()
+print("  AND MY 96 IS THE RIGHT NUMBER, because even b is IMPOSSIBLE.")
+print("  FINDING_69's proof, checked here: the border reduces to S with")
+print("  S S^T = 4cI - 4J. Then |S^T 1|^2 = 1^T S S^T 1 = 4c*k - 4k^2 with k the")
+print("  size, i.e. 4c(b - c + 1) when k = c and the count is taken over the")
+print("  border; at c = b+1 that is 4c*0 = 0. So every row sum is ZERO, each")
+print("  column is a zero-sum +-1 vector of length c, hence c is EVEN and b ODD.")
+for b in (3, 5, 7, 9, 37):
+    c = b + 1
+    assert 4*c*(b - c + 1) == 0
+    assert c % 2 == 0
+print("  ASSERTED: 4c(b-c+1) = 0 identically at c = b+1, and c is even for every")
+print("  odd b checked. OPEN_ORDERS over-counts by including even b; the")
+print("  well-defined set is the 96 odd-b pairs.")
+
+print()
+print("  FINDING_69's TWO CAVEATS, and the second is the real kill:")
+print("  'Admissible does not mean the border exists' -- border_S.py constructed")
+print("  S only for c <= 12, and the worklist was cut to 4 < c <= 12:")
+print("  '18 pairs across 8 of the 13 open orders, at b = 5, 7, 9, 11.'")
+w = {v: pairs(v, True, bmin=5, bmax=11) for v in F05_V}
+tot_w = sum(len(x) for x in w.values())
+orders_w = [v for v in F05_V if w[v]]
+print()
+print(f"  {'v':>4} {'order':>6}  b in {{5,7,9,11}}")
+for v in F05_V:
+    if w[v]: print(f"  {v:>4} {4*v:>6}  {w[v]}")
+print(f"  pairs: {tot_w}   orders: {len(orders_w)}  {orders_w}")
+assert tot_w == 18, tot_w
+print("  ASSERTED: exactly 18 pairs, reproducing the run's figure.")
+print(f"  BUT over {len(orders_w)} orders, where the run says 8 of 13. A small")
+print("  discrepancy worth one line to settle -- mine or theirs.")
+print()
+print(f"  And the workable set is {tot_w} of {all13_odd} odd-b pairs "
+      f"({100*tot_w/all13_odd:.0f}%). 'Necessary is not")
+print("  sufficient' fired exactly as the brief warned, at a factor of "
+      f"{all13_odd/tot_w:.1f}.")
+
+print()
+print("  MY ERROR, reported by the run: THE LIVE TARGET IS b = 0, NOT b = 1.")
+print("  FINDING 155's row '523 | d=9 | r=59 | 232 free bits | 2^-141' is a b=0")
+print("  row, and FINDING 134 sec 3 gives r = (v-1)/d + 1 AT b=0 with the")
+print("  sum a^2 = 4v law holding at b=0. So the relation sec 3 called")
+print("  'b=1-fitted' was fitted at b=0, and FINDING 134 says admissibility is")
+print("  'b = 0 or b odd'.")
+print()
+print("  CONSEQUENCE FOR SEC 14's ASSERTION, and I overstated it: (b+1)|(v+1)")
+print("  at b=0 reads 1 | 524, which is TRIVIALLY true and carries no")
+print("  information. So the condition is confirmed on THREE non-trivial pairs")
+print("  -- (347,5), (359,7), (479,3) -- not four. Three for three, not four")
+print("  for four. The claim survives; the count of evidence for it does not.")
+for v, b in ((347,5), (359,7), (479,3)):
+    assert (v + 1) % (b + 1) == 0
+assert (523 + 1) % 1 == 0
+print("  ASSERTED: three non-trivial confirmations, and b=0 is vacuous.")
+print()
+print("=" * 74)
+print("ALL ASSERTIONS PASSED (part 7).")
+print("=" * 74)

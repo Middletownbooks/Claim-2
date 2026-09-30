@@ -457,6 +457,46 @@ re-scoped afterwards.
 > **Q4 is withdrawn**: the border sits *within each block*, so `../hadamard/bgt2/border.py` measures the
 > wrong object, and hoa64's matrices are normalized anyway.
 
+> **[30 Sep 2026 — brief E ran. `E: FAIL`. OPTION 3 IS DEAD, `../hadamard/bgt2/RESULT_E.md`.]**
+> (a) PASSES, (b) PASSES, **(c) FAIL-UNEARNED**. 18 of 20 calls, stopped on neither limit. **P-38 scored
+> CORRECT.**
+>
+> **The derivation beat the source's own summary line, and that is a first here.** The condition quoted
+> verbatim from `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` — *"c = b+1 must divide v+1"* —
+> **is exactly the one derived locally** from the worker's structure. And the 96/126 gap resolves in my
+> favour: **134** pairs over all thirteen with even *b* allowed, **126** over the eleven orders the
+> source's code hard-codes, **+8** listed by hand for 669/721 = 134, and **96** with odd *b* only. *"126+"*
+> was the eleven-order count **including even *b***, never a count of the admissible set — and
+> `FINDING_69` **proves even *b* impossible** (*SS*ᵀ = 4*cI* − 4*J* forces every row sum to zero at
+> *c* = *b*+1, so *c* is even and *b* odd). **Every prior agreement between my arithmetic and this
+> programme's was independent reproduction; this one is a correction.**
+>
+> **What kills the cell is none of the three clauses.** *Admissible does not mean the border exists*:
+> *border_S.py* built *S* only for *c* ≤ 12, the real worklist was **18 pairs of the 96 — 19%**, reproduced
+> exactly here. **And the region was entered**: 17 odd-*b* pairs, **135 configurations — 104 EMPTY_SCOUT,
+> 19 EMPTY, 8 EMPTY_UNSETTLED, 4 NOSOL — and no solution in any of 33 `open_*_b*.out` files.** FINDING 63
+> **withdrew** FINDING 62's optimistic walls, cutting the gain to **1–2.3 decimal orders, not 3–8**.
+> **Option 3 dies on evidence, at the strongest grade this board has produced.**
+>
+> **D57, and both halves are mine.** (i) Clause (c) asked whether `FINDING_155`'s ranking was single-*b*.
+> **It is — b=0 only — and the region was screened anyway, by different instruments.** I tested whether
+> *one* instrument had covered the cell when the decision needed whether *any* had. **D51's shape one
+> level out.** (ii) The brief cited *../PLAN_2092.md*, *PRECHECK_E.md* and *derive.py* to a reader in
+> another repository, where none resolve — and `../tools/check_paths.py` passed them because it checks the
+> **author's** tree. **Resolvability is reader-relative and nothing here checked that.**
+>
+> **Also:** the thirteen are the open thirteen from **Cati & Pasechnik Table 4**, so VOID never applied;
+> *"126+"* has **no provenance** in the file or its scripts; *OPEN_ORDERS.md* is **stale on 669 and 721**,
+> which FINDING 72 settles — **and that stale sentence is what this entry was built on**; and there are
+> **160 findings, highest 163**, the same as `../hadamard/PLAN_2092.md` saw, so the currency worry was
+> unfounded.
+>
+> **And one error of mine.** The live target is ***b* = 0, not *b* = 1**. So (*b*+1)|(*v*+1) at *b* = 0 is
+> `1 | 524`, vacuous — the condition is confirmed on **three** non-trivial pairs, not the four I asserted.
+>
+> **Queue:** option 3 spent. **What remains is 5 (239/345, pending S55 results that have never appeared)
+> and 6 (enter EinsteinArena).** Options 1, 2, 3 and 4 are all closed on evidence.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,

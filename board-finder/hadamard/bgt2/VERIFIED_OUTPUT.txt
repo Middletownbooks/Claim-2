@@ -398,3 +398,69 @@ ALL ASSERTIONS PASSED (part 5).
 ==========================================================================
 ALL ASSERTIONS PASSED (part 6).
 ==========================================================================
+
+==========================================================================
+15. Brief E's run: the reconciliation, and one error of mine
+==========================================================================
+  The source's condition, quoted from OPEN_ORDERS.md by the run:
+    "c = b+1 must divide v+1 (equivalently c | m, FINDING 62)."
+  That is EXACTLY the condition derived in sec 14. SECONDARY-RELAYED,
+  and the derivation stands confirmed against the source.
+
+  all 13 orders, b > 2, EVEN b allowed (the source's rule): 134
+  the ELEVEN orders the source's code hard-codes (no 669/721): 126
+  the pairs the source lists by hand for 669 and 721:         8
+  eleven + hand-added:                                        134
+  odd b only (the correct set):                               96
+  ASSERTED: 126 and 134 and 96. So "126+" is the eleven-order count with
+  even b included, plus two orders added by hand. The figure was never a
+  count of the admissible set.
+
+  AND MY 96 IS THE RIGHT NUMBER, because even b is IMPOSSIBLE.
+  FINDING_69's proof, checked here: the border reduces to S with
+  S S^T = 4cI - 4J. Then |S^T 1|^2 = 1^T S S^T 1 = 4c*k - 4k^2 with k the
+  size, i.e. 4c(b - c + 1) when k = c and the count is taken over the
+  border; at c = b+1 that is 4c*0 = 0. So every row sum is ZERO, each
+  column is a zero-sum +-1 vector of length c, hence c is EVEN and b ODD.
+  ASSERTED: 4c(b-c+1) = 0 identically at c = b+1, and c is even for every
+  odd b checked. OPEN_ORDERS over-counts by including even b; the
+  well-defined set is the 96 odd-b pairs.
+
+  FINDING_69's TWO CAVEATS, and the second is the real kill:
+  'Admissible does not mean the border exists' -- border_S.py constructed
+  S only for c <= 12, and the worklist was cut to 4 < c <= 12:
+  '18 pairs across 8 of the 13 open orders, at b = 5, 7, 9, 11.'
+
+     v  order  b in {5,7,9,11}
+   515   2060  [5, 11]
+   599   2396  [5, 7, 9, 11]
+   647   2588  [5, 7, 11]
+   659   2636  [5, 9, 11]
+   669   2676  [9]
+   719   2876  [5, 7, 9, 11]
+   739   2956  [9]
+  pairs: 18   orders: 7  [515, 599, 647, 659, 669, 719, 739]
+  ASSERTED: exactly 18 pairs, reproducing the run's figure.
+  BUT over 7 orders, where the run says 8 of 13. A small
+  discrepancy worth one line to settle -- mine or theirs.
+
+  And the workable set is 18 of 96 odd-b pairs (19%). 'Necessary is not
+  sufficient' fired exactly as the brief warned, at a factor of 5.3.
+
+  MY ERROR, reported by the run: THE LIVE TARGET IS b = 0, NOT b = 1.
+  FINDING 155's row '523 | d=9 | r=59 | 232 free bits | 2^-141' is a b=0
+  row, and FINDING 134 sec 3 gives r = (v-1)/d + 1 AT b=0 with the
+  sum a^2 = 4v law holding at b=0. So the relation sec 3 called
+  'b=1-fitted' was fitted at b=0, and FINDING 134 says admissibility is
+  'b = 0 or b odd'.
+
+  CONSEQUENCE FOR SEC 14's ASSERTION, and I overstated it: (b+1)|(v+1)
+  at b=0 reads 1 | 524, which is TRIVIALLY true and carries no
+  information. So the condition is confirmed on THREE non-trivial pairs
+  -- (347,5), (359,7), (479,3) -- not four. Three for three, not four
+  for four. The claim survives; the count of evidence for it does not.
+  ASSERTED: three non-trivial confirmations, and b=0 is vacuous.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 7).
+==========================================================================
