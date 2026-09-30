@@ -99,8 +99,30 @@ value moves between your search and your fetch, **report both and gate on neithe
 earlier run has `65` at `SEARCH-SUMMARY` and notes *"no maintained table exists"* — establishing
 whether that is true is part of the task. Williamson matters more than its row suggests: a Williamson
 matrix of order *m* gives a Hadamard matrix of order 4*m*, so this table is directly adjacent to the
-only live target this project holds. Note also that Williamson orders have been attacked by SAT and
-computer-algebra methods, so the method sections are likely to be explicit about reach.
+only live target this project holds.
+
+**A run of a sibling brief has already spent calls here, so start from its findings rather than
+re-buying them.** All of the following is `SECONDARY-RELAYED` from Bright–Kotsireas–Heinle–Ganesh,
+*J. Symb. Comput.* 2019, read in full by that run, and from Bright–Kotsireas–Ganesh, AAAI 2018:
+
+* **Even orders.** SAT+CAS reached order **64** (AAAI 2018), extended in the 2019 journal version to
+  **orders ≤ 70 divisible by 2 or 3**. Earlier: Kotsireas–Koukouvinos, *JCMCC* 59, 2006, reach **18**.
+* **Odd orders.** **59** (2008) → **70** (2019), where the 2019 coverage is only orders divisible by
+  2 or 3 — so it does **not** settle odd orders up to 70.
+* **Method-class steps within the SAT line:** off-the-shelf SAT verified order **35** (MathCheck2,
+  CASC 2016); arithmetic-circuit SAT encodings found matrices only to about **30**; the CNF stage of
+  the AAAI paper **times out past order 50** at 100 hours.
+
+**And a live contradiction in those same authors' own work, which is the first thing to resolve.** The
+AAAI 2018 paper states that **no even-order enumeration existed before it**; the 2019 survey **cites
+Kotsireas–Koukouvinos 2006 as reaching order 18**. The sibling run flagged this and did not open the
+2006 primary. **Resolving it decides what "the smallest open odd order" even means**, because the
+coverage claims disagree about what has been enumerated. One fetch of the 2006 paper, or of the 2019
+survey's own citation of it, should settle it.
+
+Note what this leaves you: the reach figures are in hand, so your remaining calls should go to
+**(i) the odd-order frontier specifically** — 65 or something else — **(ii) whether a maintained table
+exists at all**, and **(iii) the 2006 contradiction.**
 
 **Table 7 — Steiner systems.** Record: **the smallest open admissible case in the most recent table
 found.** Never assessed at all. Look for a maintained table of known Steiner system existence
@@ -180,6 +202,12 @@ agents are working. Also **PackingStar** (arXiv:2511.13391), **X-evolve** (arXiv
 **Qiushi Engine** (arXiv:2609.35051, nineteen new kissing-number bounds at dimensions 25, 27, 32–39,
 43, 45, 49–55).
 
+**One distinction to hold, which Brief A got right without being told.** *"I found no source"* is not
+the same as *"there is no such thing."* If you cannot find a maintained table, say **"no maintained
+table located"** and give the hosts you tried — do **not** report that none exists. The same applies to
+a record's last move: an unfound method section gives `UNKNOWN`, which is an honest FAIL at S3, and is
+different from having established the move was `SEARCH-REPEAT`.
+
 ---
 
 ## 2. Budget
@@ -193,6 +221,13 @@ the specified record's current value and its date, (iii) find the paper that las
 **open its method section**. Step (iii) is what S3 needs and is the step the earlier run could never
 reach. If you must drop a step, drop (iii) and say so — an S3 of `UNKNOWN` is FAIL, correctly, and is
 still worth recording with the value at `SECONDARY-RELAYED`.
+
+## Report a call ledger. Brief A did this unasked and it is why its failures were diagnosable.
+
+With your output, give: **the number of calls used against the cap**, and **every failed call with its
+cause**. Brief A reported four failures — three arXiv rate limits and one refused URL — and those four
+lines are what identified the two fetch mechanics above. A run that reports "22 of 25 used" and names
+its failures is auditable; one that reports only findings is not.
 
 ---
 

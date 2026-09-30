@@ -173,9 +173,33 @@ it, and that is worth knowing about the instrument regardless of the record.
 
 ## 3. Budget
 
-**Stop after 15 searches-or-fetches**, roughly three per question. Report what you have and mark the
-rest NOT REACHED. **A partial report is a success.** Three questions answered at
-`SECONDARY-RELAYED` beats five answered at `SEARCH-SUMMARY`, because the second adds nothing to what
-is already on file.
+**Stop after 22 searches-or-fetches.** Report what you have and mark the rest NOT REACHED.
+
+**The cap was raised from 15, and the reason is a measurement rather than generosity.** A sibling
+brief ran with a cap of 25 and used 22 to cover roughly five topics at depth, with **four of its 22
+calls failing** — three arXiv rate limits and one refused URL. At that observed rate, five questions
+each needing *search a survey → open it → read its lower-bound section* do not fit in fifteen calls,
+and my original figure of "roughly three per question" was wrong.
+
+**Work the questions in this order and stop when the cap is reached.** The order is by how much the
+answer would change:
+
+1. **Q1, record 186** — highest value, because its FAIL rests on a cell tiered `RECALL`, the weakest
+   verdict in the whole arm, and because this is the literature the model lifting case comes from, so
+   the answer should be findable.
+2. **Q2, record 277** and **3. Q3, record 353** — the same question in two places.
+3. **Q4, record 375** — a weaker starting claim (*"not seen"*), but a sprawling literature.
+4. **Q5, record 385** — a different question, and the likeliest answer (only floating-point
+   computations exist) is a clean FAIL that changes nothing.
+
+**Three questions answered at `SECONDARY-RELAYED` with two marked NOT REACHED is the expected
+outcome and is a success.** Five answered at `SEARCH-SUMMARY` adds nothing to what is already on
+file.
+
+## Report a call ledger. A sibling brief did this unasked and it is why its failures were diagnosable.
+
+Give **the number of calls used against the cap** and **every failed call with its cause**. Those
+lines are what identified the two fetch mechanics above; a run that reports only findings cannot be
+audited the same way.
 
 **Do not recommend what to do next.** The five answers and their tiers are the deliverable.

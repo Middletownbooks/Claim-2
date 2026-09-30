@@ -178,6 +178,10 @@ STILL OPEN?  | <has the lagging side caught up since, or is the gap live?>
 NOTES        | <…>
 ```
 
+**Also report a call ledger** — calls used against the cap, and every failed call with its cause. The
+first run of this brief did that unasked, and its four failure lines are what identified the fetch
+mechanics above.
+
 Then, at the top of your reply:
 
 1. **Two derived lists** — entries that COUNT, and LEADS. Count them.

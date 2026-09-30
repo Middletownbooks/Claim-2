@@ -95,10 +95,27 @@ value moves between your search and your fetch, **report both and gate on neithe
 
 ## 1. The records. One pre-specified record per table; do not substitute a different one.
 
-**Table 9 — Costas arrays.** Record: **the smallest *n* with no known Costas array.** Never
-assessed. Costas enumeration is a well-documented computational frontier with published reaches per
-method, which makes it unusually good for S3 — and it may well produce a divergence for Brief A, so
-note any *"previous methods reached n = X"* sentence you meet even though it is out of scope here.
+**Table 9 — Costas arrays.** Record: **the smallest *n* with no known Costas array.**
+
+**A sibling brief has already largely answered the value, so do not re-buy it.** All
+`SECONDARY-RELAYED` from a 2011 review that run read:
+
+* **Exhaustive enumeration reaches order 29** — Drakakis–Iorio–Rickard–Walsh, *Adv. Math. Commun.*
+  5(3), 2011; the abstract reports **164 arrays at order 29** and **366.55 CPU-years**.
+* **A February 2026 paper still states that all Costas arrays have been enumerated only up to order
+  29**, so the frontier is live and has not moved in fifteen years.
+* Earlier step: the 1988 count (Silverman–Vickers–Mooney, *Proc. IEEE* 76(7)) was fitted to known
+  C(n) for **n ≤ 17**.
+* **A trap the sibling run caught:** an August 2026 preprint gives an exhaustive census of
+  **main-diagonal symmetric** Costas arrays for orders **37–42**. That is a **subclass**, not the full
+  enumeration, and reading it as the frontier would be wrong. If you meet it, say which object it
+  covers.
+
+**So your job on this table is not the value — it is the two gates the value does not answer.**
+**S3** needs the *method* of the 2011 enumeration read from its own text (is it a new search method or
+a bigger run of an earlier one?), and **S1** needs deciding: *"the smallest n with no known Costas
+array"* — is a Costas array at order *n* a witness whose exhibition moves a published bound, or is the
+tracked quantity a count? Spend your calls there.
 
 **Table 10 — bent functions.** Record: **the smallest number of variables whose bent-function count
 is unknown.** Never assessed. Watch the S1 gate carefully: *counting* bent functions in *n* variables
@@ -171,6 +188,12 @@ agents are working. Also **PackingStar** (arXiv:2511.13391), **X-evolve** (arXiv
 **Qiushi Engine** (arXiv:2609.35051, nineteen new kissing-number bounds at dimensions 25, 27, 32–39,
 43, 45, 49–55).
 
+**One distinction to hold, which Brief A got right without being told.** *"I found no source"* is not
+the same as *"there is no such thing."* If you cannot find a maintained table, say **"no maintained
+table located"** and give the hosts you tried — do **not** report that none exists. The same applies to
+a record's last move: an unfound method section gives `UNKNOWN`, which is an honest FAIL at S3, and is
+different from having established the move was `SEARCH-REPEAT`.
+
 ---
 
 ## 2. Budget
@@ -184,6 +207,13 @@ the specified record's current value and its date, (iii) find the paper that las
 **open its method section**. Step (iii) is what S3 needs and is the step the earlier run could never
 reach. If you must drop a step, drop (iii) and say so — an S3 of `UNKNOWN` is FAIL, correctly, and is
 still worth recording with the value at `SECONDARY-RELAYED`.
+
+## Report a call ledger. Brief A did this unasked and it is why its failures were diagnosable.
+
+With your output, give: **the number of calls used against the cap**, and **every failed call with its
+cause**. Brief A reported four failures — three arXiv rate limits and one refused URL — and those four
+lines are what identified the two fetch mechanics above. A run that reports "22 of 25 used" and names
+its failures is auditable; one that reports only findings is not.
 
 ---
 
