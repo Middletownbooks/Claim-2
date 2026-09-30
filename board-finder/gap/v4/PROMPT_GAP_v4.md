@@ -167,11 +167,25 @@ Part B says why.
 >
 > **Rules, and they are not negotiable.**
 >
-> * The label must come from the method section at **PRIMARY** tier. If you cannot get the method
->   section, the label is **UNDETERMINED** and the candidate is **not scored** — it goes to the
->   unverified pool with "obtain the method section of <paper>" as its promoting action. Do not infer
->   the label from how recent the last improvement was, or from what kind of paper it was: that
->   proxy has been measured on this board and classified **0 of 10** candidates.
+> * **Get the method text by targeted search, not by fetching the page.** A search query aimed at a
+>   paper's method — its algorithm name, its enumeration strategy, the phrase "we reduce the search
+>   to" — returns a bounded excerpt; a page fetch of an arXiv abstract page, a GitHub tree or a
+>   project site returns far more than you asked for and will exhaust your context before it
+>   exhausts your call budget. A prior run of this brief spent most of its context on **three**
+>   such fetches while the token cap it set never bound.
+> * **An unobtainable tier degrades the label; it does not delete the candidate.** Three grades,
+>   and say which you are using:
+>   * **PRIMARY** — you read the method section. The label stands.
+>   * **PROVISIONAL** — a survey, a database README or an abstract describes the method well enough
+>     to distinguish FLOPS from ALGORITHM. Tier it RELAYED, label it, and **rank the candidate with
+>     the label flagged.**
+>   * **UNDETERMINED** — nothing above that line is available. Only then does the candidate go to
+>     the pool, with "obtain the method section of <paper>" as its promoting action.
+>
+>   A run in which *every* candidate lands on UNDETERMINED has measured its own access, not the
+>   population, and should say so in those words.
+> * Do not infer the label from how recent the last improvement was, or from what kind of paper it
+>   was: that proxy has been measured on this board and classified **0 of 10** candidates.
 > * **FLOPS is a kill.** A better model does not add FLOPs.
 > * **Distinguish FLOPS from ALGORITHM explicitly**, and quote the sentence that decides it. The
 >   common case is a frontier paper whose enumeration is orders of magnitude smaller than the naive
@@ -195,7 +209,7 @@ Part B says why.
 > | **Q** | **Quantity** | Step 3 produced a tracked integer with two sides, each moved by a finite certificate. **KILL if NO-QUANTITY.** |
 > | **N** | **Nameable unknown set** | **Scored 1/3/5.** 5 = a finite, enumerable list of specific open instances below a known ceiling ("these thirteen orders", "n = 8, 9, 10"). 3 = a bounded region, enumerable in principle, not yet listed. 1 = an **unbounded tail**. **KILL at 1**, however perfect everything else is. This is not "is the parameter space rich" — a rich space with an open-tail unknown region is a frontier you arrive at late. |
 > | **W** | **Witness check** | **Scored 1–5.** 5 only if checking the object is **exact and one-directional** — arithmetic, symbolic algebra, finite-field linear algebra, bounded enumeration. Cap at 4 if it needs a solver's infeasibility verdict or floating point. Note that a solver's UNSAT *verdict* is not a *certificate*: say which one is available. |
-> | **R** | **Remedy** | Step 4's label, at PRIMARY tier. **KILL if FLOPS. Not scored if UNDETERMINED.** |
+> | **R** | **Remedy** | Step 4's label. **KILL if FLOPS** — at PRIMARY or PROVISIONAL tier alike. A PROVISIONAL label ranks, flagged. **Only UNDETERMINED leaves a candidate unscored**, and if that happens to every candidate, say plainly that the run measured its access rather than the population. |
 > | **H** | **Headroom** | The ratio of the region we could cover to the region published work covers, from a cost model with a **measured or cited rate** — not an estimate. Show the arithmetic. **KILL if H ≤ 1.** State the exponent: if cost is C(n,k) or similar, a factor in the region is a much smaller factor in the parameter. |
 > | **P** | **Prior** | Is there positive evidence **against** the object existing in the region we could reach? Look for it and say what you found. **KILL if yes.** (Absence of evidence either way is fine — that is the unswept case, which is what we want.) State the confound you checked: a region may look empty only because it was searched less, so compare coverage in the units that matter, not in instance counts. |
 > | **Δ** | **Deliverable** | Write, in one sentence each, the abstract line for the **positive** outcome and for the **null**. Then name **the table that changes**, with its current value and the date it last moved. **KILL if no table changes under either outcome.** The failure this catches: a search can succeed at its stated task and establish a fact about the wrong object — a null about two specific examples rather than about the recorded bound. |
@@ -362,6 +376,16 @@ Part B says why.
 | **five databases, not four, and "search for others"** | the fifth — `google-deepmind/formal-conjectures`, 1,403 open statements, an agent-guidelines file, a commit the same day — was surfaced by the operator within an hour of this prompt being written, by a search this prompt itself prescribed. The clause is no longer hypothetical |
 | **the Paper/ and Arxiv/ caveat** | that repository's Paper and Arxiv directories hold 108 open statements drawn from the primary literature, which is precisely the population Step 1 defines as off-list. 8% is not exhaustion, and it is the first measurement of the refuge shrinking rather than an assumption that it is safe |
 | **"report anything that contradicts this prompt"** | brief D refuted its own brief's §2 and that was the run's most valuable output; brief E's decisive fact came from the same clause rather than from any bar |
+
+### Dispatch precheck — one paragraph, run before sending any brief
+
+**Name the tier each kill requires, then ask whether the environment being dispatched to can supply
+it.** v4's first run failed on exactly this: Step 4 demanded a PRIMARY-tier method section, a chat
+instance cannot reliably fetch one, and four candidates that had cleared a tracked quantity, a
+nameable unknown set and exact checking all died UNDETERMINED at the same gate. The bar failed
+`FAIL-UNEARNED` and established nothing about the population. `D44` is a number that cannot fall
+and `D54` is a bar that cannot be evaluated; this is the same defect one level up, at the
+environment rather than the wording, and one paragraph catches it. See `D64`.
 
 ### Model
 
