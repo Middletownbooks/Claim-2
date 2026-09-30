@@ -3,6 +3,18 @@
 **30 Sep 2026.** Reopening a cell this board already failed. The analysis behind this is
 `ANALYSIS_CPRO1.md`; the structural computations are `costas_support.py` / `VERIFIED_OUTPUT.txt`.
 
+> **[CLOSED the same day, `../gap/discovery/RESULT_D_COSTAS.md`.] Phase 0 ran, the bar FAILED on
+> clause (a), and P-37 is CORRECT — but the plan's own premise was falsified and that is the real
+> result.** §2 below claims order 31's arrays are "necessarily sporadic" and builds a 5.00-bit
+> positive control on it. They are **W₀ arrays** — a Welch *p* = 31 array with a corner dot **added**
+> — and I had modelled corner *deletion* only. Re-verified locally: exactly 8 under the dihedral
+> group, matching the relayed count to the digit, and the run's explicit array lies in that class.
+> **So the control does not exist**; the nearest search frontier is order 22–23, **43.21 bits** below
+> the target, not 5.00. **Phase 1 is not run.** The cell closes on measured evidence — everything near
+> the frontier is constructible and orders 32/33 are where no construction lands — rather than on the
+> bar. Left standing below, unedited except this box, because the failure is in the *inference* from a
+> correct computation and that is the finding. Debt **D53**.
+
 ---
 
 ## 1. Why reopening is legitimate rather than a re-scope
@@ -136,7 +148,12 @@ than the evidence warrants if it is recorded alone.
 
 ## 5. Registered prediction
 
-**P-37.** Registered before phase 0 runs.
+**P-37. SCORED CORRECT** — the bar failed on clause (a), for the predicted reason: sporadic arrays
+turned out to be catalogued, not characterised, with Drakakis's own open-problems paper saying almost
+nothing is known about them. **A correct prediction that was nearly irrelevant**, since the cell was
+decided by evidence neither clause asked about.
+
+Registered before phase 0 ran:
 
 > **Predicted:** phase 0's bar **FAILS**, on clause (a) — no published structural characterisation of
 > sporadic Costas arrays that constrains a search will be found at `SECONDARY-RELAYED` or better.

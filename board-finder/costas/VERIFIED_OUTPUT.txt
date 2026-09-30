@@ -157,6 +157,14 @@ PART 6 -- coverage, independent of which fields PART 4 built
     cannot supply them, so the three orders have no Welch/Golomb array
     at any corner-deletion depth.
 
+  *** THE NEXT THREE PARAGRAPHS WERE WRONG. SEE PART 7. ***
+  *** Corner DELETION is not the only operator: a dot ADDED at a corner
+  *** also preserves the Costas property, and Welch p=31 plus one added
+  *** dot gives exactly the 8 known order-31 arrays. They are
+  *** CONSTRUCTIBLE, not sporadic. Retained unedited because the
+  *** computation was right and the INFERENCE from it was wrong, and
+  *** that distinction is the finding. See debt D53.
+
   Orders 32 and 33 are also the two smallest with no KNOWN Costas array
   (Drakakis 2011 -- SECONDARY-RELAYED via this project's B2 run, NOT
   verified here), while order 31 has >= 8 known arrays. Order 31 is in
@@ -165,3 +173,55 @@ PART 6 -- coverage, independent of which fields PART 4 built
     log2(31!) = 112.66 bits    log2(32!) = 117.66 bits    gap = 5.00 bits
 
 ALL CHECKS PASSED.
+
+PART 7 -- the correction: dot ADDITION, and the prime-power fields
+
+  Welch p=31: 240 arrays of order 30.
+  Plus one ADDED corner dot: 4 distinct Costas arrays of order 31, 8 under the dihedral group.
+  ASSERTED: exactly 8 -- one equivalence class, matching the relayed
+  'C(31) >= 8' exactly. The known order-31 arrays are CONSTRUCTIBLE.
+  ASSERTED: the explicit order-31 array brief D returned is Costas and
+  lies in that dihedral class, so it is a W0 array.
+
+  Closure under BOTH operators, seeded from Welch over primes < 60 and
+  Golomb over GF(p) plus GF(25), GF(27), GF(32): 10956 arrays, 8 rounds.
+
+    n  C(n) known  constructible  unexplained
+   24         200              8          192
+   25          88             48           40
+   26          56             36           20
+   27         204            192           12
+   28         712            712            0   <-- ZERO UNEXPLAINED
+   29         164            148           16
+   30           ?            664            ?
+   31           ?              8            ?
+   32           ?              0            ?   <-- UNREACHED
+   33           ?              0            ?   <-- UNREACHED
+
+  What survives, what dies:
+
+  SURVIVES -- orders 32 and 33 are still unreached, now under a strictly
+  LARGER operator set and more fields than PART 6 used. That conclusion
+  is stronger than before, not weaker.
+
+  SURVIVES -- order 30's constructible count is EXACTLY 664, matching the
+  relayed '>= 664 known at order 30' to the digit, and order 31's is
+  exactly 8. Two independent corroborations of the relayed figures.
+
+  DIES -- the 5-bit positive control. Order 31 is constructible, so no
+  search ever reached it and it cannot calibrate a search. The real
+  distances to order 32, all of them far larger:
+    order 23: log2(n!) =   74.45  ->  order 32 is 43.21 bits above   best heuristic from scratch (Adaptive Search, relayed)
+    order 27: log2(n!) =   93.14  ->  order 32 is 24.52 bits above   last UNEXPLAINED array (relayed)
+    order 29: log2(n!) =  102.80  ->  order 32 is 14.86 bits above   exhaustive enumeration frontier
+
+  AND THE REAL ARGUMENT AGAINST THE CELL, which is now measured:
+  order 28 is fully explained (712 of 712), order 30 fully explained
+  (664), order 31 fully explained (8), and order 29's 16-array residual
+  is exactly 2 equivalence classes x 8 -- matching the two order-29
+  classes brief D attributes to Rickard's periodicity method, a THIRD
+  construction not modelled here. So nothing near the frontier is
+  unexplained. Arrays above order 27 exist where a construction lands,
+  and orders 32 and 33 are precisely where none lands.
+
+PART 7 CHECKS PASSED.

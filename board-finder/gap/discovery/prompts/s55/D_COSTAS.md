@@ -1,5 +1,16 @@
 # Brief D — Costas arrays at order 32. Five reads, one registered bar.
 
+> **[RUN 30 Sep 2026 — `../../RESULT_D_COSTAS.md`. VERDICT `D: FAIL` on clause (a). AND §2 OF THIS
+> BRIEF IS FALSE.]** Kept unedited as the artefact that was actually sent. §2 instructs the reader to
+> **"Treat it as given"** that order 31's ≥ 8 arrays are "necessarily sporadic — somebody found them by
+> search", and builds a 5.00-bit positive control on it. **They are W₀ arrays — a Welch *p* = 31 array
+> with a corner dot *added*** — and the computation behind §2 modelled corner *deletion* only. The run
+> was told to treat the claim as given, **declined, and was right**; re-verified locally afterwards.
+> The unreachability of orders 32 and 33 survives and is stronger; the control does not exist. **Do not
+> reuse §2 as written.** Debt **D53**: a verified computation licenses only the claim it computes, and
+> the tier does not travel to the next sentence.
+
+
 **For a Sonnet 5.5 instance with web search, outside any repository.** You have no filesystem and no
 git. Everything you need is inline; your output is a document you return in the reply.
 

@@ -409,6 +409,14 @@ print("    ZERO arrays at all three orders. The unbuilt prime-power fields")
 print("    cannot supply them, so the three orders have no Welch/Golomb array")
 print("    at any corner-deletion depth.")
 print()
+print("  *** THE NEXT THREE PARAGRAPHS WERE WRONG. SEE PART 7. ***")
+print("  *** Corner DELETION is not the only operator: a dot ADDED at a corner")
+print("  *** also preserves the Costas property, and Welch p=31 plus one added")
+print("  *** dot gives exactly the 8 known order-31 arrays. They are")
+print("  *** CONSTRUCTIBLE, not sporadic. Retained unedited because the")
+print("  *** computation was right and the INFERENCE from it was wrong, and")
+print("  *** that distinction is the finding. See debt D53.")
+print()
 print("  Orders 32 and 33 are also the two smallest with no KNOWN Costas array")
 print("  (Drakakis 2011 -- SECONDARY-RELAYED via this project's B2 run, NOT")
 print("  verified here), while order 31 has >= 8 known arrays. Order 31 is in")
@@ -420,3 +428,214 @@ print(f"    log2(31!) = {l31:.2f} bits    log2(32!) = {l32:.2f} bits"
       f"    gap = {l32-l31:.2f} bits")
 print()
 print("ALL CHECKS PASSED.")
+
+
+# ---------------------------------------------------------------- PART 7
+# CORRECTION. Brief D (a Sonnet 5.5 chat run, 30 Sep 2026) falsified PART 6's
+# closing inference, and it was right.
+#
+# PART 6 concluded that because no Welch/Golomb array reaches order 31 by corner
+# DELETION, the >= 8 known order-31 arrays "are necessarily sporadic -- somebody
+# found them by search", and built a 5-bit positive control on that. The brief
+# reported instead that they are W0 arrays: a Welch p=31 array with a corner dot
+# ADDED. Addition is a second operator that also preserves the Costas property,
+# and I never modelled it. The computation was correct; the inference drawn from
+# it was not, because it generalised from "unreachable by the operator I
+# implemented" to "unreachable by any construction".
+#
+# PART 7 adds the missing operator and the missing fields, and re-runs the whole
+# question. Two results survive and one dies.
+
+def add_corner(perm, c):
+    """A dot added at a corner of an enlarged grid. The Costas property is NOT
+    automatic here -- unlike deletion -- so every result is tested."""
+    n = len(perm)
+    if c == 'TL': return [0] + [r + 1 for r in perm]
+    if c == 'BL': return [n] + list(perm)
+    if c == 'TR': return [r + 1 for r in perm] + [0]
+    if c == 'BR': return list(perm) + [n]
+    raise ValueError(c)
+
+# --- Golomb over GF(p^k) for non-prime prime powers, which PART 4 omitted.
+# Irreducibility is DERIVED, not recalled: F_p[x]/(f) is a field iff it holds an
+# element of multiplicative order p^k - 1.
+import itertools
+
+def _polymulmod(a, b, f, p):
+    k = len(f) - 1
+    r = [0] * (len(a) + len(b) - 1)
+    for i, x in enumerate(a):
+        if x:
+            for j, y in enumerate(b):
+                r[i + j] = (r[i + j] + x * y) % p
+    for i in range(len(r) - 1, k - 1, -1):
+        c = r[i]
+        if c:
+            r[i] = 0
+            for j in range(k + 1):
+                r[i - k + j] = (r[i - k + j] - c * f[j]) % p
+    return tuple(r[:k] + [0] * (k - len(r[:k])))
+
+def golomb_gf(p, k):
+    """All Golomb G2 arrays of order p^k - 2 over GF(p^k)."""
+    q = p ** k
+    one = tuple([1] + [0] * (k - 1))
+    field = None
+    for tail in itertools.product(range(p), repeat=k):
+        f = list(tail) + [1]
+        prims = []
+        for coeffs in itertools.product(range(p), repeat=k):
+            g = tuple(coeffs)
+            if all(c == 0 for c in g):
+                continue
+            x, order = g, 1
+            while x != one and order <= q:
+                x = _polymulmod(list(x), list(g), f, p); order += 1
+            if x == one and order == q - 1:
+                prims.append(g)
+        if prims:
+            field = (f, prims); break
+    if field is None:
+        return []
+    f, prims = field
+    out = []
+    for a in prims:
+        pa, x = {}, a
+        for i in range(1, q):
+            pa[i] = x; x = _polymulmod(list(x), list(a), f, p)
+        for b in prims:
+            pb, x = {}, b
+            for j in range(1, q):
+                pb[j] = x; x = _polymulmod(list(x), list(b), f, p)
+            logb = {v: j for j, v in pb.items()}
+            perm, ok = [None] * (q - 2), True
+            for i in range(1, q - 1):
+                t = tuple((one[m] - pa[i][m]) % p for m in range(k))
+                if all(c == 0 for c in t):
+                    ok = False; break
+                j = logb.get(t)
+                if j is None or j > q - 2:
+                    ok = False; break
+                perm[i - 1] = j - 1
+            if ok and sorted(perm) == list(range(q - 2)):
+                out.append(perm)
+    return out
+
+print()
+print("PART 7 -- the correction: dot ADDITION, and the prime-power fields")
+print()
+
+# (i) The order-31 arrays are W0, not sporadic.
+p = 31
+w1_31 = [welch_shift(p, g, c) for g in primitive_roots(p) for c in range(1, p)]
+add31 = [h for a in w1_31 for c in ('TL', 'BL', 'TR', 'BR')
+         if is_costas(h := add_corner(a, c))]
+orb31 = set()
+for h in add31:
+    orb31 |= dihedral(h)
+print(f"  Welch p=31: {len(w1_31)} arrays of order 30.")
+print(f"  Plus one ADDED corner dot: {len(set(map(tuple, add31)))} distinct Costas "
+      f"arrays of order 31, {len(orb31)} under the dihedral group.")
+assert len(orb31) == 8, len(orb31)
+print("  ASSERTED: exactly 8 -- one equivalence class, matching the relayed")
+print("  'C(31) >= 8' exactly. The known order-31 arrays are CONSTRUCTIBLE.")
+
+# The array brief D returned, 1-indexed, must lie in that class.
+BRIEF_D_31 = [1,28,20,27,17,18,21,30,26,14,9,25,11,31,29,23,5,13,6,16,15,12,3,
+              7,19,24,8,22,2,4,10]
+bd = [r - 1 for r in BRIEF_D_31]
+assert sorted(bd) == list(range(31)) and is_costas(bd)
+assert tuple(bd) in orb31
+print("  ASSERTED: the explicit order-31 array brief D returned is Costas and")
+print("  lies in that dihedral class, so it is a W0 array.")
+
+# (ii) Full closure under BOTH operators, over every field that matters.
+seeds = set()
+for q in BASE_PRIMES:
+    rs = primitive_roots(q)
+    for g in rs:
+        for c in range(1, q):
+            seeds.add(tuple(welch_shift(q, g, c)))
+    for a in rs:
+        for b in rs:
+            x = golomb(q, a, b)
+            if x is not None:
+                seeds.add(tuple(x))
+for (pp, kk) in [(5, 2), (3, 3), (2, 5)]:
+    for a in golomb_gf(pp, kk):
+        seeds.add(tuple(a))
+
+seen, frontier, rounds = set(), set(seeds), 0
+while frontier and rounds < 80:
+    rounds += 1
+    nxt = set()
+    for s in frontier:
+        if s in seen:
+            continue
+        seen.add(s); L = list(s)
+        if len(s) > 3:
+            for c in corners(L):
+                nxt.add(tuple(delete_corner(L, c)))
+        if len(s) < 40:
+            for c in ('TL', 'BL', 'TR', 'BR'):
+                h = add_corner(L, c)
+                if is_costas(h):
+                    nxt.add(tuple(h))
+    frontier = nxt - seen
+closure = {}
+for s in seen:
+    closure.setdefault(len(s), set()).update(dihedral(list(s)))
+
+print()
+print(f"  Closure under BOTH operators, seeded from Welch over primes < "
+      f"{max(BASE_PRIMES)+1} and")
+print(f"  Golomb over GF(p) plus GF(25), GF(27), GF(32): {len(seen)} arrays, "
+      f"{rounds} rounds.")
+print()
+FULL = {20: 6464, 21: 3536, 22: 2052, 23: 872, 24: 200, 25: 88, 26: 56,
+        27: 204, 28: 712, 29: 164}
+print(f"  {'n':>3} {'C(n) known':>11} {'constructible':>14} {'unexplained':>12}")
+for n in range(24, 34):
+    got = len(closure.get(n, ()))
+    k = FULL.get(n)
+    if k is None:
+        print(f"  {n:>3} {'?':>11} {got:>14} {'?':>12}"
+              + ("   <-- UNREACHED" if got == 0 else ""))
+    else:
+        print(f"  {n:>3} {k:>11} {got:>14} {k-got:>12}"
+              + ("   <-- ZERO UNEXPLAINED" if k - got <= 0 else ""))
+
+print()
+print("  What survives, what dies:")
+print()
+print("  SURVIVES -- orders 32 and 33 are still unreached, now under a strictly")
+print("  LARGER operator set and more fields than PART 6 used. That conclusion")
+print("  is stronger than before, not weaker.")
+assert not closure.get(32) and not closure.get(33)
+print()
+print("  SURVIVES -- order 30's constructible count is EXACTLY 664, matching the")
+print("  relayed '>= 664 known at order 30' to the digit, and order 31's is")
+print("  exactly 8. Two independent corroborations of the relayed figures.")
+assert len(closure[30]) == 664, len(closure[30])
+assert len(closure[31]) == 8, len(closure[31])
+print()
+print("  DIES -- the 5-bit positive control. Order 31 is constructible, so no")
+print("  search ever reached it and it cannot calibrate a search. The real")
+print("  distances to order 32, all of them far larger:")
+for n, lab in [(23, "best heuristic from scratch (Adaptive Search, relayed)"),
+               (27, "last UNEXPLAINED array (relayed)"),
+               (29, "exhaustive enumeration frontier")]:
+    b = math.lgamma(n + 1) / math.log(2)
+    print(f"    order {n}: log2(n!) = {b:7.2f}  ->  order 32 is "
+          f"{117.66 - b:5.2f} bits above   {lab}")
+print()
+print("  AND THE REAL ARGUMENT AGAINST THE CELL, which is now measured:")
+print("  order 28 is fully explained (712 of 712), order 30 fully explained")
+print("  (664), order 31 fully explained (8), and order 29's 16-array residual")
+print("  is exactly 2 equivalence classes x 8 -- matching the two order-29")
+print("  classes brief D attributes to Rickard's periodicity method, a THIRD")
+print("  construction not modelled here. So nothing near the frontier is")
+print("  unexplained. Arrays above order 27 exist where a construction lands,")
+print("  and orders 32 and 33 are precisely where none lands.")
+print()
+print("PART 7 CHECKS PASSED.")

@@ -185,6 +185,38 @@ re-scoped afterwards.
 > **Queue:** brief D is the active item. Options 3 (*b* > 2 Hadamard), 4 (277/353, brief C) and 6
 > (EinsteinArena) unchanged; 5 (239/345) still pending S55 results that have never appeared.
 
+> **[30 Sep 2026 — brief D ran, `../gap/discovery/RESULT_D_COSTAS.md`. COSTAS ORDER 32 IS CLOSED, and
+> the box above it was wrong.]** `D: FAIL` on clause (a) — no structural characterisation of sporadic
+> arrays exists — and **P-37 is CORRECT**. But the verdict is the least of it.
+>
+> **The premise I wrote into the brief as "treat it as given" was false, and the run refused it.** The
+> order-31 arrays are not sporadic: they are **W₀ arrays**, a Welch *p* = 31 array with a corner dot
+> **added**. My computation modelled corner *deletion* only. Re-verified locally in
+> `../costas/costas_support.py` PART 7: exactly **8** under the dihedral group, matching the relayed
+> count to the digit, and the run's explicit array lies in that class. **So the 5.00-bit positive
+> control — the entire reason this cell was reopened — does not exist.** The nearest search frontier is
+> order 22–23, **43.21 bits** below the target. Phase 1 was not run. **D53**.
+>
+> **What survives is a better argument than the bar's, and it is measured.** Closing the seeds under
+> *both* operators and over GF(25), GF(27) and GF(32) as well: order 28 is **712 of 712**
+> constructible, order 30 is **exactly 664**, order 31 is **exactly 8**, and order 29's 16-array
+> residual is **exactly 2 × 8** — matching the two order-29 classes the run attributes to Rickard's
+> periodicity method, a third construction I had not modelled. **Nothing near the frontier is
+> unexplained; the last unexplained array is at order 27.** Arrays above 27 exist where a construction
+> lands, and **32 and 33 are precisely where none lands.** Two of those counts match relayed figures to
+> the digit, from computations that were not fitted to them.
+>
+> **And one of my two headline arguments against the cell was withdrawn, not confirmed.** CPro1's
+> Table 4 strategies belong to its seven *solved* design types, so "the model already wrote DFS and it
+> was not enough" is unsupported — what CPro1 generated for Costas is not established. The
+> "sustained development" quote is in its §1, not §5.
+>
+> **This is the fourth gate on this board whose verdict and whose decisive finding came from different
+> questions** (D47's pattern, now one level up: the bar tested the right thing and the evidence arrived
+> through the report-anything-contradictory clause). **Queue:** options 3 (*b* > 2 Hadamard), 4
+> (277/353, brief C) and 6 (EinsteinArena) unchanged; 5 (239/345) still pending S55 results that have
+> never appeared. No active item.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
