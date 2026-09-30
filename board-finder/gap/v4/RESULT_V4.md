@@ -42,8 +42,11 @@ The run supplies the fix, in its own methodology note:
 > rather than fetching pages."*
 
 Three fetches — the formal-conjectures stats page, the GitHub README, the Epoch problem page — "used
-most of the context", while the token cap the run set never bound. **`D55` for the third time, and
-the first time with a remedy rather than an observation.**
+most of the context". And the run's commentary is sharper than its report on *why*: the three fetches
+**"ignored the token cap I set"**. That is not a cap that failed to bind, it is a cap that was **not
+enforced**, which changes the remedy: the fix is not a lower limit but a *different retrieval verb*.
+**`D55` for the third time, and the first with a mechanism and a remedy rather than an
+observation.**
 
 ## 2. P-42, scored
 
@@ -152,6 +155,43 @@ score is one hit.**
 | *"the site shows 2,200 solved, not 2,202"* | **both right.** The repository at `7d450ef` gives **2,202**; the site shows 2,200. The run's own inference — *"the site may lag the repository"* — is the correct resolution |
 | *"'Arxiv holds 37 open statements' may confuse a file count with an open-statement count"* | **sound suspicion, wrong cause.** 37 open statements distributed across 37 files as 12 files with none, 18 with one, 4 with two, 2 with three, 1 with five — summing to 37. **A genuine coincidence**, and one command settled it |
 | *"the site's per-collection file counts sum to exactly 1,403"* | **a real imprecision of mine.** My brief said *"1,662 Lean files"*; that is the **repo-wide** count including the mathlib-support, test and util directories. **`FormalConjectures/` itself holds 1,416.** The conjecture collection is 1,416 files carrying 1,403 open and 2,202 solved statements |
+
+**And the run's commentary supplies the figure that reconciles all of this.** The site shows
+**3,603 statements**, and 1,403 + 2,200 = 3,603 exactly. The repository also carries **1,869**
+`test` and **197** `textbook` category lines, so *the site's "statements" total counts only `research
+open` plus `research solved`*. Every number on both sides is now accounted for, and the only
+residual is the 2,200/2,202 and 177/182 lag between site and repository — which the run had already
+diagnosed as the site trailing the repo.
+
+## 4a. The clearance the run could not do, done here
+
+The run's own closing line is *"every surviving candidate is therefore uncleared against the
+lists"*, and it gives the reason: *"GitHub's directory pages block automated access, and the site's
+browse page loads its list in the browser."* **That is a division of labour rather than a dead end
+— this session has the repository cloned.** Checked at commit `7d450ef`,
+`PRIMARY-VERIFIED-LOCALLY`, with file names printed rather than counts:
+
+| pool candidate | search terms | in formal-conjectures? |
+|---|---|---|
+| Hill's conjecture, cr(K₁₃) | `crossing number`, `Hill` | **no.** `crossing number` returns **zero files**. The `Hill` hits are unrelated — `FlintCooksonHills.lean` and three Erdős entries |
+| Zarankiewicz crossing number | `Zarankiewicz` | **no**, and this needed care. Two files match, `ErdosProblems/714` and `765`, and **both are the Zarankiewicz *extremal* problem, not the crossing-number conjecture** — their citations are Kővári–Sós–Turán 1954 and Reiman 1958, the extremal problem's canonical references. Two distinct conjectures share the name |
+| skew-Hadamard open orders | `skew-Hadamard`, `skew_Hadamard`, `SkewHadamard` | **no.** Zero files |
+| Hirsch ladder | `Hirsch`, `prismatoid`, `polytope diameter` | **no.** Zero files on all three |
+
+**So all four clear the largest of the agent-facing databases.** Two cautions, both mandatory:
+
+* **This is one list of eight.** They remain uncleared against HorizonMath's 113 problems,
+  TheoremDB, the **34 of 49** FM:OP entries the run could not read, the EinsteinArena board, and the
+  three enumerations this run itself surfaced. Clearing an aggregator is worth more than clearing one
+  of its inputs, and it is still not clearance.
+* **Absence is not evidence of being uncontested.** Cap sets are absent from this repository and
+  demonstrably crowded by X-evolve. The Hirsch candidate is the live case: absent here, and worked by
+  **two** AI groups in 2025.
+
+**And the name-collision is the transferable finding.** `Zarankiewicz` matches two different
+conjectures, and a run that had cleared on the count alone would have recorded a false hit on its
+own top-of-pool candidate. That is the same failure that made `SIC` return 185 files and `Rota`
+return 11 earlier the same day — **third instance, and the fix is identical: print the files.**
 
 ## 5. Four new candidates, and one of them is the register's missing cell
 
