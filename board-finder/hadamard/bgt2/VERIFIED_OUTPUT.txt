@@ -278,3 +278,59 @@ ALL ASSERTIONS PASSED (part 3).
 ==========================================================================
 ALL ASSERTIONS PASSED (part 4).
 ==========================================================================
+
+==========================================================================
+11. 2004 is NOT open, and 1004's status sharpens rather than resolves
+==========================================================================
+  The claim circulating on the web -- '2004 is the first open order above
+  2000' -- is FALSE, and one line settles it:
+    2003 is prime: True   2003 mod 4 = 3
+  Paley I builds H(q+1) for q = 3 (mod 4) a prime power, so H(2004)
+  follows immediately. ASSERTED. The smallest open order above 2000 is
+  2060, per FINDING_05's thirteen.
+
+  1004: hoa64's own closed-form families (replicated in
+  ../../playability/hoa64/coverage.py) return NOT REACHABLE for 1004,
+  and hoa64 ships no matrix for it. That is exactly how 1212 and 1940
+  behave -- and hoa64's README names 1212 and 1940 as its remaining
+  sub-2000 gaps while OMITTING 1004.
+
+  So 1004 is a THIRD unshipped, closed-form-unreachable order below 2000
+  that the README does not list. My recall of 1004 as a classical open
+  order is therefore NOT refuted; it is mildly supported, because 1004
+  behaves identically to the two orders the README calls gaps.
+  STILL UNRESOLVED: whether 1004 is open, closed by a construction
+  hoa64 does not implement, or missing from the README by oversight.
+
+  A NOTE ON MY OWN TEST: I first asserted that Alpoge's twelve must come
+  back UNREACHABLE from coverage.py. They come back REACHABLE, because
+  the function treats the shipped CSVs as a source. The code is right and
+  my expectation was wrong -- reachable-by-library is not
+  reachable-by-construction, and conflating them is how 1004 would get
+  silently reclassified.
+
+==========================================================================
+12. 'Cannot be KNOWN' is not 'cannot EXIST' -- operator correction
+==========================================================================
+  HADAMARD_CROSS.md sec 8 argues: a Williamson quadruple of order m hands
+  you H(4m), so H(716) and H(892) being open until 2026 proves W(179) and
+  W(223) were NOT KNOWN. That inference is valid.
+
+  It does NOT follow that they do not EXIST, and sec 8's 'dead on arrival'
+  overstates it. OPERATOR-SUPPLIED: W(65) is still an open question, so
+  the DECIDED Williamson frontier sits below 65 and higher orders are
+  undecided rather than refuted.
+
+  What the routes actually need, and the distance is the cost statement
+  clause (b) should test:
+    W(103) would close 2060 and 2884    --  38 orders beyond 65
+    W(179) would close 2148 (v=537)     -- 114 orders beyond 65
+    W(223) would close 2676 (v=669)     -- 158 orders beyond 65
+
+  So the route is not dead; it is a WILLIAMSON SEARCH at an order 38 to
+  158 beyond the decided frontier. That is a cost, not an impossibility,
+  and it is a different claim from the one sec 8 makes.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 5).
+==========================================================================

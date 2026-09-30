@@ -389,6 +389,34 @@ re-scoped afterwards.
 > held: every arithmetic claim I derived reproduces the repo's own independently — worth something, not a
 > finding.
 
+> **[30 Sep 2026 — two operator corrections, and the second reverses a retraction.
+> `../hadamard/bgt2/derive.py` §§11–12.]**
+>
+> **"2004 is the first open order above 2000" is FALSE and circulates on the web.** 2003 is prime and
+> ≡ 3 (mod 4), so **Paley I gives H(2004)** immediately. `PRIMARY-VERIFIED-LOCALLY`. **The smallest open
+> order above 2000 is 2060**, as FINDING_05 has it.
+>
+> **1004 is a third gap in hoa64's library that its README does not list.** hoa64's own closed-form
+> families, replicated in `../playability/hoa64/coverage.py`, return **NOT REACHABLE** for 1004 and no
+> matrix is shipped — **exactly how 1212 and 1940 behave**, which the README *does* name as its remaining
+> sub-2000 gaps. So my recall of 1004 as a classical open order is **not refuted**, it is mildly
+> supported. Still unresolved whether it is open, closed by a construction hoa64 omits, or a README
+> oversight; one lookup.
+>
+> **And the retraction overshot.** `../playability/HADAMARD_CROSS.md` §8 correctly infers that W(179) and
+> W(223) were **not known** — H(716) and H(892) were open until 2026 and W(*m*) hands you H(4*m*). Its
+> conclusion that the routes are *"dead on arrival"* does **not** follow: **not known is not cannot
+> exist.** With **W(65) still open** (`OPERATOR-SUPPLIED`), the *decided* Williamson frontier sits below
+> 65 and W(103), W(179), W(223) are **undecided**, at **38, 114 and 158 orders beyond** it. **The route is
+> a Williamson search at a large distance — a cost, not an impossibility.**
+>
+> **So brief E v2's clause (b) is reworded** to test that cost rather than inherit a retraction: a
+> bordered construction at *b* ≥ 3 passes iff it needs **no** Williamson/GS quadruple, **or** one at an
+> order **within the decided frontier**. And Q2 now also asks for the frontier itself as a citable number.
+>
+> **Two near-misses in one document, in opposite directions** — §§2–3 too optimistic, §8 too pessimistic.
+> Recorded as the reason to read a retraction as critically as the claim it retracts (D56, lesson 31).
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,

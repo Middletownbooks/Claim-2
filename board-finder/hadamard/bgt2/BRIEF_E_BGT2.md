@@ -55,8 +55,24 @@ and Kronecker closure** (necessary condition, passes). The five **composite** *v
 > *H*(412) being known is **consistent with W(103) not existing**.
 
 **Hold that argument's shape, because it is the best move on this board and it is already made:
-Alpöge's twelve solved matrices are used as evidence about which Williamson orders CANNOT exist.** A
-solved order at 4*m* that was open until 2026 proves W(*m*) was not available.
+Alpöge's twelve solved matrices are evidence about which Williamson orders were NOT KNOWN.** A solved
+order at 4*m* that was open until 2026 proves W(*m*) was not available.
+
+> **But §8 overstates it, and this is an operator correction you must carry.** *Not known* is not
+> *cannot exist*. **W(65) is still an open question** (`OPERATOR-SUPPLIED`), so the **decided** Williamson
+> frontier sits below 65 and higher orders are **undecided rather than refuted**. So §8's *"dead on
+> arrival"* is too strong: the route is not dead, it is **a Williamson search at an order well beyond the
+> decided frontier**. `PRIMARY-VERIFIED-LOCALLY` arithmetic on the distance:
+>
+> | object | would close | orders beyond 65 |
+> |---|---|---|
+> | W(103) | 2060 **and** 2884 | **38** |
+> | W(179) | 2148 (*v* = 537) | **114** |
+> | W(223) | 2676 (*v* = 669) | **158** |
+>
+> **That is a cost, not an impossibility**, and it is a different claim from the one §8 makes. Treat §8 as
+> establishing *"these ingredients are not on the shelf"* and **not** as establishing they are
+> unobtainable.
 
 **So the question this brief exists to ask is whether the border axis escapes that.** A naive free-bit
 count points at *v* = 721 (192 free bits, 24 fewer than the order Alpöge solved) — and 721's route is
@@ -69,10 +85,14 @@ clothing, option 3 is dead for the reason already on file.**
 (*v*, *b*) pair **admissible**, whether the 126+ count is **computed or typed**, any upper bound on *b*,
 and whether "all 13 orders" is FINDING_05's thirteen. Confirm or correct §1.
 
-**Q2. Is the border axis independent of the Williamson/GS axis?** Given §2: does a bordered construction
-at *b* ≥ 3 need a Williamson or GS quadruple as an ingredient, or does it not? **If it does, §8's
-non-existence argument applies to it and the region inherits the retraction.** If it does not, say what
-it needs instead. **This is the question that decides the brief** and it is a read, not a computation.
+**Q2. Does the border axis need an ingredient beyond the decided Williamson frontier?** Given §2: does a
+bordered construction at *b* ≥ 3 need a Williamson or GS quadruple, and **at what order**? If it needs
+W(*m*) for *m* far beyond the decided frontier, the region reduces to the same search §8 was really
+describing and buys nothing. If it needs none, or needs one at a **decided** order, it is a genuinely
+different axis. **Also establish the frontier itself: what is the largest *m* for which W(*m*) is decided
+either way, and is 65 open?** (Williamson non-existence is known for some small orders — 35, 47, 53, 59
+by `RECALL` — so the frontier is a real, citable number.) **This is the question that decides the brief**
+and it is a read, not a computation.
 
 **Q3. Has anything screened *b* ≥ 3 since?** `../PLAN_2092.md` read ~15 of **163** findings and is dated.
 How many exist now, and has any screened, entered, settled or abandoned *b* ≥ 3? **Was `FINDING_155`'s
@@ -99,13 +119,14 @@ in Q1 and measure in Q4, in that order.**
 > **PASS iff all three hold:**
 > **(a)** `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` confirms the *b* > 2 pairs are at the **thirteen open orders**, and gives the
 > admissibility condition; **and**
-> **(b)** a bordered construction at *b* ≥ 3 **does not** require a Williamson or GS quadruple as an
-> ingredient — i.e. the border axis escapes `../../playability/HADAMARD_CROSS.md` §8's non-existence argument; **and**
+> **(b)** a bordered construction at *b* ≥ 3 either needs **no** Williamson or GS quadruple, **or** needs
+> one at an order **within the decided Williamson frontier** — so the region does not reduce to a
+> Williamson search tens of orders beyond it; **and**
 > **(c)** no finding since `../PLAN_2092.md` has screened, entered, settled or abandoned *b* ≥ 3, **and**
 > `FINDING_155`'s ranking was scoped to a single *b*.
 >
-> **FAIL on any one.** Clause (b) is the decision: an axis that inherits the retraction is not a new
-> region.
+> **FAIL on any one.** Clause (b) is the decision: an axis whose ingredient is a Williamson search 38 to
+> 158 orders beyond the decided frontier is not a new region, whatever its free-bit count says.
 
 **`E: VOID`** remains available on positive sourced evidence that "all 13 orders" means hoa64's **solved**
 thirteen rather than FINDING_05's open thirteen. §1 makes that unlikely; it costs nothing to keep.
@@ -146,9 +167,18 @@ FINDING_05's thirteen is an **inference from co-location**, not a reading. §2 i
 these is wrong it outranks the verdict.**
 
 One thing is verified and you should use it rather than re-derive it: hoa64's 13 matrices are genuinely
-Hadamard, checked in exact integer arithmetic in this repository. One thing is unresolved and small: my
-recalled sub-2000 open list had **1004** where hoa64 ships **1852**, and whether 1004 is open,
-closed-but-unshipped, or misremembered is **not established**. Say if you can settle it.
+Hadamard, checked in exact integer arithmetic in this repository.
+
+**Two corrections to the record, both `PRIMARY-VERIFIED-LOCALLY`, that you should not re-derive.**
+
+* **"2004 is the first open order above 2000" is FALSE** and circulates on the web. 2003 is prime and
+  ≡ 3 (mod 4), so **Paley I gives H(2004) immediately.** The smallest open order above 2000 is **2060**.
+* **1004 is a third gap in hoa64's library that its README does not list.** hoa64's own closed-form
+  families, replicated in `../../playability/hoa64/coverage.py`, return **NOT REACHABLE** for 1004, and no
+  matrix is shipped — **exactly how 1212 and 1940 behave**, which the README *does* name as its remaining
+  sub-2000 gaps. So my recall of 1004 as a classical open order is **not refuted**; it is mildly
+  supported. **Still unresolved:** whether 1004 is open, closed by a construction hoa64 does not
+  implement, or omitted from the README by oversight. **Settle it if you can — it is one lookup.**
 
 ## 8. What to return
 

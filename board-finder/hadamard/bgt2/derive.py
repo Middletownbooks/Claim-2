@@ -441,3 +441,73 @@ print()
 print("=" * 74)
 print("ALL ASSERTIONS PASSED (part 4).")
 print("=" * 74)
+
+
+# ---------------------------------------------------------------- 11. 1004 and 2004
+print()
+print("=" * 74)
+print("11. 2004 is NOT open, and 1004's status sharpens rather than resolves")
+print("=" * 74)
+def isprime_simple(m):
+    if m < 2: return False
+    if m % 2 == 0: return m == 2
+    i = 3
+    while i * i <= m:
+        if m % i == 0: return False
+        i += 2
+    return True
+
+print("  The claim circulating on the web -- '2004 is the first open order above")
+print("  2000' -- is FALSE, and one line settles it:")
+print(f"    2003 is prime: {isprime_simple(2003)}   2003 mod 4 = {2003 % 4}")
+assert isprime_simple(2003) and 2003 % 4 == 3
+print("  Paley I builds H(q+1) for q = 3 (mod 4) a prime power, so H(2004)")
+print("  follows immediately. ASSERTED. The smallest open order above 2000 is")
+print("  2060, per FINDING_05's thirteen.")
+print()
+print("  1004: hoa64's own closed-form families (replicated in")
+print("  ../../playability/hoa64/coverage.py) return NOT REACHABLE for 1004,")
+print("  and hoa64 ships no matrix for it. That is exactly how 1212 and 1940")
+print("  behave -- and hoa64's README names 1212 and 1940 as its remaining")
+print("  sub-2000 gaps while OMITTING 1004.")
+print()
+print("  So 1004 is a THIRD unshipped, closed-form-unreachable order below 2000")
+print("  that the README does not list. My recall of 1004 as a classical open")
+print("  order is therefore NOT refuted; it is mildly supported, because 1004")
+print("  behaves identically to the two orders the README calls gaps.")
+print("  STILL UNRESOLVED: whether 1004 is open, closed by a construction")
+print("  hoa64 does not implement, or missing from the README by oversight.")
+print()
+print("  A NOTE ON MY OWN TEST: I first asserted that Alpoge's twelve must come")
+print("  back UNREACHABLE from coverage.py. They come back REACHABLE, because")
+print("  the function treats the shipped CSVs as a source. The code is right and")
+print("  my expectation was wrong -- reachable-by-library is not")
+print("  reachable-by-construction, and conflating them is how 1004 would get")
+print("  silently reclassified.")
+
+# ---------------------------------------------------------------- 12. not known vs cannot exist
+print()
+print("=" * 74)
+print("12. 'Cannot be KNOWN' is not 'cannot EXIST' -- operator correction")
+print("=" * 74)
+print("  HADAMARD_CROSS.md sec 8 argues: a Williamson quadruple of order m hands")
+print("  you H(4m), so H(716) and H(892) being open until 2026 proves W(179) and")
+print("  W(223) were NOT KNOWN. That inference is valid.")
+print()
+print("  It does NOT follow that they do not EXIST, and sec 8's 'dead on arrival'")
+print("  overstates it. OPERATOR-SUPPLIED: W(65) is still an open question, so")
+print("  the DECIDED Williamson frontier sits below 65 and higher orders are")
+print("  undecided rather than refuted.")
+print()
+print("  What the routes actually need, and the distance is the cost statement")
+print("  clause (b) should test:")
+for m, orders in ((103, "2060 and 2884"), (179, "2148 (v=537)"), (223, "2676 (v=669)")):
+    print(f"    W({m:>3}) would close {orders:<16} -- {m - 65:>3} orders beyond 65")
+print()
+print("  So the route is not dead; it is a WILLIAMSON SEARCH at an order 38 to")
+print("  158 beyond the decided frontier. That is a cost, not an impossibility,")
+print("  and it is a different claim from the one sec 8 makes.")
+print()
+print("=" * 74)
+print("ALL ASSERTIONS PASSED (part 5).")
+print("=" * 74)
