@@ -597,6 +597,37 @@ re-scoped afterwards.
 >
 > **Blocked on one input: which conjecture.**
 
+> **[30 Sep 2026 — THE SESSION'S CONCLUSION INVERTS, on one sentence from the operator. D58, lesson 39.]**
+>
+> Both of this programme's results came from **targets the selection layer had already named.** The
+> Ochem–Zelinsky error came from working **queue item 239**; the Chow counterexample came from a problem
+> **previously identified as having LLM potential** — new Rota rank-5 findings. **They did not bypass the
+> screen. They came out of it.**
+>
+> **So my framing across this whole session was wrong**, and wrong in the direction that flattered a
+> conclusion I had already begun recommending: that selection was the useless half and working-a-problem
+> the productive one. **The corrected finding is sharper and less comfortable.**
+>
+> > **The screen fed two results and scored itself zero**, because its success criterion is *"a candidate
+> > survives S0–S5 and then moves a record"* — and **neither result is a record move.** 239's bars B-1 and
+> > B-2 asked whether to attack the 10¹⁵⁰⁰ record and both FAILED, while working the item produced **an
+> > error in a published algorithm's program.** The Rota work produced **a refuted conjecture.** No bar on
+> > this board has a category for either.
+>
+> **0-of-7 measures the scoring vocabulary, not the selection.** The instrument was productive while
+> reporting itself barren, and the tally cannot tell the difference.
+>
+> **The recommendation reverses: keep the selection, fix the scoring.** A gate outcome must be able to
+> record *outcomes of working the target* — an error found in a cited program, a conjecture refuted, a
+> bound reproduced and found wrong — not only *"record moved"*. That is D58 action (iv), and it comes
+> before widening anything else.
+>
+> **And one question decides which instrument to keep.** Which screen identified Rota rank 5 as having LLM
+> potential? **If it was the playability screen rather than SELECT v1, then the screen that worked is the
+> one that was not driving the queue** — `../gap/RESULT_RETRODICTION_P40.md` §3 already records that
+> INTERESTINGNESS's **P1** class would have taken Chow's Conjecture 2 while SELECT v1 could not represent
+> it. D58 action (v), one question.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
