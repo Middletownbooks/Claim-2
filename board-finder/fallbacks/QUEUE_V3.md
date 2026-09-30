@@ -82,6 +82,30 @@ re-scoped afterwards.
 > **Queue now: U13 alone, still pending S55.** C-1, C-2 and C-3 are all struck. 239 and 345 unchanged,
 > pending S55. All three bars tested crowding and none was decided by it — **D47**.
 
+> **[30 Sep 2026 — U13 deferred by the operator; the queue is empty and the inventory below is what
+> is left.]** U13 is **not killed** — it returns if and when the Hadamard thread runs its course. So
+> the queue has no active item, and the honest position is that the 499-record corpus is exhausted
+> (two screens, a 106-record mapping, and arm 1's 19 `II` records at **0 of 19** full-bar survivors)
+> and the record-table seam is nearly so.
+>
+> **What is left is not a new seam. It is two instruments that stopped on budget rather than on
+> evidence, and one of them is the only generative one ever designed.**
+>
+> | # | option | status | why it is still live |
+> |---|---|---|---|
+> | 1 | **Arm 2b, the divergence search (P-35)** | **never ran** | `../gap/RESULT_ARM2_TABLES.md` §4: the worker read 67 AlphaEvolve problem pages and 10 notebooks and was cut off at a concurrency cap before recording **any** entry. *"The instrument did not run, which is different from running and returning nothing."* The only screen designed to **generate** rather than filter. |
+> | 2 | **Arm 2 tables 6–10** — Williamson, Steiner systems, difference sets, Costas arrays, bent functions | **never assessed** | Same §1: worker stopped at the concurrency cap and search budget. *"A full run could only raise the count."* These are the design-theory seam `../../proof-protocol/ledger.json` lesson 22 found absent from the 499, and `../gap/discovery/RESULT_GATE_C1.md` §6 established they are **not on EinsteinArena's board** either. |
+> | 3 | **The *b* > 2 Hadamard region** | open question, never asked | This document's own fifth candidate: 126+ admissible (*v*, *b*) pairs with *b* > 2 across the thirteen open orders, and orders 669 and 721 *"never screened or settled by anything in this repository."* Needs no new literature and sits **inside the live thread**. |
+> | 4 | **277** 3-uniform hypergraph Ramsey growth, **353** Turán number of even cycles | `CE`, unevaluated | `../gap/RESULT_ARM1_II.md` §2 returns both as CANNOT EVALUATE for one reason — *"could not check for a lifting theorem."* `CE` counts as FAIL and should; but these two are unevaluated rather than refuted, and it is one literature check each. |
+> | 5 | **239** odd perfect number, **345** Erdős–Szekeres | pending S55 | The S55 result documents have **still not appeared on this branch.** Their fate is unknown and is not assumed. |
+> | 6 | **Enter EinsteinArena rather than hunt private targets** | route change, never considered | Four cells on its Table 1 carry AlphaEvolve's number with no platform improvement: circles in a square *n* = 26, difference bases, Heilbronn triangles *n* = 11, Thomson *n* = 282. Public downloadable verifiers, a live leaderboard and an API. **H, Δ and crowding are all published continuously** — exactly what every failed gate on this board needed and could not get until after paying for the search. |
+>
+> **One caveat that applies to 1 and 2.** `../gap/RESULT_ARM2_TABLES.md` §3 registers a scoping fix
+> that has not been applied: **crowding should be scoped to the table, not the record.** Under it all
+> three of arm 2's survivors die and arm 2 returns 0 — and options 1 and 2 must be screened at table
+> level too. The instrument for that now exists and is free: EinsteinArena's Table 1 plus the
+> AlphaEvolve problem repository.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
