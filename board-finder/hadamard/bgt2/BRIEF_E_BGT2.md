@@ -1,8 +1,16 @@
 # Brief E (v2) — does the border-width axis offer anything the Williamson axis does not?
 
-**For a Claude Code instance with (i) read access to `Cooperative-AI-Defense`, branch
-`claude/hadamard-matrix-methods-vs79hi`, and (ii) a clone of `github.com/bbeartheancient/hoa64`.**
-Without both, say which you lack and answer what you can — that is a clean partial result.
+**For a Claude Code instance with (i) read access to `Middletownbooks/Cooperative-AI-Defense`, branch
+`claude/hadamard-matrix-methods-vs79hi` — a PRIVATE repository, so this must be granted deliberately —
+and (ii) a clone of `github.com/bbeartheancient/hoa64`.** Without both, say which you lack and answer
+what you can; **that is a clean partial result, not a failure.** Q1 and Q3 need (i); Q4 needs (ii).
+
+> **Routing note.** The programme's dedicated Hadamard worker runs against a *different* private
+> repository and so cannot answer Q1 or Q3. **Q2 has been split out** into
+> `Q2_FOR_HADAMARD_WORKER.md` and put to that worker directly, because it holds the Williamson frontier
+> from its own W(65) work. **If that question comes back "yes, a bordered construction needs W(m) for m
+> far beyond the decided frontier", clause (b) fails and this brief should not be run at all.** Check
+> whether it has been answered before spending your budget.
 
 > **v1 of this brief is superseded and `PRECHECK_E.md` says why.** It was written in ignorance of prior
 > work two directories away in this same repository, and three of its findings were already on file with
