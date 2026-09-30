@@ -217,6 +217,43 @@ re-scoped afterwards.
 > (277/353, brief C) and 6 (EinsteinArena) unchanged; 5 (239/345) still pending S55 results that have
 > never appeared. No active item.
 
+> **[30 Sep 2026 — brief C answered TWICE, independently and by accident,
+> `../gap/discovery/RESULT_C_ARM1_CELLS.md`. The replication outranks the verdicts.]**
+> **Arm 1's 0 of 19 stands and is now better founded.** 277 and 353 move CANNOT EVALUATE → **FAIL**,
+> 375's *"not seen"* becomes an established absence, 186's FAIL loses its `RECALL` basis, and 385
+> **splits between the runs**. Option 4 is spent; nothing was resurrected.
+>
+> **The replication is the first robustness measurement any instrument on this board has had.** The two
+> runs opened sixteen sources with an **overlap of two**, answered every question from a different
+> paper — Hunter against EHPS, Conlon–Fox–Sudakov against Mubayi–Suk, Füredi–Naor–Verstraëte against
+> Füredi–Simonovits, Ostromoukhov against Pillichshammer — and **agreed on four of five verdicts
+> anyway.** Both also independently built the same Lieb–Thirring float control and independently
+> flagged that Q2's and Q4's labels each cover several quantities.
+>
+> **Three instrument findings, and each is worth more than a verdict.**
+> * **D54 — P-31 A-1 is not evaluable as worded.** Its threshold fires when a run *"issues a verdict on
+>   a bar it could not evaluate"*; standing rule 1 tells every run to do exactly that. The two runs
+>   split precisely here and **both were compliant**. Not redrawn (D44); A-1 stays OPEN, and brief C is
+>   not in its reserved slice so nothing is scored. The cost rule 1 hides: it erases the difference
+>   between an absence *established* and one a run says it **did not earn** — and run 2's more
+>   disciplined answer gets no credit for it.
+> * **D55 — the brief budgets calls and context is what binds.** Run 1 spent 22 of 22; run 2 stopped at
+>   **18**, saying further large PDFs *"risk swamping the report"*. The cap was tuned twice on
+>   call-failure rates, i.e. on the wrong resource.
+> * **S1 COUPLED cannot tell a constant from an order.** Both runs reported *two* readings rather than
+>   choosing: a real lifting theorem exists for 186 and for 375's *d* = 1 constant, and it moves a
+>   constant — run 1 measured its own Q4 find at **0.61%**. The `STRENGTH` field added at dispatch is
+>   what surfaced this. A clause that passes on a 0.61% constant is not measuring what this board wants.
+>
+> **And D50 is confirmed and defused at once.** Its access remedy has now run three times — Costas plus
+> these five cells, twice — and **every cell died anyway, on evidence. Three of three.** The access
+> failure was real; the hope that it concealed survivors is not supported.
+>
+> **Queue:** option 4 spent. What remains is **3 (the *b* > 2 Hadamard region)**, **5 (239/345, still
+> pending S55 results that have never appeared)** and **6 (enter EinsteinArena)**. Option 3 needs no
+> literature access at all, which after three access-remedied cells dying on evidence is now the
+> relevant property.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
