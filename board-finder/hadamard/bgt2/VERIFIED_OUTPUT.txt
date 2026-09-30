@@ -146,3 +146,83 @@ ALL ASSERTIONS PASSED.
 ==========================================================================
 ALL ASSERTIONS PASSED (part 2).
 ==========================================================================
+
+==========================================================================
+7. b IS A BORDER WIDTH. Operator-supplied, 30 Sep 2026.
+==========================================================================
+  Section 5's refutation stands and is now explained: b is not a block
+  count at all, so the b = 4 (mod 8) derivation was about the wrong
+  object. The definition, OPERATOR-SUPPLIED (not read from the source):
+
+    b is a BORDER WIDTH. A bordered example is a border of width b
+    around a core. b must be ODD. Of Alpoge's 12 examples, 7 are
+    bordered; the majority of those are b=1, and there is one each
+    at b=3, b=5, b=7.
+
+  FORCED DECOMPOSITION of the 12, and it is self-consistent:
+    unbordered            5
+    b = 1                 4   <- majority of the 7 bordered, as stated
+    b = 3, 5, 7           3   (one each)
+    total                12
+
+  CONSEQUENCE 1 -- b odd means 'b > 2' is 'b >= 3'. There is no b = 2,
+  4, 6 case, so the region is b in {3, 5, 7, 9, ...}.
+
+  CONSEQUENCE 2, and it reverses the queue entry's framing:
+  THE REGION IS NOT UNSWEPT. Alpoge has one example at each of b = 3,
+  5 and 7 -- the method the whole worklist is modelled on has already
+  produced objects there. That is worse news than 'virgin territory'
+  and much better news than it sounds, because it supplies what the
+  Costas cell fatally lacked: GENUINE POSITIVE CONTROLS INSIDE THE
+  REGION, solved instances found by the method in question.
+
+==========================================================================
+8. free_bits in its cleanest form, and what it predicts for a border
+==========================================================================
+  ASSERTED on all six rows:   free_bits = 4(v-1)/d
+  i.e. four bits per orbit, and the orbit count is (v-1)/d.
+
+  HYPOTHESIS, and it is the OPPOSITE of the one section 5 offered:
+  a border of width b removes rows and columns from the core, so the
+  core is smaller and carries FEWER free parameters. If free_bits
+  scales with the core rather than with v, then LARGER b IS CHEAPER,
+  not dearer. That is a mechanism for why anyone would flag b > 2 as
+  an opportunity, and it is the reverse of what I guessed last time.
+
+  FALSIFIER, one number: the free-bit or density figure of Alpoge's
+  b = 3, 5 and 7 examples against his b = 1 examples at comparable
+  order. If free bits fall as b rises, the region is cheaper and the
+  queue entry is live. If they do not, it is not. I am NOT asserting
+  the scaling -- section 5 is what happens when I assert one.
+
+==========================================================================
+9. Where '126+ admissible (v, b) pairs with b > 2' could come from
+==========================================================================
+  Unconstrained count: 13 orders x (odd b from 3 up to B).
+     B  odd b in [3,B]   x 13 orders
+     3               1            13
+     5               2            26
+     7               3            39
+     9               4            52
+    11               5            65
+    13               6            78
+    15               7            91
+    17               8           104
+    19               9           117
+    21              10           130   <-- first B reaching 126
+    23              11           143
+    25              12           156
+    27              13           169
+    29              14           182
+
+  So 126+ is consistent with b running to about 21 across 13 orders,
+  with a few pairs inadmissible. OFFERED AS A CONSISTENCY OBSERVATION,
+  NOT A DERIVATION: I do not know the admissibility condition for a
+  bordered core, so I cannot compute the real count. What this does
+  give the brief is a shape to check the source's number against, and
+  a specific question -- what is the upper bound on b, and what makes
+  a (v, b) pair admissible?
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 3).
+==========================================================================

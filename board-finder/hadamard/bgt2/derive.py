@@ -262,3 +262,90 @@ print()
 print("=" * 74)
 print("ALL ASSERTIONS PASSED (part 2).")
 print("=" * 74)
+
+
+# ---------------------------------------------------------------- 7. b DEFINED
+print()
+print("=" * 74)
+print("7. b IS A BORDER WIDTH. Operator-supplied, 30 Sep 2026.")
+print("=" * 74)
+print("  Section 5's refutation stands and is now explained: b is not a block")
+print("  count at all, so the b = 4 (mod 8) derivation was about the wrong")
+print("  object. The definition, OPERATOR-SUPPLIED (not read from the source):")
+print()
+print("    b is a BORDER WIDTH. A bordered example is a border of width b")
+print("    around a core. b must be ODD. Of Alpoge's 12 examples, 7 are")
+print("    bordered; the majority of those are b=1, and there is one each")
+print("    at b=3, b=5, b=7.")
+print()
+# the decomposition this forces, checked for consistency
+bordered, b357 = 7, 3
+b1 = bordered - b357
+unbordered = 12 - bordered
+assert b1 == 4 and unbordered == 5
+assert b1 > b357, "b=1 must be the majority of bordered examples"
+print(f"  FORCED DECOMPOSITION of the 12, and it is self-consistent:")
+print(f"    unbordered            {unbordered}")
+print(f"    b = 1                 {b1}   <- majority of the {bordered} bordered, as stated")
+print(f"    b = 3, 5, 7           {b357}   (one each)")
+print(f"    total                {unbordered + b1 + b357}")
+print()
+print("  CONSEQUENCE 1 -- b odd means 'b > 2' is 'b >= 3'. There is no b = 2,")
+print("  4, 6 case, so the region is b in {3, 5, 7, 9, ...}.")
+print()
+print("  CONSEQUENCE 2, and it reverses the queue entry's framing:")
+print("  THE REGION IS NOT UNSWEPT. Alpoge has one example at each of b = 3,")
+print("  5 and 7 -- the method the whole worklist is modelled on has already")
+print("  produced objects there. That is worse news than 'virgin territory'")
+print("  and much better news than it sounds, because it supplies what the")
+print("  Costas cell fatally lacked: GENUINE POSITIVE CONTROLS INSIDE THE")
+print("  REGION, solved instances found by the method in question.")
+
+# ---------------------------------------------------------------- 8. free bits, cleanest form
+print()
+print("=" * 74)
+print("8. free_bits in its cleanest form, and what it predicts for a border")
+print("=" * 74)
+for v in sorted(TABLE):
+    ds, d, r, D, fb, lg, den = TABLE[v]
+    assert fb == 4 * (v - 1) // d, (v, fb, 4*(v-1)//d)
+print("  ASSERTED on all six rows:   free_bits = 4(v-1)/d")
+print("  i.e. four bits per orbit, and the orbit count is (v-1)/d.")
+print()
+print("  HYPOTHESIS, and it is the OPPOSITE of the one section 5 offered:")
+print("  a border of width b removes rows and columns from the core, so the")
+print("  core is smaller and carries FEWER free parameters. If free_bits")
+print("  scales with the core rather than with v, then LARGER b IS CHEAPER,")
+print("  not dearer. That is a mechanism for why anyone would flag b > 2 as")
+print("  an opportunity, and it is the reverse of what I guessed last time.")
+print()
+print("  FALSIFIER, one number: the free-bit or density figure of Alpoge's")
+print("  b = 3, 5 and 7 examples against his b = 1 examples at comparable")
+print("  order. If free bits fall as b rises, the region is cheaper and the")
+print("  queue entry is live. If they do not, it is not. I am NOT asserting")
+print("  the scaling -- section 5 is what happens when I assert one.")
+
+# ---------------------------------------------------------------- 9. where 126 could come from
+print()
+print("=" * 74)
+print("9. Where '126+ admissible (v, b) pairs with b > 2' could come from")
+print("=" * 74)
+print("  Unconstrained count: 13 orders x (odd b from 3 up to B).")
+print(f"  {'B':>4} {'odd b in [3,B]':>15} {'x 13 orders':>13}")
+for B in range(3, 30, 2):
+    k = len(range(3, B + 1, 2))
+    tot = 13 * k
+    flag = "   <-- first B reaching 126" if tot >= 126 and 13 * (k - 1) < 126 else ""
+    print(f"  {B:>4} {k:>15} {tot:>13}{flag}")
+print()
+print("  So 126+ is consistent with b running to about 21 across 13 orders,")
+print("  with a few pairs inadmissible. OFFERED AS A CONSISTENCY OBSERVATION,")
+print("  NOT A DERIVATION: I do not know the admissibility condition for a")
+print("  bordered core, so I cannot compute the real count. What this does")
+print("  give the brief is a shape to check the source's number against, and")
+print("  a specific question -- what is the upper bound on b, and what makes")
+print("  a (v, b) pair admissible?")
+print()
+print("=" * 74)
+print("ALL ASSERTIONS PASSED (part 3).")
+print("=" * 74)

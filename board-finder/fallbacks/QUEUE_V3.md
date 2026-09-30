@@ -290,6 +290,37 @@ re-scoped afterwards.
 > was described here as needing "no new literature", and that is right — it needs a *repository* this
 > instance cannot see.
 
+> **[30 Sep 2026, same day — the operator supplied the definition of *b*, and it reverses this entry.
+> Brief E revised before dispatch; `../hadamard/bgt2/BRIEF_E_BGT2.md` §1.]**
+> ***b* is a BORDER WIDTH, and it must be odd.** So my block-count reading was about the wrong object
+> entirely — the *b* ≡ 4 (mod 8) derivation above is true of block counts and irrelevant here — and
+> **"*b* > 2" means "*b* ≥ 3"**, with no *b* = 2, 4 or 6 case existing.
+>
+> **This entry called the region "un-swept". It is not.** Of **Alpöge's 12 examples, 7 are bordered**:
+> 5 unbordered, **4 at *b* = 1, and one each at *b* = 3, 5 and 7** (decomposition forced and asserted in
+> `../hadamard/bgt2/derive.py` §7). **The method the whole worklist is modelled on has already produced
+> objects in the region.**
+>
+> **That is the best news on this board in two weeks, and not for the obvious reason.** It supplies what
+> the Costas cell fatally lacked: **positive controls inside the region** — three solved instances, found
+> by the method in question, at the disputed parameter values. Costas died because its apparent control
+> at order 31 proved *constructible* and so was never reached by search. **These three were reached.**
+>
+> **The brief now turns on one number**, and its hypothesis is the reverse of my first: a border removes
+> rows and columns, so a wider border means a **smaller core and fewer free parameters — larger *b* may
+> be CHEAPER.** Falsifier: the free-bit or density figures of Alpöge's *b* = 3, 5, 7 examples against his
+> *b* = 1 examples. Clause (c) of the bar is exactly that comparison.
+>
+> Also derived: **`free_bits = 4(v−1)/d` exactly on all six worklist rows** — four bits per orbit — which
+> is the cleanest form of the relation and is not stated in `../hadamard/PLAN_2092.md`. And 126+ pairs is
+> consistent with *b* running to about 21 across thirteen orders, offered as a shape to check rather than
+> a derivation.
+>
+> **P-38 revised before dispatch and its expected failure clause now REVERSED**, from (a)/(b)
+> bookkeeping to **(c)**: the region is demonstrably occupied, so the live question is whether it is
+> cheaper, and I expect not — a worklist ranked by a validated density estimator would already point at
+> *b* = 7 if it were.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
