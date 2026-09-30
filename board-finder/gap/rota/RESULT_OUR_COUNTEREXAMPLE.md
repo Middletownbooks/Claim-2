@@ -1,4 +1,11 @@
-# The programme's own C(3) counterexample, verified end to end — and it is not Allikvere's
+# The C(3) counterexample, verified end to end — and it is not Allikvere's
+
+> **[Attribution and count, corrected 30 Sep 2026.]** This was produced by **the operator working with a
+> Claude instance** — the note's own wording is *"the work was carried out with AI assistance"*, which is
+> the right order. My repeated phrasing elsewhere, "a capable instance working the code produced",
+> overstates the instance's part. **And this is the same result as the "near-miss on a twenty-year-old
+> conjecture" recorded earlier**, not a second one: I described one piece of work twice, from two
+> sources, and briefly counted it twice in D58. The programme has **two** external results, not three.
 
 **`verify_ours.py`, all assertions passing.** Every claim in the note sent to Dr Chow (August
 2026) was re-derived here from the axioms rather than taken on trust. **All of them hold.**
