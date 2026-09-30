@@ -54,8 +54,8 @@ self-report.** Three consequences, none of them repairable by a register:
 2. **Every figure the rows cite is re-derived** in `register_arithmetic.py` — 39 assertions, all
    passing — from the stated inputs rather than copied from the document that claims it. That
    discharges Cycle 0's "with the arithmetic re-derived here" clause and nothing more.
-3. **Two rows rest on work that left no trace here at all** (A4's sibling-repository sweep, A8), at
-   `SECONDARY-RELAYED` and `OPERATOR-SUPPLIED`. This is `D56`'s escalation: work done in a sibling
+3. **Three rows rest on work that left no trace here at all** (A4's sibling-repository sweep, A6's
+   handoff to the Hadamard worker, A8), at `SECONDARY-RELAYED` and `OPERATOR-SUPPLIED`. This is `D56`'s escalation: work done in a sibling
    instance is invisible to any check that reads this repository. The register marks those cells; it
    cannot fill them.
 
@@ -154,15 +154,25 @@ lesson was paid for.
 
 | field | value |
 |---|---|
-| date, mode | 26 Sep 2026 · Claude Code |
-| depth | **transfer audit built and locally verified** — PAF invariants, exhaustive small-order search, two-square admissibility, Monte Carlo density coefficients; the target was never entered |
-| **binding constraint** | **UNRESOLVED, and that is this row's content.** Two propositions were identified and neither was decided: *(i) with two blocks instead of four, the meet-in-the-middle neighbourhood shrinks by a factor of M²*; *(ii) halving the free bits while holding the equation count fixed may empty the orbit ansatz altogether at the orders of interest.* The document names (ii) as the one that decides port-versus-rebuild. **It was never computed.** |
-| costed estimate | the M² shrinkage is derived; the orbit-ansatz occupancy at the orders of interest is not |
-| claims made | the shared PAF condition and the descent `PRIMARY-VERIFIED-LOCALLY`; the port-versus-rebuild verdict **`assumed`, and it is the load-bearing one** |
-| **shape** | **UNDETERMINED.** The one computation that would assign this field was specified and not run. |
+> **[CORRECTED 30 Sep 2026, and this row was wrong in the way the register exists to prevent.]** I
+> first wrote this row as **UNDETERMINED**, on the strength of `../../doptimal/README.md`'s summary
+> line — *"may empty the orbit ansatz altogether at the orders of interest"* — **without opening
+> either `../../doptimal/PROMPT_U13_TRANSFER.md` §3.2 or `../../doptimal/VERIFIED_OUTPUT.txt`, in the
+> same directory.** Both were computed. The row below is the corrected version; what the error cost
+> is in §5 and in `D56`.
 
-Where: `../../doptimal/README.md`, `../../doptimal/PROMPT_U13_TRANSFER.md`,
-`../../doptimal/transfer_check.py`. This is the register's only actionable row — see §5.
+| field | value |
+|---|---|
+| date, mode | 26 Sep 2026 · Claude Code · **then handed to the Hadamard worker instance**, which is what `../../doptimal/PROMPT_U13_TRANSFER.md` is (`OPERATOR-SUPPLIED`, 30 Sep) |
+| depth | **transfer audit built, locally verified, and handed off** — PAF invariants, exhaustive small-order search to *v* = 11, two-square admissibility over the six worklist orders, Monte Carlo density coefficients at four *v*. The D-optimal target itself was never entered **here**; whether the worker has since answered the audit is not visible in this repository. |
+| **binding constraint** | **Two-block admissibility, and it is already established at the orders of interest.** The two-circulant D-optimal design needs *a*² + *b*² = 4*v* − 2, solvable only when every prime ≡ 3 (mod 4) divides 2*v*−1 to an even power. **Of the six orders on the Hadamard worklist it holds for exactly one** (*v* = 643); `../../doptimal/VERIFIED_OUTPUT.txt` §3 gives the two-block orbit ansatz as *admissible: none* for *v* = 487, 523, 571, 659, 739. Formally: *at five of the six orders this apparatus is pointed at, there is no admissible two-block ansatz to empty.* Independently, §3.2's model log₂ E[#sol] ≈ (*r*−1)(*k* − *b*/2) with *b* measured by Monte Carlo gives a *k* = 2 coefficient **falling from +0.57 at v = 67 to +0.26 at v = 151**, crossing zero at *b* = 4 bits/equation — *"which the 2-block column reaches somewhere in the low hundreds of v"*, i.e. exactly where the interesting orders are. |
+| costed estimate, re-derived | the *M*² endgame shrinkage is derived in §3.3; the two-squares filter and the exhaustive small-order counts (0 designs at *v* = 11, 392 at *v* = 7, 1944 at *v* = 9) are in `../../doptimal/VERIFIED_OUTPUT.txt` §2 |
+| claims made | §1 invariants, the two-squares filter, the exhaustions and the admissibility table `PRIMARY-VERIFIED-LOCALLY`; **§3.2's extrapolation past *v* = 151 is `assumed`** and the audit says so in its own words — *"a crude model doing load-bearing work, and I would rather have it corrected than agreed with"* |
+| **shape** | **THEORY-SHAPED, provisionally.** *"Engine yes, dimension-reduction no"* — the orbit reduction, the piece that makes the Hadamard instances tractable, is the piece that does not transfer, so D-optimal has to be searched closer to full space, which is how the published searches work. Provisional because the confirmation at the target orders was handed off and its answer is not on file here. |
+
+Where: `../../doptimal/PROMPT_U13_TRANSFER.md` §§3.1–3.5, `../../doptimal/VERIFIED_OUTPUT.txt`,
+`../../doptimal/transfer_check.py`, `../../doptimal/README.md`. **Not the register's actionable row —
+see §5 for what replaced it.**
 
 ### A7. Chow's Conjecture 2 — C(3) at rank 4 · **a result**
 
@@ -239,10 +249,13 @@ make the register look complete while answering none of its questions.
 
 | shape | rows | which |
 |---|---:|---|
-| **THEORY-SHAPED** | **5** | A1 PTE 11 · A2 PTE rings · A3 Costas 32 · A4 Hadamard *b*>2 · A5 H(2060) |
+| **THEORY-SHAPED** | **6** | A1 PTE 11 · A2 PTE rings · A3 Costas 32 · A4 Hadamard *b*>2 · A5 H(2060) · A6 D-optimal U13 (provisionally — *"engine yes, dimension-reduction no"*) |
 | **COMPUTE-SHAPED** | **1** | A8 record 239 — *and the compute is already spent, privately, by the record's own authors, 700 orders of magnitude ahead* |
-| **UNDETERMINED** | **1** | A6 D-optimal U13 — the deciding computation was never run |
 | **NEITHER** | **1** | A7 Chow C(3) — priority |
+
+> **[The count moved from 5 to 6 on 30 Sep 2026.]** A6 was first entered as UNDETERMINED from a
+> summary line; the underlying audit had computed it. The correction **strengthens** §4.1's finding
+> and weakens my standing as its author, which is the right way round for it to be wrong.
 
 Cycle 0 says of this field: *"Claude Code multiplies compute-shaped constraints and does almost
 nothing for theory-shaped ones. A problem whose prior run stalled on encoding theory is not made
@@ -250,7 +263,12 @@ tractable by a longer run."*
 
 **Filled in, the field says the programme has been selecting targets whose constraints its tooling
 does not relieve.** One attempted target of eight had a compute-shaped constraint, and it was held
-privately by the people who set the record. This is a statement about the **targets**, not about the
+privately by the people who set the record. **Six of eight were theory-shaped, and one of those six
+was selected *because* we were already tooled for it** — `../../fallbacks/QUEUE_V3.md` ranks U13 first
+on the ground that *"the algorithmic-idea gap, if there is one, is one we are already tooled for"*.
+Tooling adjacency is not evidence that a constraint is compute-shaped, and A6 is the row that shows
+it: the apparatus is shared, the orders are not, and the dimension reduction is the part that does
+not carry. This is a statement about the **targets**, not about the
 screen's gates and not about its scoring vocabulary — which makes it independent of, and a good deal
 sharper than, the 0-of-7 tally. `LEDGER` lesson 39 established that 0-of-7 measures the scoring
 vocabulary; this says something 0-of-7 cannot: that even a perfect screen over this population would
@@ -304,21 +322,47 @@ lesson 41: a prompt is not an instrument until its inputs exist.
 
 ---
 
-## 5. The one thing this register makes actionable
+## 5. What is actionable, and what my first answer to that got wrong
 
-**A6.** Every other row records a constraint that has already bound. A6 records a constraint that was
-**named and never evaluated**, on a target that was ranked *first* in the v3 queue:
+**First version of this section, retracted.** I wrote that A6 was the register's one actionable row
+because its deciding computation *"was specified and not run"*, and registered `P-41` predicting the
+orbit ansatz would come back empty. Both rested on `../../doptimal/README.md`'s phrase *"may empty the
+orbit ansatz altogether"*. **The audit in the same directory had computed it**, and
+`../../doptimal/VERIFIED_OUTPUT.txt` §3 already gives the two-block ansatz as *admissible: none* at
+five of the six orders of interest.
 
-> Does halving the free bits while holding the equation count fixed **empty the orbit ansatz** at the
-> D-optimal orders of interest?
+**Three things follow, and none of them flatter the register.**
 
-`../../doptimal/PROMPT_U13_TRANSFER.md` §3.2 names it as the question that decides port-versus-rebuild,
-and `../../doptimal/transfer_check.py` already holds the PAF machinery to answer it. It is one
-computation. Until it runs, the top-ranked queue candidate carries an `assumed` edge on its
-load-bearing claim — which is exactly the failure mode Cycle 0's *"none inherited as established"*
-clause was written against, occurring inside the register that clause belongs to.
+**(i) `P-41` was not blind.** It predicted "empty at every order of interest" against evidence sitting
+in a file I had not opened, in the directory I was citing. A prediction made against evidence already
+on file measures nothing about foresight. It is marked **void-as-registered** in the ledger rather than
+scored, and not re-worded — `D44`'s rule is that bands are not redrawn after the answer is visible,
+and the same discipline applies to a prediction whose blindness fails.
 
----
+**(ii) The failure is `D56`'s, occurring inside the register built to discharge `D56`.** A document
+that exists, resolves, and is never consulted — and this time the unconsulted document was two files
+along from the one I cited, so no access limit, no sibling instance and no missing repository explains
+it. It is also `LEDGER` lesson 41 a second time: *"specified"* read exactly like *"performed"*, and
+now a README's *"may"* read exactly like *"has not been"*. **A summary line is a claim about a
+document, not a substitute for it.**
+
+**(iii) What is actually actionable is two questions, and neither is ours.** U13 sits with the
+Hadamard worker, which is where the estimator is. The audit's own §6 ordered its asks cheapest-first,
+and the first can end the whole thing:
+
+1. **§3.5, one lookup.** Do the maintained table's open *n* ≡ 2 (mod 4) orders intersect the orders
+   where a two-circulant construction is the live route? *If no, U13 is dead and everything else is
+   moot* — and U13 is the candidate `../../fallbacks/QUEUE_V3.md` ranks **first**, so this lookup
+   decides the top of the queue.
+2. **§3.2 at *k* = 2, with their estimator rather than a Monte Carlo.** Where does the coefficient
+   cross zero? That converts A6's shape from provisional to established, in either direction. The
+   audit also offers a consistency check it could not run itself: the same formula at *v* = 523,
+   *d* = 9 needs *b* = 4.87 to reproduce the worker's own log₂ E[#sol] = 90.9, against a measured
+   *b* = 4.02 at *v* = 151 and rising.
+
+**So the register's actionable content is a routing decision, not a computation**, and the routing is
+to leave the target where it is. Moving U13 back would mean rebuilding the worker's context in order
+to ask two questions they can answer from theirs.
 
 ## 6. Limits
 
