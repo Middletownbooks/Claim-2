@@ -53,11 +53,29 @@ Paste **Part A only**. Suggested model: **Opus 5.5 chat with search.** Part B sa
 > The properties that make a problem score well here are the same properties a benchmark designer
 > selects for. So the list check is a **filter applied first**, not a caveat applied last.
 >
-> Enumerate the agent-facing problem databases and attack boards, and give each a *date*. Four are
+> Enumerate the agent-facing problem databases and attack boards, and give each a *date*. Five are
 > known to exist: **FrontierMath: Open Problems** (Epoch), **TheoremDB**, **Horizon / HorizonMath**,
-> **erdosproblems.com**. Two further *attack platforms* publish curated target boards and count for
-> this purpose: **EinsteinArena** and the **Qiushi Engine**. Search for others; this list is weeks
-> old and the category is growing.
+> **erdosproblems.com**, and **google-deepmind/formal-conjectures** (arXiv:2605.13171). Two further
+> *attack platforms* publish curated target boards and count for this purpose: **EinsteinArena** and
+> the **Qiushi Engine**. **Search for others** — the fifth was found within an hour of this prompt
+> being written, so treat the list as incomplete by default rather than as a checklist.
+>
+> **On formal-conjectures specifically, since it changes this step's arithmetic.** Measured directly
+> from the repository at commit `7d450ef`, 30 Sep 2026 — **1,662 Lean files carrying 1,403 statements
+> tagged `@[category research open]`**, against 2,202 tagged `research solved`. It is explicitly a
+> benchmark for automated provers, it ships an agent-guidelines file for contributors, and its most recent commit that day was
+> PR **#6763**. Two consequences for your enumeration:
+>
+> * **It aggregates two of the other four.** Its open statements break down as ErdosProblems **646**,
+>   Wikipedia's unsolved list **273**, OEIS **189** — so clearing a candidate against
+>   erdosproblems.com and against this repository is substantially the same check, and you should say
+>   so rather than counting it twice. It also adds sources none of the other four cover: the Kourovka
+>   notebook, Green's open problems, MathOverflow, and *Written on the Wall II*.
+> * **It has begun enumerating the primary literature, which is this prompt's whole refuge.**
+>   its Paper directory holds **71** open statements and its Arxiv directory **37** — 108 of 1,403, so about 8%. That is
+>   small, and it is not zero, and the direction is one way. **Do not treat "named in a paper rather
+>   than on a list" as safety.** Check candidates against this repository by name, and report what
+>   fraction of its 1,403 you were actually able to enumerate.
 >
 > Then state, explicitly:
 >
@@ -263,6 +281,7 @@ Paste **Part A only**. Suggested model: **Opus 5.5 chat with search.** Part B sa
 > | Kissing numbers, dimensions 13–14 | unattempted by the published AI search systems, which is why it is *about to be* attempted, not why it is open |
 > | Caps in AG(8,3) | three post-2023 AI search systems report direct runs at n = 8 |
 > | Rota's basis conjecture / the C(3) ladder | closed by a July 2026 preprint |
+> | Snake-in-the-box, dimensions 9–11 | **not worked by us, and listed here as a warning rather than as a closure.** It was ranked last of four in an earlier queue on the grounds that its records are likely compute-set rather than idea-set. It is formalised in the DeepMind repository above, and **its upper bound was corrected there on 30 Sep 2026.** If you return it, you must say what has moved since that commit. |
 >
 > ## Output
 >
@@ -328,6 +347,8 @@ Paste **Part A only**. Suggested model: **Opus 5.5 chat with search.** Part B sa
 | **Step 7, the prior-work list** | `D56` throughout, and its escalation: grepping a tree finds files and does not make anyone read them, and work done in sibling instances is invisible. Handing the list to the runner is the only version of this fix that survives contact |
 | **Step 0 first, not last** | `../RESULT_GAP_v2.md` §4, which is the v2 run correcting its own prompt: the properties that score well are the properties a benchmark designer selects for, so the list check is in direct tension with the scoring function. Conway's 99-graph and the missing Moore graph score near-perfectly and are both on Epoch's list |
 | **fraction-readable and overlap clauses** | `../GATE_EPOCH.md`: only ~10 of 50 Epoch entries were readable behind a JavaScript control, so four ranked candidates were cleared against a fifth of the list. `../GAP_V3.md` §7 measured 5–20% pairwise overlap between curated lists |
+| **five databases, not four, and "search for others"** | the fifth — `google-deepmind/formal-conjectures`, 1,403 open statements, an agent-guidelines file, a commit the same day — was surfaced by the operator within an hour of this prompt being written, by a search this prompt itself prescribed. The clause is no longer hypothetical |
+| **the Paper/ and Arxiv/ caveat** | that repository's Paper and Arxiv directories hold 108 open statements drawn from the primary literature, which is precisely the population Step 1 defines as off-list. 8% is not exhaustion, and it is the first measurement of the refuge shrinking rather than an assumption that it is safe |
 | **"report anything that contradicts this prompt"** | brief D refuted its own brief's §2 and that was the run's most valuable output; brief E's decisive fact came from the same clause rather than from any bar |
 
 ### Model
