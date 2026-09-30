@@ -254,6 +254,42 @@ re-scoped afterwards.
 > literature access at all, which after three access-remedied cells dying on evidence is now the
 > relevant property.
 
+> **[30 Sep 2026 — brief E written for option 3, `../hadamard/bgt2/BRIEF_E_BGT2.md`. It is a
+> state-establishment brief, not a screen, and the reason is that the queue entry above does not
+> survive contact with arithmetic.]**
+>
+> **Three of option 3's load-bearing terms fail here**, per `../hadamard/bgt2/derive.py`
+> (`PRIMARY-VERIFIED-LOCALLY`, all assertions passing):
+> * ***b* is undefined in this repository, and my only reading of it is refuted.** Taking *b* = the
+>   number of circulant blocks, every permitted row sum is **odd**, so Σ*a_k*² ≡ *b* (mod 8) while
+>   4*v* ≡ 4 (mod 8) — forcing **b ≡ 4 (mod 8)**. Of *b* = 2…29 only 4, 12, 20, 28 admit any of the
+>   thirteen; *b* = 3, 5, 6, 8 admit **none**. So a source reporting "126+ pairs with *b* > 2" cannot
+>   mean this, and the brief ships my guess **together with its disproof** rather than as a premise.
+> * **"The 13 orders" names two different sets.** The repo's targets are orders 1948, 2092, 2284, 2572,
+>   2636, 2956; the classical thirteen smallest open orders are 668…1964. **Only 1948 is in both.**
+> * **669 and 721 are ≡ 1 (mod 4), so neither is a Hadamard order** — they are *v* or *m* values giving
+>   2676 and 2884, and both are composite while every *v* on the worklist is prime.
+>
+> **What did verify:** all six rows of `../hadamard/PLAN_2092.md` §1's table reproduce exactly, *d*
+> lists included, and two relations it never states hold on all six — `free_bits = 8D = 4(r−1)` and
+> `density = free_bits − log2 E[#sol]`. **So the whole difficulty ranking is a function of one
+> arithmetic quantity, the largest odd divisor of *v*−1 the row-sum law admits.** One lead: *v* = 721
+> admits *d* = 15 and **192 free bits**, 24 fewer than the order Alpöge *solved* — distrusted, because
+> density needs an estimator this repo does not hold.
+>
+> **The brief's bar** requires all of: *b* defined from source; nothing since
+> `../hadamard/PLAN_2092.md` having
+> screened the region, **and** `FINDING_155`'s ranking having been scoped to a single *b*; and one
+> *b* > 2 pair cheaper than the live target's 232 free bits / 2⁻¹⁴¹. **P-38 predicts FAIL.**
+>
+> **It is the first brief to use D54's two-grade FAIL** — FAIL-ESTABLISHED against FAIL-UNEARNED, both
+> blocking so nothing is bought by hedging — and the first to budget **context as well as calls**
+> (D55), asking which limit the run stopped on.
+>
+> **Audience note:** this brief needs read access to `Cooperative-AI-Defense`, not web search. Option 3
+> was described here as needing "no new literature", and that is right — it needs a *repository* this
+> instance cannot see.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,

@@ -1,0 +1,148 @@
+==========================================================================
+1. PLAN_2092.md sec 1's table, reproduced independently (b = 4)
+==========================================================================
+     v     4v |    claimed d           mine |    r    D | free bits
+   487   1948 |    [9, 3, 1]      [9, 3, 1] |   55   27 |   216   OK
+   523   2092 |    [9, 3, 1]      [9, 3, 1] |   59   29 |   232   OK
+   571   2284 |    [5, 3, 1]      [5, 3, 1] |  115   57 |   456   OK
+   643   2572 |       [3, 1]         [3, 1] |  215  107 |   856   OK
+   659   2636 |       [7, 1]         [7, 1] |   95   47 |   376   OK
+   739   2956 |    [9, 3, 1]      [9, 3, 1] |   83   41 |   328   OK
+  ASSERTED: all six rows reproduce, d list included.
+
+  Two relations PLAN_2092 does NOT state, holding on all six rows:
+    free_bits = 8D = 4(r-1)                     -- exact, all six
+    density exponent = free_bits - log2 E[#sol] -- all six to <0.35
+
+  CONSEQUENCE, and it is the useful part: free_bits is a function of d
+  alone, via r = (v-1)/d + 1. So the entire difficulty ranking of the
+  worklist is decided by ONE arithmetic quantity -- the largest odd
+  divisor of v-1 that the row-sum law admits. Nothing about the search.
+
+==========================================================================
+2. The classical thirteen smallest open Hadamard orders
+==========================================================================
+  The ORDER LIST is RECALL, not verified here -- flagged, and step 1 of
+  the brief is to check it against the other repository:
+  13 orders, all divisible by 4: True
+  v = n/4 all prime: True
+
+   order     v    d     r     D  free bits
+     668   167    1   167    83        664
+     716   179    1   179    89        712
+     892   223    3    75    37        296
+    1004   251    5    51    25        200
+    1132   283    3    95    47        376
+    1244   311    5    63    31        248
+    1388   347    1   347   173       1384
+    1436   359    1   359   179       1432
+    1676   419    1   419   209       1672
+    1772   443    1   443   221       1768
+    1916   479    1   479   239       1912
+    1948   487    9    55    27        216
+    1964   491    7    71    35        280
+
+  AND A DISCREPANCY THAT MATTERS: the repo's six targets are
+  v = 487, 523, 571, 643, 659, 739 -> orders 1948, 2092, 2284, 2572,
+  2636, 2956. Only 1948 is in the classical thirteen. So 'the thirteen
+  open orders' in the quoted sentence and 'thirteen' in the repo's own
+  target ranking are DIFFERENT LISTS, or one of them is not what I think.
+  Two quantities sharing a name -- resolve before using the 126+ figure.
+
+==========================================================================
+3. Orders 669 and 721, said never to have been screened
+==========================================================================
+  669: mod 4 = 1, factors [3, 223], prime: False
+  721: mod 4 = 1, factors [7, 103], prime: False
+
+  A Hadamard matrix of order > 2 requires order = 0 mod 4. Both are 1 mod 4,
+  so NEITHER IS A HADAMARD ORDER. They must be v or m values, giving
+  orders 4*669 = 2676 and 4*721 = 2884.
+  And both are COMPOSITE, while every v in the repo's worklist is prime.
+  HYPOTHESIS, offered as such: they were never screened because the
+  machinery assumes v prime. Falsifier: the other repo screening a
+  composite v anywhere. This is a guess about a file I have not read.
+    v=669: admissible d at b=4 -> [1], d=1, r=669, D=334, free bits 2672
+    v=721: admissible d at b=4 -> [15, 9, 5, 3, 1], d=15, r=49, D=24, free bits 192
+
+==========================================================================
+4. One hypothesis about b, with its falsifier. NOT a finding.
+==========================================================================
+  free_bits = 8D at b = 4. If the b blocks each contribute 2D free bits,
+  then free_bits = 2*b*D, which fits 8D at b=4 -- a relation fitted at a
+  SINGLE value of b, which is exactly the D53 trap. Stated as a
+  hypothesis with the number it predicts, so it can be killed:
+
+    b   2bD at v=523, D=29     vs b=4
+    2                  116       -116
+    3                  174        -58
+    4                  232         +0
+    5                  290        +58
+    6                  348       +116
+    8                  464       +232
+
+  IF that scaling is right, b > 2 is a region with MORE free bits than
+  b = 2, i.e. HARDER, and the 126+ admissible pairs are not a cheaper
+  frontier but a more expensive one. FALSIFIER: any statement in the
+  other repo giving free bits or density for a b != 4 case. One number
+  kills or confirms this, and the brief asks for it first.
+
+  Separately, admissibility counted under the b-blocks reading:
+    b   admissible v of the classical 13
+    2    0  []
+    3    0  []
+    4   13  [167, 179, 223, 251, 283, 311, 347, 359, 419, 443, 479, 487, 491]
+    5    0  []
+    6    0  []
+    8    0  []
+  This is a DERIVED count under MY reading of b (number of circulant
+  blocks, sum of b row-sum squares = 4v). If the other repo's b means
+  something else, every number in this block is void. Check first.
+
+==========================================================================
+ALL ASSERTIONS PASSED.
+==========================================================================
+
+==========================================================================
+5. MY READING OF b IS REFUTED BY THE SENTENCE IT WAS MEANT TO CHECK
+==========================================================================
+  ASSERTED: every permitted row sum a_k is ODD, at every (v, d) checked.
+  Because v is odd, so (v-1)/d is even for odd d, so r is odd, so
+  d(2u-(r-1)) is even, so a_k = +-1 + even is odd.
+
+  An odd square is 1 mod 8. So a sum of b odd squares is b mod 8.
+  And 4v with v odd is 4 mod 8. Therefore:
+
+      sum_{k=1..b} a_k^2 = 4v  forces  b = 4 (mod 8).
+
+    b=  4: b mod 8 = 4, admissible v of the 13: 13
+    b= 12: b mod 8 = 4, admissible v of the 13: 13
+    b= 20: b mod 8 = 4, admissible v of the 13: 13
+    b= 28: b mod 8 = 4, admissible v of the 13: 13
+
+  So under my reading, b > 2 means b in {12, 20, 28, ...} and NOTHING
+  else -- there is no b = 3, 5, 6 or 8 case at all. A source reporting
+  '126+ admissible (v, b) pairs with b > 2' therefore CANNOT mean b =
+  the number of circulant blocks whose odd row sums square-sum to 4v.
+
+  THIS IS THE MOST USEFUL THING IN THIS SCRIPT. It does not tell us what
+  b is; it proves my guess is wrong, so the brief must not ship the guess.
+
+==========================================================================
+6. One lead worth checking, and one reason to distrust it
+==========================================================================
+  v=721 (composite, 7*103) admits d=15, r=49, D=24, free bits 192.
+  v=487, the order Alpoge SOLVED, has free bits 216.
+  v=523, the LIVE target, has free bits 232.
+  So on the free-bit metric 721 is 24 bits cheaper than the
+  solved order and 40 cheaper than the live target.
+
+  WHY TO DISTRUST IT: free bits is only one of the two coordinates.
+  density = free_bits - log2 E[#sol], and E[#sol] needs the constraint
+  count, which I cannot compute without the repo's estimator. A cheap
+  free-bit count with few solutions is not an easier target. Also
+  unverified: whether 4*721 = 2884 is an OPEN order at all.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 2).
+==========================================================================

@@ -308,6 +308,14 @@
       "cost": "one Sonnet 5.5 chat conversation, 20 of 20 calls, 1 failed"
     },
     {
+      "id": "P-38",
+      "by": "Opus 5 (Claim-2 board-finder/hadamard/bgt2/BRIEF_E_BGT2.md sec 5, registered and pushed before brief E was dispatched)",
+      "predicted": "Brief E's bar FAILS. Single threshold, no middle band: PASS requires all three clauses, and I predict it does not get them. First use of D54's two-grade FAIL, so the grade is part of the report but NOT part of the threshold. Non-scoring commentary, recorded so it cannot be claimed afterwards: I expect the failure at clause (a) or (b) rather than (c) -- that the region dies of bookkeeping, because the load-bearing sentence is a summary line in an index file relayed at two removes, PLAN_2092.md read only 15 of 163 findings, and the queue entry's own author wrote 'I cannot tell from outside whether it is live'. A FAIL at (c) instead, on computed densities, would be a better-founded result than the one I expect. A PASS falsifies this and is the most valuable outcome, since it would mean an unscreened region cheaper than the live target exists inside the primary thread.",
+      "outcome": "OPEN.",
+      "status": "open",
+      "cost": "one Claude Code run with read access to Cooperative-AI-Defense, 30 repository reads"
+    },
+    {
       "id": "P-35-scored",
       "by": "SELECT_v1.md sec 8, registered before the arm-2b worker was dispatched; run 30 Sep 2026 by a Sonnet 5.5 chat instance",
       "predicted": "the directed search finds >= 1 divergence meeting the registered definition -- two dated published methods on the same object whose reach differs by a factor >= 2 in the frontier parameter itself, both at SECONDARY-RELAYED or better. 0 would mean the signal does not generate.",

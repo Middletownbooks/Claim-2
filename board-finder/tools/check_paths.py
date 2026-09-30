@@ -24,6 +24,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 TREE = os.path.join(ROOT, "board-finder")
 PATHISH = re.compile(r"\.(md|py|json|txt|png|csv)$")
 
+# Paths naming a DIFFERENT repository are not broken local paths, and counting
+# them as such inflates the number D52 is measured by. A citation is treated as
+# cross-repo when its first segment is a known sibling repository.
+CROSS_REPO_ROOTS = ("Cooperative-AI-Defense/", "leanboard/")
+
 
 def is_path_candidate(token):
     """Exclude things that look like paths but are not: URLs, absolute web paths,
@@ -38,7 +43,7 @@ def is_path_candidate(token):
 
 
 def scan():
-    by_file, unresolved = {"file": 0, "root": 0}, []
+    by_file, unresolved, cross = {"file": 0, "root": 0}, [], []
     for base, _dirs, files in os.walk(TREE):
         for fn in files:
             if not fn.endswith(".md"):
@@ -49,21 +54,25 @@ def scan():
                 tok = m.group(1)
                 if not is_path_candidate(tok):
                     continue
-                if os.path.exists(os.path.normpath(os.path.join(base, tok))):
+                if tok.startswith(CROSS_REPO_ROOTS):
+                    cross.append((os.path.relpath(doc, ROOT), tok))
+                elif os.path.exists(os.path.normpath(os.path.join(base, tok))):
                     by_file["file"] += 1
                 elif os.path.exists(os.path.normpath(os.path.join(ROOT, tok))):
                     by_file["root"] += 1
                 else:
                     unresolved.append((os.path.relpath(doc, ROOT), tok))
-    return by_file, unresolved
+    return by_file, unresolved, cross
 
 
 def main():
-    counts, unresolved = scan()
+    counts, unresolved, cross = scan()
     distinct = sorted(set(unresolved))
     print(f"board-finder backticked path citations")
     print(f"  resolve file-relative:      {counts['file']}")
     print(f"  resolve repo-root-relative: {counts['root']}")
+    print(f"  name another repository:    {len(cross)} "
+          f"(not broken -- see CROSS_REPO_ROOTS)")
     print(f"  resolve under NEITHER:      {len(unresolved)} "
           f"({len(distinct)} distinct document/target pairs)")
     if distinct:
