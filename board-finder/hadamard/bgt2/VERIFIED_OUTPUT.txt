@@ -334,3 +334,67 @@ ALL ASSERTIONS PASSED (part 4).
 ==========================================================================
 ALL ASSERTIONS PASSED (part 5).
 ==========================================================================
+
+==========================================================================
+14. The admissibility condition, derived from the worker's description
+==========================================================================
+  The Hadamard worker (30 Sep 2026) describes the b >= 3 construction as a
+  four-block Goethals-Seidel-type array on an abelian group G of order
+  v - b, with target PAF sum -4b on a subgroup H of INDEX b+1 minus the
+  identity and +4 off H. A subgroup of index b+1 exists in an abelian
+  group of order v-b only if (b+1) | (v-b), and since
+      v - b = (v+1) - (b+1),   (b+1) | (v-b)  <=>  (b+1) | (v+1).
+
+    v= 347 b= 5: |G|= 342, index=6, |H|=  57   OK   order 1388
+    v= 359 b= 7: |G|= 352, index=8, |H|=  44   OK   order 1436
+    v= 479 b= 3: |G|= 476, index=4, |H|= 119   OK   order 1916
+    v= 523 b= 1: |G|= 522, index=2, |H|= 261   OK   order 2092, live; b=1 inferred from free_bits = 4(v-1)/d
+  ASSERTED on all four (v, b) pairs now known. Four for four.
+
+  Admissible (v, b), b odd, 3 <= b < v, over FINDING_05's thirteen:
+    v= 515 (order  2060)  v+1= 516   6: [3, 5, 11, 85, 171, 257]
+    v= 523 (order  2092)  v+1= 524   2: [3, 261]
+    v= 537 (order  2148)  v+1= 538   0: []
+    v= 571 (order  2284)  v+1= 572   6: [3, 21, 25, 43, 51, 285]
+    v= 573 (order  2292)  v+1= 574   2: [13, 81]
+    v= 599 (order  2396)  v+1= 600  16: [3, 5, 7, 9, 11, 19, 23, 29, 39, 49, 59, 99, 119, 149, 199, 299]
+    v= 643 (order  2572)  v+1= 644   6: [3, 13, 27, 45, 91, 321]
+    v= 647 (order  2588)  v+1= 648  13: [3, 5, 7, 11, 17, 23, 35, 53, 71, 107, 161, 215, 323]
+    v= 659 (order  2636)  v+1= 660  14: [3, 5, 9, 11, 19, 21, 29, 43, 59, 65, 109, 131, 219, 329]
+    v= 669 (order  2676)  v+1= 670   2: [9, 133]
+    v= 719 (order  2876)  v+1= 720  22: [3, 5, 7, 9, 11, 15, 17, 19, 23, 29, 35, 39, 47, 59, 71, 79, 89, 119, 143, 179, 239, 359]
+    v= 721 (order  2884)  v+1= 722   1: [37]
+    v= 739 (order  2956)  v+1= 740   6: [3, 9, 19, 73, 147, 369]
+
+  DERIVED TOTAL: 96.  The relayed figure is '126+'.
+  MISMATCH of 30 (24% low). Adding b=1, which is
+  admissible at every odd v since 2 | (v+1), gives 109 -- still short.
+  So either the condition is stricter than the source's, or the 126+ counts
+  something else (a different thirteen, or an extra family, or it is typed).
+  THIS IS THE SHARPEST FORM OF CLAUSE (a): a condition confirmed on the
+  source's OWN four examples yields 96, not 126+. One of them is wrong.
+
+  Per-order bordered freedom, which is decision-relevant on its own:
+    ZERO admissible b >= 3:  v=537 (order 2148) -- no bordered route at all
+    exactly ONE:             v=721 (order 2884), b=37
+    the LIVE target v=523:   only b in [3, 261] -- nearly at the b=1 boundary,
+                             consistent with the live search being b=1
+    richest:                 v=719 (22), v=599 (16), v=659 (14), v=647 (13)
+  That ranking is NOT the b=1 free-bit ranking, which puts 523 first. If the
+  border axis matters, it points at different orders than the live worklist.
+
+  WHAT I CANNOT COMPUTE, and an error of mine that proves the point.
+  I first tabulated orbit counts at b >= 3 using the largest odd divisor of
+  v-b. It returned 2 orbits at v=523 where PLAN_2092's VERIFIED sweep gives
+  58, and the contradiction caught it: the largest odd divisor is not the
+  admissible d -- d must satisfy the ROW-SUM LAW, and the law I verified is
+  the b=1 one (sum a_k^2 = 4v with a_k = +-1 + d(2u-(r-1))). At b >= 3 the
+  target is the relaxed PAF condition above, so that law does not apply and
+  I HAVE NO ADMISSIBILITY TEST FOR d AT b >= 3. Therefore no free-bit or
+  density figure at b >= 3 can be computed here. That is clause (c), and it
+  stays with whoever can read the source. Applying a b=1-fitted relation at
+  b >= 3 is exactly the D53 trap, and I nearly shipped a table of it.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 6).
+==========================================================================

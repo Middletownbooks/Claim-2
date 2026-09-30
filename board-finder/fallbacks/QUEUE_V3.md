@@ -417,6 +417,46 @@ re-scoped afterwards.
 > **Two near-misses in one document, in opposite directions** — §§2–3 too optimistic, §8 too pessimistic.
 > Recorded as the reason to read a retraction as critically as the claim it retracts (D56, lesson 31).
 
+> **[30 Sep 2026 — the Hadamard worker answered Q2 and clause (b) PASSES. Brief E is now v3, two
+> questions, `../hadamard/bgt2/BRIEF_E_BGT2.md`.]**
+>
+> **The border axis is NOT the Williamson axis.** *"No Williamson or GS quadruple is needed as an
+> ingredient, at any order."* The bordered construction at *b* ≥ 3 **is itself** a four-block
+> Goethals–Seidel array on an abelian group of order ***v* − *b***, target **PAF sum −4*b* on a subgroup
+> of index *b*+1 minus the identity, +4 off it**; the quadruple is what you *search for*. **None of the
+> blocks in any of its 14 cores is symmetric, even up to translation** — measured. Williamson is the
+> narrow special case. **P-38's expected failure clause is falsified for the second time**, and (b) is
+> the one that passed cleanly.
+>
+> **That answer made the admissibility condition derivable**, and it is
+> `PRIMARY-VERIFIED-LOCALLY` (`../hadamard/bgt2/derive.py` §14): a subgroup of index *b*+1 in a group of
+> order *v* − *b* needs (*b*+1) | (*v* − *b*), i.e. **(*b*+1) | (*v*+1), *b* odd** — **asserted on all
+> four known pairs**, (347,5), (359,7), (479,3), (523,1).
+>
+> **And it gives 96 pairs, not "126+" — a 24% shortfall** (109 even counting *b* = 1, admissible at every
+> odd *v*). **That is now clause (a)'s sharpest form: a condition confirmed on the source's own four
+> examples returns the wrong total, so one of the two is wrong and it may be mine.**
+>
+> **Three derived facts that stand on their own.** Order **2148 has ZERO bordered routes**; **2884 has
+> exactly one** (*b* = 37); the **live target 2092 has only {3, 261}**, nearly at the *b* = 1 boundary,
+> consistent with the live search being *b* = 1. **The richest are 2876 (22), 2396 (16), 2636 (14), 2588
+> (13) — unrelated to the *b* = 1 free-bit ranking that puts 523 first.** So if the border axis is worth
+> anything it points at different orders than the worklist.
+>
+> **What cannot be computed here, and a fourth D53 instance caught a new way.** A *b* ≥ 3 orbit table I
+> built returned **2 orbits at *v* = 523 where the verified sweep gives 58** — because the admissible *d*
+> must satisfy the **row-sum law, and the law verified here is the *b* = 1 one.** At *b* ≥ 3 the target is
+> the relaxed PAF condition, so there is no test for *d* and **no free-bit figure at *b* ≥ 3 is derivable
+> here.** That is clause (c) and it stays with whoever can read the source. **It was caught by colliding
+> with an earlier verified result, not by a negative test or a reviewer** — the first time — which argues
+> for keeping verified reference values in the tree so later work can collide with them.
+>
+> Also corrected: **there is no "decided Williamson frontier"** — Turyn decides W((*q*+1)/2) for prime
+> powers *q* ≡ 1 (mod 4), so the decided set is not an interval; W(*m*) is decided for all *m* ≤ 64 and 65
+> is the first undecided. **Third instance in this programme of treating a threshold as a frontier.** And
+> **Q4 is withdrawn**: the border sits *within each block*, so `../hadamard/bgt2/border.py` measures the
+> wrong object, and hoa64's matrices are normalized anyway.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,

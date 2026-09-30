@@ -1,205 +1,185 @@
-# Brief E (v2) — does the border-width axis offer anything the Williamson axis does not?
+# Brief E (v3) — two questions. Clause (b) is discharged and the rest shrank.
 
-**For a Claude Code instance with (i) read access to `Middletownbooks/Cooperative-AI-Defense`, branch
-`claude/hadamard-matrix-methods-vs79hi` — a PRIVATE repository, so this must be granted deliberately —
-and (ii) a clone of `github.com/bbeartheancient/hoa64`.** Without both, say which you lack and answer
-what you can; **that is a clean partial result, not a failure.** Q1 and Q3 need (i); Q4 needs (ii).
+**For a Claude Code instance with read access to `Middletownbooks/Cooperative-AI-Defense`, branch
+`claude/hadamard-matrix-methods-vs79hi` — a PRIVATE repository, granted deliberately.** That is the
+*only* access needed now. **No web search, no hoa64 clone** (see §4).
 
-> **Routing note.** The programme's dedicated Hadamard worker runs against a *different* private
-> repository and so cannot answer Q1 or Q3. **Q2 has been split out** into
-> `Q2_FOR_HADAMARD_WORKER.md` and put to that worker directly, because it holds the Williamson frontier
-> from its own W(65) work. **If that question comes back "yes, a bordered construction needs W(m) for m
-> far beyond the decided frontier", clause (b) fails and this brief should not be run at all.** Check
-> whether it has been answered before spending your budget.
-
-> **v1 of this brief is superseded and `PRECHECK_E.md` says why.** It was written in ignorance of prior
-> work two directories away in this same repository, and three of its findings were already on file with
-> one of them **retracted**. v1 also treated "which thirteen" as open; it is now settled. **Read
-> `PRECHECK_E.md` §§1–2 before this brief** — it tells you what not to re-derive, which is most of what
-> v1 asked for.
-
-**This is not a search and not a change to the live *v* = 523 work.** Four questions, one measurement.
+> **Versions.** v1 was written in ignorance of local prior work; `PRECHECK_E.md` records the three
+> findings it duplicated and the one it resurrected after retraction. v2 had six questions. **v3 has
+> two**, because the Hadamard worker discharged the decisive clause and a derivation replaced most of
+> the rest. **Read §§1–3; they are short and they are what changed.**
 
 ---
 
-## 1. Settled. Do not spend budget re-deriving any of this.
+## 1. Clause (b) is discharged: the border axis is NOT the Williamson axis
 
-**The two thirteens, both real** (`PRECHECK_E.md` §1):
+The Hadamard worker answered this directly (`SECONDARY-RELAYED` from its reply, structural details
+marked KNOWN by it):
 
-* **FINDING_05's thirteen — the open orders under 3000**, and this is what
-  `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` almost certainly means by "all 13 orders",
-  since it sits in the same directory. *N* = 2060, 2092, 2148, 2284, 2292, 2396, 2572, 2588, 2636, 2676,
-  2876, 2884, 2956; *v* = *N*/4 = 515, 523, 537, 571, 573, 599, 643, 647, 659, 669, 719, 721, 739.
-  Quoted verbatim in `../../playability/HADAMARD_CROSS.md` §1.
-* **hoa64's thirteen — solved, all below 2000**: Alpöge's **12** (668, 716, 892, 1132, 1244, 1388, 1436,
-  1676, 1772, 1916, 1948, 1964) plus **Đoković's H(1852)**. All verified in this repository on
-  2026-09-20, ±1 entries and **H Hᵀ = nI in exact integer arithmetic, 13/13**
-  (`../../playability/hoa64/verify_matrices.py`, write-up `../../playability/HOA64_ASSESSMENT.md` §1).
+> **No Williamson or GS quadruple is needed as an ingredient, at any order.** The bordered construction
+> at *b* ≥ 3 **is itself** a four-block Goethals–Seidel-type array. It sits on an abelian group *G* of
+> order ***v* − *b***, with a relaxed target: **PAF sum −4*b* on a subgroup *H* of index *b*+1 minus the
+> identity, and +4 off *H*.** The quadruple is the object you *search for* at order *v* − *b*; nothing
+> comes from a pre-existing W(*m*). **None of the blocks in any of the 14 cores held is symmetric, even
+> up to translation** — measured, not recalled. Williamson (four symmetric circulants) is the narrow
+> special case.
 
-**So the *b* > 2 pairs are parameter choices at OPEN orders and the entry is not void.**
+**So the border axis is independent, and the clause the whole bar turned on PASSES.** Also located:
+*b* = 5 at *v* = 347 (order 1388), *b* = 7 at *v* = 359 (1436), *b* = 3 at *v* = 479 (1916) — the whole
+*b* = 3, 5, 7 trio.
 
-***b* is a border width, odd** (`OPERATOR-SUPPLIED`). Of Alpöge's 12: **4 at *b* = 1, one each at
-*b* = 3, 5, 7, and 5 unbordered.** So "*b* > 2" is "*b* ≥ 3" — there is no *b* = 2, 4, 6 case.
+**And two corrections to earlier versions of this brief, both accepted.**
 
-**Verified arithmetic** (`derive.py`, all assertions passing): all six rows of `../PLAN_2092.md` §1's
-table reproduce, *d*-lists included; **`free_bits = 4(v−1)/d` exactly** on all six — four bits per orbit;
-`density = free_bits − log2 E[#sol]`. **All thirteen open orders are uncovered by Paley I/II, Sylvester
-and Kronecker closure** (necessary condition, passes). The five **composite** *v* are exactly 515, 537,
-573, 669, 721 — and 669, 721 give orders 2676, 2884.
+* **There is no "decided Williamson frontier."** Turyn's construction gives W((*q*+1)/2) for *q* a prime
+  power ≡ 1 (mod 4), which decides infinitely many *m* above 65, so the decided set is **not an
+  interval**. v2's "38, 114 and 158 orders beyond the frontier" should read *beyond 65, the first
+  undecided order* — a weaker claim. Derived here: for odd *m*, *q* = 2*m*−1 is ≡ 1 (mod 4) identically,
+  so Turyn applies iff 2*m*−1 is a prime power; 125 = 5³ decides *m* = 63, 129 = 3·43 leaves 65 open, and
+  205 = 5·41, 357 = 3·7·17, 445 = 5·89 mean **none of W(103), W(179), W(223) comes from Turyn.** Their
+  status is individually **UNKNOWN**.
+* **W(m) is decided for every *m* ≤ 64**: odd ≤ 59 exhaustively searched with none at 35, 47, 53, 59
+  (Holzmann–Kharaghani–Tayfeh-Rezaie 2008); 61 and 63 by Turyn; even orders below 65 by
+  Bright–Kotsireas–Ganesh (SAT+CAS, AAAI 2018). **65 is undecided.**
 
-## 2. The prior work, and the retraction that is the reason for this brief
+## 2. The admissibility condition, derived — and it disagrees with the 126+ figure
 
-`../../playability/HADAMARD_CROSS.md` worked the composite-*v* route and then **retracted it in §8**:
+From §1's structure: a subgroup of index *b*+1 exists in an abelian group of order *v* − *b* only if
+(*b*+1) | (*v* − *b*), and *v* − *b* = (*v*+1) − (*b*+1), so
 
-> §§2–3: the five composite *v* were *"set aside on an assumption that was never checked"* — that each
-> has a Baumert–Hall × Williamson route. **One object, W(103), would close two of the thirteen**, 2060
-> and 2884; both assembly paths were validated locally.
+> **(*b*+1) | (*v*+1),  with *b* odd.**
+
+`PRIMARY-VERIFIED-LOCALLY` in `derive.py` §14, **asserted on all four (*v*, *b*) pairs now known**:
+(347,5), (359,7), (479,3) and (523,1). Four for four.
+
+Applied to FINDING_05's thirteen open orders, counting odd *b* with 3 ≤ *b* < *v*:
+
+| *v* | order | # *b* ≥ 3 | | *v* | order | # *b* ≥ 3 |
+|---|---|---|---|---|---|---|
+| 515 | 2060 | 6 | | 647 | 2588 | 13 |
+| 523 | 2092 | **2** — only {3, 261} | | 659 | 2636 | 14 |
+| 537 | 2148 | **0** | | 669 | 2676 | 2 |
+| 571 | 2284 | 6 | | 719 | 2876 | **22** |
+| 573 | 2292 | 2 | | 721 | 2884 | **1** — only *b* = 37 |
+| 599 | 2396 | 16 | | 739 | 2956 | 6 |
+| 643 | 2572 | 6 | | | **total** | **96** |
+
+**96, against the relayed "126+". A 24% shortfall, and adding *b* = 1 — admissible at every odd *v*,
+since 2 | (*v*+1) — gives only 109.** So either my condition is stricter than the source's, or 126+
+counts something else: a different thirteen, an extra family, or it is typed rather than computed.
+**That is Q1, and it is much sharper than "what makes a pair admissible": a condition confirmed on the
+source's own four examples returns the wrong total.**
+
+**Three things in that table are decision-relevant on their own.** Order **2148 has no bordered route at
+all**; order **2884 has exactly one**, *b* = 37; and the **live target 2092 has only {3, 261}**, sitting
+almost at the *b* = 1 boundary — which is consistent with the live search being *b* = 1. **The richest
+orders are 2876 (22), 2396 (16), 2636 (14), 2588 (13) — not the ones the *b* = 1 free-bit ranking points
+at.** So if the border axis is worth anything, it points somewhere else than the current worklist.
+
+## 3. What I could not compute, and the error that proves the point
+
+I tried to tabulate orbit counts at *b* ≥ 3 from the largest odd divisor of *v* − *b*. It returned **2
+orbits at *v* = 523 where `../PLAN_2092.md`'s verified sweep gives 58**, and that contradiction caught
+it: the largest odd divisor is not the admissible *d*. **d must satisfy the row-sum law, and the law I
+verified is the *b* = 1 one** — Σ*a_k*² = 4*v* with *a_k* = ±1 + *d*(2*u* − (*r*−1)). At *b* ≥ 3 the
+target is §1's relaxed PAF condition, so that law does not apply and **I have no admissibility test for
+*d* at *b* ≥ 3.**
+
+**Therefore no free-bit or density figure at *b* ≥ 3 can be computed here.** That is clause (c) and it
+is Q2. Applying a *b* = 1-fitted relation at *b* ≥ 3 is exactly the D53 trap and I nearly shipped a
+table of it.
+
+**Still verified and reusable:** `free_bits = 4(v−1)/d` exactly on all six `../PLAN_2092.md` rows,
+`density = free_bits − log2 E[#sol]`, the *d*-sweep reproducing all six admissible-*d* lists, and all
+thirteen orders uncovered by Paley I/II, Sylvester and Kronecker closure.
+
+## 4. Two questions
+
+**Q1. Why 96 and not 126+?** Quote `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` verbatim
+on (i) what makes a (*v*, *b*) pair **admissible**, (ii) which thirteen orders it counts over, and
+(iii) whether 126+ is **computed or typed**. Then say which side of §2's disagreement is wrong. **If the
+source's condition is weaker than (*b*+1) | (*v*+1), give it** — that is the single most useful line you
+can return, because it changes the per-order table and with it where the axis points.
+
+**Q2. Is there a cost figure at *b* ≥ 3, and has anything screened the region?**
+(i) Any free-bit, density or search-cost figure for a *b* ≥ 3 configuration — at a solved order (347,
+359, 479 are the known ones) or an open one. §3 says why I cannot derive it. **Compare it to the live
+target's 232 free bits / 2⁻¹⁴¹.**
+(ii) `../PLAN_2092.md` read ~15 of **163** findings and is dated. **How many findings now, and has any
+screened, entered, settled or abandoned *b* ≥ 3?** And **was `FINDING_155`'s ranking scoped to a single
+*b*?** If it ranked across *b*, nothing was ever unswept and that ends the matter.
+
+## 5. The bar. Clause (b) already discharged; you may not re-scope the rest.
+
+> **PASS iff both remaining clauses hold:**
+> **(a)** the source's admissibility condition and the thirteen it counts over are obtained, **and**
+> §2's disagreement is resolved in a way that leaves a well-defined set of *b* ≥ 3 pairs at **open**
+> orders; **and**
+> **(c)** a free-bit or density figure for some *b* ≥ 3 configuration is obtained **and is better than
+> the live target's 232 free bits / 2⁻¹⁴¹**.
 >
-> **§8, the retraction.** A Williamson quadruple of order *m* hands you *H*(4*m*) immediately.
-> **716 = 4·179 and 892 = 4·223 were open until 2026** — they are two of Alpöge's twelve. **So W(179)
-> and W(223) cannot be known**, and the routes for *v* = 537 and *v* = 669 are **dead on arrival**. And
-> W(103) is doubtful: *H*(412) is known, and 412 = 4·103 is what a four-circulant Goethals–Seidel
-> quadruple of length 103 produces — a weaker, more plentiful object than a Williamson quadruple — so
-> *H*(412) being known is **consistent with W(103) not existing**.
-
-**Hold that argument's shape, because it is the best move on this board and it is already made:
-Alpöge's twelve solved matrices are evidence about which Williamson orders were NOT KNOWN.** A solved
-order at 4*m* that was open until 2026 proves W(*m*) was not available.
-
-> **But §8 overstates it, and this is an operator correction you must carry.** *Not known* is not
-> *cannot exist*. **W(65) is still an open question** (`OPERATOR-SUPPLIED`), so the **decided** Williamson
-> frontier sits below 65 and higher orders are **undecided rather than refuted**. So §8's *"dead on
-> arrival"* is too strong: the route is not dead, it is **a Williamson search at an order well beyond the
-> decided frontier**. `PRIMARY-VERIFIED-LOCALLY` arithmetic on the distance:
+> **(b) PASSES**, on §1: the bordered construction needs no Williamson or GS quadruple as an ingredient.
 >
-> | object | would close | orders beyond 65 |
-> |---|---|---|
-> | W(103) | 2060 **and** 2884 | **38** |
-> | W(179) | 2148 (*v* = 537) | **114** |
-> | W(223) | 2676 (*v* = 669) | **158** |
->
-> **That is a cost, not an impossibility**, and it is a different claim from the one §8 makes. Treat §8 as
-> establishing *"these ingredients are not on the shelf"* and **not** as establishing they are
-> unobtainable.
+> **FAIL on either remaining clause.** **Grade each failure** (D54): **FAIL-ESTABLISHED** (positive
+> evidence) or **FAIL-UNEARNED** (you could not establish it). Both block promotion; they are different
+> facts.
 
-**So the question this brief exists to ask is whether the border axis escapes that.** A naive free-bit
-count points at *v* = 721 (192 free bits, 24 fewer than the order Alpöge solved) — and 721's route is
-exactly one of the two §8 leaves doubtful. **If the border axis is just the Williamson axis in other
-clothing, option 3 is dead for the reason already on file.**
+**`E: VOID`** remains available only on sourced evidence that the thirteen are hoa64's **solved**
+thirteen rather than FINDING_05's open thirteen. §2's table makes that unlikely.
 
-## 3. The four questions
+**P-38 predicted FAIL and expected clause (b). That expectation is now falsified** — (b) passed cleanly.
+The prediction stands as a threshold on (a) and (c).
 
-**Q1. What does `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` actually say?** Quote verbatim: the definition of *b*, what makes a
-(*v*, *b*) pair **admissible**, whether the 126+ count is **computed or typed**, any upper bound on *b*,
-and whether "all 13 orders" is FINDING_05's thirteen. Confirm or correct §1.
+## 6. Budget, and what not to do
 
-**Q2. Does the border axis need an ingredient beyond the decided Williamson frontier?** Given §2: does a
-bordered construction at *b* ≥ 3 need a Williamson or GS quadruple, and **at what order**? If it needs
-W(*m*) for *m* far beyond the decided frontier, the region reduces to the same search §8 was really
-describing and buys nothing. If it needs none, or needs one at a **decided** order, it is a genuinely
-different axis. **Also establish the frontier itself: what is the largest *m* for which W(*m*) is decided
-either way, and is 65 open?** (Williamson non-existence is known for some small orders — 35, 47, 53, 59
-by `RECALL` — so the frontier is a real, citable number.) **This is the question that decides the brief**
-and it is a read, not a computation.
+**Cap: 20 reads or searches, all inside `Cooperative-AI-Defense`.** **And a context ceiling** —
+`Cooperative-AI-Defense/hadamard/findings/` holds 163+ documents, some long. Prefer targeted greps; read
+`Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` in full and little else; **say which of the two limits you stopped on.**
 
-**Q3. Has anything screened *b* ≥ 3 since?** `../PLAN_2092.md` read ~15 of **163** findings and is dated.
-How many exist now, and has any screened, entered, settled or abandoned *b* ≥ 3? **Was `FINDING_155`'s
-ranking scoped to a single *b*?** If it ranked across *b*, nothing was ever unswept.
+**Do not** clone hoa64 or try to measure border widths from its matrices. v2 asked for that; it is
+withdrawn. The border sits **within each block** of a four-block array, not on the leading rows of the
+whole matrix, so `border.py` measures the wrong object — and hoa64's matrices are **normalized**, which
+means sign flips and permutations that would destroy the block structure anyway. `border.py` is kept in
+this directory with its controls, as a correct tool for the wrong question.
 
-**Q4. Measure the border widths rather than relaying them.** `border.py` in this directory does it, and
-**it was built and control-tested first** — Paley I detects exactly *b* = 1 at *q* = 7, 11, 19, 23;
-Sylvester detects nothing; flipping one core entry stops detection; and a minimum-core guard exists
-because the first version reported spurious large *b* on 1×1 cores. Run it on the hoa64 clone:
+**Do not** re-derive §§1–3. **A partial report is a success**: Q1 answered with Q2 NOT REACHED is a
+complete run.
 
-```
-python3 border.py /path/to/hoa64/matrices
-```
-
-**Report the measured table** — order against the *b* values whose core is circulant. **An empty list is
-a real result**, meaning the core is not circulant under this convention, and it tells us the convention
-is different, which is itself the answer to part of Q1. The tool's limitation is stated in its
-docstring: it implements **one** precise reading of "border of width *b* around a core", and a source
-meaning block-circulant cores or non-leading borders will not be measured by it. **So get the convention
-in Q1 and measure in Q4, in that order.**
-
-## 4. The bar. Registered before dispatch; not to be re-scoped after.
-
-> **PASS iff all three hold:**
-> **(a)** `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` confirms the *b* > 2 pairs are at the **thirteen open orders**, and gives the
-> admissibility condition; **and**
-> **(b)** a bordered construction at *b* ≥ 3 either needs **no** Williamson or GS quadruple, **or** needs
-> one at an order **within the decided Williamson frontier** — so the region does not reduce to a
-> Williamson search tens of orders beyond it; **and**
-> **(c)** no finding since `../PLAN_2092.md` has screened, entered, settled or abandoned *b* ≥ 3, **and**
-> `FINDING_155`'s ranking was scoped to a single *b*.
->
-> **FAIL on any one.** Clause (b) is the decision: an axis whose ingredient is a Williamson search 38 to
-> 158 orders beyond the decided frontier is not a new region, whatever its free-bit count says.
-
-**`E: VOID`** remains available on positive sourced evidence that "all 13 orders" means hoa64's **solved**
-thirteen rather than FINDING_05's open thirteen. §1 makes that unlikely; it costs nothing to keep.
-
-**Grade every failed clause** (D54): **FAIL-ESTABLISHED** (positive evidence it fails) or
-**FAIL-UNEARNED** (you could not establish it). Both block promotion, so hedging buys nothing, but they
-are different facts and this project recorded them identically until a replication split two runs on
-exactly that.
-
-## 5. Budget — two numbers
-
-**Cap: 25 reads or searches across the repositories.** No web access needed. **And a context ceiling:**
-`Cooperative-AI-Defense/hadamard/findings/` holds 163+ documents, some long — prefer targeted greps,
-read `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` in full and little else, and **say which of the two limits you stopped on.** A
-previous brief stopped at 18 of 22 calls on context while the cap counted calls.
-
-**A partial report is a success.** Q1 and Q2 answered with Q3–Q4 NOT REACHED is a complete run.
-
-## 6. Rules. Each cost this project something real.
+## 7. Rules. Each cost this project something real.
 
 1. **A bar you cannot evaluate is FAIL**, graded FAIL-UNEARNED — never "unscored".
 2. **Tier every claim.** `PRIMARY-VERIFIED-LOCALLY` / `SECONDARY-RELAYED` (you opened the file) /
    `OPERATOR-SUPPLIED` / `RECALL`. **Reading a document that quotes a file is not reading the file.**
-3. **Check what object a computation is about, not just whether it is correct.** v1 of this brief derived,
-   correctly, that a block count must be ≡ 4 (mod 8) — about the wrong object, since *b* is a border
-   width. And debt **D53**: a verified computation licenses only the claim it computes.
-4. **Search the local tree before claiming something is unworked.** v1 did not, and **D56** is the debt
-   for it. Two documents in this repository already held three of its findings.
-5. **Necessary is not sufficient.** Admissibility permits; it does not populate.
-6. **Derive counts; never type them twice.** Say which command produced any count.
+3. **A verified computation licenses only the claim it computes, and check what OBJECT it is about.**
+   §3 is a live instance: a relation verified at *b* = 1, extrapolated to *b* ≥ 3, contradicted a verified
+   table and was caught by that contradiction alone.
+4. **Search the local tree before claiming something is unworked** (**D56** — v1 failed this).
+5. **A threshold is not a frontier unless the set is an interval.** §1's Turyn correction is the third
+   instance in this programme, after Costas's enumeration-versus-existence frontier and the two
+   thirteens.
+6. **Derive counts; never type them twice.** §2's 96 came from a script; say which command produced any
+   count you state.
 7. **Do not guess to produce a tidy verdict.** *"I could not establish this"* is required when true.
 
-## 7. Report anything that contradicts this brief
+## 8. Report anything that contradicts this brief
 
-§1's *b* definition is `OPERATOR-SUPPLIED`, not sourced. The identification of "all 13 orders" with
-FINDING_05's thirteen is an **inference from co-location**, not a reading. §2 is `SECONDARY-RELAYED` from
-`../../playability/HADAMARD_CROSS.md`, which **retracts part of itself**, so check which parts §8 leaves standing. **If one of
-these is wrong it outranks the verdict.**
+§1 is `SECONDARY-RELAYED` from the Hadamard worker's reply and is the load-bearing item. §2's condition
+is derived and confirmed on four pairs but **disagrees with the source's own total**, so at least one of
+the two is wrong and it may be mine. The identification of "all 13 orders" with FINDING_05's thirteen is
+an **inference from co-location**, not a reading.
 
-One thing is verified and you should use it rather than re-derive it: hoa64's 13 matrices are genuinely
-Hadamard, checked in exact integer arithmetic in this repository.
+**You are not expected to defer to this document.** Every previous brief in this series had its
+load-bearing premise corrected by the run or the operator, and this one has been rewritten three times.
 
-**Two corrections to the record, both `PRIMARY-VERIFIED-LOCALLY`, that you should not re-derive.**
+## 9. What to return
 
-* **"2004 is the first open order above 2000" is FALSE** and circulates on the web. 2003 is prime and
-  ≡ 3 (mod 4), so **Paley I gives H(2004) immediately.** The smallest open order above 2000 is **2060**.
-* **1004 is a third gap in hoa64's library that its README does not list.** hoa64's own closed-form
-  families, replicated in `../../playability/hoa64/coverage.py`, return **NOT REACHABLE** for 1004, and no
-  matrix is shipped — **exactly how 1212 and 1940 behave**, which the README *does* name as its remaining
-  sub-2000 gaps. So my recall of 1004 as a classical open order is **not refuted**; it is mildly
-  supported. **Still unresolved:** whether 1004 is open, closed by a construction hoa64 does not
-  implement, or omitted from the README by oversight. **Settle it if you can — it is one lookup.**
-
-## 8. What to return
-
-1. **The verdict line first**: `E: PASS` / `E: FAIL` / `E: VOID`, with **each failed clause's grade**.
-2. **The bar quoted verbatim** from §4.
-3. **Q1 in full**, since §1 and the bar both depend on it.
-4. **Q2 next** — it decides the brief.
-5. **Q3, Q4**, each tiered, naming the file you opened. Q4's measured table in full; **NOT REACHED** if
-   you had no hoa64 clone.
-6. **A finding count** for `Cooperative-AI-Defense/hadamard/findings/` against the 163
-   `../PLAN_2092.md` saw, and **any path this brief cites that does not resolve** (this project carries
-   89 broken cited paths, debt **D52**).
-7. **Calls used against 25, and which limit you stopped on.**
-8. **Anything contradicting §§1–2.**
+1. **The verdict line**: `E: PASS` / `E: FAIL` / `E: VOID`, with each failed clause's grade.
+2. **The bar quoted verbatim** from §5.
+3. **Q1 in full**, including the verbatim admissibility condition and your resolution of the 96/126
+   disagreement.
+4. **Q2**, tiered, naming the files you opened.
+5. **A finding count** against the 163 `../PLAN_2092.md` saw, and **any path this brief cites that does
+   not resolve** (this project carries 89 broken cited paths, **D52**).
+6. **Calls used against 20, and which limit you stopped on.**
+7. **Anything contradicting §§1–3.**
 
 **Do not recommend what to do next.** The verdict and the evidence are the deliverable.
