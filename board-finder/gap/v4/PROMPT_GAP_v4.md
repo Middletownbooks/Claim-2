@@ -16,7 +16,19 @@ it what had already been tried, which is `D56`.
 | **tooling adjacency explicitly barred as a credit** | U13 was ranked first in the v3 queue *because* we were already tooled for it; the apparatus was shared and the orders were not |
 | **context budgeted, not just calls** | two runs reported context as the nearer constraint while call caps went unspent. `D55` |
 
-Paste **Part A only**. Suggested model: **Opus 5.5 chat with search.** Part B says why.
+**Dispatch: paste Part A only, into a FRESH conversation.** Not a continuation of one that has seen
+this file. "Part A only" is a property of the *transcript*, not of the last message — a conversation
+that has already read Part B cannot be repaired by re-prompting it with Part A, because the context
+still holds the bar and the registered prediction. Suggested model: **Opus 5.5 chat with search.**
+Part B says why.
+
+> **This file no longer carries the registered prediction.** It is in `../../../proof-protocol/ledger.json`
+> as `P-42` and must not be copied back here. A prompt and the prediction about its output cannot
+> share an artefact: a run given the whole file learns what outcome is expected of it before
+> producing one, and a heading saying "do not paste" is a request rather than a control. This is
+> `D44`'s discipline applied to the dispatch rather than to the threshold, and it is the mirror of
+> `P-41`'s void — there the author was not blind to the evidence, here the runner would not be blind
+> to the prediction.
 
 ---
 
@@ -361,7 +373,7 @@ arithmetic misleads. The precedent-direction clause is the reasoning this board 
 twice. Everything else — Step 0's enumeration, Step 6's re-score, the status states — a cheaper
 model can refresh once a list exists.
 
-### The bar, registered before the run
+### The bar, and where it lives
 
 **PASS: at least one candidate clears all five kills with R ∈ {ALGORITHM, THEORY} at PRIMARY tier.**
 Single threshold, no middle band, per `D44`.
@@ -371,13 +383,11 @@ now dead, so it selected for something that did not predict survival. This bar a
 dimensions that killed those survivors — a tracked quantity, and a remedy class that a better model
 can actually close.
 
-**Registered prediction, to be written into the ledger before dispatch, not after.** State it as:
-*the run returns **zero** candidates clearing all five kills, and the modal kill is **Q** —
-NO-QUANTITY — rather than N or H.* Reasoning, structurally rather than positionally: the named-
-conjecture literature states truth values, and the ladder that turns a headline into an integer is
-present in a minority of sources. If instead the modal kill is **H** or **P**, the population is
-richer than expected and the corpus is worth a second pass. If a candidate *does* clear, the bar is
-met and the prediction is wrong, which is the more valuable outcome.
+**The registered prediction about what this run will return is `P-42` in
+`../../../proof-protocol/ledger.json`, and is deliberately not restated here.** See the box at the
+top of this file. Its expected kind of failure, its reasoning and what each outcome buys are all in
+the ledger entry; a reader of this file who needs them should open the ledger rather than have them
+duplicated into the same artefact as the prompt.
 
 ### Why this is worth running rather than option 6
 
