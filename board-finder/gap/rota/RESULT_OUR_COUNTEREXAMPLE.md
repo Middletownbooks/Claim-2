@@ -61,8 +61,27 @@ substantially more complete.** Ours is an independent counterexample in a differ
 different route (SAT encoding, then re-derivation from the axioms by a separate program), and its
 mechanism is not his.
 
-**And the framing that reached me was wrong in a way worth recording.** This was described as a near-miss
-on *"the first counterexample of a twenty-year-old conjecture."* In fact **Harvey–Király–Lau refuted C(3)
-for n ≥ 9 in 2011**; what was open was the small-rank range, and both Allikvere and this programme were
-working *that*. The result is real and it is a smaller claim than the one I was given — which is why
-`../RESULT_RETRODICTION_P40.md` went through four readings before landing.
+**And on the framing, I over-corrected and am retracting that.** I wrote that describing this as a
+near-miss on *"the first counterexample of a twenty-year-old conjecture"* was wrong. Checked against the
+sources, the description holds up better than my correction did:
+
+* **The conjecture is twenty years old.** Chow posted it in April 2005 and published it in *SIAM J.
+  Discrete Math.* in 2009. Twenty-one years, or seventeen from the journal.
+* **Chow published it as believed true**, and did so *while exhibiting counterexamples to his own weaker
+  statements* — C(2) is false by M(K₄) and by Oxley's J, and the earlier non-independent version was
+  refuted by McDiarmid. Against that background he still wrote *"we believe that Conjecture 2 is
+  plausible"* and verified n = 3 computationally. **The 2026 results showed otherwise.**
+* **"First" is the only arguable word**, and only on a technicality: Harvey–Király–Lau (2011) have
+  counterexamples at n ≥ 9, so C(3) quantified over all n was already false. But **HKL themselves wrote
+  that *"Chow's conjecture remains open when b > n/3"***, and Allikvere frames his own contribution as
+  closing the *"previously open range"* and shutting the b = 3 route *"outright"*. The community treated
+  it as unsettled, and it was — in the range both 2026 efforts worked.
+
+**So: the HKL fact is worth holding, and my calling the framing "wrong" was not.** The honest statement
+is *first counterexample in the range that was open, at the smallest possible rank.*
+
+**None of this touches the retrodiction's conclusion.** The relevant open quantity in 2026 was *"the
+smallest rank at which C(3) fails"*, bracketed **4 ≤ n ≤ 9** with both bounds on finite certificates —
+and that bracket is *precisely* what makes the target record-shaped and what makes all six of SELECT v1's
+gates pass. **HKL supplies the upper bound; without it the target would be less record-shaped, not
+more.** See `../RESULT_RETRODICTION_P40.md` §2b.
