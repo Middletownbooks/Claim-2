@@ -33,7 +33,8 @@ documents rather than from transcripts, which is a substitution with consequence
 ### 0.2 Inclusion rule, stated before the rows
 
 A row exists for each target that was **selected and then worked** — where the object itself received
-effort, not merely a decision about whether to spend effort. That gives **Part A**, eight rows.
+effort, not merely a decision about whether to spend effort. That gives **Part A**, nine rows (eight in
+the first version; A9 was missed, see its own box).
 
 Targets that were selected as best-of-corpus and then **killed at a pre-registered gate before any
 work on the object** are **Part B**: they answer "has this been attempted?" with "no, and here is
@@ -208,6 +209,31 @@ FAIL-ESTABLISHED, B-2 FAIL-UNEARNED — while *working the item* produced a corr
 algorithm's program, which is theory-shaped and which no bar on this board has a category for
 (`D58` (iv)). Where: `../../fallbacks/opt5/RESULT_F.md`.
 
+
+### A9. Six MOLS of order 12 — *N*(12) ≥ 6
+
+> **[ADDED 30 Sep 2026. This row was missing from the register's first version.]** It is named in
+> `../GAP_V3.md` §1 as one of three targets that cleared the v2 rubric and died, and it has a full
+> gate result in `../../fallbacks/RESULT_FALLBACKS.md`. I built Part A from the target directories
+> and missed a target that lives in a *gate* document. **Second missing-row failure in one day**, and
+> the same cause as A6's: I enumerated the population from where I expected it to be.
+
+| field | value |
+|---|---|
+| date, mode | ~21 Sep 2026 · a separate Claude Code instance, relayed (it could not push — its environment returned 404) |
+| depth | **computation run, and it produced a small theorem** — both published 5-MOLS(12) sets, McKay's from Sage and one built from Hanani's 1975 DM(12,6,1) over ℤ₂×ℤ₆, are **maximal**: every 4-subset has exactly 12 common transversals and exactly one mate, so any transversal common to all five is among the 12 and each is constant in square 5, giving zero. Controls: both 5-sets and the order-10 pair verify independently, the verifier fails on all five deliberate breaks, and hiding one square at a time it was recovered **12 of 12**. |
+| **binding constraint** | **The deliverable, not the world.** The table records *lower bounds*, so showing two specific 5-sets are maximal leaves *N*(12) ≥ 5 exactly where it stood. Formally: *the null established was a null about two objects, not about the tracked quantity.* A genuine attempt at *N*(12) ≥ 6 needs a supply of new inequivalent 5-MOLS(12), or a direct TD(8,12) — **an unbounded search the gate never costed, because F2 costed the wrong region.** |
+| costed estimate | F2 measured the reachable region at a median 0.008 s over seven seeds — *"the pass is empty"*, in the gate's own words. F3 was NOT SCORED: no dated source for which extensions have been searched. The real region was never costed at all. |
+| claims made | *N*(10) ≥ 2 (Bose–Shrikhande–Parker 1960) and *N*(12) ≥ 5 (Johnson–Dulmage–Mendelsohn 1961) `SECONDARY-RELAYED` from two dated sources, neither bound moved in 65 years; the maximality theorem and all controls `PRIMARY-VERIFIED-LOCALLY` by the running instance, relayed here |
+| **shape** | **DELIVERABLE-SHAPED — a fourth value, and distinct from A7's.** The attempt was not stopped by compute or by theory; it was stopped by a mismatch between the object searched and the quantity recorded. The *target's* shape is still unknown, because the search that would settle it was never costed. |
+
+**Why this row matters more than its verdict.** `../../fallbacks/RESULT_FALLBACKS.md` §2 states it
+plainly: *"No rubric this project has written would have caught that. `../PROMPT_GAP_v2.md` scores
+eight dimensions of the problem; none of them asks what a null would be a null about."* That is
+`D59`'s decomposition gap arriving from the construction side, nine days before `D59` was written
+from the retrodiction side — and `../GAP_V3.md` §4's Δ dimension is the registered fix, never applied
+to a scored candidate.
+
 ---
 
 ## 2. Part B — selected, then killed at a pre-registered gate before any work
@@ -251,7 +277,8 @@ make the register look complete while answering none of its questions.
 |---|---:|---|
 | **THEORY-SHAPED** | **6** | A1 PTE 11 · A2 PTE rings · A3 Costas 32 · A4 Hadamard *b*>2 · A5 H(2060) · A6 D-optimal U13 (provisionally — *"engine yes, dimension-reduction no"*) |
 | **COMPUTE-SHAPED** | **1** | A8 record 239 — *and the compute is already spent, privately, by the record's own authors, 700 orders of magnitude ahead* |
-| **NEITHER** | **1** | A7 Chow C(3) — priority |
+| **CONTEST-SHAPED** | **1** | A7 Chow C(3) — priority; §4.2 |
+| **DELIVERABLE-SHAPED** | **1** | A9 MOLS(12) — the null was about the wrong object; the target's own shape is still uncosted |
 
 > **[The count moved from 5 to 6 on 30 Sep 2026.]** A6 was first entered as UNDETERMINED from a
 > summary line; the underlying audit had computed it. The correction **strengthens** §4.1's finding
@@ -262,8 +289,8 @@ nothing for theory-shaped ones. A problem whose prior run stalled on encoding th
 tractable by a longer run."*
 
 **Filled in, the field says the programme has been selecting targets whose constraints its tooling
-does not relieve.** One attempted target of eight had a compute-shaped constraint, and it was held
-privately by the people who set the record. **Six of eight were theory-shaped, and one of those six
+does not relieve.** One attempted target of nine had a compute-shaped constraint, and it was held
+privately by the people who set the record. **Six of nine were theory-shaped, and one of those six
 was selected *because* we were already tooled for it** — `../../fallbacks/QUEUE_V3.md` ranks U13 first
 on the ground that *"the algorithmic-idea gap, if there is one, is one we are already tooled for"*.
 Tooling adjacency is not evidence that a constraint is compute-shaped, and A6 is the row that shows
@@ -319,6 +346,48 @@ operator round-trip for seven of the eight rows.
 made it buildable was the habit of writing results down where the next instance can read them.** That
 is an argument for the repository rather than for the register, and it is the honest form of `LEDGER`
 lesson 41: a prompt is not an instrument until its inputs exist.
+
+### 4.5 Two taxonomies are on file, they disagree, and neither cites the other
+
+This register used **Cycle 0's binary** because `D56` (iii) asked for it. `../GAP_V3.md` §3, written
+nine days before this document, runs a **four-way** classification of the same thing — *"classify the
+gap, not the problem"*: **compute** (*"models do not add FLOPs. Deprioritise"*), **algorithmic idea**
+(*"yes, with capability"*), **breadth/literature** (*"yes, with cost"*), **verification** (*"already
+our strength"*).
+
+**They disagree on A1.** `../GAP_V3.md` puts PTE 11 in the **compute** row — *"10⁶ core-hours vs
+one"* — while this register classifies it **theory-shaped**, because the frontier was set by an
+enumeration method we do not have. Both documents cite the same fact: *"no amount of capability
+closes that; only their algorithm does."* One taxonomy files that under compute, the other under
+theory, **and the operational advice differs**: GAP_V3's *algorithmic idea* row is the one it says
+improves with capability, so if PTE 11's gap is an algorithm rather than FLOPs, GAP_V3's own rule
+says *hold* it rather than deprioritise it.
+
+`../GAP_V3.md` §2 also already contains this register's headline, argued structurally rather than
+measured: *"a problem settled by one explicit finite object in a huge space is, almost by definition,
+a problem whose frontier is set by search capacity… The empty queue is not bad luck. It is what this
+screen returns."* **So §4.1 is a measurement of a claim already on file, not a new claim** — and the
+measurement's sign is the opposite of what that sentence predicts, which is the part worth having.
+GAP_V3 predicts the screen selects for *compute* gaps; the register finds six of nine attempted
+targets were *theory*-shaped and only one compute-shaped. Either the taxonomies are being applied
+inconsistently, or the screen selects for something GAP_V3 misnamed.
+
+**The resolution is not to pick one, and this is the register's recommendation for any successor
+rubric.** Both scales conflate "what stands in the way" with "what would remove it", and only the
+second is decision-relevant. Split it five ways, by remedy:
+
+| value | what closes it | does model capability close it? |
+|---|---|---|
+| **FLOPS** | more compute of the same kind | **no** — a model does not add FLOPs |
+| **ALGORITHM** | a better search, encoding or enumeration at the same compute | **yes**, and this is where A1's real gap sits |
+| **THEORY** | a new structural result, not an implementable method | **not reliably** |
+| **BREADTH** | reading and adjudicating more literature | **yes, and it gets cheaper** |
+| **CONTEST** | nothing — someone else arrives first | **no**, and only entering measures it (§4.2) |
+
+Under that scale A1 is **ALGORITHM** (reproducing Coppersmith et al.'s residue-class chaining), not
+FLOPS and not THEORY — which is a *less* pessimistic verdict than either document on file, and
+changes what PTE 11's corpse is evidence for. **A successor rubric must fix one scale before scoring
+anything, or its scores cannot be compared with any verdict already recorded.**
 
 ---
 
