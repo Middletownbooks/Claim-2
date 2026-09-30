@@ -497,6 +497,36 @@ re-scoped afterwards.
 > **Queue:** option 3 spent. **What remains is 5 (239/345, pending S55 results that have never appeared)
 > and 6 (enter EinsteinArena).** Options 1, 2, 3 and 4 are all closed on evidence.
 
+> **[30 Sep 2026 — option 5 had no self-contained brief and no result. Brief F written,
+> `opt5/BRIEF_F_OPT5.md`.]** The operator could not find either, and was right: option 5's bars live in
+> `../HANDOFF_S55.md` §§3–4, which is a **Claude Code** handoff, never a chat brief — and
+> "RESULT_S55_B_239.md" and "RESULT_S55_C_345.md" **do not exist on this branch.** So the "pending S55"
+> status was never pending anything; no instrument was ever built for it.
+>
+> **Brief F scores all three registered bars verbatim and re-scopes none** — B-1 and B-2 on the odd
+> perfect number bound, C-1 on ES(7). **Prior local work consulted first this time (D56):**
+> `RESULT_MAPPING_B.md` §3 calls 239 *"the only chunk-B candidate worth gating"* and names the two risks
+> the bars test; `RESULT_MAPPING_A.md` §4 records that C-1 is expected to fail because heavy-tailed SAT
+> runtime is textbook and its fixes are already in every solver. **Both priors are carried into the brief
+> with an invitation to overturn them.**
+>
+> **Two locally verified controls, both executed before shipping** (`opt5/controls.py`): σ(*N*) = 2*N*
+> finds exactly 6, 28, 496, 8128 below 10⁵ and rejects five near-misses, plus Euler's form
+> *N* = *q*ᵃ*m*² with *q* ≡ *a* ≡ 1 (mod 4); and for ES, the triangle-plus-interior-point witness fires
+> and **all 25,052 general-position 5-subsets of the 5×5 grid contain 4 in convex position**, consistent
+> with ES(4) = 5. **Both embedded snippets were extracted from the brief and run** — after three
+> hand-written controls in this session shipped wrong.
+>
+> **D57 applied in both halves.** (i) C-1 asks whether the *paper* leaves a subfamily unswept; the brief
+> adds, as a **separate** finding, whether *anything since* has swept it. (ii) The brief cites **no
+> repository paths at all**, because its reader has no repository — resolvability is reader-relative.
+>
+> **P-39 registered: all three FAIL**, with the expected grades stated explicitly (B-1 ESTABLISHED, B-2
+> UNEARNED, C-1 ESTABLISHED) so P-38's 1-of-3 clause calibration can be measured again rather than
+> asserted. **And a separate non-threshold bet: better than even odds arXiv:2512.24061 does not check out
+> as described** — the citation reaching me is `RECALL`, and this project has twice described a paper from
+> its title and been wrong.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,

@@ -316,6 +316,14 @@
       "cost": "one Claude Code run, 18 of 20 reads, plus one short question to the Hadamard worker"
     },
     {
+      "id": "P-39",
+      "by": "Opus 5 (Claim-2 board-finder/fallbacks/opt5/BRIEF_F_OPT5.md, registered and pushed before dispatch)",
+      "predicted": "Brief F scores three registered bars on records 239 and 345, all three quoted verbatim from HANDOFF_S55.md and NOT re-scoped -- B-1 and B-2 on the odd-perfect-number bound, C-1 on Erdos-Szekeres ES(7). PREDICTION: all three FAIL. Single threshold per bar, no middle band. Reasons, and the grades are the interesting part rather than the outcomes: B-1 I expect FAIL-ESTABLISHED, because the 10^2000 unpublished report is specific enough that a search should confirm or refute it. B-2 I expect FAIL-UNEARNED, because a 2012 Mathematics of Computation paper is unlikely to document its compute in units comparable to 10 container-hours, and this project's rule is that an undocumented cost does not clear the bar -- so the bar fails for want of evidence rather than on a measured margin. C-1 I expect FAIL-ESTABLISHED on the prior reasoning already on file: heavy-tailed SAT runtime is textbook and its textbook fixes are already inside every modern solver. SEPARATELY AND NOT PART OF THE THRESHOLD: I give better than even odds that arXiv:2512.24061 does not check out as described -- wrong identifier, or a paper saying something else. This project has twice characterised a paper from its title alone and been wrong, once inside a prompt warning against it, and the citation reaching me is RECALL. If that is what the run finds, it outranks all three verdicts. P-38's clause-level commentary went 1 of 3 while its threshold held; this prediction therefore states the grades explicitly so the same calibration can be measured a second time rather than asserted.",
+      "outcome": "OPEN.",
+      "status": "open",
+      "cost": "one Sonnet 5.5 chat conversation, 22 calls"
+    },
+    {
       "id": "P-35-scored",
       "by": "SELECT_v1.md sec 8, registered before the arm-2b worker was dispatched; run 30 Sep 2026 by a Sonnet 5.5 chat instance",
       "predicted": "the directed search finds >= 1 divergence meeting the registered definition -- two dated published methods on the same object whose reach differs by a factor >= 2 in the frontier parameter itself, both at SECONDARY-RELAYED or better. 0 would mean the signal does not generate.",
