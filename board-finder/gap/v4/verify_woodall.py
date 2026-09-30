@@ -104,3 +104,78 @@ print("=" * 70)
 if FAIL:
     print(f"{len(FAIL)} FAILED: {FAIL}"); raise SystemExit(1)
 print("Every identity the Appendix states re-derives, and holds for general n.")
+
+# ============================================================ 7. HEADROOM (H)
+# Added after pages 657-660 and 666 arrived. Everything below is derived from
+# the paper's own structural facts, all now PRIMARY:
+#   p.658  Z(n) := C(floor(n/2),2) + C(ceil(n/2),2) = floor(n/2)*floor((n-1)/2)
+#   p.659  CO_n has (n-1)! vertices
+#   p.662  a drawing of K_{m,n} corresponds to an (m,n)-set: m elements of V(CO_n)
+#   p.666  "It was clearly not going to be practicable to generate all (9,7)-sets
+#           with antisum less than 144 = Z(9)Z(7)"
+print()
+print("7. HEADROOM -- the scaling from the cases Woodall ran to the two he left")
+
+ck("p.658's Z(n) definition matches the inferred one",
+   [comb(n//2, 2) + comb((n+1)//2, 2) for n in range(2, 14)],
+   [Z(n) for n in range(2, 14)])
+for n in (5, 7, 9, 11):
+    print(f"      |V(CO_{n})| = {n-1}! = {__import__('math').factorial(n-1):,}")
+
+def space(m, n):
+    """Raw count of (m,n)-sets: multisets of size m from V(CO_n)."""
+    from math import factorial
+    N = factorial(n - 1)
+    return comb(N + m - 1, m)
+
+cases = [("K7,7  <- (7,7)-set",  7, 7, "4 hours, program 4"),
+         ("K7,9  <- (9,7)-set",  9, 7, "6 hours, program 5, and NOT by full generation"),
+         ("K7,9  <- (7,9)-set",  7, 9, "the representation he did NOT use"),
+         ("K7,11 <- (11,7)-set", 11, 7, "OPEN"),
+         ("K7,11 <- (7,11)-set", 7, 11, "OPEN, other representation"),
+         ("K9,9  <- (9,9)-set",  9, 9, "OPEN")]
+print()
+print(f"      {'case':<22} {'raw (m,n)-sets':>14}   note")
+for label, m, n, note in cases:
+    print(f"      {label:<22} {space(m,n):>14.3g}   {note}")
+
+base = space(9, 7)                      # the last case he completed
+print()
+print("      Woodall chose the representation with MORE elements from the SMALLER")
+ck("...and (9,7) is indeed cheaper than (7,9)", space(9,7) < space(7,9), True)
+print(f"         (9,7) = {space(9,7):.3g}  vs  (7,9) = {space(7,9):.3g}")
+print("      CO -- so for K7,11 the analogous choice is (11,7), not (7,11):")
+ck("(11,7) is cheaper than (7,11)", space(11,7) < space(7,11), True)
+print(f"         (11,7) = {space(11,7):.3g}  vs  (7,11) = {space(7,11):.3g}")
+
+print()
+print("      Scaling against the last completed case, (9,7):")
+r_711 = space(11, 7) / base
+r_99  = space(9, 9)  / base
+print(f"        K7,11 via (11,7):  x {r_711:,.0f}          (= 720^2 * 9!/11! to first order)")
+print(f"        K9,9  via (9,9):   x {r_99:.3g}")
+ck("the (11,7) ratio is ~720^2/(10*11)", round(r_711 / (720**2 / (10*11)), 1), 1.0)
+ck("the (9,9) ratio is ~(40320/720)^9 = 56^9", round(r_99 / 56**9, 1), 1.0)
+
+print()
+print("      Against the 6 hours program 5 took on a Sun 4/110 (~10 MIPS):")
+SUN_HOURS = 6.0
+for label, r in (("K7,11 via (11,7)", r_711), ("K9,9 via (9,9)", r_99)):
+    sun_h = SUN_HOURS * r
+    for name, speedup in (("1e3 (one modern core, pessimistic)", 1e3),
+                          ("1e4 (one modern core, optimistic)", 1e4)):
+        h = sun_h / speedup
+        unit = f"{h:,.1f} h" if h < 8760 else f"{h/8766:,.3g} yr"
+        print(f"        {label:<18} at {name:<36} -> {unit}")
+print()
+print("      => K7,11 IS REACHABLE and K9,9 IS NOT. The run merged them as one")
+print("         candidate; they differ by eleven orders of magnitude and must be")
+print("         scored separately. H PASSES for K7,11, FAILS hard for K9,9.")
+print()
+print("      CAVEAT, stated because the number is load-bearing: these are RAW")
+print("      multiset counts. Woodall enumerated neither -- p.664's canonical form")
+print("      quotients by isomorphism and p.664's bound sequence (2) prunes by")
+print("      partial antisum, and at (9,7) he could not generate the sub-threshold")
+print("      sets at all and used Theorem 6(c)'s augmented antisum instead. The")
+print("      ratio is a first-order SCALING proxy, valid because the same two")
+print("      reductions apply at every case. It is not an absolute cost.")

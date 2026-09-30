@@ -155,6 +155,99 @@ leaves:
 
 **One dimension from a full pass, and that dimension is a number in the pages not yet read.**
 
+
+## 2e. H computed — and K₇,₁₁ and K₉,₉ are not one candidate
+
+Pages 657–660 and 666 complete the paper. Three things they add, all `PRIMARY`:
+
+* **The abstract names the targets in Woodall's own words:** *"thus the smallest unsettled cases are
+  now K₇,₁₁ and K₉,₉."*
+* **p.658 defines** *Z*(n) := C(⌊n/2⌋,2) + C(⌈n/2⌉,2) = ⌊½n⌋⌊½(n−1)⌋ — **identical to the formula I
+  inferred from five stated products before seeing this page.** Asserted for n = 2…13.
+* **p.659:** CO_n has **(n−1)! vertices**, is vertex-transitive and *n*-regular. So an (m,n)-set is a
+  multiset of *m* elements drawn from (n−1)! — which is the cost model H needs.
+
+**And p.666 is Woodall stating his own wall:**
+
+> *"It was **clearly not going to be practicable** to generate all (9,7)-sets with antisum less than
+> 144 = Z(9)Z(7), and so in the fifth and final program the augmented antisum of Theorem 6(c) was
+> used in order to eliminate as early as possible any set that, despite having a sufficiently small
+> antisum, could not correspond to a counterexample."*
+
+So the last case he completed was already past full generation, and what carried it was a **stronger
+pruning function**, not more machine. That is an ALGORITHM statement in the paper's own voice.
+
+### The scaling
+
+| case | representation | raw (m,n)-sets | vs the last completed case |
+|---|---|---:|---:|
+| K₇,₇ | (7,7) | 2.05×10¹⁶ | — (4 hours) |
+| **K₇,₉** | **(9,7)** | **1.51×10²⁰** | **1× (6 hours)** |
+| K₇,₉ | (7,9) — *not* the one he used | 3.44×10²⁸ | |
+| **K₇,₁₁** | **(11,7)** | **7.29×10²³** | **× 4,838** |
+| K₇,₁₁ | (7,11) | 1.64×10⁴² | |
+| **K₉,₉** | **(9,9)** | **7.77×10³⁵** | **× 5.16×10¹⁵** |
+
+Woodall's representation choice was the cheaper one — (9,7) over (7,9) — and the same rule makes
+**(11,7)** the right form for K₇,₁₁. The two ratios reduce to closed forms, both asserted:
+**720²·9!/11!** and **(40320/720)⁹ = 56⁹**.
+
+Against the 6 hours program 5 took on a Sun 4/110:
+
+| | at 10³ speedup | at 10⁴ speedup |
+|---|---:|---:|
+| **K₇,₁₁ via (11,7)** | **29 hours** | **2.9 hours** |
+| K₉,₉ via (9,9) | 3.5×10⁹ years | 3.5×10⁸ years |
+
+> **H PASSES for K₇,₁₁ and FAILS hard for K₉,₉.** The v4 run scored them as one candidate; they
+> differ by **eleven orders of magnitude** and must be scored separately.
+
+**The caveat, stated because the number is load-bearing.** These are raw multiset counts and Woodall
+enumerated neither — p.664's canonical form quotients by isomorphism, its bound sequence (2) prunes
+on partial antisum, and at (9,7) he could not generate the sub-threshold sets at all. The ratio is a
+first-order *scaling* proxy, sound because the same two reductions apply at every case, and it is
+not an absolute cost. A 10× error in it does not change either verdict.
+
+## 2f. The scorecard, and two defects in my own Step 5
+
+**K₇,₁₁**, under `PROMPT_GAP_v4.md` Step 5:
+
+| | dimension | verdict |
+|---|---|---|
+| **Q** | tracked quantity | **PASS** — cr(K₇,₁₁) ∈ {221, 223, 225} |
+| **N** | nameable unknown set | **5** — one number |
+| **W** | witness check | **5** — counting crossings on a planarised drawing is exact |
+| **R** | remedy | **ALGORITHM, PRIMARY** |
+| **H** | headroom | **PASS** — hours on a modern core |
+| **Δ** | deliverable | **PASS** — the crossing-number survey records the bracket; **both outcomes move it** |
+| **P** | prior | see below |
+
+**Defect 1 — Step 2's non-existence exclusion needs its own words read carefully.** The run wrote,
+of Hill, *"proving 225 would be NON-EXISTENCE, which is excluded."* Step 2 actually excludes a target
+*"if the **only** way to settle it is to prove no object exists."* Here it is not the only way: a
+drawing of K₇,₁₁ with 221 or 223 crossings settles it and is a trivially checkable finite witness. **The
+target is not excluded; one of its two outcomes is the awkward one.** The run was over-strict against
+its own top candidate.
+
+**Defect 2 — P's kill assumes the positive outcome is the deliverable, and here it is not.** P kills
+on *"positive evidence against the object existing in the region we could reach"*, and Woodall's runs
+are mild evidence of exactly that: every sub-*Z* configuration found at (7,5), (7,7) and (9,7) failed
+to correspond to a drawing. But **Δ passes in both directions** — verification collapses the bracket
+to 225 and refutation collapses it to 221 or 223, and the table moves either way. That is precisely
+what `A9`/MOLS(12) did **not** have. **A dimension that kills a target because the positive outcome
+is unlikely is wrong whenever the null is itself a table move**, and Step 5 does not say so.
+
+## 2g. What this does to the v4 bar
+
+The bar registered before dispatch was *at least one candidate clearing all five kills with
+R ∈ {ALGORITHM, THEORY} at PRIMARY tier*. **K₇,₁₁ now clears Q, R, H and Δ, with N = 5 and W = 5.**
+
+**This does not re-score the run.** The run failed the bar `FAIL-UNEARNED`, and that grade was
+exactly right: it failed for want of evidence it could not obtain, and the evidence — once obtained
+by a route outside the run — shows the population was **not** empty. `D54`'s two-grade FAIL earned
+its keep here; had the run been scored `FAIL-ESTABLISHED`, the correct conclusion would have been
+that the off-list space is exhausted, and that conclusion would have been false.
+
 ## 3. The cost, and why it is not the binding quantity
 
 Four hours on a **Sun 4/110** is 1988-era SPARC hardware. Any modern core covers that in **minutes
@@ -165,18 +258,20 @@ the conclusion is the same at either end. `DERIVED-ESTIMATE`, stated as a bound 
 (i) how the enumeration grows from (7,7) to (7,11) and (9,9), which §5 does not give, and (ii)
 whether the gap-closing argument generalises, which §5 also does not give.
 
-## 4. What is still needed — now one thing, and it is **H**
+## 4. What is still needed — nothing from this paper
 
-Items 2 and 3 of this section are **answered**: the fifth program settled K₇,₉ in about 6 hours, and
-there is no concluding section and no stated obstruction. What remains is item 1, and it is now the
-only dimension standing between this candidate and a full pass:
+**The paper is complete, 657–671, and every dimension it can answer is answered.** What remains is
+not a reading task:
 
-**Pages 657–666 — the definitions, Theorems 1–6, §4's enumeration and pruning, and the start of
-§5.** The question they answer is **H, headroom**: how does the enumeration grow from (7,7) to
-(7,11) and (9,9)? The observable to look for is how the number of (m,n)-sets to be examined depends
-on *m* and *n* — the paper reports 32, 96,821 and 13,448 *tight* sets at three parameter pairs, but
-the *search* size is what H needs. With that number, H is computable and this candidate either
-passes v4 outright or dies on a measured margin rather than on an unread page.
+1. **Woodall's own open question is the residual risk, and he names it** (p.663): *"I know of no
+   counterexample to the conjecture that an (m,n)-set is tight if and only if every (4,n)-subset of
+   it is pseudo-tight. A proper understanding of tight sets might well provide the clue to proving
+   Zarankiewicz's conjecture."* If that equivalence holds, Theorem 6(c) mechanises the closing
+   argument at every case and the residual THEORY component disappears. **That is the one question
+   worth putting to a capable instance**, and it is a question about a stated conjecture rather than
+   about a computation.
+2. **The prior-attempt transcript**, which is Cycle 0's question and not this paper's. Still only the
+   operator has it.
 
 **Do not OCR these.** The page images read directly and without transcription error; OCR would
 degrade exactly the notation that matters — subscripted K₇,₁₁, primed *m*′, the overbar on *ā*, and
