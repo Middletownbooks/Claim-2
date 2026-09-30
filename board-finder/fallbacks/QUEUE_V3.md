@@ -132,6 +132,28 @@ re-scoped afterwards.
 > known, and **H(668) needs Williamson order 167**. And the exact-SIC ceiling is **5,779**, not 5,799
 > (**D49**), a digit our own arithmetic check caught and then explained away.
 
+> **[30 Sep 2026 — brief B2 run, `../gap/discovery/RESULT_B2_SEQUENCES.md`. ARM 2 IS CLOSED: 15 of 15
+> tables assessed, 0 live survivors.]** Costas **FAIL at S3** (value **32**, not the 29 I supplied —
+> the enumeration frontier is a different quantity), bent functions **FAIL at S1** (a count frontier;
+> exhibiting one more moves nothing). **The record-table seam is finished.** Of the six options
+> inventoried above, 1 and 2 are now spent; Williamson order 65 has gone to the Hadamard instance;
+> what remains is **3 (the *b* > 2 Hadamard region), 4 (277 and 353, brief C), 5 (239 and 345,
+> still pending S55) and 6 (enter EinsteinArena)**.
+>
+> **Two instrument findings outlast all of it, and both say the screen has been measuring itself.**
+> * **D50, now observed rather than hypothesised.** Six consecutive S3 failures — tables 7, 8, 9, 10
+>   and records 277, 353 — **all for want of a method section, and not one on evidence that the move
+>   was `SEARCH-REPEAT`.** Every table in arm 2 that reached S3 died there.
+> * **D51: S4 is built on the wrong observable.** It counts *moves*, so it cannot see an *attempt that
+>   failed*. Rosin's CPro1 (arXiv:2505.23881) put LLM-driven search on Costas arrays in 2025 and moved
+>   nothing — invisible to both scopings. C-1's bar called an attempt PASS evidence, C-3's called it
+>   FAIL, S4 cannot see it. **Three instruments, three readings of one fact**, and the state they
+>   disagree about is the only one that separates a durable opportunity from an unvisited cell.
+>
+> So the honest reading of "13 of 15 assessed, 0 survivors" is not that the seam is barren. It is that
+> **S3 measured our access and S4 measured the wrong thing.** That is worth more than the two
+> candidates the seam was searched for.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,

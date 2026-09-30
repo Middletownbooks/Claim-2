@@ -26,7 +26,8 @@ maintained-table host was blocked. Two sets of local checks were run by the work
 | 6 | Williamson, smallest open odd order | 65 | **FAIL at S0** | **ASSESSED 30 Sep** by `discovery/RESULT_B1_DESIGNS.md`: "orders below 65 settled" is SECONDARY-RELAYED but "65 is open" is SEARCH-SUMMARY only, and the sentence saying so exists only in a paper version that could not be re-opened |
 | 7 | Steiner, smallest open admissible case | S(2,6,51) | **FAIL at S3** | **ASSESSED 30 Sep**: move kind UNKNOWN, 2001 method section not opened. Seven other cells moved Nov 2025–2026 by human computer searches — S4-table is reading-dependent |
 | 8 | cyclic difference sets | (1561,105,7) by *k* | **FAIL at S3** | **ASSESSED 30 Sep**: move kind UNKNOWN; and the maintainer's 2003 and 2026 papers cannot be reconciled — (419,133,42) is open in one and absent from the other |
-| 9–10 | Costas, bent | — | FAIL | **not assessed** — worker stopped at the concurrency cap. Brief B2 remains |
+| 9 | Costas arrays, smallest *n* with no known array | **32** (not 29 — the enumeration frontier is a different quantity) | **FAIL at S3** | **ASSESSED 30 Sep** by `discovery/RESULT_B2_SEQUENCES.md`: S1 PASSES as an existence frontier; method section never opened, so move kind UNKNOWN |
+| 10 | bent functions, smallest variable count unknown | **10** (even *n* only) | **FAIL at S1** | **ASSESSED 30 Sep**: a count frontier — exhibiting one more bent function moves nothing, and route (b) fails because a cardinality has no better witness |
 | 11 | APN permutation, dim 8 | open; ≥ 3,808,491 quadratic APN classes known (2025) | FAIL | S1 degenerate: the only possible move is the resolution itself, so S3 cannot be evaluated |
 | 12 | perfect 1-factorisation | K₆₄ open; frontier went 52 → 56 → 64 | FAIL | S3: SEARCH-REPEAT per one search-summary sentence — not gate-grade, and fails either way |
 | 13 | covering codes K(n,1) | n = 10 (RECALL) | FAIL | CE |
@@ -88,3 +89,16 @@ Two divergence-shaped facts turned up in other arms. Neither meets the registere
 §3 proposed scoping S4 to the **table**. `discovery/RESULT_B1_DESIGNS.md` §2 found a third: in the same La Jolla **repository family**, the *signed* difference set table was swept in Aug–Sep 2026, all **68** open small entries resolved (16 exist, 52 do not), by a GitHub project whose README **discloses extensive OpenAI Codex use**. Correctly not counted against cyclic difference sets — a different object — but it is the activity this project would be competing with.
 
 **And it corrects an inference made elsewhere.** `discovery/RESULT_GATE_C1.md` §6 established that the design-theory objects are absent from EinsteinArena's board, and that was then read as the seam being unswept. **Not on a board is not the same as not being swept.** The signed-DS sweep needed no board, no leaderboard and no platform, and no board-based crowding screen can see it. The scoping question is record / table / **repository-family**.
+
+
+---
+
+## 6. [30 Sep 2026] Arm 2 is closed: 15 of 15 assessed, 0 live survivors
+
+Ten tables in the original run (2 triage survivors, all three of their records subsequently killed at gates C-1, C-2, C-3), three in brief B1, two in brief B2. **P-34's scoring on triage survivors is untouched; the pipeline yield is 0.**
+
+**Two things the closing runs established that outlast the verdicts.**
+
+**S3 is where every table that reached it died, six consecutive times** — tables 7, 8, 9, 10 and arm 1's records 277 and 353, all for want of a method section, and **not one on evidence that the move was `SEARCH-REPEAT`**. D50 is now the gate's observed behaviour rather than a hypothesis about it.
+
+**S4 is built on the wrong observable — D51.** It counts moves, so it cannot see an attempt that failed. Rosin's CPro1 (arXiv:2505.23881) put LLM-driven search on Costas arrays in 2025 and moved nothing; both the record-scoped and table-scoped readings of S4 are blind to it. Meanwhile C-1's bar treated an attempt as PASS evidence and C-3's treated it as FAIL. **Three instruments, three readings of one fact**, and the state they disagree about — attempted and failed — is the only one that distinguishes a durable opportunity from a merely unvisited cell.

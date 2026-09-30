@@ -94,7 +94,12 @@ Brief A lost four of its 22 calls to two mechanics. Both are avoidable:
   a September 2026 identifier was refused three times in a row. If a recent paper refuses, **do not
   retry more than once** — spend the call elsewhere and mark the cell NOT REACHED.
 
-A third mechanic, worth knowing because it invalidates a cell rather than costing a call: **a live
+* **`robots.txt` refusals are a third, distinct cause.** A run lost a call to `mathweb.ucsd.edu`
+  (a PDF) **refused because robots disallowed it** — not a rate limit and not an unsurfaced URL. If a
+  host refuses this way, it will keep refusing; look for the same paper on arXiv or a different mirror
+  rather than retrying.
+
+A fourth mechanic, worth knowing because it invalidates a cell rather than costing a call: **a live
 artifact can change while you read it.** On Brief A a GitHub README showed ten dimensions in the
 search snapshot and nineteen when fetched, with one record's claimed increase shrinking 44.4%. If a
 value moves between your search and your fetch, **report both and gate on neither.**
