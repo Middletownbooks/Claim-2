@@ -1,5 +1,13 @@
 # Brief C — five arm-1 verdicts that rest on a tier the last run could not improve
 
+> **[DISPATCH VERSION, 30 Sep 2026.]** This brief was written before briefs A, B1, B2 and D ran.
+> **The five questions in §1, their order, and the 22-call cap are unchanged** — those are the
+> pre-registration and re-scoping them after four runs is exactly what D44 forbids. What has been
+> added is four rules those runs paid for, a verified control for the brief's own model case, and one
+> clause that turned out to matter more than any bar: **§5, report anything that contradicts this
+> brief.** Brief D's single most valuable finding arrived through that clause and not through its
+> gate.
+
 **For a Sonnet 5.5 instance in a chat conversation with web search and page fetching. No repository,
 no filesystem. Your output is a document in your reply.**
 
@@ -20,6 +28,52 @@ everywhere below: a cap set of size *c* in 𝔽₃ⁿ can be **tensored** with i
 bound *c*^(1/n) on the cap-set constant.** That is a lifting theorem. It is what makes a finite search
 move an asymptotic headline. **Your question, four times over, is whether the analogous theorem exists
 and is published.**
+
+**That arithmetic is verified, not asserted, and you can re-run it in seconds.** This matters because
+the last brief in this series shipped a locally-computed claim marked *"treat it as given"* that was
+the only false statement in the document (debt **D53**), so the model case here is given to you as a
+control you can break rather than a premise you must accept:
+
+```python
+import itertools
+def is_cap(S):
+    Sset = set(S)
+    for i, x in enumerate(S):
+        for y in S[i+1:]:
+            z = tuple((-(a+b)) % 3 for a, b in zip(x, y))
+            if z in Sset and z != x and z != y:
+                return False
+    return True
+
+def tensor(S, T):
+    return [s + t for s in S for t in T]
+
+# maximal caps in dimensions 1, 2, 3 — sizes 2, 4, 9
+c1 = [(0,), (1,)]
+c2 = [(0,0), (0,1), (1,0), (1,1)]
+c3 = [(0,0,0),(0,0,1),(0,1,0),(0,1,1),(1,0,0),(1,0,1),(1,1,2),(1,2,2),(2,1,2)]
+# (c3 was produced by exhaustive search, not typed from memory: my first attempt at
+#  writing these nine points by hand was NOT a cap, and the assertion below caught it.)
+assert is_cap(c1) and is_cap(c2) and is_cap(c3)
+assert len(c3) == 9
+# NEGATIVE TEST: (0,2) completes the line {(0,0),(0,1),(0,2)}, so this MUST fail
+assert not is_cap(c2 + [(0,2)])
+
+# the lifting: a cap of size c in dim n gives caps of size c^k in dim nk
+cur = c2
+for k in (2, 3):
+    cur = tensor(cur, c2)
+    assert is_cap(cur) and len(cur) == 4**k
+    assert abs(len(cur)**(1.0/(2*k)) - 2.0) < 1e-12     # constant c^(1/n), invariant in k
+# and a better finite object gives a better constant — this is the whole mechanism
+assert 9**(1/3) > 4**(1/2)
+```
+
+**Run it, including the negative test.** Note the last line: the dimension-3 cap certifies
+9^(1/3) ≈ 2.080 against the dimension-2 cap's 4^(1/2) = 2.0. **That is why a finite search moves an
+asymptotic headline, and it is the exact shape you are looking for four times below.** If any of these
+assertions fails, say so — it would mean this brief's model case is wrong, which outranks all five
+answers.
 
 ## Why you are being asked, and it is not that the last run was careless
 
@@ -68,6 +122,33 @@ meant, report both senses rather than picking one.** Watch especially for *proje
 anisotropic Calderón problem was posted and withdrawn days later by its own authors — *"the argument
 is incorrect"* — and still recirculates in citation lists. If you find a record claim, check whether
 it stands.
+
+## Four more rules, each paid for by a run since this brief was drafted
+
+**Two quantities can share one name, and that is worse than two precisions of one quantity.** Brief B2
+was sent out with *"exhaustive enumeration reaches order 29"* as though it answered the record *"the
+smallest order with no known Costas array"*, which is **32**. Three apart, both correct, different
+things. The numerical-versus-exact rule above catches two readings of one number; this catches two
+numbers wearing one label. **For Q4 especially — star discrepancy — ask which variable the asymptotics
+is in before you accept any statement.**
+
+**Report the strength of a theorem, not only its existence.** Brief D found a genuine published
+theorem constraining Costas arrays (ascent counts within 2.5 of (*n*−1)/2) and computed that applied at
+the target order it retains **93.4% of all permutations — 0.10 bits.** A real, refereed, correctly
+stated theorem worth essentially nothing as a constraint. **So a lifting theorem that exists but gives
+α < 1, or a constant far from the truth, is a different answer from one that gives the sharp order**,
+and a bare YES that hides the difference is close to useless. The answer block below has a `STRENGTH`
+line for this.
+
+**Do not describe a paper from its title.** This project characterised an arXiv paper from its title
+alone, inside a prompt that warned against doing so, and separately reported a system as having moved
+one quantity when it had moved two. **If you did not open it, write that you did not open it.** The
+tier table above is how you say that; use it rather than hedged prose.
+
+**"Not seen" is not "does not exist", and the difference is Q4's whole verdict.** Arm 1's own note on
+record 375 was *"no lifting theorem seen"* from a container that could not open the sources. Your job
+is to convert that into one of three things — a theorem, an established absence, or an honest
+UNRESOLVED — and the third is a perfectly good answer.
 
 ## Budget, and the failure this replaces
 
@@ -161,6 +242,7 @@ THE THEOREM   | <name, authors, year, and the statement in one or two lines> —
 SOURCE OPENED | <url or citation you actually read>
 TIER          | SECONDARY-RELAYED | SEARCH-SUMMARY | RECALL
 WHAT IT GIVES | <what a finite object of size X in dimension/length n yields asymptotically — the arithmetic, if any>
+STRENGTH      | <sharp order | correct order, loose constant | weaker than the known bound | negligible as a constraint> — and the number, if you can compute one
 GATE EFFECT   | <does S1 (or S2 for Q5) now PASS or FAIL, and is that a change from arm 1's verdict?>
 ```
 
@@ -206,5 +288,24 @@ file.
 Give **the number of calls used against the cap** and **every failed call with its cause**. Those
 lines are what identified the two fetch mechanics above; a run that reports only findings cannot be
 audited the same way.
+
+## 5. Report anything that contradicts this brief. This clause has outperformed every bar on this board.
+
+Several statements above are relayed or derived rather than checked: arm 1's five quoted notes, the
+landmark attributions (Behrend, Kelley–Meka, Erdős–Hajnal–Rado, Bondy–Simonovits), and the three fetch
+mechanics. **If one is wrong, that is the most useful thing you can report**, ahead of all five
+answers.
+
+**This is not boilerplate, and here is the evidence.** The previous brief in this series told its
+reader to *"Treat it as given"* that the known Costas arrays at order 31 were sporadic and had been
+found by search, and built its entire justification on a 5-bit figure derived from that. The claim was
+locally computed and carried this project's highest provenance tier. **It was also the only false
+statement in the brief** — the arrays are constructible, from a second operator the computation never
+modelled. The run refused the premise it had been instructed to accept, and was right; the finding was
+worth more than the verdict it was sent to produce. Debt **D53**: *a verified computation licenses only
+the claim it computes, and the tier does not travel to the next sentence.*
+
+So: **when a premise here is load-bearing, ask what would falsify it, and say so if you cannot.** You
+are not expected to defer to this document.
 
 **Do not recommend what to do next.** The five answers and their tiers are the deliverable.
