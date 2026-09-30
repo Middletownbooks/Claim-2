@@ -226,3 +226,55 @@ ALL ASSERTIONS PASSED (part 2).
 ==========================================================================
 ALL ASSERTIONS PASSED (part 3).
 ==========================================================================
+
+==========================================================================
+10. THE TWO THIRTEENS, and the ambiguity is decision-critical
+==========================================================================
+  Coverage by Paley I/II + Sylvester + Kronecker closure only.
+  This is a SUBSET of the known constructions -- Williamson, Turyn,
+  Goethals-Seidel, Baumert-Hall and the sporadics are NOT modelled --
+  so 'uncovered' here is a SUPERSET of the genuinely open orders.
+
+  NECESSARY CONDITION CHECK: all 13 classical sub-2000 orders must be
+  uncovered by these constructions. Covered (should be none): []
+  PASSED.
+
+  uncovered multiples of 4 in [4, 2000): 136
+  uncovered multiples of 4 in [2000, 3000): 92
+
+  So I CANNOT derive either thirteen: my superset is far larger than 13
+  in both bands, because the constructions I cannot model are exactly the
+  ones that close most orders. Stated rather than papered over.
+
+  WHAT IS DERIVABLE, and it discriminates the two readings:
+
+  Reading A -- the 13 OPEN orders in (2000, 3000).
+    The worklist's own targets are 4v for v = 523, 571, 643, 659, 739:
+      v= 523 -> order  2092  in (2000,3000): True
+      v= 571 -> order  2284  in (2000,3000): True
+      v= 643 -> order  2572  in (2000,3000): True
+      v= 659 -> order  2636  in (2000,3000): True
+      v= 739 -> order  2956  in (2000,3000): True
+      v= 487 -> order  1948  in (2000,3000): False   <-- below 2000, and recorded SOLVED by Alpoge
+    FIVE of the six live targets lie in (2000,3000) and the sixth is the
+    sub-2000 order Alpoge closed. Reading A fits the worklist exactly.
+
+  Reading B -- Alpoge's 12 new examples plus 1 H matrix from elsewhere.
+    12 + 1 = 13, and the classical sub-2000 open list has 13 entries.
+    Arithmetically consistent, and it would mean the 13 are all CLOSED.
+
+  THE DISCRIMINATOR IS NOT ARITHMETIC, IT IS WHAT THE COUNT IS FOR:
+    under A, '126+ admissible (v,b) pairs with b > 2' counts parameter
+    choices available at THIRTEEN STILL-OPEN ORDERS -- an opportunity.
+    under B, it counts parameter choices at THIRTEEN SOLVED ORDERS --
+    the unexplored residue of finished problems, worth nothing as a
+    target. A file named OPEN_ORDERS.md could hold either: the open
+    orders, or the history of how the formerly-open ones were closed.
+
+  ** SO THE SAME SENTENCE IS EITHER THE WHOLE OPPORTUNITY OR NO
+     OPPORTUNITY AT ALL, AND NOTHING I HOLD DECIDES WHICH. **
+  This outranks the cost comparison: if B holds, clause (c) is moot.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 4).
+==========================================================================

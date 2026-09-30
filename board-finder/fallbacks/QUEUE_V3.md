@@ -321,6 +321,37 @@ re-scoped afterwards.
 > cheaper, and I expect not — a worklist ranked by a validated density estimator would already point at
 > *b* = 7 if it were.
 
+> **[30 Sep 2026 — the operator gives two readings of "the 13 orders", and they decide whether option 3
+> exists at all. Brief E revised again before dispatch; `../hadamard/bgt2/BRIEF_E_BGT2.md` §2a.]**
+>
+> | reading | the thirteen are | what "126+ admissible pairs with *b* > 2" counts |
+> |---|---|---|
+> | **A** (likely) | the thirteen **open** orders in **(2000, 3000)** | parameter choices at thirteen **still-open** orders — **the opportunity** |
+> | **B** | **Alpöge's twelve** new examples, which closed every open order **under 2000**, plus one known *H* from elsewhere | parameter choices at thirteen **solved** orders — **no opportunity at all** |
+>
+> **Both are exactly consistent.** A fits the worklist: five of the six targets (2092, 2284, 2572, 2636,
+> 2956) lie in (2000, 3000) and the sixth is **1948, the sub-2000 order Alpöge solved**. B fits too:
+> 12 + 1 = 13, the size of the classical sub-2000 open list. **So the same sentence is either the whole
+> of option 3 or none of it, and nothing here decides which.**
+>
+> **I could not derive either thirteen and say so rather than papering over it.** Coverage by Paley I/II,
+> Sylvester and Kronecker closure leaves **136** uncovered multiples of 4 below 2000 and **92** in
+> (2000, 3000) — far too many to pick thirteen out of, because the constructions I cannot model
+> (Williamson, Turyn, Goethals–Seidel, Baumert–Hall, sporadics) are exactly the ones that close most
+> orders. The necessary condition does pass: **all thirteen classical sub-2000 orders are uncovered** by
+> the constructions I can model.
+>
+> **So the brief now carries a third verdict, `E: VOID`** — the subject of the bar does not exist —
+> available **only on positive sourced evidence for B**. Precedent: **D46**, opened when a candidate's
+> "table it would move" turned out possibly not to exist. VOID is categorically distinct from FAIL (the
+> region exists and is not worth entering) and is **not** a middle band; an unevaluable clause is still
+> FAIL, graded per D54. **Q1 is now the disambiguation, ahead of the cost comparison**, because under B
+> clause (c) is moot. It is the cheapest kill on this board.
+>
+> **P-38 unchanged as a threshold** — the bar FAILS — but recorded: **VOID would settle it neither way**,
+> since a bar whose subject does not exist was never evaluable. On VOID, P-38 stays OPEN and is
+> re-registered against whatever region survives.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,

@@ -349,3 +349,95 @@ print()
 print("=" * 74)
 print("ALL ASSERTIONS PASSED (part 3).")
 print("=" * 74)
+
+
+# ---------------------------------------------------------------- 10. which thirteen
+print()
+print("=" * 74)
+print("10. THE TWO THIRTEENS, and the ambiguity is decision-critical")
+print("=" * 74)
+def prime_power_q(m):
+    if m < 2: return False
+    p = 2
+    while p * p <= m:
+        if m % p == 0: break
+        p += 1
+    else:
+        return True
+    x, k = m, 0
+    while x % p == 0: x //= p; k += 1
+    return x == 1
+
+LIM = 3200
+# Paley I: n = q+1, q prime power = 3 mod 4.  Paley II: n = 2(q+1), q = 1 mod 4.
+known = {1, 2}
+for q in range(3, LIM):
+    if prime_power_q(q):
+        if q % 4 == 3 and q + 1 <= LIM: known.add(q + 1)
+        if q % 4 == 1 and 2 * (q + 1) <= LIM: known.add(2 * (q + 1))
+n = 1
+while n <= LIM: known.add(n); n *= 2          # Sylvester
+# close under Kronecker product (H(m) x H(n) -> H(mn)) to a fixed point
+changed = True
+while changed:
+    changed = False
+    cur = sorted(known)
+    for a in cur:
+        for b_ in cur:
+            if a > 1 and b_ > 1 and a * b_ <= LIM and a * b_ not in known:
+                known.add(a * b_); changed = True
+
+mult4 = [m for m in range(4, LIM + 1, 4)]
+uncovered = [m for m in mult4 if m not in known]
+print(f"  Coverage by Paley I/II + Sylvester + Kronecker closure only.")
+print(f"  This is a SUBSET of the known constructions -- Williamson, Turyn,")
+print(f"  Goethals-Seidel, Baumert-Hall and the sporadics are NOT modelled --")
+print(f"  so 'uncovered' here is a SUPERSET of the genuinely open orders.")
+print()
+CLASSICAL13 = [668, 716, 892, 1004, 1132, 1244, 1388, 1436, 1676, 1772, 1916, 1948, 1964]
+miss = [m for m in CLASSICAL13 if m in known]
+print(f"  NECESSARY CONDITION CHECK: all 13 classical sub-2000 orders must be")
+print(f"  uncovered by these constructions. Covered (should be none): {miss}")
+assert not miss
+print("  PASSED.")
+print()
+for lo, hi in ((4, 2000), (2000, 3000)):
+    u = [m for m in uncovered if lo <= m < hi] if lo > 4 else [m for m in uncovered if m < hi]
+    print(f"  uncovered multiples of 4 in [{lo}, {hi}): {len(u)}")
+print()
+print("  So I CANNOT derive either thirteen: my superset is far larger than 13")
+print("  in both bands, because the constructions I cannot model are exactly the")
+print("  ones that close most orders. Stated rather than papered over.")
+
+print()
+print("  WHAT IS DERIVABLE, and it discriminates the two readings:")
+print()
+print("  Reading A -- the 13 OPEN orders in (2000, 3000).")
+print("    The worklist's own targets are 4v for v = 523, 571, 643, 659, 739:")
+for v in (523, 571, 643, 659, 739):
+    print(f"      v={v:>4} -> order {4*v:>5}  in (2000,3000): {2000 < 4*v < 3000}")
+print(f"      v= 487 -> order {4*487:>5}  in (2000,3000): {2000 < 4*487 < 3000}"
+      "   <-- below 2000, and recorded SOLVED by Alpoge")
+print("    FIVE of the six live targets lie in (2000,3000) and the sixth is the")
+print("    sub-2000 order Alpoge closed. Reading A fits the worklist exactly.")
+print()
+print("  Reading B -- Alpoge's 12 new examples plus 1 H matrix from elsewhere.")
+print(f"    12 + 1 = 13, and the classical sub-2000 open list has "
+      f"{len(CLASSICAL13)} entries.")
+print("    Arithmetically consistent, and it would mean the 13 are all CLOSED.")
+print()
+print("  THE DISCRIMINATOR IS NOT ARITHMETIC, IT IS WHAT THE COUNT IS FOR:")
+print("    under A, '126+ admissible (v,b) pairs with b > 2' counts parameter")
+print("    choices available at THIRTEEN STILL-OPEN ORDERS -- an opportunity.")
+print("    under B, it counts parameter choices at THIRTEEN SOLVED ORDERS --")
+print("    the unexplored residue of finished problems, worth nothing as a")
+print("    target. A file named OPEN_ORDERS.md could hold either: the open")
+print("    orders, or the history of how the formerly-open ones were closed.")
+print()
+print("  ** SO THE SAME SENTENCE IS EITHER THE WHOLE OPPORTUNITY OR NO")
+print("     OPPORTUNITY AT ALL, AND NOTHING I HOLD DECIDES WHICH. **")
+print("  This outranks the cost comparison: if B holds, clause (c) is moot.")
+print()
+print("=" * 74)
+print("ALL ASSERTIONS PASSED (part 4).")
+print("=" * 74)

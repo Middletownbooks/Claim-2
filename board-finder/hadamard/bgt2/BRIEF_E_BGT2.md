@@ -64,10 +64,8 @@ sums *a_k* = ±1 + *d*(2*u* − (*r*−1)) with Σ*a_k*² = 4*v*.
 
 **Two things in the queue entry that still do not survive arithmetic.**
 
-* **"The 13 orders" names two different sets.** The repo's targets are orders 1948, 2092, 2284, 2572,
-  2636, 2956; the classical thirteen smallest open orders are 668, 716, 892, 1004, 1132, 1244, 1388,
-  1436, 1676, 1772, 1916, 1948, 1964 (**`RECALL` — checking this list is part of Q3**), whose *v* = *n*/4
-  are all prime. **Only 1948 is in both.**
+* **"The 13 orders" — see §2a. It is the most important open question in this brief and it can void
+  the entry outright.**
 * **669 and 721 are ≡ 1 (mod 4), so neither is a Hadamard order.** They are *v* or *m* values giving
   **2676** and **2884**, and both are composite (669 = 3·223, 721 = 7·103) while every *v* on the
   worklist is prime. *Hypothesis:* never screened because the machinery assumes *v* prime. **Falsifier:**
@@ -77,6 +75,35 @@ sums *a_k* = ±1 + *d*(2*u* − (*r*−1)) with Σ*a_k*² = 4*v*.
 fewer than *v* = 487, the order Alpöge **solved**, and 40 fewer than the live target. **Distrust it** —
 free bits is one of two coordinates, density = free_bits − log2 E[#sol], and I cannot compute E[#sol]
 without the repo's estimator. Whether 2884 is open is also unverified.
+
+## 2a. Which thirteen? The same sentence is either the whole opportunity or none of it.
+
+`Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` is quoted as saying *"Across all 13 orders there are 126+ admissible (v, b) pairs with
+b > 2."* **Two readings of "the 13 orders" are live, both arithmetically consistent, and they point in
+opposite directions.** `OPERATOR-SUPPLIED`, both of them:
+
+| reading | the thirteen are | what 126+ then counts |
+|---|---|---|
+| **A** (operator's "likely") | the **thirteen open** Hadamard orders **between 2000 and 3000** | parameter choices available at thirteen **still-open** orders — **an opportunity** |
+| **B** | **Alpöge's twelve new examples**, which closed every open order **under 2000**, plus one known *H* from another source | parameter choices at thirteen **solved** orders — the unexplored residue of **finished** problems, **worth nothing as a target** |
+
+**Reading A fits the worklist exactly** (`PRIMARY-VERIFIED-LOCALLY`): of the six targets, **five lie in
+(2000, 3000)** — 2092, 2284, 2572, 2636, 2956 — and the sixth is 1948, the sub-2000 order the table
+records Alpöge as having **solved**. **Reading B is also exactly consistent**: 12 + 1 = 13, and the
+classical sub-2000 open list has exactly thirteen entries.
+
+**A file named *OPEN_ORDERS.md* could hold either** — the open orders, or the record of how the
+formerly-open ones were closed. **Nothing I hold decides which, and the difference is the entire value
+of the queue entry.** This outranks everything else in the brief: under B, the cost comparison in §4 is
+moot because there is no region to enter.
+
+**What I could not derive, said plainly.** I tried to reconstruct the thirteen from construction
+coverage — Paley I and II, Sylvester, and closure under Kronecker products. The necessary condition
+**passes**: all thirteen classical sub-2000 orders are uncovered by those. But the superset is far too
+large to identify thirteen of anything — **136 uncovered multiples of 4 below 2000 and 92 in
+(2000, 3000)** — because the constructions I cannot model (Williamson, Turyn, Goethals–Seidel,
+Baumert–Hall, the sporadics) are precisely the ones that close most orders. **So this must be read off
+the source, not computed.**
 
 ## 3. The reasoning that was wrong, kept because of what it shows
 
@@ -114,36 +141,53 @@ pairs), with a few inadmissible. So the source's number is consistent with an up
 21. **I do not know the admissibility condition for a bordered core and cannot compute the real count** —
 what this gives you is a shape to check the source's number against, and a specific question in Q3.
 
-## 5. The five questions, in priority order
+## 5. The six questions, in priority order
 
-**Q1. Alpöge's three *b* > 2 examples — the whole brief turns on this.** Which orders are they at? What
+**Q1. Which thirteen? §2a, and it can end the brief in one read.** Does `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` tabulate
+thirteen **still-open** orders (reading A, probably 2000–3000) or thirteen **solved** ones — Alpöge's
+twelve plus one from elsewhere (reading B)? **List them.** If B, the 126+ figure describes finished
+problems and there is no region: return the VOID verdict in §6 and stop. **This is the cheapest kill
+available and the most valuable single answer in the brief.**
+
+**Q2. Alpöge's three *b* > 2 examples — the brief turns on this if Q1 gives A.** Which orders are they at? What
 *b*, what core order, what free-bit and density figures? And the same for his *b* = 1 examples, so the
 comparison in §4 can be made. **These are the only solved instances inside the region and they are the
 positive control this project has never had on this route.** If the findings give a cost figure for
 them, that single table answers §4's falsifier.
 
-**Q2. Confirm the definition against the source, and get the admissibility condition.** Quote
+**Q3. Confirm the definition against the source, and get the admissibility condition.** Quote
 `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` on what *b* is and what makes a (*v*, *b*)
 pair **admissible**, verbatim. Is there an upper bound on *b*, and is it near 21 (§4)?
 
-**Q3. Is the region still unscreened — and was it ever?** `../PLAN_2092.md` read ~15 of **163** findings
+**Q4. Is the region still unscreened — and was it ever?** `../PLAN_2092.md` read ~15 of **163** findings
 and is dated. **How many findings exist now, and has any screened, settled, entered or abandoned
 *b* ≥ 3?** Also: **was `FINDING_155`'s ranking scoped to a single *b*?** If it ranked across *b*, the
 region is already ranked and nothing was unswept. **This decides whether the queue entry was ever
 real.** And resolve §2's two-thirteens ambiguity, and whether 126+ is computed or typed.
 
-**Q4. Are the admissible pairs non-empty, and has anyone tested?** An admissible (*v*, *b*) pair is a
+**Q5. Are the admissible pairs non-empty, and has anyone tested?** An admissible (*v*, *b*) pair is a
 **necessary condition on parameters, not evidence an object exists there.** `FINDING_133` reportedly
 found the orbit-reduction route's failures at *m* = 82 to be *"emptiness rather than solver weakness"*.
 Apply that to *b* ≥ 3. **126 admissible-but-empty pairs are worth nothing** — and note that Alpöge's
 three examples prove the region is *not* uniformly empty, which is a real asymmetry with the Costas
 case.
 
-**Q5. 669, 721, and the lead.** What are they — *v*, *m*, or something else? Is 4·721 = 2884 open? Does
+**Q6. 669, 721, and the lead.** What are they — *v*, *m*, or something else? Is 4·721 = 2884 open? Does
 721's 192 free bits survive a density calculation with the repo's estimator, and what is the exponent
 against the live target's 2⁻¹⁴¹?
 
 ## 6. The bar. Revised before dispatch (see the revision note); you may not re-scope it after.
+
+**A precondition, and it is not a middle band.** If Q1 establishes reading **B** at
+`SECONDARY-RELAYED` or better — the thirteen are **solved** orders — then the queue entry rests on a
+misreading and **there is no region to gate**. Return
+
+> **`E: VOID`** — the subject of the bar does not exist.
+
+**This is categorically different from FAIL**, which means the region exists and is not worth entering,
+and it has precedent here: debt **D46** was opened when a candidate's "table it would move" turned out
+possibly not to exist. **VOID is available only on positive sourced evidence for B.** Absent that, the
+bar applies and an unevaluable clause is FAIL, graded. Do not use VOID as an escape from a hard read.
 
 > **PASS iff all three hold:**
 > **(a)** the source confirms *b* is a border width with *b* odd, and the findings that cite it use it
@@ -181,7 +225,7 @@ cap counted calls while **context** ran out. Prefer targeted greps to whole-file
 `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` and `QUEUE_STATE` in full and little else; **state which of the two limits you stopped
 on.** That clause is cheap and turns an inference into a datum.
 
-**A partial report is a success.** Q1 and Q3 answered with the rest NOT REACHED is a complete run.
+**A partial report is a success.** Q1 and Q4 answered with the rest NOT REACHED is a complete run.
 
 ## 8. Rules that are not negotiable. Each cost this project something real.
 
@@ -193,7 +237,7 @@ on.** That clause is cheap and turns an inference into a datum.
    §3 is a worked instance of the second half, which is one step earlier than D53's failure and which
    no tier here marks.
 4. **Necessary is not sufficient.** Admissibility permits; it does not populate. Q4.
-5. **Two quantities can share one name.** §2's two thirteens, live and unresolved.
+5. **Two quantities can share one name.** §2a's two thirteens, live and unresolved, and decision-critical.
 6. **Derive counts; never type them twice.** Say which command produced any count you state.
 7. **Do not guess to produce a tidy verdict.** *"I could not establish this"* is required when true.
 
@@ -209,11 +253,12 @@ preceded yours was wrong about the central term.
 
 ## 10. What to return
 
-1. **The verdict line first**: `E: PASS` / `E: FAIL`, and **for each failed clause its grade**.
+1. **The verdict line first**: `E: PASS` / `E: FAIL` / `E: VOID`, and **for each failed clause its grade**.
 2. **The bar quoted verbatim** from §6.
-3. **Q1 first and in full** — the table of Alpöge's bordered examples with *b*, order, core order, and
-   cost figures, since §4's falsifier lives there.
-4. **Q2–Q5**, one section each, every claim tiered, naming the file you opened. **A question you could
+3. **Q1 first**, with the thirteen orders listed and which reading they support. **Then Q2 in full** —
+   the table of Alpöge's bordered examples with *b*, order, core order and cost figures, since §4's
+   falsifier lives there.
+4. **Q3–Q6**, one section each, every claim tiered, naming the file you opened. **A question you could
    not answer is named unanswered, not dropped.**
 5. **A finding count**: how many documents are in `Cooperative-AI-Defense/hadamard/findings/` now,
    against the 163 `../PLAN_2092.md` saw. **And if any path this brief cites does not resolve, say
