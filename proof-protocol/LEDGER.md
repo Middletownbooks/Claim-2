@@ -12,10 +12,10 @@ Every prediction this programme has made, and how it turned out. MEASUREMENTS.md
 | partly | 11 |
 | wrong | 12 |
 | unscored | 2 |
-| open | 5 |
-| **total** | **38** |
+| open | 6 |
+| **total** | **39** |
 
-**31 of 38 predictions are settled.** Of those, **8 correct, 11 partly, 12 wrong.**
+**31 of 39 predictions are settled.** Of those, **8 correct, 11 partly, 12 wrong.**
 
 By author:
 
@@ -33,6 +33,7 @@ By author:
 - **this session (Claim-2 board-finder/controls/PREREG_ARM3.md, committed before the respondent saw anything)** — 1 predictions, 1 settled, 0 wrong
 - **this session (Claim-2 board-finder/pte/PREREG_PTE11.md sec 5, committed and pushed before the first size-11 run)** — 1 predictions, 1 settled, 0 wrong
 - **this session (Claim-2 board-finder/gap/TIERS_2026-09.md sec 6), registered before any cheap-tier fan-out runs** — 1 predictions, 0 settled, 0 wrong
+- **Opus 5 (Claim-2 board-finder/costas/PLAN_COSTAS.md sec 5, registered and pushed before brief D was dispatched)** — 1 predictions, 0 settled, 0 wrong
 - **SELECT_v1.md sec 8, registered before the arm-2b worker was dispatched; run 30 Sep 2026 by a Sonnet 5.5 chat instance** — 1 predictions, 1 settled, 0 wrong
 
 ## The predictions
@@ -76,6 +77,7 @@ By author:
 | `P-34` | Opus 5.5 discovery run (Claim-2 board-finder/gap/SELECT_v1.md sec 8, committed and pushed before any worker was dispatched) | Arm 2 is the held-out slice for SELECT v1 as a generator: 15 maintained tables outside the 499-record corpus, one record each, fixed in SELECT_v1.md sec 7 before dispatch (the queue's four plus eleven of lesson 22's absent topics; PTE excluded as already dead). Prediction: between 1 and 4 tables yield a triage survivor of S0-S5. 0 means SELECT v1 fails as a generator on held-out data; 5 or more means it is too loose to function as a gate. | CORRECT on the registered reading, with a defect in my own registration. 2 of 15 tables yield triage survivors (kissing via dims 13 and 14; caps via AG(8,3) = 512). Tables 7-10 were never assessed. But SELECT_v1 Part I sec 5 also calls SEARCH-SUMMARY 'RECALL-grade for every gate', and read strictly the count is 0; and with crowding scoped per table rather than per record, as the run showed it should be, the count is also 0. | **correct** |
 | `P-35` | Opus 5.5 discovery run (Claim-2 board-finder/gap/SELECT_v1.md sec 8, committed and pushed before any worker was dispatched) | The handoff's sec 3.2 works as a GENERATIVE signal: a directed search finds at least one divergence meeting the registered definition -- two dated published methods on the same object whose reach differs by a factor of at least 2 in the frontier parameter itself (order, dimension, length; not runtime), both read at SECONDARY-RELAYED or better; search-summary-only divergences are reported as leads and not counted; Hadamard 2092 excluded. | OPEN. The divergence search was stopped (concurrency cap, then search budget) before recording any entry. Not run is not the same as run-and-empty. | **open** |
 | `P-36` | Opus 5.5 discovery run (Claim-2 board-finder/gap/SELECT_v1.md sec 8, committed and pushed before any worker was dispatched) | Arm 3, conjecture generation, bounded at exactly 12 generated statements by one worker: 0 of 12 survive SELECT v1's S0-S5, because a freshly generated statement has no movement history and S3 cannot be evaluated on it. Registered despite being predicted by argument, because the argument has a named hole: a generator can rediscover an existing open record that does have a history. | OPEN. Twelve statements were generated and frozen, and one (C1) was checked by brute force through n = 29; no statement reached the gates. By recall, two of the twelve (a Hadamard matrix of order 668; a periodic Golay pair of length 90) are rediscovered known open records -- the named hole in the prediction's argument. | **open** |
+| `P-37` | Opus 5 (Claim-2 board-finder/costas/PLAN_COSTAS.md sec 5, registered and pushed before brief D was dispatched) | Brief D's bar FAILS on clause (a): no published structural characterisation of sporadic Costas arrays that constrains a search will be found at SECONDARY-RELAYED or better. Reason: sporadic arrays are defined by the absence of algebraic structure and the literature's word for them is 'sporadic', so I expect them catalogued rather than characterised. A PASS on (a) with a citation the run actually read falsifies this and is the more valuable outcome. A FAIL on clause (b) instead -- a heuristic search at order 32 reported as run and failed -- is a DIFFERENT result and is scored as such, not as confirmation. | OPEN. | **open** |
 | `P-35-scored` | SELECT_v1.md sec 8, registered before the arm-2b worker was dispatched; run 30 Sep 2026 by a Sonnet 5.5 chat instance | the directed search finds >= 1 divergence meeting the registered definition -- two dated published methods on the same object whose reach differs by a factor >= 2 in the frontier parameter itself, both at SECONDARY-RELAYED or better. 0 would mean the signal does not generate. | CORRECT on the letter, and the letter is the finding. Four COUNT entries, three independent observations, from 22 of 25 permitted calls. But every accepted entry is the field's own progress over time rather than a contemporaneous capability gap, and the definition permits that because it has no time window and no independence clause. Complex Golay: 28/13 = 2.154, but nineteen years apart with an intermediate 2002 paper at 19, so 28/19 = 1.474 against the nearest predecessor. Barker: ratio 2000, same author extending his own method four years later. SIC fiducials: the closest to a genuine method-class gap and it is this project's own retired U16. The run's own STILL OPEN column reads 'No gap now', 'Closed' and 'the gap is closed by A itself'. The model case the definition abstracts from -- Hadamard 2092, Alpoge near 0.25 against our measured 0.503 -- is two parties AT THE SAME TIME, which is the property every hit lacks. So 22 calls produced many temporal reach ratios and zero contemporaneous gaps: a sharper negative than the zero branch would have been, because it says why. D48. Definition not redrawn. | **correct** |
 
 ## What it cost
@@ -115,6 +117,7 @@ By author:
 - **P-34** — an internal inconsistency in a registration I wrote, found only by scoring against it
 - **P-35** — none yet
 - **P-36** — none yet
+- **P-37** — one Sonnet 5.5 chat conversation, 20 calls
 - **P-35-scored** — 22 search-or-fetch calls, four of which failed on fetch mechanics. It also returned three corrections to this project's own numbers, including that the exact-SIC ceiling is 5,779 rather than 5,799 (D49) and that lesson 24's attribution was backwards -- worth more than the prediction it was scoring.
 
 ## Lessons

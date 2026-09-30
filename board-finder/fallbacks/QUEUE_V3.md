@@ -107,7 +107,7 @@ re-scoped afterwards.
 > AlphaEvolve problem repository.
 
 > **[30 Sep 2026 — briefs A and B1 run, `../gap/discovery/RESULT_A2B_DIVERGENCE.md` and
-> `RESULT_B1_DESIGNS.md`.] Arm 2 now stands at 13 of 15 tables assessed and 0 live survivors.**
+> `../gap/discovery/RESULT_B1_DESIGNS.md`.] Arm 2 now stands at 13 of 15 tables assessed and 0 live survivors.**
 > B1 returned Williamson **FAIL at S0**, Steiner **FAIL at S3**, cyclic difference sets **FAIL at S3**.
 > Only Costas and bent functions remain, with brief B2.
 >
@@ -154,6 +154,37 @@ re-scoped afterwards.
 > **S3 measured our access and S4 measured the wrong thing.** That is worth more than the two
 > candidates the seam was searched for.
 
+> **[30 Sep 2026 — Costas reopened at the operator's instruction, `../costas/PLAN_COSTAS.md`.]**
+> B2 closed Costas at **S3, "method unread → UNKNOWN"** — an **access** failure, not an evidence
+> failure, and one of the six that opened **D50**. Re-running a gate whose input was never obtained is
+> not the re-scope D44 forbids; S1 passed and S4 passed, and nothing in B2 is evidence against the cell.
+>
+> **What is new is a local structural computation, `../costas/costas_support.py`, and it gives this
+> board the first candidate it has ever had with a measurable positive control.**
+> `PRIMARY-VERIFIED-LOCALLY`: corner-deletion chains descend at most **4** steps, so with **no prime in
+> [32,36] and no prime power in [33,36]**, orders **31, 32 and 33 have no Welch or Golomb array at any
+> depth** — the only field that nominally reaches them is 37, built, and its chains bottom out at 34.
+> **Order 31 nonetheless has ≥ 8 known arrays, so they are necessarily sporadic**, and
+> log2(31!) = 112.66 against log2(32!) = 117.66 — **a 5.00-bit gap to a solved instance of the same
+> unstructured problem.** Every previous gate on this board failed for want of exactly that handle.
+>
+> **The plan is Sonnet-first through a registered bar, `../gap/discovery/prompts/s55/D_COSTAS.md`
+> (brief D, 20 calls, five reads and no search).** PASS iff **(a)** a published structural
+> characterisation of sporadic arrays exists that constrains the space **and (b)** no heuristic search
+> at order 32 is reported as run and failed. FAIL on either → *attempted-and-failed with no structural
+> lever*, and Opus is not spent. **P-37 predicts FAIL on (a)**, for the cost of one chat conversation.
+>
+> **Three things recorded against the plan at the same time as the plan.** The state of the art for
+> Costas *is* backtracking DFS, which is what an LLM writes — CPro1's generated strategies included it
+> and it was not enough, and the community's version carries 366.55 CPU-years behind order 29. CPro1's
+> failure fits its own §5 pattern of heavily-worked design types, which is a prediction about *this*
+> cell. And **non-existence at order 32 is possible and no constructive search can settle it**, which
+> is why the order-31 rediscovery control in phase 1 is mandatory rather than nice to have: it is the
+> only instrument that separates "searched badly" from "nothing there".
+>
+> **Queue:** brief D is the active item. Options 3 (*b* > 2 Hadamard), 4 (277/353, brief C) and 6
+> (EinsteinArena) unchanged; 5 (239/345) still pending S55 results that have never appeared.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
@@ -175,7 +206,7 @@ whether the record has moved recently.
 
 DeepMind's FunSearch (Romera-Paredes et al., *Nature* 2024) used an LLM-driven search to improve
 the **cap-set** record in AG(8,3). That is a direct existence proof that this exact class of
-record problem moves under model capability — which is the `GAP_V3.md` §3 claim, demonstrated
+record problem moves under model capability — which is the `../gap/GAP_V3.md` §3 claim, demonstrated
 rather than argued.
 
 It cuts both ways, and the cut matters: **the flagship instance is taken.** The right reading is
@@ -194,7 +225,7 @@ did not touch. That is why cap sets are third below and not first.
 **Why 1 is first.** D-optimal designs are the nearest neighbour of the Hadamard machinery this
 project already has — ±1 matrices, determinant maximisation, the same orbit and PAF apparatus —
 so the algorithmic-idea gap, if there is one, is one we are already tooled for. They are also the
-least famous of the four, which under `GAP_V3.md` §3 is a feature rather than a defect.
+least famous of the four, which under `../gap/GAP_V3.md` §3 is a feature rather than a defect.
 
 **Why 4 is last.** Snake-in-the-box has been attacked with genetic algorithms and SAT for
 decades; the records are likely compute-set rather than idea-set, which is the category that does

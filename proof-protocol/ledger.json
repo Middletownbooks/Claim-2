@@ -300,6 +300,14 @@
       "cost": "none yet"
     },
     {
+      "id": "P-37",
+      "by": "Opus 5 (Claim-2 board-finder/costas/PLAN_COSTAS.md sec 5, registered and pushed before brief D was dispatched)",
+      "predicted": "Brief D's bar FAILS on clause (a): no published structural characterisation of sporadic Costas arrays that constrains a search will be found at SECONDARY-RELAYED or better. Reason: sporadic arrays are defined by the absence of algebraic structure and the literature's word for them is 'sporadic', so I expect them catalogued rather than characterised. A PASS on (a) with a citation the run actually read falsifies this and is the more valuable outcome. A FAIL on clause (b) instead -- a heuristic search at order 32 reported as run and failed -- is a DIFFERENT result and is scored as such, not as confirmation.",
+      "outcome": "OPEN.",
+      "status": "open",
+      "cost": "one Sonnet 5.5 chat conversation, 20 calls"
+    },
+    {
       "id": "P-35-scored",
       "by": "SELECT_v1.md sec 8, registered before the arm-2b worker was dispatched; run 30 Sep 2026 by a Sonnet 5.5 chat instance",
       "predicted": "the directed search finds >= 1 divergence meeting the registered definition -- two dated published methods on the same object whose reach differs by a factor >= 2 in the frontier parameter itself, both at SECONDARY-RELAYED or better. 0 would mean the signal does not generate.",
