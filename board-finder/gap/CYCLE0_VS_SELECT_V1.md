@@ -1,4 +1,30 @@
-# The predecessor already had four of the things I registered as findings today
+# The predecessor SPECIFIED four of the things I registered today — and its central one never ran
+
+> **[CORRECTED 30 Sep 2026, and it undercuts this document's strongest claim.] Task 1 did not execute.
+> There were no transcripts to recover: nothing was in a repo at that point.** So the prior-work register
+> — the task I called "the whole prompt's reason for existing", and the one I matched to D56 — **was
+> specified and not performed.** Three consequences, all of which improve the finding rather than
+> weaken it:
+>
+> **(i) D56 was diagnosed a lineage ago and left unsolved, for want of infrastructure rather than for
+> want of insight.** The prompt's own preamble claims the missing input *"is cheap to obtain and has
+> never been obtained."* The first half turned out to be false — it was not obtainable at all. **So I did
+> not rediscover a solved problem; I re-derived a known-necessary check that has been unexecutable for a
+> lineage.**
+>
+> **(ii) It is executable now.** A repository exists, with documents in it, which is exactly what was
+> missing. **That makes D56 actionable in a way it has never been, and "build the register" is a real
+> next step rather than a restatement.**
+>
+> **(iii) §2 below needs its source corrected.** With Task 1 dead, the compute-shaped/theory-shaped
+> verdict *for the shortlist candidates* came from **Task 3** — reading the frontier paper's method
+> section — not from our own prior constraints. Task 1's version of that field was for the seven
+> *already-attempted* problems and is the part that was lost.
+>
+> **And a caution on the rest of this document:** "designed in" is not "delivered". I know Task 1 did not
+> run. Whether Tasks 2 and 3 ran as specified I do not know, so the three remaining matches below are
+> claims about the *prompt*, not about what the run performed.
+
 
 **The Cycle 0 target-selection prompt** — gap analysis of open problems plus Opus-in-Claude-Code gating,
 predating all the playability work — is the instrument that produced the Rota target. Read against
@@ -6,11 +32,11 @@ predating all the playability work — is the instrument that produced the Rota 
 observables that decide everything, it is better, and SELECT v1's own post-mortem says so without
 knowing it.**
 
-## 1. Four of today's debts were already designed in
+## 1. Four of today's debts appear in the prompt (see the box: appearing is not executing)
 
 | what I registered today | Cycle 0 already had it |
 |---|---|
-| **D56** — nothing checks whether a question has already been answered here | **Task 1, the whole prompt's reason for existing.** *"In every case the missing input was the same: what the prior explorations actually established. That input is cheap to obtain and has never been obtained."* A register of seven prior attempts with **the binding constraint stated as a formal proposition**, costed estimates re-derived, and claims entering as `assumed`. |
+| **D56** — nothing checks whether a question has already been answered here | **Task 1, the prompt's stated reason for existing — and the task that did not run.** *"In every case the missing input was the same: what the prior explorations actually established. That input is cheap to obtain and has never been obtained."* A register of seven prior attempts with **the binding constraint stated as a formal proposition**, costed estimates re-derived, and claims entering as `assumed`. |
 | **D51** — the crowding gate counts moves, so it cannot see an attempt | **Task 2's fourth question:** *"Has anyone announced work in progress on the next rung?"* — *"including independent-researcher preprints."* **That is the Allikvere case, named in advance.** |
 | the reproduction gate I invented for Costas phase 1 | *"A candidate that cannot clear the reproduction gate on paper — i.e. where the run cannot see how it would reproduce the current frontier — is rejected at selection, not at cycle 20."* |
 | null-as-deliverable | *"If no candidate clears the rule, say so and return the register. That is a real result."* |
@@ -21,12 +47,19 @@ which is D50's access problem with its reason attached.
 
 ## 2. The compute-shaped / theory-shaped distinction, and where each instrument measures it
 
-**Cycle 0 measures it from our own prior attempt:**
+**Cycle 0 specifies two sources for it. Only the second was available.**
+
+*Intended, from our own prior attempt — Task 1, which did not run:*
 
 > *"The binding constraint hit — stated as a formal proposition, not prose. 'We ran out of session' and
 > 'the realizability constraints could not be encoded' are entirely different findings."*
 > *"Claude Code … multiplies compute-shaped constraints and does almost nothing for theory-shaped ones. A
 > problem whose prior run stalled on encoding theory is not made tractable by a longer run."*
+
+*Actual, from the frontier paper — Task 3, which was available under "unlimited paper acquisitions":*
+*"Read the method section for how the computation was structured and how far it can be pushed. **This is
+where a compute-shaped constraint is distinguished from a theory-shaped one**, and it cannot be done from
+an abstract."*
 
 **SELECT v1's S3 tries to infer the same distinction from the literature** — the *move kind* of the most
 recent move on the coupled side. Its own §II.1 records the result:
@@ -36,8 +69,10 @@ recent move on the coupled side. Its own §II.1 records the result:
 > cause is structural: record papers must claim novelty, so the literature never labels a move 'the same
 > method, run bigger'."**
 
-**Same distinction, two sources. From the literature it is unmeasurable — 0 of 10. From our own
-transcripts it is directly observable, and it is what Task 1's key field records.**
+**Same distinction, three possible sources, and they are not equal.** From *record-paper move kinds* it
+is unmeasurable — 0 of 10, and SELECT v1 measured that. From the *frontier paper's method section* it is
+obtainable, and that is what actually classified the Cycle 0 candidates. From *our own prior transcripts*
+it would be most direct of all, and **that source has never once been available.**
 
 And §II.4 proposal 1 then asks for a replacement: *"Movement history cannot supply the COMPUTE label. Use
 a direct question instead: has a general-purpose AI search system been pointed at this record and failed
@@ -47,8 +82,8 @@ ambiguous.**
 
 ## 3. The fair caveat, which is the actual finding
 
-**Cycle 0's observables require prior attempts, and do not scale.** Task 1 needs seven transcripts to
-register. It cannot run over 499 records nobody has touched. So SELECT v1, built for a corpus two orders
+**Cycle 0's best observable requires prior attempts, does not scale, and has never run.** Task 1 needs
+seven transcripts. It had none, and it could not run over 499 records nobody has touched either. So SELECT v1, built for a corpus two orders
 of magnitude larger, *had* to substitute literature-derived proxies:
 
 * compute-vs-theory → **S3**, the move kind. **Measured empty, 0 of 10.**
@@ -77,9 +112,12 @@ such targets, and Rota was item D on its shortlist**, with its collision risk na
 ## 5. What this costs me
 
 Four debts registered today as findings were solved a lineage ago, in a document in this project's own
-history. **D56 — the debt about not checking prior work — is the one I most conspicuously earned**, since
-I wrote it after failing to check prior work, and the prior work I failed to check was a prompt whose
-entire first task is checking prior work.
+history. **D56 remains the one I most conspicuously earned** — I wrote it after failing to check prior work, and
+the prior work I failed to check was a prompt whose first task is checking prior work. **But the prompt's
+first task did not run, so what I actually failed to check was a specification of the check I was
+re-deriving.** That is a smaller error than it first looked and a more useful finding: the check has been
+known-necessary and unperformed across two lineages, and the repository that would make it possible now
+exists.
 
 The pattern across today's corrections holds here too: **each wrong reading was more favourable to a
 clean story than the truth.** The clean story was "the screen produced nothing and working-a-problem
