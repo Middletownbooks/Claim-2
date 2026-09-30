@@ -106,6 +106,32 @@ re-scoped afterwards.
 > level too. The instrument for that now exists and is free: EinsteinArena's Table 1 plus the
 > AlphaEvolve problem repository.
 
+> **[30 Sep 2026 — briefs A and B1 run, `../gap/discovery/RESULT_A2B_DIVERGENCE.md` and
+> `RESULT_B1_DESIGNS.md`.] Arm 2 now stands at 13 of 15 tables assessed and 0 live survivors.**
+> B1 returned Williamson **FAIL at S0**, Steiner **FAIL at S3**, cyclic difference sets **FAIL at S3**.
+> Only Costas and bent functions remain, with brief B2.
+>
+> **Three findings outrank the verdicts.**
+> * **Crowding has a third scoping, and it corrects what I wrote here.** The *signed* difference set
+>   table — same La Jolla repository family — was swept Aug–Sep 2026, **all 68 open small entries
+>   resolved**, by a GitHub project whose README **discloses extensive OpenAI Codex use**. The entry
+>   above says this seam is "not on EinsteinArena's board"; that is true and I read it as unswept.
+>   **Not on a board is not the same as not being swept.** No board-based crowding screen can see a
+>   sweep like that. Record / table / **repository-family**.
+> * **S3 is an access gate and it is now the binding one — D50.** Tables 7 and 8 both died on move
+>   kind `UNKNOWN` because a method section could not be opened, not on evidence the move was compute.
+>   With arm 1's 277 and 353, **four of the last five FAILs on this board are access failures wearing
+>   gap-type clothing.** A long run of FAILs reads as a well-screened empty seam and may be a
+>   well-documented paywall.
+> * **Arm 2b's divergence search fired and did not discriminate — D48.** Four entries met the
+>   registered definition and none has two independent groups with contemporaneous methods, because
+>   the definition has no time window and no independence clause. 22 calls, many temporal reach
+>   ratios, zero live capability gaps.
+>
+> Also: the Williamson route does not reach this project's target — order 65 gives H(260), already
+> known, and **H(668) needs Williamson order 167**. And the exact-SIC ceiling is **5,779**, not 5,799
+> (**D49**), a digit our own arithmetic check caught and then explained away.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,

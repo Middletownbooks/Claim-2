@@ -23,8 +23,10 @@ maintained-table host was blocked. Two sets of local checks were run by the work
 | 3 | snake-in-the-box, n = 9–11 | 191 / 379 / 746, arXiv:2607.15270, Jul 2026 (SS) | FAIL | S3/S4 CE: method unreadable |
 | 4 | D-optimal, smallest open order | 198, from a 2021 survey summary (SS) | FAIL | S3/S4 CE |
 | 5 | skew-Hadamard, smallest open order | **356** (SS), not the 276 the older literature gives | FAIL | S3 CE |
-| 6 | Williamson, smallest open odd order | 65 (SS; no maintained table exists) | FAIL | block incomplete (worker stopped) |
-| 7–10 | Steiner, difference sets, Costas, bent | — | FAIL | **not assessed** — worker stopped at the concurrency cap and search budget |
+| 6 | Williamson, smallest open odd order | 65 | **FAIL at S0** | **ASSESSED 30 Sep** by `discovery/RESULT_B1_DESIGNS.md`: "orders below 65 settled" is SECONDARY-RELAYED but "65 is open" is SEARCH-SUMMARY only, and the sentence saying so exists only in a paper version that could not be re-opened |
+| 7 | Steiner, smallest open admissible case | S(2,6,51) | **FAIL at S3** | **ASSESSED 30 Sep**: move kind UNKNOWN, 2001 method section not opened. Seven other cells moved Nov 2025–2026 by human computer searches — S4-table is reading-dependent |
+| 8 | cyclic difference sets | (1561,105,7) by *k* | **FAIL at S3** | **ASSESSED 30 Sep**: move kind UNKNOWN; and the maintainer's 2003 and 2026 papers cannot be reconciled — (419,133,42) is open in one and absent from the other |
+| 9–10 | Costas, bent | — | FAIL | **not assessed** — worker stopped at the concurrency cap. Brief B2 remains |
 | 11 | APN permutation, dim 8 | open; ≥ 3,808,491 quadratic APN classes known (2025) | FAIL | S1 degenerate: the only possible move is the resolution itself, so S3 cannot be evaluated |
 | 12 | perfect 1-factorisation | K₆₄ open; frontier went 52 → 56 → 64 | FAIL | S3: SEARCH-REPEAT per one search-summary sentence — not gate-grade, and fails either way |
 | 13 | covering codes K(n,1) | n = 10 (RECALL) | FAIL | CE |
@@ -77,3 +79,12 @@ Two divergence-shaped facts turned up in other arms. Neither meets the registere
 * **Grothendieck constant:** the 2026 lower bound was reached by an asymptotic argument that
   explicit low-dimensional instances had not reached in 35 years. That is a divergence in *method
   class*, not in a frontier parameter.
+
+
+---
+
+## 5. [30 Sep 2026] A third crowding scoping, and a correction to what was inferred from §3
+
+§3 proposed scoping S4 to the **table**. `discovery/RESULT_B1_DESIGNS.md` §2 found a third: in the same La Jolla **repository family**, the *signed* difference set table was swept in Aug–Sep 2026, all **68** open small entries resolved (16 exist, 52 do not), by a GitHub project whose README **discloses extensive OpenAI Codex use**. Correctly not counted against cyclic difference sets — a different object — but it is the activity this project would be competing with.
+
+**And it corrects an inference made elsewhere.** `discovery/RESULT_GATE_C1.md` §6 established that the design-theory objects are absent from EinsteinArena's board, and that was then read as the seam being unswept. **Not on a board is not the same as not being swept.** The signed-DS sweep needed no board, no leaderboard and no platform, and no board-based crowding screen can see it. The scoping question is record / table / **repository-family**.
