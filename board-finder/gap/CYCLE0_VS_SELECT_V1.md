@@ -16,6 +16,17 @@
 > missing. **That makes D56 actionable in a way it has never been, and "build the register" is a real
 > next step rather than a restatement.**
 >
+> > **[DONE, same day — `register/REGISTER.md`.]** Eight rows for targets selected and worked, eight
+> > for targets killed at a gate before any work, the screened population counted rather than
+> > enumerated, and every figure re-derived in `register/register_arithmetic.py`. **It closes §2's
+> > comparison with data:** our own prior attempts classify the deciding field for **7 of 8** rows,
+> > where the record-paper move kind measured **0 of 10**. What the field says is in `D60` and is not
+> > what any earlier reading of the null said. **Cycle 0's own seven rows stay empty** — all seven
+> > problems appear in this tree, but only as the later lineage's independent assessment, never as the
+> > prior attempt's binding constraint. The boundary of "buildable from documents" runs exactly where
+> > the predecessor's work was never committed, and the cell it costs us is Zarankiewicz, which Cycle 0
+> > itself named as decisive.
+>
 > **(iii) §2 below needs its source corrected.** With Task 1 dead, the compute-shaped/theory-shaped
 > verdict *for the shortlist candidates* came from **Task 3** — reading the frontier paper's method
 > section — not from our own prior constraints. Task 1's version of that field was for the seven
