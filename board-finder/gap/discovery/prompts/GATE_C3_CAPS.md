@@ -85,7 +85,7 @@ has not, on the bar's wording, attempted AG(8,3) directly. A paper whose results
 *n* = 8 in 𝔽₃ⁿ has.
 
 This distinction is the same failure mode that has cost this project the most: a breadth pass
-reported exact SIC-POVM constructions "reaching d = 19,603" where the exact ceiling was **5,799**,
+reported exact SIC-POVM constructions "reaching d = 19,603" where the exact ceiling was **5,779**,
 the higher papers admitting their verification was "mostly partial." Both cells were true at their
 own precision; only one was usable. **When a claim's meaning depends on which object is meant, report
 both readings rather than picking one.**

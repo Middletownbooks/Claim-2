@@ -59,7 +59,7 @@ nine-year-stale recall that would have produced an entirely fictitious worklist.
 
 **Numerical is not exact, and claimed is not refereed.** A breadth pass once reported exact SIC-POVM
 constructions *"reaching d = 19,603"*; a dedicated check had already established the exact ceiling
-was **5,799**, with the higher papers admitting their verification was *"mostly partial."* Both cells
+was **5,779**, with the higher papers admitting their verification was *"mostly partial."* Both cells
 were true at their own precision; one was usable. **Where a value's meaning depends on which sense is
 meant, report both senses rather than picking one.** Watch especially for *projective* versus
 *affine*, *numerical* versus *exact*, and asymptotic constants versus finite instances.
@@ -81,6 +81,23 @@ names the rest as unreached is worth more than one that returns ten `SEARCH-SUMM
 Everything you need is inside your brief. Return your output **in your reply**, as a single
 document. Do not ask for files and do not assume you can write any.
 
+
+## Fetch mechanics, learned the hard way on Brief A — read this before your first call
+
+Brief A lost four of its 22 calls to two mechanics. Both are avoidable:
+
+* **The fetch tool only opens a URL that a search result (or this brief) has already surfaced.** A bare
+  hostname written in a brief was **refused** until a search had produced it. So for every maintained
+  table below: **search for it first, then fetch from the result link.** Budget one search plus one
+  fetch per host, not one fetch.
+* **arXiv is rate-limited rather than blocked, and asymmetrically.** Older identifiers opened;
+  a September 2026 identifier was refused three times in a row. If a recent paper refuses, **do not
+  retry more than once** — spend the call elsewhere and mark the cell NOT REACHED.
+
+A third mechanic, worth knowing because it invalidates a cell rather than costing a call: **a live
+artifact can change while you read it.** On Brief A a GitHub README showed ten dimensions in the
+search snapshot and nineteen when fetched, with one record's claimed increase shrinking 44.4%. If a
+value moves between your search and your fetch, **report both and gate on neither.**
 
 ---
 

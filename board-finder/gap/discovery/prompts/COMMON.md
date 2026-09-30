@@ -42,7 +42,7 @@ worklist.
 * `REFEREED` / `PREPRINT` / `ANNOUNCED` / `WITHDRAWN` / `UNKNOWN`
 
 **The costliest error in this project's history:** a breadth pass reported exact SIC-POVM
-constructions "reaching d=19,603" when the exact ceiling was 5,799; the higher figure was
+constructions "reaching d=19,603" when the exact ceiling was 5,779; the higher figure was
 numerical, and the papers reaching it admitted their exact verification was "mostly partial".
 Both cells were true at their own precision; only one was usable. When a value depends on which
 sense is meant, report both senses or `NOT FOUND`. **Withdrawn and unrefereed claims are data,

@@ -229,7 +229,7 @@ than through evidence, which teaches nothing.
 Give each worker: the bar verbatim, the provenance tiers (`PRIMARY-VERIFIED-LOCALLY` /
 `SECONDARY-RELAYED` / `RECALL`), and the numerical-versus-exact rule. That last one has cost this
 project the most: a breadth pass reported exact SIC-POVM constructions *"reaching d=19,603"* where a
-dedicated gate had already established the exact ceiling is **5,799**, the higher papers admitting
+dedicated gate had already established the exact ceiling is **5,779**, the higher papers admitting
 their verification was *"mostly partial"*. Both cells were true at their own precision; one was
 usable. **A breadth cell is triage-grade and may never be gated on** (lesson 24).
 

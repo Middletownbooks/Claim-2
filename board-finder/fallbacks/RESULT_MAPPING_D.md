@@ -116,7 +116,7 @@ The searcher's cell for 235 reports exact solutions *"for select much higher dim
 
 Our own gate, run earlier and independently, recorded the correction to exactly that number:
 
-> *"39604 is the **numerical** maximum; the exact ceiling is 5799, and the papers reaching
+> *"39604 is the **numerical** maximum; the exact ceiling is 5799 [**5,779** — the digit was wrong; D49], and the papers reaching
 > 19603/39604 'admit their exact verification was mostly partial'."*
 
 So on **the one record in all four chunks where we hold an independently obtained local result,

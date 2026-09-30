@@ -41,7 +41,7 @@ nine-year-stale recall that would have produced an entirely fictitious worklist.
 
 **Numerical is not exact, and claimed is not refereed.** A breadth pass once reported exact SIC-POVM
 constructions *"reaching d = 19,603"*; a dedicated check had already established the exact ceiling
-was **5,799**, with the higher papers admitting their verification was *"mostly partial."* Both cells
+was **5,779**, with the higher papers admitting their verification was *"mostly partial."* Both cells
 were true at their own precision; one was usable. **Where a value's meaning depends on which sense is
 meant, report both senses rather than picking one.** Watch especially for *projective* versus
 *affine*, *numerical* versus *exact*, and asymptotic constants versus finite instances.

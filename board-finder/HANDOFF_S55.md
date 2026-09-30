@@ -55,7 +55,7 @@ available to you here.
 4. **Distinguish *numerical* from *exact*, and *claimed* from *refereed*.** This is the single
    failure mode that has cost this project the most. A breadth pass reported exact SIC-POVM
    constructions "reaching d=19,603"; a dedicated gate had already established the exact ceiling is
-   **5,799**, with the 19,603 papers admitting their verification was "mostly partial." Both cells
+   **5,779**, with the 19,603 papers admitting their verification was "mostly partial." Both cells
    were true at their own precision. Only one was usable. **When a record's value depends on which
    sense is meant, report both senses or report NOT FOUND.**
 5. **Withdrawn and unrefereed claims are data, not resolutions.** A claimed full resolution of the

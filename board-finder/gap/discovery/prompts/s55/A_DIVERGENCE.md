@@ -49,7 +49,7 @@ nine-year-stale recall that would have produced an entirely fictitious worklist.
 
 **Numerical is not exact, and claimed is not refereed.** A breadth pass once reported exact SIC-POVM
 constructions *"reaching d = 19,603"*; a dedicated check had already established the exact ceiling
-was **5,799**, with the higher papers admitting their verification was *"mostly partial."* Both cells
+was **5,779**, with the higher papers admitting their verification was *"mostly partial."* Both cells
 were true at their own precision; one was usable. **Where a value's meaning depends on which sense is
 meant, report both senses rather than picking one.** Watch especially for *projective* versus
 *affine*, *numerical* versus *exact*, and asymptotic constants versus finite instances.
@@ -72,6 +72,23 @@ Everything you need is inside your brief. Return your output **in your reply**, 
 document. Do not ask for files and do not assume you can write any.
 
 
+## Fetch mechanics, learned the hard way on Brief A — read this before your first call
+
+Brief A lost four of its 22 calls to two mechanics. Both are avoidable:
+
+* **The fetch tool only opens a URL that a search result (or this brief) has already surfaced.** A bare
+  hostname written in a brief was **refused** until a search had produced it. So for every maintained
+  table below: **search for it first, then fetch from the result link.** Budget one search plus one
+  fetch per host, not one fetch.
+* **arXiv is rate-limited rather than blocked, and asymmetrically.** Older identifiers opened;
+  a September 2026 identifier was refused three times in a row. If a recent paper refuses, **do not
+  retry more than once** — spend the call elsewhere and mark the cell NOT REACHED.
+
+A third mechanic, worth knowing because it invalidates a cell rather than costing a call: **a live
+artifact can change while you read it.** On Brief A a GitHub README showed ten dimensions in the
+search snapshot and nineteen when fetched, with one record's claimed increase shrinking 44.4%. If a
+value moves between your search and your fetch, **report both and gate on neither.**
+
 ---
 
 ## 1. What a divergence is. Registered definition, verbatim — you may not loosen it.
@@ -86,8 +103,17 @@ Hadamard matrices under one orbit ansatz — a published method's search cost gr
 A difference like that says **an idea exists that one party has and another lacks**, and it is
 visible from outside without solving anything.
 
-**Right shape:** *"method A enumerated all Costas arrays up to n = 29; method B, published earlier,
-reached n = 14"* — ratio 29/14 ≈ 2.07 in the frontier parameter.
+**~~Right shape:~~ ~~*"method A enumerated all Costas arrays up to n = 29; method B, published
+earlier, reached n = 14"* — ratio 29/14 ≈ 2.07.~~ WRONG — and it was my worked example.** A run of
+this brief found **no source for a 14**: the 1988 Costas count was fitted to known C(n) for n ≤ **17**,
+which gives 29/17 = **1.706**, below the very threshold the example was illustrating.
+
+**Right shape, substituted and sourced:** *"Fiedler (2013) exhaustively enumerated all complex Golay
+pairs through length 28; Holzmann–Kharaghani (1994) reached length 13"* — 28/13 = **2.154** in the
+frontier parameter, which is a length. **Read its flaw too, because it is the flaw of the whole
+definition:** those two are nineteen years apart with a 2002 paper at length 19 between them, so
+against the *nearest* predecessor the ratio is 28/19 = 1.474 and fails. A ratio against a distant
+predecessor measures the field's progress, not a gap anyone is currently on the wrong side of.
 
 **Wrong shape, and both of these were found by the earlier run and correctly refused:**
 * *"our solver is 100× faster"* — runtime, not reach.

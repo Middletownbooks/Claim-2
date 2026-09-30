@@ -29,8 +29,14 @@ Only the arithmetic is checkable without fetching, and it is consistent:
 * 19603 = 140² + 3, and prime → fits *"prime dimensions n²+3"* (arXiv:2112.05552)
 * 39604 = 199² + 3 = 4 × 9901, 9901 prime → fits *"n²+3 = 4p"* (arXiv:2403.02872)
 * 487 = 22² + 3, prime → the one dimension that paper verified **fully** exactly
-* 5799 − 3 = 5796 is **not** a square → the exact ceiling comes from a different family,
-  consistent with the report's account
+* ~~5799 − 3 = 5796 is **not** a square → the exact ceiling comes from a different family,
+  consistent with the report's account~~ **WRONG, 30 Sep 2026 — and this is the worst line in the
+  document.** The value is **5,779 = 76² + 3**, a clean fit. The relayed response said 5799
+  (`sources/GATE_SIC_RESPONSE_RAW.md`), and this check — written to test the n²+3 form, with three
+  of four dimensions fitting — met the one that did not and **invented a second family to absorb it
+  rather than doubting the digit.** The anomaly was detected and explained away. It then propagated
+  into nine documents including ledger lesson 24. See `../gap/discovery/RESULT_A2B_DIVERGENCE.md` §2
+  and debt D49
 
 This confirms the dimensions cited have the stated form. It does not verify any SIC property.
 
@@ -42,7 +48,7 @@ recall**, and the search caught both:
 | its prior | outcome |
 |---|---|
 | exact known for d ≤ 21 plus scattered 24, 28, 30, 31, 35, 37, 39, 43, 48, 124, 323 | **CORRECTED** — that is the 2017 table. *"Recall was nine years stale and would have produced an entirely fictitious hole list."* |
-| maximum exact dimension ≈ 39604 | **CORRECTED** — 39604 is the **numerical** maximum; the exact ceiling is 5799, and the papers reaching 19603/39604 *"admit their exact verification was mostly partial"* |
+| maximum exact dimension ≈ 39604 | **CORRECTED** — 39604 is the **numerical** maximum; the exact ceiling is ~~5799~~ **5,779** (see below), and the papers reaching 19603/39604 *"admit their exact verification was mostly partial"* |
 
 Read that first row again: **unsourced, this gate would have produced a hole list that does not
 exist**, and a Claude Code programme would have started work against fictitious targets. That
