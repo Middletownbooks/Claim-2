@@ -527,6 +527,44 @@ re-scoped afterwards.
 > as described** — the citation reaching me is `RECALL`, and this project has twice described a paper from
 > its title and been wrong.
 
+> **[30 Sep 2026 — brief F ran. All three bars FAIL. OPTION 5 IS SPENT, `opt5/RESULT_F.md`. Only option 6
+> remains.]** B-1 FAIL-ESTABLISHED, B-2 FAIL-UNEARNED, C-1 FAIL-ESTABLISHED. 14 of 22 calls. **P-39
+> scored: threshold CORRECT, grades 3 of 3, side bet WRONG** — arXiv:2512.24061 is real and says what was
+> claimed.
+>
+> **But the operator's two notes outrank the run, and one of them reframes this whole document.**
+>
+> **An Opus 5.5 instance already worked 239 extensively and FOUND AN ERROR IN OCHEM–ZELINSKY'S ALGORITHM 1
+> PROGRAM, accepted by Ochem by email.** That is an externally validated correction to a published paper —
+> **the most concrete result this programme has produced — and it is nowhere in the ledger.** 41
+> predictions, 58 debts, every one about the screen. **D58: the screen is what got instrumented, so the
+> screen is what the record measures. The 0-of-7 tally scores the screen, and the thing that worked was not
+> the screen.** That is a different conclusion from "record problems do not move", and the current
+> bookkeeping cannot tell them apart.
+>
+> **And D56's registered fix was applied and proved insufficient.** I grepped the local tree before writing
+> brief F — first application of the fix — and the tree was silent, because **both** prior efforts happened
+> in sibling instances and left no trace here (239 by the Opus instance; arXiv:2512.24061 already checked
+> and ruled out). **Grepping the tree is necessary, not sufficient: the action must include asking the
+> operator what has been tried.** Escalated there.
+>
+> **What the 14 calls did buy, four items none of which were on file:** Ochem's page now says **10²²⁰⁰**,
+> not the 10²⁰⁰⁰ my brief relayed from 2014 slides, with **Ω ≥ 115** against the published 101 — so the
+> published-versus-private gap is **~700 orders of magnitude**. The only measured cost is Figure 2: **≈12 h
+> for Theorem 1's tree on an AMD Phenom II X4 945, 105.5 h documented in total, 10.6× over a
+> 10-container-hour bar** — **and the paper explicitly excludes the factoring**, volunteer-distributed and
+> never aggregated, so the dominant cost is unreported and the margin is **not computable**, which is why
+> the grade is UNEARNED and not ESTABLISHED. **The C-1 kill is structural and makes the bar nearly beside
+> the point: no subfamily's closure could move ES(7) at all**, since the lower bound is already 33 and only
+> UNSAT over *all* 33-point sets moves the upper bound. And *"UNSAT certificates"* overstated solver
+> **verdicts** — no DRAT/LRAT, no independent checking, repository holds a README and a CNF generator.
+>
+> Also: **Suk's asymptotic is superseded** by Holmsen–Mojarrad–Pach–Tardos 2020, which my brief did not
+> know.
+>
+> **Queue: options 1–5 are all closed on evidence. Only 6 — enter EinsteinArena — remains, and it is the
+> one that changes the method rather than running it again.**
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
