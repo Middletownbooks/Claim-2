@@ -352,6 +352,43 @@ re-scoped afterwards.
 > since a bar whose subject does not exist was never evaluable. On VOID, P-38 stays OPEN and is
 > re-registered against whatever region survives.
 
+> **[30 Sep 2026 — the operator's hoa64 pointer settles "which thirteen", and then shows that most of my
+> brief was already in this repository. `../hadamard/bgt2/PRECHECK_E.md`.]**
+>
+> **BOTH thirteens exist.** FINDING_05's are the **thirteen open orders under 3000** — *N* = 2060, 2092,
+> 2148, 2284, 2292, 2396, 2572, 2588, 2636, 2676, 2876, 2884, 2956 — quoted verbatim in
+> `../playability/HADAMARD_CROSS.md` §1; and hoa64's are **Alpöge's 12 plus Đoković's H(1852), all solved,
+> all below 2000**, verified in this repository on **2026-09-20** by H Hᵀ = nI in exact integer arithmetic,
+> 13/13 (`../playability/hoa64/verify_matrices.py`). Since `Cooperative-AI-Defense/hadamard/findings/OPEN_ORDERS.md` sits in FINDING_05's
+> directory, **this entry is NOT void** — the *b* ≥ 3 pairs are at open orders.
+>
+> **But three of brief E v1's findings were already on file, and one is retracted.**
+> `../playability/HADAMARD_CROSS.md` §1 already had 669 and 721 as *v* values for 2676 and 2884; §§2–3
+> already worked *v* = 721's route, which needs **W(103)**, with both assembly paths validated; §2 already
+> recorded the five composite *v* as *"set aside on an assumption that was never checked"*. **And §8
+> retracts it:** W(179) and W(223) **cannot** be known, because 716 = 4·179 and 892 = 4·223 were open
+> until 2026 and are two of Alpöge's twelve. **So the one lead v1 offered — *v* = 721 at 192 free bits —
+> points into a cell whose route this project had already withdrawn.**
+>
+> **Hold that argument's shape: Alpöge's twelve solved matrices are evidence about which Williamson orders
+> CANNOT exist.** It is the best move on this board and it was already made here.
+>
+> **So brief E v2 asks one question instead of five:** does a bordered construction at *b* ≥ 3 need a
+> Williamson or GS quadruple as an ingredient? **If it does, the border axis inherits §8's retraction and
+> is not a new region.** That is clause (b) of the rewritten bar and it is where **P-38** now expects the
+> FAIL — the free-bit count points at *v* = 721, one of the two orders §8 leaves doubtful, which is weak
+> evidence the two axes are one axis. Q4 **measures** the border widths of Alpöge's twelve with
+> `../hadamard/bgt2/border.py`, control-tested here (Paley I detects exactly *b* = 1; Sylvester nothing;
+> a one-entry break stops detection; a minimum-core guard exists because the first version reported
+> spurious large *b* on 1×1 cores).
+>
+> **D56, and the second instance is mine.** Nothing here checks whether a question has already been
+> answered in this repository. This entry was written **2026-09-21**, one day after the document that
+> answered it; I then wrote brief E v1 from this entry without searching the tree, **one turn after
+> registering D52** about the neighbouring problem. Writing the discipline down did not transfer it. What
+> held: every arithmetic claim I derived reproduces the repo's own independently — worth something, not a
+> finding.
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,

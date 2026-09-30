@@ -1,0 +1,19 @@
+CONTROLS
+
+  Paley I q=  7: order   8, Hadamard OK, circulant core at b = [1]
+  Paley I q= 11: order  12, Hadamard OK, circulant core at b = [1]
+  Paley I q= 19: order  20, Hadamard OK, circulant core at b = [1]
+  Paley I q= 23: order  24, Hadamard OK, circulant core at b = [1]
+  ASSERTED: b=1 detected and b=0 rejected at every Paley order. The
+  detector can both fire and fail to fire, which is the point of a control.
+
+  Sylvester 2^2 =   4: Hadamard OK, circulant core at b = []
+  Sylvester 2^3 =   8: Hadamard OK, circulant core at b = []
+  Sylvester 2^4 =  16: Hadamard OK, circulant core at b = []
+  Sylvester matrices are a NEGATIVE CASE for this convention -- they are
+  built by doubling, not bordering, so a circulant core is not expected.
+
+  THIRD NEGATIVE TEST: flipping one entry of the Paley q=11 core destroys
+  both the Hadamard property and the b=1 detection. Both asserted.
+
+No directory given, so controls only. Pass an hoa64 matrices/ clone to measure.
