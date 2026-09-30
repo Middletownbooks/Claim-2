@@ -622,11 +622,22 @@ re-scoped afterwards.
 > bound reproduced and found wrong — not only *"record moved"*. That is D58 action (iv), and it comes
 > before widening anything else.
 >
-> **And one question decides which instrument to keep.** Which screen identified Rota rank 5 as having LLM
-> potential? **If it was the playability screen rather than SELECT v1, then the screen that worked is the
-> one that was not driving the queue** — `../gap/RESULT_RETRODICTION_P40.md` §3 already records that
-> INTERESTINGNESS's **P1** class would have taken Chow's Conjecture 2 while SELECT v1 could not represent
-> it. D58 action (v), one question.
+> **[ANSWERED, and it was neither of the two I offered.]** Rota was identified by **gap analysis of open
+> problems plus Opus-in-Claude-Code gating research**, and it **predates all the playability work** — so
+> the selector that produced it is not in the current lineage at all. Playability/INTERESTINGNESS, GAP_V3
+> and SELECT v1 all came later and replaced it.
+>
+> **Two facts, stated without a third tidy narrative.** *One:* **the score is one each, not one against
+> zero.** The record lineage's queue produced 239 → the Ochem–Zelinsky error; the predecessor produced
+> Rota → the Chow counterexample. Neither lineage is barren, and neither result was recognised by either
+> lineage's success criterion. *Two, and it converges with the retrodiction:* **the predecessor's corpus
+> was OPEN PROBLEMS, not tabulated records.** P-40's final reading found SELECT v1's gates would have
+> passed the Chow target and that the binding constraint was **corpus coverage** — the 499-record corpus
+> holds tabulated records, and the bracketed quantity 4 ≤ n ≤ 9 is in no table. **The predecessor was
+> running over exactly the population that contains such targets.**
+>
+> **So the concrete follow-up is: what did that gap analysis screen, and over what corpus?** A question
+> for the operator, not a brief.
 
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
