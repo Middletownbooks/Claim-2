@@ -565,6 +565,38 @@ re-scoped afterwards.
 > **Queue: options 1–5 are all closed on evidence. Only 6 — enter EinsteinArena — remains, and it is the
 > one that changes the method rather than running it again.**
 
+> **[30 Sep 2026 — a SECOND external result, and it makes the screen's problem measurable instead of
+> merely arguable. `../../proof-protocol/debts.json` D58, P-40.]**
+>
+> About a month before the Ochem–Zelinsky finding, the same method — **a capable instance working the
+> code** — came **close to the first counterexample of a twenty-year-old conjecture**, and was **scooped by
+> a different researcher a few weeks prior.** So the tally is **two results from that method against zero
+> promotable candidates from seven screens.**
+>
+> **Three things follow, and the third is a cheap experiment.**
+> * **The near-miss was at exactly the difficulty the screen exists to find** — a first counterexample to a
+>   long-standing conjecture. It is not a consolation; it is capability demonstrated at the target class.
+> * **Being scooped is a direct crowding measurement of a kind no gate here ever produced.** Not *"has
+>   anyone moved this"* inferred from publication history, but *"someone moved this while we were moving
+>   it"* — learned only by attempting it. S4 and the C-1 and C-3 bars all inferred contest from outside,
+>   and **D47 records that crowding decided none of the three.** This says why: **you cannot measure
+>   crowding from outside.** That is the opposite of what the screen assumed, and it is D51's observable
+>   problem with its answer attached — the state that matters is not in the literature.
+> * **P-40, registered before the target is named so the threshold cannot be fitted:** run SELECT v1's
+>   S0–S5 over that near-miss target. **Predicted: it FAILS**, i.e. the screen would not have surfaced the
+>   target the programme nearly hit. Expected at **S3**, structurally rather than positionally — a
+>   twenty-year-old conjecture with no recent movement is exactly the case where the most recent move has
+>   no knowable kind, and `../gap/SELECT_v1.md` §9 already records that S3 *"does not survive as a
+>   discriminator"* and *"killed records on UNKNOWN rather than on gap type"*. **A failure at S4 would be
+>   more interesting still**, since the target *was* contested and S4 could only have seen it afterwards.
+>
+> **Why this is worth more than the tally.** 0-of-7 is a null across seven instruments and weak evidence
+> about the screen. **A demonstrated false negative on a target the programme nearly hit is direct
+> falsification**, and it costs one target against six already-registered gates. This session's branch is
+> named `claude/retrodiction-benchmark-p1` — **this is the test the branch was named for.**
+>
+> **Blocked on one input: which conjecture.**
+
 > **Queue as of this run.** U13 is pending S55 and holds its place. Beneath it, three triage
 > candidates in this order: **C-1 τ₁₃ ≥ 1154**, **C-2 τ₁₄ ≥ 1932**, **C-3 AG(8,3) cap 512**. Each
 > enters only through its bar in `../gap/RESULT_DISCOVERY.md` §2. 239 and 345 are unchanged,
