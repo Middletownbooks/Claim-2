@@ -460,21 +460,39 @@ lineage's independent assessment**, never the prior attempt's binding constraint
 | **Kaplansky ZD** | §2.2: the family nests unit ⇒ ZD ⇒ idempotent, so Gardam 2021 refuted the **easiest** member and ZD is strictly harder — which breaks the July analysis's own D = 5 score. Playability demoted record 280 for the same reason and notes a Bar-Ilan AI-algebra lab already pointed at the live object | no — but the *direction* correction is reusable |
 | **Tuza** | §1: K₄ and K₅ exactly tight, ν = 1/τ = 2 and ν = 2/τ = 4 | no |
 | **MDS char 2** | §1: Ball's *k* ≤ 2*p*−2 is vacuous at *p* = 2, since 2 < 3 | no |
-| **Zarankiewicz/Hill** | appears in `../../fallbacks/RESULT_500_RESCAN.md`, `../RESULT_ARM1_II.md`, `../discovery/A1_b.md` — **but not the thing Cycle 0 asked for** | **no, and this is the costly one** |
+| **Zarankiewicz/Hill** | **FILLED, 1 Oct 2026 — `../v4/RESULT_STALL_ZARANKIEWICZ.md`.** The operator obtained the prior program's own stall analysis, stated as formal propositions with proofs, which is exactly the form Cycle 0's schema asked for and could not get | **yes — the only Part D cell that is now a row** |
 | **Mahler** | in `../sources/EPOCH_UNSOLVED_LIST.md`, `../epoch_exclusions.json`, the playability ranking | no |
 | **union-closed** | in `../../fallbacks/RESULT_500_RESCAN.md`, `../sources/GAP_V2_RESPONSE_RAW.md`; Cycle 0's preamble records it was swept by the field before the run began | no |
 
-**The missing cell that is still decisive.** Cycle 0's shortlist candidate B was Zarankiewicz
+> **[RESOLVED 1 Oct 2026, and the answer is outside Cycle 0's dichotomy.]** The binding constraint
+> was **neither compute nor the realizability theory**. It was **SPECIFICATION** — whether the
+> implemented predicate matches the one Woodall intended, and whether there is any way to tell. Three
+> admissible readings of his definitions existed; the program held the wrong one for two sessions
+> with a clean control record; and the only thing that discriminated was a *certified generator*
+> whose guarantee is geometric and independent of every checker. Compute ceased to bind **1.2 seconds**
+> into the first productive search. Cycle 0's rule — *"if theory, Claude Code adds little and this is
+> dead"* — does not fire, and the correct reading is that the candidate was never dead; it was
+> unfalsifiable until a generator existed. Registered as a **sixth** constraint shape in `D61` and as
+> a control-design defect in `D66`. **Section 4.1's tally is not restated here**: that tally uses
+> Cycle 0's binary because `D56` (iii) asked for it, and this cell's answer is in a vocabulary the
+> binary does not contain — which is itself §4.5's argument, arriving from the one case that could
+> test it.
+
+**The missing cell, as it stood before 1 Oct.** Cycle 0's shortlist candidate B was Zarankiewicz
 K₇,₁₁/K₉,₉, with this note attached:
 
 > *"the prior chat session already worked this. The register must establish whether it stalled on
 > compute or on the cyclic-order realizability theory. If theory, Claude Code adds little and this is
 > dead."*
 
-**That question is unanswered, a lineage later.** It is the single cell where Cycle 0 said in advance
-that the register's deciding field would settle a candidate outright, and it is the cell the register
-still cannot reach — because it needs a transcript, and only the operator has it. Everything else in
-Part D can be rebuilt from documents; this one cannot.
+**That question was unanswered for a lineage, and it took one message.** It is the single cell where
+Cycle 0 said in advance that the deciding field would settle a candidate outright. The register could
+not reach it from documents and said so — correctly, since it needed something only the operator
+could obtain. **What arrived was better than the transcript Cycle 0 wanted:** not a record of what
+happened, but an analysis of *why*, in the form the schema specified. The lesson the register drew —
+that "buildable from documents" has a boundary running exactly where the predecessor's work was never
+committed — survives, with one amendment: **the boundary is crossed by asking, and the asking was
+never budgeted.**
 
 ---
 
