@@ -84,8 +84,40 @@ add.
 **A fork of someone else's search is a liability unless it is gated**, so `shard.py selftest`
 requires the fork to reproduce (7,7) exactly — both configurations, as a single process *and* as
 the sum over shards at two different split levels, with the frontier count required to equal the
-shard roots. Six assertions against numbers already measured. Nothing it prints should be believed
-until that passes.
+shard roots.
+
+> **GATE PASSED**, 10 of 10 assertions. Both configurations reproduce exactly, single-process and
+> summed over shards at L = 3 and L = 4, with the frontier counts equal to the shard roots (377 and
+> 29,099 off; 329 and 25,346 on). The fork is faithful.
+
+## 5a. The estimator — and the reason the old numbers were wrong
+
+Sharding buys something beyond parallelism, and it is the more valuable half: **an estimator with
+an error model.**
+
+The tree is a disjoint union of the subtrees rooted at the level-L prefixes, so the total is a sum
+over independent subproblems, and a systematic sample of *complete* subtrees scaled by the frontier
+size is **unbiased** for the total. Validated against the known (7,7) total of 16,263,610:
+
+| split level | frontier | sampled | estimate | ratio to truth | skew max/mean |
+|---|---|---|---|---|---|
+| L = 4 | 29,099 | 50 | 1.424 × 10⁷ | 0.876 | 6 |
+| L = 4 | 29,099 | 200 | 1.665 × 10⁷ | 1.024 | 12 |
+| L = 4 | 29,099 | 1,000 | 1.579 × 10⁷ | 0.971 | 15 |
+| **L = 5** | **801,503** | **3,000** | **1.6407 × 10⁷** | **1.0088** | **4.8** |
+
+**Within 0.9% for 8 seconds of compute**, and a deeper split level is both cheaper per subtree and
+less skewed. Every cost estimate this target has produced was instead an extrapolation of an
+*aggregate* — the 4,838× raw-space proxy, the 10³ hardware speedup, the growth-ratio fit that
+missed by 32× — and an aggregate growth curve has **no error model at all**, so a wrong answer is
+indistinguishable from a right one until the truth arrives. `D68` records this; the operative rule
+is: ask whether the quantity decomposes, and if it does, sample it.
+
+Choosing L is the trick. At (11,7) the level-4 subtrees are large enough that two dozen of them do
+not finish in fifteen minutes, so the sample runs at L = 5 where the frontier is 6.66 million
+prefixes and each subtree is correspondingly small.
+
+## 5b. The harness, continued
 
 ## 6. Kaggle specifics
 

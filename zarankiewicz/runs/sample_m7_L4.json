@@ -1,0 +1,18 @@
+{
+  "m": 7,
+  "L": 4,
+  "frontier": 29099,
+  "sampled": 1000,
+  "step": 29,
+  "sampled_nodes": 542602,
+  "elapsed_s": 5.3,
+  "nodes_per_s": 102964,
+  "subtree_min": 1,
+  "subtree_max": 7957,
+  "subtree_mean": 542.6,
+  "subtree_median": 195.0,
+  "subtree_stdev": 836.5,
+  "estimate_total_nodes": 15789176,
+  "estimate_core_hours": 0.04,
+  "skew_max_over_mean": 14.7
+}

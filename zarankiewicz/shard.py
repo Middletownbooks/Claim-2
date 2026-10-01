@@ -34,6 +34,8 @@ levels.  Run `python3 shard.py selftest` before trusting any number it prints.
     python3 shard.py frontier <m> <L> [thm7]        -> frontier_m<m>_L<L>.json
     python3 shard.py run <m> <L> <i> <N> [thm7]     -> shard_m<m>_L<L>_<i>of<N>.json
     python3 shard.py merge <m> <L> <N>              -> merged_m<m>_L<L>.json
+    python3 shard.py sample <m> <L> <k> [thm7] [cap] -> an unbiased total estimate
+    python3 shard.py deepsample <m> <L> <k> [thm7] [cap]  -> same, frontier in memory
 
 `run` is idempotent: an existing output file for that shard is left alone, so a
 session killed by the wall clock is resumed by re-issuing the same command.
@@ -203,6 +205,94 @@ def run_shard(m, L, i, N, thm7=(), time_cap=None):
                 nodes=sum(tot), elapsed_s=round(time.time() - t0, 1))
 
 
+def sample_deep(m, L, k, thm7=(), time_cap=None):
+    """Same estimator as sample(), but it builds the level-L frontier IN MEMORY
+    and never writes it, so L can be deep enough that the subtrees are small.
+
+    Choosing L is the whole trick.  At (11,7) the level-4 subtrees are large
+    enough that two dozen of them do not finish in fifteen minutes, which makes
+    a sample at L=4 expensive for no gain; at L=5 the frontier is 6.7 million
+    prefixes and each subtree is correspondingly small.  Deeper L costs more in
+    the frontier pass and less per subtree, and the frontier pass is the cheap
+    half.
+    """
+    import statistics
+    c = ctx()
+    B = staircase(m, 7)
+    counts, surv, el_f, ab = search(c["G"], c["A_np"], c["A_py"], c["stab"], L, B,
+                                    thm7=thm7, collect=True)
+    assert not ab, "frontier pass aborted"
+    assert counts[L] == len(surv)
+    step = max(1, len(surv) // k)
+    picked = [ch for _, ch in surv[::step][:k]]
+    del surv
+    sizes, t0, done = [], time.time(), 0
+    for ch in picked:
+        sc, _, _, a2 = search_from(c["G"], c["A_np"], c["A_py"], c["stab"], m, B,
+                                   start=tuple(ch), thm7=thm7)
+        assert not a2
+        sizes.append(sum(sc))
+        done += 1
+        if time_cap is not None and time.time() - t0 > time_cap:
+            break
+    el = time.time() - t0
+    tot_s = sum(sizes)
+    est = tot_s * (counts[L] / done)
+    return dict(m=m, L=L, thm7=list(thm7), frontier=counts[L], counts_to_L=counts[:L + 1],
+                frontier_seconds=round(el_f, 1), sampled=done, step=step,
+                sampled_nodes=tot_s, sample_seconds=round(el, 1),
+                nodes_per_s=round(tot_s / el) if el else None,
+                subtree_min=min(sizes), subtree_max=max(sizes),
+                subtree_mean=round(statistics.mean(sizes), 1),
+                subtree_median=statistics.median(sizes),
+                subtree_stdev=round(statistics.stdev(sizes), 1) if len(sizes) > 1 else 0.0,
+                skew_max_over_mean=round(max(sizes) / statistics.mean(sizes), 1),
+                estimate_total_nodes=round(est),
+                estimate_core_hours=round(est / (tot_s / el) / 3600, 2) if el else None)
+
+
+def sample(m, L, k, thm7=(), time_cap=None, seed=0):
+    """Estimate the FULL tree by running a systematic sample of level-L subtrees.
+
+    This is the right estimator for this problem and extrapolating level ratios is
+    the wrong one: a sample of complete subtrees is unbiased for the total, whereas
+    a growth-ratio extrapolation has no error model at all and was wrong by 32x on
+    (7,7).  The caveat is SKEW, not bias -- subtree sizes are heavily unequal, so a
+    small sample has a wide spread and the report below prints it rather than hiding
+    it behind a point estimate.
+    """
+    import statistics
+    f = json.loads((OUT / ("frontier_m%d_L%d.json" % (m, L))).read_text())
+    pre = f["prefixes"]
+    step = max(1, len(pre) // k)
+    picked = pre[::step][:k]
+    c = ctx()
+    B = staircase(m, 7)
+    sizes, t0, done = [], time.time(), 0
+    for ch in picked:
+        counts, _, _, ab = search_from(c["G"], c["A_np"], c["A_py"], c["stab"], m, B,
+                                       start=tuple(ch), thm7=thm7)
+        assert not ab
+        sizes.append(sum(counts))
+        done += 1
+        if time_cap is not None and time.time() - t0 > time_cap:
+            break
+    el = time.time() - t0
+    tot_sampled = sum(sizes)
+    scale = len(pre) / done
+    est = tot_sampled * scale
+    return dict(m=m, L=L, frontier=len(pre), sampled=done, step=step,
+                sampled_nodes=tot_sampled, elapsed_s=round(el, 1),
+                nodes_per_s=round(tot_sampled / el) if el else None,
+                subtree_min=min(sizes), subtree_max=max(sizes),
+                subtree_mean=round(statistics.mean(sizes), 1),
+                subtree_median=statistics.median(sizes),
+                subtree_stdev=round(statistics.stdev(sizes), 1) if len(sizes) > 1 else 0.0,
+                estimate_total_nodes=round(est),
+                estimate_core_hours=round(est / (tot_sampled / el) / 3600, 2) if el else None,
+                skew_max_over_mean=round(max(sizes) / statistics.mean(sizes), 1))
+
+
 def merge(m, L, N):
     f = json.loads((OUT / ("frontier_m%d_L%d.json" % (m, L))).read_text())
     tot = [0] * (m + 2)
@@ -287,6 +377,20 @@ if __name__ == "__main__":
         print("%s: %d/%d prefixes, %d nodes, %.1f s%s"
               % (p.name, r["prefixes_done"], r["prefixes_assigned"], r["nodes"],
                  r["elapsed_s"], "" if r["complete"] else "  INCOMPLETE -- re-issue to resume"))
+    elif cmd == "sample":
+        m, L, k = (int(x) for x in sys.argv[2:5])
+        t7 = _thm7(sys.argv[5] if len(sys.argv) > 5 else "")
+        capv = float(sys.argv[6]) if len(sys.argv) > 6 else None
+        r = sample(m, L, k, t7, time_cap=capv)
+        (OUT / ("sample_m%d_L%d.json" % (m, L))).write_text(json.dumps(r, indent=2) + "\n")
+        print(json.dumps(r, indent=2))
+    elif cmd == "deepsample":
+        m, L, k = (int(x) for x in sys.argv[2:5])
+        t7 = _thm7(sys.argv[5] if len(sys.argv) > 5 else "")
+        capv = float(sys.argv[6]) if len(sys.argv) > 6 else None
+        r = sample_deep(m, L, k, t7, time_cap=capv)
+        (OUT / ("deepsample_m%d_L%d.json" % (m, L))).write_text(json.dumps(r, indent=2) + "\n")
+        print(json.dumps(r, indent=2))
     elif cmd == "merge":
         m, L, N = (int(x) for x in sys.argv[2:5])
         r = merge(m, L, N)
