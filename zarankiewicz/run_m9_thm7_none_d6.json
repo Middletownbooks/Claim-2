@@ -1,0 +1,25 @@
+{
+  "m": 9,
+  "depth": 6,
+  "thm7": [],
+  "level_counts": [
+    0,
+    1,
+    13,
+    2131,
+    82512,
+    6655827,
+    50599405,
+    0,
+    0,
+    0,
+    0
+  ],
+  "leaves": 0,
+  "total_nodes": 57339889,
+  "elapsed_s": 456.1,
+  "aborted": false,
+  "nodes_per_s": 125730,
+  "woodall_hours": 4.0,
+  "speedup_vs_woodall": 31.6
+}

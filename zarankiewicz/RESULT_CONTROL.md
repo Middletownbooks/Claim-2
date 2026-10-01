@@ -135,15 +135,42 @@ the orbit count of 3-element sets jumps 280 → 1,710 as the bound moves 9 → 1
 | the (7,7) shape, total/L5 = 18.3, times two extra levels at ~8× and ~4× | ~4 × 10⁹ nodes, ~18 h | the ceiling |
 | raw multiset space (9,7)/(7,7) = 7,351× | meaningless — pruning removes almost all of it | discarded |
 
-**So: between about half an hour and about a day, and the shape argument points at the top of
-that range.** I am not narrowing it by extrapolation — that is precisely the error that cost 32×
-in §3(i), and the top level contracts by a factor nothing shallower predicts. A (9,7) run with
-Theorem 7 **off** and a depth-6 cap is in flight; depth caps complete and give exact counts,
-whereas a time-capped abort gives none, because a DFS that runs out of clock has visited no level
-completely.
+**Depth 6 has since completed**, Theorem 7 off, in 456 s: **1 · 13 · 2,131 · 82,512 · 6,655,827 ·
+50,599,405**, 57,339,889 nodes at 125,730 nodes/s. That narrows the bracket and points downward.
+
+The informative comparison is not level against level but **distance from the top rung**, since the
+top rung is what binds:
+
+| levels from the top | (7,7) growth ratio | (9,7) growth ratio |
+|---|---|---|
+| 0 | 0.055 | unmeasured |
+| 1 | 18.2 | unmeasured |
+| 2 | 27.5 | unmeasured |
+| 3 | **77.2** | **7.6** |
+| 4 | 29 | 80.7 |
+
+At three-from-top the (9,7) tree is growing **ten times more slowly** than (7,7) was at the same
+distance. Deceleration is arriving much earlier relative to the top, which is the encouraging
+direction. Carrying the three remaining levels at plausible ratios:
+
+| | total nodes | wall clock |
+|---|---|---|
+| pessimistic (7.6, 4, 0.06) | 2.1 × 10⁹ | 275 min |
+| central (3, 1, 0.05) | 3.7 × 10⁸ | **49 min** |
+| optimistic (2, 0.5, 0.05) | 2.1 × 10⁸ | 28 min |
+
+**So: 28–275 minutes, central around 50.** That is still a bracket and not a number, and I am not
+narrowing it further by extrapolation — that is precisely the error that cost 32× in §3(i), and the
+top level contracts by a factor nothing shallower predicts. A **depth-7** run is in flight; depth
+caps complete and give exact counts, whereas a time-capped abort gives none, because a DFS that
+runs out of clock has visited no level completely.
 
 ## 8. In flight
 
-* **(9,7), Theorem 7 off, depth 6** — the next exact level, which is what narrows §7's bracket.
-  The Theorem-7-on full-depth attempt was stopped once §6 showed the prune costs 2.13× in wall
-  clock: there is no reason to measure the slower configuration first.
+* **(9,7), Theorem 7 off, depth 7** — the next exact level, which collapses §7's bracket. The
+  Theorem-7-on full-depth attempt was stopped once §6 showed the prune costs 2.13× in wall clock:
+  there is no reason to measure the slower configuration first.
+
+`P-44` is graded **partly** in the ledger, not correct — (A), (C) and (D) hit and (B) splits, and a
+split is scored as the weaker reading. `P-43`(A)'s 30-day threshold is now **open and no longer at
+risk for any reason on file**, which is the first time that has been true.
