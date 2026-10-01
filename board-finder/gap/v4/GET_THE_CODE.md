@@ -1,5 +1,16 @@
 # Yes — and while writing the answer I found the hard reason
 
+> **Superseded in one part, 1 Oct 2026, by work on the Zarankiewicz branch.** The mismatch below
+> stands and is now three-for-three rather than two-for-two: `29,099` at *k* = 4 falls between
+> 12,484 and 38,309, a **convention-independent** miss, since no ordering rule can raise a class
+> count. But §1's closing paragraph floated a re-reading that "costs a level" and makes the full
+> (7,7) tree 8.8 × 10⁹ nodes, and **that reading is withdrawn as undetermined**: the misses change
+> sign with the threshold (−1, +97, +16,615 at the staircase values read from the paper; −16,
+> −1,333, −9,210 one threshold up), so nothing here fixes whether their tree is larger or smaller
+> than the one that needs traversing. The inflation reading that would have made the sweep
+> *cheaper* is withdrawn on the same ground. See `zarankiewicz/verify_orbit_bounds.py` and
+> `zarankiewicz/PREREG_INTAKE.md`.
+
 **Short answer: yes, and it is not an efficiency question.** I went looking for something I
 could check locally before answering, and what came back says the relay has been moving numbers
 whose definition neither side has pinned down.
