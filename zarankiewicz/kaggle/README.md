@@ -32,6 +32,37 @@ execute, the same fallback takes over. If no compiler is found it prints the one
 that fixes it. If no filesystem will execute a fresh binary it stops and says so, rather than
 failing obscurely later.
 
+## Two modes — run `calibrate` first
+
+```python
+!ZMODE=calibrate python /kaggle/input/<your-dataset>/kaggle_shard.py
+```
+
+**Twenty minutes, and it answers the only question worth asking before committing
+sessions: what is this host actually worth?** It probes, builds, gates, then runs a **fixed,
+deterministic work quantum** — every (N/384)th level-5 prefix, first 384, reproducible from the
+frontier alone on any machine — at 1, 2, 4… threads, and prints the core-hour and session count
+implied by *this host's own measured rate*. `ZQUANTUM=16` makes it a two-minute smoke test first.
+
+Then, and only then:
+
+```python
+!ZMODE=sweep ZFIRST=0 ZCOUNT=40 python /kaggle/input/<your-dataset>/kaggle_shard.py
+```
+
+## The reference is a range, not a number
+
+The same gate on this account's own containers has measured **6.47, 7.65 and 10.38 seconds** — a
+**1.60× spread on bit-identical work**, the slow end from a container that had been up four hours.
+Its sweep rate over that life fell 31% and recovered fully on restart.
+
+So a Kaggle gate time tells you **which end of this account's own spread the host resembles, and
+nothing finer.** The script reports it that way: *inside the range measured there*, *faster than
+anything measured there*, *slower*. An earlier version compared against the single figure 10.38 s
+and would have reported a perfectly ordinary host as 1.6× fast. The core-hour figure is the
+trustworthy output, because it divides the tree size by **this host's** rate rather than by a
+remembered one.
+
 ## Using it
 
 One cell:
@@ -45,8 +76,10 @@ editing:
 
 | | default | |
 |---|---|---|
+| `ZMODE` | calibrate | `calibrate` or `sweep` |
 | `ZM` | 11 | the (m,7) case |
-| `ZLEVEL` | 4 | split level for the frontier |
+| `ZLEVEL` | **5** | split level — 4 leaves shards at 1.88 of 4 cores, 5 gives 3.84 |
+| `ZQUANTUM` | 384 | calibration quantum; lower it for a smoke test |
 | `ZNSHARDS` | 1000 | total shards the work is cut into |
 | `ZFIRST` / `ZCOUNT` | 0 / all | which shards *this session* takes |
 | `ZTHREADS` | all cores | |
@@ -59,10 +92,14 @@ saved as the notebook's output. Attach that output as a *dataset input* to the n
 `ZPREV` picks it up, so completed shards are skipped automatically and a session killed by the wall
 clock loses **at most one shard**.
 
-**Pick `ZNSHARDS` so each shard runs for ten minutes or more.** In a local test with 8 shards each
-took 0.6 s, and thread spawn/join then dominates — the per-core rate fell from 1.75 M to 0.8 M
-nodes/s. For the real (11,7) run at ~1,980 core-hours, 1,000 shards is about 2 core-hours each,
-which is the right granularity.
+**`ZNSHARDS=2400` is right at level 5**: ~2,774 prefixes per shard, ~4 × 10⁹ nodes, about ten
+minutes on four cores, and measured at **3.95 of 4 cores** in production. Do not raise it much —
+with 8 tiny shards thread spawn/join dominated and the per-core rate halved.
+
+**Watch the per-shard rate.** `ZMODE=sweep` prints each shard's nodes/core-s as a ratio of the
+first shard's and flags `<-- RATE FALLING` below 0.9×, and it re-runs the gate at the end of the
+session. That is there because the rate fell 31% over four hours once and nothing in the output
+would otherwise have shown it.
 
 ## What it refuses to do
 
