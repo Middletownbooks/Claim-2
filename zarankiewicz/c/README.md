@@ -70,9 +70,45 @@ The port is deliberately literal where literalness matters.
 * **Theorem 7 defaults off**, because the full-depth ablation measured it at 1.442× tree shrink
   against 3.08× per-node cost, i.e. **2.13× net slower**. It is implemented only for gate fidelity.
 
+## Parallel efficiency is poor, measured
+
+| | |
+|---|---|
+| single process, (7,7) full | 16,263,610 nodes in **7.65 s** = 2.13 M nodes/s |
+| 4 shards, same tree | 16,263,610 nodes in **23.9 core-seconds** = 680 k nodes/s per core |
+| speedup from 4 cores | **1.28× of a possible 4×, i.e. 32% efficiency** |
+
+**Cause**: each process holds its own 1 MB copy of the `int16` antidistance matrix, so four copies
+thrash the shared cache. **Fix**: threads with one shared read-only matrix. Not done — recorded
+because **the core-hour budget has to be scored on the sharded rate, not the single-process one**,
+and that is the difference between comfortably inside the budget and over it:
+
+| rate used | (11,7) at 8.78 × 10¹² nodes | vs the 2,880 budget |
+|---|---|---|
+| (11,7) depth-6 mix, mostly update loops | 272 core-hours | inside |
+| single process, (7,7)-like mix | 1,145 core-hours | inside |
+| **per core under 4-way sharding** | **3,583 core-hours** | **over** |
+
+So the C puts (11,7) somewhere around **300–3,600 core-hours against a 2,880 budget** — a pass on
+the optimistic mix and a near-miss on the pessimistic one. **Not yet a settled pass**, and threads
+are what would move the pessimistic end.
+
+## A rate that flatters itself
+
+`nodes/s` is a misleading metric here and the depth-6 (11,7) run shows why: it reports **8.98 M
+nodes/s**, four times the (7,7) gate's 2.13 M, because 433 M of its 440 M nodes sit *at* the depth
+cap, where `rec` returns immediately without scanning or updating. The honest unit is the
+**720-wide pass** — one per candidate scan and one per row update — and quoting nodes/s across runs
+with different depth profiles compares different amounts of work.
+
 ## Sharding
 
-`-start` makes a prefix a complete task, because the only state a node needs is its prefix: the
-contributions, the antisum and the row are all recomputable from it. `../shard.py` generates the
+`-startfile <path> -shard i -of N` streams one prefix per line and takes lines `i, i+N, …`, so
+setup is paid once per shard rather than once per prefix. **Gated**: four shards of the (7,7)
+level-4 frontier, summed, give `1 · 13 · 377 · 29,099 · 801,503 · 14,623,179 · 809,438` — the exact
+counts, with levels 1–3 from the frontier pass and 4–7 from the shards.
+
+`-start` makes a single prefix a complete task, because the only state a node needs is its prefix:
+the contributions, the antisum and the row are all recomputable from it. `../shard.py` generates the
 frontier of prefixes at a chosen level and the Python merge logic applies unchanged — the C prints
 the same level-count vector, so a shard's output sums the same way.

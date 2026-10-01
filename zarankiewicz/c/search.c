@@ -175,7 +175,8 @@ static void staircase(int m, int n, int top)
 int main(int argc, char **argv)
 {
     int n = 7, m = 7, top = -1, nstart = 0, start[MAXM + 2];
-    const char *thm7 = "";
+    int shard = 0, nshards = 1;
+    const char *thm7 = "", *startfile = NULL;
     for (int i = 1; i < argc; i++) {
         if (!strcmp(argv[i], "-m")) m = atoi(argv[++i]);
         else if (!strcmp(argv[i], "-n")) n = atoi(argv[++i]);
@@ -183,6 +184,9 @@ int main(int argc, char **argv)
         else if (!strcmp(argv[i], "-top")) top = atoi(argv[++i]);
         else if (!strcmp(argv[i], "-cap")) t_cap = atof(argv[++i]);
         else if (!strcmp(argv[i], "-thm7")) thm7 = argv[++i];
+        else if (!strcmp(argv[i], "-startfile")) startfile = argv[++i];
+        else if (!strcmp(argv[i], "-shard")) shard = atoi(argv[++i]);
+        else if (!strcmp(argv[i], "-of")) nshards = atoi(argv[++i]);
         else if (!strcmp(argv[i], "-start")) {
             char *s = argv[++i], *tok = strtok(s, ",");
             while (tok) { start[nstart++] = atoi(tok); tok = strtok(NULL, ","); }
@@ -214,7 +218,41 @@ int main(int argc, char **argv)
     fflush(stdout);
 
     t_start = now();
-    if (nstart == 0) {
+    if (startfile) {
+        /* One prefix per line, comma-separated vertex indices.  Shard i of N takes
+         * lines i, i+N, i+2N, ...  Sibling subtrees are disjoint, so the level
+         * counts of the shards ADD, and level k < prefix length is contributed by
+         * the frontier pass rather than by any shard. */
+        FILE *f = fopen(startfile, "r");
+        if (!f) { fprintf(stderr, "cannot open %s\n", startfile); return 1; }
+        char line[512];
+        long lineno = 0, used = 0;
+        while (fgets(line, sizeof line, f)) {
+            if (line[0] == '\n' || line[0] == '\0') continue;
+            if (lineno++ % nshards != shard) continue;
+            int k = 0;
+            for (char *tok = strtok(line, ",\n"); tok; tok = strtok(NULL, ",\n"))
+                ch[k++] = atoi(tok);
+            int32_t S = 0;
+            for (int i = 0; i < k; i++) {
+                int32_t c = 0;
+                for (int j = 0; j < k; j++) if (j != i) c += AD(ch[i], ch[j]);
+                co[i] = c;
+            }
+            for (int i = 0; i < k; i++) for (int j = i + 1; j < k; j++) S += AD(ch[i], ch[j]);
+            int16_t *rv = rowv + (size_t)k * CO_NV;
+            for (int w = 0; w < CO_NV; w++) {
+                int32_t ss = S;
+                for (int i = 0; i < k; i++) ss += AD(ch[i], w);
+                rv[w] = (int16_t)ss;
+            }
+            rec(k, S);
+            used++;
+            if (aborted) break;
+        }
+        fclose(f);
+        printf(" \"shard\": %d, \"of\": %d, \"prefixes_done\": %ld,\n", shard, nshards, used);
+    } else if (nstart == 0) {
         /* The Python does buf[1] = A_np[0]: the row for LEVEL 1, not level 0.
          * Writing it to buf[0] left rec(1, .) scanning uninitialised memory,
          * which is what the first gate run caught. */
