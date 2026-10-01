@@ -73,7 +73,14 @@ def run_shard(i):
     sit at the top rung never touch a file or a mutex.  The first cycle wrote all
     of them -- 54 to 72 million per shard, 2.3 GB, under a lock -- and it cost 45
     percent of throughput to extract a few thousand useful lines."""
-    low = OUT / ("low_%d.txt" % i)
+    # ATOMIC: the C writes to a .partial name and it is renamed only after the
+    # shard completes and its histogram agrees with the file.  Commit c493ad5
+    # carried low_3.txt with 24,183 of its eventual 32,212 lines, because a
+    # `git add -A` ran while that shard was mid-write and nothing distinguished
+    # a partial survivor file from a finished one -- there was no sh_3.json
+    # beside it, but a reader would have had to notice that absence.
+    final = OUT / ("low_%d.txt" % i)
+    low = OUT / ("low_%d.txt.partial" % i)
     t0 = time.time()
     r = subprocess.run([str(EXE), "-m", str(M), "-n", str(N),
                         "-startfile", str(FRONTIER), "-shard", str(i), "-of", str(NSHARDS),
@@ -89,8 +96,11 @@ def run_shard(i):
     nlow = sum(v for k, v in hist.items() if k <= TOP_RUNG - 2)
     written = sum(1 for _ in open(low)) if low.exists() else 0
     assert written == nlow, ("survivor file disagrees with the histogram", written, nlow)
-    if nlow == 0 and low.exists():
-        low.unlink()
+    if nlow == 0:
+        low.unlink(missing_ok=True)
+        final.unlink(missing_ok=True)
+    else:
+        low.replace(final)                 # atomic rename, after the check above
     rec = dict(shard=i, of=NSHARDS, m=M, n=N, level=LEVEL, complete=True,
                prefixes_done=d["prefixes_done"], level_counts=d["level_counts"],
                total_nodes=d["total_nodes"], leaves=d["leaves"],
@@ -98,6 +108,8 @@ def run_shard(i):
                nodes_per_core_s=d["nodes_per_core_s"], threads=d["threads"],
                antisum_histogram={str(k): v for k, v in sorted(hist.items())},
                below_top_rung=nlow, wall_s=round(time.time() - t0, 2))
+    # sh_%d.json is written LAST, so its presence is what certifies the shard:
+    # no sh_i.json means nothing about shard i may be trusted or committed.
     (OUT / ("sh_%d.json" % i)).write_text(json.dumps(rec) + "\n")
     return rec
 
