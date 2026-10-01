@@ -1,7 +1,8 @@
 # `zsearch` — the C implementation
 
-A port of the received `search.py` node-keep predicate and DFS. **24.3× faster on the gate**, and
-the gate is the point: it reproduces the exact level counts measured from the Python, in both
+A port of the received `search.py` node-keep predicate and DFS. **15.95× faster on the gate**,
+measured uncontended on one host — see `../BENCHMARK.md`, which retracts an earlier 24.3× taken
+from two contended runs on a different container. The gate is the point: it reproduces the exact level counts measured from the Python, in both
 Theorem 7 configurations, or it is wrong however fast it is.
 
 ```
@@ -26,8 +27,11 @@ make
 
 | | level counts | total | Python | C | speedup |
 |---|---|---|---|---|---|
-| (7,7) Thm 7 off | 1 · 13 · 377 · 29,099 · 801,503 · 14,623,179 · 809,438 | 16,263,610 | 186.1 s | **7.65 s** | **24.3×** |
-| (7,7) Thm 7 on | 1 · 12 · 329 · 25,346 · 615,817 · 9,827,953 · 809,438 | 11,278,896 | 397.0 s | **5.60 s** | **70.9×** |
+| (7,7) Thm 7 off | 1 · 13 · 377 · 29,099 · 801,503 · 14,623,179 · 809,438 | 16,263,610 | 165.6 s | **10.38 s** | **15.95×** |
+| (7,7) Thm 7 on | 1 · 12 · 329 · 25,346 · 615,817 · 9,827,953 · 809,438 | 11,278,896 | 393.2 s | **8.06 s** | **48.78×** |
+
+Both uncontended, same host, best of three. The earlier table gave 24.3× and 70.9× from contended
+runs on a different container; those are withdrawn.
 
 Both exact. `GATE_VALUES.json` holds the full set and `check_gate.py` runs the Python against it;
 these two rows are the C's half.
@@ -86,6 +90,10 @@ to the exact vector `1 · 13 · 377 · 29,099 · 801,503 · 14,623,179 · 809,43
 |---|---|---|---|---|---|
 | (7,7) full, 4 cores | 1,804,080 | **1,816,651** | 1,435,412 | **1.01×** | **1.27×** |
 | (11,7), 3 cores | 1,915,577 | 1,865,073 | 1,985,178 | 0.97× | 0.94× |
+
+Those two rows were themselves taken under contention. The clean sequential curve in
+`../BENCHMARK.md` supersedes them for absolute rates: 1,924,549 nodes/core-s at T = 1 falling to
+1,821,979 at T = 4, a **3.60× speedup at 95% per-core efficiency**.
 
 **So threads scale essentially perfectly per core — 101% on (7,7), 97% on (11,7) — and the win over
 processes is 1.27× on one workload and nil on the other.**
