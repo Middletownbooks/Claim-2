@@ -1,0 +1,22 @@
+{
+  "m": 7,
+  "thm7": [],
+  "level_counts": [
+    0,
+    1,
+    13,
+    377,
+    29099,
+    801503,
+    14623179,
+    809438,
+    0
+  ],
+  "leaves": 809438,
+  "total_nodes": 16263610,
+  "elapsed_s": 186.1,
+  "aborted": false,
+  "nodes_per_s": 87404,
+  "woodall_hours": 4.0,
+  "speedup_vs_woodall": 77.4
+}
