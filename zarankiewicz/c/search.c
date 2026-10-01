@@ -175,7 +175,7 @@ static void staircase(int m, int n, int top)
 int main(int argc, char **argv)
 {
     int n = 7, m = 7, top = -1, nstart = 0, start[MAXM + 2];
-    int shard = 0, nshards = 1;
+    int shard = 0, nshards = 1, persub = 0;
     const char *thm7 = "", *startfile = NULL;
     for (int i = 1; i < argc; i++) {
         if (!strcmp(argv[i], "-m")) m = atoi(argv[++i]);
@@ -185,6 +185,7 @@ int main(int argc, char **argv)
         else if (!strcmp(argv[i], "-cap")) t_cap = atof(argv[++i]);
         else if (!strcmp(argv[i], "-thm7")) thm7 = argv[++i];
         else if (!strcmp(argv[i], "-startfile")) startfile = argv[++i];
+        else if (!strcmp(argv[i], "-persubtree")) persub = 1;
         else if (!strcmp(argv[i], "-shard")) shard = atoi(argv[++i]);
         else if (!strcmp(argv[i], "-of")) nshards = atoi(argv[++i]);
         else if (!strcmp(argv[i], "-start")) {
@@ -246,7 +247,14 @@ int main(int argc, char **argv)
                 for (int i = 0; i < k; i++) ss += AD(ch[i], w);
                 rv[w] = (int16_t)ss;
             }
+            uint64_t before = 0;
+            if (persub) for (int q = 0; q <= m + 1; q++) before += counts[q];
             rec(k, S);
+            if (persub) {
+                uint64_t after = 0;
+                for (int q = 0; q <= m + 1; q++) after += counts[q];
+                fprintf(stderr, "%llu\n", (unsigned long long)(after - before));
+            }
             used++;
             if (aborted) break;
         }
