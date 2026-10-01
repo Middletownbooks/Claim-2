@@ -70,28 +70,51 @@ The port is deliberately literal where literalness matters.
 * **Theorem 7 defaults off**, because the full-depth ablation measured it at 1.442× tree shrink
   against 3.08× per-node cost, i.e. **2.13× net slower**. It is implemented only for gate fidelity.
 
-## Parallel efficiency is poor, measured
+## Threads, and a retraction of my own benchmark
 
-| | |
-|---|---|
-| single process, (7,7) full | 16,263,610 nodes in **7.65 s** = 2.13 M nodes/s |
-| 4 shards, same tree | 16,263,610 nodes in **23.9 core-seconds** = 680 k nodes/s per core |
-| speedup from 4 cores | **1.28× of a possible 4×, i.e. 32% efficiency** |
+`-threads T` runs T worker threads over one shared, read-only antidistance matrix, pulling prefixes
+from an **atomic queue rather than a static stripe** — subtree sizes here span max/mean = 37, so a
+stripe leaves threads idle on the tail. All mutable state (row stack, prefix, contributions,
+counters) is per-worker and small: 23 KB each.
 
-**Cause**: each process holds its own 1 MB copy of the `int16` antidistance matrix, so four copies
-thrash the shared cache. **Fix**: threads with one shared read-only matrix. Not done — recorded
-because **the core-hour budget has to be scored on the sharded rate, not the single-process one**,
-and that is the difference between comfortably inside the budget and over it:
+**Gated.** T = 1, 2 and 4 give **bit-identical level counts**, and each sums with the frontier pass
+to the exact vector `1 · 13 · 377 · 29,099 · 801,503 · 14,623,179 · 809,438`.
 
-| rate used | (11,7) at 8.78 × 10¹² nodes | vs the 2,880 budget |
-|---|---|---|
-| (11,7) depth-6 mix, mostly update loops | 272 core-hours | inside |
-| single process, (7,7)-like mix | 1,145 core-hours | inside |
-| **per core under 4-way sharding** | **3,583 core-hours** | **over** |
+### The clean benchmark, one binary, nodes per core-second
 
-So the C puts (11,7) somewhere around **300–3,600 core-hours against a 2,880 budget** — a pass on
-the optimistic mix and a near-miss on the pessimistic one. **Not yet a settled pass**, and threads
-are what would move the pessimistic end.
+| workload | 1 core | threads | processes | threads vs 1 | threads vs procs |
+|---|---|---|---|---|---|
+| (7,7) full, 4 cores | 1,804,080 | **1,816,651** | 1,435,412 | **1.01×** | **1.27×** |
+| (11,7), 3 cores | 1,915,577 | 1,865,073 | 1,985,178 | 0.97× | 0.94× |
+
+**So threads scale essentially perfectly per core — 101% on (7,7), 97% on (11,7) — and the win over
+processes is 1.27× on one workload and nil on the other.**
+
+> **RETRACTION.** An earlier version of this file said process sharding ran at **32% parallel
+> efficiency** and that threads would take it to **106%**, a 3.3× claim. **Both numbers are
+> withdrawn.** The 32% came from the *old pre-`int16` binary*'s process run (680 k nodes/core-s)
+> compared against the *new threaded* binary — two different programs. Same binary, same core
+> count, the honest figure is the table above. This is the same methodology error I spent the day
+> recording in `D68`: I compared across a change I had just made, exactly as I did when I pinned a
+> node threshold to a rate I was about to improve tenfold.
+
+Why (7,7) benefits and (11,7) does not, as far as the measurements support: (11,7)'s work is
+dominated by deep row-update passes touching one matrix row at a time, which has good locality
+whether the matrix is shared or duplicated; (7,7)'s is scan-heavier and touches more of the matrix,
+so four duplicate copies cost it. Plausible and consistent with the numbers, not separately tested.
+
+**The real benefit of threads here is operational, not arithmetic**: one process, one output file,
+one gate run per session, and dynamic load balancing across subtrees that differ by 37× — which is
+what a wall-clock-capped notebook session actually needs.
+
+### A caveat on every (11,7) rate in this file
+
+They were measured while other jobs were running on the same four cores, at varying levels. The
+*gated counts* are exact regardless; the *rates* carry that noise, and the 4-core (11,7) figure of
+1,149,393 nodes/core-s is the most contended of them. It is nonetheless the one the budget uses,
+because a real sweep saturates the machine too.
+
+## A rate that flatters itself
 
 ## A rate that flatters itself
 
