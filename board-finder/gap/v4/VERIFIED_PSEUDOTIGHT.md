@@ -52,13 +52,41 @@ every reading in between.** That is every reading of "antipath" the definitions 
 > and it arrives by a different route: not by discriminating among readings, but by showing the
 > claim is invariant across all of them.
 
-**The general move is worth keeping.** When a specification admits several readings, check whether
-the claim is *monotone* in the ambiguous parameter. If one half is monotone and the other
-anti-monotone, verifying each at the extreme that disfavours it brackets every reading at once, and
-the specification error vanishes rather than needing to be measured. **That is cheaper than a
-certified generator and it is available whenever the ambiguity is an inclusion.** It does not
-replace the generator — a generator is what you need when the readings are not ordered, or when the
-claim is not monotone — but it should be tried first, because when it works it is complete.
+**The general move is worth keeping, and it has a boundary.** When a specification admits several
+readings ordered by inclusion, check whether the claim is *monotone* in the ambiguous parameter. If
+one half is monotone and the other anti-monotone, verifying each at the extreme that disfavours it
+settles every reading at once.
+
+> **[BOUNDARY, added 1 Oct 2026 after the other instance found it, and it is load-bearing.]** The
+> bracket is valid **for a fixed object**. It does **not** transfer to counts or to universal
+> negatives, because (pseudo-tight ∧ not tight) is a conjunction of oppositely-monotone parts and is
+> therefore a **window** in the lattice — neither an up-set nor a down-set. The set of objects
+> satisfying it is not monotone, so a *count* cannot be bracketed even though each *member* can.
+>
+> **Confirmed directly here** (`verify_n5_null.py` §2): the multiset
+> `015342, 015342, 042153, 042531` is a counterexample under **`both` (234) and `path` (594)** and
+> **not** under **`walk` (282) or `arbitrary` (1,758)** — True, False, True, False across an
+> increasing family size. Found in 25 random samples.
+>
+> **Two consequences.** Their published count of **19** at n = 6 was `walk`-specific; the per-reading
+> counts are **both 48, walk 19, path 54, arbitrary 22**, and the reading-independent core is **14**,
+> with **45** classes genuinely convention-dependent. And the n = 5 **null had to be checked four
+> times** — a universal negative over a window is exactly what the bracket cannot do.
+
+**But for a fixed object the bracket is *exact*, not conservative**, and that is worth stating
+precisely because it is stronger than I first put it. Over any family of readings with a minimum and
+a maximum:
+
+> bracket holds ⟺ the claim holds at **every** reading in the lattice.
+
+Forward by monotonicity; backward because the two extremes are themselves readings. So it is not an
+approximation — it **characterises** reading-independence, in two checks rather than *k*. And the
+real gain is that it covers readings **nobody enumerated**, including the fourth one above, which is
+why finding that reading cost the result nothing.
+
+**It does not replace a certified generator** — that is what is needed when the readings are not
+ordered, when the claim is not monotone, or when the output is a count or a null. Use the bracket per
+object; use the generator, or exhaustive checking, for everything else.
 
 ## 3. The count moves to three
 
@@ -132,5 +160,24 @@ branch**, and a target whose positive branch is self-certifying carries ε on on
 
 ---
 
-*`verify_pseudotight.py` and `verify_certificate.py`, all assertions passing. Count: `D58`, now
-three.*
+## 6. The 14, and the n = 5 null, both verified independently
+
+`verify_fourteen.py` — **all 14** of their reading-independent n = 6 counterexamples check: each is
+pseudo-tight at `both` and not tight at `arbitrary`, with antisums reproducing (two at 15, three at
+16, two at 18, three at 19, two at 21, two at 22). Their published example is #2, so the headline
+survives the correction from 19 to 14.
+
+`verify_n5_null.py` — the n = 5 side, which is where the bracket fails and so had to be done the
+long way:
+
+* **131 isomorphism classes** of (4,5)-sets, reproducing their count exactly, from an independent
+  canonicalisation under S₅ composed with reversal (order 240);
+* **0 counterexamples under all four readings** — `both` 0, `walk` 0, `path` 0, `arbitrary` 0.
+
+So the onset at n = 6 is real and reading-independent in both directions: absent at n = 5 at every
+reading, and present at n = 6 with a 14-element core that survives every reading.
+
+---
+
+*`verify_pseudotight.py`, `verify_certificate.py`, `verify_fourteen.py`, `verify_n5_null.py`, all
+assertions passing. Count: `D58`, now three.*
