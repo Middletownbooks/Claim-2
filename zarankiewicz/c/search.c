@@ -40,6 +40,8 @@
 static int   B[MAXM + 2];
 static int   Mtarget, Depth = -1;
 static FILE *dumpf = NULL;      /* with -d L, write each level-L prefix here */
+static FILE *survf = NULL;      /* leaves: the candidate counterexamples themselves */
+static pthread_mutex_t survlock = PTHREAD_MUTEX_INITIALIZER;
 static int   excl2 = -1, excl4 = -1;        /* Theorem 7 limits, -1 = off */
 static int16_t  *AD16;                      /* CO_NV x CO_NV as int16, SHARED */
 static double t_start, t_cap = -1.0;
@@ -86,7 +88,21 @@ static void rec(W *w, int k, int32_t S)
 {
     w->counts[k]++;
     if (aborted) return;
-    if (k == Mtarget) return;
+    if (k == Mtarget) {
+        /* A LEAF IS A CANDIDATE COUNTEREXAMPLE, not just a number.  An (11,7)-set
+         * surviving to depth m has antisum <= B[m] < Z(m)Z(n), so each one has to
+         * be tested for realisability as an actual drawing; the count alone cannot
+         * settle the conjecture.  Emitting them is therefore part of the sweep and
+         * not a diagnostic. */
+        if (survf) {
+            pthread_mutex_lock(&survlock);
+            fprintf(survf, "%d", (int)S);
+            for (int i = 0; i < k; i++) fprintf(survf, ",%d", w->ch[i]);
+            fputc('\n', survf);
+            pthread_mutex_unlock(&survlock);
+        }
+        return;
+    }
     if (Depth > 0 && k >= Depth) {
         /* -dump with -d L makes the C generate its own work units, so a session
          * needs no Python to produce the frontier. */
@@ -315,6 +331,10 @@ int main(int argc, char **argv)
         else if (!strcmp(argv[i], "-startfile")) startfile = argv[++i];
         else if (!strcmp(argv[i], "-persubtree")) persub = 1;
         else if (!strcmp(argv[i], "-threads")) nthreads = atoi(argv[++i]);
+        else if (!strcmp(argv[i], "-survivors")) {
+            survf = fopen(argv[++i], "w");
+            if (!survf) { fprintf(stderr, "cannot write %s\n", argv[i]); return 1; }
+        }
         else if (!strcmp(argv[i], "-dump")) {
             dumpf = fopen(argv[++i], "w");
             if (!dumpf) { fprintf(stderr, "cannot write %s\n", argv[i]); return 1; }
@@ -400,6 +420,7 @@ int main(int argc, char **argv)
     double el = now() - t_start;
 
     if (dumpf) fclose(dumpf);
+    if (survf) fclose(survf);
     uint64_t tot = 0;
     for (int k = 0; k <= m + 1; k++) tot += counts[k];
     printf(" \"level_counts\": [");
