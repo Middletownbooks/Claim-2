@@ -1,8 +1,0 @@
-{"n": 7, "m": 11, "depth": -1, "thm7": "", "top": 223,
- "setup_s": 0.02, "NV": 720, "nstab_without_identity": 13,
- "staircase": [223, 182, 144, 112, 83, 59, 38, 22, 11, 3],
- "shard": 0, "of": 1, "threads": 4, "prefixes_done": 3452,
- "prefixes_assigned": 20000, "core_seconds": 4799.95,
- "level_counts": [0, 0, 0, 0, 3456, 228196, 4818076, 82634180, 375492536, 4873287180, 180567217],
- "total_nodes": 5517030841, "leaves": 180567217, "elapsed_s": 1200.003,
- "nodes_per_s": 4597513, "nodes_per_core_s": 1149393, "aborted": true, "level_counts_valid": false}

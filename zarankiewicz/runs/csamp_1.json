@@ -1,7 +1,0 @@
-{"n": 7, "m": 11, "depth": -1, "thm7": "", "top": 223,
- "setup_s": 0.02, "NV": 720, "nstab_without_identity": 13,
- "staircase": [223, 182, 144, 112, 83, 59, 38, 22, 11, 3],
- "shard": 1, "of": 3, "prefixes_done": 1844,
- "level_counts": [0, 0, 0, 0, 1844, 124293, 2661368, 46050838, 212261844, 2766286848, 93306541],
- "total_nodes": 3120693576, "leaves": 93306541, "elapsed_s": 2100.001,
- "nodes_per_s": 1486044, "aborted": true, "level_counts_valid": false}

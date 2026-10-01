@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 """The (11,7) sweep, in durable shards.
 
+SPLIT LEVEL 5, NOT 4, and the reason is measured.  At level 4 there are 82,512
+prefixes and the largest subtree under one of them runs for twenty minutes on a
+single thread, so every shard ends with a tail the other three cores sit out:
+shard 0 used 1.88 of 4 cores and shard 3 was at 1.00 after forty minutes.  At
+level 5 there are 6,655,827 prefixes, eighty times finer, and the same work used
+3.84 of 4 cores.  The restructure is gated: the level-5 units descending from
+level-4 shard 0 reproduce its level counts, its leaf count and its antisum
+histogram exactly.
+
 HONEST SIZE, up front.  The tree is 1.0510e13 nodes and the clean rate is
 1,821,979 nodes/core-second, so the sweep is ~1,602 core-hours = 16.7 DAYS on
 four cores.  A background job here caps at two hours and this container reset
@@ -10,13 +19,17 @@ THEREFORE NOT A WAY TO FINISH; it is a way to make every cycle's work permanent
 and resumable, here or on any other machine, and to validate the production path
 at real depth.
 
-WHAT IT STORES, and why not everything.  One completed shard of 34 prefixes
-emitted 668,158 survivors and 28 MB of text, and 99.94 percent of them sit at
-the TOP RUNG, antisum 223.  Storing every survivor would be terabytes.  So each
+WHAT IT STORES, and why not everything.  The first three completed shards
+emitted 180,051,156 leaves, 2.3 GB per shard, and 99.989 percent of them sit at
+the TOP RUNG, antisum 223.  Storing every survivor would be terabytes, and
+merely WRITING them cost 27 percent of core-seconds and 1.22x of wall --
+measured by running the same work three ways rather than inferred.  So each
 shard keeps:
   * the FULL antisum histogram, which is a few bytes and is the headline;
-  * the FULL list of survivors BELOW the top rung -- 0.064 percent of them,
-    which are the sets furthest under Z(11)Z(7) = 225 and the most interesting;
+  * the FULL list of survivors BELOW the top rung -- MEASURED at 0.0109 percent
+    over the first three completed shards, 19,681 of 180,051,156 leaves, all of
+    them at antisum 221 and none lower -- which are the sets furthest under
+    Z(11)Z(7) = 225 and the most interesting;
   * nothing else, because a shard is deterministic given its index and the
     top-rung list is regenerable on demand.
 
@@ -27,19 +40,22 @@ import collections
 
 HERE = pathlib.Path(__file__).resolve().parent
 EXE = HERE / "c" / "zsearch"
-FRONTIER = HERE / "runs" / "frontier_m11_L4.txt"
-OUT = HERE / "sweep"
-TMP = pathlib.Path(os.environ.get("TMPDIR", "/tmp")) / "sweep_tmp"
+FRONTIER = HERE / "runs" / ("frontier_m11_L%d.txt" % int(__import__("os").environ.get("LEVEL", "5")))
+OUT = HERE / ("sweep" + os.environ.get("OUT_SUFFIX", "_L%d" % int(os.environ.get("LEVEL", "5"))))
 
-M, N, LEVEL = 11, 7, 4
+M, N = 11, 7
+LEVEL = int(os.environ.get("LEVEL", "5"))
 NSHARDS = int(os.environ.get("NSHARDS", "2400"))
+OUT_SUFFIX = os.environ.get("OUT_SUFFIX", "_L%d" % LEVEL)
 TOP_RUNG = 223                      # B[11]; parity makes the rungs odd
 THREADS = int(os.environ.get("THREADS", "0")) or (os.cpu_count() or 1)
-WALL = float(os.environ.get("WALL", "6300"))    # stop STARTING shards after this
+WALL = float(os.environ.get("WALL", "4800"))    # stop STARTING shards after this;
+                                               # the job cap is ~7,080 s, so this leaves
+                                               # 38 minutes for a skewed shard to finish
+                                               # rather than be killed mid-flight
 FIRST = int(os.environ.get("FIRST", "0"))
 
 OUT.mkdir(exist_ok=True)
-TMP.mkdir(parents=True, exist_ok=True)
 
 def done_shards():
     d = set()
@@ -52,36 +68,37 @@ def done_shards():
     return d
 
 def run_shard(i):
-    sfile = TMP / ("surv_%d.txt" % i)
+    """One shard.  The C now accumulates the antisum histogram itself and writes
+    only survivors at or below TOP_RUNG - 2, so the 99.989 percent of leaves that
+    sit at the top rung never touch a file or a mutex.  The first cycle wrote all
+    of them -- 54 to 72 million per shard, 2.3 GB, under a lock -- and it cost 45
+    percent of throughput to extract a few thousand useful lines."""
+    low = OUT / ("low_%d.txt" % i)
     t0 = time.time()
     r = subprocess.run([str(EXE), "-m", str(M), "-n", str(N),
                         "-startfile", str(FRONTIER), "-shard", str(i), "-of", str(NSHARDS),
-                        "-threads", str(THREADS), "-survivors", str(sfile)],
+                        "-threads", str(THREADS),
+                        "-survmax", str(TOP_RUNG - 2), "-survivors", str(low)],
                        capture_output=True, text=True)
     if r.returncode != 0:
         print(r.stderr[-800:]); sys.exit("shard %d failed" % i)
     d = json.loads(r.stdout)
     assert not d["aborted"], "shard %d aborted; counts would be invalid" % i
-    hist = collections.Counter()
-    low = []
-    with open(sfile) as f:
-        for line in f:
-            a = int(line.split(",", 1)[0])
-            hist[a] += 1
-            if a < TOP_RUNG:
-                low.append(line.rstrip("\n"))
-    sfile.unlink()
+    hist = {int(k): v for k, v in d["antisum_histogram"].items()}
+    assert sum(hist.values()) == d["leaves"], (sum(hist.values()), d["leaves"])
+    nlow = sum(v for k, v in hist.items() if k <= TOP_RUNG - 2)
+    written = sum(1 for _ in open(low)) if low.exists() else 0
+    assert written == nlow, ("survivor file disagrees with the histogram", written, nlow)
+    if nlow == 0 and low.exists():
+        low.unlink()
     rec = dict(shard=i, of=NSHARDS, m=M, n=N, level=LEVEL, complete=True,
                prefixes_done=d["prefixes_done"], level_counts=d["level_counts"],
                total_nodes=d["total_nodes"], leaves=d["leaves"],
                elapsed_s=round(d["elapsed_s"], 2), core_seconds=round(d["core_seconds"], 2),
                nodes_per_core_s=d["nodes_per_core_s"], threads=d["threads"],
                antisum_histogram={str(k): v for k, v in sorted(hist.items())},
-               below_top_rung=len(low), wall_s=round(time.time() - t0, 2))
-    assert sum(hist.values()) == d["leaves"], (sum(hist.values()), d["leaves"])
+               below_top_rung=nlow, wall_s=round(time.time() - t0, 2))
     (OUT / ("sh_%d.json" % i)).write_text(json.dumps(rec) + "\n")
-    if low:
-        (OUT / ("low_%d.txt" % i)).write_text("\n".join(low) + "\n")
     return rec
 
 def summarise():
@@ -105,9 +122,10 @@ if __name__ == "__main__":
     if sys.argv[1:2] == ["summary"]:
         print(json.dumps(summarise(), indent=2)); sys.exit(0)
     EST = 1.0510e13
+    NPREFIX = sum(1 for _ in open(FRONTIER))
     done = done_shards()
     print("sweep: %d shards of ~%d prefixes; %d already complete; %d threads; wall budget %.0f s"
-          % (NSHARDS, 82512 // NSHARDS, len(done), THREADS, WALL), flush=True)
+          % (NSHARDS, NPREFIX // NSHARDS, len(done), THREADS, WALL), flush=True)
     t0 = time.time()
     n = 0
     for i in range(FIRST, NSHARDS):

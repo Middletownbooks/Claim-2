@@ -1,0 +1,13 @@
+# Frontier and sample files are REGENERATED, not stored.  The level-5 frontier is
+# 111 MB -- above GitHub's file limit, which is how this was found: a push was
+# rejected by the pre-receive hook.  Every one of these is reproducible from the
+# C in seconds, so committing them buys nothing and costs the repository:
+#   ./zsearch -m 11 -n 7 -d 5 -dump runs/frontier_m11_L5.txt    3.3 s, 6,655,827 lines
+#   ./zsearch -m 11 -n 7 -d 4 -dump runs/frontier_m11_L4.txt    0.9 s,    82,512 lines
+#   ./zsearch -m  7 -n 7 -d 4 -dump runs/frontier_m7_L4.txt     0.2 s,    29,099 lines
+# Shard RESULTS are small and are committed; their inputs are not.
+frontier_*.txt
+sample_*.txt
+bench_384.txt
+csamp_*
+tsamp*
