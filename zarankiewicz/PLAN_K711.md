@@ -1,24 +1,34 @@
-# Preparing (11,7): the harness is built, and the measurement says **not Kaggle — the rewrite**
+# (11,7): measured at 1.05 × 10¹³ nodes, ~1,980 core-hours, **inside the registered budget**
 
-> **VERDICT, 1 Oct 2026, from the first unbiased estimate of the (11,7) tree.** Sampling 65 of the
-> 6,655,827 level-5 subtrees to completion puts the full tree at **8.8 × 10¹² nodes**, which in
-> this Python implementation is **17,209 core-hours**. Against that:
+> **SETTLED, 1 Oct 2026, by the C implementation's own sampler.** 5,873 complete level-5 subtrees
+> across three cores:
 >
-> | route | cost at the estimate | verdict |
-> |---|---|---|
-> | one 4-core machine, Python | 17,209 core-hours = **179 days** | fails `P-43`(A)'s 2,880 by **6×** |
-> | Kaggle, 12-hour 4-core sessions | **359 sessions** | not viable |
-> | **compiled + bitsets, ~30×** | **574 core-hours = 6 days on 4 cores** | **passes with room** |
+> | | |
+> |---|---|
+> | full (11,7) tree | **1.0510 × 10¹³ nodes**, rel. SE **4.39%**, 95% band 9.605 × 10¹² – 1.1416 × 10¹³ |
+> | measured throughput | **1,472,087 nodes/s per core**, sharded three ways, on this workload |
+> | **the sweep** | **1,812 – 2,154 core-hours across the whole 95% band** |
+> | `P-43`(A)'s budget | **2,880 core-hours** (4 cores × 30 days), fixed before any (11,7) figure existed |
+> | verdict | **passes across the entire band**, and ~21 days of wall clock on 4 cores also satisfies the wall-clock reading |
 >
-> **The rewrite is not an optimisation here; it is the difference between failing the registered
-> threshold by 6× and passing it with room.** And it dominates across the whole uncertainty
-> interval: at the optimistic end it turns 884 core-hours into 29, and at the pessimistic end it is
-> the only thing that works at all. Kaggle is the right answer only in a narrow middle band — and
-> even there, writing the C is less work than babysitting 359 notebook sessions.
+> And the platform question flips back a third time. At 48 core-hours per 12-hour 4-core session
+> the sweep is **about 41 sessions**, not the 359 it was in Python. **A sharded free-tier run is
+> viable again** — or one rented VM for three weeks, or a larger machine for days.
 >
-> `P-45`, which predicted the tree below 1.30 × 10¹² nodes, is **heading for falsification** at
-> 6.7× over. Not yet scored: see the uncertainty note in §5c. A larger randomised sample is in
-> flight.
+> **`P-45` is falsified, by 8.1×, and the fault is in my threshold.** I converted a *core-hour*
+> budget into a *node* count using the measured Python rate — and then wrote the C, which is 11.7×
+> faster on this very workload. A core-hour budget expressed in nodes is a threshold only if the
+> rate is fixed, and I fixed it immediately before improving it by an order of magnitude. The
+> decision it routed to was nonetheless the right one: its registered false branch said "the
+> compiled rewrite comes before any platform", which is what happened and what worked.
+
+## 0. What the earlier verdict in this file got wrong
+
+An earlier head of this document said **"not Kaggle — the rewrite"**, on a Python-rate estimate of
+17,209 core-hours. The rewrite half was right. The Kaggle half was right *only while Python was the
+instrument*, and is now wrong: 41 sessions is a different proposition from 359. Both versions are
+kept rather than one overwritten, because the sequence is the point — **the platform question was
+never a platform question, it was a throughput question wearing a platform's clothes.**
 
 The preparation below was worth doing and is done — the harness is what produced the estimate, and
 it is still the thing that runs the sweep once the rewrite exists.
@@ -155,10 +165,17 @@ uncertainty at n = 65. Treat the interval as roughly an order of magnitude eithe
 | (7,7) full, k = 5,000 | 1.0 | 0.6% | 0.9982 | **0.18%** |
 | (9,7) to depth 6, k = 1,000 | 9 | 7.2% | 1.0219 | **2.2%** |
 | (9,7) to depth 6, k = 8,000 | 9 | 2.6% | 1.0095 | **0.95%** |
-| (11,7) full, k = 65 | **253** | 49% | — | unknown |
+| (11,7) full, k = 65 (Python) | 253 | 49% | 0.835 | **16% low** |
+| (11,7) full, k = 5,873 (C) | 422 | **4.39%** | — | — |
 
-**In all three calibrated cases the actual error sits comfortably inside the reported standard
-error**, and the error scales as it should: eight times the samples shrank the standard error by
+The (11,7) row is now calibrated too, by the bigger sample: the n = 65 estimate of 8.778 × 10¹² is
+**16% low** against 1.0510 × 10¹³ and sits outside the larger sample's 95% band. **A small sample
+from a heavy tail under-estimates the mean**, because the rare enormous subtrees are usually
+missed — and the caveat written at the time predicted both the direction and roughly the size of
+that miss.
+
+**In all three of the other calibrated cases the actual error sits comfortably inside the reported
+standard error**, and the error scales as it should: eight times the samples shrank the standard error by
 7.2/2.6 = 2.77 against the √8 = 2.83 the theory predicts. So this is a working error model, not a
 decorative one —
 which is the thing every earlier estimate on this target lacked. But all three calibrations sit at

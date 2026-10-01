@@ -1,2 +1,11 @@
 control: Zarankiewicz at eps = 1->225 10->225 100->225 1000->225 10000->225   (target 225, 5 of 5 exact)
   restart 0  new best 225  [0 s]
+
+{"m": 7, "n": 11, "target": 225, "best": 225, "refuted": false,
+ "restarts": 2484, "seconds": 1500.3, "restarts_per_s": 1.66,
+ "iters_per_restart": 40000, "crossing_evals_per_s": 6.62e+04,
+ "arithmetic": "exact int64 on a 2^20 grid",
+ "best_P": [[-188842,-460263],[-442438,-897451],[1012950,602899],[257672,-476428],[-599784,-1022100],[-537571,-1002432],[418863,-46295]],
+ "best_Q": [[-815829,998977],[187203,-863051],[945167,-1010936],[-542100,307010],[-640329,600586],[576981,-889280],[-169150,-369098],[340497,-884213],[237259,-862946],[-379488,-170759],[63544,-450558]],
+ "best_recount": 225,
+ "note": "a negative says nothing about the topological conjecture: an optimal drawing need not be rectilinear, and rcr >= cr."}
