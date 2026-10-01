@@ -40,7 +40,22 @@ res = dict(m=M, depth=DEPTH, thm7=list(THM7), level_counts=counts, leaves=counts
            elapsed_s=round(el, 1), aborted=aborted,
            nodes_per_s=round(tot / el) if el else None,
            woodall_hours=4.0, speedup_vs_woodall=round(4 * 3600 / el, 1) if el else None)
+if aborted:
+    # Their README names this trap and ablation_valid() exists to catch it: a DFS
+    # that runs out of clock has completed NO level, so every count is partial.
+    # A depth cap alone gives exact counts; a depth cap PLUS a time cap does not,
+    # because the time cap reintroduces exactly the invalidity the depth cap was
+    # chosen to avoid.  Mark it in the payload so it cannot be read as a count.
+    res["level_counts_valid"] = False
+    res["WARNING"] = ("ABORTED: the time cap fired, so these level counts are PARTIAL and "
+                      "are not counts of anything. Re-run with a smaller depth or no time cap. "
+                      "Compare against a completed shallower run: any disagreement below the "
+                      "deepest level proves the truncation.")
+else:
+    res["level_counts_valid"] = True
 print(json.dumps(res, indent=2), flush=True)
+if aborted:
+    print("\n*** ABORTED -- LEVEL COUNTS ARE INVALID, NOT MERELY INCOMPLETE ***", flush=True)
 
 # keyed on (m, thm7): the relayed depth-5 figures exist only for m = 7
 relayed = {(7, (2, 4)): [1, 12, 329, 25346, 615817], (7, ()): [1, 13, 377, 29099, 801503]}

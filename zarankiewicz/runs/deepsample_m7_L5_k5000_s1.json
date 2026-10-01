@@ -1,0 +1,32 @@
+{
+  "m": 7,
+  "L": 5,
+  "thm7": [],
+  "frontier": 801503,
+  "counts_to_L": [
+    0,
+    1,
+    13,
+    377,
+    29099,
+    801503
+  ],
+  "frontier_seconds": 8.3,
+  "sampled": 5000,
+  "seed": 1,
+  "sampling": "random without replacement",
+  "sampled_nodes": 101279,
+  "sample_seconds": 1.7,
+  "nodes_per_s": 59178,
+  "subtree_min": 2,
+  "subtree_max": 93,
+  "subtree_mean": 20.3,
+  "subtree_median": 20.0,
+  "subtree_stdev": 8.0,
+  "skew_max_over_mean": 4.6,
+  "estimate_total_nodes": 16235084,
+  "se_of_total": 90192,
+  "rel_se_pct": 0.6,
+  "mean_over_median": 1.0,
+  "estimate_core_hours_at_141686_per_s": 0.0
+}

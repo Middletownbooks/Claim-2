@@ -1,8 +1,27 @@
-# Preparing (11,7): yes — but the platform choice should wait about an hour
+# Preparing (11,7): the harness is built, and the measurement says **not Kaggle — the rewrite**
 
-Short answer: **the preparation is worth doing now and is done; the Kaggle decision is not yet
-ripe, and two measurements already in flight decide it.** Building the harness is the common
-prerequisite to every route, so it is not wasted whichever way those land.
+> **VERDICT, 1 Oct 2026, from the first unbiased estimate of the (11,7) tree.** Sampling 65 of the
+> 6,655,827 level-5 subtrees to completion puts the full tree at **8.8 × 10¹² nodes**, which in
+> this Python implementation is **17,209 core-hours**. Against that:
+>
+> | route | cost at the estimate | verdict |
+> |---|---|---|
+> | one 4-core machine, Python | 17,209 core-hours = **179 days** | fails `P-43`(A)'s 2,880 by **6×** |
+> | Kaggle, 12-hour 4-core sessions | **359 sessions** | not viable |
+> | **compiled + bitsets, ~30×** | **574 core-hours = 6 days on 4 cores** | **passes with room** |
+>
+> **The rewrite is not an optimisation here; it is the difference between failing the registered
+> threshold by 6× and passing it with room.** And it dominates across the whole uncertainty
+> interval: at the optimistic end it turns 884 core-hours into 29, and at the pessimistic end it is
+> the only thing that works at all. Kaggle is the right answer only in a narrow middle band — and
+> even there, writing the C is less work than babysitting 359 notebook sessions.
+>
+> `P-45`, which predicted the tree below 1.30 × 10¹² nodes, is **heading for falsification** at
+> 6.7× over. Not yet scored: see the uncertainty note in §5c. A larger randomised sample is in
+> flight.
+
+The preparation below was worth doing and is done — the harness is what produced the estimate, and
+it is still the thing that runs the sweep once the rewrite exists.
 
 ## 1. First, what "`P-43`(A) is open" does and does not mean
 
@@ -56,15 +75,36 @@ and what the last two levels add. The +2 is not small — on 4-element sets the 
 12,484 → 38,309 as the bound moves 21 → 22, a factor of 3.07 — which is why this is a measurement
 and not an estimate.
 
-## 4. Three routes, and the measurement picks one
+## 4. Three routes, and the measurement picked the third
 
 | if the full (11,7) tree is | route | why |
 |---|---|---|
-| **≲ 10⁹ nodes** | one job in this container | 2.2 core-hours. No Kaggle, no sharding |
-| **10⁹ – 10¹² nodes** | **Kaggle, sharded** | 2.2–2,880 core-hours; inside the budget; this is where the harness earns its keep |
-| **≳ 10¹² nodes** | compiled rewrite first | Python at 1.3 × 10⁵ nodes/s is the wrong instrument; bitsets and C buy the ~30× the upstream README's own reasoning implies, and only then shard |
+| ≲ 10⁹ nodes | one job in this container | 2.2 core-hours. No Kaggle, no sharding |
+| 10⁹ – 10¹² nodes | Kaggle, sharded | inside the budget; where the harness would earn its keep |
+| **≳ 10¹² nodes — THIS ONE** | **compiled rewrite first** | Python at 1.4 × 10⁵ nodes/s is the wrong instrument; bitsets and C buy the ~30× the upstream README's own reasoning implies, and only then shard |
 
-Note the third row is not a dead end — it is a 30× multiplier on every figure in the table.
+The third row was never a dead end — it is a 30× multiplier on every figure in the table, and it is
+now the only row that fits the registered budget.
+
+### A measurement that was thrown away, and why it is recorded anyway
+
+The depth-6 (11,7) run **aborted on its 3,000 s time cap**, so its level counts are invalid — and
+the proof is inside them: levels 3, 4 and 5 read 2,098 / 79,994 / 6,448,262 against the exact
+2,131 / 82,512 / 6,655,827 from the completed depth-5 run. Disagreement below the deepest level
+*is* the proof of truncation, which is exactly what their `ablation_valid()` tests for and what
+their README names as the trap that killed four of their numbers.
+
+**It caught me after I had written the warning myself.** §5b of this document says depth caps give
+exact counts and a time-capped abort gives none — and I then ran a depth-capped job *with* a time
+cap. A depth cap yields exact counts only if the run completes; adding a time cap reintroduces
+precisely the invalidity the depth cap was chosen to avoid. `run_search.py` now stamps
+`level_counts_valid: false` and a loud warning into any aborted payload, and the run is kept as
+`run_m11_thm7_none_d6_ABORTED.json` rather than deleted.
+
+One thing survives as a **lower bound, not a count**: (11,7) level 6 ≥ 418,526,736, against (9,7)'s
+exact 50,599,405. So the +2 loosening of the level-6 bound, 57 → 59, costs **at least 8.3×** —
+where §3 had guessed ~3× from the k = 4 orbit-count jump. Four such loosenings compound, which is
+why this needed a sample and not my arithmetic.
 
 ## 5. The harness, built and gated
 
@@ -89,6 +129,29 @@ shard roots.
 > **GATE PASSED**, 10 of 10 assertions. Both configurations reproduce exactly, single-process and
 > summed over shards at L = 3 and L = 4, with the frontier counts equal to the shard roots (377 and
 > 29,099 off; 329 and 25,346 on). The fork is faithful.
+
+## 5c. The estimate, and how far to trust it
+
+| | |
+|---|---|
+| frontier at L = 5 | 6,655,827 prefixes, enumerated in 76 s |
+| sampled to completion | **65** (the 900 s sampling cap fired) |
+| sampled nodes | 85,720,914 |
+| **point estimate** | **8.78 × 10¹² nodes** |
+| relative standard error | **49%** |
+| normal-approx 95% band | 4.05 × 10¹¹ to 1.72 × 10¹³ |
+| subtree mean / median | **253** |
+| subtree max / mean | 28.1 |
+
+**The distribution is extremely heavy-tailed** — median 5,222 against a mean of 1,318,783 — so the
+mean is carried by a few enormous subtrees and the normal approximation *understates* the
+uncertainty at n = 65. Treat the interval as roughly an order of magnitude either way, not as the
+±49% the arithmetic says.
+
+Contrast (7,7), where the same estimator has mean/median = 1.0, skew 4.6, and a reported 0.6%
+standard error that matched an actual error of 0.18%. **The error model is calibrated where the
+tail is benign and optimistic where it is not**, which is itself worth saying rather than quoting
+one number from each case.
 
 ## 5a. The estimator — and the reason the old numbers were wrong
 

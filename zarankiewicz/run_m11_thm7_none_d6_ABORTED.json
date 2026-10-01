@@ -1,0 +1,27 @@
+{
+  "m": 11,
+  "depth": 6,
+  "thm7": [],
+  "aborted": true,
+  "level_counts_valid": false,
+  "level_counts_PARTIAL": [
+    0,
+    1,
+    13,
+    2098,
+    79994,
+    6448262,
+    418526736,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "elapsed_s": 3000.0,
+  "time_cap_s": 3000.0,
+  "why_invalid": "the 3000 s time cap fired while level 5 was still being traversed, at 96.9% of its exact count, so no level is complete. Levels 3, 4 and 5 read 2098 / 79994 / 6448262 against the exact 2131 / 82512 / 6655827 from the completed depth-5 run -- disagreement below the deepest level is itself the proof of truncation, which is what ablation_valid() tests for.",
+  "what_survives": "level 6 of (11,7) is >= 418,526,736, a LOWER BOUND and not a count. Against (9,7)'s exact level 6 of 50,599,405 that makes the +2 loosening of the level-6 bound, 57 to 59, cost AT LEAST 8.3x -- where I had guessed ~3x from the k=4 orbit-count jump.",
+  "my_error": "PLAN_K711.md sec 5 says depth caps give exact counts and a time-capped abort gives none, and I then ran a depth-capped job WITH a time cap. A depth cap only yields exact counts if the run completes; adding a time cap reintroduces precisely the invalidity the depth cap was chosen to avoid."
+}

@@ -205,7 +205,7 @@ def run_shard(m, L, i, N, thm7=(), time_cap=None):
                 nodes=sum(tot), elapsed_s=round(time.time() - t0, 1))
 
 
-def sample_deep(m, L, k, thm7=(), time_cap=None):
+def sample_deep(m, L, k, thm7=(), time_cap=None, seed=0):
     """Same estimator as sample(), but it builds the level-L frontier IN MEMORY
     and never writes it, so L can be deep enough that the subtrees are small.
 
@@ -223,8 +223,14 @@ def sample_deep(m, L, k, thm7=(), time_cap=None):
                                     thm7=thm7, collect=True)
     assert not ab, "frontier pass aborted"
     assert counts[L] == len(surv)
-    step = max(1, len(surv) // k)
-    picked = [ch for _, ch in surv[::step][:k]]
+    # RANDOM rather than systematic.  The frontier list is in DFS order, so
+    # adjacent prefixes are structurally similar and a fixed stride could line up
+    # with that periodicity.  A random sample removes the concern at no cost.
+    import random
+    rng = random.Random(seed)
+    idxs = rng.sample(range(len(surv)), min(k, len(surv)))
+    picked = [surv[i][1] for i in sorted(idxs)]
+    step = None
     del surv
     sizes, t0, done = [], time.time(), 0
     for ch in picked:
@@ -239,7 +245,8 @@ def sample_deep(m, L, k, thm7=(), time_cap=None):
     tot_s = sum(sizes)
     est = tot_s * (counts[L] / done)
     return dict(m=m, L=L, thm7=list(thm7), frontier=counts[L], counts_to_L=counts[:L + 1],
-                frontier_seconds=round(el_f, 1), sampled=done, step=step,
+                frontier_seconds=round(el_f, 1), sampled=done, seed=seed,
+                sampling="random without replacement",
                 sampled_nodes=tot_s, sample_seconds=round(el, 1),
                 nodes_per_s=round(tot_s / el) if el else None,
                 subtree_min=min(sizes), subtree_max=max(sizes),
@@ -248,7 +255,10 @@ def sample_deep(m, L, k, thm7=(), time_cap=None):
                 subtree_stdev=round(statistics.stdev(sizes), 1) if len(sizes) > 1 else 0.0,
                 skew_max_over_mean=round(max(sizes) / statistics.mean(sizes), 1),
                 estimate_total_nodes=round(est),
-                estimate_core_hours=round(est / (tot_s / el) / 3600, 2) if el else None)
+                se_of_total=round(statistics.stdev(sizes) / (done ** 0.5) * counts[L]) if len(sizes) > 1 else None,
+                rel_se_pct=round(100 * statistics.stdev(sizes) / (done ** 0.5) / statistics.mean(sizes), 1) if len(sizes) > 1 else None,
+                mean_over_median=round(statistics.mean(sizes) / max(1, statistics.median(sizes)), 1),
+                estimate_core_hours_at_141686_per_s=round(est / 141686 / 3600, 1))
 
 
 def sample(m, L, k, thm7=(), time_cap=None, seed=0):
@@ -388,8 +398,9 @@ if __name__ == "__main__":
         m, L, k = (int(x) for x in sys.argv[2:5])
         t7 = _thm7(sys.argv[5] if len(sys.argv) > 5 else "")
         capv = float(sys.argv[6]) if len(sys.argv) > 6 else None
-        r = sample_deep(m, L, k, t7, time_cap=capv)
-        (OUT / ("deepsample_m%d_L%d.json" % (m, L))).write_text(json.dumps(r, indent=2) + "\n")
+        sd = int(sys.argv[7]) if len(sys.argv) > 7 else 0
+        r = sample_deep(m, L, k, t7, time_cap=capv, seed=sd)
+        (OUT / ("deepsample_m%d_L%d_k%d_s%d.json" % (m, L, k, sd))).write_text(json.dumps(r, indent=2) + "\n")
         print(json.dumps(r, indent=2))
     elif cmd == "merge":
         m, L, N = (int(x) for x in sys.argv[2:5])
