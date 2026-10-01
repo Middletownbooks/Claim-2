@@ -154,11 +154,15 @@ uncertainty at n = 65. Treat the interval as roughly an order of magnitude eithe
 |---|---|---|---|---|
 | (7,7) full, k = 5,000 | 1.0 | 0.6% | 0.9982 | **0.18%** |
 | (9,7) to depth 6, k = 1,000 | 9 | 7.2% | 1.0219 | **2.2%** |
+| (9,7) to depth 6, k = 8,000 | 9 | 2.6% | 1.0095 | **0.95%** |
 | (11,7) full, k = 65 | **253** | 49% | — | unknown |
 
-**In both calibrated cases the actual error sits comfortably inside the reported standard error**,
-so the error model is behaving rather than flattering itself. But both calibrations are at
-mean/median 1 and 9, and (11,7) is at 253 — **so the (11,7) interval extrapolates a calibration
+**In all three calibrated cases the actual error sits comfortably inside the reported standard
+error**, and the error scales as it should: eight times the samples shrank the standard error by
+7.2/2.6 = 2.77 against the √8 = 2.83 the theory predicts. So this is a working error model, not a
+decorative one —
+which is the thing every earlier estimate on this target lacked. But all three calibrations sit at
+mean/median 1 or 9 and (11,7) is at **253** — **so the (11,7) interval extrapolates a calibration
 rather than resting on one**, and that is the honest caveat, stated instead of a point estimate
 quoted bare.
 
