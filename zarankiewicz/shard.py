@@ -205,7 +205,7 @@ def run_shard(m, L, i, N, thm7=(), time_cap=None):
                 nodes=sum(tot), elapsed_s=round(time.time() - t0, 1))
 
 
-def sample_deep(m, L, k, thm7=(), time_cap=None, seed=0):
+def sample_deep(m, L, k, thm7=(), time_cap=None, seed=0, depth=None):
     """Same estimator as sample(), but it builds the level-L frontier IN MEMORY
     and never writes it, so L can be deep enough that the subtrees are small.
 
@@ -235,7 +235,7 @@ def sample_deep(m, L, k, thm7=(), time_cap=None, seed=0):
     sizes, t0, done = [], time.time(), 0
     for ch in picked:
         sc, _, _, a2 = search_from(c["G"], c["A_np"], c["A_py"], c["stab"], m, B,
-                                   start=tuple(ch), thm7=thm7)
+                                   start=tuple(ch), thm7=thm7, depth=depth)
         assert not a2
         sizes.append(sum(sc))
         done += 1
@@ -244,7 +244,7 @@ def sample_deep(m, L, k, thm7=(), time_cap=None, seed=0):
     el = time.time() - t0
     tot_s = sum(sizes)
     est = tot_s * (counts[L] / done)
-    return dict(m=m, L=L, thm7=list(thm7), frontier=counts[L], counts_to_L=counts[:L + 1],
+    return dict(m=m, L=L, depth=depth, thm7=list(thm7), frontier=counts[L], counts_to_L=counts[:L + 1],
                 frontier_seconds=round(el_f, 1), sampled=done, seed=seed,
                 sampling="random without replacement",
                 sampled_nodes=tot_s, sample_seconds=round(el, 1),
@@ -399,7 +399,8 @@ if __name__ == "__main__":
         t7 = _thm7(sys.argv[5] if len(sys.argv) > 5 else "")
         capv = float(sys.argv[6]) if len(sys.argv) > 6 else None
         sd = int(sys.argv[7]) if len(sys.argv) > 7 else 0
-        r = sample_deep(m, L, k, t7, time_cap=capv, seed=sd)
+        dp = int(sys.argv[8]) if len(sys.argv) > 8 else None
+        r = sample_deep(m, L, k, t7, time_cap=capv, seed=sd, depth=dp)
         (OUT / ("deepsample_m%d_L%d_k%d_s%d.json" % (m, L, k, sd))).write_text(json.dumps(r, indent=2) + "\n")
         print(json.dumps(r, indent=2))
     elif cmd == "merge":

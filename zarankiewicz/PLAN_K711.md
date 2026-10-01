@@ -148,10 +148,31 @@ mean is carried by a few enormous subtrees and the normal approximation *underst
 uncertainty at n = 65. Treat the interval as roughly an order of magnitude either way, not as the
 ±49% the arithmetic says.
 
-Contrast (7,7), where the same estimator has mean/median = 1.0, skew 4.6, and a reported 0.6%
-standard error that matched an actual error of 0.18%. **The error model is calibrated where the
-tail is benign and optimistic where it is not**, which is itself worth saying rather than quoting
-one number from each case.
+### Calibration, on every case where the truth is known
+
+| case | mean/median | reported rel. SE | estimate / truth | actual error |
+|---|---|---|---|---|
+| (7,7) full, k = 5,000 | 1.0 | 0.6% | 0.9982 | **0.18%** |
+| (9,7) to depth 6, k = 1,000 | 9 | 7.2% | 1.0219 | **2.2%** |
+| (11,7) full, k = 65 | **253** | 49% | — | unknown |
+
+**In both calibrated cases the actual error sits comfortably inside the reported standard error**,
+so the error model is behaving rather than flattering itself. But both calibrations are at
+mean/median 1 and 9, and (11,7) is at 253 — **so the (11,7) interval extrapolates a calibration
+rather than resting on one**, and that is the honest caveat, stated instead of a point estimate
+quoted bare.
+
+### And the (9,7) total, now estimated rather than attempted
+
+The (9,7) depth-7 run was **stopped**, not completed: it was heading for the same time-cap abort,
+and `D68` says to use the estimator. Sampling 4,000 of the level-5 subtrees gives the full (9,7)
+tree at **1.634 × 10¹⁰ nodes, 32 core-hours, with a 4.8% relative standard error** — tight,
+because the (9,7) subtrees are small (mean 2,455, median **1**: over half the level-5 prefixes have
+no descendants at all under the (9,7) staircase).
+
+That gives the cost of going from (9,7) to (11,7) directly: **537×**, which is what "+2 at four
+levels, plus two more levels" is worth. The level-5 frontier is the *same* 6,655,827 prefixes for
+both, by the identity in §3.
 
 ## 5a. The estimator — and the reason the old numbers were wrong
 
@@ -206,6 +227,18 @@ conjecture negatively, is **self-certifying**, needs no exhaustion and no ε exp
 
 The prior says it fails. But it is hours of local search against a multi-day sweep, with a free
 negative, and nobody has spent those hours. **I would spend them before committing a platform.**
+
+## 7a. The gate, for whoever writes the C
+
+`GATE_VALUES.json` collects every exactly-known value on this target in one file —
+`PRIMARY-VERIFIED-LOCALLY` only, nothing aborted and nothing relayed — and `check_gate.py` runs an
+implementation against it. A rewrite that does not reproduce these is wrong however fast it is.
+
+It includes two **predicate-independent** checks, so a rewrite that canonicalises *more* strongly
+than the received node-keep predicate can still be gated: the orbit counts, which depend on CO₇
+alone, and the identity that **leaf counts must not move when Theorem 7 is toggled** — 809,438
+either way, because the prune may only remove interior nodes that cannot reach a survivor. Any
+implementation whose leaf count changes with the prune has a bug in the prune.
 
 ## 8. What I need from you
 
