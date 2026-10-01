@@ -1,0 +1,26 @@
+{
+  "m": 11,
+  "depth": 5,
+  "thm7": [],
+  "level_counts": [
+    0,
+    1,
+    13,
+    2131,
+    82512,
+    6655827,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "leaves": 0,
+  "total_nodes": 6740484,
+  "elapsed_s": 46.5,
+  "aborted": false,
+  "nodes_per_s": 145107,
+  "note": "recovered from stdout after a crash in the driver reporting block, post-search; counts are the search output verbatim"
+}

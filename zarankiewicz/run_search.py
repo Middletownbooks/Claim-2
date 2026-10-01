@@ -42,12 +42,11 @@ res = dict(m=M, depth=DEPTH, thm7=list(THM7), level_counts=counts, leaves=counts
            woodall_hours=4.0, speedup_vs_woodall=round(4 * 3600 / el, 1) if el else None)
 print(json.dumps(res, indent=2), flush=True)
 
-if ref:
-    print("\nagainst the relayed depth-5 figures:", flush=True)
 # keyed on (m, thm7): the relayed depth-5 figures exist only for m = 7
 relayed = {(7, (2, 4)): [1, 12, 329, 25346, 615817], (7, ()): [1, 13, 377, 29099, 801503]}
 ref = relayed.get((M, THM7))
 if ref:
+    print("\nagainst the relayed depth-5 figures:", flush=True)
     got = counts[1:6]
     print("   relayed %s" % ref, flush=True)
     print("   local   %s   %s" % (got, "MATCH" if got == ref else "DIFFER"), flush=True)
