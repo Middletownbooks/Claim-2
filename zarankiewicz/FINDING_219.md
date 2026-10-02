@@ -2,7 +2,7 @@
 
 The sweep's first result bearing directly on the conjecture.
 
-Three distinct (11,7)-multisets, emitted as 24 ordered tuples, all in **one isomorphism class**
+Three distinct (11,7)-multisets, emitted as 28 ordered tuples, all in **one isomorphism class**
 under the full automorphism group (`cog.class_canon`, order 10,080). Canonical form:
 
 ```
@@ -14,13 +14,13 @@ The three multisets, each with the shard that found it:
 ```
 shard  5, 6  (4 tuples)   0 143 716 454 121 564 609 174 712 122 454      454 twice
 shard 25    (12 tuples)   0 143 452 289  91 287 303 569  21 311  91       91 twice
-shard 25     (8 tuples)   0 143 452 289  91 303  21 359 569 239   0        0 twice
+shard 25, 53 (12 tuples)  0 143 452 289  91 303  21 359 569 239   0        0 twice
 ```
 
 Every one is a **multiset**, not a set — a vertex repeats in each. That is admissible: Woodall's
 (m,n)-sets are multisets. The canonical form repeats vertex 0 accordingly.
 
-`sweep_L5/ANTISUM_219.txt`. Antisum **independently recomputed** for all 24 tuples from the
+`sweep_L5/ANTISUM_219.txt`. Antisum **independently recomputed** for all 28 tuples from the
 Python's own antidistance matrix — the construction that reproduced Woodall's published *n* = 4
 antidistances and his 13,448 — and every one agrees at exactly 219, so this does not rest on the
 C's arithmetic alone.
@@ -28,16 +28,17 @@ C's arithmetic alone.
 ## Counting: nodes, multisets, classes
 
 The pooled histogram counts **emitted nodes**, and a node is an ordered insertion sequence, so the
-219 entry grew 4 -> 24 between shard 6 and shard 25 without a second class appearing. Three
-numbers, three meanings:
+219 entry grew 4 -> 24 at shard 25 and 24 -> 28 at shard 53 without a second class appearing, and
+shard 53 did not even add a new multiset -- four more orderings of one already seen. Three numbers,
+three meanings:
 
 | | |
 |---|---|
-| emitted nodes at 219 | 24 |
+| emitted nodes at 219 | 28 |
 | distinct multisets | 3 |
 | isomorphism classes | **1** |
 
-The 6x node growth is ordering multiplicity plus two further multisets of the same class, not new
+The 7x node growth is ordering multiplicity plus two further multisets of the same class, not new
 mathematical content. The (7,7) control showed the same thing at full strength: 809,438 emitted
 leaves collapsed to Woodall's 13,448 classes, a 60.2x duplication. Report the class count; the node
 count is a search-tree statistic.
@@ -50,12 +51,12 @@ count is a search-tree statistic.
 | staircase top rung (parity makes the rungs odd) | 223 |
 | this class | **219**, a deficit of **6** below Z |
 
-The pooled histogram over 27 shards: `{219: 24, 221: 697,032, 223: 3,850,067,529}` — 0.0181% of
-3,850,764,585 leaves sit below the top rung, and this class is still the only thing below 221.
+The pooled histogram over 54 shards: `{219: 28, 221: 1,262,531, 223: 7,513,991,834}` — 0.0168% of
+7,515,254,393 leaves sit below the top rung, and this class is still the only thing below 221.
 
 **The other instance reported "nothing yet seen at 219."** Their frontier run had aborted, so they
-flagged the whole distribution as a truncated-DFS artifact rather than a measurement. Twenty-six
-completed shards now put something there, and at a rate stable to the third digit.
+flagged the whole distribution as a truncated-DFS artifact rather than a measurement. Fifty-four
+completed shards now put something there.
 
 ## What it is not
 
