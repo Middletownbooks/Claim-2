@@ -76,13 +76,42 @@ magnitude the core count suggests — four logical cores times five is twenty, b
 throughput is nearer eight cores' worth. Running both gives 2.09e7 nodes/s, **140
 wall-hours, 5.8 days**.
 
-## The budget comparison is now apples to oranges, and should be flagged rather than fixed
+## The budget comparison, resolved
 
-P-43(A) fixed 2,880 core-hours in advance, meaning 4 cores x 30 days on a machine whose
-cores are real. A core-hour on an SMT sibling is not the same unit. At T=4 the sweep would
-consume 3,840 Kaggle core-hours for work that costs 1,790 here. Choosing T=2 keeps the
-nominal figure inside 2,880, but that is a change in what is being measured, not a
-measurement that came in under budget.
+P-43(A) fixed 2,880 core-hours in advance, meaning **4 cores x 30 days** — an encoding of a
+one-month wall-clock bar, which the operator has since confirmed is the criterion that
+actually matters to them. On a machine whose cores are real the two readings are the same
+criterion, so there is nothing to reconcile *here*:
 
-The pre-registered quantity is what it is. Recording the discrepancy rather than
-reinterpreting the unit.
+| | |
+|---|---|
+| measured wall/shard, including every container restart and idle gap | **669 s** |
+| overhead above pure compute | 6% |
+| 2,318 shards remaining, container alone | **17.9 days** |
+| against the bar | passes, 1.68x margin |
+
+The apples-to-oranges problem was real but is now moot: it only bit if Kaggle core-hours had
+to be charged against a core-hour budget. At T=4 the sweep would consume 3,840 Kaggle
+core-hours for work that costs 1,790 here, and a core-hour on an SMT sibling is not
+P-43(A)'s unit. Since the binding criterion is wall clock and the container alone clears it,
+Kaggle is **optional acceleration** and its core-hour inefficiency costs nothing that is
+being measured. T=4 is therefore the right setting there: it is fastest in wall time, which
+is the only axis that matters now.
+
+## The split, sized so that Kaggle failing entirely still passes
+
+| | shards | time |
+|---|---|---|
+| this container | 0..799 | 5.6 days |
+| Kaggle, 5 slots of 320 | 800..2399 | 5.5 days, ~11 rounds of 12 h |
+| both | | **~5.6 days** |
+| **Kaggle never runs at all** | container takes everything | **17.9 days, still passes** |
+
+The cut at 800 is chosen for that last row, not to balance the two. Kaggle is strictly a
+bonus: if the operator never opens a notebook again the result lands in 17.9 days, and if
+they run all five slots it lands in 5.6. Nothing about the plan depends on Kaggle working.
+
+`SLOT_FROM`/`SLOT_UPTO` in the bundle encode the window, and the slices tile 800..2399
+exactly. The container works upward from shard 0 and Kaggle downward from the top, so
+neither can redo the other's work — duplicated effort is the failure mode that would look
+most like progress.

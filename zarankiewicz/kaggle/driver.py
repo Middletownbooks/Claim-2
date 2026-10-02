@@ -24,6 +24,15 @@ RUN = "smoke"
 SLOT   = 0
 NSLOTS = 5
 
+# THE WINDOW THESE PARALLEL SESSIONS OWN.  The container running the sweep here
+# works upward from shard 0, so Kaggle must not start there or both would redo the
+# same work while the shard count advanced twice as fast -- duplicated effort that
+# looks exactly like progress.  Kaggle takes the top of the range, the container the
+# bottom, and they converge.  The cut is set so that Kaggle stopping ENTIRELY still
+# leaves the container finishing inside the one-month bar (17.9 days measured).
+SLOT_FROM = 800
+SLOT_UPTO = 2400
+
 _PRESETS = {
     "smoke":     {"ZMODE": "calibrate", "ZQUANTUM": "16"},
     "calibrate": {"ZMODE": "calibrate"},
@@ -48,9 +57,15 @@ COUNT    = int(os.environ.get("ZCOUNT", "1000000"))
 if NSLOTS > 1 and "ZFIRST" not in os.environ and "ZCOUNT" not in os.environ:
     if not (0 <= SLOT < NSLOTS):
         raise SystemExit("SLOT must be 0..%d, got %r" % (NSLOTS - 1, SLOT))
-    _base, _extra = divmod(NSHARDS, NSLOTS)
-    FIRST = SLOT * _base + min(SLOT, _extra)
+    _lo = max(0, SLOT_FROM)
+    _hi = min(NSHARDS, SLOT_UPTO)
+    if _hi <= _lo:
+        raise SystemExit("SLOT_UPTO (%d) must exceed SLOT_FROM (%d)" % (SLOT_UPTO, SLOT_FROM))
+    _base, _extra = divmod(_hi - _lo, NSLOTS)
+    FIRST = _lo + SLOT * _base + min(SLOT, _extra)
     COUNT = _base + (1 if SLOT < _extra else 0)
+    print("SLOT %d of %d over shards %d..%d -> this session takes %d..%d (%d shards)"
+          % (SLOT, NSLOTS, _lo, _hi - 1, FIRST, FIRST + COUNT - 1, COUNT), flush=True)
 
 THREADS  = int(os.environ.get("ZTHREADS", "0")) or (os.cpu_count() or 1)
 WALL     = float(os.environ.get("ZWALL", "39600"))     # 11 h, inside the 12 h cap
