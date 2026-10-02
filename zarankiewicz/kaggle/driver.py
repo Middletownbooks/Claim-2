@@ -15,6 +15,15 @@
 # two ways of driving this script cannot contradict each other.
 RUN = "smoke"
 
+# PARALLEL SESSIONS: change ONE digit per session, not two numbers.  With five
+# Kaggle sessions open at once, each needs a disjoint slice of the shard range;
+# hand-editing ZFIRST and ZCOUNT five times per round is an off-by-one waiting
+# to happen, and the cost of one is duplicated work that looks like progress.
+# Set SLOT to 0, 1, 2, 3, 4 in the five sessions and leave NSLOTS alone.
+# An explicit ZFIRST or ZCOUNT in the environment overrides this entirely.
+SLOT   = 0
+NSLOTS = 5
+
 _PRESETS = {
     "smoke":     {"ZMODE": "calibrate", "ZQUANTUM": "16"},
     "calibrate": {"ZMODE": "calibrate"},
@@ -32,6 +41,17 @@ LEVEL    = int(os.environ.get("ZLEVEL", "5"))     # 5, not 4 -- see the note bel
 NSHARDS  = int(os.environ.get("ZNSHARDS", "2400"))
 FIRST    = int(os.environ.get("ZFIRST", "0"))
 COUNT    = int(os.environ.get("ZCOUNT", "1000000"))
+
+# Derive this session's slice from SLOT.  divmod spreads any remainder over the
+# first few slots, so the slices tile the whole range with no gap and no overlap
+# for any NSHARDS, not just ones divisible by NSLOTS.
+if NSLOTS > 1 and "ZFIRST" not in os.environ and "ZCOUNT" not in os.environ:
+    if not (0 <= SLOT < NSLOTS):
+        raise SystemExit("SLOT must be 0..%d, got %r" % (NSLOTS - 1, SLOT))
+    _base, _extra = divmod(NSHARDS, NSLOTS)
+    FIRST = SLOT * _base + min(SLOT, _extra)
+    COUNT = _base + (1 if SLOT < _extra else 0)
+
 THREADS  = int(os.environ.get("ZTHREADS", "0")) or (os.cpu_count() or 1)
 WALL     = float(os.environ.get("ZWALL", "39600"))     # 11 h, inside the 12 h cap
 TOP_RUNG = 223                                         # B[11]; parity makes rungs odd
@@ -272,6 +292,47 @@ def calibrate(exe, wd):
                  d["nodes_per_core_s"],
                  "   reference %d -> %.2fx" % (ref, d["nodes_per_core_s"] / ref) if ref else ""))
     best = max(rows, key=lambda T: rows[T]["total_nodes"] / rows[T]["elapsed_s"])
+    # THE TWO OPTIMA CAN DIFFER, and on an SMT host they do.  `best` maximises
+    # aggregate throughput, which minimises WALL time.  `cheap` maximises per-core
+    # rate, which minimises CORE-HOURS -- the quantity P-43(A) budgets.  Where the
+    # per-core rate is flat in T these coincide and the distinction is invisible;
+    # where extra threads are SMT siblings returning ~16% each, they do not.
+    cheap = max(rows, key=lambda T: rows[T]["nodes_per_core_s"])
+    # BUT DISTINGUISH TWO CAUSES, because they call for opposite actions and the
+    # naive test (cheap != best) cannot tell them apart.  If the run could not get
+    # the cores it asked for -- core_seconds/elapsed well below T -- then something
+    # ELSE was running and the curve measures contention, not the host.  Caught by
+    # running this on a container where the production sweep held all four cores:
+    # it reported "does not scale flat in threads" at 1.72 of 4 cores, which is a
+    # busy machine, not an SMT one.  A genuine SMT or bandwidth ceiling shows high
+    # utilisation AND low yield: Kaggle gave 3.75 of 4 cores with per-core down 41%.
+    util = rows[best]["core_seconds"] / rows[best]["elapsed_s"] / best
+    if cheap != best and util < 0.85:
+        print()
+        print("  *** THIS HOST WAS BUSY DURING THE RUN ***")
+        print("  at T=%d it got only %.2f of %d cores (%.0f%% of what it asked for),"
+              % (best, rows[best]["core_seconds"] / rows[best]["elapsed_s"], best, 100 * util))
+        print("  so the thread curve above measures contention, not this host.  Every")
+        print("  rate here is a floor.  Re-run with nothing else on the machine.")
+    elif cheap != best:
+        ch_b = REF["tree_nodes"] / rows[best]["nodes_per_core_s"] / 3600
+        ch_c = REF["tree_nodes"] / rows[cheap]["nodes_per_core_s"] / 3600
+        w_b = REF["tree_nodes"] / (rows[best]["total_nodes"] / rows[best]["elapsed_s"]) / 3600
+        w_c = REF["tree_nodes"] / (rows[cheap]["total_nodes"] / rows[cheap]["elapsed_s"]) / 3600
+        print()
+        print("  *** THIS HOST DOES NOT SCALE FLAT IN THREADS ***")
+        print("  per-core rate peaks at T=%d (%d nodes/core-s) but aggregate peaks at T=%d."
+              % (cheap, rows[cheap]["nodes_per_core_s"], best))
+        print("  Extra threads past T=%d return only %.0f%% each, the signature of SMT"
+              % (cheap, 100 * (rows[best]["total_nodes"] / rows[best]["elapsed_s"]
+                               / (rows[cheap]["total_nodes"] / rows[cheap]["elapsed_s"]) - 1)
+                 / max(1, best - cheap)))
+        print("  siblings or a saturated memory path rather than %d independent cores." % best)
+        print("    T=%-2d  %6.0f core-hours, %5.0f wall-hours   <- cheapest in core-hours"
+              % (cheap, ch_c, w_c))
+        print("    T=%-2d  %6.0f core-hours, %5.0f wall-hours   <- fastest in wall time"
+              % (best, ch_b, w_b))
+        print("  Pick by which budget binds.  P-43(A) is in CORE-hours.")
     per = rows[best]["nodes_per_core_s"]
     agg = rows[best]["total_nodes"] / rows[best]["elapsed_s"]
     ch = REF["tree_nodes"] / per / 3600
