@@ -2,7 +2,7 @@
 
 The sweep's first result bearing directly on the conjecture.
 
-Three distinct (11,7)-multisets, emitted as 32 ordered tuples, all in **one isomorphism class**
+Three distinct (11,7)-multisets, all in **one isomorphism class**
 under the full automorphism group (`cog.class_canon`, order 10,080). Canonical form:
 
 ```
@@ -12,15 +12,16 @@ under the full automorphism group (`cog.class_canon`, order 10,080). Canonical f
 The three multisets, each with the shard that found it:
 
 ```
-shards 5, 6, 53  (8 tuples)   0 143 716 454 121 564 609 174 712 122 454     454 twice
-shards 25, 84   (16 tuples)   0 143 452 289  91 287 303 569  21 311  91      91 twice
-shard  25        (8 tuples)   0 143 452 289  91 303  21 359 569 239   0       0 twice
+found by shards     canonical multiset                                      repeat
+ 5, 6, 53           0 121 122 143 174 454 454 564 609 712 716               454 twice
+25, 84              0  21  91  91 143 287 289 303 311 452 569                91 twice
+25, 123             0   0  21  91 143 239 289 303 359 452 569                 0 twice
 ```
 
 Every one is a **multiset**, not a set — a vertex repeats in each. That is admissible: Woodall's
 (m,n)-sets are multisets. The canonical form repeats vertex 0 accordingly.
 
-`sweep_L5/ANTISUM_219.txt`. Antisum **independently recomputed** for all 32 tuples from the
+`sweep_L5/ANTISUM_219.txt`. Antisum **independently recomputed** for every emitted tuple from the
 Python's own antidistance matrix — the construction that reproduced Woodall's published *n* = 4
 antidistances and his 13,448 — and every one agrees at exactly 219, so this does not rest on the
 C's arithmetic alone.
@@ -28,19 +29,25 @@ C's arithmetic alone.
 ## Counting: nodes, multisets, classes
 
 The pooled histogram counts **emitted nodes**, and a node is an ordered insertion sequence, so the
-219 entry has grown 4 -> 24 (shard 25) -> 28 (shard 53) -> 32 (shard 84) without a second class
-ever appearing, and neither shard 53 nor shard 84 even added a new multiset: each contributed four
-more orderings of one already seen. Four shards spread across the range have now independently
-rediscovered the same three multisets of the same class. Three numbers,
+219 entry has grown 4 -> 24 (shard 25) -> 28 (shard 53) -> 32 (shard 84) -> 36 (shard 123)
+**without a second class ever appearing**, and only shard 25 ever contributed a multiset that was
+new: 53, 84 and 123 each added four more orderings of one already seen. Every one of the three
+multisets has now been found by at least two widely separated shards.
+
+**This file does not get edited every time that bin ticks.** The node count is a search-tree
+statistic that changes whenever another level-5 prefix happens to reach the same objects;
+`verify_219.py` recomputes nodes, multisets and classes from the committed survivor files on
+demand, and that is the authority. What would justify an edit here is a **new class**, or anything
+at antisum 217 or below. Three numbers,
 three meanings:
 
 | | |
 |---|---|
-| emitted nodes at 219 | 32 |
+| emitted nodes at 219 | 36 as of 45f1f2c; run `verify_219.py` for the live count |
 | distinct multisets | 3 |
 | isomorphism classes | **1** |
 
-The 8x node growth is ordering multiplicity plus two further multisets of the same class, not new
+The node growth is ordering multiplicity plus two further multisets of the same class, not new
 mathematical content. The (7,7) control showed the same thing at full strength: 809,438 emitted
 leaves collapsed to Woodall's 13,448 classes, a 60.2x duplication. Report the class count; the node
 count is a search-tree statistic.
@@ -53,11 +60,12 @@ count is a search-tree statistic.
 | staircase top rung (parity makes the rungs odd) | 223 |
 | this class | **219**, a deficit of **6** below Z |
 
-The pooled histogram over 86 shards: `{219: 32, 221: 2,065,863, 223: 12,122,107,005}` — 0.0170% of
-12,124,172,900 leaves sit below the top rung, and this class is still the only thing below 221.
+The pooled histogram over 125 shards: `{219: 36, 221: 2,949,594, 223: 17,755,384,762}` — 0.0166% of
+17,758,334,392 leaves sit below the top rung, and this class is still the only thing below 221.
+That fraction has held between 0.0166% and 0.0184% from 7 shards to 125.
 
 **The other instance reported "nothing yet seen at 219."** Their frontier run had aborted, so they
-flagged the whole distribution as a truncated-DFS artifact rather than a measurement. Eighty-six
+flagged the whole distribution as a truncated-DFS artifact rather than a measurement. One hundred and twenty-five
 completed shards now put something there.
 
 ## What it is not
