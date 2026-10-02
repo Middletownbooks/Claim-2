@@ -32,23 +32,52 @@ execute, the same fallback takes over. If no compiler is found it prints the one
 that fixes it. If no filesystem will execute a fresh binary it stops and says so, rather than
 failing obscurely later.
 
-## Two modes — run `calibrate` first
+## Paste it into one cell and change one word
+
+The script is **self-contained and paste-safe**: no `__file__`, no `argparse`, no `sys.argv`, and
+`__name__ == "__main__"` is true in a notebook cell, so pasting the whole thing into a cell and
+running it works. Configuration is by environment variable, but you do **not** need a second cell
+or `%env` to set one — the top of the script has:
 
 ```python
-!ZMODE=calibrate python /kaggle/input/<your-dataset>/kaggle_shard.py
+RUN = "smoke"
 ```
 
-**Twenty minutes, and it answers the only question worth asking before committing
-sessions: what is this host actually worth?** It probes, builds, gates, then runs a **fixed,
-deterministic work quantum** — every (N/384)th level-5 prefix, first 384, reproducible from the
-frontier alone on any machine — at 1, 2, 4… threads, and prints the core-hour and session count
-implied by *this host's own measured rate*. `ZQUANTUM=16` makes it a two-minute smoke test first.
+| `RUN` | | |
+|---|---|---|
+| `"smoke"` | **~2 min** | every step the long run does, on 1/24th of the work |
+| `"calibrate"` | **~20 min** | the real measurement; the discounted core-hour figure at the end is the answer |
+| `"sweep"` | hours | production shards, resumable across sessions |
 
-Then, and only then:
+So the whole procedure is: paste into a cell, run it as `smoke`, read the output, change the word to
+`calibrate`, run the same cell again. **Run `smoke` first** — it exercises the probe, the build, the
+gate, the frontier dump and the thread curve, so anything structurally wrong about the host shows up
+in two minutes instead of twenty.
+
+This matters because every variable is read **at module level**, not inside `main()`. A `%env` cell
+run *after* the paste cell has no effect on that run, and that is an easy way to measure the wrong
+thing and not know it. `RUN` is read in the same place as everything else, so it cannot get out of
+step.
+
+**Precedence.** An explicit `ZMODE` in the environment wins outright and `RUN` is then ignored
+entirely, so the two ways of driving the script cannot contradict each other:
 
 ```python
-!ZMODE=sweep ZFIRST=0 ZCOUNT=40 python /kaggle/input/<your-dataset>/kaggle_shard.py
+!ZMODE=calibrate ZQUANTUM=16 python /kaggle/input/<your-dataset>/kaggle_shard.py   # smoke
+!ZMODE=calibrate python /kaggle/input/<your-dataset>/kaggle_shard.py               # the real one
 ```
+
+Those are for the dataset route, where the script is attached as an input file and its code never
+enters the notebook. Two cells, one line each — separate cells so you can read the smoke result
+before committing twenty minutes. With a bare `!python kaggle_shard.py` and no `ZMODE` set, `RUN`
+applies, so that is a smoke test.
+
+**It announces before it blocks.** `subprocess` output is captured, so each gate configuration and
+each thread count prints a `running ...` line before it starts. Without those the cell shows nothing
+for the length of a full (7,7) search, and `T=1` is the longest single wait in the script. An earlier
+version printed only on completion and a twenty-minute calibration was indistinguishable from a hung
+cell — that is also why stdout is line-buffered where the stream allows it, wrapped in `try`
+because a notebook's stdout is not a file object and has no `reconfigure`.
 
 ## The reference is a range, not a number
 
@@ -63,24 +92,19 @@ and would have reported a perfectly ordinary host as 1.6× fast. The core-hour f
 trustworthy output, because it divides the tree size by **this host's** rate rather than by a
 remembered one.
 
-## Using it
+## Every knob
 
-One cell:
-
-```python
-!python /kaggle/input/<your-dataset>/kaggle_shard.py
-```
-
-or paste the script into a cell. Configuration is by environment variable, so nothing inside needs
-editing:
+Nothing inside the script needs editing except `RUN`; each of these can also be set by hand or by a
+shell prefix.
 
 | | default | |
 |---|---|---|
-| `ZMODE` | calibrate | `calibrate` or `sweep` |
+| `RUN` | smoke | paste-path preset: `smoke`, `calibrate`, `sweep`; ignored if `ZMODE` is set |
+| `ZMODE` | from `RUN` | `calibrate` or `sweep` |
 | `ZM` | 11 | the (m,7) case |
 | `ZLEVEL` | **5** | split level — 4 leaves shards at 1.88 of 4 cores, 5 gives 3.84 |
-| `ZQUANTUM` | 384 | calibration quantum; lower it for a smoke test |
-| `ZNSHARDS` | 1000 | total shards the work is cut into |
+| `ZQUANTUM` | 384 | calibration quantum; `RUN="smoke"` sets it to 16 |
+| `ZNSHARDS` | 2400 | total shards the work is cut into |
 | `ZFIRST` / `ZCOUNT` | 0 / all | which shards *this session* takes |
 | `ZTHREADS` | all cores | |
 | `ZWALL` | 39600 s | stop *starting* shards after this — 11 h, inside the 12 h session limit |

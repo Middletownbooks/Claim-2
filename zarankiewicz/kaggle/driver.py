@@ -1,4 +1,30 @@
 # ---------------------------------------------------------------- configuration
+# PASTE-INTO-A-NOTEBOOK PATH.  Paste this whole script into one cell, change the
+# one word below, run the cell.  No second cell, no %env, no shell prefix.
+#
+#   "smoke"      ~2 min   every step the long run does, on 1/24th of the work
+#   "calibrate"  ~20 min  the real measurement; the discounted core-hour figure
+#                         at the end is the answer you came for
+#   "sweep"      hours    production shards, resumable across sessions
+#
+# Run it as "smoke", read the output, then change the word to "calibrate" and run
+# the same cell again.  Every variable below can still be set by hand instead.
+#
+# PRECEDENCE: an explicit ZMODE in the environment wins outright, so running the
+# file as `!ZMODE=calibrate python kaggle_shard.py` ignores RUN entirely and the
+# two ways of driving this script cannot contradict each other.
+RUN = "smoke"
+
+_PRESETS = {
+    "smoke":     {"ZMODE": "calibrate", "ZQUANTUM": "16"},
+    "calibrate": {"ZMODE": "calibrate"},
+    "sweep":     {"ZMODE": "sweep"},
+}
+if "ZMODE" not in os.environ:
+    if RUN not in _PRESETS:
+        raise SystemExit("RUN must be one of: %s" % ", ".join(sorted(_PRESETS)))
+    os.environ.update(_PRESETS[RUN])
+
 MODE     = os.environ.get("ZMODE", "calibrate")   # calibrate | sweep
 M        = int(os.environ.get("ZM", "11"))
 N        = int(os.environ.get("ZN", "7"))
@@ -150,6 +176,10 @@ def gate(exe, repeats=3, label="gate"):
     best = {}
     for thm7, want in GATE.items():
         el = []
+        # ANNOUNCE BEFORE BLOCKING.  subprocess output is captured, so without this
+        # the cell prints nothing for the length of `repeats` full (7,7) searches.
+        print("  thm7=%-4s running %d repeats, ~%ds each ..."
+              % (thm7 or "off", repeats, 10 if thm7 == "" else 8), flush=True)
         for _ in range(repeats):
             r = sh("%s -m 7 -n 7 %s" % (exe, ("-thm7 " + thm7) if thm7 else ""))
             if r.returncode != 0:
@@ -213,6 +243,8 @@ def calibrate(exe, wd):
     print("=== the same work at 1..%d threads, sequential, nothing else running ===" % THREADS)
     rows, nodes0 = {}, None
     for T in ([t for t in (1, 2, 3, 4, 8, 16) if t <= THREADS] or [THREADS]):
+        # T=1 is the longest single wait of the whole script; say so before it starts.
+        print("  T=%-2d running ..." % T, flush=True)
         r = sh("%s -m %d -n %d -startfile %s -threads %d" % (exe, M, N, q, T))
         d = json.loads(r.stdout)
         if d["aborted"]:
