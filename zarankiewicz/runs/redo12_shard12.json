@@ -1,0 +1,10 @@
+{"n": 7, "m": 11, "depth": -1, "thm7": "", "top": 223,
+ "setup_s": 0.01, "NV": 720, "nstab_without_identity": 13,
+ "staircase": [223, 182, 144, 112, 83, 59, 38, 22, 11, 3],
+ "shard": 12, "of": 2400, "threads": 4, "prefixes_done": 2774,
+ "prefixes_assigned": 2774, "core_seconds": 2299.48,
+ "antisum_histogram": {"221": 21391, "223": 117929904},
+ "survmax": 221,
+ "level_counts": [0, 0, 0, 0, 2774, 176987, 3513528, 58641683, 259267110, 3366469424, 117951295],
+ "total_nodes": 3806022801, "leaves": 117951295, "elapsed_s": 586.819,
+ "nodes_per_s": 6485859, "nodes_per_core_s": 1655165, "aborted": false, "level_counts_valid": true}

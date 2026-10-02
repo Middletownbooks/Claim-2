@@ -1,4 +1,4 @@
-# The rate decline: unidentified, and two of my explanations for it are wrong
+# The rate decline: identified. It tracks machine uptime, not shard index
 
 Nine whole-cycle means, nodes/core-s:
 
@@ -6,10 +6,11 @@ Nine whole-cycle means, nodes/core-s:
 1,773,311  1,758,144  1,767,101  1,740,214  1,656,845  1,629,509  1,632,896  1,608,256  1,557,635
 ```
 
-Cycle 13 is the slowest of the run, **12.2% below the peak** and inside the 15% action
-threshold but no longer comfortably. Two mechanisms have been on the table: container aging,
-and shard difficulty drifting with shard index. Neither is established, and the attempt to
-settle it produced mostly corrections.
+Cycle 14 then came in at 1,643,035, above cycle 13, so the series is a **band** of 1.56-1.65e6
+after an early step down from 1.74-1.77e6, not a monotone slide. Cycle 13 was a low outlier.
+
+**The controlled re-run settles the mechanism.** Scroll to the bottom; the sections between are
+kept because each records a wrong turn worth not repeating.
 
 ## Per-shard rate against everything measurable (all 91 completed shards)
 
@@ -80,3 +81,57 @@ The bar is wall-clock under one month and the measured figure is 18.0 days for a
 including every restart — 1.68x margin. A 12% rate decline moves 18.0 days to about 20 days.
 The question is worth settling because I have mis-called it twice, not because the schedule
 depends on the answer.
+
+# RESOLVED: the same shard, the same binary, 15 hours apart
+
+Shard 12 re-run on idle cores, nothing else on the machine, survivors to a scratch path so the
+committed `low_12.txt` was untouched.
+
+## Determinism first, because it matters more than the rate
+
+| | |
+|---|---|
+| `total_nodes` | **MATCH** |
+| `leaves` | **MATCH** |
+| `level_counts` | **MATCH** |
+| `antisum_histogram` | **MATCH** |
+
+All four exact against `sh_12.json`. The 98 committed shards rest on this and it holds. Had any
+of them differed, the rate question would have been irrelevant and every shard in the repo
+would have been in question.
+
+## The rate
+
+| | |
+|---|---|
+| shard 12 at **00:42**, 10 minutes after boot | **1,808,277** nodes/core-s |
+| shard 12 at **16:05**, 15 h 33 m after boot | **1,655,165** nodes/core-s |
+| ratio | **0.915** |
+| cores used, both runs | 3.92 |
+
+Identical work, identical parallelism, **8.5% slower**. Shard index is held fixed by
+construction, so it is excluded: the decline tracks **elapsed machine uptime**.
+
+That accounts for most of the ~12% spread in the cycle means; the remainder is shard mix, which
+is real even though my account of its cause was wrong (see above — survivor count explains
+nothing, r = −0.008).
+
+## A correction that came with it
+
+The machine booted at **00:32 and has been up continuously for 15 h 43 m**. So the five
+"container restarts" I logged were not all machine reboots — the one at 13:29 restarted this
+session's background tasks while `uptime` ran straight through it. Commit 24f64b8 says "fifth
+container restart survived" and credits the repo, binary and 116 MB frontier with surviving it.
+True, but for a smaller reason than implied: the filesystem never went away, so nothing was at
+risk that time. Only the restarts at or before 00:32 were real reboots.
+
+## What follows
+
+A genuine reboot should recover the 8.5%, which is consistent with the earlier observation on a
+different host of a 31% fall over four hours that "recovered fully on restart" — same
+phenomenon, larger magnitude. I cannot reboot the machine, and at 17.9 days against a 30-day
+bar there is no reason to want to: 8.5% moves 17.9 days to about 19.5.
+
+The useful part is that the quantity is now named. Future reports should say *uptime*, and a
+future session that does get a fresh machine should expect roughly 1.8e6 again at the start and
+watch it settle toward 1.65e6 over the first day.
