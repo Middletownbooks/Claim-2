@@ -1,4 +1,4 @@
-# The rate decline: identified. It tracks machine uptime, not shard index
+# The rate decline: shard index is excluded, the cause is NOT established
 
 Nine whole-cycle means, nodes/core-s:
 
@@ -82,7 +82,7 @@ including every restart — 1.68x margin. A 12% rate decline moves 18.0 days to 
 The question is worth settling because I have mis-called it twice, not because the schedule
 depends on the answer.
 
-# RESOLVED: the same shard, the same binary, 15 hours apart
+# The controlled re-run: what it does and does not show
 
 Shard 12 re-run on idle cores, nothing else on the machine, survivors to a scratch path so the
 committed `low_12.txt` was untouched.
@@ -110,11 +110,43 @@ would have been in question.
 | cores used, both runs | 3.92 |
 
 Identical work, identical parallelism, **8.5% slower**. Shard index is held fixed by
-construction, so it is excluded: the decline tracks **elapsed machine uptime**.
+construction, so **shard index is excluded**. That is the whole of what this measurement
+establishes.
 
-That accounts for most of the ~12% spread in the cycle means; the remainder is shard mix, which
-is real even though my account of its cause was wrong (see above — survivor count explains
-nothing, r = −0.008).
+## Where I over-claimed, one hour later
+
+I titled this section RESOLVED and wrote that the decline "tracks machine uptime". Two points do
+not establish a functional dependence, and **the very next cycle contradicted it**: cycle 15
+averaged 1,696,247 nodes/core-s over machine uptime 15 h 43 m to 17 h 08 m — the fastest cycle
+since cycle 4, at the highest uptime yet. A monotone uptime effect predicts the opposite.
+
+Eleven cycle means:
+
+```
+1,773,311  1,758,144  1,767,101  1,740,214  1,656,845  1,629,509
+1,632,896  1,608,256  1,557,635  1,643,035  1,696,247
+```
+
+What survives: the ~8% gap between the 10-minute-uptime measurement and every later one is real
+and reproducible on identical work. Whether it is uptime, a one-time change in host conditions,
+or fluctuation on a timescale of hours is **not determined by two points**, and the later points
+drift upward rather than down.
+
+This is the third time on this one question that I have named a mechanism the data did not
+support — first container aging, then shard difficulty, then uptime. The pattern is the finding:
+a description was available each time and I reached past it for a cause. What is honestly known
+is a description.
+
+## What is honestly known
+
+| | |
+|---|---|
+| determinism | **verified exactly** |
+| shard index as the cause | **excluded** (held fixed, effect persisted) |
+| survivor count or node count as the cause of scatter | **excluded** (r = −0.008, −0.049) |
+| early-vs-later level difference on identical work | **~8%, reproducible** |
+| the mechanism behind it | **unknown** |
+| the schedule consequence | none: 17.9 days against a 30-day bar |
 
 ## A correction that came with it
 
@@ -127,11 +159,10 @@ risk that time. Only the restarts at or before 00:32 were real reboots.
 
 ## What follows
 
-A genuine reboot should recover the 8.5%, which is consistent with the earlier observation on a
-different host of a 31% fall over four hours that "recovered fully on restart" — same
-phenomenon, larger magnitude. I cannot reboot the machine, and at 17.9 days against a 30-day
-bar there is no reason to want to: 8.5% moves 17.9 days to about 19.5.
+Report the band and the uptime as two facts side by side, and claim no relation between them
+until a measurement establishes one. The honest prediction for a fresh machine is "possibly
+faster at first, by something like 8%, on one prior observation" — not a curve.
 
-The useful part is that the quantity is now named. Future reports should say *uptime*, and a
-future session that does get a fresh machine should expect roughly 1.8e6 again at the start and
-watch it settle toward 1.65e6 over the first day.
+The question does not need settling. It has consumed four reports and three retractions against
+a schedule with 1.68x margin, and the only decision it could inform — whether to want a reboot —
+is one I cannot act on anyway. Measuring it further is a cost with no decision attached.
