@@ -1,0 +1,58 @@
+{
+  "src_digest": "7fb835e08015679e",
+  "cpus": 4,
+  "gate_s": {
+    "off": 6.745,
+    "24": 4.923
+  },
+  "quantum_prefixes": 384,
+  "quantum_nodes": 654927516,
+  "curve": {
+    "1": {
+      "wall_s": 299.023,
+      "core_s": 299.02,
+      "nodes_per_core_s": 2190225
+    },
+    "2": {
+      "wall_s": 150.845,
+      "core_s": 300.17,
+      "nodes_per_core_s": 2181870
+    },
+    "3": {
+      "wall_s": 107.004,
+      "core_s": 303.65,
+      "nodes_per_core_s": 2156826
+    },
+    "4": {
+      "wall_s": 84.395,
+      "core_s": 305.1,
+      "nodes_per_core_s": 2146567
+    }
+  },
+  "best_threads": 4,
+  "best_nodes_per_core_s": 2146567,
+  "sweep_core_hours": 1360,
+  "margin": 2.12,
+  "reference": {
+    "gate_off_s": {
+      "fast": 6.47,
+      "mid": 7.65,
+      "slow": 10.38
+    },
+    "gate_on_s": {
+      "fast": 4.97,
+      "slow": 8.06
+    },
+    "quantum_nodes_per_core_s": {
+      "1": 1924549,
+      "2": 1873640,
+      "3": 1742353,
+      "4": 1821979
+    },
+    "quantum_measured_on_gate_s": 10.38,
+    "sweep_fresh": 1825602,
+    "sweep_aged": 1250483,
+    "tree_nodes": 10510000000000.0,
+    "budget_core_hours": 2880
+  }
+}
