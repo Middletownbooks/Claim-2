@@ -54,6 +54,12 @@ WALL = float(os.environ.get("WALL", "4800"))    # stop STARTING shards after thi
                                                # 38 minutes for a skewed shard to finish
                                                # rather than be killed mid-flight
 FIRST = int(os.environ.get("FIRST", "0"))
+# UPTO bounds the loop WITHOUT touching NSHARDS, which defines the partition and is
+# passed to zsearch as -of: lowering NSHARDS to stop early would silently redefine
+# every shard and invalidate all 84 already committed.  This container owns 0..799
+# and Kaggle owns 800..2399; the bound is what keeps them from redoing each other's
+# work, which is the failure mode that looks like progress.
+UPTO = int(os.environ.get("UPTO", str(NSHARDS)))
 
 OUT.mkdir(exist_ok=True)
 
@@ -140,7 +146,7 @@ if __name__ == "__main__":
           % (NSHARDS, NPREFIX // NSHARDS, len(done), THREADS, WALL), flush=True)
     t0 = time.time()
     n = 0
-    for i in range(FIRST, NSHARDS):
+    for i in range(FIRST, min(UPTO, NSHARDS)):
         if i in done:
             continue
         if time.time() - t0 > WALL:
