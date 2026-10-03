@@ -190,3 +190,67 @@ next regeneration would silently drop them. They live in
 `kaggle/rows/ANTISUM_219_shard813.txt` instead. Likewise `verify_219.py` globs
 `sweep_L5/low_*.txt` and does not see them; its "73 rows / 1 class" is the local figure
 and stays that way until Kaggle survivor files are actually merged into `sweep_L5/`.
+
+## Shard 1131: same class a second time, two more new multisets
+
+Twelve rows at 219 from shard 1131, in slot 1's range, transcribed the same way.
+
+| | |
+|---|---|
+| rows | 12 |
+| antisum agrees with the claimed 219 | **12 of 12**, 0 mismatches |
+| distinct multisets | **2**, both new again |
+| distinct isomorphism classes | **1**, the same tuple |
+
+```
+8 rows  567 twice   0  95 105 114 143 152 167 177 451 567 567
+4 rows  451 twice   0  95 105 118 143 151 167 177 451 451 567
+```
+
+### The class, cumulatively
+
+| | local | +813 | +1131 |
+|---|---|---|---|
+| rows | 73 | 84 | **96** |
+| distinct multisets | 6 | 9 | **11** |
+| shards | 12 | 13 | **14** |
+| shard-index span | 5..208 | 5..813 | **5..1131** |
+| isomorphism classes | 1 | 1 | **1** |
+
+Eleven multisets, two independently built binaries, three hosts, shard indices spanning
+more than a thousand, and every single row collapses to
+`(0, 0, 15, 74, 105, 438, 569, 647, 660, 671, 689)`.
+
+## The decoy ratio: two different questions, and the per-shard spread is a factor of twelve
+
+The operator reported shard 813 having "over 350 instances of 219" to sort eleven rows
+out of, and shard 1131 having only 17 to sort twelve out of. Both are consistent, and the
+guidance above needs splitting rather than correcting:
+
+* Searching **`219,0,`** — the string this file cautioned about — matches a decoy only
+  where vertex 219 is immediately followed by vertex 0. That is the 204-vs-61, about
+  **3:1**, figure.
+* Searching bare **`219`** matches every one of the 16,448 vertex occurrences. Measured
+  per local shard that has any real rows:
+
+```
+shard  53   4 real   296 total    73.0 : 1
+shard 126   3 real   104 total    33.7 : 1
+shard 199  12 real   342 total    27.5 : 1
+shard 210   4 real   112 total    27.0 : 1
+shard 127   7 real   182 total    25.0 : 1
+shard   5   2 real    42 total    20.0 : 1
+shard  84   4 real    63 total    14.8 : 1
+shard 208  12 real   180 total    14.0 : 1
+shard 200   3 real    38 total    11.7 : 1
+shard  25  20 real   214 total     9.7 : 1
+shard   6   2 real    21 total     9.5 : 1
+shard 123   4 real    28 total     6.0 : 1
+pooled     77 real  1622 total    20.1 : 1
+```
+
+Shard 813's ~32:1 sits inside that range; shard 1131's 0.4:1 is better than any local
+shard and is luck. **The lesson is not that a number was wrong but that a pooled ratio
+was offered as per-shard guidance when the per-shard spread is 6:1 to 73:1** — no point
+estimate describes what one shard will feel like. The instruction that actually works is
+unaffected, because a leading-space `219,` has no decoys at all.
