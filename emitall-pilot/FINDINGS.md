@@ -63,3 +63,7 @@ Receipts are the committed JSON files; receipts were not regenerated.
 1. Regenerate and commit the strict NS run as `phase1_strict.json`; re-run this spec.
 2. Persist the 4,184 / 3,043 subsets from REPORT_I's derivation.
 3. Add receipts (even small JSON) for the audit figures and Report M, then extend the spec.
+
+## Other BootLoops skills
+
+See `skills_pilot/SKILLS_PILOT.md` for the remaining twelve skills applied to the same document.

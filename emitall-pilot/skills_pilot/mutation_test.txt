@@ -1,0 +1,9 @@
+baseline: 41 rows, 7 already FINDING
+ALREADY FINDING (mutation uninformative): statement-level upstreamable
+ALREADY FINDING (mutation uninformative): declarations
+ALREADY FINDING (mutation uninformative): coverage of mathlib
+ALREADY FINDING (mutation uninformative): modularity Q (strict)
+ALREADY FINDING (mutation uninformative): communities >=100 (strict)
+ALREADY FINDING (mutation uninformative): median bottleneck (strict)
+ALREADY FINDING (mutation uninformative): top 1% cross traffic (strict)
+clean rows mutated: 34; comparator fired 34; did not fire 0; uninformative 7

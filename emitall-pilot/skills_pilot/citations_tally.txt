@@ -1,0 +1,2 @@
+rows ever written: 44 {'VERIFIED': 36, 'CORRECTED': 2, 'DISPUTED': 1, 'PARTIAL': 2, 'UNVERIFIED': 2, 'SEARCH': 1}
+distinct claims  : 41 {'VERIFIED': 35, 'CORRECTED': 2, 'DISPUTED': 1, 'PARTIAL': 2, 'SEARCH': 1}

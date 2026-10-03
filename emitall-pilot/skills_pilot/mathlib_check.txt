@@ -1,0 +1,14 @@
+# mathlib4 HEAD 302343b 2026-10-03, sparse+shallow clone, grep of Mathlib/ on 2026-10-03
+## carmichael
+46:def carmichael : ArithmeticFunction ℕ where
+87:theorem carmichael_lcm (a b : ℕ) :
+100:theorem carmichael_mul {a b : ℕ} (h : Coprime a b) :
+## totient
+37:def totient (n : ℕ) : ℕ := #{a ∈ range n | n.Coprime a}
+131:theorem totient_mul {m n : ℕ} (h : m.Coprime n) : φ (m * n) = φ m * φ n :=
+## nu(m)=max_p v_p(m): patterns tried, hits
+pattern: sup.*factorization|factorization.*\.sup
+/tmp/claude-0/-home-user-Claim-2/4dd28a64-31b3-5702-8b4d-46941a599e37/scratchpad/mathlib/Mathlib/NumberTheory/Chebyshev.lean:236:    rw [← support_factorization, Finsupp.mem_support_iff, factorization_lcmUpto _ this] at h
+/tmp/claude-0/-home-user-Claim-2/4dd28a64-31b3-5702-8b4d-46941a599e37/scratchpad/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Defs.lean:594:      simp only [factorization_lcm hx hy, Finsupp.sup_apply, h, sup_of_le_right,
+/tmp/claude-0/-home-user-Claim-2/4dd28a64-31b3-5702-8b4d-46941a599e37/scratchpad/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Defs.lean:595:        sup_of_le_left, inf_of_le_right, factorization_gcd hx hy, Finsupp.inf_apply,
+pattern: maxExponent|max_exponent|maxFactorizationExp
