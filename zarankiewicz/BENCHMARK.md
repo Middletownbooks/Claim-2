@@ -139,3 +139,53 @@ maximise aggregate throughput under both. The curve costs about 16 minutes of fo
 than a shard — for an answer attached to no decision. `RATE_DECLINE.md` consumed four reports
 and three retractions on exactly that shape of question. The 30-second gate was worth taking
 because it discriminates; the 16-minute curve is not.
+
+## The denominator: `core_seconds` is measured, not `wall_s x threads`
+
+Every shard certificate carries both, and they are **not the same number**:
+
+```
+sh_221.json   wall_s 563.32   core_seconds 2207.54   nodes_per_core_s 1889781
+              wall_s x 4 = 2253.28, so core_seconds is 97.97% of it
+```
+
+`core_seconds` is accumulated CPU time; `wall_s x threads` is the wall window times the thread
+count. The second is an upper bound on the first and overstates the denominator whenever a
+thread is not running, so dividing nodes by it **understates the rate**.
+
+This cost a published comparison. `a9dfc16` reported cycle 33's full mean as 1,802,227
+nodes/core-s and called it "0.38% apart" from cycle 32's 1,795,488 — but 1,802,227 was computed
+as `nodes / (sum(wall_s) * 4)` while 1,795,488 was `nodes / sum(core_seconds)`.
+
+| cycle | `nodes / sum(core_seconds)` | `nodes / (sum(wall_s) * 4)` |
+|---|---|---|
+| 32 (201..208) | **1,795,488** | 1,780,576 |
+| 33 (209..216) | **1,814,693** | 1,802,227 |
+
+Cycle 33's comparable full mean is **1,814,693** and the gap to cycle 32 is **1.07%**, not 0.38%.
+Both columns are defensible quantities; mixing them inside one comparison is not — and the error
+ran in the direction that flattered the claim, since the understated figure was the one being
+compared in. **Every cycle full mean in this programme is `nodes / sum(core_seconds)`.**
+
+### What this does and does not measure
+
+The ratio `sum(core_seconds) / (sum(wall_s) * threads)` is free in every certificate, and on this
+host it reads:
+
+```
+cycle 32   99.17%
+cycle 33   99.31%
+cycle 34   98.95%   (five shards, partial)
+```
+
+That is a **busy fraction**: it says the four threads were almost never idle, so almost nothing
+is lost to serialisation, lock waits, or the single-threaded head and tail of a shard. It bounds
+one failure mode tightly and cheaply.
+
+It is **not** the thread curve the section above declines to run, and it must not be quoted as
+one. Four threads contending for shared execution resources — SMT siblings, a shared L3, a noisy
+neighbour — stay 100% *busy* while each core does less work per second. A busy fraction of 99%
+is therefore compatible with a large scaling loss, which is exactly the shape of the previous
+host's 29% deficit. The thread curve remains unrun, for the reason already given; what changed
+is only that one narrow question now has a free answer, and the repo had been accumulating that
+answer in every certificate without reading it.
