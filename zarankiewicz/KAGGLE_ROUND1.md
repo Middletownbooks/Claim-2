@@ -254,3 +254,117 @@ shard and is luck. **The lesson is not that a number was wrong but that a pooled
 was offered as per-shard guidance when the per-shard spread is 6:1 to 73:1** — no point
 estimate describes what one shard will feel like. The instruction that actually works is
 unaffected, because a leading-space `219,` has no decoys at all.
+
+## Shard 2088: the first multiset to repeat across the two implementations
+
+Three rows at 219 from shard 2088, slot 4's range, hand-transcribed.
+
+| | |
+|---|---|
+| rows | 3 |
+| antisum agrees with the claimed 219 | **3 of 3**, 0 mismatches |
+| distinct multisets | **1** |
+| distinct isomorphism classes | **1**, the same tuple |
+| new multisets | **0** |
+
+```
+3 rows  569 twice   0  21  22  91 143 287 300 311 452 569 569
+```
+
+That multiset was already in hand — from **local shard 208**. Every Kaggle row before
+this one carried a multiset this container had never produced, which made the
+cross-implementation agreement an agreement about *classes*. This is the first row where
+the two binaries, on different hardware with different compilers, independently emitted
+the *same eleven vertices*. Two shards 1,880 apart in the partition, found by two
+programs, land on one multiset: a concrete instance of the node/class duplication the
+(7,7) control measured in aggregate (809,438 leaves to 13,448 classes, 60.2x).
+
+## How many multisets does the class contain? 5,040 — and this is not a measurement
+
+Shard 2088 adding no new multiset is the second consecutive growth event to add none
+(shard 210's four rows were the first). The tempting move was to pre-register a
+saturation prediction: eleven multisets seen, growth events now coming up empty, so
+guess where the count levels off and see.
+
+That would have been the wrong instrument, because **the quantity is structural, not
+empirical**. The class is one orbit of the automorphism group `S_7 x <rev>`, so the set
+of multisets in it is finite, determined, and computable from `cog.py` alone — without
+reference to any search output, on this host or Kaggle's.
+
+```
+group order (maps)                 10080
+distinct multisets in the class     5040
+stabiliser order                       2
+orbit members whose antisum != 219     0
+```
+
+The stabiliser is `{identity, g}` where `g` lies in the `S_7` part (no reversal), fixes
+vertex 0, and fixes 48 of the 720 vertices of CO(7). So **the class holds exactly 5,040
+multisets, of which 11 have ever been seen: 0.22%.** No saturation is near, the two
+empty growth events are what sampling 0.2% of a space looks like, and a pre-registered
+prediction about where the count levels off would have been answering a question
+arithmetic had already settled.
+
+This is the counterpart to the lesson at the end of the error list: before measuring a
+quantity, check whether some other part of the repository already determines it. Here
+nothing had measured it — group theory *fixed* it, and three lines of code read it off.
+
+### verify_219_orbit.py
+
+`verify_219.py` answers "how many classes are in the local survivor files". The new
+`verify_219_orbit.py` answers a different and stronger question: **is every row ever
+seen, from any source, in THE class, and how much of the class have we seen?**
+
+Enumerating the orbit first makes the per-row test a set membership rather than a
+recanonicalisation. A row either lies in the explicitly built 5,040-element set or it is
+a new class — and the test needs **no reference to previously observed data**, so it
+cannot drift as the corpus grows, and it reads both `sweep_L5/low_*.txt` and
+`kaggle/rows/ANTISUM_219_shard*.txt` in one pass.
+
+```
+group order              10080
+orbit size (multisets)   5040
+stabiliser order         2
+orbit members not at 219 0   OK
+
+rows checked             103
+rows outside the orbit   0   OK
+distinct multisets seen  11 of 5040   (0.22%)
+
+multisets seen from BOTH local and Kaggle: 1
+   0 21 22 91 143 287 300 311 452 569 569
+      kaggle:ANTISUM_219_shard2088.txt
+      local:low_208.txt
+```
+
+### The class, cumulatively — with the previous column corrected
+
+| | local | +813 | +1131 | +2088 |
+|---|---|---|---|---|
+| rows | 77 | 88 | 100 | **103** |
+| distinct multisets | 6 | 9 | 11 | **11** |
+| shards | 12 | 13 | 14 | **15** |
+| shard-index span | 5..210 | 5..813 | 5..1131 | **5..2088** |
+| isomorphism classes | 1 | 1 | 1 | **1** |
+
+Convention, stated because its absence is what broke the last one: the `local` column is
+the **whole local corpus as it stands today** (77 rows, shards 5..210), and each later
+column adds one Kaggle shard to it. Every cell above was produced by a single pass over
+`sweep_L5/low_*.txt` plus `kaggle/rows/ANTISUM_219_shard*.txt` in one run, not assembled
+from figures quoted at different times.
+
+**The `+1131` column as committed in 37dfddd read "73 rows, 12 shards", and both halves
+came from different snapshots.** The row count was read from `sweep_L5/ANTISUM_219.txt`,
+which was still at 73 because the bin had not been regenerated; the shard count was read
+from the live `low_*.txt` files, which already contained shard 210. At that moment the
+bin covered 11 local shards and the tree covered 12. Neither number was invented — they
+were simply not taken at the same time, inside one table, and the commit message's "96
+rows" carried the stale half forward.
+
+The off-by-one then propagated into the heartbeat prompt as "15 shards, span 5..1131",
+which is **wrong for that snapshot and right for this one**, for an unrelated reason.
+An error that becomes true while nobody is looking is the worst kind to carry: it will
+never be caught by the thing that would have caught it. Instrument eighteen is therefore
+not a bad number but a **mixed-snapshot table**, and the rule is that every cell in a
+cumulative row must be read in one pass, from one source, at one time — which is now
+exactly what `verify_219_orbit.py` does.
