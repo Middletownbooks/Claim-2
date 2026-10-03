@@ -1,0 +1,62 @@
+MATCH            Sec2 laboratory phase0 best-by-training held-out acc: 0.908234126984127  [QUOTED: 0.90823]
+MATCH            Sec2 laboratory phase0 majority baseline: 0.908234126984127  [QUOTED: 0.90823]
+MATCH            Sec2 laboratory K invariants exact: 18/18  [QUOTED: 18/18]
+MATCH            Sec2 laboratory K end-to-end: 1.0  [QUOTED: 1.00000]
+MATCH            Sec2 laboratory K baseline: 0.90278  [QUOTED: 0.90278]
+MATCH            Sec2 laboratory L composable exact: 12/12  [QUOTED: 12/12]
+MATCH            Sec2 laboratory L prime powers exact: 0/6  [QUOTED: 0/6]
+MATCH            Sec2 laboratory L end-to-end: 0.71528  [QUOTED: 0.715]
+MATCH            Sec2 laboratory L baseline: 0.91667  [QUOTED: 0.917]
+MATCH            Sec2 laboratory L +1 expression invariants: 18/18  [QUOTED: 18/18]
+MATCH            Sec2 laboratory L +1 expression end-to-end: 1.0  [QUOTED: 1.000]
+MATCH            Sec2 laboratory licensing coverage: 0.6667  [QUOTED: 0.667]
+MATCH            Sec2 laboratory licensing selective accuracy: 1.0  [QUOTED: 1.000]
+MATCH            Sec2 Lean board board entries: 1199  [QUOTED: 1199]
+MATCH            Sec2 Lean board in mathlib: 214  [QUOTED: 214]
+MATCH            Sec2 Lean board statement-only: 1  [QUOTED: 1]
+MATCH            Sec2 Lean board elsewhere: 30  [QUOTED: 30]
+MATCH            Sec2 Lean board missing: 954  [QUOTED: 954]
+MATCH            Sec2 Lean board declarations with zero in-library uses (%): 72.0754716981132  [QUOTED: 72%]
+MATCH            Sec2 FLT     theorems: 29511  [QUOTED: 29511]
+MATCH            Sec2 FLT     mathlib modules imported: 1696  [QUOTED: 1696]
+MATCH            Sec2 FLT     coverage of mathlib: 19.900000000000002  [QUOTED: 19.9%]
+MATCH            Sec2 FLT     modularity Q: 0.6772  [QUOTED: 0.677]
+MATCH            Sec2 FLT     communities >=100: 36  [QUOTED: 36]
+MATCH            Sec2 FLT     interfaces carrying 80%: 282  [QUOTED: 282]
+MATCH            Sec2 FLT     statements in mathlib vocabulary: 15.509999999999998  [QUOTED: 15.5%]
+FINDING          Sec2 FLT     statement-level upstreamable: 4281  [QUOTED: 4184]
+                 note: Report I distinguishes 4,281 (receipt: upstreamable.json) from 4,184 (additionally: proof file imports no repo definition); STATUS quotes the 4,184 subset, for which no receipt is committed
+FINDING          Sec2 NS/Euler declarations: 49379  [QUOTED: 49365]
+                 note: receipt counts declarations by kind (incl. 29 lemma, 3 class, 16 instance); Report O's 49,365 is described as 'declaration names' -- universe may differ by 14; unresolved
+MATCH            Sec2 NS/Euler mathlib modules imported: 303  [QUOTED: 303]
+FINDING          Sec2 NS/Euler coverage of mathlib: 3.559262304710443  [QUOTED: 3.5%]
+                 note: recomputed from raw counts (303/8513), not from the 4-dp rounded coverage_fraction receipt
+FINDING          Sec2 NS/Euler modularity Q (strict): 0.0  [QUOTED: 0.503]
+                 note: phase1.json is byte-identical to phase1_loose.json; no strict-run receipt is committed
+FINDING          Sec2 NS/Euler communities >=100 (strict): 1  [QUOTED: 13]
+FINDING          Sec2 NS/Euler median bottleneck (strict): 0.0001  [QUOTED: 0.59]
+FINDING          Sec2 NS/Euler top 1% cross traffic (strict): 20.0  [QUOTED: 17.7%]
+MATCH            Sec2 Report O replication NS coverage via rounded receipt field (control): 3.55  [QUOTED: 3.5%]
+                 note: passes only because the receipt field was itself rounded to 0.0355; the raw ratio is 3.559%
+MATCH            Sec2 Report O replication split 0: breadth beats frequency (1/0): 0  [QUOTED: 0]
+                 note: STATUS quotes 0 of 6
+MATCH            Sec2 Report O replication split 1: breadth beats frequency (1/0): 0  [QUOTED: 0]
+                 note: STATUS quotes 0 of 6
+MATCH            Sec2 Report O replication split 2: breadth beats frequency (1/0): 0  [QUOTED: 0]
+                 note: STATUS quotes 0 of 6
+MATCH            Sec2 Report O replication split 3: breadth beats frequency (1/0): 0  [QUOTED: 0]
+                 note: STATUS quotes 0 of 6
+MATCH            Sec2 Report O replication split 4: breadth beats frequency (1/0): 0  [QUOTED: 0]
+                 note: STATUS quotes 0 of 6
+MATCH            Sec2 Report O replication split 5: breadth beats frequency (1/0): 0  [QUOTED: 0]
+                 note: STATUS quotes 0 of 6
+
+41 headlines emitted; 34 MATCH; 7 FINDINGS
+FINDING 1 [mismatch] statement-level upstreamable: emitted 4281 vs quoted '4184' — Report I distinguishes 4,281 (receipt: upstreamable.json) from 4,184 (additionally: proof file imports no repo definition); STATUS quotes the 4,184 subset, for which no receipt is committed
+FINDING 2 [mismatch] declarations: emitted 49379 vs quoted '49365' — receipt counts declarations by kind (incl. 29 lemma, 3 class, 16 instance); Report O's 49,365 is described as 'declaration names' -- universe may differ by 14; unresolved
+FINDING 3 [mismatch] coverage of mathlib: emitted 3.559262304710443 vs quoted '3.5%' — recomputed from raw counts (303/8513), not from the 4-dp rounded coverage_fraction receipt
+FINDING 4 [mismatch] modularity Q (strict): emitted 0.0 vs quoted '0.503' — phase1.json is byte-identical to phase1_loose.json; no strict-run receipt is committed
+FINDING 5 [mismatch] communities >=100 (strict): emitted 1 vs quoted '13' — 
+FINDING 6 [mismatch] median bottleneck (strict): emitted 0.0001 vs quoted '0.59' — 
+FINDING 7 [mismatch] top 1% cross traffic (strict): emitted 20.0 vs quoted '17.7%' — 
+report -> report.json

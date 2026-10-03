@@ -1,0 +1,316 @@
+{
+ "campaign": "emitall pilot on STATUS.md (2026-09-09 revision)",
+ "register": "each headline quoted in STATUS.md section 2, re-emitted from the committed JSON receipts at its own printed register",
+ "quote_source": "STATUS.md",
+ "base": ".",
+ "receipts": {
+  "xm": {
+   "path": "../theorem-lab/audit/crossmodulus.json"
+  },
+  "k2": {
+   "path": "../theorem-lab/crossobject/result_v2.json"
+  },
+  "l": {
+   "path": "../theorem-lab/crossobject2/result.json"
+  },
+  "lx": {
+   "path": "../theorem-lab/crossobject2/extension.json"
+  },
+  "ll": {
+   "path": "../theorem-lab/crossobject2/result_licensed.json"
+  },
+  "bd": {
+   "path": "../leanboard/board.json"
+  },
+  "us": {
+   "path": "../leanboard/usage.json"
+  },
+  "fg": {
+   "path": "../leanboard/flt/flt_graph_summary.json"
+  },
+  "fb": {
+   "path": "../leanboard/flt/boundary_summary.json"
+  },
+  "fc": {
+   "path": "../leanboard/flt/compression.json"
+  },
+  "ff": {
+   "path": "../leanboard/flt/regions_followup.json"
+  },
+  "fu": {
+   "path": "../leanboard/flt/upstreamable.json"
+  },
+  "na": {
+   "path": "../leanboard/ns/ns_analysis.json"
+  },
+  "n1": {
+   "path": "../leanboard/ns/phase1.json"
+  }
+ },
+ "defaults": {
+  "mode": "printed"
+ },
+ "claims": [
+  {
+   "section": "Sec2 laboratory",
+   "label": "phase0 best-by-training held-out acc",
+   "quoted": "0.90823",
+   "expr": "f('xm','/best_by_training/held_out_accuracy')"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "phase0 majority baseline",
+   "quoted": "0.90823",
+   "expr": "f('xm','/majority_class_accuracy_on_held_out')"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "K invariants exact",
+   "quoted": "18/18",
+   "expr": "f('k2','/invariants_exact')",
+   "mode": "exact"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "K end-to-end",
+   "quoted": "1.00000",
+   "expr": "f('k2','/end_to_end_accuracy')"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "K baseline",
+   "quoted": "0.90278",
+   "expr": "f('k2','/majority_class_baseline')"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L composable exact",
+   "quoted": "12/12",
+   "expr": "f('l','/exact_composable')",
+   "mode": "exact"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L prime powers exact",
+   "quoted": "0/6",
+   "expr": "f('l','/exact_non_composable')",
+   "mode": "exact"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L end-to-end",
+   "quoted": "0.715",
+   "expr": "f('l','/end_to_end_accuracy')"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L baseline",
+   "quoted": "0.917",
+   "expr": "f('l','/majority_class_baseline')"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L +1 expression invariants",
+   "quoted": "18/18",
+   "expr": "f('lx','/+ exponent of n/held_out_invariants_exact')",
+   "mode": "exact"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L +1 expression end-to-end",
+   "quoted": "1.000",
+   "expr": "f('lx','/+ exponent of n/end_to_end_accuracy')"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "licensing coverage",
+   "quoted": "0.667",
+   "expr": "f('ll','/end_to_end_level/coverage')"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "licensing selective accuracy",
+   "quoted": "1.000",
+   "expr": "f('ll','/end_to_end_level/selective_accuracy')"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "board entries",
+   "quoted": "1199",
+   "expr": "f('bd','/counts/entries_in_mathlib_yaml')"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "in mathlib",
+   "quoted": "214",
+   "expr": "f('bd','/counts/by_status/formalized_in_mathlib')"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "statement-only",
+   "quoted": "1",
+   "expr": "f('bd','/counts/by_status/statement_only_in_mathlib')"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "elsewhere",
+   "quoted": "30",
+   "expr": "f('bd','/counts/by_status/formalized_outside_mathlib')"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "missing",
+   "quoted": "954",
+   "expr": "f('bd','/counts/by_status/missing')"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "declarations with zero in-library uses (%)",
+   "quoted": "72%",
+   "expr": "100 * len(where(vals('us','/declarations/*/files_referencing_full_name'),'==',0)) / len(vals('us','/declarations/*/files_referencing_full_name'))"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "theorems",
+   "quoted": "29511",
+   "expr": "f('fg','/theorems')"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "mathlib modules imported",
+   "quoted": "1696",
+   "expr": "f('fb','/consumption/distinct_mathlib_modules_imported')"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "coverage of mathlib",
+   "quoted": "19.9%",
+   "expr": "100*f('fb','/consumption/coverage_fraction')"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "modularity Q",
+   "quoted": "0.677",
+   "expr": "f('ff','/modularity_Q')"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "communities >=100",
+   "quoted": "36",
+   "expr": "f('fc','/communities_ge_100')"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "interfaces carrying 80%",
+   "quoted": "282",
+   "expr": "f('fc','/definitions_covering_80pct_of_statement_uses')"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "statements in mathlib vocabulary",
+   "quoted": "15.5%",
+   "expr": "100*f('fb','/statements/fraction_mathlib_vocabulary_only')"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "statement-level upstreamable",
+   "quoted": "4184",
+   "expr": "len(f('fu','/self_contained'))",
+   "note": "Report I distinguishes 4,281 (receipt: upstreamable.json) from 4,184 (additionally: proof file imports no repo definition); STATUS quotes the 4,184 subset, for which no receipt is committed"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "declarations",
+   "quoted": "49365",
+   "expr": "f('na','/declarations_total')",
+   "note": "receipt counts declarations by kind (incl. 29 lemma, 3 class, 16 instance); Report O's 49,365 is described as 'declaration names' -- universe may differ by 14; unresolved"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "mathlib modules imported",
+   "quoted": "303",
+   "expr": "f('na','/distinct_mathlib_modules_imported')"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "coverage of mathlib",
+   "quoted": "3.5%",
+   "expr": "100*f('na','/distinct_mathlib_modules_imported')/f('na','/mathlib_modules_total')",
+   "note": "recomputed from raw counts (303/8513), not from the 4-dp rounded coverage_fraction receipt"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "modularity Q (strict)",
+   "quoted": "0.503",
+   "expr": "f('n1','/regions/modularity_Q')",
+   "note": "phase1.json is byte-identical to phase1_loose.json; no strict-run receipt is committed"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "communities >=100 (strict)",
+   "quoted": "13",
+   "expr": "f('n1','/regions/communities_ge_100')"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "median bottleneck (strict)",
+   "quoted": "0.59",
+   "expr": "f('n1','/regions/median_bottleneck_ratio')"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "top 1% cross traffic (strict)",
+   "quoted": "17.7%",
+   "expr": "100*f('n1','/regions/cross_traffic_top_1pct')"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "NS coverage via rounded receipt field (control)",
+   "quoted": "3.5%",
+   "expr": "100*f('na','/coverage_fraction')",
+   "note": "passes only because the receipt field was itself rounded to 0.0355; the raw ratio is 3.559%"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 0: breadth beats frequency (1/0)",
+   "quoted": "0",
+   "expr": "len(where([f('n1','/forecast/0/breadth_P') - f('n1','/forecast/0/freq_P')],'>',0))",
+   "note": "STATUS quotes 0 of 6"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 1: breadth beats frequency (1/0)",
+   "quoted": "0",
+   "expr": "len(where([f('n1','/forecast/1/breadth_P') - f('n1','/forecast/1/freq_P')],'>',0))",
+   "note": "STATUS quotes 0 of 6"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 2: breadth beats frequency (1/0)",
+   "quoted": "0",
+   "expr": "len(where([f('n1','/forecast/2/breadth_P') - f('n1','/forecast/2/freq_P')],'>',0))",
+   "note": "STATUS quotes 0 of 6"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 3: breadth beats frequency (1/0)",
+   "quoted": "0",
+   "expr": "len(where([f('n1','/forecast/3/breadth_P') - f('n1','/forecast/3/freq_P')],'>',0))",
+   "note": "STATUS quotes 0 of 6"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 4: breadth beats frequency (1/0)",
+   "quoted": "0",
+   "expr": "len(where([f('n1','/forecast/4/breadth_P') - f('n1','/forecast/4/freq_P')],'>',0))",
+   "note": "STATUS quotes 0 of 6"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 5: breadth beats frequency (1/0)",
+   "quoted": "0",
+   "expr": "len(where([f('n1','/forecast/5/breadth_P') - f('n1','/forecast/5/freq_P')],'>',0))",
+   "note": "STATUS quotes 0 of 6"
+  }
+ ]
+}

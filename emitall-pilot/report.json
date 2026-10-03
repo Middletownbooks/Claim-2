@@ -1,0 +1,563 @@
+{
+ "run": "emitall",
+ "spec": "/home/user/Claim-2/emitall-pilot/claims_status.json",
+ "campaign": "emitall pilot on STATUS.md (2026-09-09 revision)",
+ "register": "each headline quoted in STATUS.md section 2, re-emitted from the committed JSON receipts at its own printed register",
+ "quote_source": "STATUS.md",
+ "date_utc": "2026-10-03T13:09:40Z",
+ "receipts": [
+  {
+   "alias": "xm",
+   "path": "./../theorem-lab/audit/crossmodulus.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "k2",
+   "path": "./../theorem-lab/crossobject/result_v2.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "l",
+   "path": "./../theorem-lab/crossobject2/result.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "lx",
+   "path": "./../theorem-lab/crossobject2/extension.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "ll",
+   "path": "./../theorem-lab/crossobject2/result_licensed.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "bd",
+   "path": "./../leanboard/board.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "us",
+   "path": "./../leanboard/usage.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "fg",
+   "path": "./../leanboard/flt/flt_graph_summary.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "fb",
+   "path": "./../leanboard/flt/boundary_summary.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "fc",
+   "path": "./../leanboard/flt/compression.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "ff",
+   "path": "./../leanboard/flt/regions_followup.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "fu",
+   "path": "./../leanboard/flt/upstreamable.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "na",
+   "path": "./../leanboard/ns/ns_analysis.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  },
+  {
+   "alias": "n1",
+   "path": "./../leanboard/ns/phase1.json",
+   "mtime_utc": "2026-10-03T12:55:39Z",
+   "status": "loaded"
+  }
+ ],
+ "headlines_emitted": 41,
+ "matches": 34,
+ "findings_count": 7,
+ "FINDINGS": [
+  {
+   "kind": "mismatch",
+   "section": "Sec2 FLT",
+   "label": "statement-level upstreamable",
+   "emitted": 4281,
+   "quoted": "4184",
+   "note": "Report I distinguishes 4,281 (receipt: upstreamable.json) from 4,184 (additionally: proof file imports no repo definition); STATUS quotes the 4,184 subset, for which no receipt is committed"
+  },
+  {
+   "kind": "mismatch",
+   "section": "Sec2 NS/Euler",
+   "label": "declarations",
+   "emitted": 49379,
+   "quoted": "49365",
+   "note": "receipt counts declarations by kind (incl. 29 lemma, 3 class, 16 instance); Report O's 49,365 is described as 'declaration names' -- universe may differ by 14; unresolved"
+  },
+  {
+   "kind": "mismatch",
+   "section": "Sec2 NS/Euler",
+   "label": "coverage of mathlib",
+   "emitted": 3.559262304710443,
+   "quoted": "3.5%",
+   "note": "recomputed from raw counts (303/8513), not from the 4-dp rounded coverage_fraction receipt"
+  },
+  {
+   "kind": "mismatch",
+   "section": "Sec2 NS/Euler",
+   "label": "modularity Q (strict)",
+   "emitted": 0.0,
+   "quoted": "0.503",
+   "note": "phase1.json is byte-identical to phase1_loose.json; no strict-run receipt is committed"
+  },
+  {
+   "kind": "mismatch",
+   "section": "Sec2 NS/Euler",
+   "label": "communities >=100 (strict)",
+   "emitted": 1,
+   "quoted": "13",
+   "note": ""
+  },
+  {
+   "kind": "mismatch",
+   "section": "Sec2 NS/Euler",
+   "label": "median bottleneck (strict)",
+   "emitted": 0.0001,
+   "quoted": "0.59",
+   "note": ""
+  },
+  {
+   "kind": "mismatch",
+   "section": "Sec2 NS/Euler",
+   "label": "top 1% cross traffic (strict)",
+   "emitted": 20.0,
+   "quoted": "17.7%",
+   "note": ""
+  }
+ ],
+ "table": [
+  {
+   "section": "Sec2 laboratory",
+   "label": "phase0 best-by-training held-out acc",
+   "mode": "printed",
+   "quoted": "0.90823",
+   "note": "",
+   "emitted": 0.908234126984127,
+   "emitted_printed": "0.90823",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "phase0 majority baseline",
+   "mode": "printed",
+   "quoted": "0.90823",
+   "note": "",
+   "emitted": 0.908234126984127,
+   "emitted_printed": "0.90823",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "K invariants exact",
+   "mode": "exact",
+   "quoted": "18/18",
+   "note": "",
+   "emitted": "18/18",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "K end-to-end",
+   "mode": "printed",
+   "quoted": "1.00000",
+   "note": "",
+   "emitted": 1.0,
+   "emitted_printed": "1.00000",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "K baseline",
+   "mode": "printed",
+   "quoted": "0.90278",
+   "note": "",
+   "emitted": 0.90278,
+   "emitted_printed": "0.90278",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L composable exact",
+   "mode": "exact",
+   "quoted": "12/12",
+   "note": "",
+   "emitted": "12/12",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L prime powers exact",
+   "mode": "exact",
+   "quoted": "0/6",
+   "note": "",
+   "emitted": "0/6",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L end-to-end",
+   "mode": "printed",
+   "quoted": "0.715",
+   "note": "",
+   "emitted": 0.71528,
+   "emitted_printed": "0.715",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L baseline",
+   "mode": "printed",
+   "quoted": "0.917",
+   "note": "",
+   "emitted": 0.91667,
+   "emitted_printed": "0.917",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L +1 expression invariants",
+   "mode": "exact",
+   "quoted": "18/18",
+   "note": "",
+   "emitted": "18/18",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "L +1 expression end-to-end",
+   "mode": "printed",
+   "quoted": "1.000",
+   "note": "",
+   "emitted": 1.0,
+   "emitted_printed": "1.000",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "licensing coverage",
+   "mode": "printed",
+   "quoted": "0.667",
+   "note": "",
+   "emitted": 0.6667,
+   "emitted_printed": "0.667",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 laboratory",
+   "label": "licensing selective accuracy",
+   "mode": "printed",
+   "quoted": "1.000",
+   "note": "",
+   "emitted": 1.0,
+   "emitted_printed": "1.000",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "board entries",
+   "mode": "printed",
+   "quoted": "1199",
+   "note": "",
+   "emitted": 1199,
+   "emitted_printed": "1199",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "in mathlib",
+   "mode": "printed",
+   "quoted": "214",
+   "note": "",
+   "emitted": 214,
+   "emitted_printed": "214",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "statement-only",
+   "mode": "printed",
+   "quoted": "1",
+   "note": "",
+   "emitted": 1,
+   "emitted_printed": "1",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "elsewhere",
+   "mode": "printed",
+   "quoted": "30",
+   "note": "",
+   "emitted": 30,
+   "emitted_printed": "30",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "missing",
+   "mode": "printed",
+   "quoted": "954",
+   "note": "",
+   "emitted": 954,
+   "emitted_printed": "954",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Lean board",
+   "label": "declarations with zero in-library uses (%)",
+   "mode": "printed",
+   "quoted": "72%",
+   "note": "",
+   "emitted": 72.0754716981132,
+   "emitted_printed": "72",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "theorems",
+   "mode": "printed",
+   "quoted": "29511",
+   "note": "",
+   "emitted": 29511,
+   "emitted_printed": "29511",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "mathlib modules imported",
+   "mode": "printed",
+   "quoted": "1696",
+   "note": "",
+   "emitted": 1696,
+   "emitted_printed": "1696",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "coverage of mathlib",
+   "mode": "printed",
+   "quoted": "19.9%",
+   "note": "",
+   "emitted": 19.900000000000002,
+   "emitted_printed": "19.9",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "modularity Q",
+   "mode": "printed",
+   "quoted": "0.677",
+   "note": "",
+   "emitted": 0.6772,
+   "emitted_printed": "0.677",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "communities >=100",
+   "mode": "printed",
+   "quoted": "36",
+   "note": "",
+   "emitted": 36,
+   "emitted_printed": "36",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "interfaces carrying 80%",
+   "mode": "printed",
+   "quoted": "282",
+   "note": "",
+   "emitted": 282,
+   "emitted_printed": "282",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "statements in mathlib vocabulary",
+   "mode": "printed",
+   "quoted": "15.5%",
+   "note": "",
+   "emitted": 15.509999999999998,
+   "emitted_printed": "15.5",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 FLT",
+   "label": "statement-level upstreamable",
+   "mode": "printed",
+   "quoted": "4184",
+   "note": "Report I distinguishes 4,281 (receipt: upstreamable.json) from 4,184 (additionally: proof file imports no repo definition); STATUS quotes the 4,184 subset, for which no receipt is committed",
+   "emitted": 4281,
+   "emitted_printed": "4281",
+   "status": "FINDING"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "declarations",
+   "mode": "printed",
+   "quoted": "49365",
+   "note": "receipt counts declarations by kind (incl. 29 lemma, 3 class, 16 instance); Report O's 49,365 is described as 'declaration names' -- universe may differ by 14; unresolved",
+   "emitted": 49379,
+   "emitted_printed": "49379",
+   "status": "FINDING"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "mathlib modules imported",
+   "mode": "printed",
+   "quoted": "303",
+   "note": "",
+   "emitted": 303,
+   "emitted_printed": "303",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "coverage of mathlib",
+   "mode": "printed",
+   "quoted": "3.5%",
+   "note": "recomputed from raw counts (303/8513), not from the 4-dp rounded coverage_fraction receipt",
+   "emitted": 3.559262304710443,
+   "emitted_printed": "3.6",
+   "status": "FINDING"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "modularity Q (strict)",
+   "mode": "printed",
+   "quoted": "0.503",
+   "note": "phase1.json is byte-identical to phase1_loose.json; no strict-run receipt is committed",
+   "emitted": 0.0,
+   "emitted_printed": "0.000",
+   "status": "FINDING"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "communities >=100 (strict)",
+   "mode": "printed",
+   "quoted": "13",
+   "note": "",
+   "emitted": 1,
+   "emitted_printed": "1",
+   "status": "FINDING"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "median bottleneck (strict)",
+   "mode": "printed",
+   "quoted": "0.59",
+   "note": "",
+   "emitted": 0.0001,
+   "emitted_printed": "0.00",
+   "status": "FINDING"
+  },
+  {
+   "section": "Sec2 NS/Euler",
+   "label": "top 1% cross traffic (strict)",
+   "mode": "printed",
+   "quoted": "17.7%",
+   "note": "",
+   "emitted": 20.0,
+   "emitted_printed": "20.0",
+   "status": "FINDING"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "NS coverage via rounded receipt field (control)",
+   "mode": "printed",
+   "quoted": "3.5%",
+   "note": "passes only because the receipt field was itself rounded to 0.0355; the raw ratio is 3.559%",
+   "emitted": 3.55,
+   "emitted_printed": "3.5",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 0: breadth beats frequency (1/0)",
+   "mode": "printed",
+   "quoted": "0",
+   "note": "STATUS quotes 0 of 6",
+   "emitted": 0,
+   "emitted_printed": "0",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 1: breadth beats frequency (1/0)",
+   "mode": "printed",
+   "quoted": "0",
+   "note": "STATUS quotes 0 of 6",
+   "emitted": 0,
+   "emitted_printed": "0",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 2: breadth beats frequency (1/0)",
+   "mode": "printed",
+   "quoted": "0",
+   "note": "STATUS quotes 0 of 6",
+   "emitted": 0,
+   "emitted_printed": "0",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 3: breadth beats frequency (1/0)",
+   "mode": "printed",
+   "quoted": "0",
+   "note": "STATUS quotes 0 of 6",
+   "emitted": 0,
+   "emitted_printed": "0",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 4: breadth beats frequency (1/0)",
+   "mode": "printed",
+   "quoted": "0",
+   "note": "STATUS quotes 0 of 6",
+   "emitted": 0,
+   "emitted_printed": "0",
+   "status": "MATCH"
+  },
+  {
+   "section": "Sec2 Report O replication",
+   "label": "split 5: breadth beats frequency (1/0)",
+   "mode": "printed",
+   "quoted": "0",
+   "note": "STATUS quotes 0 of 6",
+   "emitted": 0,
+   "emitted_printed": "0",
+   "status": "MATCH"
+  }
+ ]
+}
