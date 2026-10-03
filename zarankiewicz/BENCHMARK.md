@@ -86,3 +86,56 @@ calibration — **compare it to 10.38 s before trusting any session count.**
 Core-hours are marginally lowest at T = 1 (1,517 against 1,602, a 6% difference) while wall clock
 is 3.6× better at T = 4. The 6% is not worth optimising for; **run T = 4.** The earlier version of
 this note made more of that gap than 6% deserves.
+
+## The gate says it is not the silicon — and the gate is not enough
+
+Measured in the idle gap between cycles 21 and 22, nothing else on the machine, three reps:
+
+| | |
+|---|---|
+| this host, `./zsearch -m 7 -n 7` | **10.164 / 9.722 / 9.716 s** |
+| reference above | 10.38 s |
+| counts and histogram | exact, all three reps |
+| CPU | Intel Xeon @ 2.80 GHz, 4 logical cores |
+
+So single-threaded this host is **2-6% faster** than the reference host. At four threads it
+produces **1,294,336 nodes/core-s** in production against that host's clean **1,821,979** —
+**29% worse.** Equal or better on one thread, 29% worse on four: the deficit is in **parallel
+scaling, not single-core speed.** That is consistent with shared logical cores or with a
+co-tenant's memory traffic, and this measurement does not separate those two.
+
+**The provenance matters and it is imperfect.** The 10.38 s above was recorded in `5bd3020` on
+Oct 1, which is a container *earlier* than the one that booted 00:32 on Oct 2 and ran fifteen
+cycles at about 1.73e6. So the matched pair here is Oct-1 host against today's host. **The 00:32
+host was never gate-timed** — its gate was run for counts only, every heartbeat, and the time
+was never recorded. That was free information, available 22 hours running, and it is the reason
+the middle host cannot be placed on the single-thread axis at all. Record the time, not just the
+verdict.
+
+A second imperfection, bounded rather than waved away: 1,821,979 came from `bench.py`'s fixed
+384-prefix quantum and 1,294,336 comes from production shards of about 2,774 prefixes, so the
+work is not identical. The 00:32 host's production figure (~1.73e6) sits 5% under the Oct-1
+host's bench figure, so the bench-versus-production bias is a few percent against a 29% gap.
+
+### The correction to this page's own advice
+
+Above, this page says: "the first thing `kaggle_shard.py` prints is the gate time, which is the
+calibration — **compare it to 10.38 s before trusting any session count.**"
+
+**That is now falsified by this host.** It matches the gate and delivers 29% less. A
+single-threaded timing cannot calibrate a four-threaded budget, which is exactly the error
+diagnosed in `KAGGLE_CALIBRATION.md`, where a gate-proxy prediction of 2,000-2,150 core-hours
+met a measured 3,840 because the gate is single-threaded and the production figure is not. The
+calibration that works is the **threaded** one, and `kaggle_shard.py` already prints it:
+`ZMODE=calibrate` with `ZQUANTUM=384` walks T = 1..4 on the same fixed quantum. Compare *that*,
+not the gate.
+
+### What is deliberately not being measured
+
+The full thread curve on this host would say whether the loss is SMT siblings or a neighbour.
+It is **not being run**, and the reason is a rule this repo has already paid for: on either
+answer the sweep still wants T = 4, because wall clock is the binding axis and four threads
+maximise aggregate throughput under both. The curve costs about 16 minutes of four cores — more
+than a shard — for an answer attached to no decision. `RATE_DECLINE.md` consumed four reports
+and three retractions on exactly that shape of question. The 30-second gate was worth taking
+because it discriminates; the 16-minute curve is not.
