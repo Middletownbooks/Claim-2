@@ -99,3 +99,50 @@ found at any depth with no configuration. It reads only
 can be built from the ~440-byte certificates alone** — the 1.2-1.6 MB `low_*.txt` files
 do not need to be in it. A five-session resume dataset is on the order of 60 KB, which
 is also why this is the path of least resistance when a 40 MB output will not download.
+
+## A cross-implementation check, from a hand-pasted sample of shard 813
+
+The operator could not download shard 813's survivor file but pasted a portion of it.
+All the pasted rows are 221s. Twenty-one of them, carrying 15 distinct multisets, were
+checked against **this container's** antidistance matrix (`intake/cog.py`, `CO(7)`,
+`antidist_matrix`) rather than against the C that produced them:
+
+| | |
+|---|---|
+| rows checked | 21 |
+| antisum agrees with the claimed 221 | **21** |
+| mismatches | **0** |
+| all vertices in range 0..719 | yes |
+| multiset size 11 everywhere | yes |
+
+The Kaggle binary is rebuilt in-session from the same source digest by a different
+compiler with `-march=native` on different hardware. Until now the only check on that
+build was the (7,7) gate, which is a fixed self-test. This is the first time its
+**production output** has been verified by an independent implementation, and the
+agreement is exact on every row sampled.
+
+It is a narrow claim and should stay narrow: 21 rows, one shard, all of them 221s. It
+does not verify any 219, and it is not a substitute for merging the certificates.
+
+## Finding the 219 rows in a survivor file by eye
+
+Worth recording because the obvious search string does not work. Every survivor row is
+`<antisum>,v0,...,v10` and **v0 is always 0** — checked across all 449,969 local rows,
+zero exceptions — so a 219 row always begins `219,0,`. But `219` is also a legal vertex
+label, and in the local files:
+
+```
+219 appearing anywhere as a vertex   16,448 times
+the substring ",219,0," mid-row         204 times
+rows that actually start with "219,"      61
+```
+
+So searching a survivor file for `219,0,` finds roughly three decoys for every real row.
+The discriminator is what precedes it: a real row starts a line, a decoy is preceded by a
+comma. In a viewer that has lost the line breaks and shows rows separated by spaces,
+**search for `219,` with a leading space** — within a row the separators are commas, never
+spaces, so a space followed by `219,` can only be a row start.
+
+Cheaper still, where the file can be listed but not read: `sh_m11_L5_<i>of2400.json` is
+about 440 bytes and carries the antisum histogram, which gives the exact number of 219
+rows in that shard without touching the survivor file.
