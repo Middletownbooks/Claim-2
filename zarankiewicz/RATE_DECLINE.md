@@ -166,3 +166,56 @@ faster at first, by something like 8%, on one prior observation" — not a curve
 The question does not need settling. It has consumed four reports and three retractions against
 a schedule with 1.68x margin, and the only decision it could inform — whether to want a reboot —
 is one I cannot act on anyway. Measuring it further is a cost with no decision attached.
+
+# The reboot of Oct 2, 23:21: a different host, and the answer was in another file
+
+Everything above was measured on one machine. It booted at 00:32 on Oct 2 and the sweep ran on
+it for 22 hours and 49 minutes, fifteen whole cycles. At 23:21 it rebooted onto **different
+hardware** — `uptime` read 0 min *and* the kernel went `6.18.44-fc-v51` to `-v64`, which is the
+pair of facts that distinguishes a reboot from the process-level restart of 13:29.
+
+`53dd8eb` pre-registered the prediction before the next cycle could be seen: near the 1,773,311
+peak if uptime mattered, anywhere in 1.56-1.77e6 if it was wander. The measured mean was
+**1,304,482 nodes/core-s** — 24.5% below the bottom of the wander band, at 3.91-3.96 of 4 cores,
+in a tight three-shard cluster rather than a dip. Neither branch. Numbers in `0610424`.
+
+**This document's own closing prediction is refuted in the direction that costs something.** It
+reads: "the honest prediction for a fresh machine is 'possibly faster at first, by something
+like 8%, on one prior observation'." The fresh machine was 26% slower.
+
+## The omission, which is the real finding
+
+`BENCHMARK.md` carries a section headed "Host-to-host variation, now observed rather than
+assumed". It measures the C gate at 10.38 s on one container against 7.65 s on the previous one,
+calls it 36% apart, and states the consequence in bold: **this budget is host-dependent.**
+
+That page and this one are about the same quantity, and this one never cites it. Every mean
+above came from a single host, so the band they describe is **within-host wander** — and the
+between-host step, the larger effect, was already on the page next door. Three mechanisms were
+named and withdrawn here while the fourth sat in another file, measured and bolded.
+
+So the honest decomposition is two effects, not one:
+
+| | |
+|---|---|
+| within-host wander | ~12% peak to trough, timescale of hours, mechanism unknown |
+| between-host step | **26% observed once**, same binary, same work, same core count |
+
+## The one sentence here that has to go
+
+> "Measuring it further is a cost with no decision attached."
+
+There is a decision attached, and it was visible in `BENCHMARK.md` before this reboot. The bar
+is wall-clock under one month, so the margin is a function of which host the session draws: 18.0
+days and 1.68x on the old one, **23.0 days and 1.30x on this one** (829 s/shard over cycle 21's
+three shards, gaps included and now nil). A host 1.3x slower than this one would not clear the
+bar at all. The measurement also costs nothing — it arrives as a side effect of work that was
+going to run anyway, which is the reason the prediction could be pre-registered for free.
+
+What this does **not** establish: whether this host is slower in silicon or is sharing its
+logical cores with another tenant. Accounted core-seconds cannot separate those — a shared SMT
+sibling bills you the full time while delivering less, which is exactly the Kaggle thread curve
+in `KAGGLE_CALIBRATION.md`. The discriminator is the single-threaded gate against
+`BENCHMARK.md`'s 10.38 s, and that page's three retractions all come from comparing timings
+taken under uncontended conditions with timings taken under load, so it counts only if it is
+measured in an inter-cycle gap with nothing else running.
