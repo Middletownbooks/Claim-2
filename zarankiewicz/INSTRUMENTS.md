@@ -31,10 +31,22 @@ This file is the long form. The heartbeat prompt carries only the rules that fol
 | 20 | A pre-registration with bands narrower than the quantity's variability | `4767e24` banded a cycle A/B/C; the answer cleared a bound by 0.14% on a quantity whose step is 1–3.4% and whose per-shard spread is 3.14%. Bounds set in advance, read correctly, no information. |
 | 21 | A measurement contaminated by the measurer | Test binaries on the production host depressed two shards 16% and 23%. The busy fraction read 99.8% and missed it. The contamination **would have flipped a registered verdict**. `d365365` |
 
-Two record-keeping lapses sit alongside these rather than in the list: a **fabricated histogram**
-in a commit draft, caught before push, and an **editing artifact** left in the heartbeat prompt
-that asserted a superlative in capitals and then corrected itself in a parenthesis. Both are 18
-and 19 in miniature — a record written faster than it was checked.
+Four record-keeping lapses sit alongside these rather than in the list, all one shape — prose
+outrunning arithmetic:
+
+- a **fabricated histogram** in a commit draft, two counts that came from nowhere;
+- an **editing artifact** in the heartbeat prompt, asserting a superlative in capitals and then
+  correcting itself in a parenthesis;
+- a message **promising counts** "recomputed below" with no below;
+- **two superlatives without the set** — "the programme's best" by schedule and "the slowest
+  clean cycle by rate", for a cycle that was second of seven and fourth of seven. Corrected in
+  `f1a2524`.
+
+The first three were caught before push. The fourth was not, and the difference is instructive:
+the figures were right where they had been computed and wrong where they had not. A superlative
+is a claim about every other member of a set, so it needs the set — and the ranking was four
+lines of python, run only after pushing. Rule 8 covers it; a rank is an aggregate over the whole
+table.
 
 ## The shapes, which are fewer than the list
 
@@ -66,9 +78,26 @@ Registration is not ceremony. It has paid three times:
 - **The gate's four-fall run** was registered and **BROKE** at the fifth reading, so a tempting
   qualification — "blind in one reading is not blind in four" — was withdrawn instead of
   accumulating. A negative result that cost forty seconds and saved a false rule.
+- **Production's six-value rising run was registered and BROKE** at the seventh cycle, which is
+  the largest thing registration has bought. The symmetry with 15 is exact: that was a six-FALL
+  run, *named* and dead the next cycle; this was a six-RISE run, *registered* and dead the next
+  cycle. The difference is what was claimed in between.
+  And the ledger is the part that matters. Only three steps were ever predicted prospectively —
+  the earlier rises were observed before any registration existed — and it reads **HIT, HIT,
+  MISS**. Two of three is what a coin gives. The 1/720 for six values in increasing order
+  describes the past; a statistic computed over a window that includes the data which suggested
+  it is not evidence. **No trend was established**, and the honest summary of the episode is a
+  quantity in a band: 1,795,488 to 1,922,572 over seven clean cycles, 2.5% over the last five.
 - **A void cycle was voided** rather than read, because the contamination was established before
   the mean was quoted. Reading it would have produced "the rise breaks" as a finding manufactured
   by my own CPU usage.
+
+**And after two broken runs, no third was registered.** Both runs this programme tested were
+registered and failed; a fresh criterion after that is fishing for the one that will pass. What
+replaced them is deliberately dull — a 15%-off-the-centre action threshold and the spread
+tripwire. A quantity that varies 2.5% across five cycles with no named mechanism does not need a
+test every ninety minutes. The cost of registration was never the computation; it was the
+temptation to keep finding something for it to say.
 
 An order statistic is the tool that makes a run testable when the steps are smaller than the
 spread: *k* values in increasing order has probability 1/*k*! under exchangeability whether the
