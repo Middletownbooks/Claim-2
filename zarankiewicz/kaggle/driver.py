@@ -538,7 +538,7 @@ def sweep(exe, wd):
     done = already_done()
     print("=== shards: %d total, %d already complete, this session takes %d from %d ==="
           % (NSHARDS, len(done), COUNT, FIRST))
-    t0, first_rate, lowest = time.time(), None, None
+    t0, first_rate, lowest, ran = time.time(), None, None, 0
     for i in range(FIRST, min(FIRST + COUNT, NSHARDS)):
         if i in done:
             continue
@@ -546,6 +546,7 @@ def sweep(exe, wd):
             print("wall budget reached before shard %d" % i)
             break
         rec = run_shard(exe, f, i)
+        ran += 1
         if first_rate is None:
             first_rate = rec["nodes_per_core_s"]
         drift = rec["nodes_per_core_s"] / first_rate
@@ -599,11 +600,23 @@ def sweep(exe, wd):
                   % (todo[0], (last - todo[0] + 1) - len(todo)))
             print("        line above anyway unless that waste matters; a redone shard")
             print("        writes the same certificate and cannot corrupt anything.")
-    if mine:
+    # THE RATE USES SHARDS RUN THIS SESSION, NOT SHARDS DONE IN THE BLOCK.  They
+    # differ whenever a block was partly finished earlier: `mine` counts 4 while
+    # this session ran 0, and dividing the session's elapsed time by 4 invented a
+    # per-shard rate out of nothing.  Caught by a test where every shard in the
+    # block was already certified.
+    if ran:
         el = time.time() - t0
-        print("    %d shards in %.1f h = %.1f min/shard; the remaining %d need about %.1f more sessions"
-              % (len(mine), el / 3600, el / 60 / max(1, len(mine)), len(todo),
-                 (len(todo) * (el / max(1, len(mine)))) / WALL))
+        per = el / ran
+        msg = ("    %d shard%s run this session in %.1f h = %.1f min/shard"
+               % (ran, "" if ran == 1 else "s", el / 3600, per / 60))
+        if todo and WALL > 0:
+            msg += "; the remaining %d need about %.1f more sessions" % (len(todo), len(todo) * per / WALL)
+        print(msg)
+    elif todo:
+        print("    no shards ran this session, so there is no rate to quote; %d of the"
+              % len(mine))
+        print("    block was already certified and %d remains." % len(todo))
 
 
 def main():
