@@ -173,10 +173,18 @@ The ratio `sum(core_seconds) / (sum(wall_s) * threads)` is free in every certifi
 host it reads:
 
 ```
-cycle 32   99.17%
-cycle 33   99.31%
-cycle 34   98.95%   (five shards, partial)
+cycle 32   99.17%      cycle 38   99.23%
+cycle 33   99.31%      cycle 39   98.87%
+cycle 34   99.23%      cycle 40   99.09%
+cycle 35   99.05%      cycle 42   98.81%
+cycle 37   99.20%
 ```
+
+Recomputed over each cycle's **whole** shard range from the committed certificates, which is why
+cycle 34 reads 99.23% here and 98.95% in an earlier draft of this section: that figure was the
+first five shards of a nine-shard cycle, a partial quoted as a cycle's. Cycle 36 is omitted as
+VOID and cycle 41 as truncated. The range over the nine clean full cycles is **98.81% to
+99.31%** — a spread of half a percentage point across 74 shards on one host.
 
 That is a **busy fraction**: it says the four threads were almost never idle, so almost nothing
 is lost to serialisation, lock waits, or the single-threaded head and tail of a shard. It bounds

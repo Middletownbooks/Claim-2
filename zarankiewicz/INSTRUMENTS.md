@@ -30,8 +30,9 @@ This file is the long form. The heartbeat prompt carries only the rules that fol
 | 19 | A full mean compared against a different quantity | `a9dfc16` computed one cycle as `nodes/(wall×4)` and compared it to another's `nodes/sum(core_seconds)`, reporting 0.38% when the comparable gap was 1.07%. `BENCHMARK.md` → "The denominator". |
 | 20 | A pre-registration with bands narrower than the quantity's variability | `4767e24` banded a cycle A/B/C; the answer cleared a bound by 0.14% on a quantity whose step is 1–3.4% and whose per-shard spread is 3.14%. Bounds set in advance, read correctly, no information. |
 | 21 | A measurement contaminated by the measurer | Test binaries on the production host depressed two shards 16% and 23%. The busy fraction read 99.8% and missed it. The contamination **would have flipped a registered verdict**. `d365365` |
+| 22 | The wrong instrument, under the right name | Two things in this repo are called "the gate": `c/zsearch -m 7 -n 7`, 8.4 s, which is the nine-median host detector, and `check_gate.py`, ~11 min, which gates a reimplementation against `GATE_VALUES.json`. Timing the second and recording the median alongside the first's nine would have produced a tenth reading comparable to nothing. Caught because the per-rep cost came out ~60x the table's. |
 
-Four record-keeping lapses sit alongside these rather than in the list, all one shape — prose
+Five record-keeping lapses sit alongside these rather than in the list, all one shape — prose
 outrunning arithmetic:
 
 - a **fabricated histogram** in a commit draft, two counts that came from nowhere;
@@ -40,13 +41,15 @@ outrunning arithmetic:
 - a message **promising counts** "recomputed below" with no below;
 - **two superlatives without the set** — "the programme's best" by schedule and "the slowest
   clean cycle by rate", for a cycle that was second of seven and fourth of seven. Corrected in
-  `f1a2524`.
+  `f1a2524`;
+- **a rank without the set** — cycle 42 reported as "fourth-highest of nine" by rate when it was
+  **second** of nine. Caught in draft by running the sort (`2c18473`).
 
-The first three were caught before push. The fourth was not, and the difference is instructive:
-the figures were right where they had been computed and wrong where they had not. A superlative
-is a claim about every other member of a set, so it needs the set — and the ranking was four
-lines of python, run only after pushing. Rule 8 covers it; a rank is an aggregate over the whole
-table.
+All but the fourth were caught before push, and the difference is instructive: the figures were
+right where they had been computed and wrong where they had not. A superlative, and equally a
+bare rank, is a claim about every other member of a set, so it needs the set — and the ranking
+was four lines of python, run only after pushing the first time and before writing the second.
+Rule 8 covers it; a rank is an aggregate over the whole table.
 
 ## The shapes, which are fewer than the list
 
@@ -133,7 +136,8 @@ sample size is instrument 18's shape again.
 
 ## The rules, in the order they are needed
 
-1. Before measuring, ask what else is running.
+1. Before measuring, ask what else is running — and whether the instrument you reached for is
+   the one the table was built with. Two can share a name.
 2. Compute the spread before quoting the mean.
 3. Check that two numbers are the same quantity, read at the same time, from the same source.
 4. Prefer an order statistic to a band when the steps are smaller than the spread.
