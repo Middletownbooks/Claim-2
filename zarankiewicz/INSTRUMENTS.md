@@ -31,6 +31,7 @@ This file is the long form. The heartbeat prompt carries only the rules that fol
 | 20 | A pre-registration with bands narrower than the quantity's variability | `4767e24` banded a cycle A/B/C; the answer cleared a bound by 0.14% on a quantity whose step is 1–3.4% and whose per-shard spread is 3.14%. Bounds set in advance, read correctly, no information. |
 | 21 | A measurement contaminated by the measurer | Test binaries on the production host depressed two shards 16% and 23%. The busy fraction read 99.8% and missed it. The contamination **would have flipped a registered verdict**. `d365365` |
 | 22 | The wrong instrument, under the right name | Two things in this repo are called "the gate": `c/zsearch -m 7 -n 7`, 8.4 s, which is the nine-median host detector, and `check_gate.py`, ~11 min, which gates a reimplementation against `GATE_VALUES.json`. Timing the second and recording the median alongside the first's nine would have produced a tenth reading comparable to nothing. Caught because the per-rep cost came out ~60x the table's. |
+| 23 | The heartbeat staleness check, a third time | Version 3 compares a live trigger's `created_at` against the scheduled fire time. `update_trigger` **preserves** `created_at` — which version 3's own paragraph recommends it for — so an update made after a firing is invisible. A heartbeat fired 11 s before its replacement landed and would have been cleared as current. `HEARTBEAT_STALENESS.md` |
 
 Five record-keeping lapses sit alongside these rather than in the list, all one shape — prose
 outrunning arithmetic:
@@ -148,3 +149,8 @@ sample size is instrument 18's shape again.
    it — the 219 class's 5,040 multisets were arithmetic, not a saturation curve to be sampled.
 8. Print a line before believing an aggregate.
 9. Re-read what you wrote before storing it.
+10. Prefer a check that reads the thing itself to one that reads bookkeeping about it. Four
+    staleness checks and two self-matching `pgrep`s failed the same way: each asked a question
+    about a record of the world rather than the world. `git log -1` against the HEAD a prompt
+    names cannot be fooled by a preserved timestamp; a shard count on disk cannot be fooled by a
+    late delivery.
