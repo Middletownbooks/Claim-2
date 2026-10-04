@@ -173,18 +173,33 @@ The ratio `sum(core_seconds) / (sum(wall_s) * threads)` is free in every certifi
 host it reads:
 
 ```
-cycle 32   99.17%      cycle 38   99.23%
-cycle 33   99.31%      cycle 39   98.87%
+cycle 32   99.17%      cycle 38   99.23%      cycle 43   98.97%
+cycle 33   99.31%      cycle 39   98.87%      cycle 44   98.65%
 cycle 34   99.23%      cycle 40   99.09%
 cycle 35   99.05%      cycle 42   98.81%
 cycle 37   99.20%
 ```
 
-Recomputed over each cycle's **whole** shard range from the committed certificates, which is why
-cycle 34 reads 99.23% here and 98.95% in an earlier draft of this section: that figure was the
-first five shards of a nine-shard cycle, a partial quoted as a cycle's. Cycle 36 is omitted as
-VOID and cycle 41 as truncated. The range over the nine clean full cycles is **98.81% to
-99.31%** — a spread of half a percentage point across 74 shards on one host.
+**As of cycle 44, and that scope is the point.** Each value is recomputed over its cycle's
+*whole* shard range from the committed certificates — which is why cycle 34 reads 99.23% here and
+98.95% in an earlier draft: that figure was the first five shards of a nine-shard cycle, a partial
+quoted as a cycle's. Cycle 36 is omitted as VOID and cycle 41 as truncated.
+
+The range over these eleven clean cycles is **98.65% to 99.31%** across 91 shards on one host. An
+earlier revision of this paragraph gave it as 98.81% to 99.31% over nine cycles, and **cycle 44
+read below that floor on the next reading but one**. Neither figure was wrong: both described the
+cycles they were computed from. But a range over *n* observations constrains those *n*
+observations and nothing else, and this table is a snapshot, not a specification — do not read a
+later cycle falling outside it as a finding. To get the current figure rather than this one:
+
+```sh
+python3 - <<'EOF'
+import json, glob
+ds=[json.load(open(f)) for f in glob.glob('sweep_L5/sh_*.json')]
+cs=sum(d['core_seconds'] for d in ds); ws=sum(d['wall_s'] for d in ds)
+print('%.2f%%' % (cs/(ws*ds[0]['threads'])*100))
+EOF
+```
 
 That is a **busy fraction**: it says the four threads were almost never idle, so almost nothing
 is lost to serialisation, lock waits, or the single-threaded head and tail of a shard. It bounds
