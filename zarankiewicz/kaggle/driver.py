@@ -5,33 +5,54 @@
 #   "smoke"      ~2 min   every step the long run does, on 1/24th of the work
 #   "calibrate"  ~20 min  the real measurement; the discounted core-hour figure
 #                         at the end is the answer you came for
-#   "sweep"      hours    production shards, resumable across sessions
+#   "sweep"      hours    production shards -- what this is set to
 #
-# Run it as "smoke", read the output, then change the word to "calibrate" and run
-# the same cell again.  Every variable below can still be set by hand instead.
+# IT IS SET TO "sweep" because this account's hosts are already calibrated and the
+# only thing left to do with them is shards.  That is not a shortcut past the
+# checks: sweep runs the same gate first and stops dead if the (7,7) level counts
+# or histogram are off by one node, re-runs the gate at the end to expose
+# intra-session slowdown, and flags per-shard rate drift as it goes.  Change the
+# word to "smoke" if you want the two-minute version on a host you do not trust.
 #
 # PRECEDENCE: an explicit ZMODE in the environment wins outright, so running the
 # file as `!ZMODE=calibrate python kaggle_shard.py` ignores RUN entirely and the
 # two ways of driving this script cannot contradict each other.
-RUN = "smoke"
+RUN = "sweep"
 
-# PARALLEL SESSIONS: change ONE digit per session, not two numbers.  With five
-# Kaggle sessions open at once, each needs a disjoint slice of the shard range;
-# hand-editing ZFIRST and ZCOUNT five times per round is an off-by-one waiting
-# to happen, and the cost of one is duplicated work that looks like progress.
-# Set SLOT to 0, 1, 2, 3, 4 in the five sessions and leave NSLOTS alone.
-# An explicit ZFIRST or ZCOUNT in the environment overrides this entirely.
-SLOT   = 0
-NSLOTS = 5
+# PARALLEL SESSIONS: change ONE digit per session.  Set SLOT to 0, 1, 2, 3, 4 in
+# the five sessions and change nothing else.
+SLOT = 0
 
-# THE WINDOW THESE PARALLEL SESSIONS OWN.  The container running the sweep here
-# works upward from shard 0, so Kaggle must not start there or both would redo the
-# same work while the shard count advanced twice as fast -- duplicated effort that
-# looks exactly like progress.  Kaggle takes the top of the range, the container the
-# bottom, and they converge.  The cut is set so that Kaggle stopping ENTIRELY still
-# leaves the container finishing inside the one-month bar (17.9 days measured).
-SLOT_FROM = 800
-SLOT_UPTO = 2400
+# THE BLOCK EACH SLOT OWNS, first and last shard inclusive.  THIS TABLE IS THE
+# ONLY THING THAT CHANGES BETWEEN ROUNDS, and the end of every session prints the
+# exact line to paste back here, so no resume dataset is ever needed.
+#
+# WHY A TABLE AND NOT A DIVISION.  An earlier version derived each slot's slice by
+# dividing SLOT_FROM..SLOT_UPTO into NSLOTS parts.  That is correct for a first
+# round and wrong for a second: moving SLOT_FROM up to resume re-divides the whole
+# range, so slot 0 resumed where it stopped while slot 1 jumped from 1151 to 1401
+# and the shards between were simply skipped.  Nothing was corrupted -- shard i is
+# the same subtree in every session because NSHARDS is fixed and goes to the C as
+# -of -- but the coverage grew holes that no file recorded.  An explicit block per
+# slot cannot do that: each slot's range is written down, and the ranges are
+# checked below for overlap and for straying into the container's half.
+#
+# Set an entry to None when its block is finished, and give that slot a new one.
+BLOCKS = [
+    (828,  1119),    # slot 0
+    (1154, 1439),    # slot 1
+    (1461, 1759),    # slot 2
+    (1781, 2079),    # slot 3
+    (2109, 2399),    # slot 4
+]
+
+# THE CONTAINER OWNS 0..799 AND KAGGLE OWNS 800..2399.  The container works
+# upward from shard 0, so a Kaggle block reaching below KAGGLE_FROM would have
+# both machines redo the same subtrees while the shard count advanced twice as
+# fast -- duplicated effort that looks exactly like progress.  The cut is set so
+# that Kaggle stopping ENTIRELY still leaves the container finishing inside the
+# one-month bar.
+KAGGLE_FROM = 800
 
 _PRESETS = {
     "smoke":     {"ZMODE": "calibrate", "ZQUANTUM": "16"},
@@ -51,21 +72,51 @@ NSHARDS  = int(os.environ.get("ZNSHARDS", "2400"))
 FIRST    = int(os.environ.get("ZFIRST", "0"))
 COUNT    = int(os.environ.get("ZCOUNT", "1000000"))
 
-# Derive this session's slice from SLOT.  divmod spreads any remainder over the
-# first few slots, so the slices tile the whole range with no gap and no overlap
-# for any NSHARDS, not just ones divisible by NSLOTS.
-if NSLOTS > 1 and "ZFIRST" not in os.environ and "ZCOUNT" not in os.environ:
-    if not (0 <= SLOT < NSLOTS):
-        raise SystemExit("SLOT must be 0..%d, got %r" % (NSLOTS - 1, SLOT))
-    _lo = max(0, SLOT_FROM)
-    _hi = min(NSHARDS, SLOT_UPTO)
-    if _hi <= _lo:
-        raise SystemExit("SLOT_UPTO (%d) must exceed SLOT_FROM (%d)" % (SLOT_UPTO, SLOT_FROM))
-    _base, _extra = divmod(_hi - _lo, NSLOTS)
-    FIRST = _lo + SLOT * _base + min(SLOT, _extra)
-    COUNT = _base + (1 if SLOT < _extra else 0)
-    print("SLOT %d of %d over shards %d..%d -> this session takes %d..%d (%d shards)"
-          % (SLOT, NSLOTS, _lo, _hi - 1, FIRST, FIRST + COUNT - 1, COUNT), flush=True)
+# CHECK THE WHOLE TABLE, not just this slot's row.  The point of writing the
+# blocks down is that they can be checked; a table that is never validated is
+# just five chances to make the mistake the table was meant to prevent.  These
+# run in every session, so whichever slot you launch first catches a bad edit.
+def _check_blocks():
+    seen = []
+    for k, b in enumerate(BLOCKS):
+        if b is None:
+            continue
+        lo, hi = b
+        if not (isinstance(lo, int) and isinstance(hi, int)):
+            raise SystemExit("BLOCKS[%d]: want (first, last) integers, got %r" % (k, b))
+        if hi < lo:
+            raise SystemExit("BLOCKS[%d] = (%d, %d): last is below first" % (k, lo, hi))
+        if lo < KAGGLE_FROM:
+            raise SystemExit(
+                "BLOCKS[%d] starts at %d, below KAGGLE_FROM=%d -- the container owns "
+                "0..%d and both machines would redo the same shards"
+                % (k, lo, KAGGLE_FROM, KAGGLE_FROM - 1))
+        if hi >= NSHARDS:
+            raise SystemExit("BLOCKS[%d] ends at %d, past the last shard %d"
+                             % (k, hi, NSHARDS - 1))
+        for j, lo2, hi2 in seen:
+            if lo <= hi2 and lo2 <= hi:
+                raise SystemExit("BLOCKS[%d] (%d..%d) overlaps BLOCKS[%d] (%d..%d)"
+                                 % (k, lo, hi, j, lo2, hi2))
+        seen.append((k, lo, hi))
+    return seen
+
+
+if "ZFIRST" not in os.environ and "ZCOUNT" not in os.environ:
+    _live = _check_blocks()
+    if not (0 <= SLOT < len(BLOCKS)):
+        raise SystemExit("SLOT must be 0..%d, got %r" % (len(BLOCKS) - 1, SLOT))
+    _mine = BLOCKS[SLOT]
+    if _mine is None:
+        raise SystemExit("BLOCKS[%d] is None: this slot's block is finished.  Give it a "
+                         "new range before running, or change SLOT." % SLOT)
+    FIRST, _last = _mine
+    COUNT = _last - FIRST + 1
+    _total = sum(hi - lo + 1 for _, lo, hi in _live)
+    print("SLOT %d takes shards %d..%d (%d shards); the %d live blocks cover %d of %d"
+          % (SLOT, FIRST, _last, COUNT, len(_live), _total, NSHARDS), flush=True)
+    print("blocks checked: no overlap, none below %d, none past %d"
+          % (KAGGLE_FROM, NSHARDS - 1), flush=True)
 
 THREADS  = int(os.environ.get("ZTHREADS", "0")) or (os.cpu_count() or 1)
 WALL     = float(os.environ.get("ZWALL", "39600"))     # 11 h, inside the 12 h cap
@@ -512,6 +563,47 @@ def sweep(exe, wd):
     gate(exe, repeats=1, label="gate again, to expose intra-session drift")
     print("=== session done; %d shard files in %s ; lowest antisum seen %s ==="
           % (len(list(OUT.glob("sh_*.json"))), OUT, lowest))
+
+    # THE NEXT ROUND'S LINE, computed from the certificates this session wrote.
+    # This is what replaces a resume dataset: nothing has to be carried forward
+    # except one tuple, and the session that did the work is the thing that
+    # reports it, so the number cannot be a guess about what got done.
+    last = min(FIRST + COUNT, NSHARDS) - 1
+    done2 = already_done()
+    mine = [i for i in range(FIRST, last + 1) if i in done2]
+    todo = [i for i in range(FIRST, last + 1) if i not in done2]
+    print()
+    print("=== NEXT ROUND: paste this into BLOCKS[%d] ===" % SLOT)
+    if not todo:
+        print("    None,            # %d..%d COMPLETE (%d shards) -- give slot %d a new block"
+              % (FIRST, last, len(mine), SLOT))
+    else:
+        print("    (%d, %d),    # was (%d, %d); %d done, %d left"
+              % (todo[0], last, FIRST, last, len(mine), len(todo)))
+        # CONTIGUOUS OR NOT.  If the remaining shards are one run then resuming at
+        # todo[0] is exact.  If they are not, resuming there redoes the completed
+        # ones above the gap -- waste, not error, since a redone shard writes the
+        # same certificate -- but it is said out loud, because silently redoing
+        # work is precisely what the old slot arithmetic did.
+        runs = []
+        for i in todo:
+            if runs and i == runs[-1][1] + 1:
+                runs[-1][1] = i
+            else:
+                runs.append([i, i])
+        if len(runs) > 1:
+            print("    *** NOT a clean prefix: the %d remaining shards are %d separate runs,"
+                  % (len(todo), len(runs)))
+            print("        %s" % ", ".join("%d..%d" % (a, b) for a, b in runs[:6]))
+            print("        so resuming at %d redoes %d already-certified shards.  Use the"
+                  % (todo[0], (last - todo[0] + 1) - len(todo)))
+            print("        line above anyway unless that waste matters; a redone shard")
+            print("        writes the same certificate and cannot corrupt anything.")
+    if mine:
+        el = time.time() - t0
+        print("    %d shards in %.1f h = %.1f min/shard; the remaining %d need about %.1f more sessions"
+              % (len(mine), el / 3600, el / 60 / max(1, len(mine)), len(todo),
+                 (len(todo) * (el / max(1, len(mine)))) / WALL))
 
 
 def main():
