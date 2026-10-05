@@ -6,7 +6,7 @@ narrative.  Run this BEFORE relaunching, so the 219 verifiers run on an idle
 machine (rule 1).  Detail lives in INSTRUMENTS.md / BENCHMARK.md and is not to
 be read routinely until the weekly limit resets.
 """
-import json, os, glob, subprocess, sys
+import json, os, glob, subprocess, sys, statistics
 
 Z = os.path.dirname(os.path.abspath(__file__))
 R = os.path.dirname(Z)
@@ -36,11 +36,19 @@ if new:
     cs = sum(d["core_seconds"] for d in ds)
     ws = sum(d["wall_s"] for d in ds)
     spread = (max(r) / min(r) - 1) * 100
+    # The tripwire is the COEFFICIENT OF VARIATION, not max/min.  max/min is
+    # not invariant in the number of shards -- more shards means more chance of
+    # an extreme -- so the 10% threshold calibrated on 8-shard cycles fired on
+    # two clean 15-shard cycles and threw their means away.  Calibration:
+    # clean n=8..9 CV 0.44-2.12%, clean n=15 CV 2.51-3.15%, the contaminated
+    # cycle 36 CV 9.18% (its max/min was 30.33%).  6% sits at twice the highest
+    # clean reading and a third below the contaminated one.
+    cv = statistics.stdev(r) / statistics.mean(r) * 100 if len(r) > 1 else 0.0
     mean = tn / cs
-    line.append("shards %d-%d (%d, %s)  mean %d  spread %.2f%%  %.1f s/shard"
-                % (new[0], new[-1], len(new), kind, mean, spread, ws / len(new)))
-    if spread > 10:
-        line.append("*** SPREAD OVER 10%% -- CYCLE VOID, do not quote the mean ***")
+    line.append("shards %d-%d (%d, %s)  mean %d  CV %.2f%%  (max/min %.2f%%)  %.1f s/shard"
+                % (new[0], new[-1], len(new), kind, mean, cv, spread, ws / len(new)))
+    if cv > 6:
+        line.append("*** CV OVER 6%% -- CYCLE VOID, do not quote the mean ***")
     if bad:
         line.append("*** INCOMPLETE CERTIFICATES: %s ***" % bad)
 
@@ -73,12 +81,12 @@ if new:
                                             "rows claiming"))]
             line.append("%s: %s" % (v, "; ".join(keep)))
 
-    msg = ("Sweep: shards %d-%d, %s mean %d, spread %.2f%%, 219 at %d rows\n\n"
+    msg = ("Sweep: shards %d-%d, %s mean %d, CV %.2f%%, 219 at %d rows\n\n"
            "Minimal-token mode: figures only, no analysis until the weekly reset.\n"
            "%s\n"
            "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>\n"
            "Claude-Session: https://claude.ai/code/session_0184ooepmZGQd7zabkbmXLiR\n"
-           % (new[0], new[-1], kind, mean, spread, nrows,
+           % (new[0], new[-1], kind, mean, cv, nrows,
               "This group was banked while the sweep was still running, so it is a\n"
               "PARTIAL WINDOW over the shards named and not a cycle figure; it does not\n"
               "belong in the cycle table.\n" if running else
