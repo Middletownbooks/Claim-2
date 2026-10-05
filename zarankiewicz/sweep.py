@@ -47,7 +47,33 @@ M, N = 11, 7
 LEVEL = int(os.environ.get("LEVEL", "5"))
 NSHARDS = int(os.environ.get("NSHARDS", "2400"))
 OUT_SUFFIX = os.environ.get("OUT_SUFFIX", "_L%d" % LEVEL)
-TOP_RUNG = 223                      # B[11]; parity makes the rungs odd
+TOP_RUNG = 223                      # B[11] at the full cap; parity makes the rungs odd
+
+# SEARCH_TOP is the cap the SEARCH runs under, which from Oct 5 is 221 rather
+# than 223.  The rows this changes: NONE.  Proof, then measurement.
+#
+#   For an 11-set of antisum T, the eleven 10-element subsets have antisums
+#   summing to 9T -- each pair lies in 9 of the 11 subsets -- so the cheapest
+#   is at most floor(9T/11).  Prefix-minimality (clause 2 of the node-keep
+#   predicate) forces the LAST element added to be the one of greatest
+#   cumulative cost, so a_1..a_10 IS that cheapest subset.  Hence every row at
+#   T <= 221 has prefix antisum <= floor(9*221/11) = 180, which is exactly the
+#   rung-10 bound the lower cap produces.  Levels 2..9 of the staircase are
+#   unchanged, so the level-5 frontier, the shard assignment and zpredict's
+#   predictions are all untouched.
+#
+#   Measured on shard 295, both caps, same host, 35,279 rows each:
+#   byte-identical sorted output, identical to the committed low_295.txt,
+#   histograms equal at 219 and 221 (12 and 35,267) with only the 223 bin
+#   gone.  4,119,232,658 nodes in 457.05 s became 424,846,008 in 50.34 s:
+#   9.70x fewer nodes, 9.08x faster.
+#
+# WHAT IS GIVEN UP: the 223 count in each certificate's histogram.  Those rows
+# were never stored, so a 223 census always needed its own sweep; but the
+# cumulative histogram's 223 entry now STOPS GROWING at shard 489, and must
+# not be read as a statement about shards swept after it.  Certificates record
+# `search_top` so a reader can tell which cap produced them.
+SEARCH_TOP = int(os.environ.get("TOP", "221"))
 THREADS = int(os.environ.get("THREADS", "0")) or (os.cpu_count() or 1)
 WALL = float(os.environ.get("WALL", "4800"))    # stop STARTING shards after this;
                                                # the job cap is ~7,080 s, so this leaves
@@ -91,6 +117,7 @@ def run_shard(i):
     r = subprocess.run([str(EXE), "-m", str(M), "-n", str(N),
                         "-startfile", str(FRONTIER), "-shard", str(i), "-of", str(NSHARDS),
                         "-threads", str(THREADS),
+                        "-top", str(SEARCH_TOP),
                         "-survmax", str(TOP_RUNG - 2), "-survivors", str(low)],
                        capture_output=True, text=True)
     if r.returncode != 0:
@@ -108,6 +135,7 @@ def run_shard(i):
     else:
         low.replace(final)                 # atomic rename, after the check above
     rec = dict(shard=i, of=NSHARDS, m=M, n=N, level=LEVEL, complete=True,
+               search_top=SEARCH_TOP,
                prefixes_done=d["prefixes_done"], level_counts=d["level_counts"],
                total_nodes=d["total_nodes"], leaves=d["leaves"],
                elapsed_s=round(d["elapsed_s"], 2), core_seconds=round(d["core_seconds"], 2),
