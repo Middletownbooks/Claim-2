@@ -1,0 +1,36 @@
+219 orbit: 5040 distinct vertex-supports, each of 10 vertices
+exact test per configuration: is any of them a subset of the achievable set?
+
+    5000 configs, best-match histogram {4: 1, 5: 1508, 6: 3084, 7: 397, 8: 10}, ceiling 8 of 10, 90s
+   10000 configs, best-match histogram {4: 1, 5: 3046, 6: 6131, 7: 801, 8: 21}, ceiling 8 of 10, 181s
+   15000 configs, best-match histogram {4: 1, 5: 4605, 6: 9156, 7: 1200, 8: 38}, ceiling 8 of 10, 274s
+   20000 configs, best-match histogram {4: 2, 5: 6086, 6: 12263, 7: 1592, 8: 57}, ceiling 8 of 10, 366s
+   25000 configs, best-match histogram {4: 2, 5: 7624, 6: 15311, 7: 1988, 8: 75}, ceiling 8 of 10, 454s
+   30000 configs, best-match histogram {4: 2, 5: 9164, 6: 18355, 7: 2386, 8: 93}, ceiling 8 of 10, 543s
+   35000 configs, best-match histogram {4: 3, 5: 10622, 6: 21496, 7: 2781, 8: 98}, ceiling 8 of 10, 630s
+   40000 configs, best-match histogram {4: 3, 5: 12153, 6: 24576, 7: 3163, 8: 105}, ceiling 8 of 10, 719s
+   45000 configs, best-match histogram {4: 3, 5: 13667, 6: 27661, 7: 3549, 8: 120}, ceiling 8 of 10, 808s
+   50000 configs, best-match histogram {4: 3, 5: 15147, 6: 30746, 7: 3966, 8: 138}, ceiling 8 of 10, 895s
+   55000 configs, best-match histogram {4: 4, 5: 16686, 6: 33808, 7: 4349, 8: 153}, ceiling 8 of 10, 982s
+   60000 configs, best-match histogram {4: 4, 5: 18121, 6: 36951, 7: 4763, 8: 161}, ceiling 8 of 10, 1068s
+   65000 configs, best-match histogram {4: 4, 5: 19604, 6: 40045, 7: 5173, 8: 174}, ceiling 8 of 10, 1156s
+   70000 configs, best-match histogram {4: 4, 5: 21076, 6: 43136, 7: 5593, 8: 191}, ceiling 8 of 10, 1244s
+   75000 configs, best-match histogram {4: 4, 5: 22560, 6: 46262, 7: 5963, 8: 211}, ceiling 8 of 10, 1333s
+   80000 configs, best-match histogram {4: 4, 5: 24036, 6: 49365, 7: 6372, 8: 223}, ceiling 8 of 10, 1426s
+   85000 configs, best-match histogram {4: 7, 5: 25582, 6: 52426, 7: 6749, 8: 236}, ceiling 8 of 10, 1516s
+   90000 configs, best-match histogram {4: 7, 5: 27146, 6: 55437, 7: 7161, 8: 249}, ceiling 8 of 10, 1604s
+   95000 configs, best-match histogram {4: 7, 5: 28661, 6: 58521, 7: 7549, 8: 262}, ceiling 8 of 10, 1691s
+  100000 configs, best-match histogram {4: 7, 5: 30143, 6: 61648, 7: 7927, 8: 275}, ceiling 8 of 10, 1782s
+
+=== 100000 configurations in 1782s: NO configuration admits the 219 class ===
+best-match histogram (vertices achieved by the luckiest orbit member):
+    4 of 10 :       7 configurations (0.007%)
+    5 of 10 :   30143 configurations (30.143%)
+    6 of 10 :   61648 configurations (61.648%)
+    7 of 10 :    7927 configurations (7.927%)
+    8 of 10 :     275 configurations (0.275%)
+ceiling reached: 8 of 10
+
+Each verdict is EXACT for its configuration. It is NOT a proof: the achievable
+set is not an order-type invariant, so there is no finite family to exhaust, and
+none of this speaks to drawings with curved edges.
