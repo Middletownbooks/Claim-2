@@ -55,15 +55,20 @@ one genuinely stronger relaxation -- and, failing both, a rigorous write-up of
    complete bipartite crossing number currently known.**  Closing the last 2
    requires new mathematics, not a better search.
 
-2. **Start with the literature, not with code (R0).**  The gate run settles a
-   question the bound raises: the minimum antisum over (7,7)-sets is exactly 79
-   (`./c/zsearch -m 7 -n 7` gives 809,438 multisets at 79; `-top 77` gives none)
-   while cr(K_{7,7}) = 81.  **The pairwise bound falls two short at m = 7 too,
-   and Woodall proved 81 anyway** -- and not by subset counting either: all
-   809,438 of those minimum multisets screen to bound 79, every one with deficit
-   zero.  Whatever ruled them out at K_{7,7} is the missing ingredient, and at
-   K_{7,11} the mixed bound has brought the gap to the same size: exactly 2.
-   Read Woodall 1993, J. Graph Theory 17(6) 657-671, before writing more code.
+2. **The main line: Woodall's Theorem 6(c), one rung up.  Read `THEOREM6C.md`.**
+   The gap of 2 that `PROOF_223.md` could not close is the same gap Woodall
+   faced at K_{7,7} (minimum antisum 79, cr = 81), and his closing device is the
+   **augmented antisum** of Theorem 6(c): f(M) = Abar(M) + 2*floor(2t/((m-2)(m-3)))
+   where t counts the (4,n)-subsets that are not pseudo-tight.  It is implemented
+   and validated here against his published figures, and sharpened -- the bad
+   pairs form a hitting set of the non-pseudo-tight subsets, so the floor can be
+   replaced by the exact minimum transversal tau.  **The antisum-219 orbit has
+   t = 103 and tau = 8, so it needs at least 235 crossings: it is dead.**
+   What remains is antisum 221 (tau >= 2 over 53.5M rows) and antisum 223
+   (tau >= 1 over ~6.9e10 sets, never enumerated).  The 223 condition is only
+   "at least one non-pseudo-tight (4,7)-subset", which is a depth-4 predicate
+   and belongs inside the C search, as Woodall did at (9,7).  **Settling it
+   settles cr(K_{7,11}) = 225.**  This is the task.
 3. **Rotation-dependent triple bounds** (R2).  The LP's weakest input is the
    clamp cr(K_{7,3}) = 9.  Any lower bound c3(a,b,c) above max(9, antisum) for
    the true minimum over good drawings of K_{7,3} with those rotations tightens

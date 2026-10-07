@@ -115,26 +115,34 @@ lex-minimality reductions are not implemented there.  Second, the method: the
 falsification step was listed as task 1 precisely because it was cheap and
 decisive, and it paid within the hour.  Keep doing that.
 
-### R0 -- read Woodall 1993 first.  The highest-value step, and it is not a computation.
+### R0 -- DONE.  The paper was read, the device found, and the 219 orbit is dead.
 
-The gate run answers the question this bound raises.  `./c/zsearch -m 7 -n 7`
-gives `antisum_histogram {"79": 809438}`, and `-top 77` gives no leaves, so **the
-minimum antisum over (7,7)-sets is exactly 79 while cr(K_{7,7}) = 81.**  The
-pairwise bound falls two short at m = 7 as well, and Woodall proved 81 anyway --
-so his argument is not the antisum.  Nor is it subset counting: dumping all
-809,438 minimum multisets with `-survivors` and screening them gives
-`bound 79: 809438`, **every one with deficit zero** against the Kleitman clamps.
+The question `PROOF_223.md` raised -- the minimum antisum at m = 7 is 79 while
+cr(K_{7,7}) = 81, so what closed that gap of 2? -- is answered.  The page images
+of Woodall 1993 were recovered from this session's transcript and read directly.
+The device is **Theorem 6(c)**, the augmented antisum, and `THEOREM6C.md` records
+it in full with the definitions of tight and pseudo-tight.  It is implemented in
+`theorem6c.py`, validated against his published figures (the four CO_4 antipath
+family sizes exactly; the (4,6) example exactly; and the minimum of t over 150
+sampled antisum-79 (7,7)-sets is **10**, matching his stated "at least 10"), and
+sharpened: his counting term is a floor where an exact minimum transversal
+belongs, since the bad pairs form a hitting set of the non-pseudo-tight
+(4,7)-subsets.
 
-> Whatever ruled out those 809,438 classes at K_{7,7} is the missing ingredient,
-> and at K_{7,11} the mixed bound has already brought the gap to the same size:
-> exactly 2.
+For the antisum-219 orbit: t = 103, **tau = 8** (LP 7.695, greedy 8, no
+7-element transversal), so **any good drawing with that rotation multiset has at
+least 235 crossings.**  The orbit that capped every bound this programme
+produced, including `PROOF_223.md`'s 223, is eliminated.
 
-J. Graph Theory 17(6) 657-671.  Read it before writing more code.  Two untested
-guesses worth holding while reading: a realisability condition on which pairs can
-simultaneously attain their antidistance in one drawing (the 28-of-55
-measurement says simultaneous pair-optimality is the real obstruction), or a
-parity/counting argument on triples that the pairwise relaxation discards --
-which is what R2 and R3 below are groping toward.
+**This is now the main line, and it is Woodall's fifth program one rung up.**
+What remains: antisum 221 (53,513,134 rows) needs tau >= 2, and antisum 223
+(~6.9e10, never enumerated) needs only tau >= 1 -- at least one non-pseudo-tight
+(4,7)-subset.  That is a depth-4 condition, so it belongs in the C search as a
+node predicate rather than at the leaves, which is exactly what Woodall did at
+(9,7) when full generation became impracticable (p.666).  Settling it settles
+cr(K_{7,11}) = 225, and K_{7,12} = 270 follows by counting.
+
+Start here.  R2 and R3 below are what to reach for only if it stalls.
 
 ### R2 -- rotation-dependent triple bounds
 
