@@ -112,21 +112,28 @@ combinatorially, the bound
     min over all (11,7)-multisets of the LP optimum  =  223
 
 is exact.  Going further needs a constraint that is not in this family.  Three
-candidates, in decreasing order of how well we understand them:
+candidates were considered; the second has since been tried and closed.
 
 1. **Rotation-dependent triple bounds.**  Replace `cr(K_{7,3}) = 9` with
    c3(a,b,c), the true minimum over good drawings of K_{7,3} with those three
    rotations.  Any c3 above max(9, antisum) tightens the LP directly.  This is
    new topological input, not a re-use of what we have.
-2. **The other side of the drawing.**  The seven 11-stars give 21 pairs in
-   CO_11 (3,628,800 vertices, 11-regular, eccentricity 25, dbar(a,a) = 25 =
-   Z(11); `c/co11.c` maps it in six seconds).  That bound is independent of
-   everything above, and because the joint LP over both sides with
-   sum(x) = sum(y) separates when the two rotation systems are left uncoupled,
-   what matters is exactly: **is the minimum of the CO_11 seven-star antisum
-   above 223?**  The staircase there is 223 -> 159 -> 106 -> 63 -> 31 -> 10, so
-   every pair must have dbar <= 10, which is a ball of 289,763 of the 3.6M
-   vertices.  `c/co11min.c` is the heuristic probe.
+2. **The other side of the drawing -- TRIED, AND IT GIVES 223 TOO.**  The seven
+   11-stars give 21 pairs in CO_11 (3,628,800 vertices, 11-regular, eccentricity
+   25, dbar(a,a) = 25 = Z(11); `c/co11.c` maps it in six seconds), and Woodall's
+   bound applies there as well, independently of everything above.  Exact
+   coordinate descent over all 3.6M candidates per position (`c/co11min.c`)
+   landed on 225 in 22 of 24 random restarts -- and then one restart returned
+   **223**, re-verified by `c/co11check.c`, which runs a fresh breadth-first
+   search from each of the seven vertices and shares no query code with the
+   minimiser: antisum 223, dbar matrix symmetric, every diagonal 25.  On that
+   side the mixed bound adds **nothing**: no subset of the seven is below its
+   Kleitman clamp (cr(K_{k,11}) = Z(k)Z(11) for k <= 6), so the deficit is 0 and
+   the counting recursion also returns 223.  The joint bound over both sides is
+   therefore max(223, 223) = 223.  **This route is closed.**  What it bought is
+   a sharper statement of where the method dies: 223 is the ceiling of Woodall's
+   pairwise bound on *either* side of K_{7,11}, combined with every complete
+   bipartite crossing number currently known.
 3. **Non-realisability.**  Killing the 219 orbit now buys nothing by itself:
    45,688,474 rows at antisum 221 also sit at 223, and the 223-antisum level
    (about 6.9e10 multisets, never enumerated) sits at 223 for free.  The

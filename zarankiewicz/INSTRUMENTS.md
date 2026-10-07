@@ -154,3 +154,33 @@ sample size is instrument 18's shape again.
     about a record of the world rather than the world. `git log -1` against the HEAD a prompt
     names cannot be fooled by a preserved timestamp; a shard count on disk cannot be fooled by a
     late delivery.
+
+## Instrument 24: a heuristic that keeps returning the same value
+
+`c/co11min.c` does exact coordinate descent on the CO_11 side -- each of seven
+positions replaced by its global best over all 3,628,800 candidates.  Twenty-two
+of twenty-four random restarts returned exactly 225, the conjectured value, and
+one returned 227.  On that evidence the route looked like a proof of
+Zarankiewicz for K_{7,11}, and this session came close to writing it up that way
+in the handoff document.
+
+The twenty-fourth restart returned **223**, re-verified independently.
+
+The failure is not the heuristic; coordinate descent is exact in each coordinate
+and converges to a local optimum, which is all it ever claimed.  The failure was
+reading a repeated local optimum as the global one.  Twenty-two agreements say
+the basin around 225 is large, which is exactly what you would expect of the
+conjectured optimum whether or not anything beats it, so the agreement carried
+almost no information about the minimum.
+
+The rule, which is the same rule as the 40-configuration realisability fiasco
+from the other direction: **a search that only ever returns upper bounds tells
+you nothing about the lower bound, no matter how many times it agrees with
+itself.**  Price the falsification before quoting the agreement -- here it cost
+one more batch of restarts on an idle core.
+
+Corollary for write-ups: when a result would be load-bearing, try to break it
+before documenting it, not after.  The handoff prompt had listed falsification
+as task 1 for the next instance; doing it immediately instead cost half an hour
+and saved sending out a document built on a wrong lead.
+
