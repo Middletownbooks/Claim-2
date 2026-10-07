@@ -1,5 +1,10 @@
 # cr(K_{7,11}) >= 223
 
+> **Superseded.**  `THEOREM6C.md` and `THEOREM6C_SWEEP.md` go past this bound
+> with Woodall's Theorem 6(c), which is outside the family this document's
+> ceiling applies to, and reach cr(K_{7,11}) = 225.  This document stands as
+> the record of the mixed bound and of why it stops at 223.
+
 The completed sweep proved that some (11,7)-set has antisum 219, which is a
 ceiling on the pairwise method, not loose arithmetic: no amount of care with
 antidistances alone can reach 225.  This document records a bound that goes
@@ -136,8 +141,8 @@ candidates were considered; the second has since been tried and closed.
    bipartite crossing number currently known.
 3. **Non-realisability.**  Killing the 219 orbit now buys nothing by itself:
    45,688,474 rows at antisum 221 also sit at 223, and the 223-antisum level
-   (about 6.9e10 multisets, never enumerated) sits at 223 for free.  The
-   realisability route would have to clear all of it.
+   (about 3.4e11 multisets -- not 6.9e10, see `INSTRUMENTS.md` instrument 25)
+   sits at 223 for free.  The realisability route would have to clear all of it.
 
 ## Woodall already closed a gap of exactly 2, and not this way
 

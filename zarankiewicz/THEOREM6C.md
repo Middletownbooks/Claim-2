@@ -126,20 +126,18 @@ Note what this does to `PROOF_223.md`: its ceiling of 223 was set by this orbit,
 and the orbit is gone.  The lower bound is now whatever the 221 and 223 levels
 give.
 
-## What remains, and it is Woodall's fifth program one rung up
+## What remained -- and it is now done (`THEOREM6C_SWEEP.md`)
 
 | antisum | sets | needs | status |
 |---|---|---|---|
-| 219 | one orbit | *τ* ≥ 3 | **done, *τ* = 8** |
-| 221 | 53,513,134 rows | *τ* ≥ 2 | sampling; first samples *t* ≈ 91, *τ* = 8 |
-| 223 | ~6.9 × 10¹⁰, never enumerated | *τ* ≥ 1 | the open computation |
+| 219 | one orbit, 976 rows | *τ* ≥ 3 | **done, *τ* = 8** |
+| 221 | 53,513,134 rows | *τ* ≥ 2 | **done: every row has *τ* ≥ 2** (stage A) |
+| 223 | ~3.4 × 10¹¹ (not 6.9 × 10¹⁰: instrument 25), never stored | *τ* ≥ 1 | **done: 0 survivors** (stage B, 256 shards) |
 | ≥ 225 | — | — | immediate |
 
-The 223 level needs only *τ* ≥ 1 — that is, **at least one non-pseudo-tight
-(4,7)-subset**, which is why it is not hopeless at 10¹¹ sets: a counterexample
-must have *every* one of its 330 (4,7)-subsets pseudo-tight, and that is a
-depth-4 condition.  Folding it into the sweep as a node predicate prunes at
-level 4 rather than at the leaves, which is exactly what Woodall did at (9,7):
+The 223 level needed only *τ* ≥ 1 — **at least one non-pseudo-tight
+(4,7)-subset** — and that is a depth-4 condition, so it went into the C search
+as a node predicate, exactly as Woodall did at (9,7):
 
 > *"It was clearly not going to be practicable to generate all (9,7)-sets with
 > antisum less than 144 = Z(9)Z(7), and so in the fifth and final program the
@@ -147,10 +145,10 @@ level 4 rather than at the leaves, which is exactly what Woodall did at (9,7):
 > possible any set that, despite having a sufficiently small antisum, could not
 > correspond to a counterexample."* (p.666)
 
-**So the remaining work is a known programme with a known shape**: precompute
-pseudo-tightness for the (4,7)-classes that can occur, put the predicate in the
-C search at depth 4, and re-run the sweep at top 223.  What it would settle is
-cr(K_{7,11}) = 225, and K_{7,12} = 270 follows by counting.
+The same code reproduces that fifth program — 0 survivors over every (9,7)-set
+of antisum ≤ 142, in 2.6 minutes — and then finds 0 antisum-223 (11,7)-sets with
+all 330 (4,7)-subsets pseudo-tight.  **Result: cr(K_{7,11}) = 225**, with the
+caveats in `THEOREM6C_SWEEP.md`.
 
 ## Reproducing
 
@@ -163,9 +161,8 @@ python3 theorem6c.py --class 0,0,15,74,105,438,569,647,660,671,689
 
 * *τ* is computed from *t* under the conservative reading, so the bound is valid;
   a sharper reading could only raise it.
-* The (7,7) control samples 150 of 809,438 rows.  It establishes that the
-  implementation reproduces Woodall's stated minimum, not that his 13,448
-  classes all have *t* ≥ 10 — that is his result, not re-run here.
-* The 221 and 223 levels are **not** done.  Nothing here claims
-  cr(K_{7,11}) = 225; it claims one orbit is excluded and names the computation
-  that would finish the job.
+* The (7,7) control here samples 150 of 809,438 rows.  `THEOREM6C_SWEEP.md`
+  later ran all 809,438 through the C implementation: minimum *t* = 10 exactly,
+  and every one has *τ* ≥ 3.
+* The 221 and 223 levels were finished afterwards, in `THEOREM6C_SWEEP.md`;
+  this document's own claim is the 219 orbit.

@@ -2,7 +2,39 @@
 
 Everything below is either a theorem with a citation, a computation in this
 repository with the command to re-run it, or explicitly flagged as a guess.
-Read `PROOF_223.md` next; this file is the map.
+This file is the map.
+
+## Status, 7 October 2026: cr(K_{7,11}) = 225, computer-assisted
+
+**Read `THEOREM6C_SWEEP.md` first.**  Woodall's Theorem 6(c), sharpened from a
+floor to an exact minimum transversal tau, gives crossings >= antisum + 2 tau
+for every good drawing (`THEOREM6C.md`).  It was run over every (11,7)-set that
+the pairwise bound left open:
+
+* **Stage A**: every one of the 53,514,110 stored rows of antisum 219 and 221
+  has antisum + 2 tau >= 225.  No failing row.
+* **Stage B**: the antisum-223 level, about 3.4e11 sets that were never stored,
+  was searched again with "has a non-pseudo-tight (4,7)-subset" as a node
+  predicate.  That took 256 shards and 8.7 core-hours, and left **0
+  survivors**.
+
+So cr(K_{7,11}) >= 225 = Z(7)Z(11), and cr(K_{7,12}) = 270 by counting.  The
+same code reproduces both of Woodall's computer results as controls:
+cr(K_{7,7}) >= 81 in 2 s and cr(K_{7,9}) >= 144 in 2.6 min.  Positive controls
+show that the predicate keeps millions of sets at the true crossing numbers,
+including the Zarankiewicz drawing's own multisets.
+
+**The next task is independent verification, not more search.**  The pruned
+search exists in one C implementation.  Pseudo-tightness was cross-checked
+against an independent Python implementation, but the tree code was not.  Write
+stage B again from the definitions in `THEOREM6C.md`, in a different language
+or at least without reading `c/search6c.c`, and check that it also finds 0.
+Then repeat the literature check with full-text access: this session's egress
+proxy blocked the PDFs.  Only after both should anyone call it a theorem.
+
+After that, the nearest open cases are K_{7,13} (Z = 324; counting from
+K_{7,12} gives only 320) and K_{9,9} (Z = 256, which needs CO_9 and
+(4,9)-pseudo-tightness).
 
 ## The question
 
@@ -26,8 +58,8 @@ enormous bound.
 |---|---|
 | 219 | min antisum over (11,7)-sets -- this repo's completed sweep |
 | 220 | elementary counting from cr(K_{7,9}) = 144: 55 * 144 / 36 |
-| **223** | **`PROOF_223.md`: antisums plus the known cr(K_{7,k}), by LP** |
-| 225 | the target |
+| 223 | `PROOF_223.md`: antisums plus the known cr(K_{7,k}), by LP -- the ceiling of that method |
+| **225** | **`THEOREM6C_SWEEP.md`: antisum + 2 tau, Woodall's Theorem 6(c) sharpened, over every set** |
 
 Note the ordering: **219 never was the state of the art.**  The pairwise
 antidistance bound is *weaker* than elementary counting for this case.  Quote
@@ -41,7 +73,9 @@ shard = frontier index mod 2400.  Global antisum histogram:
     219: 976 rows (one orbit: 5040 members, 70 containing vertex 0, 13 surviving
          the canonical rules, 976 rows over 130 level-5 prefixes)
     221: 53,513,134 rows
-    223: 68,680,444,390
+    223: 68,680,444,390 -- from the 489 shards that ran at top 223 ONLY; the
+         other 1,911 ran at top 221.  The level is about 3.4e11 sets
+         (`INSTRUMENTS.md` instrument 25).
 
 **Nothing below 219 anywhere.**  Rows are in `sweep_L5/low_*.txt` (2.2 GB, all
 tracked in git -- a fresh clone has the data; use `--depth 1`), certificates in
@@ -115,7 +149,7 @@ lex-minimality reductions are not implemented there.  Second, the method: the
 falsification step was listed as task 1 precisely because it was cheap and
 decisive, and it paid within the hour.  Keep doing that.
 
-### R0 -- DONE.  The paper was read, the device found, and the 219 orbit is dead.
+### R0 -- DONE.  The paper was read, the device found, and the 219 orbit is dead -- and then everything else.
 
 The question `PROOF_223.md` raised -- the minimum antisum at m = 7 is 79 while
 cr(K_{7,7}) = 81, so what closed that gap of 2? -- is answered.  The page images
@@ -135,14 +169,12 @@ least 235 crossings.**  The orbit that capped every bound this programme
 produced, including `PROOF_223.md`'s 223, is eliminated.
 
 **This is now the main line, and it is Woodall's fifth program one rung up.**
-What remains: antisum 221 (53,513,134 rows) needs tau >= 2, and antisum 223
-(~6.9e10, never enumerated) needs only tau >= 1 -- at least one non-pseudo-tight
-(4,7)-subset.  That is a depth-4 condition, so it belongs in the C search as a
-node predicate rather than at the leaves, which is exactly what Woodall did at
-(9,7) when full generation became impracticable (p.666).  Settling it settles
-cr(K_{7,11}) = 225, and K_{7,12} = 270 follows by counting.
-
-Start here.  R2 and R3 below are what to reach for only if it stalls.
+What remained was antisum 221 (53,513,134 rows), which needs tau >= 2, and
+antisum 223 (about 3.4e11 sets, never stored), which needs only tau >= 1, i.e.
+at least one non-pseudo-tight (4,7)-subset.  **Both are now done**, the second
+as a node predicate in the C search, which is what Woodall did at (9,7)
+(p.666).  See `THEOREM6C_SWEEP.md`.  R2 and R3 below are not needed for
+K_{7,11}; they are kept for the next cases.
 
 ### R2 -- rotation-dependent triple bounds
 
@@ -175,7 +207,7 @@ Do not restart this.  Two independent reasons:
   and the complete catalogue of order types stops at 11.
 * **It would not pay.**  Killing the 219 orbit buys nothing on its own:
   45,688,474 rows at antisum 221 also sit at 223, and the entire 223-antisum
-  level (about 6.9e10 multisets, never enumerated) sits at 223 for free.
+  level (about 3.4e11 multisets, never stored) sits at 223 for free.
 * For the record, 100,000 exact per-configuration tests found no straight-line
   configuration admitting the 219 class; best-match histogram
   `4:7, 5:30143, 6:61648, 7:7927, 8:275, 9:0, 10:0`.  **Whether that is
@@ -214,6 +246,15 @@ python3 zpredict.py --selftest                           # 7.7 s
 python3 verify_219.py
 cc -O2 -o c/co11 c/co11.c && ./c/co11                    # 6 s
 cc -O2 -o c/co11min c/co11min.c && ./c/co11min 8         # minutes; expect 225
+
+# Theorem 6(c) -- THEOREM6C_SWEEP.md
+./c/ptcheck -selftest                                    # CO_4 families 1758 / 282
+./c/zsearch -m 7 -n 7 -survivors m7.txt && ./c/ptcheck < m7.txt   # min t = 10
+./c/zsearch6c -m 7 -n 7 -tmin 79 -check                  # 0 survivors (K_{7,7} >= 81)
+./c/zsearch6c -m 7 -n 7 -tmin 79 -top 81                 # 16,716,814 (positive control)
+python3 stageA.py                                        # 0 of 53,514,110 fail; ~6 core-min
+CHECK=1 FIRST=128 UPTO=129 python3 stageB.py             # one stage-B shard, fully re-verified
+python3 stageB.py summary                                # 256 shards, 0 survivors
 ```
 
 `mixedbound.py --selftest` contains the test that matters: with the cr clamps
@@ -223,10 +264,12 @@ counting therefore cannot inflate the bound silently.
 
 ## Before calling any of it new
 
-Check Woodall 1993 (J. Graph Theory 17(6) 657-671) and
-de Klerk-Maharry-Pasechnik-Richter-Salazar on SDP bounds for cr(K_{m,n}).  The
-minimum antisum for (11,7)-sets may already be published; so may the mixed
-bound.  This programme has not done that literature check.
+Woodall 1993 has been read (`THEOREM6C.md`).  A search-engine pass on
+7 October 2026 found nothing that settles K_{7,11} or computes the minimum
+antisum of (11,7)-sets.  De Klerk et al. 2006 give cr(K_{7,n}) >= 2.1796 n^2 -
+4.5 n, about 214 at n = 11; Brosch-Polak 2023 treat m >= 10; the 2019 survey
+lists K_{7,11} as open.  The PDFs were blocked by the egress proxy, so repeat
+this with full text before publishing (`THEOREM6C_SWEEP.md`, Literature).
 
 ## The discipline this programme runs on
 
