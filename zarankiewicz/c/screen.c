@@ -11,7 +11,7 @@
  *
  *   cc -O2 -o screen screen.c
  *   ./screen A720.bin 225 survivors.txt < rows.txt
- * Reads "T,v0,...,v10" lines; prints a histogram of the bound and writes every
+ * Reads "T,v0,...,v_{m-1}" lines (m taken from the first row, up to 11); prints a histogram of the bound and writes every
  * row whose bound is below the cut to survivors.txt (- to discard).
  */
 #include <stdio.h>
@@ -19,22 +19,23 @@
 #include <string.h>
 #include <stdint.h>
 
-#define M 11
+#define MMAX 11
+static int M = 11;    /* set from the first row; proper subsets are size 3..M-1 */
 #define NV 720
-#define NS (1 << M)
+#define NS (1 << MMAX)
 
 static uint8_t A[NV][NV];
 /* cr(K_{7,k}) for k = 0..10; index 11 is never used as a clamp (open case). */
 static const int CR7[12] = {0, 0, 0, 9, 18, 36, 54, 81, 108, 144, 180, -1};
 static uint8_t pc[NS];
 static int anti[NS];
-static int sub[M][1 << (M - 1)]; /* sub[h][t] = sum over j in t of W[h][j] */
+static int sub[MMAX][1 << (MMAX - 1)]; /* sub[h][t] = sum over j in t of W[h][j] */
 
-static int sizehist[12][12];   /* [subset size that gave the max deficit][deficit] */
+static int sizehist[12][16];   /* [subset size that gave the max deficit][deficit] */
 
 static inline int bound_for(const int *v, int *Tout, int *bestk)
 {
-    int W[M][M], i, j, h, t, s, T = 0;
+    int W[MMAX][MMAX], i, j, h, t, s, T = 0;
     for (i = 0; i < M; i++)
         for (j = 0; j < M; j++)
             W[i][j] = (i == j) ? 0 : A[v[i]][v[j]];
@@ -51,20 +52,22 @@ static inline int bound_for(const int *v, int *Tout, int *bestk)
     }
     anti[0] = 0;
     for (i = 0; i < M; i++) anti[1 << i] = 0;
+    for (i = 0; i < M; i++) for (j = 0; j < M; j++) (void)W[i][j];
     int best = 0, bk = 0;
-    for (s = 3; s < NS; s++) {
+    int lim = 1 << M;
+    for (s = 3; s < lim; s++) {
         if (pc[s] < 2) continue;
         h = 31 - __builtin_clz(s);
         int sp = s ^ (1 << h);
         anti[s] = anti[sp] + sub[h][sp];
-        if (pc[s] >= 3 && pc[s] <= 10) {
+        if (pc[s] >= 3 && pc[s] <= M - 1 && CR7[pc[s]] > 0) {
             int d = CR7[pc[s]] - anti[s];
             if (d > best) { best = d; bk = pc[s]; }
         }
     }
     *Tout = T;
     *bestk = bk;
-    if (bk && best < 12) sizehist[bk][best]++;
+    if (bk && best < 16) sizehist[bk][best]++;
     return T + best;
 }
 
@@ -91,7 +94,7 @@ int main(int argc, char **argv)
         while (p < end) {
             char *nl = memchr(p, '\n', (size_t)(end - p));
             if (!nl) break;
-            int v[M], claimed = 0, k = 0;
+            int v[MMAX], claimed = 0, k = 0;
             char *q = p;
             long x = 0; int any = 0, field = 0;
             while (q <= nl) {
@@ -99,13 +102,14 @@ int main(int argc, char **argv)
                 else {
                     if (any) {
                         if (field == 0) claimed = (int)x;
-                        else if (k < M) v[k++] = (int)x;
+                        else if (k < MMAX) v[k++] = (int)x;
                         field++;
                     }
                     x = 0; any = 0;
                 }
                 q++;
             }
+            if (rows == 0 && k >= 3 && k <= MMAX) M = k;
             if (k == M) {
                 int T, bk;
                 int b = bound_for(v, &T, &bk);
@@ -127,7 +131,7 @@ int main(int argc, char **argv)
     fprintf(stderr, "rows %lld  below %d: %lld\n", rows, cut, surv);
     for (int b = 0; b < 512; b++) if (hist[b]) printf("bound %d: %lld\n", b, hist[b]);
     for (int k = 3; k <= 10; k++)
-        for (int d = 1; d < 12; d++)
+        for (int d = 1; d < 16; d++)
             if (sizehist[k][d]) printf("argmax |S|=%d deficit %d: %d\n", k, d, sizehist[k][d]);
     return 0;
 }

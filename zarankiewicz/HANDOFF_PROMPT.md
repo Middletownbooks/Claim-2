@@ -55,15 +55,24 @@ one genuinely stronger relaxation -- and, failing both, a rigorous write-up of
    complete bipartite crossing number currently known.**  Closing the last 2
    requires new mathematics, not a better search.
 
-2. **Rotation-dependent triple bounds** (R2).  The LP's weakest input is the
+2. **Start with the literature, not with code (R0).**  The gate run settles a
+   question the bound raises: the minimum antisum over (7,7)-sets is exactly 79
+   (`./c/zsearch -m 7 -n 7` gives 809,438 multisets at 79; `-top 77` gives none)
+   while cr(K_{7,7}) = 81.  **The pairwise bound falls two short at m = 7 too,
+   and Woodall proved 81 anyway** -- and not by subset counting either: all
+   809,438 of those minimum multisets screen to bound 79, every one with deficit
+   zero.  Whatever ruled them out at K_{7,7} is the missing ingredient, and at
+   K_{7,11} the mixed bound has brought the gap to the same size: exactly 2.
+   Read Woodall 1993, J. Graph Theory 17(6) 657-671, before writing more code.
+3. **Rotation-dependent triple bounds** (R2).  The LP's weakest input is the
    clamp cr(K_{7,3}) = 9.  Any lower bound c3(a,b,c) above max(9, antisum) for
    the true minimum over good drawings of K_{7,3} with those rotations tightens
    it directly, and only 2 is needed.  This is genuinely new topological input.
-3. **An SDP / sum-of-squares lift** (R3).  219 is the value of a level-1
+4. **An SDP / sum-of-squares lift** (R3).  219 is the value of a level-1
    relaxation; a level-2 lift over triples encodes the local-global consistency
    the pairwise bound throws away, and its dual is a short certificate -- the
    one proof object an exhaustive negative search cannot produce.
-4. **Do not restart the realisability / order-type route** (R4).  It is closed
+5. **Do not restart the realisability / order-type route** (R4).  It is closed
    by measurement (the achievable rotation set is not an order-type invariant:
    30 of 33 repeated order types gave different sizes), and it would not pay
    even if it worked, because the entire 223-antisum level -- about 6.9e10

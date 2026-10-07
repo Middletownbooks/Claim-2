@@ -139,6 +139,42 @@ candidates were considered; the second has since been tried and closed.
    (about 6.9e10 multisets, never enumerated) sits at 223 for free.  The
    realisability route would have to clear all of it.
 
+## Woodall already closed a gap of exactly 2, and not this way
+
+The gate run that verifies the host after a restart turns out to answer the
+question this bound raises.  `./c/zsearch -m 7 -n 7` reports
+`antisum_histogram: {"79": 809438}` with `level_counts`
+`[1, 13, 377, 29099, 801503, 14623179, 809438]`, and `-top 77` returns no leaves
+at all (`level_counts [1, 13, 377, 29099, 801503, 2889575, 0]`).  So
+
+    the minimum antisum over (7,7)-sets is exactly 79,   and cr(K_{7,7}) = 81.
+
+**The pairwise bound falls two short at m = 7 as well, and Woodall proved 81
+anyway.**  His argument therefore is not the antisum, and it is not what this
+document does either: dumping all 809,438 minimum multisets with
+`-survivors` and screening them gives
+
+    rows 809438   bound 79: 809438
+
+-- **every single one has deficit zero** against the Kleitman clamps
+cr(K_{7,k}) = Z(7)Z(k) for k <= 6.  Subset counting cannot close the m = 7 gap,
+exhaustively, so it is no surprise that it stops two short at m = 11 too.
+
+That is the sharpest lead this programme has produced, and it costs a library
+visit rather than a cluster:
+
+> Whatever Woodall 1993 used to rule out the 809,438 antisum-79 classes at
+> K_{7,7} is the missing ingredient, and at K_{7,11} the mixed bound has already
+> brought the gap down to the same size: **exactly 2**.
+
+Read J. Graph Theory 17(6) 657-671 before writing any more code.  Two guesses
+worth holding while reading, neither tested here: that the argument is a
+*realisability* condition on CO_n paths (which pairs can simultaneously attain
+their antidistance in one drawing -- the 28-of-55 measurement says simultaneous
+pair-optimality is the real obstruction), or that it is a parity or counting
+argument on triples that the pairwise relaxation discards, which is also what
+route 1 above and an SDP lift would be reaching for.
+
 ## Reproducing
 
 ```sh
@@ -147,6 +183,10 @@ python3 -c "import sys;sys.path.insert(0,'intake');import cog,numpy as np;
 c=cog.CO(7);np.array(c.antidist_matrix(c.dist_matrix()),dtype=np.uint8).tofile('A720.bin')"
 cc -O2 -o c/screen c/screen.c
 cat sweep_L5/low_*.txt | ./c/screen A720.bin 223 -     # expect "below 223: 0"
+./c/zsearch -m 7 -n 7                                  # min antisum 79, cr = 81
+./c/zsearch -m 7 -n 7 -top 77                          # no leaves: 79 is the min
+./c/zsearch -m 7 -n 7 -survivors m7.txt
+./c/screen A720.bin 81 - < m7.txt                      # all 809438 at bound 79
 
 python3 mixedbound.py --selftest                       # counting arithmetic
 python3 mixedlp.py   --selftest                        # LP >= recursion >= antisum

@@ -66,7 +66,8 @@ is 223 with a single dual variable.  No reweighting of these constraints reaches
 
 ## The routes, with prices
 
-R1 and R4 are closed; R2 and R3 are what is left.  Read the closed ones anyway:
+R1 and R4 are closed.  R0 is a literature read and should come first; R2 and R3
+are the computational routes that remain.  Read the closed ones anyway:
 R1 was closed inside the handoff session, after first looking like the whole
 proof, and the way it fell is the most useful thing in this file.
 
@@ -113,6 +114,27 @@ naive sweep is order 1e14 nodes -- the CO_7 sweep's prefix-minimality and
 lex-minimality reductions are not implemented there.  Second, the method: the
 falsification step was listed as task 1 precisely because it was cheap and
 decisive, and it paid within the hour.  Keep doing that.
+
+### R0 -- read Woodall 1993 first.  The highest-value step, and it is not a computation.
+
+The gate run answers the question this bound raises.  `./c/zsearch -m 7 -n 7`
+gives `antisum_histogram {"79": 809438}`, and `-top 77` gives no leaves, so **the
+minimum antisum over (7,7)-sets is exactly 79 while cr(K_{7,7}) = 81.**  The
+pairwise bound falls two short at m = 7 as well, and Woodall proved 81 anyway --
+so his argument is not the antisum.  Nor is it subset counting: dumping all
+809,438 minimum multisets with `-survivors` and screening them gives
+`bound 79: 809438`, **every one with deficit zero** against the Kleitman clamps.
+
+> Whatever ruled out those 809,438 classes at K_{7,7} is the missing ingredient,
+> and at K_{7,11} the mixed bound has already brought the gap to the same size:
+> exactly 2.
+
+J. Graph Theory 17(6) 657-671.  Read it before writing more code.  Two untested
+guesses worth holding while reading: a realisability condition on which pairs can
+simultaneously attain their antidistance in one drawing (the 28-of-55
+measurement says simultaneous pair-optimality is the real obstruction), or a
+parity/counting argument on triples that the pairwise relaxation discards --
+which is what R2 and R3 below are groping toward.
 
 ### R2 -- rotation-dependent triple bounds
 
