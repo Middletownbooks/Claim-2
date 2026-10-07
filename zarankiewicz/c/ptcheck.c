@@ -93,6 +93,9 @@ int main(int argc, char **argv)
             for (char *tok = strtok(ln, ",\n"); tok && k < 16; tok = strtok(NULL, ",\n")) v[k++] = atoi(tok);
             if (k < 5 || k > 12) continue;
             int T = v[0], m = k - 1, *M = v + 1;
+            int Tre = 0;                        /* read the row itself, not its label */
+            for (int a = 0; a < m; a++) for (int b = a + 1; b < m; b++) Tre += AD(M[a], M[b]);
+            if (Tre != T) { fprintf(stderr, "antisum mismatch: row says %d, rotations give %d\n", T, Tre); return 1; }
             int K = (target - T + 1) / 2;
             if (K < 0) K = 0;
             rows++;

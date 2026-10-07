@@ -184,3 +184,20 @@ before documenting it, not after.  The handoff prompt had listed falsification
 as task 1 for the next instance; doing it immediately instead cost half an hour
 and saved sending out a document built on a wrong lead.
 
+
+## Instrument 25: a histogram bin that stopped growing, read as a total
+
+The handoff quoted the antisum-223 level as "about 6.9e10 multisets, never
+enumerated", from the global histogram's `223: 68,680,444,390`.  That figure
+sums the 223 bin over every certificate -- but `sweep.py` lowered its search cap
+to 221 from shard 489 onwards (its own comment says the 223 entry "STOPS GROWING
+at shard 489, and must not be read as a statement about shards swept after it"),
+and only **489 of 2,400** shards, holding 1,356,486 of the 6,655,827 prefixes, ran
+at top 223.  The level is about **3.4e11** sets, five times the quoted figure.
+
+The warning was in the source and the certificates record `search_top`; the
+aggregate was computed without reading either.  It is rule 4 again -- state the
+denominator -- in the form where the denominator silently changed partway
+through the data.  Found by reading `sweep.py` while pricing stage B; the
+stage-B cost was then measured on sampled prefixes rather than scaled from the
+histogram, so no estimate inherited the error.
