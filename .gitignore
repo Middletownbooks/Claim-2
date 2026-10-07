@@ -16,3 +16,10 @@ leanboard/t/*.log
 leanboard/t/trajectories.json
 __pycache__/
 *.pyc
+
+# zarankiewicz: compiled binaries and the regenerable antidistance table
+zarankiewicz/c/screen
+zarankiewicz/c/co11
+zarankiewicz/c/co11min
+zarankiewicz/c/co11count
+zarankiewicz/A720.bin
