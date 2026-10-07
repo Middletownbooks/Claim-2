@@ -16,6 +16,7 @@ void cog_init(int n);
 void cog_stab_init(void);
 int  cog_stab_drop_identity(void);
 int  Zfun(int n);
+const uint8_t *cog_vertex(int v);
 
 #define AD(a, b) (CO_ad[(size_t)(a) * CO_NV + (b)])
 

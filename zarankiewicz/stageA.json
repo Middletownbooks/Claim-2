@@ -1,0 +1,12 @@
+{
+ "files": 2400,
+ "rows": 53514110,
+ "fails": 0,
+ "pt_calls": 2090075897,
+ "target": 225,
+ "rows_by_tau_needed": {
+  "2": 53513134,
+  "3": 976
+ },
+ "failing_rows": []
+}

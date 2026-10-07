@@ -178,3 +178,6 @@ int cog_stab_drop_identity(void)
 }
 
 int Zfun(int n) { return (n / 2) * ((n - 1) / 2); }
+
+/* read-only access to a vertex's cyclic order (0 leads); used by pt.c for edge labels */
+const uint8_t *cog_vertex(int v) { return vlist[v]; }
