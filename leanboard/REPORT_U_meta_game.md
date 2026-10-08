@@ -145,6 +145,15 @@ to reproduce from the published result alone. That is testable observationally:
 `DIRECTLY OBSERVED` for the three repositories; `DOCUMENTED BY SOURCE` for the
 Hadamard result (see Sources).
 
+> **[8 Oct 2026 — this regularity has now failed three times; read §3 as a fact about four
+> artifacts in September, not a norm.]** `ak/REPORT_AK_zeta_audit.md` §6 documents a disclosed run:
+> ~650 approaches, ~60 subagents, ~31 M output tokens, attribution per agent.
+> `at/REPORT_AT_audit_surface.md` part 2 has OpenAI's full CDC prompt. And `github.com/openai/math`
+> (public 6 Oct) ships abridged reasoning summaries for 10 families, the denominator (~4,000
+> problems posed → 372 families), and a public changelog that withdrew three manuscripts within
+> 31 hours of release. The §9 access experiment is still unrun, but its blocker — *no producing
+> team releases trajectory* — no longer holds. See `../openai-math/RESULT_INTAKE.md` §6.6.
+
 **Four for four.** Every major AI-assisted mathematical result available to
 this programme was published as **T1 — final results only**. Not one released
 construction history, search logs, failed attempts, or lessons.

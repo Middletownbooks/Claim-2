@@ -19,6 +19,7 @@ Shared area. Four documents, one instrument, one dataset.
 | **`classify.py`** | the instrument. Hand-adjudicated verdict table plus the lexical recall sweeps, kept so the candidate pool is auditable |
 | **`classification.json`** | 499 records with class, named witness object, playable / hasWorkspace / quantitative flags, and full `exactTarget` |
 | **`ranking_v16.json`** | the input payload, `proofatlas.open-problem-ranking.top500.v16`, edition 2026-09-19 |
+| `../../openai-math/ranking_overlay.json` | **added 8 Oct 2026.** The openai/math overlay, joined on `problemId`. 79 of the 499 are claimed settled on their exact target, 42 of them at a Lean tier that is the claim. `ranking_v16.json` itself is not edited. Built and checked by `../../openai-math/apply_ranking_overlay.py` |
 
 Regenerate: `python3 classify.py`.
 
@@ -54,6 +55,11 @@ Regenerate: `python3 classify.py`.
    strongest single target is **280, Kaplansky's idempotent conjecture**: an
    unworkspaced P2 record where the adjacent unit conjecture already fell to a
    computer search. See `FEASIBILITY.md`.
+   [8 Oct 2026] **Claimed settled both ways.** True in characteristic 0 (openai/math 207, Lean
+   statement is the claim). False in characteristic 2: family 197's torsion-free group with
+   𝔽₂[G] not directly finite gives ba as a nontrivial idempotent, on paper only. Hadwiger (79) and
+   Sidorenko (257) are claimed refuted by explicit counterexamples, both formal. Read the 35
+   playable records as 29: `../../openai-math/RESULT_INTAKE.md` §3.2, §4.2.
 
 6. **The published interestingness metric (proof length ÷ statement length) cannot see
    this board.** It is at its floor for every finite-witness problem — the Shannon witness

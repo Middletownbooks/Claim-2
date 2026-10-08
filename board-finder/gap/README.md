@@ -15,6 +15,8 @@ are being swept by agent pipelines, so off-list is where the value is.
 | `epoch_exclusions.json` | derived from the transcription by script, not typed twice |
 | `epoch_gate.py` | the diff. Screens 22 live items on distinctive object tokens, then refuses to return a verdict until every collision carries a reasoned adjudication. Two positive controls abort the run if the matcher breaks |
 | `GATE_EPOCH.md` | **the gate result.** PTE 11, MOLS(10) and Costas 32/33 clear; pool items U6 and U7 are on the list and dead; the 3×3-vs-4×4 matmul near-miss; and why Epoch's type tags are a different axis from our screen's |
+| `openai_gate.py` | **the second gate, added 8 Oct 2026.** Screens the same 22 items, plus the three v4 pool candidates, against openai/math's 372 claimed-result families (`../../openai-math/families.json`). It screens on phrases rather than tokens, because the source is prose, and it carries a formal tier per hit that is checked against the family's own Lean scope note. Two positive controls abort the run if the matcher breaks |
+| `GATE_OPENAI.md` | **its result.** Four of 25 are claimed settled: V2, **the v4 thread's live target** (Zarankiewicz, family 165, FORMAL), V1 Hill, U11 Seymour and C6 MUBs. The two instruments that kill on mathematics had already demoted C6 and U11; the crowding screens passed V2 |
 | `register/REGISTER.md` | **the prior-work register — Cycle 0's Task 1, built for the first time.** One row per target this programme selected and worked, each with the binding constraint as a formal proposition and the compute-shaped/theory-shaped verdict Cycle 0 called "the field that decides everything downstream". Six of eight theory-shaped, one compute-shaped with the compute already spent privately by the record's own authors, one bound by priority — and the U13 row shows that being tooled for a problem is not evidence its constraint is compute-shaped. Cycle 0 specified it a lineage ago and could not run it for want of transcripts; it is buildable from committed documents. Its own seven rows stay empty, and §7 says which cell that costs |
 | `register/register_arithmetic.py` | every figure the register prints, re-derived from stated inputs rather than copied — 39 assertions, all passing. Settles the 7-versus-8 discrepancy `../hadamard/bgt2/RESULT_E.md` §2 flagged and left open |
 
@@ -60,3 +62,14 @@ designs, and those five items return no token collision with any of the 41. The 
 *problem* is on TheoremDB and Horizon; the thirteen open orders between 2000 and 3000 are on
 none of the four known databases. That is the one asset on this board the commons has not
 already enumerated.
+
+## A CLEAR from the Epoch gate means "not on one list" [8 Oct 2026]
+
+`GATE_EPOCH.md` and `v4/RESULT_V4.md` §4a cleared candidates against public lists. The second
+cleared Zarankiewicz at K₇,₁₁. This README called the open Hadamard orders the one asset the
+commons had not enumerated. All three statements were about **public** lists. On 6 Oct
+OpenAI published the results of a private evaluation that posed ~4,000 problems. It claimed
+79 of the 499 ranked problems and this branch's live target, which no list check could have
+seen. Run **both** gates before any target starts. The Hadamard-orders claim survives: no
+openai/math family touches the open orders (`GATE_OPENAI.md` §3), and
+`../../openai-math/RESULT_INTAKE.md` §6.2 gives the reason it held: no single theorem decides them.

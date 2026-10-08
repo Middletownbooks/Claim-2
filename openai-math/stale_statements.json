@@ -1,0 +1,957 @@
+{
+ "_note": "Statements in this tree, written 9 Sep - 1 Oct 2026, that an openai/math family (public 6 Oct) now bears on. Located by two repository sweeps run against all 372 families; every quote was checked verbatim against its file by check_stale_quotes.py. Relation labels are the sweeps': CONTRADICTED, LIVE_TARGET_HIT, LABEL_AT_RISK, BOUND_SUPERSEDED, SUBCASE, METHOD. The CONTRADICTED and LIVE_TARGET_HIT rows were reviewed here; the rest are pointers. Dated records and retrodiction encodings listed here are deliberately NOT edited: they record what was known when they were written. RESULT_INTAKE.md sec 5 says which live documents were annotated instead.",
+ "rows": [
+  {
+   "file": "proof-protocol/citations.json",
+   "line": 400,
+   "quote": "the best known separation is quadratic, bs(f) = (2/3)s(f)^2 - (1/3)s(f) (Ambainis-Sun)",
+   "family": "132",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "States the Ambainis-Sun quadratic separation as the best known. Family 132 gives bs(f) >= s(f)^alpha for a fixed alpha > 2, so the quadratic is no longer the best known separation."
+  },
+  {
+   "file": "proof-protocol/CITATIONS.md",
+   "line": 149,
+   "quote": "the best known separation is quadratic, bs(f) = (2/3)s(f)^2 - (1/3)s(f) (Ambainis-Sun)",
+   "family": "132",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "Rendered copy of the citations.json C1-chain row. Same superseded best-known separation claim as family 132."
+  },
+  {
+   "file": "proof-protocol/p1-retrodiction/CEILINGS.md",
+   "line": 134,
+   "quote": "separation is quadratic (Ambainis–Sun: `bs = (2/3)s² − (1/3)s`)",
+   "family": "132",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "Rejected-candidate note in the ceiling register takes the quadratic Ambainis-Sun separation as best known. Family 132 supersedes it with bs >= s^alpha, alpha > 2."
+  },
+  {
+   "file": "proof-protocol/p1-retrodiction/twins/N9-huang-tightness.json",
+   "line": 33,
+   "quote": "so the exponent is open in [2, 4], conjectured 2",
+   "family": "132",
+   "relation": "CONTRADICTED",
+   "reason": "Twin N9 says the exponent is conjectured to be 2. Family 132 disproves the quadratic strengthening of the sensitivity conjecture (bs/s^2 unbounded), so the conjectured value 2 is refuted."
+  },
+  {
+   "file": "proof-protocol/p3-taxonomy/d20/N9-audit-result.md",
+   "line": 97,
+   "quote": "Best known separation overall is",
+   "family": "132",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "The N9 audit cites bs >= (2/3)s^2 - s/3 (Ambainis-Sun) as best known overall. Family 132 gives bs >= s^alpha with alpha > 2, which supersedes it."
+  },
+  {
+   "file": "proof-protocol/p3-taxonomy/d20/N9-audit-result.md",
+   "line": 98,
+   "quote": "in [2, 4]**, conjectured 2.",
+   "family": "132",
+   "relation": "CONTRADICTED",
+   "reason": "Audit states the true exponent is conjectured to be 2. Family 132 disproves the quadratic strengthening, so the conjectured value is refuted and the open range moves above 2."
+  },
+  {
+   "file": "proof-protocol/MEASUREMENTS.md",
+   "line": 161,
+   "quote": "whose exponent is open in **[2, 4]**",
+   "family": "132",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "The open range [2,4] for the sensitivity exponent uses the quadratic Ambainis-Sun separation as its lower end. Family 132 shows bs >= s^alpha for alpha > 2, so the lower end is superseded."
+  },
+  {
+   "file": "proof-protocol/MEASUREMENTS.md",
+   "line": 455,
+   "quote": "quadratic best-known separation and suggests closing it",
+   "family": "132",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "Calls the quadratic separation the best-known one. Family 132 supersedes it with a superquadratic separation."
+  },
+  {
+   "file": "proof-protocol/p3-taxonomy/d20/N9-my-answer-before-audit.md",
+   "line": 66,
+   "quote": "was not closed by it",
+   "family": "132",
+   "relation": "LABEL_AT_RISK",
+   "reason": "States the optimal exponent was not closed by Huang. Family 132 does not settle the optimal exponent, but it refutes the natural value 2 that the question is usually framed around."
+  },
+  {
+   "file": "proof-protocol/p3-taxonomy/d28_bound_strength.json",
+   "line": 42,
+   "quote": "omega <= 2.3715 against a truth in [2, 2.3715]",
+   "family": "107",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "Uses omega <= 2.3715 as the best known upper bound for N16. Family 107 gives omega <= 9/4 over C and omega < 2.371054886 over every fixed field, superseding the figure."
+  },
+  {
+   "file": "proof-protocol/p3-taxonomy/diagnostics.json",
+   "line": 337,
+   "quote": "omega <= 2.37...",
+   "family": "107",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "Records omega <= 2.37 as the bound for N16. Family 107 supersedes it (omega <= 9/4 over C; omega < 2.371054886 over every field)."
+  },
+  {
+   "file": "proof-protocol/p1-retrodiction/prospective/log.jsonl",
+   "line": 3,
+   "quote": "N^{3/5}/log^{2/5} N, by Solymosi-Vu bootstrapping the Guth-Katz planar bound",
+   "family": "166",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "The bound_before for 2608.14454 is stale: REJECTED.json already records N^{2/3-o(1)}, and family 166 gives c_3 n^{2/3} for every n >= 2 in R^3."
+  },
+  {
+   "file": "proof-protocol/p1-retrodiction/prospective/log.jsonl",
+   "line": 3,
+   "quote": "\"phase\": \"open\", \"id\": \"2608.14454\", \"problem\": \"Erdos distinct distances in R^3\"",
+   "family": "166",
+   "relation": "LABEL_AT_RISK",
+   "reason": "The prospective item is logged as open with a sealed prediction. Family 166 determines the order of the R^3 distinct-distance count (c_3 n^{2/3}), so the open phase is at risk."
+  },
+  {
+   "file": "proof-protocol/p1-retrodiction/twins/REJECTED.json",
+   "line": 7,
+   "quote": "proving N^{2/3-o(1)}",
+   "family": "166",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "The rejected R^3 twin rests on a subpolynomial claim. Family 166 gives the full order n^{2/3} with a constant factor, so the bound cited for the R^3 case is superseded."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 832,
+   "quote": "REJECTED — a recent paper claims N^{2/3-o(1)}, so it is not open",
+   "family": "166",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "Failure-register row cites the subpolynomial R^3 claim as the reason the item is not open. Family 166 supersedes that bound with n^{2/3} up to a constant."
+  },
+  {
+   "file": "proof-protocol/ledger.json",
+   "line": 130,
+   "quote": "A search found a recent claim of N^{2/3-o(1)} in R^3.",
+   "family": "166",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "Prediction P-16 records the subpolynomial R^3 claim. Family 166 gives the order c_3 n^{2/3} for every d >= 3."
+  },
+  {
+   "file": "proof-protocol/ledger.json",
+   "line": 361,
+   "quote": "moves the crossing-number survey table from {221,223,225} to 225",
+   "family": "165",
+   "relation": "CONTRADICTED",
+   "reason": "Treats cr(K_{7,11}) as open within {221,223,225}. Family 165 proves cr(K_{m,n}) = floor(m/2)floor((m-1)/2)floor(n/2)floor((n-1)/2) for all m, n, which gives 225 for K_{7,11}."
+  },
+  {
+   "file": "proof-protocol/ledger.json",
+   "line": 361,
+   "quote": "VERIFIES ZARANKIEWICZ'S CONJECTURE, i.e. cr(K7,11) = 225",
+   "family": "165",
+   "relation": "LABEL_AT_RISK",
+   "reason": "Treats Zarankiewicz's crossing-number conjecture at K_{7,11} as a live target to verify. Family 165 proves the conjecture for every K_{m,n}, so the target and its computational programme are superseded."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 696,
+   "quote": "proving 225 would be NON-EXISTENCE, which is excluded",
+   "family": "165",
+   "relation": "LABEL_AT_RISK",
+   "reason": "Treats Hill's conjecture for K_{7,11} as an open target that the gate must classify. Family 165 proves the Harary-Hill formula and the Zarankiewicz formula for every complete and complete bipartite graph."
+  },
+  {
+   "file": "proof-protocol/ledger.json",
+   "line": 422,
+   "quote": "The open question is whether Woodall's conjecture repairs by conditioning on (k,n)-subsets for k > 4",
+   "family": "165",
+   "relation": "LABEL_AT_RISK",
+   "reason": "States an open question on the Zarankiewicz programme. Family 165 settles the crossing numbers of all K_{m,n}; if Woodall's conjecture is the cyclic-order form of the same statement, it is implied. The digest does not say which."
+  },
+  {
+   "file": "proof-protocol/ledger.json",
+   "line": 338,
+   "quote": "Barker: ratio 2000, same author extending his own method four years later.",
+   "family": "179",
+   "relation": "LABEL_AT_RISK",
+   "reason": "Cites the Barker-sequence board as a record-divergence example, i.e. a live board. Family 179 states Barker sequences of length > 1 exist exactly at lengths 2, 3, 4, 5, 7, 11, 13 (the Barker conjecture); its Lean scope formalizes the even-length part only."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 663,
+   "quote": "Hadamard (4 files incl. a circulant-Hadamard arXiv entry)",
+   "family": "179",
+   "relation": "LABEL_AT_RISK",
+   "reason": "Circulant Hadamard is one of the programme's own candidates (4 hits in the DeepMind repository, including a circulant-Hadamard arXiv entry). Family 179 proves the circulant Hadamard conjecture: real circulant Hadamard matrices exist only in orders 1 and 4."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 663,
+   "quote": "Mahler (11)",
+   "family": "087",
+   "relation": "LABEL_AT_RISK",
+   "reason": "Mahler is one of the programme's own candidates (11 hits in the DeepMind repository). Family 087 resolves the symmetric and nonsymmetric geometric Mahler conjectures in every dimension."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 663,
+   "quote": "Seymour (2)",
+   "family": "173",
+   "relation": "LABEL_AT_RISK",
+   "reason": "Seymour is one of the programme's candidates (2 hits in the DeepMind repository); the referent is not stated. If it is Seymour's second-neighbourhood conjecture, family 173 proves it for every finite oriented graph."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 663,
+   "quote": "bent functions, Barnette, and ROTA'S BASIS CONJECTURE",
+   "family": "180",
+   "relation": "LABEL_AT_RISK",
+   "reason": "Barnette is one of the programme's own candidates. Family 180 proves Barnette's conjecture: every finite simple cubic bipartite planar 3-vertex-connected graph is Hamiltonian."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 663,
+   "quote": "Zarankiewicz (2)",
+   "family": "165",
+   "relation": "LABEL_AT_RISK",
+   "reason": "Zarankiewicz is one of the programme's own candidates (2 hits in the DeepMind repository). Family 165 proves Zarankiewicz's crossing-number formula for every complete bipartite graph K_{m,n}."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 663,
+   "quote": "IT HAS BEGUN ENUMERATING THE ONE POPULATION THIS PROGRAMME'S TRIAGE TREATS AS A REFUGE",
+   "family": "159",
+   "relation": "METHOD",
+   "reason": "The programme treats unenumerated open problems as a refuge from automated attack. An AI lab's batch of claimed solutions to open problems (openai/math, 372 families) enters the same population; family 159 is representative (an Erdos-named problem)."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 663,
+   "quote": "AlphaProof Nexus (arXiv:2605.22763), reporting 353 open Erdos problems",
+   "family": "166",
+   "relation": "METHOD",
+   "reason": "Counts AI-lab claims on open Erdos problems (353, 700 for Gemini) as the known agent-attacked population. openai/math is not in that count, and family 166 is one of its Erdos-named results."
+  },
+  {
+   "file": "proof-protocol/ledger.json",
+   "line": 404,
+   "quote": "The competitor for an LLM-assisted attack on a small open case is now another LLM-assisted researcher.",
+   "family": "165",
+   "relation": "METHOD",
+   "reason": "The programme's Zarankiewicz crossing-number search is an LLM-assisted attack on a small open case. Family 165 settles the general formula, so the competitor has already published on this target."
+  },
+  {
+   "file": "proof-protocol/debts.json",
+   "line": 542,
+   "quote": "S4 NOT CROWDED passes iff the coupled side has not MOVED since 2025-01-01 by an AI-driven search system or large-scale optimisation tooling",
+   "family": "165",
+   "relation": "METHOD",
+   "reason": "S4 counts only AI-driven search or optimisation as a move. An AI lab's proof of a record-table value (the crossing-number survey table, family 165) is not counted under this definition."
+  },
+  {
+   "file": "proof-protocol/p1-retrodiction/cases/12-geometrization/before.json",
+   "line": 18,
+   "quote": "\"bound_then\": \"The programme was blocked at singularities.\"",
+   "family": "351",
+   "relation": "SUBCASE",
+   "reason": "Family 351 proves that a Ricci flow on a closed 4-manifold extends past any finite time at which scalar curvature stays bounded: a subcase in which the singularity obstruction does not arise. It leaves the collapsing leak and the 3D programme untouched."
+  },
+  {
+   "file": "proof-protocol/p1-retrodiction/CEILINGS.md",
+   "line": 69,
+   "quote": "Cap **1/3** on the exponent *e* in",
+   "family": "159",
+   "relation": "LABEL_AT_RISK",
+   "reason": "The Roth ceiling says exponents above 1/3 are unreachable from Bohr-set density increment. Family 159 proves r_k(N) <= C_k N exp(-c_k (log N)^{eps_k}) for every k >= 3; the digest does not give eps_3, so whether the cap is passed is undetermined."
+  },
+  {
+   "file": "proof-protocol/p1-retrodiction/controls/15-roth-kelley-meka.json",
+   "line": 26,
+   "quote": "1/3, perhaps 1/4, is the limit of ANY density-increment-with-Bohr-sets argument",
+   "family": "159",
+   "relation": "LABEL_AT_RISK",
+   "reason": "The primary source states the board ceiling at 1/3 (perhaps 1/4). Family 159's k=3 exponent eps_3 is not stated in the digest; if it exceeds 1/3 the board ceiling is broken."
+  },
+  {
+   "file": "proof-protocol/citations.json",
+   "line": 362,
+   "quote": "The interval (1/3, 1/2] in the exponent is, on the practitioners' own account, unreachable from this board.",
+   "family": "159",
+   "relation": "LABEL_AT_RISK",
+   "reason": "Same Roth board-ceiling claim (open interval (1/3, 1/2]). Family 159's exponent eps_3 is undetermined in the digest, so the claimed unreachability is at risk."
+  },
+  {
+   "file": "proof-protocol/p1-retrodiction/ceilings/roth-density-increment-bohr.json",
+   "line": 30,
+   "quote": "The exponent will not pass 1/3 by a density-increment-with-Bohr-sets argument.",
+   "family": "159",
+   "relation": "LABEL_AT_RISK",
+   "reason": "The sealed prediction for the open Roth ceiling. Family 159 is a quasipolynomial Szemeredi bound for k = 3 (exponent eps_3 not given in the digest), so the open entry may resolve."
+  },
+  {
+   "file": "board-finder/gap/sources/GAP_V2_RESPONSE_RAW.md",
+   "line": 66,
+   "quote": "| 6 | **Four MUBs in C⁶ (refuting Zauner's MUB conjecture)** | Quantum information | REFUTATION | 5 | 3 | 4 | 5 | 3 | 4 | 3 | 3 | **30** | OPEN-SWEPT-IN-RANGE | Demoted by its own falsification line: the object probably is not there |",
+   "family": "266",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Pool candidate 6 (a fourth MUB in C^6) is the object 266 claims cannot exist (N(6)=3); the repo had already demoted it as probably absent. The Lean scope of 266 proves only a family bound of five."
+  },
+  {
+   "file": "board-finder/gap/sources/GAP_V2_RESPONSE_RAW.md",
+   "line": 542,
+   "quote": "10. MUBs in dimension 6: three are known, Zauner conjectured three is maximal, unresolved. ✔",
+   "family": "266",
+   "relation": "CONTRADICTED",
+   "reason": "States the dimension-6 MUB maximum is unresolved; 266 claims N(6)=3 via a computer-assisted exclusion."
+  },
+  {
+   "file": "board-finder/gap/RESULT_GAP_v2.md",
+   "line": 12,
+   "quote": "4-MUB in ℂ⁶ — so the",
+   "family": "266",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "The v2 triage counts the 4-MUB candidate as one of two surviving D=5 candidates; 266 claims the candidate's object does not exist."
+  },
+  {
+   "file": "board-finder/gap/GATE_EPOCH.md",
+   "line": 22,
+   "quote": "MUBs in ℂ⁶ and SIC |",
+   "family": "266",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "The Epoch gate cleared MUBs in C^6 as a live candidate; 266 claims the question is settled negatively (no fourth basis)."
+  },
+  {
+   "file": "board-finder/fallbacks/RESULT_500_RESCAN.md",
+   "line": 77,
+   "quote": "Our C6 asked whether **4** exist. Three are known; the Zauner MUB conjecture",
+   "family": "266",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Restates C6 as the open question of whether four MUBs exist in C^6; 266 claims the answer is no (and seven are excluded too)."
+  },
+  {
+   "file": "board-finder/fallbacks/QUEUE_V3.md",
+   "line": 783,
+   "quote": "Hadamard (331), CC-6 (393), MUB (426) — and that is a harvest, not a target.",
+   "family": "266",
+   "relation": "SUBCASE",
+   "reason": "Queue treats record 426 (maximal MUBs in composite dimension) as a harvest item; 266 claims the dimension-six instance (N(6)=3), so that part of the item is decided."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 319,
+   "quote": "| Mutually unbiased bases, dim 6 | Hadamard matrices | 1.2k | exclude arbitrary nonsymmetric quartets, beyond triples with a shared conjugation |",
+   "family": "266",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Collaboration card whose next step (exclude nonsymmetric quartets of bases in dimension six) is the exclusion 266 claims."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 418,
+   "quote": "| 426 | Maximal MUBs in composite dimensions | quantum info | \"can dimension six support seven?\" |",
+   "family": "266",
+   "relation": "SUBCASE",
+   "reason": "Card asks whether dimension six can support seven MUBs; 266 claims N(6)=3, which answers that instance negatively."
+  },
+  {
+   "file": "board-finder/playability/RANKING_FIT.md",
+   "line": 128,
+   "quote": "426 [P1 ] Maximal Number of MUBs in Composite Dimension",
+   "family": "266",
+   "relation": "SUBCASE",
+   "reason": "Playable P1 record whose dimension-6 witness route (exhibit a fourth basis) is closed by 266's claimed exclusion; other composite dimensions are untouched."
+  },
+  {
+   "file": "board-finder/gap/sources/GAP_V2_RESPONSE_RAW.md",
+   "line": 94,
+   "quote": "| U11 | Seymour's second-neighbourhood counterexample | REFUTATION | Smallest *n* to which the conjecture has been verified, and whether a counterexample digraph is checkable in one direction. |",
+   "family": "173",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Pool item U11 is a REFUTATION target; 173 claims the conjecture holds for every finite oriented graph, so no counterexample exists."
+  },
+  {
+   "file": "board-finder/gap/PROMPT_GAP_v2.md",
+   "line": 164,
+   "quote": "Seymour's second neighbourhood conjecture was the July analysis's cleanest case for a reason it did not name: exhaustive verification stops at n ≤ 7, so n = 8–10 is a *finishable* increment whose null result extends a published frontier. That property deserves its own score |",
+   "family": "173",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Presents n = 8–10 verification as a finishable increment; 173 claims the full theorem, so the increment is moot."
+  },
+  {
+   "file": "board-finder/gap/v4/RESULT_V4.md",
+   "line": 137,
+   "quote": "**(iv) Seymour's second neighbourhood, δ⁺ = 8: dead on polarity, not on cost.** δ⁺ = 7 is confirmed",
+   "family": "173",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "The δ⁺ = 8 candidate (a counterexample search) is now dead outright; 173 claims the conjecture for all oriented graphs."
+  },
+  {
+   "file": "board-finder/gap/v4/PROMPT_GAP_v4.md",
+   "line": 280,
+   "quote": "| Seymour's second neighbourhood, δ⁺ = 8 | frontier δ⁺ = 7 by CP-SAT infeasibility, covering all oriented graphs on ≤ 16 vertices; δ⁺ = 8 would give ≤ 18 |",
+   "family": "173",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Pool row for the δ⁺ = 8 case; the general theorem claimed in 173 covers it."
+  },
+  {
+   "file": "board-finder/gap/sources/GAP_V2_RESPONSE_RAW.md",
+   "line": 452,
+   "quote": "**Kaplansky unit conjecture refuted (Gardam, 2021)** | Unit conjecture ⟹ zero-divisor conjecture ⟹ idempotent conjecture. Gardam refuted the **strongest**, which is the easiest to refute. The weaker siblings remain open. | Weak evidence for anything. Refuting the strongest member of a chain is the s",
+   "family": "196",
+   "relation": "CONTRADICTED",
+   "reason": "Row says the weaker siblings (zero-divisor, idempotent) remain open; 196 claims a torsion-free counterexample to the zero-divisor conjecture over F_2."
+  },
+  {
+   "file": "board-finder/gap/REVIEW_JULY_GAP_ANALYSIS.md",
+   "line": 42,
+   "quote": "Gardam refuted the easiest member. ZD is",
+   "family": "196",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Argues ZD is strictly harder and should not get a D=5 score; 196 claims ZD itself is false over F_2, which changes the premise of the scoring argument."
+  },
+  {
+   "file": "board-finder/gap/PROMPT_GAP_v2.md",
+   "line": 168,
+   "quote": "Kaplansky ZD scored D = 5 on Gardam's refutation of the *unit* conjecture. Unit ⇒ ZD ⇒ idempotent, so unit is the strongest and easiest to refute; the precedent makes ZD look closer than it is. Our own sweep made the mirror error on the third member |",
+   "family": "196",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Treats ZD as a live candidate that the unit-conjecture precedent makes look closer; 196 claims a counterexample to ZD."
+  },
+  {
+   "file": "board-finder/gap/v4/PROMPT_GAP_v4.md",
+   "line": 276,
+   "quote": "| Kaplansky zero-divisor conjecture | scored highest on an adjacent refutation; the family nests unit ⇒ zero-divisor ⇒ idempotent, so the refuted sibling was the **strongest** member and therefore the easiest — the precedent makes this target *harder*, not closer |",
+   "family": "196",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Pool row for ZD; 196 claims a finitely presented torsion-free counterexample over F_2."
+  },
+  {
+   "file": "board-finder/gap/register/REGISTER.md",
+   "line": 460,
+   "quote": "| **Kaplansky ZD** | §2.2: the family nests unit ⇒ ZD ⇒ idempotent, so Gardam 2021 refuted the **easiest** member and ZD is strictly harder — which breaks the July analysis's own D = 5 score. Playability demoted record 280 for the same reason and notes a Bar-Ilan AI-algebra lab already pointed at th",
+   "family": "196",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Register row treats ZD as the live object (with an AI-algebra lab pointed at it); 196 claims that object is refuted."
+  },
+  {
+   "file": "board-finder/playability/TARGET_DECISION.md",
+   "line": 28,
+   "quote": "| 280 Kaplansky idempotent | **the sweep demoted it.** The chain is unit ⇒ zero-divisor ⇒ idempotent; Promislow's group satisfies zero-divisor, so Gardam's counterexample gives nothing free; the live object is **zero-divisor**, and a Bar-Ilan AI-algebra lab is already pointed at it |",
+   "family": "196",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Names the zero-divisor conjecture as the live object behind record 280; 196 claims a torsion-free F_2 counterexample to it."
+  },
+  {
+   "file": "board-finder/playability/REPORT_SWEEP.md",
+   "line": 128,
+   "quote": "**280 Kaplansky survives but changes shape.** The Gardam citation is confirmed exactly. But",
+   "family": "196",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Says the live target is the intermediate zero-divisor conjecture; 196 claims it false over F_2. The idempotent question itself is separate (see 207)."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 139,
+   "quote": "| 201 | Kaplansky Zero-Divisor (torsion-free) | Algebra | — | — | |",
+   "family": "196",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Catalogue card for the torsion-free zero-divisor conjecture (ProofAtlas rank 201, not family 201); 196 claims a counterexample."
+  },
+  {
+   "file": "board-finder/playability/FEASIBILITY.md",
+   "line": 111,
+   "quote": "The live example is `280` **Kaplansky's idempotent conjecture**, and it is the",
+   "family": "207",
+   "relation": "SUBCASE",
+   "reason": "Rates 280 as the strongest recommendation; 207 claims the characteristic-zero idempotent conjecture for torsion-free groups, so any counterexample must sit in positive characteristic."
+  },
+  {
+   "file": "board-finder/playability/README.md",
+   "line": 55,
+   "quote": "strongest single target is **280, Kaplansky's idempotent conjecture**: an",
+   "family": "207",
+   "relation": "SUBCASE",
+   "reason": "Same record-280 recommendation; 207 settles the characteristic-zero case, narrowing the search."
+  },
+  {
+   "file": "board-finder/playability/PROMPT_SWEEP.md",
+   "line": 114,
+   "quote": "* **280 Kaplansky's idempotent conjecture** — every idempotent in K[G] for torsion-free G is",
+   "family": "207",
+   "relation": "SUBCASE",
+   "reason": "Asks for an idempotent counterexample over torsion-free G for any K; 207 proves the case over every characteristic-zero commutative domain."
+  },
+  {
+   "file": "board-finder/playability/PROMPT_FRONTIER.md",
+   "line": 89,
+   "quote": "280 Kaplansky's idempotent conjecture. The claim: the neighbouring **unit** conjecture",
+   "family": "207",
+   "relation": "SUBCASE",
+   "reason": "Frontier brief asks for counterexample routes to record 280; 207 claims the characteristic-zero case is proved."
+  },
+  {
+   "file": "board-finder/playability/PLAYABILITY.md",
+   "line": 36,
+   "quote": "**P2** exhibit the counterexample | 24 | 4.8% | Goldbach, Hadwiger, graph reconstruction, Beal, Lehmer τ, second Hardy–Littlewood, Tutte 3- and 5-flow, list edge-colouring, Kummer–Vandiver, Frey–Mazur, Kaplansky idempotent, Sidorenko |",
+   "family": "207",
+   "relation": "SUBCASE",
+   "reason": "P2 class lists Kaplansky's idempotent conjecture as expecting a counterexample; 207 proves the characteristic-zero case."
+  },
+  {
+   "file": "board-finder/playability/PLAYABILITY.md",
+   "line": 36,
+   "quote": "**P2** exhibit the counterexample | 24 | 4.8% | Goldbach, Hadwiger, graph reconstruction, Beal, Lehmer τ, second Hardy–Littlewood, Tutte 3- and 5-flow, list edge-colouring, Kummer–Vandiver, Frey–Mazur, Kaplansky idempotent, Sidorenko |",
+   "family": "157",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "P2 class lists Hadwiger's conjecture as expecting a counterexample; 157 claims one (χ_f(G) > h(G) with independence number at most two)."
+  },
+  {
+   "file": "board-finder/playability/PROMPT_SWEEP.md",
+   "line": 123,
+   "quote": "* **79 Hadwiger** — no K_{t+1} minor ⇒ t-colourable. Claim: minor-closed structure cuts the candidates.",
+   "family": "157",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Group-4 candidate asks for a Hadwiger counterexample route; 157 claims one for arbitrarily large graphs."
+  },
+  {
+   "file": "board-finder/playability/REPORT_SWEEP.md",
+   "line": 90,
+   "quote": "t = 7 is sourced as *\"out of reach at the moment.\"*",
+   "family": "157",
+   "relation": "CONTRADICTED",
+   "reason": "Records t = 7 as open ('out of reach'); 157 claims a disproof for arbitrarily large graphs, which is not restricted to t ≤ 6."
+  },
+  {
+   "file": "board-finder/playability/RANKING_FIT.md",
+   "line": 121,
+   "quote": "79 [P2 ] Hadwiger Conjecture",
+   "family": "157",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Record 79 sits in the playable P2 intersection; 157 claims the counterexample."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 21,
+   "quote": "Chowla (078), Hadwiger (079) — load-bearing for whole fields. Middle: Held–Karp",
+   "family": "157",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Head card 079 of the selection catalogue is Hadwiger's conjecture; 157 claims it false."
+  },
+  {
+   "file": "board-finder/fallbacks/QUEUE_V3.md",
+   "line": 777,
+   "quote": "Unique Games, ETH, SETH, L vs NL, Hadwiger. Those have no",
+   "family": "157",
+   "relation": "CONTRADICTED",
+   "reason": "Lists Hadwiger among open research programmes with no finite witness; 157 claims a disproof."
+  },
+  {
+   "file": "board-finder/fallbacks/QUEUE_V3.md",
+   "line": 777,
+   "quote": "Unique Games, ETH, SETH, L vs NL, Hadwiger. Those have no",
+   "family": "102",
+   "relation": "CONTRADICTED",
+   "reason": "Lists Unique Games among open research programmes; 102 claims a proof of Khot's Unique Games Conjecture."
+  },
+  {
+   "file": "board-finder/playability/PLAYABILITY.md",
+   "line": 36,
+   "quote": "**P2** exhibit the counterexample | 24 | 4.8% | Goldbach, Hadwiger, graph reconstruction, Beal, Lehmer τ, second Hardy–Littlewood, Tutte 3- and 5-flow, list edge-colouring, Kummer–Vandiver, Frey–Mazur, Kaplansky idempotent, Sidorenko |",
+   "family": "161",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "P2 class lists Sidorenko's conjecture as expecting a counterexample; 161 claims one (35 vertices, 66 edges)."
+  },
+  {
+   "file": "board-finder/playability/RANKING_FIT.md",
+   "line": 124,
+   "quote": "257 [P2 ] Sidorenko Conjecture",
+   "family": "161",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Record 257 sits in the playable P2 intersection; 161 claims the counterexample."
+  },
+  {
+   "file": "board-finder/gap/discovery/prompts/G_EVEN.md",
+   "line": 105,
+   "quote": "let $C(H)$ denote the least constant for which $$t(H, W) \\geq t(K_2, W)^{C(H)}$$ holds for all graphons $W$, where $K_2$ is the complete graph on two vertices. What is $C(H)$?",
+   "family": "161",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Problem 26 asks for C(H) over bipartite H; 161 claims a specific 35-vertex, 66-edge H with C(H) below its edge count."
+  },
+  {
+   "file": "board-finder/gap/register/REGISTER.md",
+   "line": 464,
+   "quote": "| **Mahler** | in `../sources/EPOCH_UNSOLVED_LIST.md`, `../epoch_exclusions.json`, the playability ranking | no |",
+   "family": "087",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Cycle-0 row for Mahler is ambiguous: the playability ranking holds the volume-product Mahler conjecture, which 087 claims to resolve (symmetric and general)."
+  },
+  {
+   "file": "board-finder/gap/v4/PROMPT_GAP_v4.md",
+   "line": 278,
+   "quote": "| Mahler's conjecture | on the list, no assessment recovered |",
+   "family": "087",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Candidate row for Mahler's conjecture (volume product); 087 claims the symmetric and general geometric Mahler conjectures."
+  },
+  {
+   "file": "board-finder/gap/v4/PROMPT_GAP_v4.md",
+   "line": 281,
+   "quote": "| Zarankiewicz, K₇,₁₁ / K₉,₉ | frontier Woodall 1993, untouched since |",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Names cr(K_{7,11}) and cr(K_{9,9}) as open frontier targets; 165 claims the Zarankiewicz crossing formula for all m, n."
+  },
+  {
+   "file": "board-finder/gap/v4/RESULT_V4.md",
+   "line": 204,
+   "quote": "**Zarankiewicz, cr(K₇,₁₁) and cr(K₉,₉)** | **{221,223,225}** and **{248,…,256}** | **This is Cycle 0's decisive missing cell** — see below |",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Decisive missing cell of the register; the tracked open values are fixed by the crossing formula that 165 claims for every K_{m,n}."
+  },
+  {
+   "file": "board-finder/gap/v4/RESULT_V4.md",
+   "line": 203,
+   "quote": "**Hill's conjecture, cr(K₁₃)** | **{223, 225}** — a single open value below the conjectured 225 | N = 5 on one number. Its falsification ladder is computed and points at enumeration depth |",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Tracks cr(K_13) with the single open value 223 below the conjectured 225; 165's Harary–Hill formula gives 225 for n = 13, so this candidate is excluded if the claim holds."
+  },
+  {
+   "file": "board-finder/gap/v4/RESULT_STALL_ZARANKIEWICZ.md",
+   "line": 1,
+   "quote": "# The Zarankiewicz stall, answered — and it is a constraint shape none of our taxonomies has",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Stall analysis for the cr(K_{7,11}) / cr(K_{9,9}) attack; 165 claims the general formula, which settles the target."
+  },
+  {
+   "file": "board-finder/gap/v4/WOODALL_1993_METHOD.md",
+   "line": 142,
+   "quote": "**Zarankiewicz/Hill has cleared the gate that killed it.** `RESULT_V4.md` §1 records all four pool",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Records Zarankiewicz/Hill as a live algorithmic target; 165 claims the conjecture for all m, n."
+  },
+  {
+   "file": "board-finder/gap/v4/WOODALL_1993_METHOD.md",
+   "line": 269,
+   "quote": "Theorem 6(c) mechanises the closing",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "The residual proof plan toward Zarankiewicz's conjecture is a live step; 165 claims that conjecture is proved."
+  },
+  {
+   "file": "board-finder/gap/v4/VERIFIED_PSEUDOTIGHT.md",
+   "line": 106,
+   "quote": "it does not bear on Zarankiewicz's or",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "States the result leaves Zarankiewicz's and Hill's conjectures untouched; 165 claims both, so the open-target premise is gone."
+  },
+  {
+   "file": "board-finder/gap/v4/RELAY_6_THEOREM7_RESCUE.md",
+   "line": 53,
+   "quote": "Zarankiewicz holds at K₃,₇, K₅,₇ (Kleitman) and",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Treats Zarankiewicz as a conjecture verified case by case in the rescue plan; 165 claims the full conjecture."
+  },
+  {
+   "file": "board-finder/gap/v4/K711_POTENTIAL.md",
+   "line": 73,
+   "quote": "Zarankiewicz at K₇,₁₁ has two",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Frames K_{7,11} as a live refutation-or-proof target that consumes compute; 165 claims the formula, so the target is decided."
+  },
+  {
+   "file": "board-finder/gap/register/REGISTER.md",
+   "line": 463,
+   "quote": "| **Zarankiewicz/Hill** | **FILLED, 1 Oct 2026 — `../v4/RESULT_STALL_ZARANKIEWICZ.md`.** The operator obtained the prior program's own stall analysis, stated as formal propositions with proofs, which is exactly the form Cycle 0's schema asked for and could not get | **yes — the only Part D cell that",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Register row for the Zarankiewicz/Hill cell; 165 claims the crossing formulas for all complete and complete bipartite graphs."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 317,
+   "quote": "| Harary–Hill | crossings in K_n drawings | 1.1k | prove global accessibility through compatible nonincreasing moves |",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Selection-card target (prove global accessibility for Harary–Hill drawings); 165 claims the Harary–Hill formula for all n."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 383,
+   "quote": "**Kobon triangle** and **Harary–Hill** (1.1k each) — both report *exact finite cases*, which",
+   "family": "165",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Says Harary–Hill reports exact finite cases an agent with compute can extend; 165 claims all n."
+  },
+  {
+   "file": "board-finder/gap/sources/GAP_V2_RESPONSE_RAW.md",
+   "line": 470,
+   "quote": "| **Circulant Hadamard (Ryser) conjecture** | NON-EXISTENCE polarity | Settling it means proving no circulant Hadamard matrix of order > 4 exists. |",
+   "family": "179",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Listed as a NON-EXISTENCE candidate; 179 claims a real circulant Hadamard matrix has order 1 or 4, which settles it."
+  },
+  {
+   "file": "board-finder/gap/sources/GAP_V2_RESPONSE_RAW.md",
+   "line": 471,
+   "quote": "| **Barker sequences of length > 13** | NON-EXISTENCE polarity | Same shape. |",
+   "family": "179",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Listed as a NON-EXISTENCE candidate; 179 claims Barker sequences exist only at lengths 2,3,4,5,7,11,13 (the Lean scope covers the even-length part only)."
+  },
+  {
+   "file": "board-finder/gap/discovery/RESULT_A2B_DIVERGENCE.md",
+   "line": 24,
+   "quote": "| 5 | Barker sequences, length | **2000** | Borwein–Mossinghoff 2013 against Mossinghoff **2009** — **same author, same method family, four years apart.** The gap is closed by the later paper itself. |",
+   "family": "179",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "Treats Borwein–Mossinghoff's length-2000 Barker result as the current frontier; 179 claims nonexistence at every length above 13, superseding that frontier."
+  },
+  {
+   "file": "board-finder/gap/discovery/prompts/G_EVEN.md",
+   "line": 109,
+   "quote": "For $n \\geq 1$, let $\\mathbb{U}_{n}$ denote the set of polynomials $p(z)$ of degree $n$ with coefficients $\\pm 1$. Define $$ C^-(n) \\coloneqq \\max_{p \\in \\mathbb{U}_{n}} \\left(\\min_{|z|=1}\\frac{|p(z)|}{\\sqrt{n+1}}\\right) $$ $$ C^+(n) \\coloneqq \\min_{p \\in \\mathbb{U}_{n}}\\left(\\max_{|z|=1}\\frac{|p(z)",
+   "family": "076",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Problem 28 asks for the constants C^-, C^+, C^w, C^4 for ±1 polynomials; 076 claims minimal maxima (1+o(1))√N for real Littlewood polynomials (so C^+(n) → 1) and unbounded merit factors."
+  },
+  {
+   "file": "board-finder/gap/discovery/G_odd.md",
+   "line": 96,
+   "quote": "Upper side 1+sqrt2 (Crouzeix-Palencia 2017) is proof side [SS]. Summary: conjectured sharp constant is 2.",
+   "family": "325",
+   "relation": "BOUND_SUPERSEDED",
+   "reason": "The recorded upper constant 1+√2 is superseded: 325 claims the sharp constant 2 for every bounded operator and matrix-valued polynomial, matching the lower bound 2 in the same entry."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 423,
+   "quote": "| 474 | Quillen, posets of elementary abelian p-subgroups | algebra | |",
+   "family": "310",
+   "relation": "SUBCASE",
+   "reason": "Card lists Quillen's conjecture on elementary abelian p-subgroup posets; 310 claims only the rational-homology form, so the integral conjecture is untouched."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 171,
+   "quote": "| 250 | Shafarevich universal-cover conjecture | Geom & topology | `Open · subcases solved` | Annals 176 (2012) 1545–1581 |",
+   "family": "046",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Card 250 is 'Open · subcases solved'; 046 claims a fourfold whose universal cover is neither Stein nor holomorphically convex, and a surface disproving unrestricted holomorphic convexity."
+  },
+  {
+   "file": "board-finder/fallbacks/prompts/MAPPING_C.md",
+   "line": 98,
+   "quote": "For every connected smooth complex projective variety X, its universal covering complex manifold X-tilde is holomorphically convex: for every compact K contained in X-tilde, the set {z in X-tilde: |f(z)|<=sup_{w in K}|f(w)| for every global holomorphic function f on X-tilde} is compact. This is the",
+   "family": "046",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Mapping record 251 asks for universal-cover holomorphic convexity for all smooth projective X; 046 claims counterexamples."
+  },
+  {
+   "file": "board-finder/fallbacks/prompts/MAPPING_C.md",
+   "line": 74,
+   "quote": "Prove or disprove that every Gromov-hyperbolic group whose boundary at infinity is homeomorphic to the two-sphere acts properly discontinuously, cocompactly, and isometrically on hyperbolic three-space, equivalently is virtually a cocompact Kleinian group.",
+   "family": "246",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Mapping record 133 (Cannon's conjecture) is open in the brief; 246 claims a proof."
+  },
+  {
+   "file": "board-finder/fallbacks/prompts/MAPPING_D.md",
+   "line": 146,
+   "quote": "For every nonempty connected open domain Omega of the Riemann sphere, there exist a circle domain D in the Riemann sphere and a conformal homeomorphism Omega -> D. A circle domain means a nonempty connected open set each of whose complementary components is a closed round disk or a point. Allow arbi",
+   "family": "071",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Mapping record 344 (Koebe uniformization) is open in the brief; its existence statement is the part 071 claims to resolve."
+  },
+  {
+   "file": "board-finder/fallbacks/prompts/MAPPING_D.md",
+   "line": 107,
+   "quote": "For each ambient dimension N with 4 <= N <= 8, prove that every bounded entire C^2 solution u from R^N to (-1,1) of the Allen-Cahn equation Laplacian u = u^3 - u that is strictly monotone in one direction is one-dimensional, that is, u(x) = g(a . x) for some unit vector a and one-variable profile g.",
+   "family": "375",
+   "relation": "SUBCASE",
+   "reason": "Mapping record 215 asks for dimensions 4 through 8; 375 claims the dimension-eight endpoint and stable classification in dimension seven, not the full range."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 152,
+   "quote": "| 214 | De Giorgi for Allen–Cahn, dims 4–8 | Analysis & PDE | ✓ | — | dimension range is discrete but each case is hard analysis |",
+   "family": "375",
+   "relation": "SUBCASE",
+   "reason": "Card 214 is open across dimensions 4–8; 375 claims the dimension-eight case only."
+  },
+  {
+   "file": "board-finder/fallbacks/prompts/MAPPING_A.md",
+   "line": 126,
+   "quote": "Determine the chromatic number of the plane: the minimum number of colors needed to color every point of the Euclidean plane so that any two points at Euclidean distance exactly 1 receive distinct colors.",
+   "family": "158",
+   "relation": "SUBCASE",
+   "reason": "Mapping record 238 asks for the chromatic number of the plane; 158 claims five colours are impossible, leaving 6 or 7 open."
+  },
+  {
+   "file": "board-finder/gap/sources/GAP_V2_RESPONSE_RAW.md",
+   "line": 478,
+   "quote": "| **6-chromatic unit-distance graph (Hadwiger–Nelson)** | On public lists; B capped | Polymath16 swept this; Epoch cites the unit distance problem as a flagship AI contribution. Verification needs a 5-colourability infeasibility certificate. |",
+   "family": "158",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Candidate needs a finite 6-chromatic unit-distance graph and planned a 5-colourability refutation; 158 claims χ(plane) ≥ 6, which by compactness yields such finite graphs (witness still unexhibited)."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 417,
+   "quote": "| 423 | Zariski Cancellation (char 0, dim ≥ 3) | algebra | |",
+   "family": "047",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Card states the characteristic-zero, dimension ≥3 cancellation question as open; 047 claims an integral complex affine fourfold not isomorphic to A^4 with X × A^1 ≅ A^5."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 416,
+   "quote": "| 421 | GNRS Conjecture | TCS | |",
+   "family": "089",
+   "relation": "SUBCASE",
+   "reason": "Card 421 is the Gupta–Newman–Rabinovich–Sinclair conjecture; 089 claims only the planar and bounded-treewidth cases."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 21,
+   "quote": "Chowla (078), Hadwiger (079) — load-bearing for whole fields. Middle: Held–Karp",
+   "family": "007",
+   "relation": "SUBCASE",
+   "reason": "Card 078 is titled 'Chowla' (full title not transcribed); 007 claims only the ordinary two-point Chowla conjecture with a power-saving bound."
+  },
+  {
+   "file": "leanboard/ag/PROOFATLAS_CATALOGUE.md",
+   "line": 20,
+   "quote": "FPT vs W[1] (076), Abundance",
+   "family": "034",
+   "relation": "SUBCASE",
+   "reason": "Card 077 (Abundance) is open in general; 034 claims log abundance for normal compact Kähler lc pairs and projective log abundance in characteristic zero, not the full statement."
+  },
+  {
+   "file": "board-finder/playability/PROMPT_SWEEP.md",
+   "line": 91,
+   "quote": "* **300 Alperin's weight conjecture.** #simple modules of a p-block B = #G-classes of B-weights.",
+   "family": "202",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Group-1 candidate asks for counterexample routes to the Alperin weight conjecture; 202 claims the numerical blockwise form for every finite group."
+  },
+  {
+   "file": "board-finder/playability/REPORT_SWEEP.md",
+   "line": 49,
+   "quote": "| **300 Alperin weight** | sporadics swept; general case sourced as *\"out of reach\"* |",
+   "family": "202",
+   "relation": "CONTRADICTED",
+   "reason": "States the general case is 'out of reach'; 202 claims the general numerical blockwise Alperin weight conjecture for every prime and finite group."
+  },
+  {
+   "file": "board-finder/playability/RANKING_FIT.md",
+   "line": 158,
+   "quote": "300 Alperin weight, 356 Brauer k(B),",
+   "family": "202",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Lists record 300 among the four unworkspaced playable P2 block conjectures; 202 claims the block-weight statement."
+  },
+  {
+   "file": "board-finder/playability/FEASIBILITY.md",
+   "line": 91,
+   "quote": "`287` Alperin–McKay, `300` Alperin weight, `356` Brauer k(B), `472` McKay–Navarro.",
+   "family": "202",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Lists record 300 as a finite-group counterexample candidate; 202 claims the numerical statement for all finite groups."
+  },
+  {
+   "file": "board-finder/playability/PROMPT_FRONTIER.md",
+   "line": 62,
+   "quote": "Records 287 Alperin–McKay, 300 Alperin weight, 356 Brauer k(B), 472 McKay–Navarro.",
+   "family": "202",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Frontier brief lists record 300 as a block-conjecture target; 202 claims the numerical blockwise form."
+  },
+  {
+   "file": "board-finder/gap/sources/EPOCH_UNSOLVED_LIST.md",
+   "line": 46,
+   "quote": "| 2 | 1–5 | Symplectic Ball Packing | (tags not transcribed) |",
+   "family": "343",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Epoch open item #2; 343 claims Siegel–Yao Conjecture A for every symplectic dimension 2n ≥ 6. The four-dimensional case is outside 343, and the transcription does not carry Epoch's statement."
+  },
+  {
+   "file": "board-finder/gap/epoch_exclusions.json",
+   "line": 19,
+   "quote": "Symplectic Ball Packing\",",
+   "family": "343",
+   "relation": "LIVE_TARGET_HIT",
+   "reason": "Exclusion-set entry for Epoch item #2; the exclusion rests on the item being open, which 343 claims is no longer so for dimensions 2n ≥ 6."
+  },
+  {
+   "file": "leanboard/REPORT_U_meta_game.md",
+   "line": 157,
+   "quote": "**Four for four.** Every major AI-assisted mathematical result available to",
+   "family": "repo-level",
+   "relation": "METHOD",
+   "reason": "Claims all four AI-assisted results were final-results-only. The brief says the openai/math release includes reasoning_traces; the family digest has no release metadata to confirm or refute that. REPORT_AK §6 and REPORT_AT also report disclosed process data."
+  },
+  {
+   "file": "leanboard/REPORT_U_meta_game.md",
+   "line": 325,
+   "quote": "Four for four withheld it. Until a producing team releases search",
+   "family": "repo-level",
+   "relation": "METHOD",
+   "reason": "Asks producers to release trajectories and treats their absence as the blocker for the moat test; the openai/math families are a new producing-lab case for that request."
+  },
+  {
+   "file": "leanboard/ak/REPORT_AK_zeta_audit.md",
+   "line": 136,
+   "quote": "## 6. Trajectory data — the richest instance this programme has seen",
+   "family": "repo-level",
+   "relation": "METHOD",
+   "reason": "Reports a disclosed AI run with about 650 candidate approaches, roughly 60 subagents, about 2,400 shell commands and 31M output tokens, which contradicts the 'four for four' finding."
+  },
+  {
+   "file": "leanboard/at/REPORT_AT_audit_surface.md",
+   "line": 94,
+   "quote": "A fourth process artifact arrived after part 1 was written: the full prompt OpenAI gave",
+   "family": "repo-level",
+   "relation": "METHOD",
+   "reason": "A lab published the full prompt for a Cycle Double Cover run, so process records beyond final results do appear; the 'four for four' framing needs that qualification."
+  },
+  {
+   "file": "leanboard/aj/REPORT_AJ_vibemathed_census.md",
+   "line": 26,
+   "quote": "| **Never seen by a named human expert** | **651** | **98.0%** |",
+   "family": "repo-level",
+   "relation": "METHOD",
+   "reason": "Census baseline for AI-attributed claims (664 entries; 98% never seen by a named expert; 30 'lean-checked' with statements unaudited). The 372 openai/math families inherit this regime: the family digest shows 130 of 372 with no Lean artifact, and the Lean scopes of 266 and 179 prove weaker statements than their headlines."
+  },
+  {
+   "file": "board-finder/gap/RESULT_GAP_v2.md",
+   "line": 138,
+   "quote": "the off-list named-conjecture space is being enumerated into",
+   "family": "repo-level",
+   "relation": "METHOD",
+   "reason": "Crowding claim: named-conjecture space is enumerated into agent-facing databases faster than triage can survey it. The 372 openai/math families are a claimed one-sweep instance of that pattern."
+  },
+  {
+   "file": "board-finder/gap/GATE_EPOCH.md",
+   "line": 47,
+   "quote": "this family is a **third independent reason** for the crowding that already demoted it (the",
+   "family": "repo-level",
+   "relation": "METHOD",
+   "reason": "Crowding gate datum. The openai/math sweep adds a 372-family, lab-scale instance to the crowding evidence the gate uses."
+  },
+  {
+   "file": "board-finder/playability/PROMPT_SWEEP.md",
+   "line": 135,
+   "quote": "open Hadamard orders were closed over a weekend by an agent sweeping construction",
+   "family": "repo-level",
+   "relation": "METHOD",
+   "reason": "Cites an agent sweep that closed twelve open Hadamard orders over a weekend; the 372 claimed families are the same mode of AI claim at larger scale, so the 'which lists agents sweep' question has a new data point."
+  },
+  {
+   "file": "board-finder/gap/register/REGISTER.md",
+   "line": 7,
+   "quote": "multiplies compute-shaped constraints and does almost nothing for theory-shaped ones.\"",
+   "family": "repo-level",
+   "relation": "METHOD",
+   "reason": "The compute/theory split is about Claude Code. Most openai/math families are theory-shaped results produced by a lab, and 266 is the main compute-certified example, so the register's share claims need a lab-scale count."
+  }
+ ]
+}

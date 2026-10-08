@@ -1,5 +1,10 @@
 # Yes — and while writing the answer I found the hard reason
 
+> **[8 Oct 2026 — the recommendation in this document is withdrawn.]** Its purpose was to make
+> the (11,7) cost estimate trustworthy. openai/math family 165 claims cr(K₇,₁₁) = 225 for every
+> instance at once, so there is no (11,7) run left to estimate. The level-count measurement and
+> D67's channel finding stand; they are about the relay, not the target. See `CLOSED_BY_165.md`.
+
 **Short answer: yes, and it is not an efficiency question.** I went looking for something I
 could check locally before answering, and what came back says the relay has been moving numbers
 whose definition neither side has pinned down.

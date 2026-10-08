@@ -4,6 +4,15 @@ Stock-take as of 2026-09-09 (second revision; the first covered work through
 Report K). Branch `claude/theorem-discovery-lab-jpbph1`. Everything below is
 committed; each claim points at the report that carries it.
 
+> **[8 Oct 2026 — read `openai-math/RESULT_INTAKE.md` before acting on anything below.]** On 6 Oct
+> OpenAI published `github.com/openai/math`, 719 manuscripts claiming results on open problems.
+> It claims 79 of the 499 ranked problems the board-finder mines, and the v4 thread's live target
+> cr(K₇,₁₁), with a Lean statement (`board-finder/gap/v4/CLOSED_BY_165.md`). §3's line *"No Lean
+> toolchain is reachable"* was true of the routes tried. The toolchain installs from GitHub's
+> release assets and Mathlib builds from source on this container. The proof that closes the
+> live target compiles here with only the standard axioms (`openai-math/LEAN_CHECK_165.md`), so
+> the relayed verification claims in Reports H and N are now checkable too (D72).
+
 ## 1. What the project now contains
 
 | area | location | what it is |

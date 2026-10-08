@@ -1,5 +1,12 @@
 # Does K₇,₁₁ still have potential? Yes — and the binding constraint has moved to a place nobody has looked
 
+> **[8 Oct 2026 — the target is claimed closed, and this document's recommendations are moot.]**
+> openai/math family 165 (manuscript dated 23 Sep, public 6 Oct) claims cr(K_{m,n}) = Z(m,n) for
+> every m, n, so cr(K₇,₁₁) = 225, with a Lean statement whose definitions match the challenge's.
+> The refute branch below is claimed impossible and the verify branch claimed done. Kept as
+> written, because it records what was reasoned before the claim was public. See
+> `CLOSED_BY_165.md`.
+
 **H = PASS stands.** What follows does not reopen it: at every throughput considered below the
 target is *reachable*, which is what H asks. What moves is `P-43`'s **30-day** threshold, which is a
 sharper claim, and it moves for a reason unrelated to the Theorem 7 question that was just settled.

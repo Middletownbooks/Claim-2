@@ -478,6 +478,28 @@ lineage's independent assessment**, never the prior attempt's binding constraint
 > binary does not contain — which is itself §4.5's argument, arriving from the one case that could
 > test it.
 
+> **[8 Oct 2026 — three of Cycle 0's seven are claimed settled from outside, and the Zarankiewicz
+> answer above needs a second clause.]** openai/math (public 6 Oct) claims:
+>
+> - **Kaplansky ZD false** over 𝔽₂ for a finitely presented torsion-free group (family 196, Lean
+>   statement is the claim);
+> - **Zarankiewicz/Hill true** for every (m, n) and every n (family 165, same, and compiled here with only the standard axioms:
+>   `../../../openai-math/LEAN_CHECK_165.md`);
+> - **Mahler's volume-product conjecture true**, symmetric and general (family 087, same).
+>
+> Kalai 3^d, Tuza, MDS in characteristic 2 and union-closed: nothing.
+>
+> **The Zarankiewicz row's own answer stands as a statement about the prior program.** It stalled
+> on SPECIFICATION. But the family was closed by a linear-algebra **proof**, not by any search
+> (`../v4/CLOSED_BY_165.md` §4). So Cycle 0's rule, *"if theory, Claude Code adds little and this is
+> dead"*, fired after all, one level up. The binding constraint of the *program* was
+> specification. The binding constraint of the *target* was theory.
+>
+> **And the Mahler row may be a name collision.** It points at Epoch #34, *Littlewood polynomials
+> with large normalized Mahler **measure***. That is not Mahler's **volume-product** conjecture,
+> which is the one 087 claims and the likelier reading of a list that sits beside Kalai 3^d. Which
+> one Cycle 0 meant is not recoverable from this tree.
+
 **The missing cell, as it stood before 1 Oct.** Cycle 0's shortlist candidate B was Zarankiewicz
 K₇,₁₁/K₉,₉, with this note attached:
 
