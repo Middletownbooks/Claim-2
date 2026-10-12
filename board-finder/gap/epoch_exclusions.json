@@ -1,0 +1,317 @@
+{
+ "source": "epoch.ai/frontiermath/open-problems",
+ "captured": "2026-09-21",
+ "capture_medium": "nine screenshots (zip could not be opened locally)",
+ "status_filter": "Unsolved",
+ "count": 41,
+ "count_corroboration": "GAP_V2_RESPONSE_RAW.md sec 0 relays the site's own filter total as 41 unsolved; exact match",
+ "completeness": "STRONGLY_SUPPORTED_NOT_CERTAIN",
+ "entries": [
+  {
+   "n": 1,
+   "frame": "1–5",
+   "title": "Pólya's Conjecture for the Dirichlet Laplacian",
+   "tags": null
+  },
+  {
+   "n": 2,
+   "frame": "1–5",
+   "title": "Symplectic Ball Packing",
+   "tags": null
+  },
+  {
+   "n": 3,
+   "frame": "1–5",
+   "title": "Apéry-Style Irrationality Proofs via Linear Recurrences",
+   "tags": null
+  },
+  {
+   "n": 4,
+   "frame": "1–5",
+   "title": "Improve the Best-known Classical Factorization Algorithms",
+   "tags": null
+  },
+  {
+   "n": 5,
+   "frame": "1–5",
+   "title": "The Smooth Four-Dimensional Poincaré Conjecture",
+   "tags": null
+  },
+  {
+   "n": 6,
+   "frame": "1–5",
+   "title": "A Prescribed Class-Group Structure for an Imaginary Quadratic Field",
+   "tags": null
+  },
+  {
+   "n": 7,
+   "frame": "1–5",
+   "title": "Conway's Thrackle Conjecture",
+   "tags": null
+  },
+  {
+   "n": 8,
+   "frame": "1–5",
+   "title": "ECDLP",
+   "tags": null
+  },
+  {
+   "n": 9,
+   "frame": "1–5",
+   "title": "The Jones Unknot Conjecture",
+   "tags": null
+  },
+  {
+   "n": 10,
+   "frame": "1–5",
+   "title": "The Lonely Runner Conjecture",
+   "tags": null
+  },
+  {
+   "n": 11,
+   "frame": "1–5",
+   "title": "A counterexample to Wilf's Conjecture",
+   "tags": null
+  },
+  {
+   "n": 12,
+   "frame": "1–5",
+   "title": "Polynomial Entire Minimal Graphs",
+   "tags": null
+  },
+  {
+   "n": 13,
+   "frame": "1–5",
+   "title": "Dense Polynomials Whose Squares Are Sparse",
+   "tags": null
+  },
+  {
+   "n": 14,
+   "frame": "1–5",
+   "title": "Class Group Algorithms",
+   "tags": null
+  },
+  {
+   "n": 15,
+   "frame": "1–5",
+   "title": "The Slice–Ribbon Conjecture and the GST Knot",
+   "tags": null
+  },
+  {
+   "n": 16,
+   "frame": "1–5",
+   "title": "Elliptic Curves with Prescribed Number of Points",
+   "tags": null
+  },
+  {
+   "n": 17,
+   "frame": "1–5",
+   "title": "A shape with Heesch number 7",
+   "tags": null
+  },
+  {
+   "n": 18,
+   "frame": "1–5",
+   "title": "The Hirsch Conjecture in Dimension 4",
+   "tags": null
+  },
+  {
+   "n": 19,
+   "frame": "1–5",
+   "title": "Large Steiner Systems",
+   "tags": null
+  },
+  {
+   "n": 20,
+   "frame": "1–5",
+   "title": "The Missing Moore Graph",
+   "tags": null
+  },
+  {
+   "n": 21,
+   "frame": "1–5",
+   "title": "Sum of Three Cubes",
+   "tags": null
+  },
+  {
+   "n": 22,
+   "frame": "1–5",
+   "title": "The Arithmetic Kakeya Conjecture",
+   "tags": null
+  },
+  {
+   "n": 23,
+   "frame": "1–5",
+   "title": "Condorcet Winning Sets",
+   "tags": null
+  },
+  {
+   "n": 24,
+   "frame": "1–5",
+   "title": "Conway's 99-Graph Problem",
+   "tags": null
+  },
+  {
+   "n": 25,
+   "frame": "1–5",
+   "title": "Sensitivity versus Degree for Boolean Multilinear Polynomials",
+   "tags": null
+  },
+  {
+   "n": 26,
+   "frame": "6",
+   "title": "Prime-Generating Polynomial Systems in Five Variables",
+   "tags": [
+    "Number theory",
+    "Construction – Finite",
+    "Improved Bound"
+   ]
+  },
+  {
+   "n": 27,
+   "frame": "6",
+   "title": "The Ramsey Number R(6,6)",
+   "tags": [
+    "Graph theory",
+    "Construction – Finite",
+    "Improved Bound"
+   ]
+  },
+  {
+   "n": 28,
+   "frame": "6",
+   "title": "Book Ramsey Numbers",
+   "tags": [
+    "Graph theory",
+    "Construction – Family"
+   ]
+  },
+  {
+   "n": 29,
+   "frame": "6",
+   "title": "Large Integer Solutions to a Cubic Diophantine Equation",
+   "tags": [
+    "Diophantine",
+    "Integer Solution"
+   ]
+  },
+  {
+   "n": 30,
+   "frame": "8",
+   "title": "The Earth–Moon Problem",
+   "tags": [
+    "Graph theory",
+    "Construction – Finite",
+    "Improved Bound"
+   ]
+  },
+  {
+   "n": 31,
+   "frame": "8",
+   "title": "Existence of EFX Allocations",
+   "tags": [
+    "Social choice",
+    "Construction – Finite",
+    "Counterexample"
+   ]
+  },
+  {
+   "n": 32,
+   "frame": "8",
+   "title": "Euler's Sum of Powers Conjecture",
+   "tags": [
+    "Diophantine",
+    "Counterexample",
+    "Integer Solution"
+   ]
+  },
+  {
+   "n": 33,
+   "frame": "8",
+   "title": "Hall's Conjecture",
+   "tags": [
+    "Diophantine",
+    "Counterexample",
+    "Record Breaking"
+   ]
+  },
+  {
+   "n": 34,
+   "frame": "7",
+   "title": "Littlewood Polynomials with Large Normalized Mahler Measure",
+   "tags": [
+    "Analysis",
+    "Construction – Finite",
+    "Improved Bound"
+   ]
+  },
+  {
+   "n": 35,
+   "frame": "7",
+   "title": "Leech Trees",
+   "tags": [
+    "Combinatorics",
+    "Construction – Finite",
+    "Record Breaking"
+   ]
+  },
+  {
+   "n": 36,
+   "frame": "7",
+   "title": "The Rank of the 4×4 Matrix-Multiplication Tensor",
+   "tags": [
+    "Combinatorics",
+    "Algorithm",
+    "Record Breaking"
+   ]
+  },
+  {
+   "n": 37,
+   "frame": "7",
+   "title": "The No-Three-in-Line Problem",
+   "tags": [
+    "Discrete geometry",
+    "Construction – Family",
+    "Improved Bound"
+   ]
+  },
+  {
+   "n": 38,
+   "frame": "9",
+   "title": "A Baillie–PSW Pseudoprime",
+   "tags": [
+    "Number theory",
+    "Counterexample",
+    "Integer Solution"
+   ]
+  },
+  {
+   "n": 39,
+   "frame": "9",
+   "title": "Chowla's Cosine Problem",
+   "tags": [
+    "Analysis",
+    "Construction – Finite",
+    "Improved Bound"
+   ]
+  },
+  {
+   "n": 40,
+   "frame": "9",
+   "title": "Large ℓ-Rank in Class Groups of Imaginary Quadratic Fields",
+   "tags": [
+    "Algebraic number theory",
+    "Record Breaking"
+   ]
+  },
+  {
+   "n": 41,
+   "frame": "9",
+   "title": "A Rational Diophantine Septuple",
+   "tags": [
+    "Diophantine",
+    "Integer Solution"
+   ]
+  }
+ ]
+}

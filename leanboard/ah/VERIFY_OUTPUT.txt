@@ -1,0 +1,58 @@
+==============================================================================
+PART 1 — the value core B  (prop 1.1, sec.3)
+==============================================================================
+  [PASS] 26 cells, no duplicates  — 26
+  [PASS] B is connected  — 1 component(s)
+  [PASS] 14 legal Left (vertical) moves  — got 14
+  [PASS] 14 legal Right (horizontal) moves  — got 14
+  [PASS] C-U is a legal vertical move
+  [PASS] C-W is a legal horizontal move
+
+==============================================================================
+PART 2 — the checkerboard obstruction  (sec.5)
+==============================================================================
+  [PASS] colour split is 14 / 12  — black 14, white 12, imbalance 2
+  [PASS] imbalance 2 exceeds any rectangle's (0 or 1)  — so B is not a rectangle remainder — the paper's reason for needing B'
+
+==============================================================================
+PART 3 — component splits after the two canonical moves  (prop 4.1)
+==============================================================================
+  [PASS] after C-U: components of sizes 19 and 5  — got [5, 19]
+  [PASS] after C-W: components of sizes 17 and 7  — got [7, 17]
+
+==============================================================================
+PART 4 — the rectangle-reachable witness B'  (thm 1.2, eq 1.4)
+==============================================================================
+  [PASS] B' has 28 cells  — got 28
+  [PASS] B' fits in {0..10} x {0..7}
+  [PASS] B' has exactly 3 components  — sizes [26, 1, 1]
+  [PASS] components are 26 + 1 + 1
+  [PASS] the two adjoined cells have no legal move  — so they contribute game value 0 and G(B') = G(B)
+
+==============================================================================
+PART 5 — full replay of the 30-move sequence  (table 1)
+==============================================================================
+  [PASS] 11 x 8 rectangle has 88 cells
+  [PASS] all 30 moves legal, in bounds, correctly oriented, non-overlapping
+  [PASS] 30 dominoes cover 60 cells  — 60 covered, 28 left
+  [PASS] final uncovered set is EXACTLY B'  — identical
+  [PASS] 15 Left moves and 15 Right moves
+
+==============================================================================
+PART 6 — thermograph arithmetic  (prop 1.1, eq 2.2)
+==============================================================================
+  [PASS] walls meet at s = 33/16  — s = 33/16 = 2.0625
+  [PASS] meeting height (mean) = 1/16  — m = 1/16
+  [PASS] a - s == b + s at the meeting point  — both = 1/16
+  [PASS] temperature strictly exceeds 2  — 2.0625 > 2, margin 0.0625 = 1/16
+
+==============================================================================
+RESULT: 0 failure(s)
+==============================================================================
+
+NOT CHECKED HERE — and this is the whole mathematical content:
+  G(B) = {17/8 | -2+*}, i.e. the value of the 26-cell game tree, the domination of
+  the other 13+13 raw options, and the uniqueness of equality. That needs a CGT
+  engine with canonical forms and Conway-order comparison. Everything above is
+  scaffolding around that one unverified claim.
+

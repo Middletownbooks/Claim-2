@@ -1,0 +1,15 @@
+__pycache__/
+# Regenerable in seconds from a mathlib checkout by structure.py; 19 MB and
+# 3 MB respectively, and meaningless without the matching mathlib commit.
+decls.json
+modules.json
+flt/__pycache__/
+flt/boundary.log
+# Regenerable from the FLT clone by flt/graph.py and flt/boundary.py (seconds
+# to ~80s); 11 MB and 12 MB. Their summaries are committed instead.
+flt/flt_graph.json
+flt/boundary.json
+# Regenerable from the NS clone by ns/parse.py in ~5s; 23 MB and 157 MB.
+ns/ns_graph.json
+ns/ns_graph_loose.json
+ns/ns_graph_strict_backup.json

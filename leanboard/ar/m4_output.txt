@@ -1,0 +1,152 @@
+
+==========================================================================
+0. Populations
+==========================================================================
+  disproved  205    proved  458    other    1
+  alpha = 0.05; every prediction below was declared before it was tested.
+
+==========================================================================
+P1 (declared). Disproved problems are YOUNGER than proved ones
+==========================================================================
+  disproved  n=152  median   27y  mean  28.4
+  proved     n=309  median   31y  mean  32.1
+  Mann-Whitney  z = -1.48   p = 0.138
+  --> P1: NULL.  p = 0.138 > 0.05; the 4-year median gap is not distinguishable from noise
+  PASS  P1 was tested rather than eyeballed
+
+==========================================================================
+P2 (declared). Disproved entries sit LOWER in significance
+==========================================================================
+  disproved  n=205  mean  18.2  median   15  max 65
+  proved     n=458  mean  16.4  median   13  max 68
+  Mann-Whitney  z = +2.61   p = 0.0091
+  --> P2: REFUTED, and in the opposite direction.  p = 0.0091; disproofs sit HIGHER. Refuting a known conjecture is newsworthy
+  PASS  P2 is recorded as refuted rather than quietly dropped
+
+==========================================================================
+P3 (declared). Disproved entries are LESS curated-list-sourced
+==========================================================================
+  disproved    46/ 205 =  22.4%
+  proved      135/ 458 =  29.5%
+  two-proportion  z = -1.88   p = 0.060
+  --> P3: MARGINAL.  p = 0.060; points the predicted way but does not clear 0.05
+  PASS  P3 is reported as marginal, not as support
+
+==========================================================================
+P4 (declared). An M4 band: age 10-30, significance <= 20, no list source
+==========================================================================
+  disproved in band    26/ 205 =  12.7%
+  proved    in band    45/ 458 =   9.8%
+  two-proportion  z = +1.10   p = 0.271
+
+  The band's contents are real entries and look exactly like the mechanism:
+     10y  sig  15  Order dimension beyond rank
+     10y  sig  15  3-block ADMM, identity block
+     11y  sig  15  Fisher log-convexity
+     11y  sig  15  Gaussian CMC
+     11y  sig  10  Carlitz-Wieferich primes
+     12y  sig  10  Anderson quasi-complete
+     14y  sig  15  AdaBoost cycling
+     15y  sig  15  Polynomial Lyapunov
+  --> P4: NULL.  p = 0.271. A 2.9-point gap on 26 vs 45 entries is noise
+
+  NOTE. This is the check this arm came closest to publishing as a finding.
+  A populated band whose entries read like the mechanism is not evidence for
+  the mechanism when the same band is almost as populated among proofs.
+  PASS  P4 was killed by its own test before publication
+
+==========================================================================
+P5 (declared). Construction dominates disproofs
+==========================================================================
+  disproved   178/ 205 =  86.8% construction
+  proved       56/ 458 =  12.2%
+  two-proportion  z = +18.58   p = 4.9e-77
+  --> P5: CONFIRMED but DEFINITIONAL.  a counterexample IS a construction; this measures the schema, not M4
+  PASS  P5 is discounted as definitional rather than counted as support
+
+==========================================================================
+Verdict on M4
+==========================================================================
+  P1  NULL
+  P2  REFUTED, and in the opposite direction
+  P3  MARGINAL
+  P4  NULL
+  P5  CONFIRMED but DEFINITIONAL
+
+  THE M4 SIGNATURE IS NOT DETECTABLE IN THIS CORPUS. One prediction is
+  refuted in the opposite direction, two are null, one is marginal, and the
+  one that passes overwhelmingly does so by definition.
+
+  This does NOT refute M4, and the reason matters: the corpus cannot see it.
+    1. M4's own logic says these refutations are working byproducts, and
+       byproducts of an unfinished attack on a famous problem are exactly
+       what does not get written up. The corpus indexes published claims.
+    2. P2 measures that selection directly -- refutations here skew toward
+       FAMOUS conjectures (p = 0.009). A corpus assembled from newsworthy
+       results would hide the obscure-auxiliary class by construction.
+    3. The decisive field does not exist in the schema: what the session was
+       ORIGINALLY after. Nothing here distinguishes a conjecture attacked on
+       purpose from one met on the way to something else.
+
+  WHAT WOULD TEST IT: process artifacts, not outcome records. The Nevanlinna
+  transcript in arm AQ is the only one this programme has seen, and one
+  transcript is not a rate. A corpus field for the session's initial target,
+  or a sample of raw sessions, would settle it.
+  PASS  the null result is reported as a null result
+
+==========================================================================
+CORRECTION. The gap is in the instrument, not in mathematics
+==========================================================================
+  This arm first concluded that under M4 'two independent refutations can
+  both exist, neither be published, and the dependent literature never
+  learn.' The operator's own case refutes that. What actually happened:
+    - the researcher who found a counterexample first WROTE A PREPRINT;
+    - the author of the disproven conjecture received messages from BOTH
+      researchers, independently.
+  So the result propagated through ordinary scholarly channels, to the one
+  party with the most expertise and the most incentive to find a flaw in it.
+  It simply did not make headlines, and so it is absent from the corpora
+  this programme has been measuring. The failure is in the INSTRUMENT.
+
+  That inverts the concern. Not 'mathematics may not learn' but 'the
+  AI-progress measurement layer systematically undercounts', and
+  specifically undercounts the unglamorous, load-bearing contributions.
+  P2 above measures exactly that bias from the inside.
+
+==========================================================================
+The schema has no tier for the state the operator's case reached
+==========================================================================
+  verification tiers, whole corpus / among disproofs:
+    unreviewed         418     138
+    lean-verified      137      34
+    site-confirmed      64      24
+    lean-checked        30       4
+    expert-verified     13       5
+    contested            2       0
+
+  138 of 205 disproofs (67%) are `unreviewed`.
+
+  There is no tier meaning 'the author of the refuted conjecture has been
+  notified and accepts it'. That state is:
+    - strictly stronger than `unreviewed` -- the person best placed to find
+      a flaw has looked;
+    - not the same as `expert-verified`, which in this corpus means someone
+      reviewed the PROOF. The one entry that comes close, 'Chip-firing middle
+      stair', earns `expert-verified` because two of the conjecture's posers
+      helped REVIEW the argument -- a different and rarer event.
+
+  So `unreviewed` conflates 'nobody has looked' with 'the one person with the
+  most expertise and the most incentive to object has looked and agreed'.
+  Across 138 disproofs that is a large amount of hidden variance, and the
+  operator's case shows the stronger state occurs and goes unrecorded.
+
+  Being told INDEPENDENTLY BY TWO researchers, with two different
+  counterexamples, is stronger still -- arguably the best practical
+  verification a refutation can have short of formalization. The schema
+  cannot express it at all.
+  PASS  the overstatement is corrected in place, not quietly dropped
+  PASS  `unreviewed` is shown to conflate two very different epistemic states   [67% of disproofs sit in the conflated tier]
+
+==========================================================================
+RESULT   8/8 checks passed   (4 of 5 declared predictions did not survive)
+==========================================================================

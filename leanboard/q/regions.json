@@ -1,0 +1,381 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "boards": {
+  "flt": {
+   "modules_profiled": 59999,
+   "regions_by_dominant_mathlib_subarea": [
+    [
+     "Algebra.Group",
+     15501
+    ],
+    [
+     "Algebra.Algebra",
+     4953
+    ],
+    [
+     "Algebra.Ring",
+     4447
+    ],
+    [
+     "RingTheory.Ideal",
+     3992
+    ],
+    [
+     "FieldTheory.IsAlgClosed",
+     2515
+    ],
+    [
+     "Algebra.Module",
+     2501
+    ],
+    [
+     "Algebra.Field",
+     1512
+    ],
+    [
+     "RingTheory.LocalRing",
+     1493
+    ],
+    [
+     "NumberTheory.ModularForms",
+     1423
+    ],
+    [
+     "Algebra.Polynomial",
+     1375
+    ],
+    [
+     "Data.Set",
+     1307
+    ],
+    [
+     "LinearAlgebra.Matrix",
+     1104
+    ],
+    [
+     "Basic.Logic",
+     1075
+    ],
+    [
+     "AlgebraicGeometry.EllipticCurve",
+     1050
+    ],
+    [
+     "Algebra.Category",
+     1048
+    ],
+    [
+     "Algebra.Quaternion",
+     805
+    ],
+    [
+     "RingTheory.AdicCompletion",
+     680
+    ],
+    [
+     "FieldTheory.IntermediateField",
+     652
+    ],
+    [
+     "AlgebraicGeometry.Modules",
+     563
+    ],
+    [
+     "Topology.Defs",
+     492
+    ],
+    [
+     "Analysis.SpecialFunctions",
+     469
+    ],
+    [
+     "Tactic.FunProp",
+     426
+    ],
+    [
+     "RingTheory.PowerSeries",
+     408
+    ],
+    [
+     "NumberTheory.NumberField",
+     391
+    ],
+    [
+     "Data.Finset",
+     385
+    ]
+   ],
+   "examples": {
+    "Algebra.Group": [
+     "Thm_GoodReductionJacobian_RelativeGroupLaw_exists_d_comap_sl",
+     "Thm_LanglandsTunnell_CubicInduction_exists_pairing_transpose",
+     "Thm_CommRing_exists_etale_faithfullyFlat_units_eq_mul_inv_mu"
+    ],
+    "Algebra.Algebra": [
+     "Thm_CerednikDrinfeld_FormalOmega_DeligneDatum_isOpen_setOf_e",
+     "Thm_groupCohomology_Kummer_exists_kummerClass_eq.lean",
+     "Thm_groupCohomology_exists_intermediateField_mem_fixingSubgr"
+    ],
+    "Algebra.Ring": [
+     "Thm_AlgebraicCurve_TwoChartIntegralModel_exists_subring_etal",
+     "Thm_Algebra_Smooth_isDomain_and_isIntegrallyClosed_of_isInte",
+     "Thm_Rep_IsTateCupProduct_cup_comm.lean"
+    ],
+    "RingTheory.Ideal": [
+     "Thm_MvPolynomial_CrossingQuotient_Resolution_exists_idealShe",
+     "Thm_AlgebraicGeometry_existsUnique_localRing_eq_localization",
+     "Thm_ModularCurve_HpoolLevelRing_exists_ringHom_laurentSeries"
+    ],
+    "FieldTheory.IsAlgClosed": [
+     "Thm_ModularCurve_PlaceSpecialization_ProlongationTuple_exist",
+     "Thm_ModularCurve_reductionQExpModL_gammaH_smul_of_isFrobeniu",
+     "Thm_ModularCurve_XHDRModelAtP_atkinLehner_swap_and_exists_co"
+    ],
+    "Algebra.Module": [
+     "Thm_AlgebraicGeometry_Polarisation_subsingleton_HSucc_of_iso",
+     "Thm_Module_exists_hom_dual_quotient_range_dualMap_linearEqui",
+     "Thm_LinearMap_BilinForm_forall_mem_of_forall_apply_eq_zero_a"
+    ],
+    "Algebra.Field": [
+     "Thm_IsDedekindDomain_HeightOneSpectrum_exists_isOpen_subgrou",
+     "Thm_ModularCurve_degree_eq_of_forall_eq_weightFloor_of_char_",
+     "Thm_AlgebraicGeometry_mem_of_isSeparated_of_forall_smoothPro"
+    ],
+    "RingTheory.LocalRing": [
+     "Thm_ModularCurve_PlaceSpecialization_toPic0Pair_gluedSpecial",
+     "Thm_ModularCurve_isIntegral_adjoin_jqModC_inv_coeffMap_resid",
+     "Thm_CerednikDrinfeld_SpecialFormalODModule_exists_lieCoordin"
+    ],
+    "NumberTheory.ModularForms": [
+     "Thm_ModularForm_alSlash_alSlash.lean",
+     "Thm_HeckeEis_exists_iota0_inv_mul_mem_heckeUpper.lean",
+     "Thm_CongruenceSubgroup_exists_mem_Gamma_mem_Gamma0_mul_inv_m"
+    ],
+    "Algebra.Polynomial": [
+     "Thm_ModularCurve_IsModuliPlaceOf_mem_nonunits_iff_of_isInteg",
+     "Thm_AlgebraicGeometry_SmoothProperCurve_finrank_levelSet_fie",
+     "Thm_Polynomial_exists_eval_mul_cpow_mul_eval_eq_of_ne_zero.l"
+    ],
+    "Data.Set": [
+     "Thm_AutomorphicForm_exists_forall_lintegral_comp_flowChart_l",
+     "Thm_AlgebraicCurve_CurveModel_placeOfPoint_ofGenerator_iotaI",
+     "Thm_Topology_IsConstructible_mem_of_mem_closure_of_forall_sp"
+    ],
+    "LinearAlgebra.Matrix": [
+     "Thm_LanglandsTunnell_exists_realArchParam_archOccursInClassO",
+     "Thm_AutomorphicForm_tendsto_sub_one_mul_lintegral_mul_ideleN",
+     "Thm_LanglandsTunnell_TateLocal_symplecticFourier_comp_rowAct"
+    ]
+   }
+  },
+  "ns": {
+   "modules_profiled": 2476,
+   "regions_by_dominant_mathlib_subarea": [
+    [
+     "Analysis.Calculus",
+     724
+    ],
+    [
+     "Algebra.Order",
+     350
+    ],
+    [
+     "Analysis.Normed",
+     186
+    ],
+    [
+     "Algebra.Group",
+     181
+    ],
+    [
+     "Topology.UniformSpace",
+     126
+    ],
+    [
+     "Basic.Logic",
+     112
+    ],
+    [
+     "Analysis.InnerProductSpace",
+     110
+    ],
+    [
+     "Tactic.FunProp",
+     78
+    ],
+    [
+     "Topology.Algebra",
+     71
+    ],
+    [
+     "Topology.ContinuousMap",
+     70
+    ],
+    [
+     "Order.Filter",
+     60
+    ],
+    [
+     "Topology.Defs",
+     58
+    ],
+    [
+     "Analysis.SpecialFunctions",
+     45
+    ],
+    [
+     "Basic.ENNReal",
+     35
+    ],
+    [
+     "Order.Defs",
+     30
+    ],
+    [
+     "Topology.Instances",
+     29
+    ],
+    [
+     "Topology.MetricSpace",
+     22
+    ],
+    [
+     "Analysis.Real",
+     21
+    ],
+    [
+     "Data.Fin",
+     20
+    ],
+    [
+     "Basic.Complex",
+     19
+    ],
+    [
+     "Algebra.Polynomial",
+     18
+    ],
+    [
+     "Data.Finset",
+     16
+    ],
+    [
+     "MeasureTheory.Integral",
+     14
+    ],
+    [
+     "Data.Set",
+     12
+    ],
+    [
+     "Analysis.Fourier",
+     10
+    ]
+   ],
+   "examples": {
+    "Analysis.Calculus": [
+     "GraphCalculus.lean",
+     "PhysicalCoordinateBounds.lean",
+     "TerminalCompensation.lean"
+    ],
+    "Algebra.Order": [
+     "BasePhaseGeometry.lean",
+     "PulseGrowth.lean",
+     "ActualIterationLedger.lean"
+    ],
+    "Analysis.Normed": [
+     "ScaledParticularFrameJets.lean",
+     "UniformBlockBounds.lean",
+     "SubcoverPeriodicity.lean"
+    ],
+    "Algebra.Group": [
+     "ActualPrimaryCovariance.lean",
+     "CurlGeometry.lean",
+     "CommonBaseContext.lean"
+    ],
+    "Topology.UniformSpace": [
+     "PacketActivationHistory.lean",
+     "ParentFirstPacketLowGuards.lean",
+     "PacketPrimaryCommonRadius.lean"
+    ],
+    "Basic.Logic": [
+     "R3FiniteEnergyComparison.lean",
+     "RegularizedForcingRepresentative.lean",
+     "PacketCorrectionGrowth.lean"
+    ],
+    "Analysis.InnerProductSpace": [
+     "MovingFrameODE.lean",
+     "TangentProjection.lean",
+     "R3CompactIntegration.lean"
+    ],
+    "Tactic.FunProp": [
+     "NativeCutoffJets.lean",
+     "PrimaryFieldAssembly.lean",
+     "CompactForceBound.lean"
+    ],
+    "Topology.Algebra": [
+     "ActualCycleExcluded.lean",
+     "MeanFixedFrameTransport.lean",
+     "LpFiniteTensorReconstruction.lean"
+    ],
+    "Topology.ContinuousMap": [
+     "PacketCylinderFieldUnique.lean",
+     "SmoothTimeFieldPrecomp.lean",
+     "MeanCoefficientFrame.lean"
+    ],
+    "Order.Filter": [
+     "MixedAxisPreservation.lean",
+     "ActualExteriorPrefix.lean",
+     "ResidualPolarGraph.lean"
+    ],
+    "Topology.Defs": [
+     "ConstructedSlowBase.lean",
+     "TemporalTestUniqueness.lean",
+     "CylinderPathProduct.lean"
+    ]
+   }
+  }
+ },
+ "shared_region_subareas": [
+  {
+   "subarea": "Algebra.Group",
+   "flt_modules": 15501,
+   "ns_modules": 181
+  },
+  {
+   "subarea": "Basic.Logic",
+   "flt_modules": 1075,
+   "ns_modules": 112
+  },
+  {
+   "subarea": "Tactic.FunProp",
+   "flt_modules": 426,
+   "ns_modules": 78
+  },
+  {
+   "subarea": "Topology.Defs",
+   "flt_modules": 492,
+   "ns_modules": 58
+  },
+  {
+   "subarea": "Analysis.SpecialFunctions",
+   "flt_modules": 469,
+   "ns_modules": 45
+  },
+  {
+   "subarea": "Algebra.Polynomial",
+   "flt_modules": 1375,
+   "ns_modules": 18
+  },
+  {
+   "subarea": "Data.Finset",
+   "flt_modules": 385,
+   "ns_modules": 16
+  },
+  {
+   "subarea": "Data.Set",
+   "flt_modules": 1307,
+   "ns_modules": 12
+  }
+ ]
+}

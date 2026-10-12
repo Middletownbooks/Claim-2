@@ -1,0 +1,12 @@
+Q1: 1 | 2 | recursive product (hypercube = product of edges) invariant that accumulated additively/log-wise over recursion replaced by a spectral "energy" invariant (A_n^2=nI) that combines by an averaging/Pythagorean rule, giving sqrt(n) directly
+Q2: 2 | 3 | "S is too small to be Kakeya" is replaced by "there exists a low-degree polynomial w vanishing on S"; the argument proceeds on w, not on S's combinatorics directly
+Q3: 2 | 3 | "S is progression-free" is replaced by "there exists an auxiliary diagonal tensor/polynomial decomposition attached to S with bounded slice rank"; size of S is read off the witness, not bounded combinatorially
+Q4: 6 | 4 | the LP framework, the sign conditions, and the representation are completely unchanged before/after - only an explicit witness function was found; no invariant, move, or certificate was re-represented, so no listed transformation actually occurred
+Q5: 4 | 3 | per-round descent (round = item) with accumulating log k loss is replaced by simultaneous control of congruence conditions across all scales jointly
+Q6: 5 | 2 | the move is unconditionally well-defined with no feasibility theorem needed
+Q7: 4 | 3 | a decoupling theorem gives joint control on how many rows can be near violation simultaneously, replacing per-row control plus a union bound
+Q8: 3 | 3 | the terminal fact becomes the trivial "nonempty symmetric convex body contains the origin," while all substantive control is now carried by the stronger invariant maintained across the move
+
+RECOGNITION:
+Q1: Huang 2019 sensitivity conjecture. Q2: Dvir 2008 finite-field Kakeya. Q3: Croot-Lev-Pach / Ellenberg-Gijswijt cap set. Q4: Viazovska sphere packing dim 8. Q5: Wooley efficient congruencing for Vinogradov MVT.
+Q6: UNKNOWN (plausibly Banaszczyk-style, not confidently named). Q7: UNKNOWN (discrepancy decoupling, not confidently named). Q8: UNKNOWN (companion of Q6, not confidently named).

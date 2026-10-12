@@ -1,0 +1,2909 @@
+{
+ "_note": "Derived by apply_ranking_overlay.py from ranking_adjudication.json. Do not edit.",
+ "source": {
+  "ranking": "proofatlas.open-problem-ranking.top500.v16 (edition 2026-09-19)",
+  "openai_math": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb"
+ },
+ "records": [
+  {
+   "rank": 5,
+   "problemId": "problem.hodge-conjecture",
+   "title": "Hodge Conjecture",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "032"
+   },
+   "pairs": [
+    {
+     "family": "032",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks that every rational Hodge class on every smooth complex projective variety be algebraic. Family 032 proves the rational Hodge conjecture for every complex CM abelian variety in every dimension and codimension (its further bullets treat abelian and K3 self-powers), a named special class.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 6,
+   "problemId": "problem.birch-and-swinnerton-dyer-conjecture",
+   "title": "Birch and Swinnerton-Dyer Conjecture",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "002"
+   },
+   "pairs": [
+    {
+     "family": "002",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks BSD (rank equality and leading-term formula) for every elliptic curve over Q. Family 002 proves the full BSD formula for every E/Q whose full q-power Selmer group has corank zero or one for some prime q, including finiteness of Sha; this is a restricted class of curves over Q.",
+     "provenance": "semantic-sweep (subagent); verified"
+    },
+    {
+     "family": "004",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Family 004 contains a pointwise 2-converse: for E/Q with nonzero rational 2-torsion whose 2-infinity Selmer corank is zero or one, the analytic and Mordell-Weil ranks equal that corank and Sha is finite. This settles BSD rank equality for a subclass of E/Q, not all of them.",
+     "provenance": "semantic-sweep (subagent); verified"
+    },
+    {
+     "family": "006",
+     "relation": "SUBCASE",
+     "direction": "partial",
+     "tier": "PAPER_ONLY",
+     "reason": "Family 006 proves Goldfeld's density statements for quadratic twists of every E/Q (analytic ranks 0 and 1 each have density 1/2; the mean analytic rank tends to 1/2), which are not BSD for any single curve. The summary of family 002 says that combined with 002 they give full BSD for a density-one set of quadratic twists of each E/Q, a subclass of the record.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 15,
+   "problemId": "problem.tate-conjecture-for-abelian-varieties-and-higher-dimensional-varieties",
+   "title": "Tate Conjecture for Algebraic Cycles",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "032"
+   },
+   "pairs": [
+    {
+     "family": "032",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks surjectivity of the l-adic cycle class map for every smooth projective variety over a finitely generated field. Family 032 states, via Milne's theorems, the Tate conjecture for all abelian varieties over finite fields, a named special case.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 24,
+   "problemId": "problem.hilberts-tenth-problem-over-the-rationals",
+   "title": "Hilbert's Tenth Problem over the Rationals",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "004"
+   },
+   "pairs": [
+    {
+     "family": "004",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks for a total algorithm deciding, for any integer polynomial in any number of variables, whether it has a rational zero. Family 004 proves no such algorithm exists (the number of variables is part of the input), negating the record's claim; the record's STATUS says open, so this conflicts.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 25,
+   "problemId": "problem.grothendiecks-generalized-hodge-conjecture",
+   "title": "Grothendiecks Generalized Hodge Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "032"
+   },
+   "pairs": [
+    {
+     "family": "032",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks Grothendieck's generalized Hodge statement for every smooth projective complex variety. Family 032 lists the generalized Hodge conjecture for CM abelian varieties among its consequences, a named special class.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 26,
+   "problemId": "problem.asymptotic-exponent-of-matrix-multiplication-omega-2",
+   "title": "Matrix-Multiplication Exponent Equals Two",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "BOUND_OR_NUMBER",
+    "tier": "FORMAL",
+    "direction": "bound",
+    "family": "107"
+   },
+   "pairs": [
+    {
+     "family": "107",
+     "relation": "BOUND_OR_NUMBER",
+     "direction": "bound",
+     "tier": "FORMAL",
+     "reason": "The record asks omega_Q = 2 for tensor rank over Q. Family 107 proves omega(C) <= 9/4 over the complex numbers and omega(F) < 2.371054886 over every field F of any characteristic (including Q), improving the 2.371177 figure in the STATUS but not reaching 2; the complex bound does not transfer to Q by itself.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 30,
+   "problemId": "problem.anderson-model-extended-states-dimension-at-least-three",
+   "title": "Anderson Model Extended States in Dimension at Least Three",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "261"
+   },
+   "pairs": [
+    {
+     "family": "261",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks that the Anderson model on Z^d (d >= 3) have a regime of absolutely continuous spectrum, equivalently a conducting phase and mobility edge. Family 261 proves purely absolutely continuous spectrum for weak disorder in every fixed d >= 3 with independent uniform site potentials; this covers the uniform model only and does not address the mobility-edge clause.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 34,
+   "problemId": "problem.khots-unique-games-conjecture",
+   "title": "Unique Games Conjecture",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "102"
+   },
+   "pairs": [
+    {
+     "family": "102",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "The record asks, for each eps, delta > 0 with eps + delta < 1, a fixed k for which distinguishing Unique Games value >= 1-eps from value <= delta is NP-hard. Family 102 claims a deterministic reduction from 3SAT to Unique Games over a fixed alphabet with completeness >= 1-eps0 and soundness <= delta0 for all eps0, delta0 in (0,1/2); a stronger gap with eps0 <= eps and delta0 <= delta implies the record's range. The record's STATUS says UGC is open, so this conflicts.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 38,
+   "problemId": "problem.higher-dimensional-euclidean-kakeya-conjecture",
+   "title": "Higher-dimensional Euclidean Kakeya conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "074"
+   },
+   "pairs": [
+    {
+     "family": "074",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks, for every n >= 4, that a compact set in R^n containing a unit segment in every direction have Hausdorff dimension n. Family 074 proves this for n = 4 (and the 3D Kakeya maximal estimate, which is outside the record's range), so it covers one dimension in the range.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 39,
+   "problemId": "problem.hilbert-sixteenth-problem-second-part",
+   "title": "Hilbert's Sixteenth Problem, Second Part",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "143"
+   },
+   "pairs": [
+    {
+     "family": "143",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks, for every degree n >= 2, finiteness of limit cycles and their maximal number and configurations. Family 143 proves a uniform bound depending only on the degree (the finiteness part) and an exact maximum of two cycles for quintic Lienard systems; a general maximal number is not claimed. The record's STATUS says no universal bound was established, so this conflicts.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 40,
+   "problemId": "problem.prove-the-penrose-inequality-or-present-a-counterexample",
+   "title": "Prove the Penrose inequality or present a counterexample",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "260"
+   },
+   "pairs": [
+    {
+     "family": "260",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks m_ADM >= sqrt(A/16 pi) for 3D data with DEC and an outermost apparent horizon, with Schwarzschild rigidity. Family 260 proves the enclosing-area spacetime Penrose inequality for one-ended asymptotically flat data in every n >= 3 under DEC, weak future trapping, positive enclosing area and extra decay assumptions, so the hypotheses differ and rigidity needs extra horizon hypotheses.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 43,
+   "problemId": "problem.nonexistence-of-landau-siegel-zeros-for-quadratic-dirichlet-l-functions",
+   "title": "Nonexistence of Landau–Siegel zeros for quadratic Dirichlet L-functions",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "003"
+   },
+   "pairs": [
+    {
+     "family": "003",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "The record asks for one absolute delta > 0 with L(beta,chi) nonzero for 1-delta/log q < beta < 1 for every primitive quadratic chi of conductor q >= 3. Family 003's bullet 'Uniform exclusion of Landau-Siegel zeros' claims an absolute c > 0 with (1-beta) log q >= c for every real zero beta in (0,1) of every primitive nonprincipal real Dirichlet L-function of conductor q >= 3, which is the same exclusion with delta = c; the record's STATUS still says open, so this conflicts.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 44,
+   "problemId": "problem.the-fontaine-mazur-conjecture-on-geometric-galois-representations",
+   "title": "The Fontaine-Mazur Conjecture on Geometric Galois Representations",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "010"
+   },
+   "pairs": [
+    {
+     "family": "010",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks Fontaine-Mazur for every number field, every prime l and every irreducible l-adic representation. Family 010 proves that odd irreducible 2-dimensional 2-adic representations of G_Q, unramified outside finitely many primes and de Rham at 2 with distinct Hodge-Tate weights, are modular up to twist; this is the K = Q, l = 2, dimension-two case.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 46,
+   "problemId": "problem.modularity-of-elliptic-curves-over-number-fields",
+   "title": "Modularity of Elliptic Curves over Number Fields (End_K(E)=Z)",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "030"
+   },
+   "pairs": [
+    {
+     "family": "030",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks, for every number field K and every E/K with End = Z, a GL2-equivariant injection of pi(E) into the cohomology of Thorne's spaces. Family 030 proves that every elliptic curve over every imaginary quadratic field is modular with matching local parameters at every place; this covers imaginary quadratic K, though the family does not state the cohomological injection itself.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 47,
+   "problemId": "problem.fourier-restriction-conjecture",
+   "title": "Fourier restriction conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "077"
+   },
+   "pairs": [
+    {
+     "family": "077",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks sharp L^p(R^d) to L^q(S^{d-1}) restriction for every d >= 2, including non-endpoint ranges. Family 077 proves the diagonal Fourier extension estimate L^p(Sigma) to L^p(R^3) for positively curved surfaces in R^3 (p > 3) and a bounded-data sphere estimate in R^3, a named d = 3 special case.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 55,
+   "problemId": "problem.finiteness-of-the-tate-shafarevich-group-for-elliptic-curves",
+   "title": "Finiteness of the Tate-Shafarevich Group for Elliptic Curves",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "002"
+   },
+   "pairs": [
+    {
+     "family": "002",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks that Sha(E/K) be finite for every elliptic curve over every number field. Family 002 proves Sha finite for E/Q whose full q-power Selmer group has corank zero or one at some prime q, a restricted class over Q.",
+     "provenance": "semantic-sweep (subagent); verified"
+    },
+    {
+     "family": "004",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Family 004's pointwise 2-converse proves Sha finite for E/Q with nonzero rational 2-torsion and 2-infinity Selmer corank zero or one. This is a restricted class of curves over Q, not all E over all number fields.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 56,
+   "problemId": "problem.the-baum-connes-conjecture-for-the-k-theory-of-reduced-group-c-algebras",
+   "title": "The Baum-Connes Conjecture for the K-Theory of Reduced Group C*-Algebras",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "285"
+   },
+   "pairs": [
+    {
+     "family": "285",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks that the coefficient-free reduced assembly map K_top(G) to K(C*_r G) be an isomorphism for every second-countable locally compact group. Family 285 disproves rational injectivity of this assembly map for a finitely generated torsion-free group and separately exhibits a K0 class outside its image, so it is not an isomorphism; the record's STATUS says open, so this conflicts.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 59,
+   "problemId": "problem.permanent-versus-determinant-conjecture",
+   "title": "Permanent versus Determinant over C",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "BOUND_OR_NUMBER",
+    "tier": "FORMAL",
+    "direction": "bound",
+    "family": "108"
+   },
+   "pairs": [
+    {
+     "family": "108",
+     "relation": "BOUND_OR_NUMBER",
+     "direction": "bound",
+     "tier": "FORMAL",
+     "reason": "The record asks that the exact affine determinantal complexity of per_n over C be non-O(n^c) for every c, i.e. superpolynomial. Family 108 proves an Omega(n^3) lower bound on border, and therefore exact, determinantal complexity of the permanent, improving the quadratic bounds the STATUS names but staying polynomial.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 61,
+   "problemId": "problem.l-p-problem",
+   "title": "L = P Problem",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "BOUND_OR_NUMBER",
+    "tier": "FORMAL",
+    "direction": "bound",
+    "family": "137"
+   },
+   "pairs": [
+    {
+     "family": "137",
+     "relation": "BOUND_OR_NUMBER",
+     "direction": "bound",
+     "tier": "FORMAL",
+     "reason": "The record asks whether every polynomial-time language lies in O(log n) space. The STATUS mentions square-root-space simulation; family 137 improves the square-root exponent for one-tape time simulation to T^{2/5} polylog space, which is still polynomial space and does not reach logarithmic space.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 73,
+   "problemId": "problem.termination-of-flips-conjecture-in-the-minimal-model-program",
+   "title": "Termination of Flips Conjecture in the Minimal Model Program",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "056"
+   },
+   "pairs": [
+    {
+     "family": "056",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks termination of every (K_X+Delta)-flip sequence for lc or klt pairs in every dimension. Family 056 proves termination of generalized log canonical flip sequences on compact Kahler fourfolds and of permitted MMPs for projective lc fourfolds with rational boundary, a dimension-four case with extra hypotheses.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 77,
+   "problemId": "problem.abundance-conjecture-for-the-minimal-model-program",
+   "title": "Abundance Conjecture for the minimal model program",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "034"
+   },
+   "pairs": [
+    {
+     "family": "034",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks that K_X+Delta be semiample for every minimal projective klt pair. Family 034 claims log abundance in every dimension over algebraically closed fields of characteristic zero: a nef Q-Cartier log canonical adjoint on a projective lc pair with effective rational boundary is semiample. This settles the record if Delta is the usual effective Q-divisor, which the record does not state; the record's STATUS says open, so this conflicts.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 78,
+   "problemId": "problem.chowla-conjecture-on-correlations-of-the-liouville-function",
+   "title": "Chowla conjecture on correlations of the Liouville function",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "007"
+   },
+   "pairs": [
+    {
+     "family": "007",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "The record asks Chowla correlation sums o(x) for every k >= 2 tuple of shifts with nonproportional affine forms. Family 007 proves the ordinary two-point case k = 2 with an O(X/(log X)^c) bound, a named special case.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 79,
+   "problemId": "problem.hadwiger-conjecture",
+   "title": "Hadwiger Conjecture",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "157"
+   },
+   "pairs": [
+    {
+     "family": "157",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "The record asks whether every simple graph with no K_{t+1} minor is t-colourable, i.e. chi(G) <= h(G). Family 157 constructs arbitrarily large graphs with independence number at most two and chi(G) > h(G) (even fractional chi_f > h), a counterexample to the stated conjecture; the record's STATUS says ordinary Hadwiger remains open, so this conflicts.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 81,
+   "problemId": "problem.zilber-pink-conjecture-on-unlikely-intersections",
+   "title": "Zilber-Pink Conjecture on Unlikely Intersections",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "016"
+   },
+   "pairs": [
+    {
+     "family": "016",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks finiteness of maximal atypical subvarieties for mixed Shimura varieties. Family 016 proves the abelian (pure Shimura) Zilber-Pink conjecture over Q-bar and the Hodge-generic curve case in A_2, a pure-Shimura special case; the record's STATUS notes that pure-Shimura cases do not cover the target.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 85,
+   "problemId": "problem.bose-einstein-condensation-in-interacting-continuous-bose-gases",
+   "title": "Bose-Einstein Condensation in Interacting Continuous Bose Gases",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL_WEAKER",
+    "direction": "proved",
+    "family": "267"
+   },
+   "pairs": [
+    {
+     "family": "267",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL_WEAKER",
+     "reason": "The record asks non-zero off-diagonal long-range order at low temperature in the thermodynamic limit for an interacting continuous 3D Bose gas. Family 267 proves positive-temperature condensation for the dilute hard-sphere gas at small density, and a density-uniform bound for bounded nonnegative radial finite-range interactions at temperatures up to the square of the density; this covers named interaction classes and regimes.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 90,
+   "problemId": "problem.grothendieck-standard-conjecture-hodge-type",
+   "title": "Grothendieck Standard Conjecture of Hodge Type",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "032"
+   },
+   "pairs": [
+    {
+     "family": "032",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks numerical primitive positivity (the standard conjecture of Hodge type) for every smooth projective variety. Family 032 proves the Hodge standard conjecture for abelian varieties in arbitrary characteristic, a special class of varieties.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 95,
+   "problemId": "problem.entanglement-area-law-for-2d-gapped-quantum-systems",
+   "title": "Entanglement Area Law for 2D Gapped Quantum Systems",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "265"
+   },
+   "pairs": [
+    {
+     "family": "265",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks S(rho_A) <= C |boundary A| for unique ground states of finite-range 2D square-lattice Hamiltonians with fixed local dimension and a size-independent gap lower bound. Family 265 proves an entropy area law for unique ground states of finite-range Hamiltonians on any finite induced square-lattice domain, using only a uniform full-system gap and local bounds; the record's STATUS says open, so this conflicts.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 97,
+   "problemId": "problem.grothendiecks-section-conjecture-in-anabelian-geometry",
+   "title": "Grothendiecks Section Conjecture in Anabelian Geometry",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "019"
+   },
+   "pairs": [
+    {
+     "family": "019",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record asks Grothendieck's section conjecture for every hyperbolic genus >= 2 curve over every number field. Family 019 proves the global statement over number fields only when the finite-cover descent locus equals the rational points, which includes X_0(N) and X_1(N) of genus >= 2 over Q; its main theorem is the local p-adic case.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 104,
+   "problemId": "problem.top500-omission-w045049-absolute-hodge-conjecture",
+   "title": "Deligne's Absolute Hodge Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "032"
+   },
+   "pairs": [
+    {
+     "family": "032",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that every rational Hodge class on every smooth projective complex variety be absolute Hodge. Family 032 proves the rational Hodge conjecture for every complex CM abelian variety; algebraic classes are absolute Hodge, so absolute Hodge holds on CM abelian varieties, a named special case (the record already lists abelian varieties as established).",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 111,
+   "problemId": "problem.the-haldane-conjecture-on-spectral-gaps-of-antiferromagnetic-quantum-spin-chains",
+   "title": "The Haldane Conjecture on Spectral Gaps of Antiferromagnetic Quantum Spin Chains",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "268"
+   },
+   "pairs": [
+    {
+     "family": "268",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks for a positive gap for every integer spin S>=1 and gaplessness for every half-integer spin. Family 268 proves a uniform positive spectral gap for the pure antiferromagnetic spin-one Heisenberg chain on even periodic rings, which is the S=1 gapped case only; other integer spins and the gapless half-integer claim are not addressed.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 113,
+   "problemId": "problem.iitaka-conjecture-c-n-m-on-subadditivity-of-kodaira-dimension",
+   "title": "Iitaka conjecture C_{n,m} on subadditivity of Kodaira dimension",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "033"
+   },
+   "pairs": [
+    {
+     "family": "033",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks kappa(X) >= kappa(Y)+kappa(F) for a surjective morphism of smooth projective varieties with general fibre F (Iitaka C_{n,m}). Family 033's 'Projective Hodge lines and ordinary Iitaka subadditivity' proves kappa(X) >= kappa(F)+kappa(Z) for surjective projective morphisms between smooth connected projective varieties over algebraically closed fields of characteristic zero; it assumes connected fibres, the standard normalization the record leaves implicit.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 114,
+   "problemId": "problem.the-borel-conjecture-on-topological-rigidity-of-aspherical-manifolds",
+   "title": "The Borel Conjecture on Topological Rigidity of Aspherical Manifolds",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "320"
+   },
+   "pairs": [
+    {
+     "family": "320",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks whether every homotopy equivalence between closed aspherical manifolds is homotopic to a homeomorphism (Borel conjecture). Family 320 constructs closed aspherical topological four-manifolds that are homotopy equivalent but not homeomorphic, so the homotopy equivalence between them cannot be homotopic to a homeomorphism; this disproves the target in the topological category used by the record's homeomorphism wording.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 115,
+   "problemId": "problem.polynomial-bound-for-limit-cycles-of-planar-polynomial-vector-fields",
+   "title": "Polynomial Bound for Limit Cycles of Planar Polynomial Vector Fields",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "143"
+   },
+   "pairs": [
+    {
+     "family": "143",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks for a polynomial bound K <= d^q on the number of limit cycles of planar degree-d polynomial systems. Family 143 proves the weaker uniform boundedness: the number of limit cycles is bounded by a finite constant depending only on d (second part of Hilbert's sixteenth problem), with no polynomial rate; the exact count of two cycles for quintic Lienard systems is a special case.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 120,
+   "problemId": "problem.aspherical-manifolds-admit-no-metric-of-positive-scalar-curvature",
+   "title": "Aspherical Manifolds Admit No Metric of Positive Scalar Curvature",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "335"
+   },
+   "pairs": [
+    {
+     "family": "335",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that no closed aspherical manifold admits a metric of positive scalar curvature (Gromov-Lawson aspherical conjecture). Family 335's manuscript 'Positive scalar curvature forces rational inessentiality' proves that closed manifolds with PSC are rationally inessential with no spin or fundamental-group hypothesis, and the family states this proves the Gromov-Lawson aspherical conjecture, since closed aspherical manifolds are rationally essential.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 123,
+   "problemId": "problem.density-hypothesis-for-zeroes-of-the-riemann-zeta-function",
+   "title": "Density Hypothesis for Zeroes of the Riemann Zeta Function",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "003"
+   },
+   "pairs": [
+    {
+     "family": "003",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks N(sigma,T) <= C T^{2(1-sigma)+eps} for 1/2 <= sigma <= 1. Family 003 proves zeta and all Dirichlet L-functions have no zeros in Re s > 7/8; for sigma in (7/8,1] this forces N(sigma,T)=0 for large T, so the density bound holds on that range, and nothing is claimed for sigma <= 7/8.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 130,
+   "problemId": "problem.erdos-problem-3-divergent-harmonic-series-and-long-arithmetic-progressions",
+   "title": "Erdős problem 3: divergent harmonic series and long arithmetic progressions",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "159"
+   },
+   "pairs": [
+    {
+     "family": "159",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether every A in N with divergent reciprocal sum must contain arbitrarily long arithmetic progressions (Erdos problem 3). Family 159 proves Erdos's conjecture that every set of positive integers with divergent reciprocal sum contains progressions of every finite length, which is the same statement.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 133,
+   "problemId": "problem.cannon-s-conjecture",
+   "title": "Cannon's conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "246"
+   },
+   "pairs": [
+    {
+     "family": "246",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether every hyperbolic group with boundary S^2 acts properly, cocompactly and isometrically on H^3 (equivalently is virtually a cocompact Kleinian group). Family 246 proves that every hyperbolic group with boundary S^2 admits a proper cocompact isometric action on H^3 with finite kernel, which gives the virtual form and proves Cannon's conjecture.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 140,
+   "problemId": "problem.residual-finiteness-of-hyperbolic-groups",
+   "title": "Residual Finiteness of Hyperbolic Groups",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "252"
+   },
+   "pairs": [
+    {
+     "family": "252",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether every nonidentity element of every word-hyperbolic group is detected by a homomorphism to a finite group (residual finiteness). Family 252 constructs a torsion-free word-hyperbolic group that is not residually finite, so some nonidentity element is not separated by finite quotients, which refutes the statement.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 158,
+   "problemId": "problem.bpl-l-derandomizing-bounded-error-logspace",
+   "title": "BPL = L (Derandomizing Bounded-Error Logspace)",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "103"
+   },
+   "pairs": [
+    {
+     "family": "103",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether every language decided by a bounded-error probabilistic logspace polynomial-time machine is decided deterministically in O(log n) space. Family 103 proves L = RL = BPL with an effective compiler, which is that equality of classes.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 164,
+   "problemId": "problem.weinstein-conjecture-on-periodic-orbits-of-reeb-flows",
+   "title": "Weinstein Conjecture on periodic orbits of Reeb flows",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "345"
+   },
+   "pairs": [
+    {
+     "family": "345",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks for periodic Reeb orbits of every contact form on every closed contact manifold. Family 345 proves infinitely many prime closed geodesics on every Riemannian S^n and on every closed 3-manifold; geodesic flows are Reeb flows of the canonical contact form on unit cotangent bundles, so periodic Reeb orbits are established for those contact manifolds and forms only, a named special case.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 165,
+   "problemId": "problem.bochner-riesz-conjecture",
+   "title": "Bochner-Riesz conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "078"
+   },
+   "pairs": [
+    {
+     "family": "078",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks the sharp Bochner-Riesz characterization in every dimension d>=2 for 1<p<infinity. Family 078 proves boundedness of the Bochner-Riesz multipliers on R^3 for delta > max{3|1/p-1/2|-1/2, 0}, which is the strict range in dimension three only, with no endpoint and no other dimensions.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 166,
+   "problemId": "problem.arnold-conjecture-on-hamiltonian-fixed-points",
+   "title": "Arnold Conjecture on Hamiltonian Fixed Points",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "347"
+   },
+   "pairs": [
+    {
+     "family": "347",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks that every Hamiltonian diffeomorphism of a closed connected symplectic manifold has at least Crit(M) fixed points. Family 347 constructs a Hamiltonian diffeomorphism of the complex quadric threefold with exactly three fixed points, at least one degenerate, while every smooth function on it has at least four critical points; this disproves the critical-number form as stated.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 171,
+   "problemId": "problem.the-free-group-factor-isomorphism-problem",
+   "title": "The Free Group Factor Isomorphism Problem",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "287"
+   },
+   "pairs": [
+    {
+     "family": "287",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether L(F_m) and L(F_n) are isomorphic for m != n, especially L(F_2) = L(F_3). Family 287 proves L(F_2) and L(F_3) are isomorphic as tracial von Neumann algebras, hence all interpolated free group factors including L(F_infinity) are isomorphic, which answers the record affirmatively.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 183,
+   "problemId": "problem.anisotropic-calderon-conjecture-for-smooth-riemannian-manifolds",
+   "title": "Smooth anisotropic Calderón uniqueness from full boundary data",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "365"
+   },
+   "pairs": [
+    {
+     "family": "365",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks whether equal Dirichlet-to-Neumann maps of two smooth metrics on a compact connected manifold of dimension n>=3 with boundary force the metrics to differ by a diffeomorphism fixing the boundary pointwise. Family 365 proves a smooth Riemannian metric is determined, up to a diffeomorphism fixing the measured patch, by its zero-frequency Dirichlet-to-Neumann energy form on any nonempty open boundary patch; with the whole boundary as the patch this gives the record's conclusion.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 184,
+   "problemId": "problem.polyakov-conjecture-absence-of-a-phase-transition-for-planar-o-n-models-with-n-3",
+   "title": "Polyakov Conjecture: Absence of a Phase Transition for Planar O(n) Models with n >= 3",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL_WEAKER",
+    "direction": "proved",
+    "family": "215"
+   },
+   "pairs": [
+    {
+     "family": "215",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL_WEAKER",
+     "reason": "Polyakov's conjecture: exponential decay of O(n) two-point functions on Z^2 for n >= 3 at every beta. Family 215 claims exactly this at every positive temperature. FORMAL_WEAKER: the Lean statement gives uniform exponential decay on every finite square-lattice subgraph with free boundary and couplings at most beta; the infinite-volume statement is the limit of those uniform bounds but is not itself stated.",
+     "provenance": "semantic-sweep (subagent); corrected here"
+    }
+   ]
+  },
+  {
+   "rank": 186,
+   "problemId": "problem.order-of-magnitude-of-maximum-3-term-ap-free-subsets-of-1-n",
+   "title": "Order of Magnitude of Maximum 3-Term-AP-Free Subsets of {1,...,N}",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "BOUND_OR_NUMBER",
+    "tier": "PAPER_ONLY",
+    "direction": "bound",
+    "family": "159"
+   },
+   "pairs": [
+    {
+     "family": "159",
+     "relation": "BOUND_OR_NUMBER",
+     "direction": "bound",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks for the order of magnitude of r_3(N), the largest 3-AP-free subset of {1..N}, whose status cites the current upper bound N exp(-c (log N)^{1/6}/log log N). Family 159 proves r_k(N) <= C_k N exp(-c_k (log N)^{eps_k}) for every k>=3, including k=3; the exponent eps_3 is not stated in the digest, so whether it improves the cited bound cannot be verified from the record.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 187,
+   "problemId": "problem.conformal-invariance-of-the-critical-random-cluster-model-with-q-4",
+   "title": "Conformal Invariance of the Critical Random-Cluster Model with q <= 4",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "223"
+   },
+   "pairs": [
+    {
+     "family": "223",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that the exploration path of critical FK models with q<=4 converges to SLE_{kappa(q)} with conformal invariance as mesh tends to zero. Family 223 proves chordal SLE_kappa convergence of critical square-lattice FK Dobrushin interfaces for 0<q<=4 with kappa=4pi/arccos(-sqrt(q)/2), for all bounded Jordan domains when q>=1 but only smooth Jordan domains when q<1, under marked-boundary approximations; this is a square-lattice, restricted-domain subcase.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 189,
+   "problemId": "problem.nonvanishing-conjecture-for-projective-log-canonical-pairs",
+   "title": "Nonvanishing conjecture for projective log canonical pairs",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "034"
+   },
+   "pairs": [
+    {
+     "family": "034",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks kappa(K_X+Delta) >= 0 for projective lc pairs with pseudo-effective K_X+Delta (nonvanishing). Family 034's 'Log abundance in characteristic zero' manuscript proves canonical nonvanishing for smooth projective varieties over C in every dimension, which is the Delta=0 smooth case; general boundaries and singular lc pairs are not covered.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 190,
+   "problemId": "problem.parity-conjecture-for-elliptic-curves",
+   "title": "Parity conjecture for elliptic curves",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "002"
+   },
+   "pairs": [
+    {
+     "family": "002",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks w(E/K) = (-1)^rank for every elliptic curve over every number field. Family 002 proves full BSD for E/Q whose q-Selmer corank is 0 or 1 for some prime q, giving analytic rank = Mordell-Weil rank there and hence the root-number parity for those curves over Q; this is a named subcase (E/Q with low corank), not all number fields.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 191,
+   "problemId": "problem.global-existence-of-classical-solutions-to-the-relativistic-vlasov-maxwell-system",
+   "title": "Global Existence of Classical Solutions to the Relativistic Vlasov-Maxwell System",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "362"
+   },
+   "pairs": [
+    {
+     "family": "362",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks for global classical solutions for every sufficiently regular finite-energy initial datum. Family 362 proves global existence and uniqueness for arbitrary smooth admissible data whose initial particle density is compactly supported and whose fields have finite energy and bounded derivatives; compact support of the density is a restriction on the data class.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 192,
+   "problemId": "problem.artin-s-primitive-root-conjecture",
+   "title": "Artin's primitive root conjecture",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "029"
+   },
+   "pairs": [
+    {
+     "family": "029",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that every integer a other than -1 that is not a square is a primitive root for a positive natural density of primes, with Artin's correction factor. Family 029 proves the infinitude: at least c_a x/(log x)^2 primes in (x,2x) have primitive root a for every such a, a weaker form without positive density or the Artin constant.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 193,
+   "problemId": "problem.falconer-distance-set-conjecture",
+   "title": "Falconer distance set conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "073"
+   },
+   "pairs": [
+    {
+     "family": "073",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks, for every d>=2 and compact E in R^d with Hausdorff dimension greater than d/2, that the distance set has positive one-dimensional Lebesgue measure. Family 073 resolves the Falconer distance conjecture in every dimension d>=2 with this hypothesis and conclusion.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 194,
+   "problemId": "problem.hopf-conjecture-for-positive-sectional-curvature",
+   "title": "Hopf conjecture for positive sectional curvature",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "348"
+   },
+   "pairs": [
+    {
+     "family": "348",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks that every closed even-dimensional manifold with positive sectional curvature has positive Euler characteristic (Hopf). Family 348 classifies closed Einstein four-manifolds with positive Einstein constant and nonnegative sectional curvature; their universal covers (S^4, CP^2, S^2 x S^2, and RP^4 in the strictly positive case) give positive Euler characteristic, so this is the Einstein four-dimensional subcase.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 195,
+   "problemId": "problem.local-smoothing-conjecture-for-wave-equations",
+   "title": "Local Smoothing Conjecture for Wave Equations",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "079"
+   },
+   "pairs": [
+    {
+     "family": "079",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks the wave local smoothing estimate for every n>=3 and p>2n/(n-1) with loss s_p-1/p+eps. Family 079 proves the local smoothing estimate in three spatial dimensions for 2<p<infinity with regularity above max{0,1-3/p}, which for n=3 and p>3 is exactly the record's regularity; dimensions n>=4 are not covered.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 196,
+   "problemId": "problem.hilbert-smith-conjecture",
+   "title": "Hilbert-Smith Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "304"
+   },
+   "pairs": [
+    {
+     "family": "304",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that every locally compact group acting faithfully on a connected manifold is a Lie group, equivalently that Z_p has no faithful action on a connected manifold. Family 304 proves this in every finite dimension for second-countable Hausdorff groups acting jointly continuously on manifolds without boundary; Z_p is covered directly, so the record's equivalent Z_p form is settled, and second countability is the only extra restriction.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 201,
+   "problemId": "problem.long-range-order-in-the-quantum-heisenberg-ferromagnet",
+   "title": "Long-Range Order in the Quantum Heisenberg Ferromagnet",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "271"
+   },
+   "pairs": [
+    {
+     "family": "271",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks for a translation-invariant zero-field Gibbs state with nonzero spin expectation for the nearest-neighbour isotropic quantum Heisenberg ferromagnet on Z^d, for every d>=3 and every spin S, at all sufficiently low beta. Family 271 proves, for every d>=3 and S, a translation-invariant spontaneously magnetized KMS equilibrium state at every sufficiently low positive temperature with magnetization at least S/4.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 202,
+   "problemId": "problem.kaplansky-s-zero-divisor-conjecture-for-torsion-free-groups",
+   "title": "Kaplansky's Zero-Divisor Conjecture for Torsion-Free Groups",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "196"
+   },
+   "pairs": [
+    {
+     "family": "196",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether K[G] is a domain for every torsion-free group G and every field K. Family 196 constructs a finitely presented torsion-free group G with nonzero alpha, beta in F2[G] and alpha*beta = 0, a counterexample for K = F2.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 215,
+   "problemId": "problem.de-giorgi-conjecture-for-the-allen-cahn-equation-in-dimensions-4-to-8",
+   "title": "De Giorgi Conjecture for the Allen-Cahn Equation in Dimensions 4 to 8",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "375"
+   },
+   "pairs": [
+    {
+     "family": "375",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that every bounded entire monotone solution of Allen-Cahn is one-dimensional for each dimension 4<=N<=8. Family 375 proves the N=8 case (every entire solution on R^8 with positive directional derivative is a planar heteroclinic) and classifies stable solutions on R^7; strictly monotone solutions are stable, so N=7 also follows (my inference, not stated by the family), but N=4,5,6 are not covered.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 221,
+   "problemId": "problem.exact-satisfiability-threshold-for-random-k-sat-for-small-k-k-3",
+   "title": "Exact satisfiability threshold for random k-SAT for small k (k = 3)",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "partial",
+    "family": "235"
+   },
+   "pairs": [
+    {
+     "family": "235",
+     "relation": "SUBCASE",
+     "direction": "partial",
+     "tier": "FORMAL",
+     "reason": "Record asks the exact limiting threshold r_3 of uniform random 3-SAT. Family 235 proves that a finite positive limiting satisfiability threshold exists for every k>=3 (the existence component) and that the 3-SAT threshold is a computable real with explicit certificates, but does not identify r_3; its model samples clauses on distinct variables with replacement rather than the record's distinct-literal uniform model.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 227,
+   "problemId": "problem.walls-poincare-duality-group-conjecture",
+   "title": "Wall's Poincare Duality Group Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "305"
+   },
+   "pairs": [
+    {
+     "family": "305",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks, for every n>=3 and every finitely presented integral Poincare duality group of dimension n, a closed aspherical n-manifold realizing it (Wall's conjecture). Family 305 constructs a finitely presented integral PD4 group with finite classifying space that is not the fundamental group of any closed aspherical topological four-manifold, refuting the claim at n=4.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 231,
+   "problemId": "problem.kadison-similarity-problem-for-c-star-algebras",
+   "title": "Kadison Similarity Problem for C*-Algebras",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "288"
+   },
+   "pairs": [
+    {
+     "family": "288",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether every bounded representation of a C*-algebra on a Hilbert space is similar to a *-representation. Family 288 proves Kadison's similarity conjecture: every bounded unital homomorphism from a unital complex C*-algebra into bounded operators on any Hilbert space is similar to a *-homomorphism; the non-unital reduction is not spelled out in the family.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 238,
+   "problemId": "problem.chromatic-number-of-the-plane-hadwiger-nelson-problem",
+   "title": "Chromatic Number of the Plane (Hadwiger-Nelson Problem)",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "BOUND_OR_NUMBER",
+    "tier": "FORMAL",
+    "direction": "bound",
+    "family": "158"
+   },
+   "pairs": [
+    {
+     "family": "158",
+     "relation": "BOUND_OR_NUMBER",
+     "direction": "bound",
+     "tier": "FORMAL",
+     "reason": "Record asks the exact chromatic number of the plane (Hadwiger-Nelson). Family 158 proves that every five-colouring of the plane has a monochromatic unit-distance pair, so the chromatic number is 6 or 7; this improves the lower bound from 5 but does not determine the number.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 241,
+   "problemId": "problem.top500-omission-w045049-virasoro-gromov-witten-conjecture",
+   "title": "Virasoro Conjecture for Gromov–Witten Invariants",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "065"
+   },
+   "pairs": [
+    {
+     "family": "065",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks the descendant Virasoro constraints for every smooth projective complex variety X. Family 065 proves the full descendant Virasoro conjecture for smooth complete intersections in projective space (all genera, curve classes and insertions) and transfers it to projectivizations of vector bundles over such bases, so only these varieties are covered.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 243,
+   "problemId": "problem.the-singer-conjecture-on-vanishing-of-l2-cohomology-of-aspherical-manifolds",
+   "title": "The Singer Conjecture on Vanishing of L2-Cohomology of Aspherical Manifolds",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "315"
+   },
+   "pairs": [
+    {
+     "family": "315",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that L2-Betti numbers of every closed aspherical n-manifold vanish outside degree n/2 for all n, in particular odd n. Family 315 proves the four-dimensional case (finite aspherical integral Poincare complexes of formal dimension four are included), a single dimension of the general conjecture.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 244,
+   "problemId": "problem.k-pi-1-conjecture-for-artin-groups",
+   "title": "K(pi,1) conjecture for Artin groups",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "254"
+   },
+   "pairs": [
+    {
+     "family": "254",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks that the Salvetti complex of every Coxeter system with finite S and arbitrary labels be aspherical (Artin K(pi,1)). Family 254 proves that the standard Salvetti complex of every Artin group with finitely many standard generators is aspherical, the same statement.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 248,
+   "problemId": "problem.universal-optimality-of-hexagonal-lattice",
+   "title": "Universal Optimality of the Hexagonal Lattice in Dimension Two",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "090"
+   },
+   "pairs": [
+    {
+     "family": "090",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks that the lower energy per particle of any completely monotone potential p(r)=f(r^2), infinite values allowed, is at least the hexagonal-lattice energy at density one. Family 090 proves the density-one triangular lattice minimizes the lower energy per particle for every nonnegative completely monotone function of squared distance among planar configurations of centred-disk density one, with infinite energies included.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 249,
+   "problemId": "problem.rl-versus-l",
+   "title": "RL versus L",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "103"
+   },
+   "pairs": [
+    {
+     "family": "103",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether RL = L for the stated read-only-input, log-space RL model. Family 103 proves L = RL = BPL, which contains RL = L.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 250,
+   "problemId": "problem.all-groups-are-good-disc-embedding-conjecture",
+   "title": "All groups are good: the four-dimensional disc-embedding conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "305"
+   },
+   "pairs": [
+    {
+     "family": "305",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asserts that every group is good in the four-dimensional disc-embedding sense, equivalently that F2 is good. Family 305 proves that the unrestricted disc-embedding statement fails and that F2, and any group containing it, is not good in the Freedman-Quinn sense.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 251,
+   "problemId": "problem.shafarevich-holomorphic-convexity-conjecture",
+   "title": "Shafarevich Holomorphic-Convexity Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "046"
+   },
+   "pairs": [
+    {
+     "family": "046",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks holomorphic convexity of the universal cover of every connected smooth complex projective variety. Family 046 states a separate smooth connected projective complex surface whose universal cover is not holomorphically convex, disproving the unrestricted conjecture in dimension two (its fourfold has large fundamental group and non-Stein universal cover).",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 257,
+   "problemId": "problem.sidorenko-conjecture-on-bipartite-homomorphism-densities",
+   "title": "Sidorenko Conjecture on Bipartite Homomorphism Densities",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "161"
+   },
+   "pairs": [
+    {
+     "family": "161",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks t(H,W) >= t(K2,W)^{|E(H)|} for every bipartite H and every graphon W. Family 161 exhibits one connected bipartite graph on 35 vertices and 66 edges and a finite host graph (hence a graphon) with t(H,G) < t(K2,G)^66, a counterexample.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 263,
+   "problemId": "problem.sharp-upper-bound-in-yau-s-conjecture-on-nodal-sets-of-laplace-eigenfunctions",
+   "title": "Sharp Upper Bound in Yau's Conjecture on Nodal Sets of Laplace Eigenfunctions",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "350"
+   },
+   "pairs": [
+    {
+     "family": "350",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks the bound H^{n-1}({phi=0}) <= C sqrt(lambda) for every closed Riemannian n-manifold with n>=2. Family 350 proves it for surfaces, but constructs smooth metrics on S^3 arbitrarily close to round and on S^2 x T^2 with unbounded nodal measure over sqrt(lambda), and power-law violations on S^4 x S^1, so the universal claim fails in dimensions three and four.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 265,
+   "problemId": "problem.cartan-hadamard-isoperimetric-conjecture",
+   "title": "Cartan-Hadamard isoperimetric conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL_WEAKER",
+    "direction": "proved",
+    "family": "337"
+   },
+   "pairs": [
+    {
+     "family": "337",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL_WEAKER",
+     "reason": "Family 337 claims the generalized Cartan-Hadamard isoperimetric inequality in every dimension with Euclidean-ball equality rigidity for kappa = 0. FORMAL_WEAKER: the Lean statement is the sharp Euclidean FILLING inequality for integral n-cycles in proper CAT(0) spaces, which gives the inequality for regions (in a Cartan-Hadamard manifold the region is the filling of its boundary) but not the equality rigidity. CAUTION carried from this repository's own record: an earlier human settlement claim on this target was withdrawn.",
+     "provenance": "semantic-sweep (subagent); corrected here"
+    }
+   ]
+  },
+  {
+   "rank": 268,
+   "problemId": "problem.nearby-lagrangian-conjecture",
+   "title": "Nearby Lagrangian Conjecture",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "340"
+   },
+   "pairs": [
+    {
+     "family": "340",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asserts that every closed exact Lagrangian in T^*N is Hamiltonian isotopic to the zero section N. Family 340 constructs, in T^*(S^9 x S^{N-1}) for some large even N, a closed exact embedded Lagrangian diffeomorphic to the base but not Hamiltonian isotopic to the zero section.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 271,
+   "problemId": "problem.mahler-conjecture-on-the-volume-product-of-a-convex-body",
+   "title": "Mahler Conjecture on the Volume Product of a Convex Body",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "087"
+   },
+   "pairs": [
+    {
+     "family": "087",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks |K||K°| >= 4^n/n! for centrally symmetric convex bodies with equality at the cube. Family 087 proves the symmetric Mahler conjecture in every dimension with equality exactly for invertible linear images of Hanner polytopes, which include the cube and its polar.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 272,
+   "problemId": "problem.kuznetsov-rationality-conjecture-for-cubic-fourfolds",
+   "title": "Kuznetsov Rationality Conjecture for Cubic Fourfolds",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "054"
+   },
+   "pairs": [
+    {
+     "family": "054",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "MISSED BY THE SEMANTIC SWEEP, recovered by the lexical recall screen. Kuznetsov: a smooth cubic fourfold is rational iff Ku(X) ~= D^b(S) for a K3 surface S. Family 054 claims, for every sufficiently large admissible Hassett discriminant, a very general cubic fourfold that is IRRATIONAL although its Kuznetsov component is equivalent to D^b of a projective K3 -- refuting the 'if' direction. Ineffective threshold; paper only.",
+     "provenance": "lexical-recall-screen; verified"
+    }
+   ]
+  },
+  {
+   "rank": 274,
+   "problemId": "problem.secret-key-from-all-entangled-states",
+   "title": "Secret key from all entangled states",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "272"
+   },
+   "pairs": [
+    {
+     "family": "272",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks whether every bipartite entangled state has strictly positive distillable secret key under asymptotic LOCC with public communication. Family 272 constructs an entangled state on C^10 x C^10 with zero distillable secret key for protocols that process all copies jointly with unlimited two-way public communication and an eavesdropper holding the purification, a counterexample.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 280,
+   "problemId": "problem.kaplansky-s-idempotent-conjecture-for-torsion-free-groups",
+   "title": "Kaplansky's Idempotent Conjecture",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "197"
+   },
+   "pairs": [
+    {
+     "family": "197",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "The record is universal over fields of every characteristic and torsion-free G. If ab = 1 and ba != 1 in K[G], then e = ba is idempotent ((ba)(ba) = b(ab)a = ba), e != 1 by hypothesis, and e != 0 since a = (ab)a = a(ba). So family 197's October-4 manuscript -- a finitely presented TORSION-FREE group with F_2[G] not directly finite -- would give a nontrivial idempotent in F_2[G]. PAPER_ONLY: the formalized direct-finiteness counterexample is for a group WITH torsion (odd prime order), which does not touch this record. Read with family 207 (SUBCASE, FORMAL): the characteristic-zero half is claimed proved. Net claimed state: true in characteristic 0, false in characteristic 2.",
+     "provenance": "agent-flagged as ADJACENT; upgraded here"
+    },
+    {
+     "family": "207",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks that every idempotent of K[G] is 0 or 1 for every field K of any characteristic and every torsion-free G. Family 207 proves this for every torsion-free group and every commutative unital characteristic-zero domain (so all characteristic-zero fields), leaving positive characteristic open.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 286,
+   "problemId": "problem.unrestricted-linear-circuit-fft-lower-bound",
+   "title": "Unrestricted Linear-Circuit Lower Bound for the Discrete Fourier Transform",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "130"
+   },
+   "pairs": [
+    {
+     "family": "130",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asserts C_DFT(n) >= c n log n for all large n in the model where each step forms lambda f + mu g. Family 130's later version gives exact DFT circuits of size o(n log n) along an unbounded sequence of lengths, counting every addition, subtraction and scalar multiplication, which refutes the uniform lower bound.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 291,
+   "problemId": "problem.griffiths-positivity-conjecture-for-ample-vector-bundles",
+   "title": "Griffiths Positivity Conjecture for Ample Vector Bundles",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "050"
+   },
+   "pairs": [
+    {
+     "family": "050",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks a smooth strictly Griffiths-positive Hermitian metric on every ample holomorphic vector bundle. Family 050 constructs ample rank-two bundles on P^1 x P^1 (coordinatewise power pullbacks tensored with O(1,1)) that admit no such metric for all sufficiently large powers, a counterexample.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 300,
+   "problemId": "problem.alperins-weight-conjecture-for-modular-representations-of-finite-groups",
+   "title": "Alperins Weight Conjecture for Modular Representations of Finite Groups",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "202"
+   },
+   "pairs": [
+    {
+     "family": "202",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that each p-block B of a finite group has as many simple modules as there are G-conjugacy classes of B-weights. Family 202 proves the numerical blockwise Alperin weight conjecture for every prime and finite group: the number of irreducible Brauer characters in a block equals the number of conjugacy classes of its weights.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 302,
+   "problemId": "problem.birkhoff-conjecture-for-integrable-convex-billiards",
+   "title": "Birkhoff Conjecture (Near-Boundary Continuous Invariant Foliation)",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "147"
+   },
+   "pairs": [
+    {
+     "family": "147",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that a smooth strictly convex positive-curvature planar billiard whose grazing annulus is foliated by continuous T-invariant essential curves be an ellipse, circles included. Family 147 proves that a continuous foliation of a full grazing annulus by individually invariant essential curves forces the boundary to be an ellipse, which is the invariant-curve formulation the record selects.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 305,
+   "problemId": "problem.finiteness-of-finitely-presented-periodic-groups",
+   "title": "Finiteness of Finitely Presented Periodic Groups",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "247"
+   },
+   "pairs": [
+    {
+     "family": "247",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether every finitely presented group in which every element has finite order is finite. Family 247 constructs an infinite finitely presented periodic group (every element of finite order), so the statement fails.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 316,
+   "problemId": "problem.hopf-conjecture-no-metric-of-positive-sectional-curvature-on-s-2-x-s-2",
+   "title": "Hopf Conjecture: no metric of positive sectional curvature on S^2 x S^2",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "partial",
+    "family": "348"
+   },
+   "pairs": [
+    {
+     "family": "348",
+     "relation": "SUBCASE",
+     "direction": "partial",
+     "tier": "FORMAL",
+     "reason": "Record asks whether S^2 x S^2 admits a metric of positive sectional curvature (Hopf). Family 348 classifies closed Einstein four-manifolds with positive sectional curvature (up to scaling S^4, CP^2, RP^4), which excludes S^2 x S^2 among Einstein metrics; it says nothing about non-Einstein metrics, so it is a special case only.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 317,
+   "problemId": "problem.amenability-of-thompson-s-group-f",
+   "title": "Amenability of Thompson's Group F",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "248"
+   },
+   "pairs": [
+    {
+     "family": "248",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether Thompson's group F of dyadic piecewise-linear homeomorphisms of [0,1] is amenable. Family 248 proves F is nonamenable, which answers the question negatively.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 321,
+   "problemId": "problem.sinai-s-positive-metric-entropy-conjecture-for-the-chirikov-standard-map",
+   "title": "Sinai's Positive Metric Entropy Conjecture for the Chirikov Standard Map",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "146"
+   },
+   "pairs": [
+    {
+     "family": "146",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks for a positive-Lebesgue-measure set of parameters k at which f_k(x,y)=(x+y+k sin 2pi x, y+k sin 2pi x) mod Z^2 has positive metric entropy. Family 146 proves positive metric entropy for the standard sine map at every sufficiently large parameter, a full tail that contains such a positive-measure set.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 323,
+   "problemId": "problem.top500-omission-w041044-zariski-multiplicity-conjecture-for-hypersurface-singularities",
+   "title": "Zariski Multiplicity Conjecture for Hypersurface Singularities",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "059"
+   },
+   "pairs": [
+    {
+     "family": "059",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks whether ambient topological equivalence of reduced hypersurface germs in C^n forces equal multiplicity. Family 059 constructs ambiently homeomorphic reduced hypersurface germs of multiplicities 2 and 3 (in a space of dimension divisible by 8) and of multiplicities 4 and 5 in C^4, which refutes the universal statement.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 324,
+   "problemId": "problem.log-brunn-minkowski-inequality-for-symmetric-convex-bodies",
+   "title": "Log-Brunn-Minkowski Inequality for Symmetric Convex Bodies",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "091"
+   },
+   "pairs": [
+    {
+     "family": "091",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks for |(1-lambda)K +_0 lambda L| >= |K|^(1-lambda) |L|^lambda for origin-symmetric convex bodies K, L and lambda in [0,1]. Family 091 proves the logarithmic Brunn-Minkowski inequality for arbitrary origin-symmetric convex bodies in every dimension.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 326,
+   "problemId": "problem.calderon-uniqueness-for-bounded-measurable-isotropic-conductivities-in-higher-dimensions",
+   "title": "Calderón uniqueness for bounded measurable real isotropic conductivities",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "365"
+   },
+   "pairs": [
+    {
+     "family": "365",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether equal full weak Dirichlet-to-Neumann maps of bounded measurable real scalar conductivities (uniformly positive and bounded) on bounded connected Lipschitz domains in every R^n, n>=3, force equal conductivities. Family 365 (bullet dated 23 Sep 2026) constructs two distinct uniformly positive bounded measurable conductivities on a ball in R^3 with the same full DN operator, a counterexample at n=3; the record's status calls this endpoint open, so the family's date is a point for the reviewer to check.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 344,
+   "problemId": "problem.koebe-circle-domain-uniformization-conjecture",
+   "title": "Koebe circle-domain uniformization conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "071"
+   },
+   "pairs": [
+    {
+     "family": "071",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks that every nonempty connected open domain of the Riemann sphere be conformally homeomorphic to a circle domain (complementary components round disks or points). Family 071 proves that every domain in the Riemann sphere is conformally equivalent to a circle domain, resolving Koebe's conjecture positively.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 358,
+   "problemId": "problem.benjamini-schramm-conjecture-p-c-p-u-for-non-amenable-cayley-graphs",
+   "title": "Benjamini-Schramm conjecture p_c<p_u for non-amenable Cayley graphs",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "214"
+   },
+   "pairs": [
+    {
+     "family": "214",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks for p_c < p_u if and only if the group is nonamenable, for Cayley graphs of finitely generated infinite groups. Family 214 proves only the 'if' direction (nonamenable quasi-transitive graphs have p_c < p_u); the converse (amenable implies p_c = p_u) is not claimed.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 361,
+   "problemId": "problem.nagata-conjecture-on-plane-curve-linear-systems",
+   "title": "Nagata Conjecture on Plane Curve Linear Systems",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "039"
+   },
+   "pairs": [
+    {
+     "family": "039",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks that every plane curve of degree d with multiplicities at least m_i at r >= 10 very general points satisfy d > (1/sqrt r) sum m_i. Family 039 proves the equivalent strict inequality sum m_i < d sqrt(r) for every nonzero effective plane curve through r >= 10 very general points, with arbitrary multiplicities.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 362,
+   "problemId": "problem.fujita-freeness-conjecture",
+   "title": "Fujita Freeness Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "038"
+   },
+   "pairs": [
+    {
+     "family": "038",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that K_X+(n+1)L be basepoint-free for smooth projective X of dimension n and ample L. Family 038 proves Fujita's freeness conjecture: K_X+mL is globally generated for every m >= n+1, which implies basepoint-freeness.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 373,
+   "problemId": "problem.serres-positivity-conjecture-for-intersection-multiplicities-over-regular-local-rings",
+   "title": "Serres Positivity Conjecture for Intersection Multiplicities over Regular Local Rings",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "193"
+   },
+   "pairs": [
+    {
+     "family": "193",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that chi^R(M,N) be strictly positive whenever M tensor N has finite length and dim M + dim N = dim R over a regular local ring. Family 193 proves this, including ramified mixed characteristic, for nonzero finitely generated modules, the implicit nonvanishing hypothesis of the record.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 374,
+   "problemId": "problem.dixmier-unitarisability-problem",
+   "title": "Dixmier unitarisability problem for discrete groups",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "251"
+   },
+   "pairs": [
+    {
+     "family": "251",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks that every unitarisable discrete group (every uniformly bounded representation on any Hilbert space similar to unitary) be amenable. Family 251 proves that a discrete group is amenable if and only if every uniformly bounded representation on a complex Hilbert space is similar to a unitary, which contains the required direction for arbitrary Hilbert spaces.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 376,
+   "problemId": "problem.top500-omission-w045049-kobayashi-canonical-ampleness",
+   "title": "Kobayashi Conjecture: Hyperbolic Compact Kähler Manifolds Have Ample Canonical Bundle",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "051"
+   },
+   "pairs": [
+    {
+     "family": "051",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that a compact connected Kähler manifold that is Kobayashi hyperbolic (every holomorphic map from C is constant) have ample canonical bundle. Family 051 proves that every compact connected Kähler manifold of positive dimension with no nonconstant entire curve has ample canonical bundle.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 379,
+   "problemId": "problem.toms-winter-strict-comparison-implies-z-stability",
+   "title": "Toms–Winter: Strict Comparison Implies Z-Stability",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "291"
+   },
+   "pairs": [
+    {
+     "family": "291",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "The record asks strict comparison => Z-stability for separable simple nuclear non-elementary C*-algebras, 'unital or nonunital'. Family 291 claims the UNITAL Toms-Winter conjecture (strict comparison <=> finite nuclear dimension <=> Z-stability) and only stated nonunital classes; the agent's SAME_TARGET is downgraded because the record explicitly includes the nonunital case. The scope note covers Jiang-Su absorption for unital algebras with strict comparison.",
+     "provenance": "semantic-sweep (subagent); corrected here"
+    },
+    {
+     "family": "302",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks for strict comparison implies Z-stability for all simple separable nuclear non-elementary C*-algebras. Family 302 treats the special class C(X) crossed by Z for minimal homeomorphisms of infinite compact metrizable spaces, proving radius of comparison = mean dimension / 2, so in that class the comparison property corresponds to zero mean dimension, which the family equates with Jiang-Su stability.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 380,
+   "problemId": "problem.shelah-s-categoricity-conjecture-for-l-omega1-omega",
+   "title": "Shelah's Categoricity Conjecture for L_omega1,omega",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "partial",
+    "family": "240"
+   },
+   "pairs": [
+    {
+     "family": "240",
+     "relation": "SUBCASE",
+     "direction": "partial",
+     "tier": "FORMAL",
+     "reason": "Record asks whether categoricity in one cardinal at or above the L_{omega1,omega} Hanf threshold transfers to all such cardinals. Family 240 proves a ZFC eventual-categoricity theorem for AECs with a uniform threshold depending only on the Lowenheim-Skolem number, a weaker form of transfer that would cover L_{omega1,omega} classes if they are AECs of LS number aleph_0 (reviewer to confirm); it does not identify the threshold with the record's delta_omega1, and its CH counterexample concerns a different threshold for AECs.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 388,
+   "problemId": "problem.lebrun-salamon-conjecture-positive-quaternion-kahler-manifolds-are-symmetric-spaces",
+   "title": "LeBrun-Salamon Conjecture: positive quaternion-Kahler manifolds are symmetric spaces",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "062"
+   },
+   "pairs": [
+    {
+     "family": "062",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that every compact positive quaternion-Kahler manifold with holonomy in Sp(n)Sp(1) be symmetric. Family 062 proves the LeBrun-Salamon conjecture: every closed connected positive quaternion-Kahler manifold of real dimension at least eight is homothetic to a compact symmetric Wolf space; the reviewer must check the dimension-4 case, which the family's statement does not cover.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 392,
+   "problemId": "problem.separable-quotient-problem-for-banach-spaces",
+   "title": "Separable Quotient Problem for Banach Spaces",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL_WEAKER",
+    "direction": "independent",
+    "family": "323"
+   },
+   "pairs": [
+    {
+     "family": "323",
+     "relation": "SAME_TARGET",
+     "direction": "independent",
+     "tier": "FORMAL_WEAKER",
+     "reason": "'Prove or disprove' is answered by neither: family 323 claims the separable quotient problem is independent of ZFC relative to a measurable cardinal (true in some models, false under CH). FORMAL_WEAKER: the Lean statement is the CH counterexample direction only; the consistency of the positive answer is paper-only.",
+     "provenance": "semantic-sweep (subagent); corrected here"
+    }
+   ]
+  },
+  {
+   "rank": 398,
+   "problemId": "problem.top500-omission-w055056-hyperkahler-syz",
+   "title": "Hyperkähler SYZ (Lagrangian Fibration) Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "041"
+   },
+   "pairs": [
+    {
+     "family": "041",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that every nontrivial nef line bundle L on a compact irreducible holomorphic symplectic manifold with q(c1(L))=0 have a globally generated positive tensor power. Family 041 proves the strong hyperkahler SYZ conjecture: every holomorphic line bundle with nonzero nef isotropic first Chern class is semiample; the record's 'nontrivial' must mean nonzero class, as the family reads it.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 401,
+   "problemId": "problem.combinatorial-invariance-of-kazhdan-lusztig-polynomials",
+   "title": "Combinatorial Invariance of Kazhdan-Lusztig Polynomials",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "168"
+   },
+   "pairs": [
+    {
+     "family": "168",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks that a directed-graph isomorphism between Bruhat intervals in Coxeter systems force equal Kazhdan-Lusztig polynomials. Family 168 proves that an isomorphism of Bruhat intervals in arbitrary Coxeter systems preserves equal-parameter KL polynomials; a directed Bruhat-graph isomorphism of intervals preserves reachability, which is the Bruhat order, so it is an order isomorphism and falls under the family's statement.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 402,
+   "problemId": "problem.rokhlin-problem-on-multiple-mixing",
+   "title": "Rokhlin problem on multiple mixing",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "145"
+   },
+   "pairs": [
+    {
+     "family": "145",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether mixing of one invertible probability-preserving T forces k-fold mixing for every k>=3, with correlations converging to products as the successive gaps go to infinity. Family 145 claims every invertible mixing probability-preserving transformation is mixing of every finite order, with correlations of any finite family of sets converging to the product whenever all pairwise time separations diverge.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 404,
+   "problemId": "problem.strong-hyperplane-conjecture-isotropic-constants",
+   "title": "Strong Hyperplane Conjecture for Isotropic Constants",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "101"
+   },
+   "pairs": [
+    {
+     "family": "101",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks for L_K <= L_{Delta_n} for every convex body K in every dimension, i.e. the simplex maximizes the isotropic constant. Family 101 claims simplices uniquely maximize the isotropic constant among convex bodies in every dimension (the strong isotropic constant conjecture), which covers the record's inequality.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 407,
+   "problemId": "problem.long-time-existence-of-the-calabi-flow-on-compact-kaehler-manifolds",
+   "title": "Long-Time Existence of the Calabi Flow on Compact Kaehler Manifolds",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "352"
+   },
+   "pairs": [
+    {
+     "family": "352",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that Calabi flow from every smooth Kahler metric in a Kahler class containing a cscK metric exists for all time and converges to cscK. Family 352 constructs a smooth U(10)-invariant Kahler metric in the Fubini-Study class of CP^10 whose Calabi flow develops unbounded scalar curvature in finite time, a counterexample to the universal claim.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 409,
+   "problemId": "problem.top500-omission-w050054-margulisplatonov-normal-subgroup-conjecture",
+   "title": "Margulis–Platonov normal-subgroup conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "018"
+   },
+   "pairs": [
+    {
+     "family": "018",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that for an absolutely almost simple simply connected G over a number field K, every noncentral normal subgroup of G(K) is delta^{-1}(W) for an open normal W in the product over rank-zero places. Family 018 claims the Margulis-Platonov conjecture over number fields (and all global fields): every noncentral normal subgroup is the inverse image of an open normal subgroup of the product of anisotropic nonarchimedean local groups.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 421,
+   "problemId": "problem.gnrs-conjecture",
+   "title": "GNRS Conjecture",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "089"
+   },
+   "pairs": [
+    {
+     "family": "089",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks for bounded multicommodity flow-cut gap (equivalently L1 distortion) for every nontrivial minor-closed family (GNRS). Family 089 proves universal L1 distortion for shortest-path metrics of planar graphs and distortion depending only on treewidth for bounded-treewidth graphs; these are two minor-closed families, not all of them.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 422,
+   "problemId": "problem.irrationality-of-catalans-constant",
+   "title": "Irrationality of Catalan's Constant",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "005"
+   },
+   "pairs": [
+    {
+     "family": "005",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks to prove or disprove that Catalan's constant G = sum (-1)^n/(2n+1)^2 is irrational. Family 005 proves exactly that G is irrational.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 423,
+   "problemId": "problem.zariski-cancellation-problem-characteristic-zero-dimension-3",
+   "title": "Zariski Cancellation Problem (characteristic zero, dimension ≥ 3)",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "047"
+   },
+   "pairs": [
+    {
+     "family": "047",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether, for every characteristic-zero field k and n>=3, B[X] isomorphic to k[X_1..X_{n+1}] forces B isomorphic to k[X_1..X_n]. Family 047 gives an integral complex affine fourfold X, not isomorphic to A^4, with X x A^1 isomorphic to A^5; this refutes cancellation over C at n=4 and so refutes the universal claim.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 424,
+   "problemId": "problem.top500-omission-w045049-bernoulli-absolute-continuity-non-pisot",
+   "title": "Absolute continuity of Bernoulli convolutions outside reciprocal Pisot parameters",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "153"
+   },
+   "pairs": [
+    {
+     "family": "153",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks whether nu_lambda is absolutely continuous for every lambda in (1/2,1) whose reciprocal is not Pisot. Family 153 proves singularity of unbiased Bernoulli convolutions at the reciprocal of every quartic Salem number in (1,2); these reciprocals lie in (1/2,1), are non-Pisot, and give singular nu_lambda, a counterexample.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 425,
+   "problemId": "problem.top500-omission-w045049-stationary-integral-varifold-singular-set",
+   "title": "Measure-zero singular set of stationary integral varifolds",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "346"
+   },
+   "pairs": [
+    {
+     "family": "346",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that for every stationary integral m-varifold in an open subset of R^{m+n}, H^m(Sing V)=0. Family 346 proves the singular set of every stationary integral m-varifold in a Euclidean open set has Hausdorff dimension at most m-1, which implies H^m(Sing V)=0.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 426,
+   "problemId": "problem.maximal-number-of-mutually-unbiased-bases-in-composite-dimensions",
+   "title": "Maximal Number of Mutually Unbiased Bases in Composite Dimensions",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "266"
+   },
+   "pairs": [
+    {
+     "family": "266",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks for the maximal number K of MUBs in non-prime-power composite dimensions, in particular whether K=7 in dimension D=6. Family 266 claims N(6)=3, so seven MUBs do not exist in dimension six; this settles the named D=6 case but not the general composite-dimension question.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 427,
+   "problemId": "problem.gottschalk-s-surjunctivity-conjecture",
+   "title": "Gottschalk's surjunctivity conjecture",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "197"
+   },
+   "pairs": [
+    {
+     "family": "197",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Gottschalk: family 197's companion examples give an injective non-surjective cellular automaton (finite alphabet K, the same a,b in K[G]). PAPER_ONLY for the CA claim; the formalized object is the direct-finiteness counterexample over a finite field of characteristic two, from which non-surjunctivity is the paper's derivation.",
+     "provenance": "semantic-sweep (subagent); corrected here"
+    }
+   ]
+  },
+  {
+   "rank": 435,
+   "problemId": "problem.katok-entropy-rigidity-conjecture",
+   "title": "Katok entropy rigidity conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "339"
+   },
+   "pairs": [
+    {
+     "family": "339",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks whether, for every closed negatively curved Riemannian manifold, Liouville entropy equals topological entropy iff the metric is locally symmetric. Family 339 proves this for closed manifolds of dimension at least three; the two-dimensional case is outside the family's stated scope.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 436,
+   "problemId": "problem.steins-conjecture-on-the-hilbert-transform-along-lipschitz-vector-fields",
+   "title": "Stein's Conjecture on the Hilbert Transform along Lipschitz Vector Fields",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "083"
+   },
+   "pairs": [
+    {
+     "family": "083",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks for an epsilon depending only on the natural Lipschitz scale of v such that the truncated Hilbert transform H_{v,epsilon} is bounded on L^2(R^2). Family 083 proves a uniform L^2 bound for the planar Hilbert transform along any Lipschitz unit vector field with integration length at most an absolute multiple of the reciprocal Lipschitz constant, yielding an L^2-bounded principal-value operator.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 439,
+   "problemId": "problem.kaplansky-s-direct-finiteness-conjecture",
+   "title": "Kaplansky's Direct Finiteness Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "197"
+   },
+   "pairs": [
+    {
+     "family": "197",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether ab=1 implies ba=1 in K[G] for every group G and every field K. Family 197 gives a field K of characteristic two, a finitely presented group G and finite sums a,b in K[G] with ab=1 but ba not 1, a counterexample to the universal statement.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 444,
+   "problemId": "problem.small-cohen-macaulay-conjecture",
+   "title": "Small Cohen-Macaulay Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "195"
+   },
+   "pairs": [
+    {
+     "family": "195",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Family 195 claims a three-dimensional complete Noetherian normal local domain over C with no nonzero finitely generated MCM module, refuting the record's universal statement. PAPER_ONLY: the Lean file verifies only that the candidate ring exists with the stated properties, not that it lacks a small MCM module.",
+     "provenance": "semantic-sweep (subagent); corrected here"
+    }
+   ]
+  },
+  {
+   "rank": 447,
+   "problemId": "problem.ergodicity-of-irrational-triangular-billiards",
+   "title": "Ergodicity of Irrational Triangular Billiards",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "150"
+   },
+   "pairs": [
+    {
+     "family": "150",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether every triangular billiard with irrational angles is ergodic for the billiard flow. Family 150 proves the unit-speed billiard flow in every nondegenerate triangle with at least one irrational angle is ergodic (and claims weak mixing) for normalized Liouville measure; the family's 'at least one irrational angle' is the standard meaning of an irrational triangle, which reviewers should confirm matches the record's reading.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 451,
+   "problemId": "problem.top500-omission-w045049-balanced-trilinear-hilbert-transform",
+   "title": "Balanced L4 boundedness of the trilinear Hilbert transform",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "BOUND_OR_NUMBER",
+    "tier": "PAPER_ONLY",
+    "direction": "bound",
+    "family": "086"
+   },
+   "pairs": [
+    {
+     "family": "086",
+     "relation": "BOUND_OR_NUMBER",
+     "direction": "bound",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks for an L^4 x L^4 x L^4 -> L^{4/3} bound for the trilinear Hilbert transform with slopes 1, 2, 3, and its status says no affirmative boundedness range is known for this operator. Family 086 claims the same slopes-(1,2,3) operator is bounded from L^3 x L^3 x L^3 to L^1; this is a different exponent point, so it does not settle the L^4 target, but it bears on the status statement and deserves human review.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 457,
+   "problemId": "problem.campana-peternell-conjecture",
+   "title": "Campana-Peternell Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "067"
+   },
+   "pairs": [
+    {
+     "family": "067",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks whether every smooth complex projective Fano manifold with nef tangent bundle is rational homogeneous, in every dimension. Family 067 proves this only in complex dimension six.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 462,
+   "problemId": "problem.maximum-number-of-k-sets-and-complexity-of-k-levels",
+   "title": "Maximum Number of k-sets and Complexity of k-levels",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "BOUND_OR_NUMBER",
+    "tier": "FORMAL",
+    "direction": "bound",
+    "family": "183"
+   },
+   "pairs": [
+    {
+     "family": "183",
+     "relation": "BOUND_OR_NUMBER",
+     "direction": "bound",
+     "tier": "FORMAL",
+     "reason": "Record asks for the maximum number of k-sets of n planar points (equivalently the maximum k-level complexity). Family 183 improves upper bounds on the same quantity for sets with no three collinear: a power saving over the classical O(n^{4/3}) halving-line bound and O(n(k+1)^{1/3-eps0}) strictly separable k-subsets; it does not settle the exact maximum. The record text states no classical bound, so a reviewer may downgrade this to ADJACENT.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 464,
+   "problemId": "problem.shub-entropy-conjecture",
+   "title": "Shub entropy conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "151"
+   },
+   "pairs": [
+    {
+     "family": "151",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether h(f) >= log of the spectral radius of f_* on total real homology for every C1 self-map of a compact smooth manifold (Shub). Family 151 constructs a noninvertible C1 self-map with zero topological entropy and eigenvalue 2 on second real homology, so h(f)=0 < log 2, a counterexample.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 468,
+   "problemId": "problem.top500-omission-w055056-luck-determinant",
+   "title": "Lück's Determinant Conjecture for Discrete Groups",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "197"
+   },
+   "pairs": [
+    {
+     "family": "197",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record is Lück's determinant conjecture: the integral of log t against the spectral measure of A*A is nonnegative for every A in M_n(Z[G]) and every discrete group G. Family 197 claims a finitely generated group and a square matrix over Z[G], invertible over Q[G], whose Fuglede-Kadison determinant lies strictly between 0 and 1, i.e. the integral is negative. Reviewers should check the group is non-sofic, since the record's status says the sofic case is known.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 470,
+   "problemId": "problem.top500-omission-w045049-deligne-drinfeld-grt-one-freeness",
+   "title": "Deligne–Drinfeld Freeness Conjecture for grt_1",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "008"
+   },
+   "pairs": [
+    {
+     "family": "008",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether grt_1 over Q is freely generated by one generator in each odd weight >=3, with the corresponding isomorphism after weight completion. Family 008 claims the rational Grothendieck-Teichmuller Lie algebra with the Ihara bracket is freely generated by one element in each odd weight >=3, with the isomorphism after weight completion; the family calls the object the GRT Lie algebra, identified here with grt_1.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 474,
+   "problemId": "problem.quillen-s-conjecture-on-posets-of-elementary-abelian-p-subgroups",
+   "title": "Quillen's Conjecture on Posets of Elementary Abelian p-Subgroups",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "310"
+   },
+   "pairs": [
+    {
+     "family": "310",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks that if the poset A_p(G) of nontrivial elementary abelian p-subgroups is contractible then O_p(G) is not 1 (Quillen). Family 310 proves that if O_p(G) is trivial then A_p(G) has nonzero augmented reduced rational homology and so is not contractible, which is the contrapositive of the record's implication for every finite group and prime.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 475,
+   "problemId": "problem.deterministic-polynomial-time-factorization-of-dense-polynomials-in-f-q-x",
+   "title": "Deterministic polynomial-time factorization of dense polynomials in F_q[x]",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SUBCASE",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "142"
+   },
+   "pairs": [
+    {
+     "family": "142",
+     "relation": "SUBCASE",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks for a deterministic algorithm factoring degree-n polynomials over every finite field F_q in time polynomial in n and log q. Family 142 gives a deterministic polynomial-time complete factorization over prime fields F_p with p supplied in binary, i.e. only the case q = p prime.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 476,
+   "problemId": "problem.top500-omission-w045049-david-semmes-riesz-transform",
+   "title": "David–Semmes Riesz-transform problem in intermediate dimensions",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "081"
+   },
+   "pairs": [
+    {
+     "family": "081",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether, for 2 <= n <= d-2 and an n-Ahlfors-David regular Radon measure on R^d, uniform L^2 boundedness of the truncated n-dimensional Riesz transforms forces uniform n-rectifiability. Family 081 proves exactly this for integers d >= 4 and 2 <= n <= d-2 under uniform L^2 bounds over all positive hard truncations.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 477,
+   "problemId": "problem.top500-omission-w050054-smooth-realization-of-finite-entropy-ergodic-transformations",
+   "title": "Smooth Realization of Finite-Entropy Ergodic Transformations",
+   "rankingStatus": "open",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "disproved",
+    "family": "152"
+   },
+   "pairs": [
+    {
+     "family": "152",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether every ergodic invertible transformation with finite Kolmogorov-Sinai entropy is measurably isomorphic to a C-infinity diffeomorphism of some compact manifold preserving a smooth volume form. Family 152 constructs an ergodic invertible transformation of zero (hence finite) entropy with no such model on any compact finite-dimensional manifold, a counterexample.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 478,
+   "problemId": "problem.zariski-lipman-conjecture",
+   "title": "Zariski-Lipman Conjecture",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "disproved",
+    "family": "048"
+   },
+   "pairs": [
+    {
+     "family": "048",
+     "relation": "SAME_TARGET",
+     "direction": "disproved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks whether every complex algebraic variety or complex space with locally free tangent sheaf is smooth. Family 048 constructs a singular normal affine complex surface whose tangent sheaf is free of rank two, a counterexample.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 487,
+   "problemId": "problem.top500-omission-w041044-persistence-conjecture-for-weakly-reversible-mass-action-systems",
+   "title": "Persistence Conjecture for Weakly Reversible Mass-Action Systems",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "FORMAL",
+    "direction": "proved",
+    "family": "149"
+   },
+   "pairs": [
+    {
+     "family": "149",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "FORMAL",
+     "reason": "Record asks whether every positive trajectory of a weakly reversible mass-action system whose stoichiometric compatibility class is bounded is persistent. Family 149 proves the permanence conjecture for every positive stoichiometric class, including unbounded ones, via a common absorbing set, which covers the record's bounded case.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  },
+  {
+   "rank": 491,
+   "problemId": "problem.furstenberg-no-bigeodesics-conjecture-planar-fpp",
+   "title": "Furstenberg No-Bigeodesics (Planar FPP, Standard Minimum Moment)",
+   "rankingStatus": "open_with_solved_subcases",
+   "openaiMath": {
+    "strongest": "SAME_TARGET",
+    "tier": "PAPER_ONLY",
+    "direction": "proved",
+    "family": "212"
+   },
+   "pairs": [
+    {
+     "family": "212",
+     "relation": "SAME_TARGET",
+     "direction": "proved",
+     "tier": "PAPER_ONLY",
+     "reason": "Record asks whether, for every non-atomic edge law G with E[min(t1,...,t4)^2] finite, planar first-passage percolation almost surely has no doubly infinite geodesic (standard minimum-moment version). Family 212 proves almost-sure absence of doubly infinite geodesics for iid nonnegative nonatomic weights under exactly this finite-second-moment-of-the-minimum-of-four condition.",
+     "provenance": "semantic-sweep (subagent); verified"
+    }
+   ]
+  }
+ ]
+}

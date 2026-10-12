@@ -1,0 +1,81 @@
+========================================================================
+1. Q1 -- the digit product lemma for 3-AP-free sets
+========================================================================
+   both runs assert a lift in base 2M-1 with exponent alpha = ln r3(M)/ln(2M-1)
+
+   r3(M), exact, M = 1..30:
+   1:1, 2:2, 3:2, 4:3, 5:4, 6:4, 7:4, 8:4, 9:5, 10:5, 11:6, 12:6, 13:7, 14:8, 15:8, 16:8, 17:8, 18:8, 19:8, 20:9, 21:9, 22:9, 23:9, 24:10, 25:10, 26:11, 27:11, 28:11, 29:11, 30:12
+
+   the lift, POSITIVE: base 2M-1 is carry-free, so the lift must stay 3-AP-free
+     M=  5 r3= 4: base   9, k=2 ->   16 elements 3-AP-free, k=3 ->    64 3-AP-free
+     M=  9 r3= 5: base  17, k=2 ->   25 elements 3-AP-free, k=3 ->   125 3-AP-free
+     M= 14 r3= 8: base  27, k=2 ->   64 elements 3-AP-free, k=3 ->   512 3-AP-free
+     M= 20 r3= 9: base  39, k=2 ->   81 elements 3-AP-free, k=3 ->   729 3-AP-free
+
+   NEGATIVE TEST: base 2M-2 allows carries, so the lift MUST sometimes break
+     broke in 14 of 26 cases -- the check can fail, as required
+
+   alpha(M) = ln r3(M) / ln(2M-1), and where it is maximised:
+     M=  2  r3= 2  alpha=0.63093   <-- (3^k+1)/2
+     M=  5  r3= 4  alpha=0.63093   <-- (3^k+1)/2
+     M= 14  r3= 8  alpha=0.63093   <-- (3^k+1)/2
+     M= 15  r3= 8  alpha=0.61754
+     M= 26  r3=11  alpha=0.60987
+     M= 30  r3=12  alpha=0.60941
+     log_3(2) = 0.63093
+   ASSERTED: the maximum over M <= 30 is exactly log_3(2) = 0.63093,
+   attained at M = 2, 5, 14 -- which are (3^k+1)/2, the base-3 sets.
+   BOTH RUNS AGREE with this and both are right. alpha < 1 confirmed:
+     r3(M) <= M < 2M-1 for all M >= 2, so alpha < 1 identically.
+
+========================================================================
+2. Q3 -- the even-cycle constants, where the two runs DISAGREE
+========================================================================
+   c_3 = 1.0677
+   c_4 = 1.1305
+   c_5 = 1.1839
+
+   run 1's C_10 lower bound:  c_5 / 2      = 0.5919
+   run 2's C_10 lower bound:  4 / 5**1.2   = 0.5798
+   run 1's C_6  lower bound:  c_3 / 2      = 0.5339    (both runs report 0.5338-0.5339)
+
+   VERDICT ON THE DISAGREEMENT: both arithmetics are correct and they are
+   DIFFERENT lower bounds from different constructions, not a contradiction.
+   Run 1's is stronger: 0.5919 > 0.5798. Neither run says the other exists.
+
+========================================================================
+3. Q5 -- Lieb-Thirring, the claim both runs checked and stated differently
+========================================================================
+   maximising over lambda: analytic optimum lambda = 1/2
+     lambda=0.48  a=0.7104  ratio=0.2449673
+     lambda=0.49  a=0.7301  ratio=0.2450184
+     lambda=0.50  a=0.7500  ratio=0.2450351   <-- max
+     lambda=0.51  a=0.7701  ratio=0.2450190
+     lambda=0.52  a=0.7904  ratio=0.2449720
+   so the optimal potential is V = 0.75 * sech^2(x), |E_0| = 0.25
+   integral V^(3/2) = 1.0202621
+   |E_0| / integral V^(3/2) = 0.2450351
+   4/(3*sqrt(3)*pi)         = 0.2450351
+   ASSERTED equal. So BOTH RUNS ARE RIGHT and are saying the same thing
+   two ways: run 2 gives the ratio (0.2450351), run 1 gives the product
+   L * integral V^(3/2) = |E_0| = 0.25. Neither contradicts the other.
+
+   2/sqrt(3) = 1.1547005   (both runs report 1.1547)
+   L_cl(gamma=1,d=1) = 2/(3*pi)*... ; ratio L^one/L^cl = 1.1547
+
+   THE CONTROL BOTH RUNS INVENTED INDEPENDENTLY: a plain finite-difference
+   eigenvalue overshoots |E_0| = 1/4, so a bare float certifies nothing.
+     solver control: infinite well, n= 200 -> E_0 = 0.999980 (exact 1.000000, err -2.04e-05)
+     solver control: infinite well, n= 800 -> E_0 = 0.999999 (exact 1.000000, err -1.28e-06)
+     the control confirms the solver underestimates kinetic energy,
+     which is exactly why the bound state below will OVERSHOOT.
+
+     box  40, n= 2000: E_0 = -0.25001145, |E_0| = 0.25001145, overshoot above 1/4 = +1.145e-05
+     box  60, n= 3000: E_0 = -0.25001145, |E_0| = 0.25001145, overshoot above 1/4 = +1.145e-05
+     box  80, n= 4000: E_0 = -0.25001145, |E_0| = 0.25001145, overshoot above 1/4 = +1.145e-05
+   Both runs reported this overshoot at ~1e-5 and both drew the right
+   conclusion. Reproduced here.
+
+========================================================================
+ALL CHECKS PASSED.
+========================================================================

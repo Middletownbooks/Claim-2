@@ -1,0 +1,102 @@
+{
+ "arms": {
+  "A_short_reserve_49_71": {
+   "label": "COMPUTED",
+   "observations": {},
+   "probes_used": 0,
+   "rounds": [
+    {
+     "note": "no coordinate in the reserve separates the survivors",
+     "probe": null,
+     "survivors": [
+      "lcm",
+      "mul",
+      "max"
+     ]
+    }
+   ],
+   "selected": null,
+   "stage": "disagreement_resolution",
+   "survivors": [
+    "lcm",
+    "mul",
+    "max"
+   ],
+   "verdict": "UNDERDETERMINED"
+  },
+  "B_long_reserve_49_80": {
+   "label": "COMPUTED",
+   "observations": {
+    "72": 3
+   },
+   "probes_used": 1,
+   "rounds": [
+    {
+     "observed": 3,
+     "predictions": {
+      "lcm": 6,
+      "max": 3,
+      "mul": 6
+     },
+     "probe": 72,
+     "survivors": [
+      "lcm",
+      "mul",
+      "max"
+     ],
+     "survivors_after": [
+      "max"
+     ]
+    }
+   ],
+   "selected": "max",
+   "stage": "disagreement_resolution",
+   "survivors": [
+    "max"
+   ],
+   "verdict": "RESOLVED"
+  }
+ },
+ "base_rule": [
+  {
+   "cond": "n mod 8 = 0",
+   "value": "n//4"
+  },
+  {
+   "cond": "n mod 4 = 0",
+   "value": "n-2"
+  },
+  {
+   "cond": "n mod 2 = 0",
+   "value": "n-1"
+  },
+  {
+   "cond": "otherwise",
+   "value": "n//4"
+  }
+ ],
+ "base_training_errors": 10,
+ "chosen_op": "max",
+ "forecast_hash": "4754394e8fa7cc2deceb022315a31401b750481343d6140b2a81fc6a2e6ad2e0",
+ "predicted_thresholds": {
+  "31": 7,
+  "32": 8,
+  "33": 1,
+  "34": 1,
+  "35": 1,
+  "36": 2,
+  "37": 9,
+  "38": 1,
+  "39": 1,
+  "40": 3,
+  "41": 10,
+  "42": 1,
+  "43": 10,
+  "44": 2,
+  "45": 2,
+  "46": 1,
+  "47": 11,
+  "48": 4
+ },
+ "queries_before_holdout": 1758
+}

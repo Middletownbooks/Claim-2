@@ -1,0 +1,29 @@
+{
+  "best_by_training": {
+    "held_out_accuracy": 0.908234126984127,
+    "model": {
+      "c": "add:1",
+      "default": false,
+      "kind": "table",
+      "r": "add:1"
+    },
+    "train_accuracy": 1.0
+  },
+  "best_possible_on_held_out_cheating": {
+    "held_out_accuracy": 0.9087301587301587,
+    "model": {
+      "c": "quo:4",
+      "default": false,
+      "kind": "table",
+      "r": "gcd:4"
+    }
+  },
+  "d_max": 112,
+  "held_out_points": 2016,
+  "label": "COMPUTED",
+  "majority_class_accuracy_on_held_out": 0.908234126984127,
+  "models_tried": 3080,
+  "question": "fitted on m<=30, predict unseen moduli 31..48 from features of m alone",
+  "r_fixed": 8,
+  "train_points": 3360
+}

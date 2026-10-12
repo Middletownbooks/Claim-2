@@ -1,0 +1,387 @@
+{
+ "label": "EXPERIMENTAL_RESULT",
+ "seed": 20260909,
+ "purpose": "sensitivity check for the FLT->NS null",
+ "rows": [
+  {
+   "pool": "POSCTRL_euler_to_navierstokes",
+   "pool_size": 876,
+   "queries": 1953,
+   "mean_best_jaccard": 0.1915,
+   "median": 0.1667,
+   "ge_0.4": 108,
+   "ge_0.6": 9,
+   "ge_0.8": 1
+  },
+  {
+   "pool": "POSCTRL_navierstokes_to_euler",
+   "pool_size": 1953,
+   "queries": 876,
+   "mean_best_jaccard": 0.2074,
+   "median": 0.1818,
+   "ge_0.4": 64,
+   "ge_0.6": 7,
+   "ge_0.8": 2
+  },
+  {
+   "pool": "BASELINE_navierstokes_itself",
+   "pool_size": 1953,
+   "queries": 1953,
+   "mean_best_jaccard": 0.4242,
+   "median": 0.35,
+   "ge_0.4": 874,
+   "ge_0.6": 465,
+   "ge_0.8": 210
+  },
+  {
+   "pool": "BASELINE_euler_itself",
+   "pool_size": 876,
+   "queries": 876,
+   "mean_best_jaccard": 0.3728,
+   "median": 0.3,
+   "ge_0.4": 313,
+   "ge_0.6": 163,
+   "ge_0.8": 64
+  }
+ ],
+ "examples": {
+  "POSCTRL_euler_to_navierstokes": [
+   {
+    "q": "abs_four_sum_div_two_le",
+    "match": "abs_product_difference",
+    "jaccard": 0.667
+   },
+   {
+    "q": "fderiv_apply_eq_of_line_eq",
+    "match": "fderiv_neg_of_even",
+    "jaccard": 0.667
+   },
+   {
+    "q": "smoothNear_congr",
+    "match": "fderiv_neg_of_even",
+    "jaccard": 0.625
+   },
+   {
+    "q": "norm_iteratedFDeriv_affine_le",
+    "match": "directionalDerivative_line_lipschitz",
+    "jaccard": 0.625
+   },
+   {
+    "q": "compact_integral_contDiff",
+    "match": "integral_contDiff_finite",
+    "jaccard": 0.8
+   },
+   {
+    "q": "parameterIntegral_fderiv_apply",
+    "match": "integral_contDiff_finite",
+    "jaccard": 0.6
+   },
+   {
+    "q": "norm_jet_const_mul",
+    "match": "directionalDerivative_line_lipschitz",
+    "jaccard": 0.625
+   },
+   {
+    "q": "norm_jet_linear_comp",
+    "match": "directionalDerivative_line_lipschitz",
+    "jaccard": 0.625
+   },
+   {
+    "q": "norm_integral_sq_le_measure_mul_integral_sq",
+    "match": "norm_integral_sq_le_action",
+    "jaccard": 0.636
+   }
+  ],
+  "POSCTRL_navierstokes_to_euler": [
+   {
+    "q": "directionalDerivative_line_lipschitz",
+    "match": "norm_iteratedFDeriv_affine_le",
+    "jaccard": 0.625
+   },
+   {
+    "q": "abs_product_difference",
+    "match": "abs_four_sum_div_two_le",
+    "jaccard": 0.667
+   },
+   {
+    "q": "norm_integral_sq_le",
+    "match": "norm_integral_sq_le_measure_mul_integral_sq",
+    "jaccard": 0.6
+   },
+   {
+    "q": "norm_integral_sq_le_action",
+    "match": "norm_integral_sq_le_measure_mul_integral_sq",
+    "jaccard": 0.636
+   },
+   {
+    "q": "fderiv_neg_of_even",
+    "match": "fderiv_apply_eq_of_line_eq",
+    "jaccard": 0.667
+   },
+   {
+    "q": "integral_contDiff_finite",
+    "match": "compact_integral_contDiff",
+    "jaccard": 0.8
+   },
+   {
+    "q": "integral_contDiff",
+    "match": "compact_integral_contDiff",
+    "jaccard": 0.8
+   }
+  ],
+  "BASELINE_navierstokes_itself": [
+   {
+    "q": "positive_uniform_margin",
+    "match": "compact_positive_collar",
+    "jaccard": 0.6
+   },
+   {
+    "q": "weighted_integrable",
+    "match": "weighted_integrable",
+    "jaccard": 1.0
+   },
+   {
+    "q": "continuous_slice",
+    "match": "continuous_slice",
+    "jaccard": 1.0
+   },
+   {
+    "q": "normalized_correction_bound",
+    "match": "normalized_correction_bound",
+    "jaccard": 0.6
+   },
+   {
+    "q": "factor_slice_contDiff",
+    "match": "factor_contDiff",
+    "jaccard": 1.0
+   },
+   {
+    "q": "kernel_contDiff_param",
+    "match": "kernel_contDiff_x",
+    "jaccard": 1.0
+   },
+   {
+    "q": "kernel_ae_contDiff",
+    "match": "kernel_ae_contDiff",
+    "jaccard": 1.0
+   },
+   {
+    "q": "kernel_jet_measurable",
+    "match": "kernel_iteratedDeriv_measurable",
+    "jaccard": 0.75
+   },
+   {
+    "q": "kernel_locallyDominated",
+    "match": "kernel_locallyDominated",
+    "jaccard": 0.75
+   },
+   {
+    "q": "factor_contDiff",
+    "match": "factor_contDiff",
+    "jaccard": 1.0
+   },
+   {
+    "q": "factor_iteratedFDeriv",
+    "match": "factor_iteratedDeriv",
+    "jaccard": 0.75
+   },
+   {
+    "q": "primitive_contDiff",
+    "match": "primitive_contDiff",
+    "jaccard": 1.0
+   },
+   {
+    "q": "exists_joint_smooth_factor",
+    "match": "exists_smooth_factor_original",
+    "jaccard": 1.0
+   },
+   {
+    "q": "factor_sqrt_contDiffAt_zero",
+    "match": "factor_sqrt_contDiffAt_zero",
+    "jaccard": 0.75
+   },
+   {
+    "q": "sum_eq_mul_sum_of_support",
+    "match": "sum_eq_mul_sum_of_support",
+    "jaccard": 0.833
+   },
+   {
+    "q": "along_sub",
+    "match": "fderiv_apply_eq_of_line_eq",
+    "jaccard": 0.667
+   },
+   {
+    "q": "compact_scalar_jets",
+    "match": "compact_parameter_jet_bound",
+    "jaccard": 0.615
+   },
+   {
+    "q": "directional_zero_of_factor",
+    "match": "fderiv_apply_eq_of_line_eq",
+    "jaccard": 0.667
+   },
+   {
+    "q": "increment_twice_target",
+    "match": "increment_twice_target",
+    "jaccard": 1.0
+   },
+   {
+    "q": "normal_pullback",
+    "match": "normal_pullback",
+    "jaccard": 1.0
+   },
+   {
+    "q": "frame_jets",
+    "match": "frame_jets",
+    "jaccard": 1.0
+   },
+   {
+    "q": "frame_tail_ne_zero",
+    "match": "frame_tail_ne_zero",
+    "jaccard": 1.0
+   },
+   {
+    "q": "frame_normal",
+    "match": "frame_normal",
+    "jaccard": 1.0
+   },
+   {
+    "q": "initialized_oscillation",
+    "match": "initialized_oscillation",
+    "jaccard": 1.0
+   },
+   {
+    "q": "initialized_oscillation",
+    "match": "initialized_oscillation",
+    "jaccard": 1.0
+   }
+  ],
+  "BASELINE_euler_itself": [
+   {
+    "q": "root_integral_limit",
+    "match": "weighted_root_integral_limit",
+    "jaccard": 1.0
+   },
+   {
+    "q": "forcingOperator_profile_bound",
+    "match": "solution_profile_bound",
+    "jaccard": 0.8
+   },
+   {
+    "q": "initialOperator_profile_bound",
+    "match": "weightedInitial_norm",
+    "jaccard": 0.667
+   },
+   {
+    "q": "potentialPath_time",
+    "match": "potentialPath_time",
+    "jaccard": 1.0
+   },
+   {
+    "q": "correctorPath_time",
+    "match": "correctorPath_time",
+    "jaccard": 1.0
+   },
+   {
+    "q": "integral_equation",
+    "match": "kineticEnergy_conserved",
+    "jaccard": 0.714
+   },
+   {
+    "q": "coordinatePath_reflection_neg",
+    "match": "coordinatePath_mean_zero",
+    "jaccard": 0.6
+   },
+   {
+    "q": "velocityPath_reflection_neg",
+    "match": "velocityPath_reflection",
+    "jaccard": 0.6
+   },
+   {
+    "q": "derivativePath_reflection_neg",
+    "match": "derivativePath_mean_zero",
+    "jaccard": 0.6
+   },
+   {
+    "q": "velocityPath_time",
+    "match": "velocityPath_time",
+    "jaccard": 1.0
+   },
+   {
+    "q": "equation30_slope_ratio_dominates",
+    "match": "equation30_relative_state_consequences",
+    "jaccard": 0.625
+   },
+   {
+    "q": "velocityPath_time",
+    "match": "velocityPath_time",
+    "jaccard": 0.75
+   },
+   {
+    "q": "opF_time",
+    "match": "potentialPath_time",
+    "jaccard": 0.625
+   },
+   {
+    "q": "directionalDerivative_line_lipschitz",
+    "match": "fderiv_neg_of_even",
+    "jaccard": 0.75
+   },
+   {
+    "q": "close_energy_estimate",
+    "match": "close_integral_energy_estimate",
+    "jaccard": 0.727
+   },
+   {
+    "q": "quadratic_stability",
+    "match": "quadratic_stability_within",
+    "jaccard": 0.733
+   },
+   {
+    "q": "external_commutator_term",
+    "match": "unshifted_product_term",
+    "jaccard": 0.8
+   },
+   {
+    "q": "shifted_source_term",
+    "match": "unshifted_product_term",
+    "jaccard": 1.0
+   },
+   {
+    "q": "shifted_weight_kernel",
+    "match": "unshifted_weight_kernel",
+    "jaccard": 1.0
+   },
+   {
+    "q": "shifted_weighted_inverse",
+    "match": "unshifted_weighted_inverse",
+    "jaccard": 1.0
+   },
+   {
+    "q": "equation30_relative_state_consequences",
+    "match": "early_neighbor_state_bound",
+    "jaccard": 0.632
+   },
+   {
+    "q": "early_forward_exponential_suppression",
+    "match": "early_neighbor_state_bound",
+    "jaccard": 0.833
+   },
+   {
+    "q": "normalized_motion_errors",
+    "match": "normalized_motion_errors_within",
+    "jaccard": 0.895
+   },
+   {
+    "q": "fullVelocityPath_time",
+    "match": "opF_time",
+    "jaccard": 0.625
+   },
+   {
+    "q": "potentialPath_time",
+    "match": "opF_time",
+    "jaccard": 0.625
+   }
+  ]
+ }
+}

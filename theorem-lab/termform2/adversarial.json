@@ -1,0 +1,157 @@
+{
+ "C_name_blindness": {
+  "baseline": {
+   "classes": 4412551,
+   "expansions": 13203225,
+   "levels": [
+    [
+     1,
+     496
+    ],
+    [
+     2,
+     496
+    ],
+    [
+     3,
+     593960
+    ],
+    [
+     4,
+     593960
+    ],
+    [
+     5,
+     4412551
+    ]
+   ],
+   "targets": {
+    "Omega": null,
+    "gpf": null,
+    "is_prime": 3,
+    "is_prime_power": 3,
+    "is_square": 3,
+    "is_squarefree": null,
+    "n_div_spf": 1,
+    "omega": null,
+    "phi": null,
+    "rad": null,
+    "sigma": null,
+    "v_2": null,
+    "v_spf": null
+   }
+  },
+  "identical_to_baseline": true,
+  "method": "show/definition/expanded_size replaced by raising stubs for the whole outer enumeration",
+  "poisoned": {
+   "classes": 4412551,
+   "expansions": 13203225,
+   "levels": [
+    [
+     1,
+     496
+    ],
+    [
+     2,
+     496
+    ],
+    [
+     3,
+     593960
+    ],
+    [
+     4,
+     593960
+    ],
+    [
+     5,
+     4412551
+    ]
+   ],
+   "targets": {
+    "Omega": null,
+    "gpf": null,
+    "is_prime": 3,
+    "is_prime_power": 3,
+    "is_square": 3,
+    "is_squarefree": null,
+    "n_div_spf": 1,
+    "omega": null,
+    "phi": null,
+    "rad": null,
+    "sigma": null,
+    "v_2": null,
+    "v_spf": null
+   }
+  },
+  "raised": null
+ },
+ "D_definition_blind_selection": {
+  "baseline_classes": 4412551,
+  "baseline_targets": {
+   "Omega": null,
+   "gpf": null,
+   "is_prime": 3,
+   "is_prime_power": 3,
+   "is_square": 3,
+   "is_squarefree": null,
+   "n_div_spf": 1,
+   "omega": null,
+   "phi": null,
+   "rad": null,
+   "sigma": null,
+   "v_2": null,
+   "v_spf": null
+  },
+  "blind_classes": 4963466,
+  "blind_targets": {
+   "Omega": null,
+   "gpf": null,
+   "is_prime": 3,
+   "is_prime_power": 3,
+   "is_square": 3,
+   "is_squarefree": null,
+   "n_div_spf": 1,
+   "omega": null,
+   "phi": null,
+   "rad": null,
+   "sigma": null,
+   "v_2": null,
+   "v_spf": null
+  },
+  "method": "unit ordering by value-vector hash alone; no reference to a term's internal expression size"
+ },
+ "E_leakage_audit": [
+  {
+   "check": "splits_disjoint",
+   "detail": "TRAIN/RESERVE/HOLDOUT/EVALQ pairwise disjoint",
+   "pass": true
+  },
+  {
+   "check": "promotion_does_not_import_the_library",
+   "detail": "promote.py never imports the invariant library",
+   "pass": true
+  },
+  {
+   "check": "promotion_does_not_mention_round2_objects",
+   "detail": "promote.py never refers to a Round-2 object set",
+   "pass": true
+  },
+  {
+   "check": "round1_objects_are_prime_powers_only",
+   "detail": "every Round-1 object is a prime power; the Round-2 targets are general-integer invariants that Round 1 never observed",
+   "pass": true
+  },
+  {
+   "check": "no_promoted_term_is_a_round2_target",
+   "detail": "[('count(k: (k % least(k: (n % k))))', 'n_div_spf')]",
+   "pass": false
+  },
+  {
+   "check": "vocabulary_construction_never_sees_a_target",
+   "detail": "round2.build() does not reference the invariant library",
+   "pass": true
+  }
+ ],
+ "label": "COMPUTED"
+}

@@ -1,0 +1,91 @@
+
+==========================================================================
+1. The fractional flow is feasible
+==========================================================================
+  source outflow          : 40   total demand : 40
+  conservation at u       : in 24 = out 24  -> True
+  conservation at v       : in 14 = out 14  -> True
+  conservation at w       : in 9 = out 9  -> True
+  inflow at t1            : 15   demand 15  -> True
+  inflow at t2            : 10   demand 10  -> True
+  inflow at t3            : 15   demand 15  -> True
+  PASS  source outflow equals total demand   [40 = 40]
+  PASS  flow is conserved at u, v, w
+  PASS  each terminal receives exactly its demand
+  fractional cost c^T x   : 58
+  PASS  the fractional cost is 58   [2*10 + 3*6 + 2*10 = 58]
+
+==========================================================================
+2. Path enumeration -- are there really only two per terminal?
+==========================================================================
+  t1: s -> t1                      unit cost 2   routed cost 30
+  t1: s -> u -> v -> t1            unit cost 0   routed cost 0
+  t2: s -> t2                      unit cost 3   routed cost 30
+  t2: s -> u -> v -> w -> t2       unit cost 0   routed cost 0
+  t3: s -> u -> t3                 unit cost 2   routed cost 30
+  t3: s -> u -> v -> w -> t3       unit cost 0   routed cost 0
+  PASS  exactly two s-t_i paths for every terminal   [so all 2^3 = 8 routings are exhaustible]
+  PASS  the graph is acyclic as claimed   [enumeration terminates without revisits]
+
+==========================================================================
+3. The E/Z labelling and its cost claim
+==========================================================================
+  t1: E costs 30, Z costs 0
+  t2: E costs 30, Z costs 0
+  t3: E costs 30, Z costs 0
+  PASS  every E_i routes at cost exactly 30   [15*2 = 10*3 = 15*2 = 30]
+  PASS  every Z_i routes at cost exactly 0
+
+==========================================================================
+4. All eight routings, recomputed
+==========================================================================
+   t1  t2  t3   cost  status  violations (arc, excess)
+    E   E   E     90    good  --
+    E   E   Z     60    good  --
+    E   Z   E     60    good  --
+    E   Z   Z     30     bad  v->w by 1
+    Z   E   E     60    good  --
+    Z   E   Z     30     bad  u->v by 1
+    Z   Z   E     30     bad  s->u by 1
+    Z   Z   Z      0     bad  s->u by 1; u->v by 11; v->w by 1
+  PASS  exactly four routings satisfy every additive-dmax bound
+  PASS  the good routings cost 90, 60, 60, 60
+  PASS  every routing using two or more Z_i violates a bound   [the lemma's three pairwise conflicts, confirmed]
+  PASS  the document's violation amounts are exact   [six entries: three singles of 1, plus 1 + 11 + 1 on the all-Z routing]
+
+==========================================================================
+5. The theorem
+==========================================================================
+  cheapest capacity-good unsplittable routing : 60
+  fractional cost                             : 58
+  gap                                         : 2
+  PASS  no capacity-good routing matches the fractional cost   [60 > 58]
+  PASS  the counterexample is strict by exactly 2
+
+==========================================================================
+6. The structural form, in exact rationals
+==========================================================================
+  cheap-choice probabilities : 1/3, 2/5, 1/3
+  total                      : 16/15 = 1.066667
+  PASS  the fractional cheap mass exceeds 1   [16/15 = 16/15]
+  PASS  but an integral routing takes at most one   [triangle stable-set inequality, violated fractionally]
+  normalized: b=2/3, r=1/3, q=2/5
+    2r + q  > 1 : 16/15 > 1   -> True
+    b(1-q)  > r : 2/5 > 1/3   -> True
+    2r + bq < 1 : 14/15 < 1   -> True
+  PASS  all three normalized inequalities hold strictly
+  PASS  scaling by 15 reproduces the integral instance   [d2 = 10, cheap masses 5, 4, 5]
+
+==========================================================================
+7. Planarity: does a planar example answer a 'non-planar' request?
+==========================================================================
+  The first prompt asks for the 'general (non-planar) case'; the artifact
+  delivers a PLANAR instance (a subdivision of K_4).
+  This is not a mismatch. Planar instances are a SUBSET of general ones,
+  so a planar counterexample refutes the general statement a fortiori.
+  The artifact is strictly stronger than what was asked for.
+  PASS  the planar/non-planar wording is not an error
+
+==========================================================================
+RESULT   19/19 checks passed
+==========================================================================

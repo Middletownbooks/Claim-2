@@ -1,0 +1,56 @@
+==============================================================================
+L2 DIFF  —  Fable P1 sec.1.2  vs  five independent blind encodings
+single non-blind rater; see RESULT_L2.md 'Protocol deviations'
+==============================================================================
+
+--- slot marks --------------------------------------------------------------
+case          state        move         invariant    composition  terminal     bound        
+1 sensitivity AGREE        AGREE        PARTIAL      NC           AGREE        AGREE        
+2 cap set     PARTIAL      AGREE        PARTIAL      PARTIAL      AGREE        AGREE        
+5 Kakeya      PARTIAL      PARTIAL      DISAGREE     NC           NC           DISAGREE     
+8 Spencer     PARTIAL      DISAGREE     PARTIAL      AGREE        NC           AGREE        
+9 Vinogradov  PARTIAL      AGREE        AGREE        NC           NC           VOID         
+
+--- per-slot tally (NC/VOID excluded from the base) -------------------------
+slot          AGREE   PARTIAL  DISAGREE  n   agree rate
+state         1       4        0         5   0.20
+move          3       1        1         5   0.60
+invariant     1       3        1         5   0.20
+composition   1       1        0         2   0.50
+terminal      2       0        0         2   1.00
+bound         3       0        1         4   0.75
+
+--- leak table --------------------------------------------------------------
+case          P1 leading                 blind leading              match
+1 sensitivity MULTIPLICATIVE INVARIANT   ITERATION COUNT            no
+2 cap set     MULTIPLICATIVE INVARIANT   TERMINAL CERT TOO WEAK     no
+5 Kakeya      UNION BOUND                FEASIBILITY THEOREM        no
+8 Spencer     UNION BOUND                UNION BOUND                YES
+9 Vinogradov  ITERATION COUNT            ITERATION COUNT            YES
+
+leading-mechanism agreement : 2 of 5
+P1 mechanisms also named by the blind encoder (anywhere in its table) : 6 of 7
+cases where P1's whole mechanism set is a subset of the blind set        : 4 of 5
+
+inter-ENCODER kappa on the leading mechanism (n=5, 6 categories):
+  observed agreement p_o = 0.4000
+  chance agreement  p_e = 0.1600
+  kappa                 = 0.2857
+  case-resampled 95% interval = [0.000, 0.667]  (19984/20000 replicates defined)
+  n=5: this interval spans essentially the whole admissible range and
+  should be read as 'unmeasured', not as a bound.
+
+--- bound field -------------------------------------------------------------
+1 sensitivity AGREE
+2 cap set     AGREE
+5 Kakeya      DISAGREE
+8 Spencer     AGREE
+9 Vinogradov  VOID
+
+--- Kakeya two-regime check (DERIVED HERE) ----------------------------------
+  (n+2)/2 > 4n/7  <=>  7n+14 > 8n  <=>  n < 14
+  n=3   (n+2)/2=2.500   4n/7=1.714   better: Wolff
+  n=13  (n+2)/2=7.500   4n/7=7.429   better: Wolff
+  n=14  (n+2)/2=8.000   4n/7=8.000   better: equal
+  n=15  (n+2)/2=8.500   4n/7=8.571   better: 4n/7
+  n=30  (n+2)/2=16.000  4n/7=17.143  better: 4n/7

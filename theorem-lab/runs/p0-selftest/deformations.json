@@ -1,0 +1,65 @@
+{
+  "events": [
+    {
+      "H1": "T-H03185",
+      "H2": "T-H03185",
+      "counterexample": null,
+      "family": "T",
+      "kind": "conjecture_evolution",
+      "label": "COMPUTED",
+      "revision_succeeded_on_refinement_set": true,
+      "what_it_exposes": "An observable prediction failure, not an inferred cause."
+    },
+    {
+      "kind": "theorem_deformation",
+      "label": "CONJECTURED",
+      "new_family": "E",
+      "operator": "x^k = x -> x^(r+d) = x^r",
+      "operator_origin": "preregistered library, not discovered",
+      "parent": "T-H03185",
+      "parent_status": "unrefuted exported candidate"
+    },
+    {
+      "kind": "theorem_deformation",
+      "label": "CONJECTURED",
+      "new_family": "U",
+      "operator": "all residues -> residues satisfying gcd(x,m)=1",
+      "operator_origin": "preregistered library, not discovered",
+      "parent": "T-H03185"
+    },
+    {
+      "change": "raw table -> arithmetic rules / quotient tables / prefix-block codes -> Boolean tensor factors",
+      "kind": "representation_deformation",
+      "label": "COMPUTED",
+      "parent": "T-H03185"
+    },
+    {
+      "change": "replace direct finite enumeration by a proof using surviving transport lemmas",
+      "kind": "proof_deformation",
+      "label": "UNCHECKED SPECIFICATION",
+      "parent": "T-H03185",
+      "status": "proof planning only; no proof synthesis engine"
+    },
+    {
+      "H1": "U-H06560",
+      "H2": "U-H06560",
+      "counterexample": null,
+      "family": "U",
+      "kind": "conjecture_evolution",
+      "label": "COMPUTED",
+      "revision_succeeded_on_refinement_set": true,
+      "what_it_exposes": "An observable prediction failure, not an inferred cause."
+    },
+    {
+      "change": "full profile -> early-stopping least-witness computation",
+      "early_residue_evaluations": 183,
+      "full_residue_evaluations": 288,
+      "kind": "algorithm_deformation",
+      "label": "COMPUTED",
+      "parent": "T-H03185",
+      "scope": "bounded operational equivalence only",
+      "tests": 64
+    }
+  ],
+  "label": "COMPUTED"
+}

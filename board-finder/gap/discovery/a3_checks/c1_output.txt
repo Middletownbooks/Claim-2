@@ -1,0 +1,22 @@
+MODE=gen n=3 target=-2  ordered_solutions(A(0)=B(0)=+1)=9  example A=+-+ B=+-+
+MODE=gen n=5 target=-2  ordered_solutions(A(0)=B(0)=+1)=50  example A=+-+-+ B=+--++
+MODE=gen n=7 target=-2  ordered_solutions(A(0)=B(0)=+1)=196  example A=+--+-++ B=+--+-++
+MODE=gen n=9 target=-2  ordered_solutions(A(0)=B(0)=+1)=972  example A=+--+--+++ B=+--+-+-++
+MODE=gen n=11 target=-2  ordered_solutions(A(0)=B(0)=+1)=2904  example A=+---+-+-+++ B=+--+--+--++
+MODE=gen n=13 target=-2  ordered_solutions(A(0)=B(0)=+1)=7098  example A=+---+-+-++-++ B=+---+--+--+++
+MODE=gen n=15 target=-2  ordered_solutions(A(0)=B(0)=+1)=38700  example A=+--++----+-++++ B=+--+-+-++--+-++
+MODE=gen n=17 target=-2  ordered_solutions(A(0)=B(0)=+1)=93058  example A=+--++--+-+--+-+++ B=+---+-+---+--++++
+MODE=gen n=19 target=-2  ordered_solutions(A(0)=B(0)=+1)=161728  example A=+--+---++----+-++++ B=+-+--++---+-++-+-++
+MODE=gen n=21 target=-2  ordered_solutions(A(0)=B(0)=+1)=433944  example A=+--+-++-+---+---+-+++ B=+--+---++---+-+--++++
+MODE=gen n=23 target=-2  ordered_solutions(A(0)=B(0)=+1)=1235744  example A=+--+++-+---+--+---+-+++ B=+---+---+++-+--+-++-+++
+MODE=gen n=25 target=-2  ordered_solutions(A(0)=B(0)=+1)=2075000  example A=+--++--++++---+-+---+-+++ B=+-+---++--+--+-+--+-+++++
+
+real	0m5.575s
+user	0m4.565s
+sys	0m0.708s
+MODE=gen n=27 target=-2  ordered_solutions(A(0)=B(0)=+1)=5353776  example A=+--+----+++----+--++--+++++ B=+--+-+---+--+-+-+-++--+-+++
+MODE=gen n=29 target=-2  ordered_solutions(A(0)=B(0)=+1)=12401386  example A=+----+----+-+-+++-+-++---++++ B=+--+--+-++---+--++--++-+-++++
+
+real	2m40.043s
+user	2m12.983s
+sys	0m24.538s

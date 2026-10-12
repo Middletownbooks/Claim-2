@@ -1,0 +1,29 @@
+# compiled binaries — rebuild with: gcc -O3 -march=native -o sieve3 sieve3.c -lm
+sieve
+sieve2
+sieve3
+stage3
+__pycache__/
+
+# regenerable survivor dumps (tens of MB); the small stage-3/4 outputs
+# (c3/c4/r3/r4.txt) and the run logs ARE tracked, since they carry the results
+surv_conj2.txt
+surv_rigid.txt
+surv_conj2_*.txt
+surv_rigid_*.txt
+survivors_conj2.txt
+survivors_rigid.txt
+
+# raw progress logs: \r-spam, only the final line matters and that is
+# transcribed into REPORT_Z_sieve.md
+*.log
+
+# progress/marker files from background runs
+*.prog
+*.done
+
+# in-flight stage-3/4 outputs: tracked only once their producer has exited,
+# via `git add -f`. Reading a count off one of these mid-write has already
+# caused two wrong figures in this phase.
+c3_1e11.txt
+c4_1e11.txt

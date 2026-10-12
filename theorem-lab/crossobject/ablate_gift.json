@@ -1,0 +1,272 @@
+{
+ "full grammar (as pre-registered)": {
+  "detail": {
+   "31": {
+    "exact": true,
+    "obs": 30,
+    "pred": 30
+   },
+   "32": {
+    "exact": true,
+    "obs": 8,
+    "pred": 8
+   },
+   "37": {
+    "exact": true,
+    "obs": 36,
+    "pred": 36
+   },
+   "41": {
+    "exact": true,
+    "obs": 40,
+    "pred": 40
+   },
+   "43": {
+    "exact": true,
+    "obs": 42,
+    "pred": 42
+   },
+   "47": {
+    "exact": true,
+    "obs": 46,
+    "pred": 46
+   }
+  },
+  "held_out_prime_powers_exact": "6/6",
+  "rule": [
+   {
+    "cond": "n mod 8 = 0",
+    "value": "n//4"
+   },
+   {
+    "cond": "n mod 4 = 0",
+    "value": "n-2"
+   },
+   {
+    "cond": "n mod 2 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "otherwise",
+    "value": "n - n//spf(n)"
+   }
+  ],
+  "training_errors_on_atoms": 0
+ },
+ "only n-1, n, n+1": {
+  "detail": {
+   "31": {
+    "exact": true,
+    "obs": 30,
+    "pred": 30
+   },
+   "32": {
+    "exact": false,
+    "obs": 8,
+    "pred": 31
+   },
+   "37": {
+    "exact": true,
+    "obs": 36,
+    "pred": 36
+   },
+   "41": {
+    "exact": true,
+    "obs": 40,
+    "pred": 40
+   },
+   "43": {
+    "exact": true,
+    "obs": 42,
+    "pred": 42
+   },
+   "47": {
+    "exact": true,
+    "obs": 46,
+    "pred": 46
+   }
+  },
+  "held_out_prime_powers_exact": "5/6",
+  "rule": [
+   {
+    "cond": "n mod 8 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "n mod 4 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "n mod 2 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "otherwise",
+    "value": "n-1"
+   }
+  ],
+  "training_errors_on_atoms": 6
+ },
+ "without both": {
+  "detail": {
+   "31": {
+    "exact": true,
+    "obs": 30,
+    "pred": 30
+   },
+   "32": {
+    "exact": false,
+    "obs": 8,
+    "pred": 31
+   },
+   "37": {
+    "exact": true,
+    "obs": 36,
+    "pred": 36
+   },
+   "41": {
+    "exact": true,
+    "obs": 40,
+    "pred": 40
+   },
+   "43": {
+    "exact": true,
+    "obs": 42,
+    "pred": 42
+   },
+   "47": {
+    "exact": true,
+    "obs": 46,
+    "pred": 46
+   }
+  },
+  "held_out_prime_powers_exact": "5/6",
+  "rule": [
+   {
+    "cond": "n mod 8 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "n mod 4 = 0",
+    "value": "n-2"
+   },
+   {
+    "cond": "n mod 2 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "otherwise",
+    "value": "n-1"
+   }
+  ],
+  "training_errors_on_atoms": 5
+ },
+ "without n - n//spf(n)": {
+  "detail": {
+   "31": {
+    "exact": true,
+    "obs": 30,
+    "pred": 30
+   },
+   "32": {
+    "exact": true,
+    "obs": 8,
+    "pred": 8
+   },
+   "37": {
+    "exact": true,
+    "obs": 36,
+    "pred": 36
+   },
+   "41": {
+    "exact": true,
+    "obs": 40,
+    "pred": 40
+   },
+   "43": {
+    "exact": true,
+    "obs": 42,
+    "pred": 42
+   },
+   "47": {
+    "exact": true,
+    "obs": 46,
+    "pred": 46
+   }
+  },
+  "held_out_prime_powers_exact": "6/6",
+  "rule": [
+   {
+    "cond": "n mod 8 = 0",
+    "value": "n//4"
+   },
+   {
+    "cond": "n mod 4 = 0",
+    "value": "n-2"
+   },
+   {
+    "cond": "n mod 2 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "otherwise",
+    "value": "n-1"
+   }
+  ],
+  "training_errors_on_atoms": 3
+ },
+ "without n//4": {
+  "detail": {
+   "31": {
+    "exact": true,
+    "obs": 30,
+    "pred": 30
+   },
+   "32": {
+    "exact": false,
+    "obs": 8,
+    "pred": 31
+   },
+   "37": {
+    "exact": true,
+    "obs": 36,
+    "pred": 36
+   },
+   "41": {
+    "exact": true,
+    "obs": 40,
+    "pred": 40
+   },
+   "43": {
+    "exact": true,
+    "obs": 42,
+    "pred": 42
+   },
+   "47": {
+    "exact": true,
+    "obs": 46,
+    "pred": 46
+   }
+  },
+  "held_out_prime_powers_exact": "5/6",
+  "rule": [
+   {
+    "cond": "n mod 8 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "n mod 4 = 0",
+    "value": "n-2"
+   },
+   {
+    "cond": "n mod 2 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "otherwise",
+    "value": "n - n//spf(n)"
+   }
+  ],
+  "training_errors_on_atoms": 2
+ }
+}

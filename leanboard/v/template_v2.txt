@@ -1,0 +1,303 @@
+================================================================
+RESEARCH PROTOCOL — v2
+Fill every [BRACKET] before use. Rules marked (S) require substrate the
+prompt itself cannot supply; see §0.
+================================================================
+
+0. SUBSTRATE DECLARATION            [filled by the operator, not the agent]
+
+  Concurrent agents available: [N]
+  Independent auditor available: [YES / NO]
+  Proof assistant available: [NAME / NONE]
+  Budget meter visible to agents: [YES / NO]
+  Status of this problem as of [DATE]: [OPEN / SOLVED — do not proceed]
+
+  If N = 1, every rule marked (S) is UNENFORCED and must be reported as
+  such, not simulated. A rule whose substrate is absent is not to be
+  role-played. Writing an "audit" of an argument you also wrote is not an
+  audit; label it SELF-REVIEW (UNENFORCED) wherever the protocol calls for
+  an independent one. Reporting a protocol step as performed when its
+  substrate was absent is the most serious violation in this document —
+  more serious than an unproved lemma, because an unproved lemma is
+  visible to the next reader and a fabricated check is not.
+
+1. PROBLEM SPECIFICATION
+
+  [FORMAL STATEMENT: every object defined from scratch; all quantifiers
+   explicit. Do not substitute nearby or more convenient definitions.]
+  [EDGE CASES: resolve degenerate instances explicitly — empty structures,
+   trivial sizes, disconnected or reducible cases — stating how each is
+   handled.]
+
+  DECOMPOSITION. State whether the target factors into sub-claims normally
+  established by different mechanisms (an obstruction half and a matching
+  witness half; necessity and sufficiency). If the target requires a
+  CONJUNCTION of named properties, enumerate the conjuncts and register
+  each as its own sub-target with its own gap-ledger entry and its own
+  certificate. Establishing k−1 of k conjuncts is not a partial solution;
+  it is return-condition (c). No conjunct may be discharged by "the same
+  argument", "by symmetry", or "an analogous computation" (see PARALLELISM,
+  §4).
+
+  SCALE REGIME. State which quantifiers are asymptotic and which are
+  claimed for every instance. An argument established only on a
+  subsequence, parity class, or asymptotic regime must carry an explicit
+  interpolation, padding, or boundary argument extending it to everything
+  the target quantifies over, or the target is restated with the weaker
+  scope made visible. It may not be absorbed into "for large n".
+
+2. TARGET AND NON-TARGETS
+
+  A complete solution proves exactly [EXACT CLAIM], with no auxiliary
+  hypotheses. None of the following counts, and none may be returned as a
+  solution:
+   - restricted subclasses: [LIST KNOWN PARTIAL CLASSES];
+   - weakened or approximate versions: [LIST RELAXATIONS AND BEST BOUNDS];
+   - reduction to any unproved statement, including these known to be
+     equivalent to or stronger than the target: [LIST EQUIVALENT-STRENGTH
+     TRAPS];
+   - computational verification to any finite bound, however large;
+   - a candidate counterexample without a complete audited certificate;
+   - an argument whose central inequality, threshold, or gap rests on a
+     parameter choice justified only by "optimizing appropriately";
+   - a construction satisfying only part of a conjunctively required list
+     of named hypotheses;
+   - a construction whose recipe is incompatible in principle with a
+     required property (see RECIPE–PROPERTY INCOMPATIBILITY, §4),
+     explained away case-by-case without ever testing the elements the
+     recipe itself forces.
+
+3. EPISTEMIC STANCE
+
+  Do not assume the statement is true or false. Run a proof track and a
+  disproof track; the disproof track searches for counterexamples and for
+  obstructions explaining why proposed mechanisms must fail. It holds at
+  least [max(1, N/4)] agents at all times and is never the first thing
+  cut. Mine failures in each direction for constraints usable by the other.
+
+  Every abandoned approach returned as an artifact must name the specific
+  invariant, quantity, or piece of structure it could not control — "this
+  bound forgets the location of the negative mass", "this normalization is
+  not preserved under transport", "this witness is not fixed before the
+  adversarial choice is revealed", "this recipe forces a nontrivial
+  centre". "It failed", or "it lost a constant", is not a diagnosis, and
+  the artifact is returned incomplete.
+
+  Do not consult any source for the status, history, or attempted
+  solutions of this exact problem; §0 already records its status. External
+  search is permitted for standard named theorems, ordinary background,
+  and barrier or no-go results (§4). Do not return an answer that consists
+  of reporting the problem's open status.
+
+  Tag every claim with exactly one of: DERIVED HERE (a proof appears in
+  this artifact) / STANDARD (a named theorem, cited) / COMPUTED (an
+  explicit calculation, shown) / CONJECTURED (believed, unproved) /
+  ASSUMED (used without support). Untagged prose is read as ASSUMED.
+
+4. NAMED FAILURE PRINCIPLES
+
+  Each is stated once here and referred to by name elsewhere. The examples
+  are a bank, not a list to match against: the same shape of failure in
+  another domain is the same failure.
+
+  RECIPE–PROPERTY INCOMPATIBILITY. Before proving that an object built by
+  a general recipe (extension, quotient, gluing, deformation, limit) has a
+  required property, verify from the shape of the recipe alone that the
+  property is possible at all. A nontrivial centre rules out ICC; a global
+  fixed point rules out a free action; a nonzero kernel rules out
+  injectivity claimed alongside it; a common invariant subobject rules out
+  simplicity or primitivity; a counting or parity obstruction (Euler,
+  degree-sum, Hall) rules out an incidence structure however its pieces
+  are chosen. This check precedes and is independent of any
+  generic-element argument, because such arguments can succeed on every
+  element tested while never touching the distinguished element the recipe
+  introduced.
+
+  FORCED ELEMENTS. When a property requires no fixed points, only infinite
+  orbits, or trivial stabilizers, test it explicitly on the elements the
+  construction distinguishes — base points, gluing elements, markers, the
+  lattice or subgroup used to build an extension, a chosen generator.
+  State what the argument does to those elements. "The same bound applies"
+  is not a statement of what it does.
+
+  PARALLELISM. Any step justified by "the same argument", "by symmetry",
+  or "analogously" is written out in full for the parallel case,
+  especially where the cases differ in a structural feature — split vs
+  non-split, trivial vs nontrivial centre, generic vs degenerate parameter
+  — that plausibly bears on the property being proved.
+
+  CONFLATED OBJECTS. Two quantities that agree at a point, share a
+  derivative, or look alike under an integral or expectation are not
+  identical. If only an inequality (Jensen, convexity, Cauchy–Schwarz)
+  relates them, only that inequality may be used, and only in the
+  direction it goes.
+
+  QUANTIFIER ORDER. Any random, greedy, or existential object — a matrix,
+  a shift, an index, a cutoff — must be fixed before, and independently
+  of, the instance, adversarial choice, or conditioning event it is
+  applied to. Flag every step where ∃ and ∀ could be silently swapped.
+
+  DIVISION BLOWUP. A bound obtained before conditioning, or in
+  expectation, is checked for what happens when it is divided by a
+  probability, weight, or norm that the instance can make small. A bound
+  that survives only on the typical branch is not a bound.
+
+  HEURISTIC COUNTS. Any Bézout-type, volume, or dimension count is checked
+  for base loci, non-reduced components, and non-generic strata that the
+  count silently assumes away.
+
+  PARAMETER JUSTIFICATION. Every optimized parameter, threshold, or cutoff
+  is traced to an explicit inequality placing it in the required range,
+  with the sign of the resulting margin proved outright.
+
+  BARRIER CHECK. Before a family receives a second agent, state whether a
+  known no-go or barrier theorem in this domain excludes mechanisms of its
+  type, and if so, which specific feature of this mechanism escapes it. An
+  approach that cannot answer this is speculative, not active.
+
+5. DERIVATION DISCIPLINE
+
+  A formula, recurrence, or coefficient obtained by analogy with a
+  structurally similar known object may not be used in any later step
+  until it has both:
+   (a) been re-derived from the actual defining maps and objects of this
+       problem, not assumed to transfer from the analogous setting; and
+   (b) been checked against at least one small explicit instance computed
+       by hand or by direct enumeration, with the check shown.
+
+  A check is reported by its content, not by its verdict. Show the
+  instantiation: the object chosen, the numbers, the expression that
+  results. A line asserting that a check passed, without exhibiting what
+  was computed, is void, and the check counts as not performed. Checklists
+  of ticks are not audit output and are discarded unread.
+
+  If you abandon a computation mid-stream — "wait", "let me redo this",
+  "actually" — every conclusion downstream of it is void until recomputed.
+  A superseded verdict may not be left standing beside the computation
+  that superseded it. Delete it, or redo it.
+
+6. ORCHESTRATION                                                       (S)
+
+  Up to [N] concurrent agents.
+   - Registry: one entry per approach FAMILY, and per sub-target or
+     conjunct from §1, recording the core mathematical mechanism (not its
+     wording), the specific invariant or structure that mechanism
+     controls, agents assigned, the strongest lemma proved so far, the
+     current gap stated as a formal proposition, and a status ∈ {active,
+     blocked, merged, refuted}.
+   - An approach is BLOCKED when its gap is a proposition of strength
+     comparable to the target. Blocked approaches receive no agents until
+     a materially new mechanism is proposed; log what that mechanism
+     controls that the previous ones did not.
+   - (S) Independence: in early rounds, do not disclose the favoured
+     approach or other agents' progress to exploring agents.
+     Cross-pollinate only between approaches that have each produced at
+     least one nontrivial proved lemma.
+   - (S) If more than [K] agents converge on one family, reassign the
+     excess to the least-explored active families.
+   - Progress on conjunct i of k is never logged as progress toward the
+     target without the explicit count of conjuncts still unestablished.
+   - Agents return artifacts only: proved lemmas with complete proofs,
+     explicit constructions, counterexamples to proposed sublemmas, the
+     small-instance and compatibility checks required above, or a formal
+     statement of the obstruction hit and the invariant it could not
+     control. Status reports, confidence estimates, and steps called
+     "routine", "standard", or "parallel to the previous case" are
+     rejected, and the step goes to the gap ledger.
+
+7. ADVERSARIAL AUDIT
+
+  Before exploration, generate a domain-specific failure checklist: the
+  known ways proofs of this and neighbouring statements have historically
+  been wrong. [DOMAIN-SPECIFIC TRAPS: definitional near-misses, degenerate
+  cases, quantifier slips, operations that silently violate the
+  hypotheses, circular use of equivalent statements.]
+
+  Every candidate is audited against §4 and against the three checks
+  below. Those three exist because §4 is a taxonomy of commission — of
+  what is written down wrongly — and an argument in which every written
+  step is correct can still be worthless. These ask what is missing.
+
+   - COVERAGE. State the rule by which the case list, registry, or
+     evidence set was populated. Report both the number of items that rule
+     yields and the number actually treated. Any difference is a
+     gap-ledger entry. "The ones I found" is not an enumeration rule.
+     (S) An auditor who did not populate the set re-runs the rule and
+     diffs the result.
+   - MEASUREMENT VALIDITY. For every quantity offered as evidence, state
+     what its value would be if the claim were false. If you cannot, it is
+     not evidence. Decompose any composite quantity and report the share
+     contributed by its largest component; a quantity more than half
+     driven by one uninformative component is renamed after that component
+     or dropped.
+   - SCOPE CHECK. Apply the proof mechanism, unchanged, to a nearby or
+     structurally analogous statement with a KNOWN false, weaker, or tight
+     answer — a neighbouring object, a boundary parameter value, a
+     classical special case — and report the expression the mechanism
+     produces there. If it does not visibly break or weaken exactly where
+     it should, treat that as evidence of an error, not of extra strength.
+     If it does break, name the step that breaks.
+
+  (S) Candidates are audited by agents who did not contribute to them,
+  with a mandate to break them; a candidate survives only if every
+  objection is answered with a proof, not a clarification. Where no
+  independent auditor exists, this is SELF-REVIEW (UNENFORCED) and is
+  labelled so in the return.
+
+  Before verification, the surviving proof is reduced to a compact
+  mechanism statement: a short, self-contained restatement of exactly
+  which objects, invariants, and inequalities compose the argument, with,
+  for a conjunctive target, the list confirming each conjunct's
+  independent certificate. That statement, not the exploration record, is
+  what proceeds.
+
+8. VERIFICATION LADDER
+
+  Formalize the surviving proof in [PROOF ASSISTANT]; a step that resists
+  formalization returns to the gap ledger and the proof is not complete.
+  Where no proof assistant is available, say so and descend the ladder,
+  reporting in the return which rung was actually reached:
+   1. machine-checked in [PROOF ASSISTANT];
+   2. every quantitative step recomputed by an independent executable
+      script, with the script and its output included;
+   3. every quantitative step recomputed by hand on an explicit small
+      instance, shown in full;
+   4. (S) re-derived by an agent given only the compact mechanism
+      statement and the problem, never the proof;
+   5. none of the above — the proof is unverified, and says so in its
+      first sentence.
+
+9. BUDGET AND RETURN CONDITIONS
+
+  Budget: [T], in whatever unit the operator can actually meter. An agent
+  cannot see its own consumption, so checkpoints are keyed to countable
+  events instead: log the registry state — for each active family or
+  conjunct, its controlled invariant and its current gap — after every [C]
+  returned artifacts, and at the end of every wave.
+
+  Early return is permitted only for (a) or (b) below. Do not return early
+  because approaches have failed: a failed wave triggers a new wave with
+  genuinely new mechanisms, and the new wave's registry entry records what
+  invariant it proposes to control that the exhausted ones did not. Stop
+  opening waves when [W] consecutive waves have produced no new controlled
+  invariant. That condition, not exhaustion of the clock, ends the search.
+
+  Return exactly one of:
+   (a) a complete audited proof, with its compact mechanism statement, the
+       verification rung reached in §8, and, for a conjunctive target, the
+       checklist confirming every conjunct was independently certified;
+   (b) a verified counterexample with a complete certificate;
+   (c) a structured failure report: the registry including controlled
+       invariants, the single strongest fully proved derivation, its
+       remaining gap stated as one formal proposition, an explicit list of
+       any conjuncts left unestablished, the coverage figures from §7, and
+       a declaration in its first sentence that this is NOT a solution.
+
+  Never return anything in the space between (a)/(b) and (c): no
+  "essentially complete" proof, no reduction presented as progress, no
+  best-effort essay, no construction presented as a solution when a
+  required conjunct has been asserted rather than proved.
+
+  (c) is a success condition of this protocol, not a failure of it. On an
+  open problem it is the expected outcome. A correct (c) is worth more
+  than an (a) that does not survive.

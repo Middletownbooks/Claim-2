@@ -1,0 +1,102 @@
+
+============================================================================
+1. The verification itself, on constructed examples
+============================================================================
+  Sylvester order   2 : True   (H H^T = nI)
+  Sylvester order   4 : True   (H H^T = nI)
+  Sylvester order   8 : True   (H H^T = nI)
+  Sylvester order  16 : True   (H H^T = nI)
+  Sylvester order  32 : True   (H H^T = nI)
+  PASS  Sylvester matrices of orders 2..32 all verify
+  Paley I q=11, order  12 : True   (H H^T = nI)
+  PASS  Paley I at q = 11 gives a genuine Hadamard matrix of order 12
+  Kronecker 2 x 12, order 24 : True
+  PASS  the Kronecker product of two Hadamard matrices is Hadamard
+  one entry flipped         : False   (row 0.row 3 = -2, want 0)
+  PASS  flipping a single entry is caught   [row 0.row 3 = -2, want 0]
+
+============================================================================
+2. Cost of verification, and its independence from provenance
+============================================================================
+  order 32: 32*32 inner products of length 32 = 32,768 multiplications
+  order 668 would be 298,077,632 -- still under a second.
+
+  NOTHING in this check consults how the matrix was found. No prompt, no
+  method, no agent architecture, no session transcript. The artifact is
+  self-certifying. This is the extreme point of the AU claim: process
+  disclosure contributes EXACTLY ZERO to verifiability here.
+  PASS  verification is O(n^3) and provenance-free
+
+============================================================================
+3. The claim a finite deliverable does NOT make checkable
+============================================================================
+  'Twelve Hadamard matrices of previously open order' is two claims:
+    (A) each is Hadamard of its stated order   -- decidable, seconds
+    (B) those orders were previously open      -- not decidable here
+
+  (B) rests on the Hadamard order tables: which orders already had a known
+  matrix. That is a literature question. No amount of finiteness in the
+  deliverable touches it, and it carries ALL of the novelty.
+
+  Arms AT and AU scored artifacts by 'load-bearing claims verified' and
+  counted only (A)-type claims. On this artifact that score would read
+  12/12 while the whole point of the paper went unchecked.
+  PASS  the two claim types are separated for the first time in this programme   [AT/AU conflated them]
+
+============================================================================
+4. A computable proxy for (B): classical-construction reachability
+============================================================================
+  orders n = 0 mod 4 up to 1000          : 250
+  reachable by Sylvester/Paley/Kronecker   : 195
+  NOT reachable                            : 55
+
+  first twenty unreachable orders:
+    92, 116, 156, 172, 184, 188, 232, 236, 260, 268, 292, 324, 356, 372, 376, 404, 412, 428, 436, 452
+  PASS  the classical constructions leave a definite residue   [55 of 250 orders below 1000]
+  PASS  92 is the first order the classical constructions miss   [first missing = 92]
+
+============================================================================
+5. What the proxy does and does not buy
+============================================================================
+  BUYS: given a claimed order n, this decides in milliseconds whether n is
+  reachable by Sylvester, Paley I, Paley II and Kronecker products. An
+  order NOT in that closure is one the standard toolkit cannot supply, so
+  a matrix at such an order is at least not trivially old.
+
+  DOES NOT BUY: whether the order was OPEN. Many unreachable orders have
+  long-known matrices from other constructions -- Williamson, Baumert-
+  Golomb-Hall, Turyn, Goethals-Seidel, cocyclic and computer searches.
+  92 is the classic case: outside the Paley closure, and settled in 1962.
+  The proxy is a NECESSARY condition for novelty, never a sufficient one.
+
+  So the honest statement for such an artifact would be:
+    (A) verified, 12/12, in seconds, with no provenance needed;
+    (B) unverified here; n of 12 orders lie outside the classical closure,
+        which is consistent with novelty and does not establish it.
+  PASS  the proxy is stated as necessary-not-sufficient
+
+============================================================================
+6. The sharpened claim
+============================================================================
+  AU narrowed AT to: a FINITE DELIVERABLE is the variable. This case
+  sharpens it again. The variable is not finiteness but whether the
+  artifact's claim is COEXTENSIVE WITH A DECIDABLE FINITE CHECK:
+
+    Hadamard   claim = 'this matrix is Hadamard'   check decides it    100%
+    SSUF       claim = 'no good routing is cheap'  8 routings, all      100%
+    Chow       claim = 'no valid grid exists'      1296 grids, all      100%
+    CDC        claim = 'EVERY bridgeless graph'    15 graphs sampled      0%
+    Nevanlinna claim = 'this function is not BT'   scaffolding only       0%
+
+  CDC is the discriminating row: its artifact is finite in every instance
+  and its claim is universal, so no enumeration can close it. A
+  counterexample or construction has the coextensive property by nature --
+  the claim IS the object. A universal theorem never does.
+
+  That is why 'ship a finite object' is not advice one can always follow:
+  it is available exactly when the target is an existence claim.
+  PASS  the variable is restated as coextensiveness, not finiteness
+
+============================================================================
+RESULT   10/10 checks passed
+============================================================================

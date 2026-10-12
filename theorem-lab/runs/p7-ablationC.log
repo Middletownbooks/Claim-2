@@ -1,0 +1,60 @@
+{
+  "ablation": "C: no T family, no transport, no parent theorem",
+  "entries": [
+    {
+      "calibration_errors": 0,
+      "cost": 843,
+      "final_errors": 0,
+      "id": "E-H00001",
+      "kind": "factor",
+      "op": "and",
+      "status": "UNREFUTED_ON_TESTED_DATA",
+      "validation_errors": 0
+    },
+    {
+      "calibration_errors": 12512,
+      "cost": 1700614,
+      "final_errors": 5508,
+      "id": "E-H00002",
+      "kind": "factor",
+      "op": "or",
+      "status": "INCOMPLETE",
+      "validation_errors": 4828
+    },
+    {
+      "calibration_errors": 12512,
+      "cost": 1700614,
+      "final_errors": 5508,
+      "id": "E-H00003",
+      "kind": "factor",
+      "op": "xor",
+      "status": "INCOMPLETE",
+      "validation_errors": 4828
+    },
+    {
+      "calibration_errors": 12512,
+      "cost": 1700614,
+      "final_errors": 5508,
+      "id": "E-H00004",
+      "kind": "factor",
+      "op": "iff",
+      "status": "INCOMPLETE",
+      "validation_errors": 4828
+    },
+    {
+      "calibration_errors": 0,
+      "cost": 1483,
+      "final_errors": 147,
+      "id": "E-H00005",
+      "kind": "tile",
+      "op": null,
+      "status": "REFUTED",
+      "validation_errors": 606
+    }
+  ],
+  "exports": [
+    "E-H00001"
+  ],
+  "label": "COMPUTED",
+  "oracle_queries": 64512
+}

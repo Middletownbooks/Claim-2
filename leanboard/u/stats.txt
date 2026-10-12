@@ -1,0 +1,19 @@
+=== Is the team's directional forecast informative about the outcome? ===
+  2x2  GO/effect=1  GO/no-effect=8  NOGO/effect=2  NOGO/no-effect=10
+  P(effect | GO)   = 1/9 = 0.111
+  P(effect | NOGO) = 2/12 = 0.167
+  base rate P(effect) = 3/21 = 0.143
+  Fisher exact two-sided p = 1.0000
+
+  -> GO predicts an effect LESS often than NOGO does. The forecast is
+     not informative; it is very slightly anti-informative, and far
+     from significant.
+
+=== What the earlier framing got wrong ===
+  Comparing 1/9 (precision of GO) with 10/12 (precision of NOGO) compares
+  the precisions of DIFFERENT propositions. With a base rate of true
+  effects near 0.14, a useless forecaster already scores ~0.86 on nulls.
+  The apparent 11%% vs 83%% asymmetry is a base-rate artifact.
+
+=== Implied hypothesis pool ===
+  effects actually existed in 3 of 21 pre-registered tests = 14%

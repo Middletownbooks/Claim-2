@@ -1,0 +1,174 @@
+{
+ "chosen_composition_op": "lcm",
+ "disagreement_stage": {
+  "label": "COMPUTED",
+  "observations": {
+   "55": 20
+  },
+  "probes_used": 1,
+  "rounds": [
+   {
+    "observed": 20,
+    "predictions": {
+     "lcm": 20,
+     "max": 10
+    },
+    "probe": 55,
+    "survivors": [
+     "lcm",
+     "max"
+    ],
+    "survivors_after": [
+     "lcm"
+    ]
+   }
+  ],
+  "selected": "lcm",
+  "stage": "disagreement_resolution",
+  "survivors": [
+   "lcm"
+  ],
+  "verdict": "RESOLVED"
+ },
+ "end_to_end_accuracy": 1.0,
+ "forecast_hash": "03fbe7c8162144e7cb46320bff4180de57a6e4b10540b37e00fc22a86f0c04f0",
+ "holdout_untouched_until_freeze": true,
+ "invariants_exact": "18/18",
+ "label": "COMPUTED",
+ "majority_class_baseline": 0.90278,
+ "oracle_queries_total": 4380,
+ "per_object": {
+  "31": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 30,
+   "f_pred": 30,
+   "route": "base:n - n//spf(n)"
+  },
+  "32": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 8,
+   "f_pred": 8,
+   "route": "base:n//4"
+  },
+  "33": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 10,
+   "f_pred": 10,
+   "route": "composed"
+  },
+  "34": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 16,
+   "f_pred": 16,
+   "route": "composed"
+  },
+  "35": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 12,
+   "f_pred": 12,
+   "route": "composed"
+  },
+  "36": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 6,
+   "f_pred": 6,
+   "route": "composed"
+  },
+  "37": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 36,
+   "f_pred": 36,
+   "route": "base:n - n//spf(n)"
+  },
+  "38": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 18,
+   "f_pred": 18,
+   "route": "composed"
+  },
+  "39": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 12,
+   "f_pred": 12,
+   "route": "composed"
+  },
+  "40": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 4,
+   "f_pred": 4,
+   "route": "composed"
+  },
+  "41": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 40,
+   "f_pred": 40,
+   "route": "base:n - n//spf(n)"
+  },
+  "42": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 6,
+   "f_pred": 6,
+   "route": "composed"
+  },
+  "43": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 42,
+   "f_pred": 42,
+   "route": "base:n - n//spf(n)"
+  },
+  "44": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 10,
+   "f_pred": 10,
+   "route": "composed"
+  },
+  "45": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 12,
+   "f_pred": 12,
+   "route": "composed"
+  },
+  "46": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 22,
+   "f_pred": 22,
+   "route": "composed"
+  },
+  "47": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 46,
+   "f_pred": 46,
+   "route": "base:n - n//spf(n)"
+  },
+  "48": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 4,
+   "f_pred": 4,
+   "route": "composed"
+  }
+ },
+ "probe_objects": [
+  55
+ ],
+ "probes_used": 1,
+ "protocol": "training [1,30]; probe reserve [49,60]; holdout [31,48]",
+ "queries_after_training": 1800
+}

@@ -1,0 +1,79 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "boards": {
+  "flt": {
+   "statement_files": 29511,
+   "declarations": 29512,
+   "statement_pct": {
+    "deformation_lifting": 3.33,
+    "duality": 0.78,
+    "finite_level_approximation": 43.41,
+    "functorial_transport": 48.69,
+    "regularity_upgrade": 4.35,
+    "quotienting": 10.36,
+    "local_to_global": 35.2,
+    "contradiction": 22.23,
+    "energy_height_inequality": 2.41,
+    "compactness_extraction": 2.23,
+    "approximation_limit": 0.72,
+    "gluing": 0.28,
+    "classification": 0.0
+   },
+   "tactic_pct": {
+    "contradiction": 35.91,
+    "induction_on_parameter": 30.43,
+    "auxiliary_object_construction": 80.77,
+    "case_split": 87.32,
+    "intermediate_lemma_chain": 93.52,
+    "finite_level_approximation": 45.9,
+    "local_to_global": 15.75,
+    "deformation_lifting": 17.76,
+    "energy_height_inequality": 12.56,
+    "functorial_transport": 17.53,
+    "compactness_extraction": 5.79,
+    "quotienting": 19.74,
+    "regularity_upgrade": 2.69,
+    "approximation_limit": 3.38,
+    "duality": 1.43
+   }
+  },
+  "ns": {
+   "statement_files": 2482,
+   "declarations": 37330,
+   "statement_pct": {
+    "compactness_extraction": 14.79,
+    "energy_height_inequality": 43.11,
+    "finite_level_approximation": 44.96,
+    "regularity_upgrade": 54.63,
+    "deformation_lifting": 5.16,
+    "local_to_global": 3.95,
+    "functorial_transport": 7.13,
+    "approximation_limit": 15.11,
+    "descent": 0.48,
+    "classification": 0.04,
+    "gluing": 0.52,
+    "contradiction": 3.06,
+    "quotienting": 0.36,
+    "duality": 7.7,
+    "auxiliary_object_construction": 0.08
+   },
+   "tactic_pct": {
+    "compactness_extraction": 9.39,
+    "energy_height_inequality": 36.87,
+    "finite_level_approximation": 28.53,
+    "auxiliary_object_construction": 35.82,
+    "case_split": 37.91,
+    "intermediate_lemma_chain": 90.05,
+    "deformation_lifting": 3.14,
+    "induction_on_parameter": 9.07,
+    "contradiction": 7.57,
+    "regularity_upgrade": 7.74,
+    "approximation_limit": 10.56,
+    "functorial_transport": 0.64,
+    "quotienting": 0.2,
+    "duality": 0.16,
+    "local_to_global": 0.04
+   }
+  }
+ }
+}

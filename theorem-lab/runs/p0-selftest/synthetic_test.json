@@ -1,0 +1,5 @@
+{
+  "label": "COMPUTED",
+  "note": "This message is produced only after executing the assertions.",
+  "result": "synthetic assertions passed"
+}

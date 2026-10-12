@@ -1,0 +1,9 @@
+rung 0: 45 atoms (0 carried), 383641 classes, exhausted=True, certified 14, net new 14, NEW ['divisors_le_sqrt', 'floor_n_2', 'floor_n_3', 'floor_n_4', 'is_even', 'is_prime', 'is_square', 'n', 'n_div_spf', 'n_minus_1', 'n_minus_n_div_spf', 'spf', 'tau', 'tau_minus_1'] (29s)
+rung 1: 52 atoms (7 carried), 1173171 classes, exhausted=True, certified 21, net new 15, NEW ['is_prime_power', 'odd_divisors'] (153s)
+   random control: certified 14, net new 14
+rung 2: 70 atoms (25 carried), 3431327 classes, exhausted=True, certified 22, net new 1, NEW ['is_cube'] (616s)
+   random control: certified 14, net new 14
+rung 3: 68 atoms (23 carried), 3011111 classes, exhausted=True, certified 22, net new 0, NEW [] (1292s)
+  FIXPOINT: no net-new invariant beyond rung 2
+
+ladder: 14 -> 15 -> 1 -> 0

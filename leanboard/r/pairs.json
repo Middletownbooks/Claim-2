@@ -1,0 +1,770 @@
+{
+ "label": "EXPERIMENTAL_RESULT",
+ "question": "does cross-development transport track mathematical distance, with the production process held constant?",
+ "pairs": [
+  {
+   "source": "ConnesRigidity",
+   "target": "QuantumParallelRepetition",
+   "queries": 110,
+   "mean": 0.2485,
+   "ge_0.4_frac": 0.1455,
+   "vocab_jaccard": 0.1257
+  },
+  {
+   "source": "QuantumParallelRepetition",
+   "target": "NonSoficGroup",
+   "queries": 237,
+   "mean": 0.2324,
+   "ge_0.4_frac": 0.1224,
+   "vocab_jaccard": 0.19
+  },
+  {
+   "source": "MetricCodes",
+   "target": "QuantumParallelRepetition",
+   "queries": 110,
+   "mean": 0.2576,
+   "ge_0.4_frac": 0.1182,
+   "vocab_jaccard": 0.168
+  },
+  {
+   "source": "SpherePacking",
+   "target": "MulticolorTriangleRamsey",
+   "queries": 9,
+   "mean": 0.1505,
+   "ge_0.4_frac": 0.1111,
+   "vocab_jaccard": 0.0545
+  },
+  {
+   "source": "ConnesRigidity",
+   "target": "MetricCodes",
+   "queries": 407,
+   "mean": 0.1915,
+   "ge_0.4_frac": 0.1106,
+   "vocab_jaccard": 0.1266
+  },
+  {
+   "source": "ConnesRigidity",
+   "target": "NonSoficGroup",
+   "queries": 237,
+   "mean": 0.2453,
+   "ge_0.4_frac": 0.1055,
+   "vocab_jaccard": 0.1932
+  },
+  {
+   "source": "Permanent",
+   "target": "NonSoficGroup",
+   "queries": 237,
+   "mean": 0.2303,
+   "ge_0.4_frac": 0.1055,
+   "vocab_jaccard": 0.1156
+  },
+  {
+   "source": "NonSoficGroup",
+   "target": "QuantumParallelRepetition",
+   "queries": 110,
+   "mean": 0.2402,
+   "ge_0.4_frac": 0.1,
+   "vocab_jaccard": 0.19
+  },
+  {
+   "source": "MetricCodes",
+   "target": "SpherePacking",
+   "queries": 191,
+   "mean": 0.2089,
+   "ge_0.4_frac": 0.0942,
+   "vocab_jaccard": 0.153
+  },
+  {
+   "source": "NonSoficGroup",
+   "target": "ConnesRigidity",
+   "queries": 192,
+   "mean": 0.1859,
+   "ge_0.4_frac": 0.0885,
+   "vocab_jaccard": 0.1932
+  },
+  {
+   "source": "MetricCodes",
+   "target": "ConnesRigidity",
+   "queries": 192,
+   "mean": 0.202,
+   "ge_0.4_frac": 0.0781,
+   "vocab_jaccard": 0.1266
+  },
+  {
+   "source": "Permanent",
+   "target": "QuantumParallelRepetition",
+   "queries": 110,
+   "mean": 0.2131,
+   "ge_0.4_frac": 0.0727,
+   "vocab_jaccard": 0.1037
+  },
+  {
+   "source": "MetricCodes",
+   "target": "NonSoficGroup",
+   "queries": 237,
+   "mean": 0.2359,
+   "ge_0.4_frac": 0.0717,
+   "vocab_jaccard": 0.1364
+  },
+  {
+   "source": "QuantumParallelRepetition",
+   "target": "MetricCodes",
+   "queries": 407,
+   "mean": 0.1576,
+   "ge_0.4_frac": 0.0688,
+   "vocab_jaccard": 0.168
+  },
+  {
+   "source": "NonSoficGroup",
+   "target": "MetricCodes",
+   "queries": 407,
+   "mean": 0.1825,
+   "ge_0.4_frac": 0.0663,
+   "vocab_jaccard": 0.1364
+  },
+  {
+   "source": "SpherePacking",
+   "target": "MetricCodes",
+   "queries": 407,
+   "mean": 0.1602,
+   "ge_0.4_frac": 0.0639,
+   "vocab_jaccard": 0.153
+  },
+  {
+   "source": "SpherePacking",
+   "target": "EhrhartVolumeInequality",
+   "queries": 73,
+   "mean": 0.2072,
+   "ge_0.4_frac": 0.0548,
+   "vocab_jaccard": 0.2189
+  },
+  {
+   "source": "MetricCodes",
+   "target": "Permanent",
+   "queries": 131,
+   "mean": 0.2454,
+   "ge_0.4_frac": 0.0458,
+   "vocab_jaccard": 0.1728
+  },
+  {
+   "source": "Permanent",
+   "target": "MetricCodes",
+   "queries": 407,
+   "mean": 0.1726,
+   "ge_0.4_frac": 0.0442,
+   "vocab_jaccard": 0.1728
+  },
+  {
+   "source": "QuantumParallelRepetition",
+   "target": "ConnesRigidity",
+   "queries": 192,
+   "mean": 0.142,
+   "ge_0.4_frac": 0.0417,
+   "vocab_jaccard": 0.1257
+  },
+  {
+   "source": "ConnesRigidity",
+   "target": "Permanent",
+   "queries": 131,
+   "mean": 0.2,
+   "ge_0.4_frac": 0.0382,
+   "vocab_jaccard": 0.1082
+  },
+  {
+   "source": "NonSoficGroup",
+   "target": "Permanent",
+   "queries": 131,
+   "mean": 0.1731,
+   "ge_0.4_frac": 0.0305,
+   "vocab_jaccard": 0.1156
+  },
+  {
+   "source": "QuantumParallelRepetition",
+   "target": "Permanent",
+   "queries": 131,
+   "mean": 0.157,
+   "ge_0.4_frac": 0.0305,
+   "vocab_jaccard": 0.1037
+  },
+  {
+   "source": "QuantumParallelRepetition",
+   "target": "EhrhartVolumeInequality",
+   "queries": 73,
+   "mean": 0.1613,
+   "ge_0.4_frac": 0.0274,
+   "vocab_jaccard": 0.1675
+  },
+  {
+   "source": "ConnesRigidity",
+   "target": "CompactnessAndDegeneracy",
+   "queries": 42,
+   "mean": 0.1294,
+   "ge_0.4_frac": 0.0238,
+   "vocab_jaccard": 0.082
+  },
+  {
+   "source": "MetricCodes",
+   "target": "CompactnessAndDegeneracy",
+   "queries": 42,
+   "mean": 0.1544,
+   "ge_0.4_frac": 0.0238,
+   "vocab_jaccard": 0.1131
+  },
+  {
+   "source": "NonSoficGroup",
+   "target": "CompactnessAndDegeneracy",
+   "queries": 42,
+   "mean": 0.149,
+   "ge_0.4_frac": 0.0238,
+   "vocab_jaccard": 0.1587
+  },
+  {
+   "source": "SpherePacking",
+   "target": "CompactnessAndDegeneracy",
+   "queries": 42,
+   "mean": 0.0999,
+   "ge_0.4_frac": 0.0238,
+   "vocab_jaccard": 0.0927
+  },
+  {
+   "source": "EhrhartVolumeInequality",
+   "target": "SpherePacking",
+   "queries": 191,
+   "mean": 0.1912,
+   "ge_0.4_frac": 0.0209,
+   "vocab_jaccard": 0.2189
+  },
+  {
+   "source": "NonSoficGroup",
+   "target": "SpherePacking",
+   "queries": 191,
+   "mean": 0.1415,
+   "ge_0.4_frac": 0.0209,
+   "vocab_jaccard": 0.1161
+  },
+  {
+   "source": "EhrhartVolumeInequality",
+   "target": "QuantumParallelRepetition",
+   "queries": 110,
+   "mean": 0.1484,
+   "ge_0.4_frac": 0.0182,
+   "vocab_jaccard": 0.1675
+  },
+  {
+   "source": "CompactnessAndDegeneracy",
+   "target": "SpherePacking",
+   "queries": 191,
+   "mean": 0.0967,
+   "ge_0.4_frac": 0.0157,
+   "vocab_jaccard": 0.0927
+  },
+  {
+   "source": "Permanent",
+   "target": "ConnesRigidity",
+   "queries": 192,
+   "mean": 0.1764,
+   "ge_0.4_frac": 0.0156,
+   "vocab_jaccard": 0.1082
+  },
+  {
+   "source": "MetricCodes",
+   "target": "GapCVP",
+   "queries": 133,
+   "mean": 0.126,
+   "ge_0.4_frac": 0.015,
+   "vocab_jaccard": 0.1216
+  },
+  {
+   "source": "QuantumParallelRepetition",
+   "target": "GapCVP",
+   "queries": 133,
+   "mean": 0.1108,
+   "ge_0.4_frac": 0.015,
+   "vocab_jaccard": 0.1348
+  },
+  {
+   "source": "ConnesRigidity",
+   "target": "EhrhartVolumeInequality",
+   "queries": 73,
+   "mean": 0.165,
+   "ge_0.4_frac": 0.0137,
+   "vocab_jaccard": 0.1337
+  },
+  {
+   "source": "MetricCodes",
+   "target": "EhrhartVolumeInequality",
+   "queries": 73,
+   "mean": 0.1844,
+   "ge_0.4_frac": 0.0137,
+   "vocab_jaccard": 0.1365
+  },
+  {
+   "source": "NonSoficGroup",
+   "target": "EhrhartVolumeInequality",
+   "queries": 73,
+   "mean": 0.1567,
+   "ge_0.4_frac": 0.0137,
+   "vocab_jaccard": 0.1379
+  },
+  {
+   "source": "GapCVP",
+   "target": "MetricCodes",
+   "queries": 407,
+   "mean": 0.1151,
+   "ge_0.4_frac": 0.0123,
+   "vocab_jaccard": 0.1216
+  },
+  {
+   "source": "QuantumParallelRepetition",
+   "target": "SpherePacking",
+   "queries": 191,
+   "mean": 0.1426,
+   "ge_0.4_frac": 0.0105,
+   "vocab_jaccard": 0.1402
+  },
+  {
+   "source": "CompactnessAndDegeneracy",
+   "target": "ConnesRigidity",
+   "queries": 192,
+   "mean": 0.0857,
+   "ge_0.4_frac": 0.0104,
+   "vocab_jaccard": 0.082
+  },
+  {
+   "source": "EhrhartVolumeInequality",
+   "target": "ConnesRigidity",
+   "queries": 192,
+   "mean": 0.1302,
+   "ge_0.4_frac": 0.0104,
+   "vocab_jaccard": 0.1337
+  },
+  {
+   "source": "GapCVP",
+   "target": "QuantumParallelRepetition",
+   "queries": 110,
+   "mean": 0.1372,
+   "ge_0.4_frac": 0.0091,
+   "vocab_jaccard": 0.1348
+  },
+  {
+   "source": "SpherePacking",
+   "target": "QuantumParallelRepetition",
+   "queries": 110,
+   "mean": 0.1256,
+   "ge_0.4_frac": 0.0091,
+   "vocab_jaccard": 0.1402
+  },
+  {
+   "source": "SpherePacking",
+   "target": "NonSoficGroup",
+   "queries": 237,
+   "mean": 0.1359,
+   "ge_0.4_frac": 0.0084,
+   "vocab_jaccard": 0.1161
+  },
+  {
+   "source": "SpherePacking",
+   "target": "ConnesRigidity",
+   "queries": 192,
+   "mean": 0.126,
+   "ge_0.4_frac": 0.0052,
+   "vocab_jaccard": 0.1144
+  },
+  {
+   "source": "ConnesRigidity",
+   "target": "SpherePacking",
+   "queries": 191,
+   "mean": 0.1224,
+   "ge_0.4_frac": 0.0052,
+   "vocab_jaccard": 0.1144
+  },
+  {
+   "source": "MulticolorTriangleRamsey",
+   "target": "SpherePacking",
+   "queries": 191,
+   "mean": 0.0747,
+   "ge_0.4_frac": 0.0052,
+   "vocab_jaccard": 0.0545
+  },
+  {
+   "source": "EhrhartVolumeInequality",
+   "target": "MetricCodes",
+   "queries": 407,
+   "mean": 0.1319,
+   "ge_0.4_frac": 0.0049,
+   "vocab_jaccard": 0.1365
+  },
+  {
+   "source": "CompactnessAndDegeneracy",
+   "target": "NonSoficGroup",
+   "queries": 237,
+   "mean": 0.1563,
+   "ge_0.4_frac": 0.0042,
+   "vocab_jaccard": 0.1587
+  },
+  {
+   "source": "EhrhartVolumeInequality",
+   "target": "NonSoficGroup",
+   "queries": 237,
+   "mean": 0.1546,
+   "ge_0.4_frac": 0.0042,
+   "vocab_jaccard": 0.1379
+  },
+  {
+   "source": "CompactnessAndDegeneracy",
+   "target": "MetricCodes",
+   "queries": 407,
+   "mean": 0.11,
+   "ge_0.4_frac": 0.0025,
+   "vocab_jaccard": 0.1131
+  },
+  {
+   "source": "EhrhartVolumeInequality",
+   "target": "CompactnessAndDegeneracy",
+   "queries": 42,
+   "mean": 0.1084,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1056
+  },
+  {
+   "source": "GapCVP",
+   "target": "CompactnessAndDegeneracy",
+   "queries": 42,
+   "mean": 0.0798,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.113
+  },
+  {
+   "source": "MulticolorTriangleRamsey",
+   "target": "CompactnessAndDegeneracy",
+   "queries": 42,
+   "mean": 0.0708,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1726
+  },
+  {
+   "source": "Permanent",
+   "target": "CompactnessAndDegeneracy",
+   "queries": 42,
+   "mean": 0.1224,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1022
+  },
+  {
+   "source": "QuantumParallelRepetition",
+   "target": "CompactnessAndDegeneracy",
+   "queries": 42,
+   "mean": 0.1249,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1557
+  },
+  {
+   "source": "GapCVP",
+   "target": "ConnesRigidity",
+   "queries": 192,
+   "mean": 0.1184,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0993
+  },
+  {
+   "source": "MulticolorTriangleRamsey",
+   "target": "ConnesRigidity",
+   "queries": 192,
+   "mean": 0.0585,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.042
+  },
+  {
+   "source": "CompactnessAndDegeneracy",
+   "target": "EhrhartVolumeInequality",
+   "queries": 73,
+   "mean": 0.0856,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1056
+  },
+  {
+   "source": "GapCVP",
+   "target": "EhrhartVolumeInequality",
+   "queries": 73,
+   "mean": 0.0712,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0729
+  },
+  {
+   "source": "MulticolorTriangleRamsey",
+   "target": "EhrhartVolumeInequality",
+   "queries": 73,
+   "mean": 0.0626,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0539
+  },
+  {
+   "source": "Permanent",
+   "target": "EhrhartVolumeInequality",
+   "queries": 73,
+   "mean": 0.1279,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0788
+  },
+  {
+   "source": "CompactnessAndDegeneracy",
+   "target": "GapCVP",
+   "queries": 133,
+   "mean": 0.0484,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.113
+  },
+  {
+   "source": "ConnesRigidity",
+   "target": "GapCVP",
+   "queries": 133,
+   "mean": 0.087,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0993
+  },
+  {
+   "source": "EhrhartVolumeInequality",
+   "target": "GapCVP",
+   "queries": 133,
+   "mean": 0.0515,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0729
+  },
+  {
+   "source": "MulticolorTriangleRamsey",
+   "target": "GapCVP",
+   "queries": 133,
+   "mean": 0.0328,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0752
+  },
+  {
+   "source": "NonSoficGroup",
+   "target": "GapCVP",
+   "queries": 133,
+   "mean": 0.1102,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1192
+  },
+  {
+   "source": "Permanent",
+   "target": "GapCVP",
+   "queries": 133,
+   "mean": 0.1092,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1382
+  },
+  {
+   "source": "SpherePacking",
+   "target": "GapCVP",
+   "queries": 133,
+   "mean": 0.0505,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0769
+  },
+  {
+   "source": "MulticolorTriangleRamsey",
+   "target": "MetricCodes",
+   "queries": 407,
+   "mean": 0.0729,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0529
+  },
+  {
+   "source": "CompactnessAndDegeneracy",
+   "target": "MulticolorTriangleRamsey",
+   "queries": 9,
+   "mean": 0.1133,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1726
+  },
+  {
+   "source": "ConnesRigidity",
+   "target": "MulticolorTriangleRamsey",
+   "queries": 9,
+   "mean": 0.0986,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.042
+  },
+  {
+   "source": "EhrhartVolumeInequality",
+   "target": "MulticolorTriangleRamsey",
+   "queries": 9,
+   "mean": 0.1382,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0539
+  },
+  {
+   "source": "GapCVP",
+   "target": "MulticolorTriangleRamsey",
+   "queries": 9,
+   "mean": 0.0801,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0752
+  },
+  {
+   "source": "MetricCodes",
+   "target": "MulticolorTriangleRamsey",
+   "queries": 9,
+   "mean": 0.1673,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0529
+  },
+  {
+   "source": "NonSoficGroup",
+   "target": "MulticolorTriangleRamsey",
+   "queries": 9,
+   "mean": 0.1885,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0863
+  },
+  {
+   "source": "Permanent",
+   "target": "MulticolorTriangleRamsey",
+   "queries": 9,
+   "mean": 0.1157,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0508
+  },
+  {
+   "source": "QuantumParallelRepetition",
+   "target": "MulticolorTriangleRamsey",
+   "queries": 9,
+   "mean": 0.1097,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1082
+  },
+  {
+   "source": "GapCVP",
+   "target": "NonSoficGroup",
+   "queries": 237,
+   "mean": 0.1374,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1192
+  },
+  {
+   "source": "MulticolorTriangleRamsey",
+   "target": "NonSoficGroup",
+   "queries": 237,
+   "mean": 0.1031,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0863
+  },
+  {
+   "source": "CompactnessAndDegeneracy",
+   "target": "Permanent",
+   "queries": 131,
+   "mean": 0.1092,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1022
+  },
+  {
+   "source": "EhrhartVolumeInequality",
+   "target": "Permanent",
+   "queries": 131,
+   "mean": 0.1282,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0788
+  },
+  {
+   "source": "GapCVP",
+   "target": "Permanent",
+   "queries": 131,
+   "mean": 0.1385,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1382
+  },
+  {
+   "source": "MulticolorTriangleRamsey",
+   "target": "Permanent",
+   "queries": 131,
+   "mean": 0.0798,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0508
+  },
+  {
+   "source": "SpherePacking",
+   "target": "Permanent",
+   "queries": 131,
+   "mean": 0.1125,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0663
+  },
+  {
+   "source": "CompactnessAndDegeneracy",
+   "target": "QuantumParallelRepetition",
+   "queries": 110,
+   "mean": 0.1564,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1557
+  },
+  {
+   "source": "MulticolorTriangleRamsey",
+   "target": "QuantumParallelRepetition",
+   "queries": 110,
+   "mean": 0.074,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.1082
+  },
+  {
+   "source": "GapCVP",
+   "target": "SpherePacking",
+   "queries": 191,
+   "mean": 0.0768,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0769
+  },
+  {
+   "source": "Permanent",
+   "target": "SpherePacking",
+   "queries": 191,
+   "mean": 0.0854,
+   "ge_0.4_frac": 0.0,
+   "vocab_jaccard": 0.0663
+  }
+ ],
+ "within_development_baseline": {
+  "CompactnessAndDegeneracy": {
+   "mean": 0.4595,
+   "ge_0.4_frac": 0.4762
+  },
+  "ConnesRigidity": {
+   "mean": 0.6231,
+   "ge_0.4_frac": 0.7552
+  },
+  "EhrhartVolumeInequality": {
+   "mean": 0.5541,
+   "ge_0.4_frac": 0.6301
+  },
+  "GapCVP": {
+   "mean": 0.4885,
+   "ge_0.4_frac": 0.5489
+  },
+  "MetricCodes": {
+   "mean": 0.6747,
+   "ge_0.4_frac": 0.8231
+  },
+  "MulticolorTriangleRamsey": {
+   "mean": 0.4258,
+   "ge_0.4_frac": 0.4444
+  },
+  "NonSoficGroup": {
+   "mean": 0.6779,
+   "ge_0.4_frac": 0.8734
+  },
+  "Permanent": {
+   "mean": 0.6083,
+   "ge_0.4_frac": 0.7176
+  },
+  "QuantumParallelRepetition": {
+   "mean": 0.6203,
+   "ge_0.4_frac": 0.8091
+  },
+  "SpherePacking": {
+   "mean": 0.6408,
+   "ge_0.4_frac": 0.8115
+  }
+ },
+ "pearson_r_vocabJaccard_vs_transport": 0.4341,
+ "n_pairs": 90
+}

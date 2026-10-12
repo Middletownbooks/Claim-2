@@ -1,0 +1,485 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "boards": {
+  "flt": {
+   "files": 29511,
+   "proofs": 1118435,
+   "raw": {
+    "by_contra": 20558,
+    "absurd": 15980,
+    "exact": 672193,
+    "apply": 103768,
+    "refine": 250381,
+    "have": 1305402,
+    "obtain": 285612,
+    "rcases": 41462,
+    "rintro": 50914,
+    "intro": 272660,
+    "induction": 26488,
+    "simp": 363723,
+    "rw": 1230048,
+    "linarith": 23958,
+    "ring": 73401,
+    "norm_num": 18348,
+    "omega": 53825,
+    "constructor": 22527,
+    "convert": 4423,
+    "congr": 37877,
+    "ext": 169828,
+    "subst": 33974,
+    "by_cases": 35802,
+    "trans": 67509,
+    "fin_cases": 35410,
+    "nlinarith": 6894,
+    "suffices": 2238,
+    "calc": 29905,
+    "funext": 35951,
+    "positivity": 15070,
+    "unfold": 30464,
+    "cases": 4692,
+    "gcongr": 3395,
+    "field_simp": 11056,
+    "exists": 951,
+    "fun_prop": 3694,
+    "filter_upwards": 5577,
+    "push_neg": 1451,
+    "bound": 701,
+    "nth_rewrite": 144,
+    "interval_cases": 560,
+    "use": 78,
+    "specialize": 47,
+    "peel": 77,
+    "continuity": 13,
+    "contradiction": 11,
+    "measurability": 14
+   },
+   "per_1000_proofs": {
+    "by_contra": 18.4,
+    "absurd": 14.3,
+    "exact": 601.0,
+    "apply": 92.8,
+    "refine": 223.9,
+    "have": 1167.2,
+    "obtain": 255.4,
+    "rcases": 37.1,
+    "rintro": 45.5,
+    "intro": 243.8,
+    "induction": 23.7,
+    "simp": 325.2,
+    "rw": 1099.8,
+    "linarith": 21.4,
+    "ring": 65.6,
+    "norm_num": 16.4,
+    "omega": 48.1,
+    "constructor": 20.1,
+    "convert": 4.0,
+    "congr": 33.9,
+    "ext": 151.8,
+    "subst": 30.4,
+    "by_cases": 32.0,
+    "trans": 60.4,
+    "fin_cases": 31.7,
+    "nlinarith": 6.2,
+    "suffices": 2.0,
+    "calc": 26.7,
+    "funext": 32.1,
+    "positivity": 13.5,
+    "unfold": 27.2,
+    "cases": 4.2,
+    "gcongr": 3.0,
+    "field_simp": 9.9,
+    "exists": 0.9,
+    "fun_prop": 3.3,
+    "filter_upwards": 5.0,
+    "push_neg": 1.3,
+    "bound": 0.6,
+    "nth_rewrite": 0.1,
+    "interval_cases": 0.5,
+    "use": 0.1,
+    "specialize": 0.0,
+    "peel": 0.1,
+    "continuity": 0.0,
+    "contradiction": 0.0,
+    "measurability": 0.0
+   }
+  },
+  "ns": {
+   "files": 2482,
+   "proofs": 47317,
+   "raw": {
+    "exact": 23803,
+    "apply": 10024,
+    "refine": 3181,
+    "have": 49087,
+    "obtain": 3584,
+    "intro": 12299,
+    "calc": 2225,
+    "simp": 14041,
+    "rw": 22482,
+    "linarith": 5208,
+    "nlinarith": 2496,
+    "positivity": 3560,
+    "field_simp": 1122,
+    "ring": 5192,
+    "norm_num": 4574,
+    "constructor": 1120,
+    "convert": 840,
+    "congr": 1388,
+    "ext": 2083,
+    "unfold": 4289,
+    "fin_cases": 751,
+    "bound": 1672,
+    "filter_upwards": 2203,
+    "trans": 9345,
+    "use": 191,
+    "funext": 2505,
+    "rintro": 204,
+    "induction": 511,
+    "by_contra": 549,
+    "rcases": 392,
+    "by_cases": 1472,
+    "cases": 571,
+    "omega": 2665,
+    "subst": 418,
+    "fun_prop": 158,
+    "continuity": 201,
+    "measurability": 13,
+    "gcongr": 337,
+    "suffices": 39,
+    "exists": 30,
+    "contradiction": 4,
+    "interval_cases": 1,
+    "specialize": 1
+   },
+   "per_1000_proofs": {
+    "exact": 503.1,
+    "apply": 211.8,
+    "refine": 67.2,
+    "have": 1037.4,
+    "obtain": 75.7,
+    "intro": 259.9,
+    "calc": 47.0,
+    "simp": 296.7,
+    "rw": 475.1,
+    "linarith": 110.1,
+    "nlinarith": 52.8,
+    "positivity": 75.2,
+    "field_simp": 23.7,
+    "ring": 109.7,
+    "norm_num": 96.7,
+    "constructor": 23.7,
+    "convert": 17.8,
+    "congr": 29.3,
+    "ext": 44.0,
+    "unfold": 90.6,
+    "fin_cases": 15.9,
+    "bound": 35.3,
+    "filter_upwards": 46.6,
+    "trans": 197.5,
+    "use": 4.0,
+    "funext": 52.9,
+    "rintro": 4.3,
+    "induction": 10.8,
+    "by_contra": 11.6,
+    "rcases": 8.3,
+    "by_cases": 31.1,
+    "cases": 12.1,
+    "omega": 56.3,
+    "subst": 8.8,
+    "fun_prop": 3.3,
+    "continuity": 4.2,
+    "measurability": 0.3,
+    "gcongr": 7.1,
+    "suffices": 0.8,
+    "exists": 0.6,
+    "contradiction": 0.1,
+    "interval_cases": 0.0,
+    "specialize": 0.0
+   }
+  }
+ },
+ "ratio_ns_over_flt": [
+  {
+   "tactic": "bound",
+   "flt_per_1000": 0.6,
+   "ns_per_1000": 35.3,
+   "ratio": 22.69
+  },
+  {
+   "tactic": "filter_upwards",
+   "flt_per_1000": 5.0,
+   "ns_per_1000": 46.6,
+   "ratio": 7.93
+  },
+  {
+   "tactic": "nlinarith",
+   "flt_per_1000": 6.2,
+   "ns_per_1000": 52.8,
+   "ratio": 7.47
+  },
+  {
+   "tactic": "norm_num",
+   "flt_per_1000": 16.4,
+   "ns_per_1000": 96.7,
+   "ratio": 5.61
+  },
+  {
+   "tactic": "positivity",
+   "flt_per_1000": 13.5,
+   "ns_per_1000": 75.2,
+   "ratio": 5.26
+  },
+  {
+   "tactic": "continuity",
+   "flt_per_1000": 0.0,
+   "ns_per_1000": 4.2,
+   "ratio": 5.2
+  },
+  {
+   "tactic": "linarith",
+   "flt_per_1000": 21.4,
+   "ns_per_1000": 110.1,
+   "ratio": 4.96
+  },
+  {
+   "tactic": "use",
+   "flt_per_1000": 0.1,
+   "ns_per_1000": 4.0,
+   "ratio": 4.55
+  },
+  {
+   "tactic": "convert",
+   "flt_per_1000": 4.0,
+   "ns_per_1000": 17.8,
+   "ratio": 3.76
+  },
+  {
+   "tactic": "unfold",
+   "flt_per_1000": 27.2,
+   "ns_per_1000": 90.6,
+   "ratio": 3.25
+  },
+  {
+   "tactic": "trans",
+   "flt_per_1000": 60.4,
+   "ns_per_1000": 197.5,
+   "ratio": 3.23
+  },
+  {
+   "tactic": "cases",
+   "flt_per_1000": 4.2,
+   "ns_per_1000": 12.1,
+   "ratio": 2.52
+  },
+  {
+   "tactic": "apply",
+   "flt_per_1000": 92.8,
+   "ns_per_1000": 211.8,
+   "ratio": 2.27
+  },
+  {
+   "tactic": "field_simp",
+   "flt_per_1000": 9.9,
+   "ns_per_1000": 23.7,
+   "ratio": 2.27
+  },
+  {
+   "tactic": "gcongr",
+   "flt_per_1000": 3.0,
+   "ns_per_1000": 7.1,
+   "ratio": 2.02
+  },
+  {
+   "tactic": "gcongr",
+   "flt_per_1000": 3.0,
+   "ns_per_1000": 7.1,
+   "ratio": 2.02
+  },
+  {
+   "tactic": "calc",
+   "flt_per_1000": 26.7,
+   "ns_per_1000": 47.0,
+   "ratio": 1.73
+  },
+  {
+   "tactic": "ring",
+   "flt_per_1000": 65.6,
+   "ns_per_1000": 109.7,
+   "ratio": 1.66
+  },
+  {
+   "tactic": "funext",
+   "flt_per_1000": 32.1,
+   "ns_per_1000": 52.9,
+   "ratio": 1.63
+  },
+  {
+   "tactic": "measurability",
+   "flt_per_1000": 0.0,
+   "ns_per_1000": 0.3,
+   "ratio": 1.3
+  },
+  {
+   "tactic": "constructor",
+   "flt_per_1000": 20.1,
+   "ns_per_1000": 23.7,
+   "ratio": 1.17
+  },
+  {
+   "tactic": "omega",
+   "flt_per_1000": 48.1,
+   "ns_per_1000": 56.3,
+   "ratio": 1.17
+  },
+  {
+   "tactic": "contradiction",
+   "flt_per_1000": 0.0,
+   "ns_per_1000": 0.1,
+   "ratio": 1.1
+  },
+  {
+   "tactic": "intro",
+   "flt_per_1000": 243.8,
+   "ns_per_1000": 259.9,
+   "ratio": 1.07
+  },
+  {
+   "tactic": "fun_prop",
+   "flt_per_1000": 3.3,
+   "ns_per_1000": 3.3,
+   "ratio": 1.0
+  },
+  {
+   "tactic": "by_cases",
+   "flt_per_1000": 32.0,
+   "ns_per_1000": 31.1,
+   "ratio": 0.97
+  },
+  {
+   "tactic": "simp",
+   "flt_per_1000": 325.2,
+   "ns_per_1000": 296.7,
+   "ratio": 0.91
+  },
+  {
+   "tactic": "peel",
+   "flt_per_1000": 0.1,
+   "ns_per_1000": 0,
+   "ratio": 0.91
+  },
+  {
+   "tactic": "nth_rewrite",
+   "flt_per_1000": 0.1,
+   "ns_per_1000": 0,
+   "ratio": 0.91
+  },
+  {
+   "tactic": "have",
+   "flt_per_1000": 1167.2,
+   "ns_per_1000": 1037.4,
+   "ratio": 0.89
+  },
+  {
+   "tactic": "congr",
+   "flt_per_1000": 33.9,
+   "ns_per_1000": 29.3,
+   "ratio": 0.87
+  },
+  {
+   "tactic": "exists",
+   "flt_per_1000": 0.9,
+   "ns_per_1000": 0.6,
+   "ratio": 0.84
+  },
+  {
+   "tactic": "exact",
+   "flt_per_1000": 601.0,
+   "ns_per_1000": 503.1,
+   "ratio": 0.84
+  },
+  {
+   "tactic": "interval_cases",
+   "flt_per_1000": 0.5,
+   "ns_per_1000": 0.0,
+   "ratio": 0.67
+  },
+  {
+   "tactic": "by_contra",
+   "flt_per_1000": 18.4,
+   "ns_per_1000": 11.6,
+   "ratio": 0.65
+  },
+  {
+   "tactic": "suffices",
+   "flt_per_1000": 2.0,
+   "ns_per_1000": 0.8,
+   "ratio": 0.6
+  },
+  {
+   "tactic": "fin_cases",
+   "flt_per_1000": 31.7,
+   "ns_per_1000": 15.9,
+   "ratio": 0.52
+  },
+  {
+   "tactic": "induction",
+   "flt_per_1000": 23.7,
+   "ns_per_1000": 10.8,
+   "ratio": 0.48
+  },
+  {
+   "tactic": "push_neg",
+   "flt_per_1000": 1.3,
+   "ns_per_1000": 0,
+   "ratio": 0.43
+  },
+  {
+   "tactic": "rw",
+   "flt_per_1000": 1099.8,
+   "ns_per_1000": 475.1,
+   "ratio": 0.43
+  },
+  {
+   "tactic": "subst",
+   "flt_per_1000": 30.4,
+   "ns_per_1000": 8.8,
+   "ratio": 0.31
+  },
+  {
+   "tactic": "refine",
+   "flt_per_1000": 223.9,
+   "ns_per_1000": 67.2,
+   "ratio": 0.3
+  },
+  {
+   "tactic": "obtain",
+   "flt_per_1000": 255.4,
+   "ns_per_1000": 75.7,
+   "ratio": 0.3
+  },
+  {
+   "tactic": "ext",
+   "flt_per_1000": 151.8,
+   "ns_per_1000": 44.0,
+   "ratio": 0.29
+  },
+  {
+   "tactic": "rcases",
+   "flt_per_1000": 37.1,
+   "ns_per_1000": 8.3,
+   "ratio": 0.24
+  },
+  {
+   "tactic": "rintro",
+   "flt_per_1000": 45.5,
+   "ns_per_1000": 4.3,
+   "ratio": 0.11
+  },
+  {
+   "tactic": "absurd",
+   "flt_per_1000": 14.3,
+   "ns_per_1000": 0,
+   "ratio": 0.07
+  }
+ ]
+}

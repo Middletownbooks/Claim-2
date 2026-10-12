@@ -1,0 +1,126 @@
+
+============================================================================
+1. What the audit could reach
+============================================================================
+                                       checks   core claims   core verified
+  N  Nevanlinna half-plane (arm AQ)     22/22             4               0
+  P  Allikvere preprint (arm AS.3)      20/20             5               5
+  L  LaTeX to the author (arm AS.1)     25/25             4               4
+
+  N: load-bearing fraction verified = 0%   (one long arm; core never reached)
+  P: load-bearing fraction verified = 100%   (one sitting, end to end)
+  L: load-bearing fraction verified = 100%   (one sitting, end to end)
+  PASS  the spread in what an auditor could reach is total, not marginal   [0% vs 100%]
+  PASS  the passing check counts say nothing about it   [22/22 on scaffolding while the core stayed untouched]
+
+============================================================================
+2. Process features against outcome
+============================================================================
+  feature                                                 N    P    L
+  --------------------------------------------------------------------
+  deliverable is a finite object                          .    Y    Y
+  separately written checker                              .    Y    Y
+  control returning a known negative                      .    Y    Y
+  hand-checkable proof independent of                     .    Y    Y
+       the machine work
+  reproducibility package shipped                         .    Y    .
+  machine-checked proof STEPS                             .    Y    .
+  independent third party audited                         .    .    Y
+       the encoding
+  literature placement requested                          Y    Y    .
+  confidence self-assessment requested                    .    .    .
+  budget / stopping rule                                  .    .    .
+  formalization                                           .    .    .
+  negative space requested                                .    .    .
+       ('which steps are least secure?')
+
+  features present in BOTH fully-verified artifacts and absent from the
+  one that was not: 4
+    - deliverable is a finite object
+    - separately written checker
+    - control returning a known negative
+    - hand-checkable proof independent of
+  PASS  four process features separate the two outcomes cleanly
+
+  features absent from ALL THREE: 4
+    - confidence self-assessment requested
+    - budget / stopping rule
+    - formalization
+    - negative space requested
+  PASS  the same four gaps found in the Nevanlinna prompts are universal here   [confidence, budget, formalization, negative space]
+
+============================================================================
+3. The confound, stated before the conclusion
+============================================================================
+  A finite combinatorial object is inherently more checkable than a
+  complex-analysis construction. Cusp reflection is not a matrix. So part
+  of the spread in section 1 is SUBJECT MATTER, not process, and nothing
+  in a three-case comparison separates those two.
+
+  What survives the confound is narrower and is the actual finding:
+  ONE of the four separating features is domain-independent.
+  PASS  the confound is stated rather than argued around
+
+============================================================================
+4. The control is the feature that transfers
+============================================================================
+  A CONTROL -- running the same apparatus on a case whose answer is already
+  known, and checking it returns that answer -- requires only a search
+  procedure. It is available in every domain, including Nevanlinna's.
+
+  L: 'the same encoder returns UNSAT at n = 3 with a machine-checked
+     proof, agreeing with the verification reported in the paper.'
+     -> the instrument is tested against Chow's own published result.
+  P: 'two separately written programs enumerated all 2304 ordered
+     partitions'; lifts re-verified for all 10 and all 20 attachment
+     triples 'in agreement with the lemma'.
+     -> the instrument is tested against its own theorem.
+  N: no control anywhere in 7h14m. Nothing checked whether the search
+     apparatus would correctly report failure on a case where no
+     counterexample exists.
+
+  This matters most for N, not least, because its prompt FORBIDS the
+  negative answer: 'no counterexample was found' is a banned output. A
+  search that cannot report failure and is never tested on a case that
+  should fail has no calibration at all. The one process feature that
+  would have supplied it costs a single instruction.
+  PASS  the control is present in both verified artifacts and absent from the third
+  PASS  the control is domain-independent, unlike the other three separators
+
+============================================================================
+5. The specification this yields
+============================================================================
+  1. Deliver a finite object wherever the problem admits one.
+       A certificate an auditor can rebuild beats an argument they must trust.
+  2. Write the checker separately from the finder.
+       Both verified artifacts did this; one used two independent enumerators.
+  3. Run a control on a case with a known answer, and report it.
+       The single highest-value instruction here, and domain-independent. Its
+       absence is most dangerous when the prompt bans the negative answer.
+  4. Produce a proof that stands without the machine work.
+       'The argument in Section 4 is independent of all of this and can be
+       checked by hand.' That sentence is why arm AS closed in one sitting.
+  5. Ask which steps are least secure.
+       Absent from all three. In arm AQ it would have flagged cusp reflection,
+       which is exactly where the audit stalled and where an error would hide.
+  6. Ask for literature placement, and act on the answer.
+       N and P did; L did not, and its write-up omits Harvey-Kiraly-Lau 2011,
+       leaving a reader unable to tell the result sits in the open range.
+  PASS  every rule is derived from an observed difference, not invented
+
+============================================================================
+6. What this predicts, and how it would be falsified
+============================================================================
+  PREDICTION. An artifact carrying features 1-4 will be verifiable by an
+  outside auditor at roughly the cost of reading it; one lacking them will
+  absorb an arm and leave the core untouched, whatever its check count.
+
+  FALSIFIED BY: an artifact with all four features whose core an auditor
+  still cannot reach, or one with none of them that verifies end to end.
+  Both are findable in a corpus of process artifacts. This programme has
+  three. That is a taxonomy, not a rate, and it is stated as one.
+  PASS  the prediction is falsifiable and the sample size is stated as n = 3
+
+============================================================================
+RESULT   9/9 checks passed   (n = 3; taxonomy, not rate)
+============================================================================

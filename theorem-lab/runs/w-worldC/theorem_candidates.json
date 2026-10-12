@@ -1,0 +1,7 @@
+{
+  "candidates": [],
+  "external_oracle": "python3 audit/worlds.py --world C",
+  "label": "CONJECTURED",
+  "oracle_world": "real",
+  "warning": "No candidate in this file has a supplied proof."
+}

@@ -1,0 +1,8 @@
+id,source,target,evidence_level,measurable_gain,confidence
+"B1_mathlib_analysis_substrate","FLT (archimedean analysis in LanglandsTunnell, AutomorphicForm, AlgebraicCurve, MeasureTheory)","NS (Analysis.Calculus / Analysis.Normed regions)","1 ACTUAL_SHARED_LEAN_DEPENDENCY","NONE","high"
+"B2_flt_analytic_contact_surface","FLT LocalParametrix, LanglandsTunnell CubicInduction / AdelicEpstein, AutomorphicForm ComplexIwasawa, AlgebraicCurve CellDissection","NS regularity and estimate regions","2 ACTUAL_SHARED_DEFINITION_OR_ABSTRACTION","NONE MEASURED","high for the existence of the surface, high for the absence of gain"
+"B3_polynomial_exp_integrability","FLT LanglandsTunnell.integrableOn_and_integral_Ioi_exp_neg_pi_mu","NS integrableOn_shift_exp, polynomial_exp_integrable, const_polynomial_exp_integrable","3 ACTUAL_SHARED_PROOF_INFRASTRUCTURE","3 NS lemmas, ~0","high"
+"B4_nonexistence_architecture","FLT: no counterexample to a^n+b^n=c^n","NS: no global smooth solution with bounded energy","5 MATHEMATICAL_ANALOGY","NONE","high"
+"B5_local_to_global","FLT (adelic / local-global machinery)","NS","4 SHARED_PROOF_ARCHITECTURE -- REFUTED","NONE","high"
+"B6_generic_proof_engineering","either board","the other","4 SHARED_PROOF_ARCHITECTURE","NONE ATTRIBUTABLE","high"
+"B7_strategy_transport","either board's construction trajectory","the other","NOT TESTABLE ON THESE ARTIFACTS","NOT MEASURABLE","high that the data is absent"

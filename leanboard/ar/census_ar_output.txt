@@ -1,0 +1,74 @@
+
+======================================================================
+1. Throughput: how dense is the stream of claims?
+======================================================================
+  entries with a solveDate : 664   (day-precision 647, month-only 17 dropped)
+  window                   : 2025-07-20 .. 2026-09-03  (410 days)
+  mean rate                : 1.578 claims/day
+  distinct active days     : 184
+  busiest single day       : 25 claims
+  PASS  the stream is dense enough that same-day events are routine   [max 25/day]
+  unordered pairs of claims within 3 days of each other: 12,231
+  all unordered pairs                                    : 208,981
+
+======================================================================
+2. The list effect is directly visible in the corpus
+======================================================================
+  entries whose problem was posed by Erdos : 109  (16.4%)
+  entries sourced from erdosproblems.com   : 124  (18.7%)
+  distinct named sources                   : 398
+  PASS  a single curated list accounts for a double-digit share of all claims   [16.4% posed by Erdos]
+
+  This is mechanism M2 measured, not inferred: one eighty-year-old problem
+  list supplies more than a tenth of everything the corpus records.
+
+======================================================================
+3. Birthday base rate within the Erdos sub-list alone
+======================================================================
+  list size M =   600 : expected same-problem pairs =  9.81 overall,  0.57 within 3 days  (uniform draws)
+  list size M =  1100 : expected same-problem pairs =  5.35 overall,  0.31 within 3 days  (uniform draws)
+  list size M =  1500 : expected same-problem pairs =  3.92 overall,  0.23 within 3 days  (uniform draws)
+
+  Uniform draws are the CONSERVATIVE case. Attention is fame-weighted, so the
+  effective list is far shorter than its nominal length, and Sum(w_i^2) -- the
+  true collision probability per pair -- is correspondingly larger.
+  PASS  even uniform draws predict same-problem collisions in this corpus   [5.35 expected on a 1100-problem list]
+
+======================================================================
+4. Fame-weighting: do claims concentrate on the attractive problems?
+======================================================================
+  significance: n=664  mean=16.9  median=15  max=68
+  mean significance on days with >=3 claims :  17.7  (n=507)
+  mean significance on days with  1 claim   :  14.9  (n=68)
+  PASS  clustered days are not the high-significance days   [bursts are throughput, not fame]
+
+======================================================================
+5. The three recorded instances, re-read
+======================================================================
+  claims dated 2026-09-03            : 5
+  of which about prime gaps          : 3
+      sig  62  Prime gaps at most 212                        Axiom Math
+      sig  60  Maximal prime-gap lower bound                 OpenAI
+      sig  62  Prime Gaps at Most 186                        OpenAI
+  PASS  the H1 'pair' is not a pair   [3 prime-gap claims that day]
+  PASS  they are different objects, not one result claimed twice
+
+  CDC: Kintali's Sec.11 cites OpenAI's proof by name. Transmission is
+  established from the artifact's own text -- mechanism M1, not a coincidence
+  needing explanation.
+
+======================================================================
+6. Discriminator the corpus CANNOT settle
+======================================================================
+  Distinguishing M1 (seeding) from M2 (shared list) needs, per pair:
+    - whether the two artifacts are the same mathematical object;
+    - whether the later one cites or shows knowledge of the earlier;
+    - the gap between the earlier RELEASE and the later CLAIM, not the arXiv dates.
+  CDC answers all three from its own text (M1). The prime-gap day answers the
+  first (different objects -> M2 or plain throughput). Nevanlinna needs
+  He-Zhang arXiv:2608.24829, which this session cannot fetch.
+  PASS  no mechanism claim is made for the pair that lacks its evidence   [Nevanlinna left undetermined]
+
+======================================================================
+RESULT   7/7 checks passed
+======================================================================

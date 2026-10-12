@@ -1,0 +1,352 @@
+{
+ "artifact_hashes": {
+  "PREREG.md": "1671b4577d902d5a801a86acadecb6a303316aa3e0dc5d16cd99abc3fce7ac6c",
+  "resolve_ties.json": "6ffb4266720d5c3e2ba7e0016962b58412441e26df523d01889fb05a7216b63b",
+  "result.json": "d6493f29de5790e50b14ce4f26853ded57294757958faa642e11b4fd93865986",
+  "result_v2.json": "6e25587d4e5b5ac055bf40513ed8e0c9d4094e1695dde0cc83f8643256b5f25a"
+ },
+ "certification_rule": "zero error on the Round-1 training atoms AND exact reproduction of the Round-1 holdout atoms",
+ "certified_terms": [
+  {
+   "generalizes": true,
+   "holdout_pred": [
+    1,
+    5,
+    1,
+    1,
+    1,
+    1
+   ],
+   "holdout_true": [
+    1,
+    5,
+    1,
+    1,
+    1,
+    1
+   ],
+   "reserve_pred": [
+    2,
+    6,
+    4,
+    2,
+    3,
+    7,
+    2,
+    5
+   ],
+   "reserve_true": [
+    2,
+    6,
+    4,
+    2,
+    3,
+    7,
+    2,
+    5
+   ],
+   "size": 4,
+   "target": "nu",
+   "term": "count(k: (k // <count(k: (n % k))>))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [],
+   "holdout_pred": [],
+   "holdout_true": [],
+   "size": 4,
+   "target": "lambda:n mod 2 = 0",
+   "term": "count(k: (n - k))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [],
+   "holdout_pred": [],
+   "holdout_true": [],
+   "size": 4,
+   "target": "lambda:n mod 2 = 0",
+   "term": "count(k: (k // n))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [],
+   "holdout_pred": [],
+   "holdout_true": [],
+   "size": 4,
+   "target": "lambda:n mod 2 = 0",
+   "term": "count(k: (k % 2))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [],
+   "holdout_pred": [],
+   "holdout_true": [],
+   "size": 4,
+   "target": "lambda:n mod 2 = 0",
+   "term": "count(k: (k % <least(k: (n % k))>))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [],
+   "holdout_pred": [],
+   "holdout_true": [],
+   "size": 4,
+   "target": "lambda:n mod 2 = 0",
+   "term": "count(k: (k // <least(k: (n % k))>))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [],
+   "holdout_pred": [],
+   "holdout_true": [],
+   "size": 4,
+   "target": "lambda:n mod 2 = 0",
+   "term": "count(k: (k % <count(k: (n % k))>))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [],
+   "holdout_pred": [],
+   "holdout_true": [],
+   "size": 4,
+   "target": "lambda:n mod 2 = 0",
+   "term": "count(k: (k // <count(k: (n % k))>))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [],
+   "holdout_pred": [],
+   "holdout_true": [],
+   "size": 4,
+   "target": "lambda:n mod 2 = 0",
+   "term": "count(k: (k % <least(k: (n - 2))>))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [],
+   "holdout_pred": [],
+   "holdout_true": [],
+   "size": 2,
+   "target": "lambda:n mod 4 = 0",
+   "term": "least(k: 0)"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [
+    32
+   ],
+   "holdout_pred": [
+    8
+   ],
+   "holdout_true": [
+    8
+   ],
+   "size": 4,
+   "target": "lambda:n mod 8 = 0",
+   "term": "count(k: (k % 4))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [
+    32
+   ],
+   "holdout_pred": [
+    8
+   ],
+   "holdout_true": [
+    8
+   ],
+   "size": 4,
+   "target": "lambda:n mod 8 = 0",
+   "term": "count(k: (k % <count(k: (k - 4))>))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [
+    32
+   ],
+   "holdout_pred": [
+    8
+   ],
+   "holdout_true": [
+    8
+   ],
+   "size": 4,
+   "target": "lambda:n mod 8 = 0",
+   "term": "count(k: (k % <least(k: (k % 4))>))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [
+    32
+   ],
+   "holdout_pred": [
+    8
+   ],
+   "holdout_true": [
+    8
+   ],
+   "size": 4,
+   "target": "lambda:n mod 8 = 0",
+   "term": "least(k: (k % <count(k: (k % 4))>))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [
+    31,
+    37,
+    41,
+    43,
+    47
+   ],
+   "holdout_pred": [
+    30,
+    36,
+    40,
+    42,
+    46
+   ],
+   "holdout_true": [
+    30,
+    36,
+    40,
+    42,
+    46
+   ],
+   "size": 6,
+   "target": "lambda:otherwise",
+   "term": "least(k: (n % (n - k)))"
+  },
+  {
+   "generalizes": true,
+   "holdout_objects": [
+    31,
+    37,
+    41,
+    43,
+    47
+   ],
+   "holdout_pred": [
+    30,
+    36,
+    40,
+    42,
+    46
+   ],
+   "holdout_true": [
+    30,
+    36,
+    40,
+    42,
+    46
+   ],
+   "size": 6,
+   "target": "lambda:otherwise",
+   "term": "count(k: (n // (k * <least(k: (n % k))>)))"
+  }
+ ],
+ "code_hashes": {
+  "language.py": "9864344ee19f2906f76b6023ff6affe975eb2892c3d2ef57cd6bf9b651752eb4",
+  "resolve_ties.py": "ca30173de79081d012229b95b4e617063fa381bb2fa3f71b3f7df4a08051978c",
+  "run.py": "14ce137ef4f80ddf31e7df88a3d7088726168a04e190e9d358b9172441ac98b1",
+  "run2.py": "b854455778d51bedad101d43608f4c211e8408efeff37b903fb7e742f7c672fe",
+  "synth.py": "27ac0e2869ecfeb65a9f438c56b516355ddb5f0041721a94033b91748a291828",
+  "synth2.py": "68be8ddfe4517d67c4e0560ddae0b6763bce915b4fcd671163c51d46bbcefcff"
+ },
+ "cost_model": "a formed term counts as size 1 (the Report M finding)",
+ "formed_terms_total": 5329,
+ "label": "FROZEN",
+ "objects": {
+  "holdout_atoms": [
+   31,
+   32,
+   37,
+   41,
+   43,
+   47
+  ],
+  "reserve_atoms": [
+   49,
+   64,
+   81,
+   121,
+   125,
+   128,
+   169,
+   243
+  ],
+  "train_atoms": [
+   2,
+   3,
+   4,
+   5,
+   7,
+   8,
+   9,
+   11,
+   13,
+   16,
+   17,
+   19,
+   23,
+   25,
+   27,
+   29
+  ]
+ },
+ "primitive_vocabulary": {
+  "NOT_given": [
+   "spf",
+   "phi",
+   "tau",
+   "nu",
+   "exponent",
+   "primality",
+   "factorisation"
+  ],
+  "binops": [
+   "add",
+   "sub",
+   "mul",
+   "div",
+   "mod",
+   "gcd",
+   "min",
+   "max",
+   "pow"
+  ],
+  "constants": [
+   0,
+   1,
+   2,
+   4
+  ],
+  "quantifiers": {
+   "count": "how many k in [1..n] satisfy body(n,k) = 0",
+   "least": "least k in [2..n] with body(n,k) = 0, else 0"
+  },
+  "variables": [
+   "n",
+   "k"
+  ]
+ },
+ "promotion_rule_for_round_2": "promote every certified term, plus every formed term appearing as a NAMED UNIT inside a certified term. Mechanical, applied before any Round-2 result is seen; no hand selection.",
+ "randomness": "none; the search is deterministic and consumes no RNG",
+ "reproduction_check": {
+  "differences": [
+   "/nu/search_seconds: 1.4 -> 1.3 (wall clock)"
+  ],
+  "method": "re-ran run2.py from committed code, diffed every field",
+  "verdict": "EXACTLY RECOVERABLE"
+ },
+ "round": 1,
+ "search_limits": {
+  "beam": 1200,
+  "dedup": "by value vector on the training objects; bodies on an (n,k) grid",
+  "outer_max_size": 5,
+  "stage1_body_size": 3,
+  "stage2_body_size": 5,
+  "unit_cap": 500
+ },
+ "source_report": "theorem-lab/termform/REPORT_M.md"
+}

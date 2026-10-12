@@ -1,0 +1,70 @@
+
+==========================================================================
+1. Theorem 1.2 -- H = K_5 with edge 34 tripled
+==========================================================================
+  PASS  H has 12 edges on 5 vertices
+  PASS  at rank 4 parallel edges are unavoidable for a graphic instance   [12 elements > 10 possible simple edges on 5 vertices]
+  spanning trees of H (= bases of M(H)) : 225
+  cross-check: K_5 has 125 spanning trees, 50 contain edge 34;
+               tripling gives 50*3 + 75 = 225
+  PASS  Cayley: K_5 has 5^3 = 125 spanning trees
+  PASS  basis count is consistent with tripling edge 34   [225]
+  PASS  I_1 and I_2 are forests (independent)
+  PASS  I_1 and I_2 are disjoint
+  PASS  the stated B_1, B_2, B_3 are spanning trees
+  PASS  they partition E(H)   [hypotheses of C(3) hold]
+
+==========================================================================
+2. Theorem 2.2 -- exhaustive: no rainbow partition into three trees
+==========================================================================
+  ordered partitions of E(H) into three spanning trees : 2304
+  of those, making BOTH I_1 and I_2 rainbow            : 0
+  PASS  the preprint's count of 2304 ordered partitions is right   [got 2304]
+  PASS  NO partition makes both rows rainbow -- Theorem 1.2 holds
+
+==========================================================================
+3. The parity proof of Theorem 2.2, step by step
+==========================================================================
+  PASS  Step 2: R = {03,04,12} is the remainder E(H) - I_1 - I_2 - {34 copies}
+  PASS  Step 4: each of I_1, I_2, R meets the triangle {01,02,12} exactly once   [01 in I_1, 02 in I_2, 12 in R]
+  admissible F_j (one from each of I_1, I_2, R; forest; separating 3 from 4)
+  with an ODD number of triangle edges : 0
+  PASS  Step 4: every admissible F_j meets the triangle an EVEN number of times   [so the three F_j contribute an even total]
+  PASS  Step 5: but the three F_j together cover all of Delta, total 3 -- odd   [contradiction; the proof closes]
+
+==========================================================================
+4. Proposition 2.3 sanity: one nonempty row never obstructs
+==========================================================================
+  single-row instances tested on H : 7, all solvable : True
+  PASS  every single-row instance tested is solvable, per Proposition 2.3   [7/7]
+
+==========================================================================
+5. THE SAME-OBJECT TEST: preprint vs the LaTeX sent to the author
+==========================================================================
+  bases, LaTeX (F_3 matroid)  : 240
+  bases, preprint (graphic)   : 225
+  PASS  the two matroids are NOT isomorphic -- different basis counts   [240 vs 225]
+  circuits of the LaTeX matroid (size <= 5) : 103
+  symmetric difference of circuits [0, 2, 6] and [0, 2, 5, 11]
+  is [5, 6, 11], which is NOT a disjoint union of circuits
+  PASS  the LaTeX matroid is NOT binary, hence NOT graphic   [non-binary -> different matroid class entirely]
+
+  row profile, LaTeX   : [3, 2, 3, 3]  (covers 11 of 12 elements)
+  row profile, preprint: [3, 3, 0, 0]  (covers 6 of 12; two EMPTY rows)
+  PASS  the two instances have different row structure
+  PASS  neither instance is saturated (all |I_i| = 3)   [so neither settles the saturated rank-4 case the preprint leaves open]
+
+  SHARED: rank 4, 12 elements, a parallel class of size 3, and a PARITY
+  obstruction as the impossibility proof.
+  DIFFERENT: the matroid, the basis count, the row profile, and the
+  combinatorial object the parity runs on (a triangle in the graph vs a
+  perfect matching between two rows).
+
+  VERDICT: DIFFERENT OBJECT, SAME ROUTE. This is the third category
+  predicted in ar/CONCURRENCY_CORRECTION.md for M4 (shared retrieval),
+  distinct from M1 (same object, same route) and M2 (different, different).
+  PASS  the M4 signature predicted before these artifacts arrived is what is here
+
+==========================================================================
+RESULT   20/20 checks passed
+==========================================================================

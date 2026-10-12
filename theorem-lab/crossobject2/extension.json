@@ -1,0 +1,74 @@
+{
+ "+ exponent of n": {
+  "base_rule": [
+   {
+    "cond": "n mod 8 = 0",
+    "value": "exp_spf(n)"
+   },
+   {
+    "cond": "n mod 4 = 0",
+    "value": "n-2"
+   },
+   {
+    "cond": "n mod 2 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "otherwise",
+    "value": "exp_spf(n)"
+   }
+  ],
+  "end_to_end_accuracy": 1.0,
+  "held_out_invariants_exact": "18/18",
+  "held_out_prime_powers_exact": "6/6",
+  "training_errors_on_atoms": 0
+ },
+ "only exponent of n": {
+  "base_rule": [
+   {
+    "cond": "n mod 8 = 0",
+    "value": "exp_spf(n)"
+   },
+   {
+    "cond": "n mod 4 = 0",
+    "value": "exp_spf(n)"
+   },
+   {
+    "cond": "n mod 2 = 0",
+    "value": "exp_spf(n)"
+   },
+   {
+    "cond": "otherwise",
+    "value": "exp_spf(n)"
+   }
+  ],
+  "end_to_end_accuracy": 1.0,
+  "held_out_invariants_exact": "18/18",
+  "held_out_prime_powers_exact": "6/6",
+  "training_errors_on_atoms": 0
+ },
+ "transferred grammar (as in task 2)": {
+  "base_rule": [
+   {
+    "cond": "n mod 8 = 0",
+    "value": "n//4"
+   },
+   {
+    "cond": "n mod 4 = 0",
+    "value": "n-2"
+   },
+   {
+    "cond": "n mod 2 = 0",
+    "value": "n-1"
+   },
+   {
+    "cond": "otherwise",
+    "value": "n//4"
+   }
+  ],
+  "end_to_end_accuracy": 0.71528,
+  "held_out_invariants_exact": "12/18",
+  "held_out_prime_powers_exact": "0/6",
+  "training_errors_on_atoms": 10
+ }
+}

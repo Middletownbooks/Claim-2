@@ -1,0 +1,595 @@
+{
+  "version": "v1-leak-free",
+  "why": "L2 measured that the leak field does not reproduce (2 of 5 leading mechanisms agree) while bound does (3 of 4). A diagnostic that reads the leak reads a ranking that does not survive re-encoding. These two diagnostics read only: (a) the product operation of the problem, (b) how the TARGET behaves under it, read off the extremal construction, and (c) how the BOUND behaves under it, read off the formula. All three are objective and pre-existing.",
+  "laws": [
+    "multiplicative",
+    "additive",
+    "l2",
+    "max",
+    "none"
+  ],
+  "law_meanings": {
+    "multiplicative": "T(I1 (x) I2) = T(I1) * T(I2), so T grows like c^n",
+    "additive": "T(I1 (x) I2) = T(I1) + T(I2), so T grows like c*n",
+    "l2": "T(I1 (x) I2)^2 = T(I1)^2 + T(I2)^2, so T grows like sqrt(n)",
+    "max": "T(I1 (x) I2) = max(T(I1), T(I2)), so T is flat in n",
+    "none": "the target has no law under this product"
+  },
+  "product_law": {
+    "rule": "FIRE iff the product operation exists AND target_law != bound_law.",
+    "rationale": "No amount of better play on an invariant obeying the wrong product law closes a gap that grows under products. Where no product operation exists the diagnostic makes no claim: NOT APPLICABLE is not a prediction.",
+    "claimed_domain": "items where a product operation on instances exists and the size parameter is additive under it",
+    "items": {
+      "01-sensitivity": {
+        "applicable": false,
+        "operation": "Cartesian product of hypercubes, BUT the feasible set is not closed under it -- see out_of_domain_reason",
+        "expected": "not-applicable",
+        "truth": "board changed",
+        "class": "positive",
+        "out_of_domain_reason": "The feasible set is NOT CLOSED under the Cartesian product. The constraint is a density threshold (more than half the cube) and density is multiplicative, so the product of two extremal examples occupies a quarter of Q_{n1+n2}, not half: it is not a feasible instance. 'Take the product of the extremal family and measure' therefore has no value here, and the l2 target label was read off the closed form ceil(sqrt n) by SUBSTITUTION, not off the examples. The honest product law is additive (Cartesian degrees add). Verified in p1-retrodiction/tools/check_n9_audit.py. See d20/N9-audit-result.md.",
+        "withdrawn_target_law": "l2",
+        "withdrawn_bound_law": "additive",
+        "withdrawn_target_evidence": "Chung-Fueredi-Graham-Seymour themselves construct a (2^{n-1}+1)-vertex induced subgraph with max degree ceil(sqrt n), so T(n) ~ sqrt(n) and squares add under the product.",
+        "withdrawn_bound_evidence": "The bound is (1/2-o(1)) log_2 n, produced by degree-sum and edge-isoperimetric counting; the unsigned spectrum of Q_n is n-2k, which is ADDITIVE under Cartesian product.",
+        "withdrawn_neutral": {
+          "bound_formula": "Delta >= (1/2 - o(1)) log_2 n",
+          "bound_mechanism": "degree-sum and edge-isoperimetric counting on Q_n, whose unsigned spectrum is n-2k",
+          "extremal_construction": "Chung-Fueredi-Graham-Seymour exhibit an induced subgraph of Q_n on 2^{n-1}+1 vertices whose maximum degree is ceil(n^{1/2}). This is the best construction known and is believed extremal.",
+          "problem_name": "maximum degree of a large induced subgraph of the hypercube (counting board)"
+        }
+      },
+      "02-cap-set": {
+        "applicable": true,
+        "operation": "A1 x A2 in F_3^{n1+n2} is 3AP-free when both are; n additive",
+        "target_law": "multiplicative",
+        "target_evidence": "The product of caps is a cap, so T(n1+n2) >= T(n1)T(n2); by Fekete T(n) = c^n. Explicit small caps (|cap in F_3^4| = 20) give c >= 20^{1/4} ~ 2.11.",
+        "bound_law": "additive",
+        "bound_evidence": "The bound 3^n/n is a density bound delta <~ 1/n; the density-increment invariant costs one dimension per step, so it composes ADDITIVELY in n.",
+        "expected": "fire",
+        "truth": "board changed",
+        "class": "positive",
+        "neutral": {
+          "bound_formula": "|A| <= C * 3^n / n^{1+eps}",
+          "bound_mechanism": "density increment: each step finds a large Fourier coefficient, restricts to a hyperplane, and costs one dimension",
+          "extremal_construction": "If A1 is a cap in F_3^{n1} and A2 a cap in F_3^{n2}, then A1 x A2 is a cap in F_3^{n1+n2}. Explicit caps exist in small dimensions, e.g. a cap of size 20 in F_3^4.",
+          "problem_name": "largest subset of F_3^n with no three-term arithmetic progression"
+        }
+      },
+      "03-shannon-capacity-c5": {
+        "applicable": true,
+        "operation": "strong graph product",
+        "target_law": "multiplicative",
+        "target_evidence": "Theta is defined as lim alpha(G^{box k})^{1/k}; alpha is supermultiplicative under the strong product.",
+        "bound_law": "multiplicative",
+        "bound_evidence": "The fractional clique cover number alpha* is MULTIPLICATIVE under the strong product. Shannon chose it for exactly that reason.",
+        "expected": "no-fire",
+        "truth": "board changed",
+        "note": "FALSE NEGATIVE, and a principled one: the LP's product law was already correct. Its failure was tightness, not law. This is a different phenomenon from cases 1, 2, 4, 10 and should not be forced into the same entry.",
+        "class": "positive",
+        "neutral": {
+          "bound_formula": "Theta(C5) <= alpha*(C5) = 5/2",
+          "bound_mechanism": "fractional clique cover; alpha*(G box H) = alpha*(G) alpha*(H)",
+          "extremal_construction": "Theta(G) is defined as lim_k alpha(G^{box k})^{1/k}. For C5, alpha(C5)=2 and alpha(C5 box C5)=5.",
+          "problem_name": "zero-error capacity of the 5-cycle"
+        }
+      },
+      "04-kadison-singer": {
+        "applicable": true,
+        "operation": "direct sum of vector systems",
+        "target_law": "max",
+        "target_evidence": "The largest root of a direct sum is the MAX over blocks, so the quantity the theorem needs is flat in the number of blocks.",
+        "bound_law": "additive",
+        "bound_evidence": "The factor n inside tr exp contributes log n, which GROWS with the number of blocks.",
+        "expected": "fire",
+        "truth": "board changed",
+        "class": "positive",
+        "neutral": {
+          "bound_formula": "the argument needs delta <~ 1/log n",
+          "bound_mechanism": "matrix Chernoff on E||Sigma_S||; the factor n inside tr exp contributes log n, where n is the number of blocks",
+          "extremal_construction": "Take a direct sum of k independent blocks. The largest root of the direct sum is the largest root among the blocks.",
+          "problem_name": "partitioning an isotropic vector system into two well-conditioned halves"
+        }
+      },
+      "10-parallel-repetition": {
+        "applicable": true,
+        "operation": "k-fold product of two-prover games",
+        "target_law": "none",
+        "target_evidence": "val(G^k) is NOT multiplicative — the Fortnow and Feige counterexamples are exactly that; provers correlate across coordinates.",
+        "bound_law": "multiplicative",
+        "bound_evidence": "The conjectured invariant IS val(G^k) = val(G)^k, i.e. exactly multiplicative.",
+        "expected": "fire",
+        "truth": "board changed",
+        "class": "positive",
+        "neutral": {
+          "bound_formula": "the conjectured invariant is val(G^k) = val(G)^k",
+          "bound_mechanism": "the conjecture asserts the value of the k-fold product is the k-th power of the value",
+          "extremal_construction": "Fortnow and Feige exhibit games where val(G^2) > val(G)^2: provers can correlate their answers across coordinates.",
+          "problem_name": "value of a two-prover game under k-fold product"
+        }
+      },
+      "05-finite-field-kakeya": {
+        "applicable": false,
+        "operation": "none: a product of Kakeya sets is not a Kakeya set (it contains lines only in product directions)",
+        "expected": "not-applicable",
+        "truth": "board changed",
+        "class": "positive"
+      },
+      "06-erdos-distinct-distances": {
+        "applicable": false,
+        "operation": "none: no product on planar point sets preserving the distance-counting target",
+        "expected": "not-applicable",
+        "truth": "board changed",
+        "class": "positive"
+      },
+      "07-small-prime-gaps": {
+        "applicable": false,
+        "operation": "none on admissible tuples",
+        "expected": "not-applicable",
+        "truth": "board changed",
+        "class": "positive"
+      },
+      "08-spencer-discrepancy": {
+        "applicable": false,
+        "operation": "disjoint union exists, but the target is handled by the union-bound diagnostic below, whose domain this is",
+        "expected": "not-applicable",
+        "truth": "board changed",
+        "class": "positive"
+      },
+      "11-kneser": {
+        "applicable": false,
+        "operation": "none",
+        "expected": "not-applicable",
+        "truth": "board changed",
+        "class": "positive"
+      },
+      "12-geometrization": {
+        "applicable": false,
+        "operation": "none",
+        "expected": "not-applicable",
+        "truth": "board changed",
+        "class": "positive"
+      },
+      "13-pcp-weak": {
+        "applicable": true,
+        "operation": "k-fold parallel repetition",
+        "target_law": "additive",
+        "target_evidence": "The theorem needs instance size to grow by a CONSTANT FACTOR per amplification step.",
+        "bound_law": "multiplicative",
+        "bound_evidence": "Size grows as n^k: multiplicative in the exponent under the product.",
+        "expected": "fire",
+        "truth": "excluded",
+        "excluded_reason": "flagged fit-testing-only: its before-board was a successful proof, not a failing bound",
+        "class": "excluded",
+        "neutral": {
+          "bound_formula": "gap amplifies but instance size grows as n^k under k-fold repetition",
+          "bound_mechanism": "k-fold parallel repetition; size is raised to the k-th power",
+          "extremal_construction": "The theorem requires a sequence of amplification steps in which the instance size grows by a bounded factor at each step.",
+          "problem_name": "gap amplification for constraint satisfaction under repetition"
+        }
+      },
+      "09-vinogradov-mean-value": {
+        "applicable": false,
+        "operation": "void",
+        "expected": "not-applicable",
+        "truth": "excluded",
+        "excluded_reason": "void through the L2 cutoff design error",
+        "class": "excluded"
+      },
+      "N1-johnson-lindenstrauss": {
+        "applicable": true,
+        "operation": "union of point sets; log n additive",
+        "target_law": "additive",
+        "target_evidence": "The true dimension is log n / eps^2 and is PROVEN TIGHT (Larsen-Nelson): log(n1 n2) = log n1 + log n2.",
+        "bound_law": "additive",
+        "bound_evidence": "The union bound over n^2 pairs also contributes log n, additively.",
+        "expected": "no-fire",
+        "truth": "tight",
+        "class": "negative",
+        "neutral": {
+          "bound_formula": "target dimension m = O(log n / eps^2) for n points",
+          "bound_mechanism": "union bound over the n^2 pairwise distance events",
+          "extremal_construction": "Larsen-Nelson exhibit n-point sets for which every embedding preserving all pairwise distances to 1+eps needs m = Omega(eps^{-2} log n). Merging two such sets of sizes n1 and n2 gives one of size n1+n2.",
+          "problem_name": "target dimension for near-isometric embedding of n points"
+        }
+      },
+      "N2-epsilon-nets": {
+        "applicable": true,
+        "operation": "product of range spaces; VC dimension additive",
+        "target_law": "additive",
+        "target_evidence": "Net size (d/eps)log(1/eps) is tight in general and for halfspaces in R^4; d adds under products.",
+        "bound_law": "additive",
+        "bound_evidence": "The union bound over ranges contributes the same additive dependence.",
+        "expected": "no-fire",
+        "truth": "tight in general",
+        "class": "negative",
+        "neutral": {
+          "bound_formula": "net size O((d/eps) log(1/eps)) for a range space of VC dimension d",
+          "bound_mechanism": "union bound over the heavy ranges",
+          "extremal_construction": "Pach-Tardos exhibit halfspaces in R^4 needing nets of size at least (1/(9 eps)) log(1/eps). Under a product of range spaces the VC dimension d1+d2 arises from components of dimension d1 and d2.",
+          "problem_name": "size of an epsilon-net for a range space of VC dimension d"
+        }
+      },
+      "N3-3ap-free-integers": {
+        "applicable": false,
+        "operation": "NONE: [N1] x [N2] is not [N1 N2] for arithmetic-progression structure, so 3AP-free sets do not multiply as they do in F_3^n",
+        "expected": "not-applicable",
+        "truth": "no board change available",
+        "note": "THE DISCRIMINATOR. This is case 2's twin and carries the same surface leak, but the product structure that makes case 2 fire is absent here. The leak-based diagnostic cannot tell them apart; this one can, and it does so on an objective structural fact.",
+        "class": "negative"
+      },
+      "N4-shannon-capacity-c7": {
+        "applicable": true,
+        "operation": "strong graph product",
+        "target_law": "multiplicative",
+        "target_evidence": "same as case 3",
+        "bound_law": "multiplicative",
+        "bound_evidence": "same as case 3: the LP law is correct",
+        "expected": "no-fire",
+        "truth": "still open",
+        "class": "negative",
+        "neutral": {
+          "bound_formula": "Theta(C7) <= theta(C7) = 3.3177",
+          "bound_mechanism": "orthonormal representations; theta(G box H) = theta(G) theta(H)",
+          "extremal_construction": "Polak-Schrijver exhibit an independent set of size 367 in the fifth strong power of C7, giving Theta(C7) >= 367^{1/5} = 3.2579.",
+          "problem_name": "zero-error capacity of the 7-cycle"
+        }
+      },
+      "N5-strong-parallel-repetition": {
+        "applicable": true,
+        "operation": "k-fold product",
+        "target_law": "multiplicative",
+        "target_evidence": "The value decays exponentially in k; the eps^2 vs eps loss is real even for unique games (Raz 2008, odd-cycle game).",
+        "bound_law": "multiplicative",
+        "bound_evidence": "Raz's bound is likewise exponential in k.",
+        "expected": "no-fire",
+        "truth": "tight",
+        "class": "negative",
+        "neutral": {
+          "bound_formula": "val(G^k) <= (1 - eps^3)^{Omega(k)} for a game of value 1-eps",
+          "bound_mechanism": "Raz's parallel repetition theorem, exponential in the number of repetitions",
+          "extremal_construction": "Raz's odd-cycle game has value 1-eps and its k-fold repetition has value at least (1-eps^2)^{O(k)}.",
+          "problem_name": "value decay rate of a unique game under k-fold product"
+        }
+      },
+      "N6-discrepancy-arithmetic-progressions": {
+        "applicable": false,
+        "operation": "none preserving AP structure",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative"
+      },
+      "N7-euclidean-kakeya": {
+        "applicable": false,
+        "operation": "NONE: as in case 5, a product of Kakeya sets is not Kakeya",
+        "expected": "not-applicable",
+        "truth": "method does not transfer",
+        "class": "negative"
+      },
+      "N8-discrepancy-many-sets": {
+        "applicable": true,
+        "operation": "disjoint union of set systems; n and m both add",
+        "target_law": "max",
+        "target_evidence": "CORRECTED after D20. Ground sets are disjoint, so a colouring may be chosen independently on each and disc(S1 u S2) = max(disc S1, disc S2). Three independent raters assigned max unanimously; my original 'additive' was wrong.",
+        "bound_law": "l2",
+        "bound_evidence": "CORRECTED after D20. With m/n preserved, B(S1 u S2)^2 = (n1+n2) log(m/n) = B1^2 + B2^2, which is the l2 law, not additive.",
+        "expected": "fire",
+        "truth": "tight",
+        "class": "negative",
+        "neutral": {
+          "bound_formula": "disc = O(sqrt(n log(m/n))) for m sets on n points",
+          "bound_mechanism": "union bound over the m sets",
+          "extremal_construction": "Set systems are known matching sqrt(n log(m/n)). Placing two disjoint systems side by side gives one with n1+n2 points and m1+m2 sets.",
+          "problem_name": "two-colouring discrepancy of m sets on n points"
+        },
+        "recorded_false_positive": {
+          "status": "GENUINE FALSE POSITIVE",
+          "why": "The laws differ under disjoint union, so the rule fires, but sqrt(n log(m/n)) is TIGHT. See d20/N8-adjudication.md.",
+          "exposes": "The domain condition is too weak. It requires only that a product operation exist and the size parameter be additive; disjoint union satisfies that literally while moving BOTH coordinates of a two-parameter family (n and m), so target and bound can differ with no board change available. Every case the diagnostic gets right is a SINGLE-parameter family; its false positive is the two-parameter one.",
+          "repair_not_adopted": "Strengthening the domain condition to require the operation to preserve the family's full parameterisation was derived FROM this item and is therefore not applied. It needs items chosen by someone who has not seen this adjudication.",
+          "source": "D20, three blind raters, unanimous"
+        }
+      },
+      "14-sphere-packing-8-24": {
+        "applicable": false,
+        "operation": "dimension adds but optimal density does not product",
+        "expected": "not-applicable",
+        "truth": "no board change",
+        "class": "negative"
+      },
+      "15-roth-kelley-meka": {
+        "applicable": false,
+        "operation": "NONE: integers, as N3",
+        "expected": "not-applicable",
+        "truth": "no board change",
+        "class": "negative"
+      },
+      "N9-huang-tightness": {
+        "applicable": false,
+        "operation": "Cartesian product of hypercubes, BUT the feasible set is not closed under it -- see out_of_domain_reason",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative",
+        "note": "Within-problem pair with case 1. Before Huang the laws differed and the diagnostic fires; after Huang they agree and it correctly stops. The same item on both sides of a board change is the strongest specificity test available.",
+        "out_of_domain_reason": "The feasible set is NOT CLOSED under the Cartesian product. The constraint is a density threshold (more than half the cube) and density is multiplicative, so the product of two extremal examples occupies a quarter of Q_{n1+n2}, not half: it is not a feasible instance. 'Take the product of the extremal family and measure' therefore has no value here, and the l2 target label was read off the closed form ceil(sqrt n) by SUBSTITUTION, not off the examples. The honest product law is additive (Cartesian degrees add). Verified in p1-retrodiction/tools/check_n9_audit.py. See d20/N9-audit-result.md.",
+        "withdrawn_target_law": "l2",
+        "withdrawn_bound_law": "l2",
+        "withdrawn_target_evidence": "CFGS's construction attains ceil(sqrt n), so the target is sqrt(n) and squares add.",
+        "withdrawn_bound_evidence": "Huang's signed adjacency has A^2 = nI, so the bound is also sqrt(n) and its squares add. The laws now MATCH.",
+        "withdrawn_neutral": {
+          "bound_formula": "Delta >= n^{1/2}",
+          "bound_mechanism": "a signed adjacency matrix A with A^2 = nI, Cauchy interlacing, and lambda_1 <= Delta",
+          "extremal_construction": "Chung-Fueredi-Graham-Seymour exhibit an induced subgraph of Q_n on 2^{n-1}+1 vertices with maximum degree ceil(n^{1/2}). Q_{n1} x Q_{n2} = Q_{n1+n2}.",
+          "problem_name": "maximum degree of a large induced subgraph of the hypercube (spectral board)"
+        }
+      },
+      "N16-matrix-multiplication-omega": {
+        "applicable": true,
+        "operation": "tensor product of matrix-multiplication tensors",
+        "target_law": "multiplicative",
+        "target_evidence": "omega is DEFINED through a limit of tensor powers.",
+        "bound_law": "multiplicative",
+        "bound_evidence": "Border rank is already submultiplicative under tensor product, so the invariant's law matches.",
+        "expected": "no-fire",
+        "truth": "open, law already matches",
+        "class": "negative",
+        "note": "The problem's whole surface is tensors under product, which is the signature the original de-tensorize entry keyed on. The refined rule is in domain here and correctly declines.",
+        "neutral": {
+          "bound_formula": "omega <= 2.37...",
+          "bound_mechanism": "border rank of the matrix-multiplication tensor, which is submultiplicative under tensor product",
+          "extremal_construction": "omega is defined through a limit over tensor powers of the matrix-multiplication tensor; the tensor of a product of two instances is the tensor product of their tensors.",
+          "problem_name": "exponent of square matrix multiplication"
+        }
+      },
+      "N19-sauer-shelah": {
+        "applicable": true,
+        "operation": "product of set systems; VC dimension additive",
+        "target_law": "additive",
+        "target_evidence": "The Sauer-Shelah bound is attained by downward-closed systems and VC dimension adds under products.",
+        "bound_law": "additive",
+        "bound_evidence": "The counting bound has the same additive dependence.",
+        "expected": "no-fire",
+        "truth": "tight",
+        "class": "negative",
+        "neutral": {
+          "bound_formula": "a set system of VC dimension d on n points has at most sum_{i<=d} C(n,i) sets",
+          "bound_mechanism": "a counting/shattering argument",
+          "extremal_construction": "Downward-closed systems attain the bound exactly. A product of two systems of VC dimensions d1 and d2 has VC dimension d1+d2.",
+          "problem_name": "number of sets in a system of bounded VC dimension"
+        }
+      },
+      "N17-alon-boppana": {
+        "applicable": false,
+        "operation": "none: the 2 sqrt(d-1) spectral bound is not a statement about a product of graphs",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative"
+      },
+      "N18-szemeredi-trotter": {
+        "applicable": false,
+        "operation": "none preserving the incidence count",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative"
+      },
+      "N20-kovari-sos-turan": {
+        "applicable": false,
+        "operation": "none",
+        "expected": "not-applicable",
+        "truth": "tight for small t",
+        "class": "negative"
+      },
+      "N10-spencer-sqrt-n-tight": {
+        "applicable": false,
+        "operation": "disjoint union exists, but the surviving sqrt(n) is a concentration scale, not a product-law artefact",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative"
+      },
+      "N11-max-of-gaussians": {
+        "applicable": false,
+        "operation": "none relevant",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative"
+      },
+      "N12-balls-into-bins": {
+        "applicable": false,
+        "operation": "none relevant",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative"
+      },
+      "N13-coupon-collector": {
+        "applicable": false,
+        "operation": "none relevant",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative"
+      },
+      "N14-set-cover-greedy": {
+        "applicable": false,
+        "operation": "none relevant",
+        "expected": "not-applicable",
+        "truth": "tight unless P=NP",
+        "class": "negative"
+      },
+      "N15-shearer-lll": {
+        "applicable": false,
+        "operation": "none relevant",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative"
+      },
+      "16-zhang-smooth-moduli": {
+        "applicable": false,
+        "operation": "none on admissible tuples",
+        "expected": "not-applicable",
+        "truth": "no board change at level n",
+        "class": "negative",
+        "note": "Contemporaneous within-problem control for case 7a. Carries a LEVEL FLAG: Zhang changed the equidistribution board one level DOWN, so this is a level-(n-1) board change feeding an unchanged level-n board -- a third category the catalogue lacks (D30)."
+      }
+    },
+    "positive_class": "the board changed, so a correct diagnostic fires",
+    "domain_patches": [
+      {
+        "id": "D23",
+        "from_item": "N8-discrepancy-many-sets",
+        "patch": "require the operation to preserve the family's full parameter vector",
+        "adopted": false
+      },
+      {
+        "id": "D27",
+        "from_item": "N9 / case 1 (hypercube)",
+        "patch": "require the feasible set to be CLOSED under the product operation",
+        "adopted": false
+      },
+      {
+        "note": "TWO post-hoc patches, each derived from the item that broke the rule. That is the signature of a rule being FITTED rather than tested, which is why neither is adopted. A third such patch should be read as a refutation of the rule, not a repair of it."
+      }
+    ]
+  },
+  "union_bound": {
+    "rule": "FIRE iff a union bound over m events produces the factor AND NOT (independence_realisable AND target_requires_simultaneous_control).",
+    "rationale": "The seed's refinement asked only whether some instance makes the m events near-independent. That is not sufficient: independence only makes the log REAL when the target must control all m events at once. Where the target decomposes over the events — where you may choose separately per block — independence is not an obstruction and the log is removable.",
+    "claimed_domain": "items whose bound carries a factor produced by a union bound over m events",
+    "items": {
+      "08-spencer-discrepancy": {
+        "applicable": true,
+        "m": "n sets on n points",
+        "independence_realisable": false,
+        "independence_evidence": "n sets on n points cannot realise n independent extreme events; the ground set is too small.",
+        "target_requires_simultaneous_control": true,
+        "target_evidence": "one colouring must serve every set at once.",
+        "expected": "fire",
+        "truth": "log removable (Spencer: 6 sqrt n)",
+        "class": "positive"
+      },
+      "04-kadison-singer": {
+        "applicable": true,
+        "m": "n blocks",
+        "independence_realisable": true,
+        "independence_evidence": "direct sums of independent blocks realise it exactly.",
+        "target_requires_simultaneous_control": false,
+        "target_evidence": "the theorem asks for EXISTENCE of a good partition, and on a direct sum the partition may be chosen independently per block, so the target decomposes.",
+        "expected": "fire",
+        "truth": "log removable (Marcus-Spielman-Srivastava: dimension-free)",
+        "class": "positive"
+      },
+      "N1-johnson-lindenstrauss": {
+        "applicable": true,
+        "m": "n^2 pairs",
+        "independence_realisable": true,
+        "independence_evidence": "random point sets make pairwise distances near-independent.",
+        "target_requires_simultaneous_control": true,
+        "target_evidence": "one embedding must preserve ALL pairs simultaneously.",
+        "expected": "no-fire",
+        "truth": "tight (Larsen-Nelson 2017)",
+        "class": "negative"
+      },
+      "N2-epsilon-nets": {
+        "applicable": true,
+        "m": "ranges",
+        "independence_realisable": true,
+        "independence_evidence": "general range spaces realise it.",
+        "target_requires_simultaneous_control": true,
+        "target_evidence": "one net must stab every heavy range.",
+        "expected": "no-fire",
+        "truth": "tight in general (Komlos-Pach-Woeginger; Pach-Tardos for halfspaces in R^4)",
+        "class": "negative"
+      },
+      "N8-discrepancy-many-sets": {
+        "applicable": true,
+        "m": "m >> n sets",
+        "independence_realisable": true,
+        "independence_evidence": "with m >> n the sets can be made near-independent.",
+        "target_requires_simultaneous_control": true,
+        "target_evidence": "one colouring must serve all m sets.",
+        "expected": "no-fire",
+        "truth": "tight (sqrt(n log(m/n)))",
+        "class": "negative"
+      },
+      "N11-max-of-gaussians": {
+        "applicable": true,
+        "m": "n independent tail events",
+        "independence_realisable": true,
+        "independence_evidence": "the events ARE independent by construction.",
+        "target_requires_simultaneous_control": true,
+        "target_evidence": "the target is the maximum, so all n must be controlled at once.",
+        "expected": "no-fire",
+        "truth": "tight: E max = (1+o(1)) sqrt(2 log n)",
+        "class": "negative",
+        "note": "The cleanest possible true negative: independence is exact and the target is a maximum, so the union bound is not lossy at all."
+      },
+      "N12-balls-into-bins": {
+        "applicable": true,
+        "m": "n bins",
+        "independence_realisable": true,
+        "independence_evidence": "bin loads are near-independent.",
+        "target_requires_simultaneous_control": true,
+        "target_evidence": "the target is the maximum load.",
+        "expected": "no-fire",
+        "truth": "tight: (1+o(1)) log n / log log n",
+        "class": "negative"
+      },
+      "N13-coupon-collector": {
+        "applicable": true,
+        "m": "n coupons",
+        "independence_realisable": true,
+        "independence_evidence": "the per-coupon waiting events are independent enough.",
+        "target_requires_simultaneous_control": true,
+        "target_evidence": "every coupon must be collected, so all n events matter at once.",
+        "expected": "no-fire",
+        "truth": "tight: n H_n ~ n log n",
+        "class": "negative"
+      },
+      "N10-spencer-sqrt-n-tight": {
+        "applicable": false,
+        "m": "not a union-bound factor: the surviving sqrt(n) is the concentration scale",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative",
+        "note": "DOMAIN judgement, stated as such. The first conjunct of the rule is false, so the refined diagnostic declines here for a structural reason rather than via the independence test. A careless application to 'the surviving factor' would fire, which is why the item earns its place."
+      },
+      "N14-set-cover-greedy": {
+        "applicable": false,
+        "m": "the ln n is a harmonic sum from the greedy analysis, not a union bound",
+        "expected": "not-applicable",
+        "truth": "tight unless P=NP",
+        "class": "negative"
+      },
+      "N15-shearer-lll": {
+        "applicable": false,
+        "m": "the collectivization has already been performed — the factor comes from the LLL, not a union bound",
+        "expected": "not-applicable",
+        "truth": "tight",
+        "class": "negative"
+      }
+    },
+    "positive_class": "the log is REMOVABLE, so a correct diagnostic fires. Note this is a different positive class from product-law matching, whose positives are 'the board changed'. Scoring them against one vocabulary was an error in the first version of this file."
+  },
+  "auxiliary_witness_lift": {
+    "verdict": "DROPPED",
+    "reason": "The task required either a diagnostic computable from the before-board alone, or removal. No such diagnostic exists: 'introduce an auxiliary object whose existence certifies the bound' has no before-board trigger, because essentially every proof introduces one. The seed already conceded near-zero discriminating power, step D measured kappa = 0.048 across the catalogue, and the standing instruction is that the catalogue should shrink before it grows. Dropped rather than rescued."
+  },
+  "candidate_diagnostics": [
+    {
+      "id": "variational-ceiling",
+      "status": "PROPOSAL, NOT A RESULT",
+      "source": "citations response sec. 4.2, from Granville on case 7",
+      "rule": "The invariant is an optimum of a ratio over a function class. Compute sup rho over the current class. FIRE iff that supremum is bounded by a constant INDEPENDENT of the problem's size parameter, while the class is legally enlargeable.",
+      "inputs": "the bound and the extremal function. NO LEAK TABLE -- the same kind of object as the product-law rule, and testable the same way.",
+      "evidence": "n = 1. On case 7: sup rho = 4 over one-variable F, independent of k -> fires; enlarging to k variables gives log k, which is what happened. Verified in p1-retrodiction/tools/check_citations_response.py.",
+      "not_circular_the_same_way": "It comes from a case that was ALREADY outside the taxonomy before anyone went looking for a rule (seed P3 finding 5 put case 7 outside it), unlike product-law matching, which was derived from the cases it was then scored on.",
+      "must_be_run_against_first": [
+        "N6-discrepancy-arithmetic-progressions",
+        "N1-johnson-lindenstrauss",
+        "N8-discrepancy-many-sets"
+      ],
+      "why_those": "A bounded optimum is sometimes bounded BECAUSE THE ANSWER IS. On those twins the rule must decline, and if it does not, it is measuring tightness again.",
+      "and_it_must_beat_this": {
+        "baseline": "the one-line bound-strength test (D28), J = +0.750, and the rule-less rater, J = +1.000",
+        "why": "D28 established that product-law matching is SURPLUS because a one-liner beat it. Any new candidate has to clear that bar, not merely clear chance. Scoring it against J = 0 would repeat the error the baseline work just corrected."
+      }
+    }
+  ]
+}

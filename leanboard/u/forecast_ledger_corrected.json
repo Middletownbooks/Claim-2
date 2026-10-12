@@ -1,0 +1,413 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "supersedes": "u/forecast_ledger.json",
+ "predictions": [
+  {
+   "phase": "P",
+   "id": "P-1",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-2",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-3",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-4",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-5",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-6=T7",
+   "polarity": "NEGATIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-7=T9",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "P-8",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "termform2/REPORT_P.md"
+  },
+  {
+   "phase": "P",
+   "id": "T4",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T5",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T6",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T8",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T10",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T12",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T1/T2 (T3 struck)",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "P",
+   "id": "T13",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "termform2/PREREG.md"
+  },
+  {
+   "phase": "S",
+   "id": "S-pinsker",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "s/pinsker_prereg.md"
+  },
+  {
+   "phase": "T",
+   "id": "T-math",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "t/PREREG.md"
+  },
+  {
+   "phase": "T",
+   "id": "T-eng",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "t/PREREG.md"
+  },
+  {
+   "phase": "I",
+   "id": "P1 communities not a blob",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_I"
+  },
+  {
+   "phase": "I",
+   "id": "P2 largest = modular curves",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_I"
+  },
+  {
+   "phase": "I",
+   "id": "P3 bottleneck ratio < 0.25",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "REPORT_I"
+  },
+  {
+   "phase": "I",
+   "id": "P5 NMI above chance",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_I"
+  },
+  {
+   "phase": "J",
+   "id": "Q1 >20% invisible early",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "REPORT_J"
+  },
+  {
+   "phase": "J",
+   "id": "Q2 AUC >= 0.80",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_J"
+  },
+  {
+   "phase": "J",
+   "id": "Q3 no feature beats baseline",
+   "polarity": "NEGATIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_J"
+  },
+  {
+   "phase": "K",
+   "id": "P1 search selects lcm",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "REPORT_K"
+  },
+  {
+   "phase": "K",
+   "id": "P2 >=90% composable exact",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "REPORT_K"
+  },
+  {
+   "phase": "K",
+   "id": "P3 base case breaks somewhere",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": true,
+   "source": "REPORT_K"
+  },
+  {
+   "phase": "K",
+   "id": "P4 end-to-end > 0.93",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_K"
+  },
+  {
+   "phase": "K",
+   "id": "P5 composable beats non by 5pp",
+   "polarity": "POSITIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "REPORT_K"
+  },
+  {
+   "phase": "L",
+   "id": "P1 max/lcm tie",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_L"
+  },
+  {
+   "phase": "L",
+   "id": "P2 returns UNDERDETERMINED",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": true,
+   "source": "REPORT_L"
+  },
+  {
+   "phase": "L",
+   "id": "P3 resolves to max in 1 probe",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_L"
+  },
+  {
+   "phase": "L",
+   "id": "P4 base case fails >=4 of 6",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": true,
+   "source": "REPORT_L"
+  },
+  {
+   "phase": "L",
+   "id": "P5 composable >= 90%",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_L"
+  },
+  {
+   "phase": "L",
+   "id": "P6 end-to-end < 0.95",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": true,
+   "source": "REPORT_L"
+  },
+  {
+   "phase": "M",
+   "id": "P1 zero-error term found",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_M"
+  },
+  {
+   "phase": "M",
+   "id": "P2 several terms tie",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_M"
+  },
+  {
+   "phase": "M",
+   "id": "P3 minimal nu term generalises",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_M"
+  },
+  {
+   "phase": "M",
+   "id": "P4 lambda needs decision list",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "REPORT_M"
+  },
+  {
+   "phase": "15",
+   "id": "1 cycles reaches 0 everywhere",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "audit/REPORT.md"
+  },
+  {
+   "phase": "15",
+   "id": "2 fitted period = lambda(m)",
+   "polarity": "POSITIVE",
+   "outcome": "HELD",
+   "arguable": false,
+   "source": "audit/REPORT.md"
+  },
+  {
+   "phase": "15",
+   "id": "3 all arithmetic rules stay REFUTED",
+   "polarity": "NEGATIVE",
+   "outcome": "FAILED",
+   "arguable": false,
+   "source": "audit/REPORT.md"
+  }
+ ],
+ "partials_excluded": [
+  [
+   "I",
+   "P4"
+  ],
+  [
+   "J",
+   "Q4"
+  ],
+  [
+   "M",
+   "P5"
+  ],
+  [
+   "15",
+   "4"
+  ],
+  [
+   "P",
+   "P5-disagreement (M)"
+  ]
+ ],
+ "full": {
+  "a": 18,
+  "b": 14,
+  "c": 2,
+  "d": 10,
+  "n": 44,
+  "p_eff_given_GO": 0.5625,
+  "p_eff_given_NOGO": 0.1667,
+  "base_rate": 0.4545,
+  "fisher_p": 0.038897
+ },
+ "first_ledger_subset": {
+  "a": 1,
+  "b": 8,
+  "c": 1,
+  "d": 9,
+  "n": 19,
+  "p_eff_given_GO": 0.1111,
+  "p_eff_given_NOGO": 0.1,
+  "base_rate": 0.1053,
+  "fisher_p": 1.0
+ },
+ "sensitivity_arguable_dropped": {
+  "a": 15,
+  "b": 13,
+  "c": 2,
+  "d": 10,
+  "n": 40,
+  "p_eff_given_GO": 0.5357,
+  "p_eff_given_NOGO": 0.1667,
+  "base_rate": 0.425,
+  "fisher_p": 0.040845
+ }
+}

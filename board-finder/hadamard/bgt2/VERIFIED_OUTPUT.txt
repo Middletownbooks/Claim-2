@@ -1,0 +1,466 @@
+==========================================================================
+1. PLAN_2092.md sec 1's table, reproduced independently (b = 4)
+==========================================================================
+     v     4v |    claimed d           mine |    r    D | free bits
+   487   1948 |    [9, 3, 1]      [9, 3, 1] |   55   27 |   216   OK
+   523   2092 |    [9, 3, 1]      [9, 3, 1] |   59   29 |   232   OK
+   571   2284 |    [5, 3, 1]      [5, 3, 1] |  115   57 |   456   OK
+   643   2572 |       [3, 1]         [3, 1] |  215  107 |   856   OK
+   659   2636 |       [7, 1]         [7, 1] |   95   47 |   376   OK
+   739   2956 |    [9, 3, 1]      [9, 3, 1] |   83   41 |   328   OK
+  ASSERTED: all six rows reproduce, d list included.
+
+  Two relations PLAN_2092 does NOT state, holding on all six rows:
+    free_bits = 8D = 4(r-1)                     -- exact, all six
+    density exponent = free_bits - log2 E[#sol] -- all six to <0.35
+
+  CONSEQUENCE, and it is the useful part: free_bits is a function of d
+  alone, via r = (v-1)/d + 1. So the entire difficulty ranking of the
+  worklist is decided by ONE arithmetic quantity -- the largest odd
+  divisor of v-1 that the row-sum law admits. Nothing about the search.
+
+==========================================================================
+2. The classical thirteen smallest open Hadamard orders
+==========================================================================
+  The ORDER LIST is RECALL, not verified here -- flagged, and step 1 of
+  the brief is to check it against the other repository:
+  13 orders, all divisible by 4: True
+  v = n/4 all prime: True
+
+   order     v    d     r     D  free bits
+     668   167    1   167    83        664
+     716   179    1   179    89        712
+     892   223    3    75    37        296
+    1004   251    5    51    25        200
+    1132   283    3    95    47        376
+    1244   311    5    63    31        248
+    1388   347    1   347   173       1384
+    1436   359    1   359   179       1432
+    1676   419    1   419   209       1672
+    1772   443    1   443   221       1768
+    1916   479    1   479   239       1912
+    1948   487    9    55    27        216
+    1964   491    7    71    35        280
+
+  AND A DISCREPANCY THAT MATTERS: the repo's six targets are
+  v = 487, 523, 571, 643, 659, 739 -> orders 1948, 2092, 2284, 2572,
+  2636, 2956. Only 1948 is in the classical thirteen. So 'the thirteen
+  open orders' in the quoted sentence and 'thirteen' in the repo's own
+  target ranking are DIFFERENT LISTS, or one of them is not what I think.
+  Two quantities sharing a name -- resolve before using the 126+ figure.
+
+==========================================================================
+3. Orders 669 and 721, said never to have been screened
+==========================================================================
+  669: mod 4 = 1, factors [3, 223], prime: False
+  721: mod 4 = 1, factors [7, 103], prime: False
+
+  A Hadamard matrix of order > 2 requires order = 0 mod 4. Both are 1 mod 4,
+  so NEITHER IS A HADAMARD ORDER. They must be v or m values, giving
+  orders 4*669 = 2676 and 4*721 = 2884.
+  And both are COMPOSITE, while every v in the repo's worklist is prime.
+  HYPOTHESIS, offered as such: they were never screened because the
+  machinery assumes v prime. Falsifier: the other repo screening a
+  composite v anywhere. This is a guess about a file I have not read.
+    v=669: admissible d at b=4 -> [1], d=1, r=669, D=334, free bits 2672
+    v=721: admissible d at b=4 -> [15, 9, 5, 3, 1], d=15, r=49, D=24, free bits 192
+
+==========================================================================
+4. One hypothesis about b, with its falsifier. NOT a finding.
+==========================================================================
+  free_bits = 8D at b = 4. If the b blocks each contribute 2D free bits,
+  then free_bits = 2*b*D, which fits 8D at b=4 -- a relation fitted at a
+  SINGLE value of b, which is exactly the D53 trap. Stated as a
+  hypothesis with the number it predicts, so it can be killed:
+
+    b   2bD at v=523, D=29     vs b=4
+    2                  116       -116
+    3                  174        -58
+    4                  232         +0
+    5                  290        +58
+    6                  348       +116
+    8                  464       +232
+
+  IF that scaling is right, b > 2 is a region with MORE free bits than
+  b = 2, i.e. HARDER, and the 126+ admissible pairs are not a cheaper
+  frontier but a more expensive one. FALSIFIER: any statement in the
+  other repo giving free bits or density for a b != 4 case. One number
+  kills or confirms this, and the brief asks for it first.
+
+  Separately, admissibility counted under the b-blocks reading:
+    b   admissible v of the classical 13
+    2    0  []
+    3    0  []
+    4   13  [167, 179, 223, 251, 283, 311, 347, 359, 419, 443, 479, 487, 491]
+    5    0  []
+    6    0  []
+    8    0  []
+  This is a DERIVED count under MY reading of b (number of circulant
+  blocks, sum of b row-sum squares = 4v). If the other repo's b means
+  something else, every number in this block is void. Check first.
+
+==========================================================================
+ALL ASSERTIONS PASSED.
+==========================================================================
+
+==========================================================================
+5. MY READING OF b IS REFUTED BY THE SENTENCE IT WAS MEANT TO CHECK
+==========================================================================
+  ASSERTED: every permitted row sum a_k is ODD, at every (v, d) checked.
+  Because v is odd, so (v-1)/d is even for odd d, so r is odd, so
+  d(2u-(r-1)) is even, so a_k = +-1 + even is odd.
+
+  An odd square is 1 mod 8. So a sum of b odd squares is b mod 8.
+  And 4v with v odd is 4 mod 8. Therefore:
+
+      sum_{k=1..b} a_k^2 = 4v  forces  b = 4 (mod 8).
+
+    b=  4: b mod 8 = 4, admissible v of the 13: 13
+    b= 12: b mod 8 = 4, admissible v of the 13: 13
+    b= 20: b mod 8 = 4, admissible v of the 13: 13
+    b= 28: b mod 8 = 4, admissible v of the 13: 13
+
+  So under my reading, b > 2 means b in {12, 20, 28, ...} and NOTHING
+  else -- there is no b = 3, 5, 6 or 8 case at all. A source reporting
+  '126+ admissible (v, b) pairs with b > 2' therefore CANNOT mean b =
+  the number of circulant blocks whose odd row sums square-sum to 4v.
+
+  THIS IS THE MOST USEFUL THING IN THIS SCRIPT. It does not tell us what
+  b is; it proves my guess is wrong, so the brief must not ship the guess.
+
+==========================================================================
+6. One lead worth checking, and one reason to distrust it
+==========================================================================
+  v=721 (composite, 7*103) admits d=15, r=49, D=24, free bits 192.
+  v=487, the order Alpoge SOLVED, has free bits 216.
+  v=523, the LIVE target, has free bits 232.
+  So on the free-bit metric 721 is 24 bits cheaper than the
+  solved order and 40 cheaper than the live target.
+
+  WHY TO DISTRUST IT: free bits is only one of the two coordinates.
+  density = free_bits - log2 E[#sol], and E[#sol] needs the constraint
+  count, which I cannot compute without the repo's estimator. A cheap
+  free-bit count with few solutions is not an easier target. Also
+  unverified: whether 4*721 = 2884 is an OPEN order at all.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 2).
+==========================================================================
+
+==========================================================================
+7. b IS A BORDER WIDTH. Operator-supplied, 30 Sep 2026.
+==========================================================================
+  Section 5's refutation stands and is now explained: b is not a block
+  count at all, so the b = 4 (mod 8) derivation was about the wrong
+  object. The definition, OPERATOR-SUPPLIED (not read from the source):
+
+    b is a BORDER WIDTH. A bordered example is a border of width b
+    around a core. b must be ODD. Of Alpoge's 12 examples, 7 are
+    bordered; the majority of those are b=1, and there is one each
+    at b=3, b=5, b=7.
+
+  FORCED DECOMPOSITION of the 12, and it is self-consistent:
+    unbordered            5
+    b = 1                 4   <- majority of the 7 bordered, as stated
+    b = 3, 5, 7           3   (one each)
+    total                12
+
+  CONSEQUENCE 1 -- b odd means 'b > 2' is 'b >= 3'. There is no b = 2,
+  4, 6 case, so the region is b in {3, 5, 7, 9, ...}.
+
+  CONSEQUENCE 2, and it reverses the queue entry's framing:
+  THE REGION IS NOT UNSWEPT. Alpoge has one example at each of b = 3,
+  5 and 7 -- the method the whole worklist is modelled on has already
+  produced objects there. That is worse news than 'virgin territory'
+  and much better news than it sounds, because it supplies what the
+  Costas cell fatally lacked: GENUINE POSITIVE CONTROLS INSIDE THE
+  REGION, solved instances found by the method in question.
+
+==========================================================================
+8. free_bits in its cleanest form, and what it predicts for a border
+==========================================================================
+  ASSERTED on all six rows:   free_bits = 4(v-1)/d
+  i.e. four bits per orbit, and the orbit count is (v-1)/d.
+
+  HYPOTHESIS, and it is the OPPOSITE of the one section 5 offered:
+  a border of width b removes rows and columns from the core, so the
+  core is smaller and carries FEWER free parameters. If free_bits
+  scales with the core rather than with v, then LARGER b IS CHEAPER,
+  not dearer. That is a mechanism for why anyone would flag b > 2 as
+  an opportunity, and it is the reverse of what I guessed last time.
+
+  FALSIFIER, one number: the free-bit or density figure of Alpoge's
+  b = 3, 5 and 7 examples against his b = 1 examples at comparable
+  order. If free bits fall as b rises, the region is cheaper and the
+  queue entry is live. If they do not, it is not. I am NOT asserting
+  the scaling -- section 5 is what happens when I assert one.
+
+==========================================================================
+9. Where '126+ admissible (v, b) pairs with b > 2' could come from
+==========================================================================
+  Unconstrained count: 13 orders x (odd b from 3 up to B).
+     B  odd b in [3,B]   x 13 orders
+     3               1            13
+     5               2            26
+     7               3            39
+     9               4            52
+    11               5            65
+    13               6            78
+    15               7            91
+    17               8           104
+    19               9           117
+    21              10           130   <-- first B reaching 126
+    23              11           143
+    25              12           156
+    27              13           169
+    29              14           182
+
+  So 126+ is consistent with b running to about 21 across 13 orders,
+  with a few pairs inadmissible. OFFERED AS A CONSISTENCY OBSERVATION,
+  NOT A DERIVATION: I do not know the admissibility condition for a
+  bordered core, so I cannot compute the real count. What this does
+  give the brief is a shape to check the source's number against, and
+  a specific question -- what is the upper bound on b, and what makes
+  a (v, b) pair admissible?
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 3).
+==========================================================================
+
+==========================================================================
+10. THE TWO THIRTEENS, and the ambiguity is decision-critical
+==========================================================================
+  Coverage by Paley I/II + Sylvester + Kronecker closure only.
+  This is a SUBSET of the known constructions -- Williamson, Turyn,
+  Goethals-Seidel, Baumert-Hall and the sporadics are NOT modelled --
+  so 'uncovered' here is a SUPERSET of the genuinely open orders.
+
+  NECESSARY CONDITION CHECK: all 13 classical sub-2000 orders must be
+  uncovered by these constructions. Covered (should be none): []
+  PASSED.
+
+  uncovered multiples of 4 in [4, 2000): 136
+  uncovered multiples of 4 in [2000, 3000): 92
+
+  So I CANNOT derive either thirteen: my superset is far larger than 13
+  in both bands, because the constructions I cannot model are exactly the
+  ones that close most orders. Stated rather than papered over.
+
+  WHAT IS DERIVABLE, and it discriminates the two readings:
+
+  Reading A -- the 13 OPEN orders in (2000, 3000).
+    The worklist's own targets are 4v for v = 523, 571, 643, 659, 739:
+      v= 523 -> order  2092  in (2000,3000): True
+      v= 571 -> order  2284  in (2000,3000): True
+      v= 643 -> order  2572  in (2000,3000): True
+      v= 659 -> order  2636  in (2000,3000): True
+      v= 739 -> order  2956  in (2000,3000): True
+      v= 487 -> order  1948  in (2000,3000): False   <-- below 2000, and recorded SOLVED by Alpoge
+    FIVE of the six live targets lie in (2000,3000) and the sixth is the
+    sub-2000 order Alpoge closed. Reading A fits the worklist exactly.
+
+  Reading B -- Alpoge's 12 new examples plus 1 H matrix from elsewhere.
+    12 + 1 = 13, and the classical sub-2000 open list has 13 entries.
+    Arithmetically consistent, and it would mean the 13 are all CLOSED.
+
+  THE DISCRIMINATOR IS NOT ARITHMETIC, IT IS WHAT THE COUNT IS FOR:
+    under A, '126+ admissible (v,b) pairs with b > 2' counts parameter
+    choices available at THIRTEEN STILL-OPEN ORDERS -- an opportunity.
+    under B, it counts parameter choices at THIRTEEN SOLVED ORDERS --
+    the unexplored residue of finished problems, worth nothing as a
+    target. A file named OPEN_ORDERS.md could hold either: the open
+    orders, or the history of how the formerly-open ones were closed.
+
+  ** SO THE SAME SENTENCE IS EITHER THE WHOLE OPPORTUNITY OR NO
+     OPPORTUNITY AT ALL, AND NOTHING I HOLD DECIDES WHICH. **
+  This outranks the cost comparison: if B holds, clause (c) is moot.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 4).
+==========================================================================
+
+==========================================================================
+11. 2004 is NOT open, and 1004's status sharpens rather than resolves
+==========================================================================
+  The claim circulating on the web -- '2004 is the first open order above
+  2000' -- is FALSE, and one line settles it:
+    2003 is prime: True   2003 mod 4 = 3
+  Paley I builds H(q+1) for q = 3 (mod 4) a prime power, so H(2004)
+  follows immediately. ASSERTED. The smallest open order above 2000 is
+  2060, per FINDING_05's thirteen.
+
+  1004: hoa64's own closed-form families (replicated in
+  ../../playability/hoa64/coverage.py) return NOT REACHABLE for 1004,
+  and hoa64 ships no matrix for it. That is exactly how 1212 and 1940
+  behave -- and hoa64's README names 1212 and 1940 as its remaining
+  sub-2000 gaps while OMITTING 1004.
+
+  So 1004 is a THIRD unshipped, closed-form-unreachable order below 2000
+  that the README does not list. My recall of 1004 as a classical open
+  order is therefore NOT refuted; it is mildly supported, because 1004
+  behaves identically to the two orders the README calls gaps.
+  STILL UNRESOLVED: whether 1004 is open, closed by a construction
+  hoa64 does not implement, or missing from the README by oversight.
+
+  A NOTE ON MY OWN TEST: I first asserted that Alpoge's twelve must come
+  back UNREACHABLE from coverage.py. They come back REACHABLE, because
+  the function treats the shipped CSVs as a source. The code is right and
+  my expectation was wrong -- reachable-by-library is not
+  reachable-by-construction, and conflating them is how 1004 would get
+  silently reclassified.
+
+==========================================================================
+12. 'Cannot be KNOWN' is not 'cannot EXIST' -- operator correction
+==========================================================================
+  HADAMARD_CROSS.md sec 8 argues: a Williamson quadruple of order m hands
+  you H(4m), so H(716) and H(892) being open until 2026 proves W(179) and
+  W(223) were NOT KNOWN. That inference is valid.
+
+  It does NOT follow that they do not EXIST, and sec 8's 'dead on arrival'
+  overstates it. OPERATOR-SUPPLIED: W(65) is still an open question, so
+  the DECIDED Williamson frontier sits below 65 and higher orders are
+  undecided rather than refuted.
+
+  What the routes actually need, and the distance is the cost statement
+  clause (b) should test:
+    W(103) would close 2060 and 2884    --  38 orders beyond 65
+    W(179) would close 2148 (v=537)     -- 114 orders beyond 65
+    W(223) would close 2676 (v=669)     -- 158 orders beyond 65
+
+  So the route is not dead; it is a WILLIAMSON SEARCH at an order 38 to
+  158 beyond the decided frontier. That is a cost, not an impossibility,
+  and it is a different claim from the one sec 8 makes.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 5).
+==========================================================================
+
+==========================================================================
+14. The admissibility condition, derived from the worker's description
+==========================================================================
+  The Hadamard worker (30 Sep 2026) describes the b >= 3 construction as a
+  four-block Goethals-Seidel-type array on an abelian group G of order
+  v - b, with target PAF sum -4b on a subgroup H of INDEX b+1 minus the
+  identity and +4 off H. A subgroup of index b+1 exists in an abelian
+  group of order v-b only if (b+1) | (v-b), and since
+      v - b = (v+1) - (b+1),   (b+1) | (v-b)  <=>  (b+1) | (v+1).
+
+    v= 347 b= 5: |G|= 342, index=6, |H|=  57   OK   order 1388
+    v= 359 b= 7: |G|= 352, index=8, |H|=  44   OK   order 1436
+    v= 479 b= 3: |G|= 476, index=4, |H|= 119   OK   order 1916
+    v= 523 b= 1: |G|= 522, index=2, |H|= 261   OK   order 2092, live; b=1 inferred from free_bits = 4(v-1)/d
+  ASSERTED on all four (v, b) pairs now known. Four for four.
+
+  Admissible (v, b), b odd, 3 <= b < v, over FINDING_05's thirteen:
+    v= 515 (order  2060)  v+1= 516   6: [3, 5, 11, 85, 171, 257]
+    v= 523 (order  2092)  v+1= 524   2: [3, 261]
+    v= 537 (order  2148)  v+1= 538   0: []
+    v= 571 (order  2284)  v+1= 572   6: [3, 21, 25, 43, 51, 285]
+    v= 573 (order  2292)  v+1= 574   2: [13, 81]
+    v= 599 (order  2396)  v+1= 600  16: [3, 5, 7, 9, 11, 19, 23, 29, 39, 49, 59, 99, 119, 149, 199, 299]
+    v= 643 (order  2572)  v+1= 644   6: [3, 13, 27, 45, 91, 321]
+    v= 647 (order  2588)  v+1= 648  13: [3, 5, 7, 11, 17, 23, 35, 53, 71, 107, 161, 215, 323]
+    v= 659 (order  2636)  v+1= 660  14: [3, 5, 9, 11, 19, 21, 29, 43, 59, 65, 109, 131, 219, 329]
+    v= 669 (order  2676)  v+1= 670   2: [9, 133]
+    v= 719 (order  2876)  v+1= 720  22: [3, 5, 7, 9, 11, 15, 17, 19, 23, 29, 35, 39, 47, 59, 71, 79, 89, 119, 143, 179, 239, 359]
+    v= 721 (order  2884)  v+1= 722   1: [37]
+    v= 739 (order  2956)  v+1= 740   6: [3, 9, 19, 73, 147, 369]
+
+  DERIVED TOTAL: 96.  The relayed figure is '126+'.
+  MISMATCH of 30 (24% low). Adding b=1, which is
+  admissible at every odd v since 2 | (v+1), gives 109 -- still short.
+  So either the condition is stricter than the source's, or the 126+ counts
+  something else (a different thirteen, or an extra family, or it is typed).
+  THIS IS THE SHARPEST FORM OF CLAUSE (a): a condition confirmed on the
+  source's OWN four examples yields 96, not 126+. One of them is wrong.
+
+  Per-order bordered freedom, which is decision-relevant on its own:
+    ZERO admissible b >= 3:  v=537 (order 2148) -- no bordered route at all
+    exactly ONE:             v=721 (order 2884), b=37
+    the LIVE target v=523:   only b in [3, 261] -- nearly at the b=1 boundary,
+                             consistent with the live search being b=1
+    richest:                 v=719 (22), v=599 (16), v=659 (14), v=647 (13)
+  That ranking is NOT the b=1 free-bit ranking, which puts 523 first. If the
+  border axis matters, it points at different orders than the live worklist.
+
+  WHAT I CANNOT COMPUTE, and an error of mine that proves the point.
+  I first tabulated orbit counts at b >= 3 using the largest odd divisor of
+  v-b. It returned 2 orbits at v=523 where PLAN_2092's VERIFIED sweep gives
+  58, and the contradiction caught it: the largest odd divisor is not the
+  admissible d -- d must satisfy the ROW-SUM LAW, and the law I verified is
+  the b=1 one (sum a_k^2 = 4v with a_k = +-1 + d(2u-(r-1))). At b >= 3 the
+  target is the relaxed PAF condition above, so that law does not apply and
+  I HAVE NO ADMISSIBILITY TEST FOR d AT b >= 3. Therefore no free-bit or
+  density figure at b >= 3 can be computed here. That is clause (c), and it
+  stays with whoever can read the source. Applying a b=1-fitted relation at
+  b >= 3 is exactly the D53 trap, and I nearly shipped a table of it.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 6).
+==========================================================================
+
+==========================================================================
+15. Brief E's run: the reconciliation, and one error of mine
+==========================================================================
+  The source's condition, quoted from OPEN_ORDERS.md by the run:
+    "c = b+1 must divide v+1 (equivalently c | m, FINDING 62)."
+  That is EXACTLY the condition derived in sec 14. SECONDARY-RELAYED,
+  and the derivation stands confirmed against the source.
+
+  all 13 orders, b > 2, EVEN b allowed (the source's rule): 134
+  the ELEVEN orders the source's code hard-codes (no 669/721): 126
+  the pairs the source lists by hand for 669 and 721:         8
+  eleven + hand-added:                                        134
+  odd b only (the correct set):                               96
+  ASSERTED: 126 and 134 and 96. So "126+" is the eleven-order count with
+  even b included, plus two orders added by hand. The figure was never a
+  count of the admissible set.
+
+  AND MY 96 IS THE RIGHT NUMBER, because even b is IMPOSSIBLE.
+  FINDING_69's proof, checked here: the border reduces to S with
+  S S^T = 4cI - 4J. Then |S^T 1|^2 = 1^T S S^T 1 = 4c*k - 4k^2 with k the
+  size, i.e. 4c(b - c + 1) when k = c and the count is taken over the
+  border; at c = b+1 that is 4c*0 = 0. So every row sum is ZERO, each
+  column is a zero-sum +-1 vector of length c, hence c is EVEN and b ODD.
+  ASSERTED: 4c(b-c+1) = 0 identically at c = b+1, and c is even for every
+  odd b checked. OPEN_ORDERS over-counts by including even b; the
+  well-defined set is the 96 odd-b pairs.
+
+  FINDING_69's TWO CAVEATS, and the second is the real kill:
+  'Admissible does not mean the border exists' -- border_S.py constructed
+  S only for c <= 12, and the worklist was cut to 4 < c <= 12:
+  '18 pairs across 8 of the 13 open orders, at b = 5, 7, 9, 11.'
+
+     v  order  b in {5,7,9,11}
+   515   2060  [5, 11]
+   599   2396  [5, 7, 9, 11]
+   647   2588  [5, 7, 11]
+   659   2636  [5, 9, 11]
+   669   2676  [9]
+   719   2876  [5, 7, 9, 11]
+   739   2956  [9]
+  pairs: 18   orders: 7  [515, 599, 647, 659, 669, 719, 739]
+  ASSERTED: exactly 18 pairs, reproducing the run's figure.
+  BUT over 7 orders, where the run says 8 of 13. A small
+  discrepancy worth one line to settle -- mine or theirs.
+
+  And the workable set is 18 of 96 odd-b pairs (19%). 'Necessary is not
+  sufficient' fired exactly as the brief warned, at a factor of 5.3.
+
+  MY ERROR, reported by the run: THE LIVE TARGET IS b = 0, NOT b = 1.
+  FINDING 155's row '523 | d=9 | r=59 | 232 free bits | 2^-141' is a b=0
+  row, and FINDING 134 sec 3 gives r = (v-1)/d + 1 AT b=0 with the
+  sum a^2 = 4v law holding at b=0. So the relation sec 3 called
+  'b=1-fitted' was fitted at b=0, and FINDING 134 says admissibility is
+  'b = 0 or b odd'.
+
+  CONSEQUENCE FOR SEC 14's ASSERTION, and I overstated it: (b+1)|(v+1)
+  at b=0 reads 1 | 524, which is TRIVIALLY true and carries no
+  information. So the condition is confirmed on THREE non-trivial pairs
+  -- (347,5), (359,7), (479,3) -- not four. Three for three, not four
+  for four. The claim survives; the count of evidence for it does not.
+  ASSERTED: three non-trivial confirmations, and b=0 is vacuous.
+
+==========================================================================
+ALL ASSERTIONS PASSED (part 7).
+==========================================================================

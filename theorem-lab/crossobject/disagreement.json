@@ -1,0 +1,175 @@
+{
+ "end_to_end_accuracy_all_18": 1.0,
+ "extra_objects_queried": 1,
+ "extra_oracle_queries": 60,
+ "held_out_excluding_probed": 17,
+ "invariant_exact_all_18": 18,
+ "invariant_exact_excluding_probed": 17,
+ "label": "POST-HOC EXTENSION, not pre-registered",
+ "per_object": {
+  "31": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 30,
+   "f_pred": 30,
+   "route": "base",
+   "was_probed": false
+  },
+  "32": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 8,
+   "f_pred": 8,
+   "route": "base",
+   "was_probed": false
+  },
+  "33": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 10,
+   "f_pred": 10,
+   "route": "composed",
+   "was_probed": false
+  },
+  "34": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 16,
+   "f_pred": 16,
+   "route": "composed",
+   "was_probed": false
+  },
+  "35": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 12,
+   "f_pred": 12,
+   "route": "observed",
+   "was_probed": true
+  },
+  "36": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 6,
+   "f_pred": 6,
+   "route": "composed",
+   "was_probed": false
+  },
+  "37": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 36,
+   "f_pred": 36,
+   "route": "base",
+   "was_probed": false
+  },
+  "38": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 18,
+   "f_pred": 18,
+   "route": "composed",
+   "was_probed": false
+  },
+  "39": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 12,
+   "f_pred": 12,
+   "route": "composed",
+   "was_probed": false
+  },
+  "40": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 4,
+   "f_pred": 4,
+   "route": "composed",
+   "was_probed": false
+  },
+  "41": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 40,
+   "f_pred": 40,
+   "route": "base",
+   "was_probed": false
+  },
+  "42": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 6,
+   "f_pred": 6,
+   "route": "composed",
+   "was_probed": false
+  },
+  "43": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 42,
+   "f_pred": 42,
+   "route": "base",
+   "was_probed": false
+  },
+  "44": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 10,
+   "f_pred": 10,
+   "route": "composed",
+   "was_probed": false
+  },
+  "45": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 12,
+   "f_pred": 12,
+   "route": "composed",
+   "was_probed": false
+  },
+  "46": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 22,
+   "f_pred": 22,
+   "route": "composed",
+   "was_probed": false
+  },
+  "47": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 46,
+   "f_pred": 46,
+   "route": "base",
+   "was_probed": false
+  },
+  "48": {
+   "accuracy": 1.0,
+   "exact": true,
+   "f_obs": 4,
+   "f_pred": 4,
+   "route": "composed",
+   "was_probed": false
+  }
+ },
+ "resolved_op": "lcm",
+ "rounds": [
+  {
+   "objects_observed": 30,
+   "probe": 35,
+   "probe_period_observed": 12,
+   "survivors": [
+    "lcm",
+    "max"
+   ],
+   "training_accuracy": 1.0
+  },
+  {
+   "objects_observed": 31,
+   "survivors": [
+    "lcm"
+   ],
+   "training_accuracy": 1.0
+  }
+ ]
+}

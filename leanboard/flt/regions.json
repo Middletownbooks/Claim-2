@@ -1,0 +1,1189 @@
+{
+ "ami_citation_vs_statement_vocabulary": 0.3995,
+ "ami_permuted_baseline": 0.1476,
+ "communities": [
+  {
+   "bottleneck_ratio": 0.2824,
+   "community": 223,
+   "example_members": [
+    "AddAut_exists_mem_apply_eq_of_addOrderOf_eq_of_transvection_mem",
+    "AddCommGroup_exists_addEquiv_prod_torsionBy_apply_eq_of_forall_exists_ne_smul",
+    "AddCommGroup_exists_torsionBy_coords_of_dicyclic_relations"
+   ],
+   "interface_nodes": 2533,
+   "size": 8970,
+   "top_namespaces": [
+    [
+     "ModularCurve",
+     5647
+    ],
+    [
+     "AlgebraicCurve",
+     1318
+    ],
+    [
+     "AlgebraicGeometry",
+     399
+    ],
+    [
+     "WeierstrassCurve",
+     315
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.1601,
+   "community": 5434,
+   "example_members": [
+    "AbsoluteValue_exists_forall_sub_lt_of_pairwise_not_isEquiv",
+    "AddChar_exists_continuousLinearMap_fourierChar_eq",
+    "AddCircle_exists_eq_coe_div_of_nsmul_eq_zero_of_dvd"
+   ],
+   "interface_nodes": 651,
+   "size": 4066,
+   "top_namespaces": [
+    [
+     "AutomorphicForm",
+     1777
+    ],
+    [
+     "LanglandsTunnell",
+     728
+    ],
+    [
+     "NumberField",
+     611
+    ],
+    [
+     "groupCohomology",
+     258
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.4171,
+   "community": 10222,
+   "example_members": [
+    "AlgEquiv_isOpen_ker_restrictNormalHom",
+    "AlgHom_exists_intertwiner_of_adjoin_eq_top_of_injective",
+    "AlgHom_length_cotangent_le_and_congruenceIdeal_le_of_surjective"
+   ],
+   "interface_nodes": 538,
+   "size": 1290,
+   "top_namespaces": [
+    [
+     "CuspForm",
+     395
+    ],
+    [
+     "CohCarrier",
+     177
+    ],
+    [
+     "ModularCurve",
+     131
+    ],
+    [
+     "GaloisRepAdic",
+     79
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.6222,
+   "community": 425,
+   "example_members": [
+    "AddMonoidHom_exists_pos_forall_nsmul_eq_zero_of_add_eq_zero_of_finite_fixedPoints_comp_self",
+    "AddMonoidHom_natCard_sq_le_of_isotropic",
+    "AddSubgroup_addGroup_fg_of_le_of_addGroup_fg"
+   ],
+   "interface_nodes": 662,
+   "size": 1064,
+   "top_namespaces": [
+    [
+     "ModularCurve",
+     518
+    ],
+    [
+     "WeierstrassCurve",
+     116
+    ],
+    [
+     "HopfAlgebra",
+     82
+    ],
+    [
+     "AutomorphicForm",
+     40
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.512,
+   "community": 124,
+   "example_members": [
+    "AddSubgroup_exists_forall_mem_iff_single_sub_mul_mem_of_sum_mul_eq_one",
+    "AdjoinRoot_exists_monoidHom_algEquiv_bijective_tensorProduct_cyclotomic_of_isUnit",
+    "AdjoinRoot_finite_free_faithfullyFlat_etale_cyclotomic_of_isUnit"
+   ],
+   "interface_nodes": 319,
+   "size": 623,
+   "top_namespaces": [
+    [
+     "CerednikDrinfeld",
+     323
+    ],
+    [
+     "QuaternionAlgebra",
+     116
+    ],
+    [
+     "AlgebraicGeometry",
+     92
+    ],
+    [
+     "AlgebraicCurve",
+     25
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.6168,
+   "community": 3038,
+   "example_members": [
+    "AlgHom_nonempty_equiv_fin_of_tensorProduct_algEquiv_pi",
+    "AlgebraicCurve_CurveModel_eq_genusFF_of_forall_ell_sub_ell_eq",
+    "AlgebraicCurve_CurveModel_exists_divisorClassMap"
+   ],
+   "interface_nodes": 338,
+   "size": 548,
+   "top_namespaces": [
+    [
+     "AlgebraicGeometry",
+     421
+    ],
+    [
+     "ModularCurve",
+     94
+    ],
+    [
+     "AlgebraicCurve",
+     14
+    ],
+    [
+     "exteriorPower",
+     4
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.4532,
+   "community": 1432,
+   "example_members": [
+    "AdicCompletion_exists_algebra_moduleFinite_of_moduleFinite_of_isMaximal",
+    "AdjoinRoot_isReduced_of_isReduced_of_isUnit_sq_sub_four_mul",
+    "AlgHom_exists_rangeRestrict_factor_of_ker_eq"
+   ],
+   "interface_nodes": 237,
+   "size": 523,
+   "top_namespaces": [
+    [
+     "ModularCurve",
+     168
+    ],
+    [
+     "WeierstrassCurve",
+     164
+    ],
+    [
+     "WeierstrassProjModel",
+     141
+    ],
+    [
+     "AlgebraicGeometry",
+     6
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.4202,
+   "community": 2573,
+   "example_members": [
+    "Algebra_TensorProduct_nontrivial_and_forall_isIdempotentElem_of_isAlgClosed",
+    "Algebra_finitePresentation_of_finite_of_flat_of_isLocalRing",
+    "AlgebraicGeometry_IsClosedImmersion_map_ideal_ker_eq_of_forall_factorsThrough_iff_atPrime"
+   ],
+   "interface_nodes": 216,
+   "size": 514,
+   "top_namespaces": [
+    [
+     "AlgebraicGeometry",
+     356
+    ],
+    [
+     "CerednikDrinfeld",
+     74
+    ],
+    [
+     "GoodReductionJacobian",
+     69
+    ],
+    [
+     "Module",
+     7
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.4689,
+   "community": 7903,
+   "example_members": [
+    "Algebra_FormallySmooth_existsUnique_algHom_apply_eq_of_isNilpotent",
+    "AlgebraicGeometry_Scheme_exists_isOpenImmersion_isClosedImmersion_iff_of_isIdempotentElem_of_forall_exists_idempotent_of_finiteType",
+    "AlgebraicGeometry_Scheme_exists_opens_disjoint_forall_mem_iff_of_natural_nontrivial_of_connected"
+   ],
+   "interface_nodes": 234,
+   "size": 499,
+   "top_namespaces": [
+    [
+     "CerednikDrinfeld",
+     390
+    ],
+    [
+     "MvFormalGroup",
+     38
+    ],
+    [
+     "GoodReductionJacobian",
+     29
+    ],
+    [
+     "MvPowerSeries",
+     25
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.6223,
+   "community": 2119,
+   "example_members": [
+    "AddCommGroup_apply_zsmul_add_eq_of_forall_cube",
+    "AddMonoidAlgebra_natCard_withConv_algHom_pow_eq_one",
+    "AddMonoidAlgebra_ringKrullDim_pi_fin_int_eq"
+   ],
+   "interface_nodes": 285,
+   "size": 458,
+   "top_namespaces": [
+    [
+     "GoodReductionJacobian",
+     143
+    ],
+    [
+     "AlgebraicGeometry",
+     124
+    ],
+    [
+     "CerednikDrinfeld",
+     102
+    ],
+    [
+     "ProjSpaceCech",
+     19
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.7617,
+   "community": 505,
+   "example_members": [
+    "AlgebraicCurve_Annulus_abv_evalAt_le_max_of_isAttached_both_ends",
+    "AlgebraicCurve_Annulus_abv_evalAt_lt_one_of_isAttached_of_ord_residue_pos",
+    "AlgebraicCurve_Annulus_abv_evalAt_sub_eq_abv_param_sub_of_isAttached_both_ends_of_ord_residue_eq_one"
+   ],
+   "interface_nodes": 326,
+   "size": 428,
+   "top_namespaces": [
+    [
+     "ModularCurve",
+     348
+    ],
+    [
+     "AlgebraicCurve",
+     60
+    ],
+    [
+     "ValuationSubring",
+     5
+    ],
+    [
+     "WeierstrassCurve",
+     4
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.5767,
+   "community": 2289,
+   "example_members": [
+    "AddCommGroup_exists_mvPolynomial_totalDegree_le_eval_eq_of_forall_exists_polynomial_zsmul_add",
+    "AdicCompletion_map_ker_subtype_injective_and_range_eq_ker_map",
+    "AlgebraicGeometry_IsClosedImmersion_exists_comp_eq_specMap_comp_fromSpecStalk_iff_ker_stalkMap_le"
+   ],
+   "interface_nodes": 233,
+   "size": 404,
+   "top_namespaces": [
+    [
+     "AlgebraicGeometry",
+     299
+    ],
+    [
+     "CerednikDrinfeld",
+     25
+    ],
+    [
+     "Module",
+     24
+    ],
+    [
+     "GoodReductionJacobian",
+     17
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.2145,
+   "community": 788,
+   "example_members": [
+    "AlgebraicCurve_Divisor_degZero_le_closure_single_sub_single_of_surjective",
+    "AlgebraicCurve_Pic0_eFull_comp_pullback_eq_mk_pushforwardAlong_of_mumfordQuotient_theta",
+    "AlgebraicCurve_Pic0_eFull_comp_pushforward_eq_mk_pullbackAlong_of_mumfordQuotient_theta_of_v_card_stabilizer_eq_one"
+   ],
+   "interface_nodes": 68,
+   "size": 317,
+   "top_namespaces": [
+    [
+     "CerednikDrinfeld",
+     255
+    ],
+    [
+     "AlgebraicCurve",
+     17
+    ],
+    [
+     "LT",
+     14
+    ],
+    [
+     "ValuationSubring",
+     9
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.413,
+   "community": 5829,
+   "example_members": [
+    "AdelicDock_isCompact_and_isOpen_localLevelOne",
+    "AutomorphicForm_LocalFunctionSpace_eq_zero_of_forall_apply_diagOne_eq_zero_of_irreducible_of_admissible",
+    "AutomorphicForm_WhittakerModel_apply_mul_apply_eq_apply_mul_apply_of_forall_diagOne_eq_smul_of_transcendental"
+   ],
+   "interface_nodes": 121,
+   "size": 293,
+   "top_namespaces": [
+    [
+     "LanglandsTunnell",
+     237
+    ],
+    [
+     "AutomorphicForm",
+     35
+    ],
+    [
+     "Matrix",
+     3
+    ],
+    [
+     "NumberField",
+     3
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.5495,
+   "community": 10551,
+   "example_members": [
+    "Complex_integral_modularFundamentalDomain_eq_boundary_of_hasFDerivAt",
+    "CongruenceSubgroup_Gamma0_le_closure_T_union_setOf_dvd",
+    "CongruenceSubgroup_one_mem_strictPeriods_Gamma0"
+   ],
+   "interface_nodes": 161,
+   "size": 293,
+   "top_namespaces": [
+    [
+     "CuspForm",
+     92
+    ],
+    [
+     "HeckeEis",
+     68
+    ],
+    [
+     "ModularCurve",
+     45
+    ],
+    [
+     "ModularForm",
+     27
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.6961,
+   "community": 104,
+   "example_members": [
+    "AdicCompletion_ringEquiv_eq_of_forall_apply_algebraMap_eq_of_isLocalRing",
+    "AlgHom_exists_algEquiv_comp_eq_of_isAlgClosed",
+    "Algebra_Etale_of_etale_adicCompletion_tensorProduct"
+   ],
+   "interface_nodes": 197,
+   "size": 283,
+   "top_namespaces": [
+    [
+     "ModularCurve",
+     169
+    ],
+    [
+     "ValuationSubring",
+     17
+    ],
+    [
+     "AlgebraicGeometry",
+     14
+    ],
+    [
+     "IsLocalRing",
+     14
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.5144,
+   "community": 7871,
+   "example_members": [
+    "CerednikDrinfeld_CSTower_exists_finiteIdeleDiagonal_mul_inv_mem_levelHeckeUSet_meetOrder_isEichlerOrder_of_dvd",
+    "CerednikDrinfeld_CSTower_isEichlerOrder_meetOrder_and_exists_storey_of_mem_levelHeckeUSet_of_evalAt_eq_one",
+    "CerednikDrinfeld_CSTower_isEichlerOrder_meetOrder_and_exists_storey_of_mem_primeHeckeSet_of_evalAt_eq_one"
+   ],
+   "interface_nodes": 143,
+   "size": 278,
+   "top_namespaces": [
+    [
+     "QuaternionAlgebra",
+     139
+    ],
+    [
+     "CerednikDrinfeld",
+     88
+    ],
+    [
+     "Submodule",
+     23
+    ],
+    [
+     "Matrix",
+     13
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.4832,
+   "community": 210,
+   "example_members": [
+    "AlgHom_eq_of_forall_sub_mem_of_le_jacobson_of_formallyUnramified",
+    "AlgHom_exists_comp_eq_of_faithfullyFlat_of_isAlgClosed",
+    "Algebra_FormallyEtale_existsUnique_algHom_baseChange_eq_of_module_finite_free_zmodp"
+   ],
+   "interface_nodes": 115,
+   "size": 238,
+   "top_namespaces": [
+    [
+     "HopfAlgebra",
+     51
+    ],
+    [
+     "MvFormalGroup",
+     36
+    ],
+    [
+     "PDivisibleGroup",
+     30
+    ],
+    [
+     "ModularCurve",
+     26
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.4739,
+   "community": 2109,
+   "example_members": [
+    "AddChar_exists_completeOrthogonalIdempotents_forall_mul_eq_pow_mul_of_forall_isUnit_one_sub_pow",
+    "AddCommGroup_natCard_addMonoidHom_eq_of_isAddCyclic",
+    "Algebra_FiniteType_exists_isMaximal_and_finite_quotient_of_int"
+   ],
+   "interface_nodes": 100,
+   "size": 211,
+   "top_namespaces": [
+    [
+     "AlgebraicGeometry",
+     191
+    ],
+    [
+     "GoodReductionJacobian",
+     5
+    ],
+    [
+     "CerednikDrinfeld",
+     4
+    ],
+    [
+     "Ideal",
+     2
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.5291,
+   "community": 642,
+   "example_members": [
+    "Algebra_norm_eq_norm_fst_mul_norm_snd_of_injective",
+    "Algebra_norm_one_add_eps_tmul",
+    "AlgebraicCurve_cechH1ToH1_mk_eq_cechH1ToH1_mk_of_crossSections"
+   ],
+   "interface_nodes": 109,
+   "size": 206,
+   "top_namespaces": [
+    [
+     "AlgebraicGeometry",
+     178
+    ],
+    [
+     "ModularCurve",
+     9
+    ],
+    [
+     "GoodReductionJacobian",
+     4
+    ],
+    [
+     "Algebra",
+     2
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.3472,
+   "community": 11713,
+   "example_members": [
+    "AdjoinRoot_exists_isLocalRing_isAdicComplete_of_monic_of_coeff_mem_maximalIdeal",
+    "FormalGroup_IsBaseChange_apply_linCombAdic_eq_of_apply_mem",
+    "FormalGroup_IsBaseChange_exists_monic_natDegree_eq_mul_self_nthSeries_eq_mul"
+   ],
+   "interface_nodes": 67,
+   "size": 193,
+   "top_namespaces": [
+    [
+     "FormalGroup",
+     69
+    ],
+    [
+     "WeierstrassCurve",
+     68
+    ],
+    [
+     "ModularCurve",
+     38
+    ],
+    [
+     "PowerSeries",
+     4
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.3913,
+   "community": 7938,
+   "example_members": [
+    "CerednikDrinfeld_CartierLift_exists_digits_forall_smul_eq_teichmuller_smul_add_sum_verschiebungInt",
+    "CerednikDrinfeld_FormalODModule_Hom_bijective_map_and_forall_map_eq_of_isIso",
+    "CerednikDrinfeld_FormalODModule_IsODHom_map_mem_gradedPiece"
+   ],
+   "interface_nodes": 72,
+   "size": 184,
+   "top_namespaces": [
+    [
+     "CerednikDrinfeld",
+     172
+    ],
+    [
+     "WittVector",
+     5
+    ],
+    [
+     "MvFormalGroup",
+     4
+    ],
+    [
+     "Ideal",
+     2
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.5814,
+   "community": 452,
+   "example_members": [
+    "AlgHom_congruenceIdeal_ne_bot_of_isReduced",
+    "Algebra_PatchingDatum_exists_module_of_bijective_of_exists_presentation",
+    "Algebra_PatchingDatum_nonempty_of_exists_presentation_of_free"
+   ],
+   "interface_nodes": 100,
+   "size": 172,
+   "top_namespaces": [
+    [
+     "GaloisRep",
+     39
+    ],
+    [
+     "GaloisRepAdic",
+     38
+    ],
+    [
+     "WeierstrassCurve",
+     29
+    ],
+    [
+     "IsLocalRing",
+     8
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.5,
+   "community": 2190,
+   "example_members": [
+    "AlgebraicGeometry_HilbertFunctor_Point_I_eq_span_of_forall_finrank_piece_succ_le",
+    "AlgebraicGeometry_HilbertFunctor_Point_flat_comp_of_ideal_basicOpen_eq_span",
+    "AlgebraicGeometry_HilbertFunctor_exists_closedImmersion_flat_lfp_forall_mem_iff_ker_ideal_eq_of_point_hilbertFunctionOf"
+   ],
+   "interface_nodes": 83,
+   "size": 166,
+   "top_namespaces": [
+    [
+     "AlgebraicGeometry",
+     103
+    ],
+    [
+     "MvPolynomial",
+     20
+    ],
+    [
+     "Module",
+     17
+    ],
+    [
+     "CerednikDrinfeld",
+     16
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.4688,
+   "community": 189,
+   "example_members": [
+    "Algebra_Etale_isDomain_and_isIntegrallyClosed_of_isLocalization_atPrime",
+    "Algebra_Etale_isIntegrallyClosed_tensorProduct_of_isDomain",
+    "Algebra_FormallyEtale_of_formallySmooth_of_bijective_mapBaseChange"
+   ],
+   "interface_nodes": 75,
+   "size": 160,
+   "top_namespaces": [
+    [
+     "NeronModelInfra",
+     55
+    ],
+    [
+     "AlgebraicGeometry",
+     51
+    ],
+    [
+     "GoodReductionJacobian",
+     19
+    ],
+    [
+     "ModularCurve",
+     8
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.6333,
+   "community": 424,
+   "example_members": [
+    "AddMonoidAlgebra_exists_bialgEquiv_baseChange_tmul_single",
+    "AlgHom_comp_injective_and_exists_comp_eq_iff_of_sub_one_mem_span_of_mul_sub_eq_zero",
+    "AlgHom_natCard_eq_finrank_of_isReduced_of_isAlgClosed"
+   ],
+   "interface_nodes": 95,
+   "size": 150,
+   "top_namespaces": [
+    [
+     "CerednikDrinfeld",
+     58
+    ],
+    [
+     "PDivisibleGroup",
+     19
+    ],
+    [
+     "ModularCurve",
+     15
+    ],
+    [
+     "HopfAlgebra",
+     14
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.2083,
+   "community": 14359,
+   "example_members": [
+    "LanglandsTunnell_Converse_ArchDatumR_W_diagOne_mul_iwasawa_eq_psi_mul_centralChar_mul_W_diagOne_of_weightZero",
+    "LanglandsTunnell_Converse_ArchDatumR_W_diagOne_mul_iwasawa_eq_psi_mul_centralChar_mul_archWeightChar_mul_W_diagOne",
+    "LanglandsTunnell_Converse_ArchDatumR_continuousOn_and_exists_ne_zero_W_diagOne_of_weightZero"
+   ],
+   "interface_nodes": 30,
+   "size": 144,
+   "top_namespaces": [
+    [
+     "LanglandsTunnell",
+     143
+    ],
+    [
+     "MeasureTheory",
+     1
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.2741,
+   "community": 14529,
+   "example_members": [
+    "LanglandsTunnell_CubicInduction_SlabL2_archDeriv_smoothingOperator",
+    "LanglandsTunnell_CubicInduction_SlabL2_continuous_and_isArchSmooth3_smoothingOperator",
+    "LanglandsTunnell_CubicInduction_SlabL2_exists_nhds_one_forall_norm_smoothingOperator_sub_le_of_setIntegral_compl_le"
+   ],
+   "interface_nodes": 37,
+   "size": 135,
+   "top_namespaces": [
+    [
+     "LanglandsTunnell",
+     114
+    ],
+    [
+     "RegularSingular",
+     11
+    ],
+    [
+     "Matrix",
+     6
+    ],
+    [
+     "deriv",
+     2
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.6466,
+   "community": 85,
+   "example_members": [
+    "AdicCompletion_exists_isRegular_pair_of_isIntegrallyClosed_of_ringKrullDim_eq_two",
+    "AdicCompletion_exists_moduleFinite_etale_adicCompletion_tensorProduct_of_flat_of_map_maximalIdeal_eq",
+    "AdicCompletion_exists_ringHom_ringEquiv_adjoinRoot_of_etale_of_isMaximal"
+   ],
+   "interface_nodes": 86,
+   "size": 133,
+   "top_namespaces": [
+    [
+     "IsRegularLocalRing",
+     25
+    ],
+    [
+     "AdicCompletion",
+     13
+    ],
+    [
+     "Algebra",
+     11
+    ],
+    [
+     "IsLocalRing",
+     11
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.561,
+   "community": 5391,
+   "example_members": [
+    "ArithFrobResidue_orderOf_arithFrob_eq_finrank_of_inertia_eq_bot",
+    "ArtinL_Abelian_apply_artinSymbol_eq_one_of_sub_one_mem_conductor_u0",
+    "ArtinL_Abelian_apply_artinSymbol_eq_one_of_sub_one_mem_pow_mul_of_conductorExponent_le_u0"
+   ],
+   "interface_nodes": 69,
+   "size": 123,
+   "top_namespaces": [
+    [
+     "NumberField",
+     39
+    ],
+    [
+     "ArtinL",
+     22
+    ],
+    [
+     "LanglandsTunnell",
+     22
+    ],
+    [
+     "M4aHerbrand",
+     10
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.6917,
+   "community": 7916,
+   "example_members": [
+    "AddMonoidHom_exists_basis_apply_eq_self_of_map_smul_eq_frobenius_smul_of_isAlgClosed",
+    "AddMonoidHom_exists_basis_apply_eq_self_of_map_smul_eq_pow_smul_of_isAlgClosed",
+    "CerednikDrinfeld_FormalODModule_CritChart_exists_basis_coe_eq_and_injective_endMatrix_of_forall_existsUnique_of_isCompl"
+   ],
+   "interface_nodes": 83,
+   "size": 120,
+   "top_namespaces": [
+    [
+     "CerednikDrinfeld",
+     88
+    ],
+    [
+     "MvFormalGroup",
+     19
+    ],
+    [
+     "WittVector",
+     4
+    ],
+    [
+     "PadicInt",
+     3
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.4167,
+   "community": 209,
+   "example_members": [
+    "Algebra_FinitePresentation_of_faithfullyFlat_of_finitePresentation",
+    "Algebra_FiniteType_of_faithfullyFlat_of_finitePresentation",
+    "Algebra_H1Cotangent_liftBaseChange_map_injective_of_etale"
+   ],
+   "interface_nodes": 50,
+   "size": 120,
+   "top_namespaces": [
+    [
+     "AlgebraicGeometry",
+     33
+    ],
+    [
+     "ModularCurve",
+     31
+    ],
+    [
+     "HopfAlgebra",
+     19
+    ],
+    [
+     "Algebra",
+     9
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.5877,
+   "community": 2154,
+   "example_members": [
+    "AlgebraicGeometry_IsOpenImmersion_of_isClosedImmersion_of_flat_comp_of_etale",
+    "AlgebraicGeometry_OModulePresheaf_Leray_dV_comp_biAug",
+    "AlgebraicGeometry_OModulePresheaf_Leray_exists_hom_relHPresheaf_zero"
+   ],
+   "interface_nodes": 67,
+   "size": 114,
+   "top_namespaces": [
+    [
+     "GoodReductionJacobian",
+     41
+    ],
+    [
+     "AlgebraicGeometry",
+     35
+    ],
+    [
+     "CerednikDrinfeld",
+     34
+    ],
+    [
+     "IsLocalRing",
+     3
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.7248,
+   "community": 10014,
+   "example_members": [
+    "AddMonoidHom_exists_isAddCyclic_natCard_eq_forall_apply_mem_of_apply_apply_eq_smul",
+    "CerednikDrinfeld_autOnPlaces_eq_of_isAtkinLehnerLevelAut_of_forall_toValuationSubring_eq_comap_moduliPlace",
+    "CerednikDrinfeld_classSet_mk_eq_iff_nonempty_variableChange_of_kernelIdealSet"
+   ],
+   "interface_nodes": 79,
+   "size": 109,
+   "top_namespaces": [
+    [
+     "WeierstrassCurve",
+     65
+    ],
+    [
+     "CerednikDrinfeld",
+     28
+    ],
+    [
+     "QuaternionAlgebra",
+     7
+    ],
+    [
+     "Submodule",
+     3
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.6729,
+   "community": 185,
+   "example_members": [
+    "Algebra_Etale_eq_of_forall_algHom_apply_eq",
+    "Algebra_Etale_finite_and_bijective_lift_pi_algHom_algebraicClosure",
+    "Algebra_Etale_finite_and_bijective_lift_pi_algHom_of_isAlgClosed"
+   ],
+   "interface_nodes": 72,
+   "size": 107,
+   "top_namespaces": [
+    [
+     "PDivisibleGroup",
+     31
+    ],
+    [
+     "ResidualGaloisRep",
+     21
+    ],
+    [
+     "HopfAlgebra",
+     18
+    ],
+    [
+     "WeierstrassProjModel",
+     15
+    ]
+   ]
+  },
+  {
+   "bottleneck_ratio": 0.451,
+   "community": 11587,
+   "example_members": [
+    "ExtCitation_LocalLevel_aeval_pow_card_residueField_minpoly_eq_zero",
+    "ExtCitation_LocalLevel_algEquiv_apply_mem_Rw_iff",
+    "ExtCitation_LocalLevel_eq_of_unramified_level_of_index_eq"
+   ],
+   "interface_nodes": 46,
+   "size": 102,
+   "top_namespaces": [
+    [
+     "ExtCitation",
+     26
+    ],
+    [
+     "groupCohomology",
+     25
+    ],
+    [
+     "IntermediateField",
+     14
+    ],
+    [
+     "IsLocalRing",
+     11
+    ]
+   ]
+  }
+ ],
+ "communities_ge_100": 36,
+ "communities_ge_500": 8,
+ "communities_total": 500,
+ "largest_community_size": 8970,
+ "median_bottleneck_ratio_ge_100": 0.512,
+ "nodes": 29511,
+ "region_graph_top_edges": [
+  {
+   "citations": 914,
+   "from": 425,
+   "to": 223
+  },
+  {
+   "citations": 872,
+   "from": 505,
+   "to": 223
+  },
+  {
+   "citations": 742,
+   "from": 223,
+   "to": 425
+  },
+  {
+   "citations": 515,
+   "from": 223,
+   "to": 505
+  },
+  {
+   "citations": 366,
+   "from": 223,
+   "to": 3038
+  },
+  {
+   "citations": 280,
+   "from": 3038,
+   "to": 223
+  },
+  {
+   "citations": 253,
+   "from": 10222,
+   "to": 223
+  },
+  {
+   "citations": 209,
+   "from": 5829,
+   "to": 5434
+  },
+  {
+   "citations": 201,
+   "from": 104,
+   "to": 223
+  },
+  {
+   "citations": 188,
+   "from": 5434,
+   "to": 5829
+  },
+  {
+   "citations": 149,
+   "from": 452,
+   "to": 10222
+  },
+  {
+   "citations": 147,
+   "from": 223,
+   "to": 1432
+  },
+  {
+   "citations": 144,
+   "from": 223,
+   "to": 104
+  },
+  {
+   "citations": 142,
+   "from": 1432,
+   "to": 223
+  },
+  {
+   "citations": 138,
+   "from": 10222,
+   "to": 10551
+  },
+  {
+   "citations": 111,
+   "from": 223,
+   "to": 10222
+  },
+  {
+   "citations": 111,
+   "from": 10014,
+   "to": 223
+  },
+  {
+   "citations": 103,
+   "from": 2119,
+   "to": 223
+  },
+  {
+   "citations": 97,
+   "from": 3038,
+   "to": 2289
+  },
+  {
+   "citations": 91,
+   "from": 124,
+   "to": 223
+  },
+  {
+   "citations": 89,
+   "from": 124,
+   "to": 7871
+  },
+  {
+   "citations": 79,
+   "from": 425,
+   "to": 10222
+  },
+  {
+   "citations": 71,
+   "from": 7938,
+   "to": 7916
+  }
+ ],
+ "singletons": 15,
+ "size_distribution_top20": [
+  8970,
+  4066,
+  1290,
+  1064,
+  623,
+  548,
+  523,
+  514,
+  499,
+  458,
+  428,
+  404,
+  317,
+  293,
+  293,
+  283,
+  278,
+  238,
+  211,
+  206
+ ],
+ "undirected_edges": 106897
+}

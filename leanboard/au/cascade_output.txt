@@ -1,0 +1,99 @@
+
+============================================================================
+1. The corpus records the cascade, in the entries' own words
+============================================================================
+  2026-07-22  sig  20  Dinitz-Garg-Goemans                       
+  2026-07-23  sig  10  Four-terminal planar DGG                  
+  2026-07-31  sig  15  Common-Point Interval Systems for SSUF    
+      -builds-on-> dinitz-garg-goemans-unsplittable-flow
+       "The optimal-constant question this entry attacks is exactly what the Dinitz-Garg-Goemans disproof le"
+  2026-08-04  sig   4  Four-terminal SSUF scenario ladder        
+      -related-> dinitz-garg-goemans-unsplittable-flow
+       "A scenario-count ladder on one fixed four-terminal planar gadget, in the same cost-preserving unspli"
+  2026-08-13  sig  15  1.17353 planar bound and exact local envel
+      -continues-> 1-28249-lower-bound-and-partial-upper-bounds-for-cos
+       "Part III of the same programme. Part II's 1.28249 record lower bound becomes an exact local envelope"
+  PASS  later SSUF entries declare they build on the DGG disproof   [2 entries point back to it by slug]
+  PASS  the operator's account is confirmed by the corpus, not inferred   ['The optimal-constant question this entry attacks is exactly what the Dinitz-Garg-Goemans disproof left open.']
+
+============================================================================
+2. How much cascade does the corpus capture at all?
+============================================================================
+  entries carrying a `relations` field : 14 of 664  (2.1%)
+  of those, in the SSUF chain          : 3  (21% of ALL recorded relations)
+  PASS  the corpus CAN represent chains but almost never does   [2.1% populated]
+  PASS  recorded relations concentrate on this one loud cascade   [3/14 of the corpus's entire relation graph]
+
+============================================================================
+3. What has to be withdrawn
+============================================================================
+  Part 2 claimed literature placement is 'the only [instruction] whose
+  absence has now cost something observable in three separate cases'.
+  Re-examined, none of the three is a cost:
+
+    Nevanlinna  the instruction was PRESENT -- prompt 3 asks 'if you find
+                that my result is already covered by the literature, tell
+                me' -- and the model reported a negative search honestly
+                and recommended expert confirmation. It worked.
+    Chow LaTeX  omits Harvey-Kiraly-Lau, but was sent directly to the
+                conjecture's author, who knows his own literature.
+    SSUF        immediate big news; the field knew without being told.
+
+  CONFIRMED COSTS: ZERO. The claim is withdrawn, not softened.
+  What survives is only the fact about the prompts: literature placement
+  is the most consistently absent instruction across the five. Its
+  consequence is unevidenced.
+  PASS  the three-case cost claim is withdrawn entirely
+
+============================================================================
+4. The same error, for the third time
+============================================================================
+  1. CONCURRENCY. I read near-simultaneous claims as evidence about models
+     converging. The channel was social -- an announcement read and
+     answered, a public ladder, a shared preprint. (arm AR)
+  2. M4. I wrote that two independent refutations could both exist and
+     'the dependent literature never learn'. A preprint existed and the
+     conjecture's author was written to by BOTH researchers. (arm AR)
+  3. SSUF. I read missing references as a cost. The result was big news
+     and the successors were built on it. (here)
+
+  The pattern: I keep treating the DOCUMENT and the CORPUS as the channel.
+  The channel is social. Each time, the thing I called missing from the
+  world was only missing from my instrument.
+  PASS  the error is recorded as a pattern, with all three instances
+
+============================================================================
+5. What the corpus is actually good and bad at, restated
+============================================================================
+  GOOD: a cascade with a LOUD seed is captured end to end. The SSUF chain
+  has five entries across three weeks, and the corpus carries explicit
+  builds-on / continues edges naming the seed.
+
+  BAD: a cascade with a QUIET seed has no representation whatever. The
+  Chow C(3) chain -- preprint, direct notice to the author, a second
+  independent counterexample -- has ZERO entries. Chow's C(3) is not in
+  the corpus at all, though White's conjecture and Rota flat unimodality
+  are.
+
+  Both cascades are real and comparably structured. The difference in
+  visibility is newsworthiness of the seed, not anything about the work.
+
+  corpus entries matching Chow / three bases / C(3) : 0
+  PASS  the quiet cascade is entirely absent from the corpus
+
+============================================================================
+6. Where the instruction WOULD matter
+============================================================================
+  Not where it has been shown to cost -- nowhere has. Where the social
+  channel is thin: a quiet result on an obscure target. That is exactly
+  the M4 class from arm AR, and exactly where the operator's own case
+  sits. There, nobody tells you, and the two independent finders learned
+  of each other only because both wrote to the same author.
+
+  Stated as a conditional with no confirming instance, which is what the
+  evidence supports.
+  PASS  the surviving claim is stated as a conditional, not a finding
+
+============================================================================
+RESULT   8/8 checks passed
+============================================================================

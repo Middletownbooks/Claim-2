@@ -1,0 +1,2595 @@
+{
+  "columns": {
+    "candidates": [
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "gcd:5"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "mod:4"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "gcd:5"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "mod:4"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "gcd:5"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "mod:4"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "gcd:5"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "mod:4"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "gcd:5"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "mod:4"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 40,
+        "contradictory_pairs": 36,
+        "features": [
+          "mod:4",
+          "gcd:5"
+        ],
+        "groups": 8,
+        "label": "COMPUTED",
+        "quality_score": 0.9186666666666667,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 60,
+        "contradictory_pairs": 56,
+        "features": [
+          "mod:4"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.9426666666666667,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 12,
+        "contradictory_pairs": 11,
+        "features": [
+          "mod:4",
+          "mod:3"
+        ],
+        "groups": 12,
+        "label": "COMPUTED",
+        "quality_score": 0.9436666666666667,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 58,
+        "contradictory_pairs": 54,
+        "features": [
+          "gcd:5",
+          "mod:3"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.9455344827586206,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 196,
+        "contradictory_pairs": 186,
+        "features": [
+          "gcd:5"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.9541462585034014,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 84,
+        "contradictory_pairs": 80,
+        "features": [
+          "mod:3"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.9596309523809523,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 96,
+        "contradictory_pairs": 92,
+        "features": [
+          "gcd:4"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.9655833333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 266,
+        "features": [
+          "const:0"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.9668514492753623,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 266,
+        "features": [
+          "const:1"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.9668514492753623,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 266,
+        "features": [
+          "const:2"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.9668514492753623,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 266,
+        "features": [
+          "const:3"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.9668514492753623,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 46,
+        "contradictory_pairs": 44,
+        "features": [
+          "mod:5"
+        ],
+        "groups": 5,
+        "label": "COMPUTED",
+        "quality_score": 0.9679384057971014,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 128,
+        "features": [
+          "gcd:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.9748636363636364,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 128,
+        "features": [
+          "mod:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.9748636363636364,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 148,
+        "contradictory_pairs": 144,
+        "features": [
+          "gcd:3"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.9781396396396397,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 35,
+        "features": [
+          "mod:6"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.9857222222222222,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 68,
+        "contradictory_pairs": 67,
+        "features": [
+          "gcd:6"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.9946274509803922,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 33,
+        "contradictory_pairs": 33,
+        "features": [
+          "quo:4"
+        ],
+        "groups": 7,
+        "label": "COMPUTED",
+        "quality_score": 1.0155833333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 22,
+        "contradictory_pairs": 22,
+        "features": [
+          "quo:3"
+        ],
+        "groups": 9,
+        "label": "COMPUTED",
+        "quality_score": 1.01975,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 11,
+        "contradictory_pairs": 11,
+        "features": [
+          "quo:2"
+        ],
+        "groups": 13,
+        "label": "COMPUTED",
+        "quality_score": 1.0280833333333332,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 3,
+        "contradictory_pairs": 3,
+        "features": [
+          "sub:3"
+        ],
+        "groups": 22,
+        "label": "COMPUTED",
+        "quality_score": 1.0468333333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 1,
+        "features": [
+          "sub:2"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 1.0489166666666665,
+        "requires_row_probes": false,
+        "vacuous": false
+      }
+    ],
+    "label": "COMPUTED",
+    "scope": "observational equivalence on training coordinates only",
+    "signature_classes": [
+      {
+        "members": [
+          1,
+          4,
+          12,
+          21,
+          24
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          8
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          5
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          19
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          6
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          11
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          3
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          15
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          10
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          22
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          18
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          14
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          13
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          17
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          2
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          16
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          23
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          7
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          20
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          9
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      }
+    ]
+  },
+  "label": "COMPUTED",
+  "rows": {
+    "candidates": [
+      {
+        "comparable_pairs": 3,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:3"
+        ],
+        "groups": 22,
+        "label": "COMPUTED",
+        "quality_score": 0.04683333333333334,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 3,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:3",
+          "probe:first_true"
+        ],
+        "groups": 22,
+        "label": "COMPUTED",
+        "quality_score": 0.04783333333333334,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 0.04891666666666667,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "probe:first_true"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 0.04991666666666667,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:3",
+          "sub:2"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 0.04991666666666667,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "probe:first_true"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "probe:first_true"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "probe:first_true"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "probe:first_true"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "probe:first_true"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": true,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:2",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:3",
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:3",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:3",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:3",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:3",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 23,
+        "contradictory_pairs": 11,
+        "features": [
+          "probe:first_true"
+        ],
+        "groups": 12,
+        "label": "COMPUTED",
+        "quality_score": 0.5042608695652174,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 67,
+        "contradictory_pairs": 55,
+        "features": [
+          "probe:total_failures"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.8343955223880597,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 67,
+        "contradictory_pairs": 55,
+        "features": [
+          "probe:true_count"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.8343955223880597,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 68,
+        "contradictory_pairs": 56,
+        "features": [
+          "probe:onset"
+        ],
+        "groups": 11,
+        "label": "COMPUTED",
+        "quality_score": 0.8474460784313725,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 33,
+        "contradictory_pairs": 29,
+        "features": [
+          "quo:4"
+        ],
+        "groups": 7,
+        "label": "COMPUTED",
+        "quality_score": 0.8943712121212121,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 137,
+        "contradictory_pairs": 125,
+        "features": [
+          "probe:period"
+        ],
+        "groups": 7,
+        "label": "COMPUTED",
+        "quality_score": 0.9279920924574209,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 157,
+        "contradictory_pairs": 145,
+        "features": [
+          "probe:cycle_positives"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.9287335456475584,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 22,
+        "contradictory_pairs": 20,
+        "features": [
+          "quo:3"
+        ],
+        "groups": 9,
+        "label": "COMPUTED",
+        "quality_score": 0.9288409090909091,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 11,
+        "contradictory_pairs": 10,
+        "features": [
+          "quo:2"
+        ],
+        "groups": 13,
+        "label": "COMPUTED",
+        "quality_score": 0.9371742424242424,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 196,
+        "contradictory_pairs": 184,
+        "features": [
+          "gcd:5"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.9439421768707483,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 46,
+        "contradictory_pairs": 43,
+        "features": [
+          "mod:5"
+        ],
+        "groups": 5,
+        "label": "COMPUTED",
+        "quality_score": 0.9461992753623188,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 96,
+        "contradictory_pairs": 91,
+        "features": [
+          "gcd:4"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.9551666666666666,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 60,
+        "contradictory_pairs": 57,
+        "features": [
+          "mod:4"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.9593333333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 264,
+        "features": [
+          "const:0"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.9596050724637681,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 264,
+        "features": [
+          "const:1"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.9596050724637681,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 264,
+        "features": [
+          "const:2"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.9596050724637681,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 264,
+        "features": [
+          "const:3"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.9596050724637681,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 264,
+        "features": [
+          "probe:first_false"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.9596050724637681,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 127,
+        "features": [
+          "gcd:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.9672878787878788,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 127,
+        "features": [
+          "mod:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.9672878787878788,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 148,
+        "contradictory_pairs": 143,
+        "features": [
+          "gcd:3"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.9713828828828829,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 84,
+        "contradictory_pairs": 82,
+        "features": [
+          "mod:3"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.9834404761904761,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 68,
+        "contradictory_pairs": 67,
+        "features": [
+          "gcd:6"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.9946274509803922,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 36,
+        "features": [
+          "mod:6"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 1.0134999999999998,
+        "requires_row_probes": false,
+        "vacuous": false
+      }
+    ],
+    "label": "COMPUTED",
+    "scope": "observational equivalence on training coordinates only",
+    "signature_classes": [
+      {
+        "members": [
+          1,
+          2,
+          3,
+          18,
+          23
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          11
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          10
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          9
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          8,
+          24
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          17
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          12
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          13,
+          14
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          4
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          5
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "members": [
+          20
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          6
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          22
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          16
+        ],
+        "signature": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "members": [
+          7
+        ],
+        "signature": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          15
+        ],
+        "signature": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          19
+        ],
+        "signature": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          21
+        ],
+        "signature": [
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false
+        ]
+      }
+    ]
+  }
+}

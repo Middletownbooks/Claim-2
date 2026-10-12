@@ -1,0 +1,4296 @@
+{
+  "forecast_hash": "e8893c085075a172c39ced5e960993e966bc685674576be8fc6d5af56b501945",
+  "label": "COMPUTED",
+  "models": [
+    {
+      "kind": "factor",
+      "op": "and",
+      "rows": {
+        "1": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "2": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "3": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "4": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "5": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "6": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "7": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "8": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "9": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "10": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "11": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "12": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "13": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "14": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "15": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "16": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "17": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "18": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "19": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "20": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "21": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "22": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "23": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "24": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "25": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "26": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "27": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "28": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "29": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "30": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "31": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "32": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "33": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "34": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "35": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "36": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "37": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "38": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "39": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "40": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "41": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "42": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "43": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "44": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "45": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "46": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "47": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "48": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        }
+      }
+    },
+    {
+      "kind": "factor",
+      "op": "or",
+      "rows": {
+        "1": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "2": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 4
+        },
+        "3": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "4": null,
+        "5": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "6": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "7": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "8": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "9": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "10": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "11": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "12": null,
+        "13": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "14": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "15": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "16": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "17": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "18": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "19": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "20": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "21": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "22": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "23": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "24": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "25": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "26": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "27": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "28": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "29": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "30": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "31": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "32": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "33": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "34": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "35": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "36": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "37": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "38": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "39": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "40": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "41": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "42": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "43": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "44": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "45": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "46": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "47": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        },
+        "48": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 1
+        }
+      }
+    },
+    {
+      "kind": "factor",
+      "op": "xor",
+      "rows": {
+        "1": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "2": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "3": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "4": null,
+        "5": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "6": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              false,
+              true
+            ]
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "7": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "8": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "9": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "10": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "11": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "12": null,
+        "13": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "14": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "15": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "16": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "17": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "18": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "19": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "20": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "21": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "22": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "23": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "24": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "25": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "26": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "27": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "28": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "29": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "30": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "31": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "32": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "33": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "34": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "35": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "36": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "37": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "38": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "39": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "40": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "41": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "42": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "43": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "44": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "45": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "46": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "47": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "48": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        }
+      }
+    },
+    {
+      "kind": "factor",
+      "op": "iff",
+      "rows": {
+        "1": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "2": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "3": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              true,
+              false
+            ]
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "4": null,
+        "5": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "6": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 0,
+            "prefix": [
+              true,
+              false
+            ]
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "7": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "8": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "9": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "10": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "11": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "12": null,
+        "13": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "14": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "15": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "16": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "17": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "18": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "19": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "20": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "21": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "22": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "23": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "24": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "25": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "26": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "27": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "28": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "29": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "30": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "31": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "32": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "33": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "34": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "35": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "36": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "37": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "38": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "39": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "40": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "41": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "42": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "43": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "44": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "45": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "46": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "47": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        },
+        "48": {
+          "a": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              false
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "ambiguous_second_factor_columns": 0,
+          "b": {
+            "continuation_status": "CONJECTURED",
+            "cycle": [
+              true
+            ],
+            "observed_repetitions": 2,
+            "prefix": []
+          },
+          "feasible_first_factor_assignments": 2
+        }
+      }
+    },
+    {
+      "kind": "tile",
+      "rows": {
+        "1": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              true
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "2": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              true
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "3": {
+          "pd": 2,
+          "pr": 1,
+          "tile": [
+            [
+              false,
+              true
+            ]
+          ],
+          "two_copies_on_both_axes": false
+        },
+        "4": {
+          "pd": 2,
+          "pr": 2,
+          "tile": [
+            [
+              false,
+              false
+            ],
+            [
+              false,
+              true
+            ]
+          ],
+          "two_copies_on_both_axes": false
+        },
+        "5": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "6": {
+          "pd": 2,
+          "pr": 1,
+          "tile": [
+            [
+              false,
+              true
+            ]
+          ],
+          "two_copies_on_both_axes": false
+        },
+        "7": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "8": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "9": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "10": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "11": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "12": {
+          "pd": 2,
+          "pr": 2,
+          "tile": [
+            [
+              false,
+              false
+            ],
+            [
+              false,
+              true
+            ]
+          ],
+          "two_copies_on_both_axes": false
+        },
+        "13": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "14": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "15": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "16": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "17": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "18": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "19": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "20": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "21": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "22": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "23": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "24": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "25": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "26": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "27": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "28": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "29": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "30": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "31": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "32": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "33": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "34": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "35": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "36": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "37": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "38": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "39": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "40": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "41": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "42": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "43": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "44": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "45": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "46": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "47": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        },
+        "48": {
+          "pd": 1,
+          "pr": 1,
+          "tile": [
+            [
+              false
+            ]
+          ],
+          "two_copies_on_both_axes": true
+        }
+      }
+    }
+  ],
+  "oracle_queries_before_final": 7152,
+  "selected_id": "E-H03381",
+  "shortlist": [
+    "E-H03381",
+    "E-H03377",
+    "E-H03378"
+  ]
+}

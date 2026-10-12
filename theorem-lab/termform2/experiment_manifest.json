@@ -1,0 +1,131 @@
+{
+ "budgets": {
+  "beam": 1200,
+  "beam_E": 2400,
+  "class_cap": 300000,
+  "outer_max_cost": 5,
+  "outer_max_cost_E": 7,
+  "stage1_body_size": 3,
+  "stage1_cap": 6000,
+  "stage2_body_size": 5,
+  "stage2_cap": 40000,
+  "unit_cap": 500
+ },
+ "deviations_from_prereg": [
+  {
+   "correction": "6 is the atom count inside a quantifier body (n, k, 0, 1, 2, 4); the OUTER search has 5 (n, 0, 1, 2, 4). A miscount in the table, not a change of design.",
+   "what": "PREREG section 3 lists the V0 atom count as 6",
+   "when": "before any Round-2 result"
+  },
+  {
+   "correction": "it was an exact duplicate of `spf`; a library match must identify one invariant, not two.",
+   "what": "removed `smallest_div_gt_1` from the invariant library",
+   "when": "before any Round-2 result"
+  },
+  {
+   "correction": "an implementation change only. All nine operators are checked against the reference evaluator on 40 000 random inputs, and a 300-term sample of each run is re-evaluated with the reference evaluator; both checks are recorded in every round2_*.json.",
+   "what": "the outer enumeration was vectorised (numpy)",
+   "when": "before any Round-2 result"
+  },
+  {
+   "correction": "PREREG said 'raised until candidate expansions >= B' without naming numbers; these were chosen to satisfy that and the achieved counts are reported.",
+   "what": "condition E's raised budget was fixed at max cost 7, beam 2400",
+   "when": "before any Round-2 result"
+  },
+  {
+   "correction": "the cap was a memory safety valve, not the operative budget. The batch beam was replaced by a bounded incremental heap (proved to select the identical set) and every condition re-run at a raised cap. BOTH sets are kept: round2_*.json at the pre-registered cap, round2b_*.json at the honoured budget. Conclusions are drawn from the honoured budget and were the same, though weaker, at the pre-registered one.",
+   "what": "the pre-registered class cap of 300 000 bound at cost level 3, before the declared outer budget of cost 5 was delivered",
+   "when": "after seeing that every condition truncated, before comparing conditions"
+  },
+  {
+   "correction": "the Priority 11-E leakage audit found that the promoted term count(k: (k % least(k: (n % k)))) IS n/spf, so T3 duplicates a Round-1 term and is not a valid target. The PREREG exclusion list named tau, tau-1, spf, nu, lambda, n-1, n/2, n/4 and n - n/spf, and missed n/spf. T3 never discriminated -- every condition with a formation stage reaches it at cost 1 -- so striking it renormalises the counts to 12 without changing any ordering.",
+   "what": "pre-registered target T3 (n_div_spf) is STRUCK",
+   "when": "after the results, by the audit written to catch it"
+  },
+  {
+   "correction": "(1) INHERITED FROM ROUND 1: when a formed term's definition itself contains a unit, synth2.ev fell back to language.ev, which raises on leaves, and the caller swallowed it -- so Round 1 silently dropped every unit whose definition contained a nested unit. termform/ is left byte-identical; Round 2 fixes it identically in every condition. (2) Outer._level assigned by_size[s] instead of extending it, deleting any atom whose cost equalled that level -- which crippled exactly the Priority-9 control. Fixed and D re-run.",
+   "what": "two implementation defects fixed mid-phase",
+   "when": "before any result was read (1); before comparing D (2)"
+  },
+  {
+   "correction": "promoted terms available to the outer search only, not during term formation. Not pre-registered, labelled exploratory, and reported separately from the pre-registered comparisons.",
+   "what": "an exploratory condition `Bo` was added",
+   "when": "before any Round-2 result"
+  }
+ ],
+ "environment": {
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v24-x86_64-with-glibc2.39",
+  "python": "3.11.15"
+ },
+ "experiment": "Iterated Term Formation (Round 2)",
+ "files": {
+  "PREREG.md": "a241ec5344f11b117b887c7f0864dab2ba4cfb160431e0b5ffbe785816b336aa",
+  "REPORT_P.md": "bd9adc02c5af6118812f515ccc8fbaf14e961fcf755906ac23a11e47977f7319",
+  "adversarial.json": "e53311540b3ceef71d1739a53302b982100e9ab8e1996fde618991e4c43985e2",
+  "adversarial.py": "8195df70184f506694bff39456c441a357bbcef50c6fae9ec7ec5afbb76d7a5e",
+  "analyze.py": "7b8ec45c3954bd4c2194484572a20fd63b49c0c32dfc8a47bba22d32a7e74d01",
+  "artifacts.py": "489f80d8f5ed826b71fbc8f263b0112d0e6d50dd2446f88ed1f7af76bc466dff",
+  "candidate_equivalence_classes.json": "62f2cd9343da468132945704ab7ce5937cde9bc9b6591fa85fe09e5a2434f4e2",
+  "freeze.py": "31b3bf691ac8a27274f5b030bbf9e706c5c7512460e8522c87d09d42e8b35799",
+  "invariants.py": "a836ea3ec5c1eacf0ed7be3e5aa282ddc8172117b4a618ad759ca9c7bb136cd0",
+  "ladder.json": "b0c026e869c3f8895c2b60e6f5ef48419ef31e164ebd3fe3709ca4facbbe5c3c",
+  "ladder.py": "824b49a1691580c1e6869b3ae416fa470cbb3112f3174a729bd5fef038805f8b",
+  "ladder_control.json": "f4ba7266304d05c14506ea5b3d31e982ad1c552e473dd614783ab36bba5c5207",
+  "ladder_control.py": "3a383444839ba1b02da2448f8fa65d2cc5589006daa3683851720c6a9fd3ea20",
+  "manifest.py": "bc0e5931002ef62b37da4f5b9fa39de4e735969e309a0a3251f5a117c5a732e9",
+  "outer.py": "6debf3d82eb1085bba61adad42286d05fe2baedfc7b61ca53467f1bc6a5a667d",
+  "promote.py": "64fa36a5e055d18bc7cbafc29facac16c74b850fe09abcb6427249e1c8c99841",
+  "promoted_terms.json": "e4297e1c6483292316110974f8c7639ba2a75ab9ac02e6af037a3bdd27465437",
+  "reachable_space.json": "f98728d59afbef0b2ea7cad7094e937560bca3e73ffb9e8d8e6effd2d6a913ca",
+  "regress_r1.py": "36d8894e60ee24411c4c7d5505be2968a536a2177882a629e3afdf542e92a2c2",
+  "round1_formed_pool.json": "259e5c4427f14892b82dc2631bc70448d8b0b78a4f9e03648ee0eb6c4d8538d9",
+  "round1_manifest.json": "b761b8d45d24279341249c5fbaab74761d473cae24d06dea1fa04405463f746b",
+  "round2.py": "e2a5ec4c8b41d17d1c03f7f2fb1c7ce4fe9639100a8427dd343202139cf616f0",
+  "round2_A.json": "68fa87b16b8c018ca72223dfbb8d2d674fdaa5a92a35798c5056dc012381d97b",
+  "round2_A0.json": "205991e3ca4f629c2416e3fafa1999ed577cfbe3b21d9f91fa75b50d6f49c00b",
+  "round2_B.json": "a228cb4328d764fc724245e997788ee65b0ed8b385a82102c53589aaf7bd3012",
+  "round2_C.json": "60a601d6f3893db2562492bd72195e46c62c0adecd62f79e8b9e7dbbea64842c",
+  "round2_discovered.json": "475ff40f68585239e4e0f8d9de1b2656c378fe8314ff594b766e6fd305434aa9",
+  "round2_reexpanded.json": "bbc1152ba5b205287ab0438e570c708981d50336b4f6ad97fae601e91167df52",
+  "round2_static.json": "1faf279be598b260207a198a42b73209466e101236f97479757a700680c20b36",
+  "round2b_A.json": "1faf279be598b260207a198a42b73209466e101236f97479757a700680c20b36",
+  "round2b_A0.json": "ca45def1a5a4033453cce7d37924ea3224865a10e4e4c9860287606adada206f",
+  "round2b_B.json": "475ff40f68585239e4e0f8d9de1b2656c378fe8314ff594b766e6fd305434aa9",
+  "round2b_B520.json": "e44924f1bdbfbfffa2a3e42c4aaa6af376c86e2995125f8744d5ce0ffffeee62",
+  "round2b_Bo.json": "2d938d9278d5b10e9f5f386648bb56e0006f72e8ba8e05cce629d73273fcd59e",
+  "round2b_C.json": "405acf63cf3c7a46bdd10d5c08da1c5522cb586a934846a655b918f2df527c19",
+  "round2b_D.json": "bbc1152ba5b205287ab0438e570c708981d50336b4f6ad97fae601e91167df52",
+  "round2b_E.json": "5adffd3f524c1c3277497008b24d77dfd04874928e97446f6b647f0d58bdf566",
+  "synth3.py": "a2e8a31056f3fc33e94def22c6145241708aa8ac0dd8544f1e76afb496461e11"
+ },
+ "frozen_upstream": {
+  "round1_manifest.json": "b761b8d45d24279341249c5fbaab74761d473cae24d06dea1fa04405463f746b",
+  "termform/REPORT_M.md": "23f1aa742422ea884a3a673e1abfef41595ca24cb425b23c29e3acc105331ef3",
+  "termform/language.py": "9864344ee19f2906f76b6023ff6affe975eb2892c3d2ef57cd6bf9b651752eb4",
+  "termform/result_v2.json": "306be8c887d6547db18807b4f7c71c65b35d7c3ce165c6a0e0b9bd2dbc323601",
+  "termform/run.py": "14ce137ef4f80ddf31e7df88a3d7088726168a04e190e9d358b9172441ac98b1",
+  "termform/run2.py": "b854455778d51bedad101d43608f4c211e8408efeff37b903fb7e742f7c672fe",
+  "termform/synth2.py": "68be8ddfe4517d67c4e0560ddae0b6763bce915b4fcd671163c51d46bbcefcff"
+ },
+ "label": "COMPUTED",
+ "prereg": {
+  "file": "PREREG.md",
+  "sha256": "a241ec5344f11b117b887c7f0864dab2ba4cfb160431e0b5ffbe785816b336aa"
+ },
+ "seeds": {
+  "global": 20260909,
+  "note": "the search itself is deterministic and consumes no RNG; only the two uses above draw from it",
+  "used_for": [
+   "condition C vocabulary draw",
+   "reservoir sampling of semantic classes"
+  ]
+ },
+ "splits": {
+  "EVALQ": "121..160",
+  "HOLDOUT": "56..90",
+  "RESERVE": "41..55",
+  "TRAIN": "2..40",
+  "disjoint": true
+ }
+}

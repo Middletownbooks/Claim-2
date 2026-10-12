@@ -1,0 +1,301 @@
+{
+ "formed_terms": 5329,
+ "lambda": {
+  "branches": {
+   "n mod 2 = 0": {
+    "atoms": 1,
+    "generalizing": 8,
+    "minimal_terms": 32,
+    "terms": [
+     {
+      "generalizes": true,
+      "holdout_objects": [],
+      "holdout_pred": [],
+      "holdout_true": [],
+      "size": 4,
+      "term": "count(k: (n - k))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [],
+      "holdout_pred": [],
+      "holdout_true": [],
+      "size": 4,
+      "term": "count(k: (k // n))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [],
+      "holdout_pred": [],
+      "holdout_true": [],
+      "size": 4,
+      "term": "count(k: (k % 2))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [],
+      "holdout_pred": [],
+      "holdout_true": [],
+      "size": 4,
+      "term": "count(k: (k % <least(k: (n % k))>))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [],
+      "holdout_pred": [],
+      "holdout_true": [],
+      "size": 4,
+      "term": "count(k: (k // <least(k: (n % k))>))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [],
+      "holdout_pred": [],
+      "holdout_true": [],
+      "size": 4,
+      "term": "count(k: (k % <count(k: (n % k))>))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [],
+      "holdout_pred": [],
+      "holdout_true": [],
+      "size": 4,
+      "term": "count(k: (k // <count(k: (n % k))>))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [],
+      "holdout_pred": [],
+      "holdout_true": [],
+      "size": 4,
+      "term": "count(k: (k % <least(k: (n - 2))>))"
+     }
+    ],
+    "train_values": [
+     1
+    ]
+   },
+   "n mod 4 = 0": {
+    "atoms": 1,
+    "generalizing": 1,
+    "minimal_terms": 1,
+    "terms": [
+     {
+      "generalizes": true,
+      "holdout_objects": [],
+      "holdout_pred": [],
+      "holdout_true": [],
+      "size": 2,
+      "term": "least(k: 0)"
+     }
+    ],
+    "train_values": [
+     2
+    ]
+   },
+   "n mod 8 = 0": {
+    "atoms": 2,
+    "generalizing": 4,
+    "minimal_terms": 5,
+    "terms": [
+     {
+      "generalizes": true,
+      "holdout_objects": [
+       32
+      ],
+      "holdout_pred": [
+       8
+      ],
+      "holdout_true": [
+       8
+      ],
+      "size": 4,
+      "term": "count(k: (k % 4))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [
+       32
+      ],
+      "holdout_pred": [
+       8
+      ],
+      "holdout_true": [
+       8
+      ],
+      "size": 4,
+      "term": "count(k: (k % <count(k: (k - 4))>))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [
+       32
+      ],
+      "holdout_pred": [
+       8
+      ],
+      "holdout_true": [
+       8
+      ],
+      "size": 4,
+      "term": "count(k: (k % <least(k: (k % 4))>))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [
+       32
+      ],
+      "holdout_pred": [
+       8
+      ],
+      "holdout_true": [
+       8
+      ],
+      "size": 4,
+      "term": "least(k: (k % <count(k: (k % 4))>))"
+     },
+     {
+      "generalizes": false,
+      "holdout_objects": [
+       32
+      ],
+      "holdout_pred": [
+       2
+      ],
+      "holdout_true": [
+       8
+      ],
+      "size": 4,
+      "term": "count(k: (<count(k: (k // n))> % k))"
+     }
+    ],
+    "train_values": [
+     2,
+     4
+    ]
+   },
+   "otherwise": {
+    "atoms": 12,
+    "generalizing": 2,
+    "minimal_terms": 2,
+    "terms": [
+     {
+      "generalizes": true,
+      "holdout_objects": [
+       31,
+       37,
+       41,
+       43,
+       47
+      ],
+      "holdout_pred": [
+       30,
+       36,
+       40,
+       42,
+       46
+      ],
+      "holdout_true": [
+       30,
+       36,
+       40,
+       42,
+       46
+      ],
+      "size": 6,
+      "term": "least(k: (n % (n - k)))"
+     },
+     {
+      "generalizes": true,
+      "holdout_objects": [
+       31,
+       37,
+       41,
+       43,
+       47
+      ],
+      "holdout_pred": [
+       30,
+       36,
+       40,
+       42,
+       46
+      ],
+      "holdout_true": [
+       30,
+       36,
+       40,
+       42,
+       46
+      ],
+      "size": 6,
+      "term": "count(k: (n // (k * <least(k: (n % k))>)))"
+     }
+    ],
+    "train_values": [
+     2,
+     4,
+     6,
+     6,
+     10,
+     12,
+     16,
+     18,
+     22,
+     20,
+     18,
+     28
+    ]
+   }
+  }
+ },
+ "nu": {
+  "generalizing": 1,
+  "minimal_terms": 1,
+  "search_seconds": 1.4,
+  "terms": [
+   {
+    "generalizes": true,
+    "holdout_pred": [
+     1,
+     5,
+     1,
+     1,
+     1,
+     1
+    ],
+    "holdout_true": [
+     1,
+     5,
+     1,
+     1,
+     1,
+     1
+    ],
+    "reserve_pred": [
+     2,
+     6,
+     4,
+     2,
+     3,
+     7,
+     2,
+     5
+    ],
+    "reserve_true": [
+     2,
+     6,
+     4,
+     2,
+     3,
+     7,
+     2,
+     5
+    ],
+    "size": 4,
+    "term": "count(k: (k // <count(k: (n % k))>))"
+   }
+  ]
+ }
+}

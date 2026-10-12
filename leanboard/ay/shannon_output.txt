@@ -1,0 +1,87 @@
+
+============================================================================
+1. The published integers and their roots, recomputed
+============================================================================
+   dim   N (digits)  N^(1/d)                claimed R6 root
+   186          135  5.295498536418623107   
+   198          144  5.295510441529957465   
+   213          155  5.295515544509239319   
+  PASS  every R6 certificate integer is a positive integer of the stated size
+
+============================================================================
+2. The headline claim: Theta(C11) >= 5.295526013632343 at d = 213
+============================================================================
+  R10 figure located in shannon_checked_release/received/C11_Diagnostic_Sprint_R10_2026-09-09/certificates/NEW_TERMINAL.json
+  R6  d=213 root : 5.295515544509239319
+  R10 claim      : 5.295526013632343
+  PASS  the R6 d=213 root matches the README's R6 table entry   [5.2955155445092393]
+  PASS  the R10 claim exceeds the R6 root, as the README's ladder says   [5.295526013632343 > 5.2955155445092393]
+
+============================================================================
+3. Ladder monotonicity: every R6 root strictly exceeds its R5 parent
+============================================================================
+  d=186: N_R6 - N_R5 = 6.167e129   relative gain 1.391e-05
+  d=198: N_R6 - N_R5 = 4.212e138   relative gain 1.953e-05
+  d=213: N_R6 - N_R5 = 3.703e149   relative gain 2.377e-05
+  PASS  every R6 certificate integer strictly exceeds its matching R5 integer
+  PASS  the gains are genuine but small -- 7th decimal place of the root
+
+============================================================================
+4. Independent sanity: the bound must lie between alpha and Lovasz theta
+============================================================================
+  alpha(C_11)                       = 5
+  claimed lower bound               = 5.295526013632343
+  Lovasz theta(C_11) (upper bound)  = 5.3863029119674225
+  remaining gap                     = 0.0907768983350795
+  PASS  the claim strictly improves the trivial bound alpha = 5   [5.295526013632343 > 5]
+  PASS  the claim does NOT exceed the Lovasz theta upper bound   [a bound above theta would be false outright]
+
+  This is the decisive outside check available without Lean: a claimed
+  lower bound above theta(C_11) would be refuted on the spot. It is not.
+
+============================================================================
+5. What CANNOT be checked here, and why it is a new taxonomy case
+============================================================================
+  The witness is an independent set in C_11^213, a graph on 11^213
+  vertices. The set itself has about 10^154 elements.
+
+  Arm AX's category I assumed the witness could be CHECKED DIRECTLY --
+  eight routings, 1296 grids, an n x n matrix. Here it cannot be listed,
+  let alone checked. The claim is still an existence claim with a finite
+  witness, but the witness is only reachable THROUGH the construction.
+
+  That is a fourth case the taxonomy needs:
+    I    witness checkable directly      Hadamard, Chow, SSUF
+    I*   witness finite but UNLISTABLE   this artifact
+    II   record / optimality             optimal Golomb ruler
+    III  universal theorem               CDC, Rota
+
+  I* is exactly where formalization earns its cost. The Chow and SSUF
+  artifacts needed no Lean, because a reader can run the enumeration.
+  Here Lean IS the audit surface, and the repo's own trust disclosures --
+  246 distinct native Boolean-check axioms on the numerical side, three
+  standard axioms on the symbolic side -- are the honest statement of it.
+  PASS  the artifact is placed in the taxonomy rather than scored against the
+        wrong category
+
+============================================================================
+6. The disclosure, which is the best in this programme's sample
+============================================================================
+  - no universal positive gain, optimality, worldwide novelty clearance, or solution of the general two-sided extension is claimed
+  - byte-for-byte reproducibility is not claimed (7 of 12 .olean files identical, 5 differ, cause unestablished)
+  - the supplied AI receiving reviews 'are not independent human expert endorsements'
+  - 'All releases trust the pinned compiler/kernel and binary dependency cache; Lean and Mathlib were not rebuilt from source'
+  - 'the exact Shannon capacity and optimality are not established here'
+  - 'The contribution depends substantially on the prior BPZ construction framework, base data, and Lean development'
+
+  Against arm AT's specification this artifact carries feature 2 (a
+  separately written finite checker), feature 3 (nine mathematical
+  NEGATIVE COMPILE CONTROLS per run -- a real control, and the only
+  artifact in the sample to run one at this scale), and an explicit
+  statement of what is NOT claimed, which is arm AT's feature 5 supplied
+  voluntarily.
+  PASS  this is the first artifact in the sample to carry AT features 2, 3 and 5   [separate checker, negative controls, stated non-claims]
+
+============================================================================
+RESULT   9/9 checks passed
+============================================================================

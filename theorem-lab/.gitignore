@@ -1,0 +1,9 @@
+# Raw oracle logs and forecast dumps are large and regenerable from lab.py.
+runs/**/oracle.jsonl
+runs/**/E_forecasts.json
+runs/**/T_forecasts.json
+runs/**/U_forecasts.json
+runs/**/ledger.json
+runs/**/transport.json
+audit/__pycache__/
+__pycache__/

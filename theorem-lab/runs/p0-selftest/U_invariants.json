@@ -1,0 +1,1725 @@
+{
+  "columns": {
+    "candidates": [
+      {
+        "comparable_pairs": 84,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:3"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.007250000000000001,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 84,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:3",
+          "gcd:3"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.00825,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.013500000000000002,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:3",
+          "mod:6"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.014500000000000002,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "gcd:3"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.014500000000000002,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "gcd:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "gcd:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "gcd:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:3",
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:3",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:3",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:3",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:3",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "gcd:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "gcd:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 148,
+        "contradictory_pairs": 64,
+        "features": [
+          "gcd:3"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.4375990990990991,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 68,
+        "contradictory_pairs": 32,
+        "features": [
+          "gcd:6"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.479921568627451,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 192,
+        "features": [
+          "const:0"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.6987355072463768,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 192,
+        "features": [
+          "const:1"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.6987355072463768,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 192,
+        "features": [
+          "const:2"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.6987355072463768,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 192,
+        "features": [
+          "const:3"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.6987355072463768,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 196,
+        "contradictory_pairs": 138,
+        "features": [
+          "gcd:5"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.7092482993197279,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 96,
+        "features": [
+          "gcd:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.732439393939394,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 96,
+        "features": [
+          "mod:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.732439393939394,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 96,
+        "contradictory_pairs": 72,
+        "features": [
+          "gcd:4"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.75725,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 60,
+        "contradictory_pairs": 48,
+        "features": [
+          "mod:4"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.8093333333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 46,
+        "contradictory_pairs": 37,
+        "features": [
+          "mod:5"
+        ],
+        "groups": 5,
+        "label": "COMPUTED",
+        "quality_score": 0.8157644927536232,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 33,
+        "contradictory_pairs": 28,
+        "features": [
+          "quo:4"
+        ],
+        "groups": 7,
+        "label": "COMPUTED",
+        "quality_score": 0.8640681818181818,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 22,
+        "contradictory_pairs": 22,
+        "features": [
+          "quo:3"
+        ],
+        "groups": 9,
+        "label": "COMPUTED",
+        "quality_score": 1.01975,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 11,
+        "contradictory_pairs": 11,
+        "features": [
+          "quo:2"
+        ],
+        "groups": 13,
+        "label": "COMPUTED",
+        "quality_score": 1.0280833333333332,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 3,
+        "contradictory_pairs": 3,
+        "features": [
+          "sub:3"
+        ],
+        "groups": 22,
+        "label": "COMPUTED",
+        "quality_score": 1.0468333333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 1,
+        "features": [
+          "sub:2"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 1.0489166666666665,
+        "requires_row_probes": false,
+        "vacuous": false
+      }
+    ],
+    "label": "COMPUTED",
+    "scope": "observational equivalence on training coordinates only",
+    "signature_classes": [
+      {
+        "members": [
+          2,
+          5,
+          8,
+          11,
+          14,
+          17,
+          20,
+          23
+        ],
+        "signature": [
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "members": [
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24
+        ],
+        "signature": [
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          1,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22
+        ],
+        "signature": [
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          false,
+          false,
+          true
+        ]
+      }
+    ]
+  },
+  "label": "COMPUTED",
+  "rows": {
+    "candidates": [
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.013500000000000002,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 0,
+        "features": [
+          "gcd:6",
+          "mod:3"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.014500000000000002,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "gcd:6"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.014500000000000002,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 36,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "mod:3"
+        ],
+        "groups": 6,
+        "label": "COMPUTED",
+        "quality_score": 0.014500000000000002,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05100000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "gcd:6"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:1",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "gcd:6"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:2",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "gcd:6"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "add:3",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "add:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "add:2"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "add:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "n"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "mod:6",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "gcd:6"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "n",
+          "sub:1"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "gcd:6"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 0,
+        "contradictory_pairs": 0,
+        "features": [
+          "sub:1",
+          "mod:3"
+        ],
+        "groups": 24,
+        "label": "COMPUTED",
+        "quality_score": 0.05200000000000001,
+        "requires_row_probes": false,
+        "vacuous": true
+      },
+      {
+        "comparable_pairs": 68,
+        "contradictory_pairs": 32,
+        "features": [
+          "gcd:6"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.479921568627451,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 84,
+        "contradictory_pairs": 48,
+        "features": [
+          "mod:3"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.5786785714285714,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 100,
+        "contradictory_pairs": 64,
+        "features": [
+          "probe:first_false"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.64725,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 100,
+        "contradictory_pairs": 64,
+        "features": [
+          "probe:first_true"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.64725,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 96,
+        "features": [
+          "gcd:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.732439393939394,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 96,
+        "features": [
+          "mod:2"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.732439393939394,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 96,
+        "features": [
+          "probe:cycle_positives"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.732439393939394,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 96,
+        "features": [
+          "probe:total_failures"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.732439393939394,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 132,
+        "contradictory_pairs": 96,
+        "features": [
+          "probe:true_count"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.732439393939394,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 96,
+        "contradictory_pairs": 72,
+        "features": [
+          "gcd:4"
+        ],
+        "groups": 3,
+        "label": "COMPUTED",
+        "quality_score": 0.75725,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 148,
+        "contradictory_pairs": 112,
+        "features": [
+          "gcd:3"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.7619234234234235,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 60,
+        "contradictory_pairs": 48,
+        "features": [
+          "mod:4"
+        ],
+        "groups": 4,
+        "label": "COMPUTED",
+        "quality_score": 0.8093333333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 240,
+        "features": [
+          "const:0"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8726485507246377,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 240,
+        "features": [
+          "const:1"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8726485507246377,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 240,
+        "features": [
+          "const:2"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8726485507246377,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 240,
+        "features": [
+          "const:3"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8726485507246377,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 240,
+        "features": [
+          "probe:onset"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8726485507246377,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 276,
+        "contradictory_pairs": 240,
+        "features": [
+          "probe:period"
+        ],
+        "groups": 1,
+        "label": "COMPUTED",
+        "quality_score": 0.8726485507246377,
+        "requires_row_probes": true,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 196,
+        "contradictory_pairs": 172,
+        "features": [
+          "gcd:5"
+        ],
+        "groups": 2,
+        "label": "COMPUTED",
+        "quality_score": 0.8827176870748299,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 46,
+        "contradictory_pairs": 46,
+        "features": [
+          "mod:5"
+        ],
+        "groups": 5,
+        "label": "COMPUTED",
+        "quality_score": 1.0114166666666666,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 33,
+        "contradictory_pairs": 33,
+        "features": [
+          "quo:4"
+        ],
+        "groups": 7,
+        "label": "COMPUTED",
+        "quality_score": 1.0155833333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 22,
+        "contradictory_pairs": 22,
+        "features": [
+          "quo:3"
+        ],
+        "groups": 9,
+        "label": "COMPUTED",
+        "quality_score": 1.01975,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 11,
+        "contradictory_pairs": 11,
+        "features": [
+          "quo:2"
+        ],
+        "groups": 13,
+        "label": "COMPUTED",
+        "quality_score": 1.0280833333333332,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 3,
+        "contradictory_pairs": 3,
+        "features": [
+          "sub:3"
+        ],
+        "groups": 22,
+        "label": "COMPUTED",
+        "quality_score": 1.0468333333333333,
+        "requires_row_probes": false,
+        "vacuous": false
+      },
+      {
+        "comparable_pairs": 1,
+        "contradictory_pairs": 1,
+        "features": [
+          "sub:2"
+        ],
+        "groups": 23,
+        "label": "COMPUTED",
+        "quality_score": 1.0489166666666665,
+        "requires_row_probes": false,
+        "vacuous": false
+      }
+    ],
+    "label": "COMPUTED",
+    "scope": "observational equivalence on training coordinates only",
+    "signature_classes": [
+      {
+        "members": [
+          3,
+          9,
+          15,
+          21
+        ],
+        "signature": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "signature": [
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      {
+        "members": [
+          4,
+          10,
+          16,
+          22
+        ],
+        "signature": [
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true
+        ]
+      },
+      {
+        "members": [
+          1,
+          7,
+          13,
+          19
+        ],
+        "signature": [
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          true,
+          false,
+          false
+        ]
+      },
+      {
+        "members": [
+          2,
+          8,
+          14,
+          20
+        ],
+        "signature": [
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "members": [
+          6,
+          12,
+          18,
+          24
+        ],
+        "signature": [
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false,
+          true,
+          true,
+          false
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+ "label": "EXPERIMENTAL_RESULT",
+ "note": "SOURCE vs RANDOM by target-development cluster bootstrap; SOURCE vs WRONG by source-label permutation (from stats.py)",
+ "L1": {
+  "SOURCE vs RANDOM": {
+   "delta": 1.50468,
+   "ci95": [
+    1.27887,
+    1.78336
+   ],
+   "devs_positive": 10,
+   "n_devs": 10,
+   "relative_pct": 15.633,
+   "excludes_zero": true
+  },
+  "WRONG  vs RANDOM": {
+   "delta": 0.9207,
+   "ci95": [
+    0.37687,
+    1.48322
+   ],
+   "devs_positive": 8,
+   "n_devs": 10,
+   "relative_pct": 9.565,
+   "excludes_zero": true
+  },
+  "SOURCE vs WRONG": {
+   "delta": 0.58398,
+   "ci95": [
+    0.14722,
+    1.03294
+   ],
+   "devs_positive": 8,
+   "n_devs": 10,
+   "relative_pct": 6.067,
+   "excludes_zero": true
+  },
+  "generic_share_of_benefit": 0.6119,
+  "SOURCE vs WRONG (label permutation p)": 0.4999
+ },
+ "L2": {
+  "SOURCE vs RANDOM": {
+   "delta": 0.23539,
+   "ci95": [
+    0.19953,
+    0.27898
+   ],
+   "devs_positive": 10,
+   "n_devs": 10,
+   "relative_pct": 7.759,
+   "excludes_zero": true
+  },
+  "WRONG  vs RANDOM": {
+   "delta": 0.21333,
+   "ci95": [
+    0.1295,
+    0.30809
+   ],
+   "devs_positive": 10,
+   "n_devs": 10,
+   "relative_pct": 7.031,
+   "excludes_zero": true
+  },
+  "SOURCE vs WRONG": {
+   "delta": 0.02206,
+   "ci95": [
+    -0.03498,
+    0.07963
+   ],
+   "devs_positive": 6,
+   "n_devs": 10,
+   "relative_pct": 0.727,
+   "excludes_zero": false
+  },
+  "generic_share_of_benefit": 0.9063,
+  "SOURCE vs WRONG (label permutation p)": 0.5153
+ },
+ "L3": {
+  "SOURCE vs RANDOM": {
+   "delta": 0.179,
+   "ci95": [
+    0.14031,
+    0.22545
+   ],
+   "devs_positive": 10,
+   "n_devs": 10,
+   "relative_pct": 6.813,
+   "excludes_zero": true
+  },
+  "WRONG  vs RANDOM": {
+   "delta": 0.15213,
+   "ci95": [
+    0.07113,
+    0.24727
+   ],
+   "devs_positive": 9,
+   "n_devs": 10,
+   "relative_pct": 5.79,
+   "excludes_zero": true
+  },
+  "SOURCE vs WRONG": {
+   "delta": 0.02688,
+   "ci95": [
+    -0.02754,
+    0.08268
+   ],
+   "devs_positive": 6,
+   "n_devs": 10,
+   "relative_pct": 1.023,
+   "excludes_zero": false
+  },
+  "generic_share_of_benefit": 0.8499,
+  "SOURCE vs WRONG (label permutation p)": 0.5082
+ },
+ "ENG": {
+  "SOURCE vs RANDOM": {
+   "delta": 0.014,
+   "ci95": [
+    0.00139,
+    0.02526
+   ],
+   "devs_positive": 8,
+   "n_devs": 10,
+   "relative_pct": 0.924,
+   "excludes_zero": true
+  },
+  "WRONG  vs RANDOM": {
+   "delta": 0.01739,
+   "ci95": [
+    -0.00083,
+    0.03352
+   ],
+   "devs_positive": 8,
+   "n_devs": 10,
+   "relative_pct": 1.148,
+   "excludes_zero": false
+  },
+  "SOURCE vs WRONG": {
+   "delta": -0.00339,
+   "ci95": [
+    -0.01191,
+    0.00562
+   ],
+   "devs_positive": 3,
+   "n_devs": 10,
+   "relative_pct": -0.224,
+   "excludes_zero": false
+  },
+  "generic_share_of_benefit": 1.2421,
+  "SOURCE vs WRONG (label permutation p)": 0.5194
+ },
+ "MATH": {
+  "SOURCE vs RANDOM": {
+   "delta": 0.07551,
+   "ci95": [
+    0.05118,
+    0.10661
+   ],
+   "devs_positive": 10,
+   "n_devs": 10,
+   "relative_pct": 4.191,
+   "excludes_zero": true
+  },
+  "WRONG  vs RANDOM": {
+   "delta": 0.05318,
+   "ci95": [
+    0.01846,
+    0.09433
+   ],
+   "devs_positive": 9,
+   "n_devs": 10,
+   "relative_pct": 2.951,
+   "excludes_zero": true
+  },
+  "SOURCE vs WRONG": {
+   "delta": 0.02234,
+   "ci95": [
+    -0.00443,
+    0.04935
+   ],
+   "devs_positive": 5,
+   "n_devs": 10,
+   "relative_pct": 1.24,
+   "excludes_zero": false
+  },
+  "generic_share_of_benefit": 0.7043,
+  "SOURCE vs WRONG (label permutation p)": 0.4945
+ }
+}

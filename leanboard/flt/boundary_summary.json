@@ -1,0 +1,480 @@
+{
+ "consumption": {
+  "by_area": [
+   [
+    "RingTheory",
+    324
+   ],
+   [
+    "Algebra",
+    277
+   ],
+   [
+    "Analysis",
+    217
+   ],
+   [
+    "Topology",
+    125
+   ],
+   [
+    "Data",
+    124
+   ],
+   [
+    "NumberTheory",
+    124
+   ],
+   [
+    "LinearAlgebra",
+    122
+   ],
+   [
+    "MeasureTheory",
+    88
+   ],
+   [
+    "AlgebraicGeometry",
+    70
+   ],
+   [
+    "GroupTheory",
+    54
+   ],
+   [
+    "FieldTheory",
+    47
+   ],
+   [
+    "CategoryTheory",
+    34
+   ],
+   [
+    "Tactic",
+    30
+   ],
+   [
+    "Order",
+    24
+   ],
+   [
+    "RepresentationTheory",
+    14
+   ],
+   [
+    "Combinatorics",
+    8
+   ],
+   [
+    "Logic",
+    7
+   ],
+   [
+    "Dynamics",
+    3
+   ],
+   [
+    "SetTheory",
+    1
+   ],
+   [
+    "Geometry",
+    1
+   ],
+   [
+    "Probability",
+    1
+   ]
+  ],
+  "coverage_fraction": 0.199,
+  "distinct_mathlib_modules_imported": 1696,
+  "mathlib_modules_total_at_110cb7f0": 8513,
+  "note": "Coverage compares against mathlib at 110cb7f0 while the artifact pins db584cd6; modules renamed between the two will not match and are excluded from `known`.",
+  "top_modules": [
+   [
+    "Mathlib",
+    20146
+   ],
+   [
+    "Mathlib.Tactic.LinearCombination",
+    187
+   ],
+   [
+    "Mathlib.Analysis.MellinTransform",
+    179
+   ],
+   [
+    "Mathlib.FieldTheory.IsAlgClosed.Basic",
+    171
+   ],
+   [
+    "Mathlib.MeasureTheory.Group.FundamentalDomain",
+    142
+   ],
+   [
+    "Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure",
+    135
+   ],
+   [
+    "Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots",
+    132
+   ],
+   [
+    "Mathlib.Algebra.Algebra.Rat",
+    129
+   ],
+   [
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    116
+   ],
+   [
+    "Mathlib.MeasureTheory.Integral.Prod",
+    112
+   ],
+   [
+    "Mathlib.MeasureTheory.Measure.Haar.DistribChar",
+    112
+   ],
+   [
+    "Mathlib.Analysis.SpecialFunctions.Gamma.Deligne",
+    110
+   ],
+   [
+    "Mathlib.MeasureTheory.Measure.Haar.Unique",
+    107
+   ],
+   [
+    "Mathlib.RingTheory.LocalRing.ResidueField.Basic",
+    105
+   ],
+   [
+    "Mathlib.Analysis.SpecialFunctions.Pow.Complex",
+    100
+   ],
+   [
+    "Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point",
+    99
+   ],
+   [
+    "Mathlib.Data.ZMod.Basic",
+    95
+   ],
+   [
+    "Mathlib.Tactic.Ring",
+    89
+   ],
+   [
+    "Mathlib.NumberTheory.ModularForms.CongruenceSubgroups",
+    86
+   ],
+   [
+    "Mathlib.FieldTheory.IntermediateField.Adjoin.Basic",
+    84
+   ],
+   [
+    "Mathlib.RingTheory.DiscreteValuationRing.Basic",
+    82
+   ],
+   [
+    "Mathlib.FieldTheory.Galois.Basic",
+    80
+   ],
+   [
+    "Mathlib.RingTheory.Valuation.ValuationSubring",
+    79
+   ],
+   [
+    "Mathlib.Topology.Instances.Matrix",
+    79
+   ],
+   [
+    "Mathlib.LinearAlgebra.Dimension.Finrank",
+    79
+   ],
+   [
+    "Mathlib.Tactic.FieldSimp",
+    78
+   ],
+   [
+    "Mathlib.AlgebraicGeometry.Morphisms.Smooth",
+    76
+   ],
+   [
+    "Mathlib.NumberTheory.Cyclotomic.Basic",
+    75
+   ],
+   [
+    "Mathlib.Algebra.Lie.OfAssociative",
+    74
+   ],
+   [
+    "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+    70
+   ]
+  ]
+ },
+ "definitions": {
+  "count": 1450,
+  "definition_to_definition_edges": 2620,
+  "importing_no_mathlib_module_directly": 411,
+  "most_used_by_statements": [
+   [
+    "FLTPrelim_Ramification",
+    1674
+   ],
+   [
+    "AlgebraicGeometry_RelativePicardFunctor",
+    1507
+   ],
+   [
+    "ModularCurve_X1",
+    1419
+   ],
+   [
+    "AlgebraicCurve_TwoChartIntegralModel",
+    1223
+   ],
+   [
+    "NumberField_TateGlobalZeta",
+    1077
+   ],
+   [
+    "JacJ1Iface",
+    1050
+   ],
+   [
+    "ModularCurve_SupersingularModuli",
+    1020
+   ],
+   [
+    "AlgebraicCurve_IsCurveOver",
+    1013
+   ],
+   [
+    "ModularCurve_SupersingularNodePlaces",
+    999
+   ],
+   [
+    "AlgebraicCurve_ConstantReduction",
+    943
+   ],
+   [
+    "ModularCurve_ArithmeticGalois",
+    922
+   ],
+   [
+    "AlgebraicGeometry_RelPicardAlgEquivZeroCut",
+    908
+   ],
+   [
+    "ModularCurve_JqCoeff",
+    901
+   ],
+   [
+    "AutomorphicForm_TwistedOrbital",
+    877
+   ],
+   [
+    "ModularCurve_FullLevelJacobian",
+    875
+   ],
+   [
+    "AlgebraicGeometry_RepresentsRelSubPic",
+    796
+   ],
+   [
+    "SheafOfModules_Monoidal",
+    774
+   ],
+   [
+    "ModularCurve_FullLevelSemistableCovering",
+    738
+   ],
+   [
+    "AlgebraicCurve_RegularProlongation",
+    733
+   ],
+   [
+    "AlgebraicGeometry_RelativeGroupLaw",
+    699
+   ],
+   [
+    "AlgebraicCurve_DivisorClassGroup",
+    660
+   ],
+   [
+    "AlgebraicCurve_CurveModel",
+    644
+   ],
+   [
+    "NumberField_AdelicHaar",
+    642
+   ],
+   [
+    "ModularCurve_FullLevelLevelAutAt",
+    639
+   ],
+   [
+    "ModularCurve_UVCrossingModel",
+    624
+   ],
+   [
+    "AlgebraicGeometry_IdealSheafModule",
+    594
+   ],
+   [
+    "LanglandsTunnell_ConverseData",
+    581
+   ],
+   [
+    "AlgebraicGeometry_SmoothProperCurveBase",
+    580
+   ],
+   [
+    "NumberField_PrincipalLevel",
+    573
+   ],
+   [
+    "AdelicDock_LocalEmbedding",
+    560
+   ],
+   [
+    "NumberField_AdelicBox",
+    557
+   ],
+   [
+    "AlgebraicCurve_ResidueDiscs",
+    553
+   ],
+   [
+    "AlgebraicGeometry_RelEffCartierDiv",
+    551
+   ],
+   [
+    "AlgebraicGeometry_RelPicardAlgEquivZeroGroupCut",
+    548
+   ],
+   [
+    "AlgebraicCurve_Repartitions",
+    545
+   ],
+   [
+    "MvFormalGroup_NegV2",
+    537
+   ],
+   [
+    "AlgebraicGeometry_NeronModelPropertyBundleCarrier",
+    536
+   ],
+   [
+    "M4aHerbrand_GenuineDescent",
+    531
+   ],
+   [
+    "CerednikDrinfeld_SpecialFormalModule",
+    528
+   ],
+   [
+    "AlgebraicGeometry_NeronModelEndomorphismExtension",
+    528
+   ]
+  ],
+  "unused_count": 220,
+  "used_by_no_statement": [
+   "AbstractHeckeOperator",
+   "AdicCompletionRestrictScalars",
+   "AdicCompletionRingFunctoriality",
+   "AdicCompletionTensorRing",
+   "AlgebraicCurve_CurveModelSmooth",
+   "AlgebraicCurve_CurveModelTransport",
+   "AlgebraicCurve_SymmetricPower",
+   "AlgebraicCurve_UniversalDivisor",
+   "AlgebraicGeometry_FGSubalgebraTensorStage",
+   "AlgebraicGeometry_FppfGmRepresentable",
+   "AlgebraicGeometry_HomogeneousIdealQuotientGradingInfra",
+   "AlgebraicGeometry_IdealSheafHom",
+   "AlgebraicGeometry_IdealSheafModuleV2",
+   "AlgebraicGeometry_Kmf2FiberSpecTensorStalkLeg1AffineDatum",
+   "AlgebraicGeometry_KwCartierDlogFixednessEngine",
+   "AlgebraicGeometry_KwFrobSemilinearFixedPointFiniteEngine",
+   "AlgebraicGeometry_KwSmoothIrredRelDimConstantEngine",
+   "AlgebraicGeometry_MazurRapoportAppendixGenericFibreOpenImmersionDVR",
+   "AlgebraicGeometry_ModulesIhomSectionsV2",
+   "AlgebraicGeometry_ModulesPushforwardRestrict",
+   "AlgebraicGeometry_ModulesRestrictOpen",
+   "AlgebraicGeometry_ModulesRigidifyV2",
+   "AlgebraicGeometry_NeronModelUniquenessUpToIsomorphism",
+   "AlgebraicGeometry_ProjectiveWeierstrassPolynomialPrime",
+   "AlgebraicGeometry_RegularLocalRingFaithfullyFlatDescent",
+   "AlgebraicGeometry_RegularLocalRingQuotientNonZeroDivisorAscent",
+   "AlgebraicGeometry_RegularLocalRingRegularSequenceAscent",
+   "AlgebraicGeometry_RelSubPicGroupV2",
+   "AlgebraicGeometry_ResolvedModelGlue",
+   "AlgebraicGeometry_ResolvedModelGlueFibre",
+   "AlgebraicGeometry_TwoAffineOpenCoverPreimage",
+   "AlgebraicGeometry_TwoChartCechCupProduct",
+   "Analysis_HalfLineIntercept",
+   "AutomorphicForm_ArchDerivCasimirComplexAPI",
+   "AutomorphicForm_EisensteinScattering",
+   "AutomorphicForm_FundamentalDomainExactVolume",
+   "AutomorphicForm_FundamentalDomainVolume",
+   "AutomorphicForm_Gamma0ExactVolume",
+   "AutomorphicForm_HyperbolicMeasure",
+   "AutomorphicForm_L2AutomorphicCarrier"
+  ]
+ },
+ "statements": {
+  "defs_per_statement_histogram": {
+   "0": 4577,
+   "1": 8053,
+   "10": 446,
+   "11": 254,
+   "12": 211,
+   "13": 275,
+   "14": 172,
+   "15": 146,
+   "16": 120,
+   "17": 133,
+   "18": 109,
+   "19": 99,
+   "2": 5187,
+   "20": 95,
+   "21": 96,
+   "22": 95,
+   "23": 92,
+   "24": 162,
+   "25": 68,
+   "26": 39,
+   "27": 11,
+   "28": 30,
+   "29": 20,
+   "3": 3143,
+   "30": 71,
+   "31": 35,
+   "32": 27,
+   "33": 27,
+   "34": 19,
+   "35": 5,
+   "36": 2,
+   "37": 7,
+   "38": 4,
+   "39": 9,
+   "4": 1914,
+   "41": 7,
+   "44": 4,
+   "45": 1,
+   "46": 3,
+   "47": 17,
+   "5": 1227,
+   "59": 4,
+   "6": 1022,
+   "7": 546,
+   "8": 512,
+   "9": 415
+  },
+  "fraction_mathlib_vocabulary_only": 0.1551,
+  "mathlib_vocabulary_only": 4577,
+  "repo_definition_dependent": 24934,
+  "theorems": 29511
+ }
+}

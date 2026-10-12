@@ -1,0 +1,59 @@
+{
+ "label": "COMPUTED_FROM_ARTIFACT",
+ "definition": "a theorem is exportable if its STATEMENT names no declaration the board itself defines, hence can be stated on any board that speaks mathlib",
+ "retraction": "supersedes the signature-Jaccard transport run, which was invalid: NS statements carry a median of one mathlib token, so its similarity scores measured vocabulary poverty rather than similarity",
+ "boards": {
+  "flt": {
+   "declarations_defined": 148561,
+   "definitions": 8560,
+   "definitions_not_in_mathlib": 8015,
+   "theorems": 48503,
+   "mathlib_vocabulary_only": 12577,
+   "uses_own_definitions": 35926,
+   "exportable_fraction": 0.2593,
+   "examples": [
+    "AlgebraicCurve.TwoChartIntegralModel.exists_subring_etaleCoordinate_residueChar_iff_charts_of_smooth_of_isDiscreteValuationRing",
+    "IsDedekindDomain.HeightOneSpectrum.exists_isOpen_subgroup_forall_apply_mul_eq_of_isLocallyConstant_of_hasCompactSupport",
+    "Rep.finite_H1_ihom_relationModuleInt",
+    "LanglandsTunnell.CubicInduction.isHomogeneous_two_and_sum_pderiv_pderiv_eq_zero_sameTwo_xi",
+    "AlgebraicGeometry.existsUnique_localRing_eq_localization_of_normal_affineModel_of_relDimOne_of_val_of_gen",
+    "AlgebraicGeometry.exists_isClosedImmersion_iff_comp_eq_of_isSeparated",
+    "ModularCurve.HpoolLevelRing.exists_ringHom_laurentSeries_ker_eq_span_natCast",
+    "CommRing.exists_etale_faithfullyFlat_units_eq_mul_inv_mul_inv_of_symm_of_cocycle_of_isUnit_card",
+    "ModularCurve.exists_mem_periodLatticeOf_eq_sum_intCast_mul_edgeIntegral_of_isParabolicHom",
+    "Algebra.Smooth.isDomain_and_isIntegrallyClosed_of_isIntegrallyClosed_of_isLocalization_atPrime",
+    "ModularCurve.isIntegral_adjoin_jqModC_inv_coeffMap_residue_of_isIntegral_of_not_dvd",
+    "WeierstrassCurve.exists_int_transport_comp_sub_smul_add_eq_zero_of_natCard_stabilizer_eq_two",
+    "AlgebraicGeometry.mem_of_isSeparated_of_forall_smoothProperCurve_opens_mem",
+    "ModularCurve.FullLevel.AuxLevel.exists_ringEquiv_adicCompletion_stalk_drinfeldChart_levelAut_linearPart_inertia_of_mem_ssJSet_of_pow_eq_mul_of_isAlgClosed",
+    "AlgebraicCurve.GluedPic0.toPic0Pair_surjective"
+   ]
+  },
+  "ns": {
+   "declarations_defined": 232782,
+   "definitions": 8721,
+   "definitions_not_in_mathlib": 8392,
+   "theorems": 37330,
+   "mathlib_vocabulary_only": 4054,
+   "uses_own_definitions": 33276,
+   "exportable_fraction": 0.1086,
+   "examples": [
+    "epsilon_squared",
+    "scaled_div_mono",
+    "signedSlot_sq",
+    "reference_profile_rate_bound",
+    "base_error_on_mesh",
+    "angularMode_ne_zero",
+    "carrier_mul_angular_frequency",
+    "angular_rounding_error",
+    "lambda_pos",
+    "ratio_ne",
+    "B_pos",
+    "length_pos",
+    "reciprocal_bound",
+    "length_inverse",
+    "slot_abs"
+   ]
+  }
+ }
+}

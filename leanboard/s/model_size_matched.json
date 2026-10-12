@@ -1,0 +1,64 @@
+{
+ "label": "EXPERIMENTAL_RESULT",
+ "measure": "size_matched",
+ "n_pairs": 56,
+ "developments": [
+  "ConnesRigidity",
+  "EhrhartVolumeInequality",
+  "GapCVP",
+  "MetricCodes",
+  "NonSoficGroup",
+  "Permanent",
+  "QuantumParallelRepetition",
+  "SpherePacking"
+ ],
+ "mean_T": 0.02059,
+ "collinearity_r_I_V": 0.7425,
+ "results": {
+  "V alone": {
+   "r": 0.5975,
+   "p": 0.0014,
+   "perms_used": 20000
+  },
+  "I alone": {
+   "r": 0.2656,
+   "p": 0.1285,
+   "perms_used": 20000
+  },
+  "V | controls": {
+   "r": 0.6115,
+   "p": 0.0009,
+   "perms_used": 20000
+  },
+  "I | controls": {
+   "r": 0.2794,
+   "p": 0.1127,
+   "perms_used": 20000
+  },
+  "I | V + controls": {
+   "r": -0.3283,
+   "p": 0.0637,
+   "perms_used": 20000
+  },
+  "V | I + controls": {
+   "r": 0.6278,
+   "p": 0.0008,
+   "perms_used": 20000
+  },
+  "Ir | Vr + controls": {
+   "r": -0.3801,
+   "p": 0.0362,
+   "perms_used": 20000
+  },
+  "Vr | Ir + controls": {
+   "r": 0.653,
+   "p": 0.0003,
+   "perms_used": 20000
+  },
+  "Arch | controls": {
+   "r": 0.5762,
+   "p": 0.0094,
+   "perms_used": 20000
+  }
+ }
+}

@@ -1,0 +1,123 @@
+
+========================================================================
+1. The modular lambda function, in the paper's theta normalization
+========================================================================
+  PASS  (v) lambda(iy) is real for y > 0   [max |Im| = 0.0]
+  PASS  (i) lambda is 2-periodic   [max drift = 7.565370223224420131122371398014010532133e-39]
+  PASS  (i) lambda omits 0 and 1 on the sample   [min|lam| = 0.09967, min|lam-1| = 2.411e-6]
+
+========================================================================
+2. The cusp expansion (3.2): lambda = 16q + O(q^2)
+========================================================================
+     Im tau      |lambda|          |lambda-16q| / |q|^2
+         2         0.0297015      127.47625
+         3        0.00129086      127.97743
+         4        5.57969e-5      127.99902
+         6        1.04199e-7      128.0
+         8       1.94585e-10      128.0
+  PASS  (iv) the remainder is O(q^2) with a uniform constant   [ratio bounded, ~128]
+
+========================================================================
+3. Farey / Stern-Brocot arithmetic -- Lemma 4.1
+========================================================================
+  PASS  Lemma 4.1: q+s >= m+2 and qs >= m+1 at every leaf, depths 0..14   [tightest qs = 1 at depth 0 (q,s)=(1,1)]
+  PASS  the bound qs >= m+1 is ATTAINED at every depth (tight, not slack)   [the spine (1,m+1) realises it]
+  PASS  diameter <= 1/(m+1) at depth 12   [max diam = 1/13 <= 1/13]
+  PASS  height <= 1/(2m+2) at depth 12
+  PASS  the mediant is a Farey neighbour of both endpoints, depths 0..7
+  PASS  both children lie inside the parent's closed half-disk   [(x-a)(a(+)b-x) <= (x-a)(b-x) on the left child]
+
+========================================================================
+4. The bays are disjoint and J_n is compactly inside B_n
+========================================================================
+  PASS  B_n = [6n, 6n+4] are pairwise disjoint   [gap of 2 between bays]
+  PASS  J_n = [6n+1, 6n+3] is compactly inside int B_n
+  PASS  each bay spans exactly four root edges e(k,k+1)
+
+========================================================================
+5. The SL2(Z) orbit of i -- (3.4) and the fourfold multiplicity
+========================================================================
+  PASS  (3.4) Im z_(c,d) = 1/(c^2+d^2) for 89 primitive pairs
+  PASS  (3.4) the representative has Re in [-1/2, 1/2)
+  PASS  each orbit point is hit by exactly the four lower rows listed   [so the fourfold multiplicity bound is correct]
+
+========================================================================
+6. The counting input: coprime density and the log-divergent sum (3.5)
+========================================================================
+       R      N(R)     (6/pi)R^2      ratio
+      20        768           763.9     1.0053
+      40       3064          3055.8     1.0027
+      80      12200         12223.1     0.9981
+     160      48840         48892.4     0.9989
+  PASS  N(R) = (6/pi) R^2 + O(R log R)   [the paper's constant; 6/pi^2 is the coprime DENSITY, 6/pi the disk count]
+
+     X      sum 1/(c^2+d^2)   / log X
+       100           12.5382     2.72263
+      1000           16.9402     2.45235
+     10000           21.3380     2.31674
+    100000           25.7371     2.23550
+  PASS  (3.5) the sum grows like c1 log X, c1 > 0   [ratio decreasing 2.72 -> 2.24 toward 6/pi = 1.910]
+
+========================================================================
+7. The anharmonic group (3.1) and the Mobius identities of Lemma 6.2
+========================================================================
+  PASS  the six anharmonic maps are distinct at a generic point
+  PASS  A is closed under composition (a group of order 6)   [isomorphic to S_3]
+  PASS  A permutes {0,1,infinity}: 1/t, 1-t, ... fix the set   [t=0 -> 0,inf,1,1,0,inf under the six maps]
+  PASS  Lemma 6.2: A in PSL2(Z), A(v)=infinity, A(v+it) = a/q + i/(q^2 t)   [the horocycle through v maps to a vertical ray]
+  PASS  Lemma 6.2: A(u) - a/q = -s / (q(qr - ps))   [exact in rationals; sign of qr-ps separates the two neighbours]
+
+========================================================================
+8. Section 8: the Edrei bound, and the deficiency consequence
+========================================================================
+  PASS  Edrei with two rays at 0 and pi gives rho(F) <= 1   [both complementary angular gaps are pi]
+  Nevanlinna 1925 + finite order => F|H in N(H). The construction gives
+  F|H not in N(H), so rho(F) = infinity and, by Edrei, all three
+  deficiencies delta(0,F) = delta(1,F) = delta(inf,F) = 0.
+  PASS  the paper's own consistency argument closes   [infinite order forced; deficiencies forced to vanish]
+
+========================================================================
+9. THE SAME-OBJECT TEST
+========================================================================
+  aspect              He-Zhang 2608.24829 (25 Aug)            AQ paper 2608.26062 (26 Aug)            verdict
+  ----------------------------------------------------------------------------------------------------------------------------------
+  target              Nevanlinna half-plane, Question 1.1     Nevanlinna half-plane                   SAME
+
+  common ancestor     EKS26 Question 2 (arXiv:2604.06136)     EKS26                                   SAME
+
+  starting function   modular lambda, theta_2^4/theta_3^4     modular lambda / Gamma(2)               SAME
+
+  the domain          boundary = chain of FAREY EDGES,        boundary = GRAPH of a Gaussian-         DIFFERENT
+                                           Stern-Brocot mediant refinement                       perturbed function, bi-Lipschitz  
+                                           in disjoint bays, diagonal choice                       with delta = 2eps/sqrt(pi) ~ 0.00113  
+
+  the obstruction     GREEN ENERGY / spherical area:          BLASCHKE condition:                     DIFFERENT
+                                           int G_Omega(i,z) (lambda#)^2 dA = inf                       sum G_H(i, z_n) = inf over an  
+                                           (Ahlfors-Shimizu, Riesz decomp.)                       explicit Gamma(2) orbit  
+
+  divergence engine   log-mean of lambda via Jensen +         sum phi(2m)/(m^2 log m),                DIFFERENT
+                                           coprime lattice count, density 6/pi^2                       a totient series   
+
+  extension to C      Schwarz reflection across Farey edges   Schwarz reflection                      SAME (forced)
+
+  authorship          2 named humans, Fudan + Xi'an Jiaotong  7 human collaborators                   DIFFERENT
+
+  AI statement        'AI-assisted exploration under the      GPT-5.6 Sol Ultra, 7h14m session        both present
+                                           authors' mathematical supervision'                                          
+
+  PASS  the two constructions are NOT the same mathematical object   [3 of 3 load-bearing components differ]
+  PASS  what they share is exactly what EKS26 hands out for free   [the target, the question number, and lambda as the starting point]
+
+  DISCRIMINATOR (declared in ar/CONCURRENCY_CORRECTION.md before this paper arrived):
+    M1 seeding     -> same object, shared route, asymmetry in polish   NOT OBSERVED
+    M2 shared list -> different objects on a common famous target      OBSERVED
+
+  He-Zhang's Lemma 3.1 states it is proved 'following the idea of [EKS26, Lemma 6]'.
+  The shared ancestor is cited, not inferred. EKS26 was revised 24 July 2026 and
+  He-Zhang record accessing the revised PDF on 24 August 2026 -- the same day as the
+  other paper's timestamped release. Two groups reading one month-old preprint that
+  poses the question AND names lambda as the half-plane counterexample.
+
+========================================================================
+RESULT   27/27 checks passed
+========================================================================

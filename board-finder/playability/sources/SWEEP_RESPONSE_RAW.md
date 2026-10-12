@@ -1,0 +1,306 @@
+# Raw sweep response — verbatim
+
+Returned by a Claude chat surface (web search + fetch) against
+`../PROMPT_SWEEP.md` Part A, 2026-09-20. Stored verbatim and unedited so every quote
+stays recoverable. **Nothing here was fetched by this session**; all URLs, dates and
+quotes are relayed. Tier: SECONDARY-RELAYED. Adjudication in `../REPORT_SWEEP.md`.
+
+---
+
+RECORD 287 — Alperin–McKay
+claim: each carries a reduction theorem to an inductive condition on finite simple groups, so a counterexample search is a structured list rather than a combinatorial explosion, and the predicate is implemented in GAP's character table library.
+verdict: CORRECTED
+frontier: Späth's 2013 reduction theorem (J. Reine Angew. Math. 680) reduces AM to the "inductive Alperin–McKay condition" (iAM) on quasi-simple groups. That reduction has now been fully discharged for the prime ℓ=2: Ruhstorfer's paper states "Our main objective in this paper is to prove this conjecture for the prime 2," concluding "Theorem A. The Alperin–McKay conjecture holds for the prime ℓ=2." So the prediction in the claim is right, but understates the result — this isn't just "someone swept the small groups," the whole classified list has been cleared for ℓ=2 and Alperin–McKay is now a theorem at that prime.
+wall: for odd primes, "the inductive McKay condition only remains open for simple groups of type D," and the analogous iAM verification for odd ℓ is still incomplete across Lie-type families — stated by the sources, not inferred.
+url: https://ar5iv.labs.arxiv.org/html/2204.06373
+date: 2022 (arXiv); published Annals of Math. 201(2), 2025
+quote: "Theorem A. The Alperin–McKay conjecture holds for the prime ℓ=2."
+depthOrBreadth: BROAD
+breadthDetail: verification proceeds group-family by group-family (type A, C, Sp2n(q), exceptional/quasi-isolated blocks) crossed with prime ℓ; sporadics and alternating groups were cleared early (Malle 2008), Lie-type families have been cleared one at a time since.
+note: The GAP connection is real and traceable — Breuer built dedicated GAP character tables of sporadic defect-group normalizers specifically to check this condition, and later papers cite ongoing GAP-based computations (Breuer's ctblocks page) for the finite checks.
+
+RECORD 300 — Alperin's weight conjecture
+claim: reduction theorem to inductive condition on finite simple groups; predicate implemented in GAP; prediction that the small-group sweep has already been published.
+verdict: CORRECTED
+frontier: Navarro–Tiep reduced AWC to the "inductive AW condition" (Invent. Math. 184, 2011). Sporadic groups specifically were swept and published: "An and Dietrich [7] dealt with sporadic groups," and Lie-type groups in defining characteristic plus groups with abelian Sylow 2-subgroups were done in the original Navarro–Tiep paper. So the prediction is right for the sporadic/GAP-checkable slice — but unlike Alperin–McKay at ℓ=2, the full conjecture is explicitly still open: a 2024 source states plainly it is "out of reach" in general.
+wall: the blockwise refinement (BAW) and the general AW condition remain unverified for large families of Lie-type groups at non-defining characteristic; a 2025 source lists this as still being chased prime-by-prime, family-by-family.
+url: https://par.nsf.gov/servlets/purl/10501234
+date: April 18, 2024
+quote: "Despite the fact that certain families of simple groups have been shown to satisfy the inductive AWC condition (see [BS, FLZ, FM, Li, Ma], etc.), it is fair to say that a full proof of AWC seems yet, unfortunately, out of reach."
+depthOrBreadth: BROAD
+breadthDetail: dozens of separate family-by-family papers (type A, C, Sp2n(q), sporadics via An–Dietrich, Suzuki/Ree groups, etc.), each a self-contained case.
+note: The sporadic sweep exists and is citable (An–Dietrich), so the Group-1 prediction is confirmed for that slice specifically — but AWC as a whole is a genuinely different (harder) situation than Alperin–McKay, which is now fully proved at ℓ=2. Worth not conflating the two.
+
+RECORD 356 — Brauer's k(B)
+claim: reduction theorem to inductive condition on finite simple groups (weaker than the other three, low confidence flagged); is the predicate in GAP; has the classified-list sweep been published.
+verdict: CONFIRMED
+frontier: The reduction here is genuinely weaker than the McKay-style inductive conditions — it's a "minimal counterexample must be a quasi-simple group" argument (Navarro's Theorem 2.2), not a normalizer-compatible bijection requiring cohomological/equivariance data. The classified-list sweep the prediction expects has been published: sporadics, the Tits group, alternating groups A6/A7, and exceptional covers of Lie-type groups are all done directly from GAP character tables.
+wall: what remains is groups of Lie type in non-defining characteristic and small primes (p=2,3) with non-abelian defect groups — stated directly: Malle's paper proves quasi-simple groups aren't minimal counterexamples "for p >= 5 nor in the case of abelian defect," leaving small p with non-abelian defect as the open wall.
+url: https://arxiv.org/pdf/1709.05068
+date: 2017 (arXiv:1709.05068)
+quote: "The character tables of all the groups G in the statement are known and available in GAP [30]; since the block-subdivision of Irr(G) and the defect of a block can be computed from a knowledge of the character table, the claim can easily be verified automatically."
+depthOrBreadth: BROAD
+breadthDetail: sporadics (all 26) + Tits group + A6/A7 done by direct GAP computation; exceptional Lie-type covers done separately; remaining families are classical Lie-type groups at p=2,3, case by case.
+note: The task's self-flagged low confidence on this one was justified in spirit (the reduction is structurally different/weaker) but the sweep itself is real and citable, so I'm marking CONFIRMED rather than CORRECTED — the underlying uncertainty was about mechanism, not about whether the sweep exists.
+
+RECORD 472 — McKay–Navarro (Galois–McKay)
+claim: reduction theorem to inductive condition on finite simple groups; predicate in GAP; sweep of classified list already published.
+verdict: CORRECTED
+frontier: Navarro–Späth–Vallejo (2020, Trans. AMS 373) reduced the Galois–McKay conjecture to "inductive McKay–Navarro" conditions on simple groups. As with the other two block conjectures above, this has now gone further than a sweep — it's a completed theorem at ℓ=2: Ruhstorfer & Schaeffer Fry state plainly they "complete the proof of the McKay-Navarro conjecture... for the prime 2," published in Advances in Mathematics (2025). Sporadic and alternating groups specifically were handled via direct computation, credited to Carolina Vallejo.
+wall: odd primes remain open in general; even at ℓ=2 the completion required extending case-by-case through untwisted, then twisted, Lie-type families — each family its own paper.
+url: https://arxiv.org/html/2211.14237v2
+date: arXiv v1 2022; published Advances in Mathematics 477 (2025), 110369
+quote: "We complete the proof of the McKay–Navarro conjecture (also known as the Galois–McKay conjecture) for the prime 2, by completing the proof of the inductive McKay–Navarro conditions introduced by Navarro–Späth–Vallejo for this prime."
+depthOrBreadth: BROAD
+breadthDetail: sporadics + alternating groups (Vallejo), then Lie-type families added one at a time (untwisted without graph automorphisms first, then remaining twisted/graph-automorphism cases) to close out ℓ=2.
+note: All three of Alperin–McKay, Alperin weight (partially), and McKay–Navarro turned out to have much more mature ℓ=2 results than the prompt's cautious "someone may have swept it" framing suggested — two of the four Group-1 conjectures are outright theorems at ℓ=2 now, not just verified sweeps.
+
+RECORD 22 — Binary Goldbach
+claim: verified to about 4·10^18.
+verdict: CONFIRMED
+frontier: Every even n > 2 as a sum of two primes, verified for n up to 4×10^18.
+wall: purely computational — a segmented sieve pushed as far as distributed hardware allows; the source's own framing shows the wall is "the sizes of the largest counterexamples" search space, not any theoretical obstruction.
+url: https://www.ams.org/journals/mcom/2014-83-288/S0025-5718-2013-02787-1
+date: Math. Comp. 83 (2014), 2033–2060 (computation completed April 2012)
+quote: "This paper describes how the even Goldbach conjecture was confirmed to be true for all even numbers not larger than $4\cdot 10^{18}$."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — single sieve pipeline pushed further)
+note: The peer-reviewed record is still 4×10^18 (2014), but there's a cluster of 2025–2026 informal, non-peer-reviewed efforts (a Medium blog post claiming +7×10^13, a Preprints.org preprint claiming up to six quintillion, a Zenodo dataset extending 2 million integers past the mark) — none rigorous enough to supersede the citable frontier, but worth knowing this is an active hobbyist space right now.
+
+RECORD 161 — Collatz
+claim: verified far out; the divergence branch is not certifiable at all, only a cycle is finite.
+verdict: CONFIRMED
+frontier: Convergence verified for all starting values below 2^71, up from 2^68 (2023-era yoyo@home/Bařina result) and 2^66 before that.
+wall: purely computational, GPU/supercomputer throughput — each starting value must be individually traced to 1; there's no shortcut that certifies a whole range without walking every trajectory in it.
+url: https://link.springer.com/article/10.1007/s11227-025-07337-0
+date: Journal of Supercomputing 81(1), 2025 (Bařina)
+quote: "we introduce a new result that pushes the limit for which the conjecture is verified up to 2^71."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — one sieve/trajectory-tracing pipeline, successively accelerated: 1335× speedup from CPU baseline to GPU, then distributed across European supercomputers)
+note: Each verified starting value is checked by direct trajectory tracing to 1, which rules out both divergence and any non-trivial cycle for that value simultaneously — there isn't a separate "divergence-certifying" step distinct from the termination check itself, so the claim's framing (divergence "not certifiable," only cycles "finite") is really about what's provable in general vs. what's checked exhaustively case-by-case, not a gap in the computation itself.
+
+RECORD 239 — Odd perfect number
+claim: sigma(N) = 2N with N odd; a linear push against a very large known lower bound.
+verdict: CONFIRMED
+frontier: No odd perfect number below 10^1500 (also: at least 101 not-necessarily-distinct prime factors, largest prime-power component > 10^62).
+wall: computational tree-search cost — each improvement extends a large branching proof-tree of factorization cases; pushing the bound further requires factoring increasingly large composite numbers, which is the bottleneck (explicitly named in the follow-up radical paper: "we have encountered composite numbers with no known factors").
+url: https://www.ams.org/mcom/2012-81-279/S0025-5718-2012-02563-4/
+date: Math. Comp. 81 (2012), 1869–1877
+quote: "Brent, Cohen, and te Riele proved in 1991 that an odd perfect number N is greater than $10^{300}$. We modify their method to obtain $N>10^{1500}$."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — one proof-tree method, pushed with more factoring compute each round: 10^20 -> 10^36 -> 10^50 -> 10^160 -> 10^300 -> 10^1500 over successive papers)
+note: This bound (10^1500, from 2012) is still the cited record as of the most recent surveys I found (2024 Colgate survey, MathWorld) — no update in over a decade, which itself is informative about how hard the next factoring step is.
+
+RECORD 307 — Legendre
+claim: a prime strictly between n^2 and (n+1)^2; a linear push, prime-gap frontier far out.
+verdict: CONFIRMED
+frontier: Verified for all n <= 7.05×10^13 (Sorenson & Webster), up from the previous record of 2×10^9.
+wall: purely computational — algorithm runtime O(N log N log log N); the published paper reports it "ran for about half a year" on hundreds of cores, so the wall is compute-time/parallelism, not a theoretical obstruction.
+url: https://link.springer.com/article/10.1007/s40993-024-00589-4
+date: Res. Number Theory (2024), s40993-024-00589-4
+quote: "We implemented a parallel version of our algorithm and improved the empirical verification of Oppermann's conjecture from the previous $N = 2\cdot 10^{9}$ up to $N = 7.05\cdot 10^{13} > 2^{46}$, so we were finding 27 digit primes."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — one sieve/interval-search pipeline, scaled with more cores/compute-months)
+note: I found two slightly different numbers for this same project — an arXiv preprint version citing 3.33×10^13, and the published journal version citing the higher 7.05×10^13. I've used the published figure as the frontier since it supersedes the preprint.
+
+RECORD 348 — Beal / Tijdeman–Zagier
+claim: A^x + B^y = C^z with x,y,z > 2 forces a common factor; a bounded linear search over exponents and bases.
+verdict: CONFIRMED
+frontier: The most rigorous published computational result found is an exhaustive search of exponential Diophantine equations of this shape up to C^z <= 2^100 (Townsend, 2010), with no counterexample. Separately, the informally-cited (Beal's own and follow-on) search checked all six variables (A,B,C,x,y,z) up to 1000.
+wall: purely combinatorial/computational — a modular-arithmetic filter that "eliminate[s] over 99% of inputs with a single array lookup," so the wall is how far the residue-table search can be pushed with available compute, not a theoretical obstruction.
+url: https://arxiv.org/pdf/1004.0430
+date: arXiv:1004.0430, submitted April 3, 2010
+quote: "This algorithm is used to show the largest min/gcd value for all equations with $C^z \leq 2^{100}$."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — one filtering pipeline pushed on a single magnitude bound)
+note: I could not find a rigorous, peer-reviewed update to this search more recent than 2010 — the frontier here has apparently been static for over a decade, unlike Goldbach, Collatz, and Legendre, which all saw fresh compute records in 2024–2025.
+
+RECORD 488 — Second Hardy–Littlewood (part a: direct verification frontier)
+claim: pi(x+y) <= pi(x) + pi(y); frontier of direct verification.
+verdict: CONFIRMED
+frontier: There's no brute-force 2-variable numerical sweep the way Goldbach has; instead the "frontier" is the proven analytic range where subadditivity is guaranteed. A 2025/2026 paper gives unconditional improvements to that range and, under RH, proves it holds whenever y >= (2+eps)sqrt(x)·log^2(x) / (8pi) for x large.
+wall: the inequality is expected to be false in general (see 488b) — so "verification" here really means "how wide a proven-safe range can be carved out," not a search for a counterexample; the wall is the error term in the Prime Number Theorem, which is what bounds how far the safe range can be pushed.
+url: https://www.arxiv.org/pdf/2503.02766
+date: arXiv March 2025; published online Acta Arithmetica, April 2026
+quote: "we obtain unconditional improvements on the range of y for which π(x) is known to be subadditive."
+depthOrBreadth: DEEP
+breadthDetail: (n/a)
+note: This conjecture is unusual among the list — it's widely believed false, not true, so "verification" and "counterexample search" are two sides of the same coin (see 488b).
+
+RECORD 488b — Second Hardy–Littlewood (part b: the admissible-set witness)
+claim: the witness question factors into a cheap combinatorial piece — whether an admissible pattern of diameter y can contain more than pi(y) elements, believed to happen past y ~ 1600; find the smallest known y where this is established.
+verdict: CONFIRMED
+frontier: An explicit admissible 447-tuple of diameter 3158 (spanning y=3159 consecutive integers) is known, while pi(3159) = 446 < 447. If the prime k-tuple conjecture holds, this pattern is realized by primes infinitely often, which would make pi(x+3159) >= pi(x) + 447 > pi(x) + pi(3159) — a genuine counterexample to the second Hardy–Littlewood conjecture.
+wall: the smaller-y search is a discrete optimization (densest admissible k-tuple for each k) that gets combinatorially harder as k grows; per an MIT prime-gaps database, exhaustive/near-exhaustive search has pushed some of Engelsma's k-tuple records narrower for k>342, but I did not find a published y smaller than 3159 for a subadditivity-violating pattern.
+url: https://klein.mit.edu/~drew/PrimeGapsOberwolfach3.pdf
+date: result originally due to Engelsma, 2005; slide deck citing it undated (MIT prime-gaps project, active database)
+quote: "Theorem (Engelsma 2005) H(447) <= 3158 < p447 = 3163."
+depthOrBreadth: BROAD
+breadthDetail: this is a search over admissible k-tuples for many different k (hundreds to thousands), each an independent discrete-optimization instance; an MIT database maintains best-known tuples for 2 <= k <= 5000 and is "open for submission."
+note: The task's guess of "y ~ 1600" as where this starts happening was close in order of magnitude but the actual smallest documented witness is at y=3159, about twice that — a mild CORRECTED-flavored note worth having even though I'm calling the overall record CONFIRMED (the phenomenon and its cheap-combinatorial-search character are both real).
+
+RECORD 500 — Lehmer's tau
+claim: tau(n) != 0 for all n; tau(p) per prime is cheap; purely where the sweep stopped.
+verdict: CORRECTED
+frontier: Verified for all n < 816,212,624,008,487,344,127,999 (~8.16×10^23).
+wall: Not a simple per-prime sweep — the record method computes tau(n) mod small primes l (e.g. l=31) via Galois representations attached to modular forms / point-counting on modular curves, which lets researchers jump to astronomically large individual n rather than walking through every integer. The wall is how large a prime l (and how efficient the associated modular-curve computation) can be handled, not raw per-integer cost.
+url: https://arxiv.org/pdf/1311.0577
+date: arXiv:1311.0577, 2013
+quote: "we show that $\tau(n) \neq 0$, for all $n < 982149821766199295999$. This improves Bosman's bound by a factor approximately equal to 43."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — one Galois-representation pipeline, extended by later work to the current record cited above)
+note: I found two numbers in close succession — the paper above (982149821766199295999, 2013) and a slightly larger cited "record" of 816212624008487344127999 referenced by a 2021 survey — the second exceeds the first, so it looks like a further undocumented-in-my-search improvement happened between 2013 and 2021; I'm reporting the larger, more recently-cited figure as current but flagging that I couldn't pin down its original source paper.
+
+RECORD 9 — GRH for Dirichlet L-functions
+claim: a zero off the line needs rigorous interval arithmetic far past any new sweep; report the current verification height if one is published.
+verdict: CONFIRMED
+frontier: All zeros of Dirichlet L-functions for primitive characters of modulus q <= 400,000 have been rigorously verified to lie on the critical line up to height H_q = max(10^8/q, c_q·10^7/q + 200) (c_q=7.5 even, 3.75 odd) — and separately, no Dirichlet L-function of modulus q <= 2,000,000 vanishes at its central point.
+wall: rigorous interval-arithmetic computation of each L-function's zeros — cost scales with both modulus q and height, so the two-parameter search space (q x height) is the wall, not a single linear frontier.
+url: https://www.doi.org/10.1090/MCOM/3077
+date: Math. Comp. 85 (2016), 3009–3027 (Platt)
+quote: "We describe two new algorithms for the efficient and rigorous computation of Dirichlet L-functions and their use to verify the Generalised Riemann Hypothesis for all such L-functions associated with primitive characters of modulus $q\leq 400 000$."
+depthOrBreadth: BROAD
+breadthDetail: two independent dimensions being swept — modulus q (up to 400,000 for full-height verification, separately up to 2,000,000 for central-point-only) and height per modulus.
+note: There's a very recent (2026) related-but-distinct result I should flag: Lu, Zaman & Zhao verify a real-axis zero-free strip (not full on-the-line verification) for quadratic Dirichlet L-functions up to modulus q <= 10^10 — vastly beyond Platt's 400,000, but it's a different, weaker claim (an interval where no zero exists on the real line, not "every zero on the critical line up to height H"). Worth not conflating the two when citing "the" GRH verification frontier.
+
+RECORD 280 — Kaplansky's idempotent conjecture
+claim: every idempotent in K[G] for torsion-free G is 0 or 1; the neighbouring unit conjecture fell to a computer search — believed Gardam, 2021, in the Promislow group over F_2. Verify that, then find whether anyone has pointed the same method at the idempotent conjecture, and what stopped them.
+verdict: CORRECTED
+frontier: The recalled citation is confirmed exactly: Gardam (2021) found an explicit non-trivial unit in F_2[P] where P is Promislow's group (the fundamental group of the Hantzsche–Wendt flat 3-manifold), disproving the unit conjecture in characteristic 2. This is the top of a three-step implication chain — unit => zero-divisor => idempotent — so disproving unit did not automatically disprove the two weaker conjectures below it: P itself is known to satisfy the zero-divisor conjecture (it's supersoluble), so Gardam's counterexample gives no idempotent counterexample "for free."
+wall: Nobody has pointed a search at the idempotent conjecture specifically. Instead, the field's actual next target — logically and in practice — is the intermediate zero-divisor conjecture, since a zero-divisor counterexample would automatically hand you an idempotent counterexample too. That search is explicitly ongoing and unresolved: a 2025 paper states "the zero-divisor conjecture still remains open," and a Bar-Ilan University AI-algebra lab (partnering with Miasnikov, Stevens Institute) lists "Kaplansky's zero divisor conjecture" as a live target for algorithmic/reinforcement-learning search as of early 2026, without reporting success.
+url: https://arxiv.org/pdf/2501.07646
+date: arXiv:2501.07646, January 2025 (zero-divisor status); Gardam's original result: 2021
+quote: "While the zero-divisor conjecture still remains open, the unit conjecture was disproven by Gardam in 2021. The search for more counterexamples remains an open problem."
+depthOrBreadth: DEEP
+breadthDetail: (n/a for idempotent specifically — no dedicated search exists yet to characterize as deep or broad; the adjacent zero-divisor search is a single deepening pipeline: Gardam's method extended/reimplemented by several groups against progressively larger candidate group classes)
+note: This is the clearest "the absence is the finding" case in the whole set — no one has run the idempotent-specific search because the field's logic routes through zero-divisor first, and that intermediate target is itself still unbroken as of 2025–2026 sources. Also worth flagging: I found a claim (Wikipedia, sourced to a later Gardam preprint) that essentially the same unit-conjecture counterexample element also works in characteristic 0 — I could not independently verify this preprint directly, so I'm flagging it as unconfirmed rather than folding it into the verdict above.
+
+RECORD 79 — Hadwiger
+claim: no K_{t+1} minor => t-colourable; minor-closed structure cuts the candidates.
+verdict: CONFIRMED
+frontier: Proved for t <= 6 (t=5 and t=6 both equivalent to and proved via the Four Colour Theorem, the latter by Robertson–Seymour–Thomas). t=7 is open. A weaker "Linear Hadwiger" version (Ct-colourable for some constant C, rather than exactly t-1) has been reduced to a finite coloring check on small graphs, and the current general upper bound is O(t log log t)-colourable.
+wall: t=7 "appears to be out of reach at the moment," per a late-2025 paper — the wall isn't computational exhaustion (the Four-Colour-Theorem-style case checks worked for t<=6) but a genuine proof-technique gap for t>=7; no one has a reduction of the exact (non-linear) conjecture to a finite check the way t=5,6 reduced to 4CT.
+url: https://arxiv.org/pdf/2512.20392
+date: arXiv:2512.20392 (December 2025)
+quote: "It is only known to hold [44] for $t \leq 6$, with the cases t = 5 and t = 6 both shown to be equivalent to the Four-Color theorem, and even the t = 7 case appears to be out of reach at the moment."
+depthOrBreadth: DEEP
+breadthDetail: (n/a for the exact conjecture — each t is its own frontier, pushed one integer at a time since 1943; the linear relaxation is BROAD in a different sense, having been reduced to checking a large but finite family of small graphs)
+note: Worth separating two different objects here: the exact conjecture (still stuck at t<=6) and "Linear Hadwiger" (a provably-weaker statement with much more active, recent progress — Delcourt–Postle's small-graph reduction, and a 2025 paper disproving the related "Odd Hadwiger" strengthening). The task's claim ("minor-closed structure cuts the candidates") describes the linear relaxation's proof strategy more than the exact conjecture's, which has no known finite-checkable reduction beyond t=6.
+
+RECORD 275 — Frey–Mazur
+claim: E[p] iso E'[p] for p > 17 => isogenous; computable over small conductor.
+verdict: CONFIRMED
+frontier: For elliptic curves over Q of conductor <= 500,000, the strong Frey–Mazur conjecture is verified with C=17 — i.e. every p-congruence with p>=19 between curves in that conductor range comes from an isogeny (Cremona–Freitas). Congruences are known to exist for all primes up to 17 (e.g. an explicit 17-torsion congruence between two non-isogenous curves, Billerey), consistent with the conjectured cutoff.
+wall: exhaustive computation over the LMFDB elliptic-curve database — checking every pair of curves up to a conductor bound for shared mod-p Galois representations; extending past conductor 500,000 is a database-size/compute problem, not a theoretical one. The conjecture itself, for arbitrary conductor, remains open in general.
+url: https://arxiv.org/pdf/2404.07319
+date: arXiv:2404.07319, cited result Cremona–Freitas 2022
+quote: "Over the rationals (i.e. $K = \mathbb{Q}$), Cremona and Freitas [CF22, Theorem 1.3.] have shown that for curves of conductor at most 500 000, the strong version of the Frey-Mazur Conjecture holds with C = 17."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — one exhaustive database sweep, pushed by conductor bound)
+note: There's real recent theoretical progress too, not just computation: function-field analogues of Frey–Mazur have been proven unconditionally (Bakker–Tsimerman, and independently Bakker with another coauthor) via hyperbolic geometry of modular surfaces — a genuinely different, non-computational route that doesn't directly bound the classical Q-case but is worth knowing about.
+
+RECORD 295 — Tutte 5-flow
+claim: reduces to snarks, exhaustive snark generation is the method and it is pushed; give the snark-generation frontier.
+verdict: CORRECTED
+frontier: The classical benchmark (Brinkmann–Goedgebeur–Hägglund–Markström, 2013) generated all snarks up to 36 vertices — but this has just been superseded: a March 2026 paper reports complete generation of all girth->=5 snarks up to 38 vertices and all girth-exactly-4 snarks up to 40 vertices, using a new algorithm 14–29x faster than prior ones.
+wall: stated explicitly and quantitatively — the old algorithm would have needed roughly 840 CPU-years to reach 38 vertices (vs. 73 CPU-years actually spent reaching 36), which is why a faster algorithm had to be developed first; the wall is combinatorial explosion in graph count (over 400 million cyclically-4-edge-connected snarks already at 36 vertices) against available compute.
+url: https://arxiv.org/html/2603.17789v1
+date: arXiv:2603.17789, March 2026
+quote: "One algorithm is for snarks with girth exactly 4 and is used for generating complete lists of girth 4 snarks on up to 40 vertices. The second algorithm lists snarks with girth at least 5 and is used for generating complete lists of such snarks on up to 38 vertices."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — one generation pipeline, pushed order by order; within a fixed order, the many resulting snarks are then checked against conjectures like this one, which is more a byproduct than a second axis of breadth)
+note: This is a genuinely live frontier — my search turned up a brand-new (this year) doubling of the previous decade-old record, so the task's framing ("it is pushed") undersold how recent the push actually is.
+
+RECORD 355 — Tutte 3-flow
+claim: 4-edge-connected => nowhere-zero 3-flow; same shape as the 5-flow (i.e., reduces to snarks, exhaustive generation as method).
+verdict: CORRECTED
+frontier: The best unconditional result is that every 6-edge-connected graph has a nowhere-zero 3-flow (Lovász–Thomassen–Wu–Zhang, 2013) — down from Thomassen's original 8-edge-connected bound. The conjecture claims this should hold already at 4-edge-connected, so the open gap is exactly "5-edge-connected" and "4-edge-connected."
+wall: this is not shaped like the 5-flow problem. It reduces to 5-regular graphs, not to cubic snarks, and there is no known finite-checkable/exhaustive-search reduction the way the 5-flow conjecture reduces to snark generation — progress here has come from edge-connectivity threshold-lowering proofs (8->6, with the target at 4), not from a combinatorial search over a structured family.
+url: https://arxiv.org/pdf/1611.02231
+date: theorem due to Lovász, Thomassen, Wu & Zhang, 2013; this citation 2016
+quote: "In 2013 Lovász, Thomassen, Wu, and Zhang [8] refined Theorem 1 as the follows, concluding that every 6-edge-connected graph admits a nowhere-zero 3-flow. They also remarked that if the edge-connectivity needed in the following theorem can be reduced by 1, then Tutte's 3-Flow Conjecture is true."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — one proof-technique pipeline, pushing the edge-connectivity threshold down by increments)
+note: This is the clearest mismatch in the whole Group-4 set: the task's premise groups 3-flow and 5-flow together as reducing-to-snarks-plus-exhaustive-search problems, but they're structurally different — 5-flow genuinely reduces to a finite combinatorial search over snarks; 3-flow reduces to 5-regular graphs and is being chased by connectivity-threshold theorems instead.
+
+RECORD 335 — Jones unknot
+claim: V_K = 1 <=> unknot; knot tabulation by crossing number is the method; give the crossing-number frontier.
+verdict: CONFIRMED
+frontier: The Jones polynomial has been verified to distinguish the unknot from every non-trivial knot with a diagram of up to 24 crossings (Tuzun & Sikora).
+wall: pure combinatorial explosion in diagram count — the 23-crossing step alone required testing over 10.7 trillion candidate diagrams (~9x the 22-crossing count), consuming 2,744 core-days; the growth rate is roughly 5–10x CPU time per additional crossing, which is the explicit bottleneck.
+url: https://arxiv.org/pdf/2003.06724
+date: arXiv:2003.06724 (2020); published Journal of Knot Theory and its Ramifications, 2021
+quote: "The verification for 23 crossings required testing 10,675,582,685,989 non-algebraic knot diagrams and 43,356,077,900 algebraic knot diagrams, for a total of 10,718,938,763,889 knot diagrams – approximately 9 times the number of knot diagrams for 22 crossings."
+depthOrBreadth: DEEP
+breadthDetail: (n/a — one generate-and-test pipeline, pushed crossing-count by crossing-count)
+note: A structurally different, non-computational route also rules out failure on a specific sub-case: it's proven (Kronheimer–Mrowka) that Khovanov homology, which refines the Jones polynomial, does detect the unknot exactly — so any counterexample to the Jones conjecture would have to be a knot with trivial Jones polynomial but non-trivial (detectable) Khovanov homology.
+
+RECORD 429 — Lovász
+claim: every finite connected vertex-transitive graph has a Hamiltonian path; generable from group data; frontier is order.
+verdict: CONFIRMED
+frontier: No counterexample is known. Complete computer-generated censuses of vertex-transitive graphs exist and have been checked: cubic vertex-transitive graphs are completely enumerated up to order 1280 (Potočnik–Spiga–Verret) with none violating the conjecture, and general vertex-transitive graphs have complete classifications for structured orders (kp for k<=5, p^j for j<=4, 2p^2, 6p, where p is prime) — all confirmed Hamiltonian-path-possessing. Only five connected vertex-transitive graphs are known to lack a Hamilton cycle (the stronger property) at all: K_2, the Petersen graph, the Coxeter graph, and their two "triangle-replacement" derivatives — and even these have Hamilton paths.
+wall: pure computation/classification — extending complete graph censuses to higher orders, or proving the path property for more structured order-classes (currently kp, p^j, 6p, 2p^2 are done; general composite orders are not).
+url: https://arxiv.org/pdf/1201.5317.pdf
+date: cubic census: arXiv:1201.5317 (2012); order-6p case: arXiv:math/0702182 (2007)
+quote: "we combine some new theoretical results with computer calculations to construct all cubic vertex-transitive graphs of order at most 1280."
+depthOrBreadth: BROAD
+breadthDetail: progress is order-class by order-class (primes, prime powers, kp for small k, 6p, etc.), each its own separate paper/proof, plus full computational censuses for the cubic-degree case specifically.
+note: I found a claim online (an informal wiki, not a peer-reviewed source) that the full conjecture has been computer-verified for all vertex-transitive graphs up to order 100 — I could not independently confirm this against a citable paper, so I'm leaving it out of the verdict; the solidly-sourced frontier is the structured-order results and the complete cubic-graph census above. Also worth flagging: while searching I nearly conflated this with a different "conjecture of Lovász" (an unrelated 1975 hypergraph statement about Ryser's conjecture) that actually was disproven in 2025 — the two share a name but are completely different problems.
+
+RECORD 458 — Erdős matching
+claim: the two extremal candidates are explicit, so a counterexample must beat both; give the ranges where the conjecture is proved.
+verdict: CORRECTED
+frontier: The established, multiply-cited proven ranges are: n >= n_0(k,s) (Erdős, original); n >= 2sk^3 (Bollobás–Daykin–Erdős); n >= 3sk^2 (Huang–Loh–Sudakov); n >= (2s+1)k-s (Frankl); the boundary case n=sk (Kleitman); k=3 for n>=4s (Frankl–Rödl–Ruciński); and k>=5, s>100k^3, sk<=n<s(k+100/k) (Kolupaev–Kupavskii, 2023).
+wall: none of these papers found a single unified argument — each pushed a different (n,k,s) regime, and as of the survey cited, "despite this extensive body of work, the conjecture has remained open in its entirety."
+url: https://arxiv.org/html/2602.01471v5
+date: survey of prior results as compiled in a February–March 2026 preprint
+quote: "Despite this extensive body of work, the conjecture has remained open in its entirety. In this paper, we provide a complete proof."
+depthOrBreadth: BROAD
+breadthDetail: each cited result covers a different slice of the (n,k,s) parameter space; nobody's approach generalizes to all three simultaneously until the claim below.
+note: Flagging this prominently rather than burying it: a single-author preprint (Mishra, National Institute of Technology Rourkela) claims a full, unconditional proof of the entire conjecture, first posted ~Feb 5, 2026 and already on its fifth revision by mid-March 2026. That revision cadence is itself a signal of a claim still being actively corrected/scrutinized, and I found no independent confirmation (no citing papers, no seminar announcements, no community commentary) that this has been verified or accepted. I'd treat "conjecture proved in full" as unconfirmed rather than established fact until independent verification surfaces — the solid, safe answer is the range-by-range list above.
+
+RECORD 493 — Voronoi on parallelohedra
+claim: proven for d <= 5, and d = 6 enumeration is the wall.
+verdict: CONFIRMED
+frontier: The Voronoi conjecture (every parallelohedron is affinely equivalent to a Dirichlet–Voronoi polytope of some lattice) is proved through dimension 5 — the d=5 case was closed by Garber (published in Inventiones Mathematicae, 2025), building on a complete computational classification of all 110,244 combinatorial types of 5-dimensional Delaunay subdivisions (Dutour Sikirić, Garber, Schürmann & Waldmann).
+wall: exactly the enumeration bottleneck the claim names — a 2004-era source states plainly that the number of inequivalent Delaunay subdivisions in dimension 6 "is not known and will be much larger" than the 5-dimensional count (already 110,000+); no d=6 computer classification analogous to the d<=5 ones has been completed as far as I found.
+url: https://arxiv.org/pdf/1906.05193
+date: arXiv:1906.05193 (2019, v6 Jan 2025); published Inventiones Math. 2025, pp. 587–631
+quote: "We prove the Voronoi conjecture for five-dimensional parallelohedra. Namely, we show that if a convex five-dimensional polytope P tiles $\mathbb{R}^5$ with translations, then P is an affine image of the Dirichlet-Voronoi polytope for a five-dimensional lattice."
+depthOrBreadth: BROAD
+breadthDetail: proof method is exhaustive combinatorial case analysis over the classified types (dual 3-cells, incident dual 4-cells) at each dimension; extending to d=6 needs the type-enumeration finished first, which is itself a separate, large combinatorial-search project.
+note: The proof technique (Garber's "free direction" argument) is explicitly stated to depend on having the complete list of combinatorial types in that dimension already in hand — so the d=6 case is genuinely blocked on enumeration completing first, not merely awaiting someone applying the existing method.
+
+RECORD 331 — Hadamard matrix existence
+claim: order 4k for every k; twelve previously open Hadamard orders were closed over a weekend by an agent sweeping construction families, Claude credited alongside other researchers, only order 668 independently checked. Named sources: github.com/bbeartheancient/hoa64 and epoch.ai/frontiermath/open-problems/hadamard.
+verdict: CORRECTED
+frontier: Before this event, 668 was the smallest open order (open since 2005, when Kharaghani & Tayfeh-Rezaie resolved the prior smallest case, 428); as of a 2025 paper, the open cases <=1000 were specifically 668, 716, and 892. Multiple independent sources — a well-known math blog (John D. Cook, Aug 13, 2026) and Chinese tech-press coverage (量子位/QbitAI, Aug 2026) — report that Anthropic researcher and mathematician Levent Alpöge, working with two human collaborators and Claude, announced a genuine order-668 Hadamard matrix and "filled in all remaining gaps below 2000," described elsewhere as twelve orders.
+wall: this is exactly where the claim needs a caveat. The epoch.ai FrontierMath page itself — one of the two named sources — still shows the order-668 problem marked "Solved: No," with both listed automated model attempts (GPT-5.2 Pro, Gemini 3 Deep Think, tested alone) failing on the full problem. Chinese coverage independently describes epoch.ai's own listing as only "temporarily" (暂时) marked solved by AI. So the claim that "only 668 was independently checked" is itself optimistic — even 668 doesn't appear to have cleared the benchmark's own official verifier as of my search.
+url: https://www.johndcook.com/blog/2026/08/13/constructing-hadamard-matrices/
+date: August 13, 2026 (blog); underlying announcement via X/Twitter by Levent Alpöge, same window
+quote: "Until yesterday, the smallest multiple of 4 for which nobody had found a corresponding Hadamard matrix was 668. Then Levent Alpöge announced that he and his and collaborators found an example of size 668 and filled in all remaining gaps below 2000."
+depthOrBreadth: BROAD
+breadthDetail: twelve (per Chinese-press count) distinct previously-open orders below 2000, each requiring its own construction-family match — a sweep across a structured list, not one deepened pipeline.
+note: Say plainly: the claim as given is overstated in the direction of "settled and verified." What I can confirm: a real, credible announcement occurred (Aug 2026), crediting Alpöge + two human researchers + Claude, and covered by independent outlets. What I cannot confirm: that the constructions have been independently verified and accepted, even for 668 — the officially-cited verifier page still lists it unsolved, and a separate account describes a different researcher failing to reproduce an order-668 matrix that same weekend using a different AI system. This is a live, unsettled situation as of my search — I'd treat it as "announced, not yet fully confirmed," which matches almost exactly the kind of claim the task warned to flag rather than pad.
+
+LATE ADDITION on record 458: I found a live discussion thread (erdosproblems.com, a well-regarded community tracker) where someone reports having identified a likely gap in the Mishra "full proof" — specifically, a step on page 11 ("a bad set becomes good") that "is not necessarily the case as written." That's independent expert scrutiny actively poking a hole in the claim within days of posting, which sharpens my earlier caution: treat "proved in full" as actively disputed, not just unconfirmed.
+
+§A — The prediction (Group 1). Swept and published, not absent, for all four — and two of the four have gone further than a mere sweep, becoming outright theorems at l=2:
+* Alperin–McKay: "The Alperin–McKay conjecture holds for the prime l=2" (Ruhstorfer, Annals of Math. 2025).
+* McKay–Navarro: "We complete the proof of the McKay-Navarro conjecture... for the prime 2" (Ruhstorfer & Schaeffer Fry, Adv. Math. 2025).
+* Alperin weight: sporadics swept (An–Dietrich), but the general conjecture is explicitly not closed: "a full proof of AWC seems yet, unfortunately, out of reach" (2024).
+* Brauer's k(B): sporadics + Tits group + A6/A7 + exceptional Lie covers all swept by direct GAP computation (Chinburg et al., 2017): "The character tables of all the groups G in the statement are known and available in GAP... the claim can easily be verified automatically."
+
+§B — Start and drop.
+Would start, ranked:
+1. Brauer's k(B) — the remaining gap is a structured, finite-looking case list (p=2,3, non-abelian defect, classical Lie type); everything else is already cleared by direct computation, so this is the closest of the four block conjectures to being finished.
+2. Tutte 5-flow / snark generation — a brand-new (March 2026) 14–29x faster generation algorithm just doubled the vertex-order record; there's live momentum and fresh tooling to build on right now.
+3. 488b (admissible-set witness) — finding a y smaller than 3159 is a bounded discrete-optimization search over an actively-maintained public database (MIT prime-gaps project) that is explicitly "open for submission."
+
+Would drop, ranked:
+1. Odd perfect number — the lower bound has sat at 10^1500 since 2012 with no published improvement in over a decade; the bottleneck (factoring ever-larger composites) looks structurally stuck.
+2. Beal/Tijdeman-Zagier computational search — the C^z<=2^100 record is also frozen since 2010; no rigorous follow-up found.
+3. Voronoi d=6 — blocked upstream on a combinatorial-type enumeration project that, as far as I found, nobody has even started; you'd be waiting on someone else's classification before you could begin the actual proof technique.
+
+§C — Recall against source.
+Before searching I'd have given roughly: 7–8 confirmed, 6 corrected, 7 failed-to-settle (no real prior at all). The single most useful miss: I would have said Alperin–McKay and McKay–Navarro were still open, ongoing reduction programs — I had no idea either had become an outright theorem at l=2 (2025). Close behind: I'd have cited the old 36-vertex snark-generation record and the Collatz 2^68 figure, both quietly superseded in 2025–2026. And I had zero prior knowledge of the Hadamard order-668 announcement (Aug 2026) or the currently-disputed Erdős Matching "full proof" claim (Feb–Mar 2026) — both post-date anything I'd have recalled, and both turned out to need the heaviest hedging in this whole sweep.

@@ -1,0 +1,175 @@
+{
+ "base_rule": [
+  {
+   "cond": "n mod 8 = 0",
+   "value": "n//4"
+  },
+  {
+   "cond": "n mod 4 = 0",
+   "value": "n-2"
+  },
+  {
+   "cond": "n mod 2 = 0",
+   "value": "n-1"
+  },
+  {
+   "cond": "otherwise",
+   "value": "n//4"
+  }
+ ],
+ "base_training_errors": 10,
+ "change_from_task2": "extrapolation licensing applied to the base rule",
+ "end_to_end_level": {
+  "accuracy_counting_abstention_as_error": 0.6667,
+  "answered": 96,
+  "coverage": 0.6667,
+  "label": "COMPUTED",
+  "points": 144,
+  "selective_accuracy": 1.0
+ },
+ "invariant_level": {
+  "accuracy_counting_abstention_as_error": 0.6667,
+  "answered": 12,
+  "coverage": 0.6667,
+  "label": "COMPUTED",
+  "points": 18,
+  "selective_accuracy": 1.0
+ },
+ "label": "COMPUTED",
+ "licence": {
+  "abstaining_branches": 4,
+  "branches": [
+   {
+    "branch": "n mod 8 = 0",
+    "covered": 2,
+    "errors": 1,
+    "reason": "mispredicts 1 of 2 covered training points; a rule that cannot reproduce its own training data has no licence to extrapolate",
+    "verdict": "ABSTAIN_MISFIT"
+   },
+   {
+    "branch": "n mod 4 = 0",
+    "covered": 1,
+    "errors": 0,
+    "reason": "only 1 covered training point(s); unfalsified rather than confirmed",
+    "verdict": "ABSTAIN_UNSUPPORTED"
+   },
+   {
+    "branch": "n mod 2 = 0",
+    "covered": 1,
+    "errors": 0,
+    "reason": "only 1 covered training point(s); unfalsified rather than confirmed",
+    "verdict": "ABSTAIN_UNSUPPORTED"
+   },
+   {
+    "branch": "otherwise",
+    "covered": 12,
+    "errors": 9,
+    "reason": "mispredicts 9 of 12 covered training points; a rule that cannot reproduce its own training data has no licence to extrapolate",
+    "verdict": "ABSTAIN_MISFIT"
+   }
+  ],
+  "fit_tolerance": 0,
+  "label": "COMPUTED",
+  "licensed_branches": 0,
+  "min_support": 2,
+  "stage": "extrapolation_licensing"
+ },
+ "majority_class_baseline": 0.91667,
+ "per_object": {
+  "31": {
+   "obs": 1,
+   "pred": null,
+   "route": "ABSTAIN"
+  },
+  "32": {
+   "obs": 5,
+   "pred": null,
+   "route": "ABSTAIN"
+  },
+  "33": {
+   "obs": 1,
+   "pred": 1,
+   "route": "composed"
+  },
+  "34": {
+   "obs": 1,
+   "pred": 1,
+   "route": "composed"
+  },
+  "35": {
+   "obs": 1,
+   "pred": 1,
+   "route": "composed"
+  },
+  "36": {
+   "obs": 2,
+   "pred": 2,
+   "route": "composed"
+  },
+  "37": {
+   "obs": 1,
+   "pred": null,
+   "route": "ABSTAIN"
+  },
+  "38": {
+   "obs": 1,
+   "pred": 1,
+   "route": "composed"
+  },
+  "39": {
+   "obs": 1,
+   "pred": 1,
+   "route": "composed"
+  },
+  "40": {
+   "obs": 3,
+   "pred": 3,
+   "route": "composed"
+  },
+  "41": {
+   "obs": 1,
+   "pred": null,
+   "route": "ABSTAIN"
+  },
+  "42": {
+   "obs": 1,
+   "pred": 1,
+   "route": "composed"
+  },
+  "43": {
+   "obs": 1,
+   "pred": null,
+   "route": "ABSTAIN"
+  },
+  "44": {
+   "obs": 2,
+   "pred": 2,
+   "route": "composed"
+  },
+  "45": {
+   "obs": 2,
+   "pred": 2,
+   "route": "composed"
+  },
+  "46": {
+   "obs": 1,
+   "pred": 1,
+   "route": "composed"
+  },
+  "47": {
+   "obs": 1,
+   "pred": null,
+   "route": "ABSTAIN"
+  },
+  "48": {
+   "obs": 4,
+   "pred": 4,
+   "route": "composed"
+  }
+ },
+ "task2_without_licensing": {
+  "end_to_end_accuracy": 0.71528,
+  "invariants_exact": "12/18",
+  "note": "confidently wrong, below the 0.91667 baseline"
+ }
+}

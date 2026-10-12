@@ -1,0 +1,24 @@
+{
+  "id": "04-kadison-singer",
+  "problem": "Kadison-Singer (Weaver KS_2)",
+  "after_board": "Interlacing families: the expected characteristic polynomial is real-rooted, a barrier argument bounds its largest root, and some partition does at least as well. The largest root of a direct sum is the maximum over blocks, so the bound is dimension-free.",
+  "multi_answer": false,
+  "transformation": "de-tensorize+collectivize-a-union-bound",
+  "transformation_note": "Seed P3: the one case where 'de-tensorize' fires correctly (direct sums), and also correct for 'collectivize-a-union-bound'.",
+  "source": "Marcus-Spielman-Srivastava arXiv:1306.3969",
+  "labelled_by": [
+    "seed-chat-instance-2026-09-18"
+  ],
+  "label_pass": "v0-single-encoder-contaminated",
+  "second_blind_label": null,
+  "label_kappa": null,
+  "level": {
+    "axis": "same-level",
+    "confidence": "high",
+    "object_changed": "Random partition plus matrix Chernoff replaced by interlacing families with a barrier argument.",
+    "what_stayed_fixed": "The object: vectors with sum v v^T = I and small norm, partitioned in two.",
+    "basis": "The dimension-free conclusion comes from the new invariant's behaviour on a direct sum, not from moving the problem.",
+    "assigned_by": "this session, single-encoder and unvalidated",
+    "recorded_for": "debt D30; vocabulary in p3-taxonomy/taxonomy.json -> level_axis"
+  }
+}

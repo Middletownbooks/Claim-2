@@ -1,0 +1,1481 @@
+{
+ "communities_ge_100": 36,
+ "compression": "29511 theorems -> 36 communities -> 1230 definition interfaces (282 cover 80% of statement usage)",
+ "definition_modules_total": 1450,
+ "definition_modules_used_by_statements": 1230,
+ "definitions_covering_80pct_of_statement_uses": 282,
+ "regions": [
+  {
+   "defining_interfaces": [
+    [
+     "ModularCurve_X1",
+     1282
+    ],
+    [
+     "FLTPrelim_Ramification",
+     1134
+    ],
+    [
+     "AlgebraicCurve_TwoChartIntegralModel",
+     1103
+    ],
+    [
+     "ModularCurve_SupersingularNodePlaces",
+     919
+    ],
+    [
+     "AlgebraicCurve_ConstantReduction",
+     918
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.117,
+   "mathlib_vocabulary_only": 1046,
+   "namespaces": [
+    [
+     "ModularCurve",
+     5647
+    ],
+    [
+     "AlgebraicCurve",
+     1318
+    ],
+    [
+     "AlgebraicGeometry",
+     399
+    ]
+   ],
+   "size": 8970
+  },
+  {
+   "defining_interfaces": [
+    [
+     "NumberField_TateGlobalZeta",
+     967
+    ],
+    [
+     "AutomorphicForm_TwistedOrbital",
+     577
+    ],
+    [
+     "NumberField_PrincipalLevel",
+     561
+    ],
+    [
+     "LanglandsTunnell_ConverseData",
+     557
+    ],
+    [
+     "NumberField_AdelicHaar",
+     527
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.102,
+   "mathlib_vocabulary_only": 414,
+   "namespaces": [
+    [
+     "AutomorphicForm",
+     1777
+    ],
+    [
+     "LanglandsTunnell",
+     728
+    ],
+    [
+     "NumberField",
+     611
+    ]
+   ],
+   "size": 4066
+  },
+  {
+   "defining_interfaces": [
+    [
+     "GaloisRep_Residual",
+     213
+    ],
+    [
+     "GaloisRep_LocalConditions",
+     144
+    ],
+    [
+     "CuspForm_HeckeLocal",
+     95
+    ],
+    [
+     "CuspForm_PrimitiveFormGamma1",
+     94
+    ],
+    [
+     "ModularCurve_PeriodMap",
+     90
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.122,
+   "mathlib_vocabulary_only": 158,
+   "namespaces": [
+    [
+     "CuspForm",
+     395
+    ],
+    [
+     "CohCarrier",
+     177
+    ],
+    [
+     "ModularCurve",
+     131
+    ]
+   ],
+   "size": 1290
+  },
+  {
+   "defining_interfaces": [
+    [
+     "GaloisRep_Flat",
+     187
+    ],
+    [
+     "FLTPrelim_Ramification",
+     179
+    ],
+    [
+     "FLTPrelim_GaloisRep",
+     91
+    ],
+    [
+     "ModularCurve_HeckeModule",
+     78
+    ],
+    [
+     "ModularCurve_XHDRModelAtP",
+     69
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.156,
+   "mathlib_vocabulary_only": 166,
+   "namespaces": [
+    [
+     "ModularCurve",
+     518
+    ],
+    [
+     "WeierstrassCurve",
+     116
+    ],
+    [
+     "HopfAlgebra",
+     82
+    ]
+   ],
+   "size": 1064
+  },
+  {
+   "defining_interfaces": [
+    [
+     "CerednikDrinfeld_ShimuraCurve",
+     171
+    ],
+    [
+     "CerednikDrinfeld_QMModuli",
+     113
+    ],
+    [
+     "CerednikDrinfeld_QMCoarseModuli",
+     112
+    ],
+    [
+     "CerednikDrinfeld_QMModuliProps",
+     107
+    ],
+    [
+     "CerednikDrinfeld_QMFineModuli",
+     101
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.183,
+   "mathlib_vocabulary_only": 114,
+   "namespaces": [
+    [
+     "CerednikDrinfeld",
+     323
+    ],
+    [
+     "QuaternionAlgebra",
+     116
+    ],
+    [
+     "AlgebraicGeometry",
+     92
+    ]
+   ],
+   "size": 623
+  },
+  {
+   "defining_interfaces": [
+    [
+     "AlgebraicGeometry_RelativePicardFunctor",
+     355
+    ],
+    [
+     "SheafOfModules_Monoidal",
+     291
+    ],
+    [
+     "AlgebraicGeometry_RelPicardAlgEquivZeroCut",
+     248
+    ],
+    [
+     "AlgebraicGeometry_IdealSheafModule",
+     239
+    ],
+    [
+     "AlgebraicGeometry_RepresentsRelSubPic",
+     195
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.064,
+   "mathlib_vocabulary_only": 35,
+   "namespaces": [
+    [
+     "AlgebraicGeometry",
+     421
+    ],
+    [
+     "ModularCurve",
+     94
+    ],
+    [
+     "AlgebraicCurve",
+     14
+    ]
+   ],
+   "size": 548
+  },
+  {
+   "defining_interfaces": [
+    [
+     "WeierstrassCurve_DrinfeldBasisGlobal",
+     218
+    ],
+    [
+     "WeierstrassCurve_DrinfeldLevelFunctor",
+     197
+    ],
+    [
+     "WeierstrassCurve_SectionAtOrigin",
+     188
+    ],
+    [
+     "WeierstrassCurve_ProjModel",
+     172
+    ],
+    [
+     "WeierstrassCurve_DrinfeldTransportPin",
+     143
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.115,
+   "mathlib_vocabulary_only": 60,
+   "namespaces": [
+    [
+     "ModularCurve",
+     168
+    ],
+    [
+     "WeierstrassCurve",
+     164
+    ],
+    [
+     "WeierstrassProjModel",
+     141
+    ]
+   ],
+   "size": 523
+  },
+  {
+   "defining_interfaces": [
+    [
+     "AlgebraicGeometry_PolarisationRosati",
+     254
+    ],
+    [
+     "AlgebraicGeometry_RelativePicardFunctor",
+     137
+    ],
+    [
+     "JacJ1Iface",
+     134
+    ],
+    [
+     "AlgebraicGeometry_PolarisedAbelianScheme",
+     130
+    ],
+    [
+     "CerednikDrinfeld_QMCanonicalPol",
+     83
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.089,
+   "mathlib_vocabulary_only": 46,
+   "namespaces": [
+    [
+     "AlgebraicGeometry",
+     356
+    ],
+    [
+     "CerednikDrinfeld",
+     74
+    ],
+    [
+     "GoodReductionJacobian",
+     69
+    ]
+   ],
+   "size": 514
+  },
+  {
+   "defining_interfaces": [
+    [
+     "CerednikDrinfeld_SpecialFormalModule",
+     180
+    ],
+    [
+     "MvFormalGroup_NegV2",
+     157
+    ],
+    [
+     "CerednikDrinfeld_SpecialFormalFunctorG",
+     113
+    ],
+    [
+     "CerednikDrinfeld_QMRigidification",
+     110
+    ],
+    [
+     "CerednikDrinfeld_CosetGraphAtPrime",
+     77
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.08,
+   "mathlib_vocabulary_only": 40,
+   "namespaces": [
+    [
+     "CerednikDrinfeld",
+     390
+    ],
+    [
+     "MvFormalGroup",
+     38
+    ],
+    [
+     "GoodReductionJacobian",
+     29
+    ]
+   ],
+   "size": 499
+  },
+  {
+   "defining_interfaces": [
+    [
+     "JacJ1Iface",
+     91
+    ],
+    [
+     "AlgebraicGeometry_RelativeGroupLaw",
+     68
+    ],
+    [
+     "AlgebraicGeometry_NeronModelEndomorphismExtension",
+     67
+    ],
+    [
+     "CerednikDrinfeld_QMModuli",
+     46
+    ],
+    [
+     "AlgebraicGeometry_ProjSpace",
+     43
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.218,
+   "mathlib_vocabulary_only": 100,
+   "namespaces": [
+    [
+     "GoodReductionJacobian",
+     143
+    ],
+    [
+     "AlgebraicGeometry",
+     124
+    ],
+    [
+     "CerednikDrinfeld",
+     102
+    ]
+   ],
+   "size": 458
+  },
+  {
+   "defining_interfaces": [
+    [
+     "ModularCurve_MultCoveringFamily",
+     76
+    ],
+    [
+     "ModularCurve_CuspidalClass",
+     75
+    ],
+    [
+     "ModularCurve_SupersingularModuli",
+     69
+    ],
+    [
+     "ModularCurve_MultCoveringAnnuli",
+     54
+    ],
+    [
+     "AlgebraicCurve_SemistableCharts",
+     50
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.033,
+   "mathlib_vocabulary_only": 14,
+   "namespaces": [
+    [
+     "ModularCurve",
+     348
+    ],
+    [
+     "AlgebraicCurve",
+     60
+    ],
+    [
+     "ValuationSubring",
+     5
+    ]
+   ],
+   "size": 428
+  },
+  {
+   "defining_interfaces": [
+    [
+     "AlgebraicGeometry_RelativePicardFunctor",
+     96
+    ],
+    [
+     "AlgebraicGeometry_OModulePresheafOfModules",
+     82
+    ],
+    [
+     "AlgebraicGeometry_OrderedAffineCoverCech",
+     57
+    ],
+    [
+     "AlgebraicGeometry_OModulePresheafEulerChar",
+     52
+    ],
+    [
+     "JacJ1Iface",
+     34
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.183,
+   "mathlib_vocabulary_only": 74,
+   "namespaces": [
+    [
+     "AlgebraicGeometry",
+     299
+    ],
+    [
+     "CerednikDrinfeld",
+     25
+    ],
+    [
+     "Module",
+     24
+    ]
+   ],
+   "size": 404
+  },
+  {
+   "defining_interfaces": [
+    [
+     "CerednikDrinfeld_DrinfeldHolomorphic",
+     136
+    ],
+    [
+     "CerednikDrinfeld_BruhatTitsTree",
+     96
+    ],
+    [
+     "CerednikDrinfeld_SchottkyTreeAction",
+     90
+    ],
+    [
+     "CerednikDrinfeld_MumfordQuotient",
+     48
+    ],
+    [
+     "CerednikDrinfeld_MumfordVertexType",
+     47
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.069,
+   "mathlib_vocabulary_only": 22,
+   "namespaces": [
+    [
+     "CerednikDrinfeld",
+     255
+    ],
+    [
+     "AlgebraicCurve",
+     17
+    ],
+    [
+     "LT",
+     14
+    ]
+   ],
+   "size": 317
+  },
+  {
+   "defining_interfaces": [
+    [
+     "LanglandsTunnell_StandardLocalConstantsAt",
+     190
+    ],
+    [
+     "AutomorphicForm_LocalOrbitalBase",
+     175
+    ],
+    [
+     "UnramifiedWhittaker_HeckeRecursion",
+     159
+    ],
+    [
+     "AdelicDock_LocalEmbedding",
+     153
+    ],
+    [
+     "LanglandsTunnell_RSCarrier",
+     136
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.078,
+   "mathlib_vocabulary_only": 23,
+   "namespaces": [
+    [
+     "LanglandsTunnell",
+     237
+    ],
+    [
+     "AutomorphicForm",
+     35
+    ],
+    [
+     "Matrix",
+     3
+    ]
+   ],
+   "size": 293
+  },
+  {
+   "defining_interfaces": [
+    [
+     "HeckeEis_BinaryFormRep",
+     65
+    ],
+    [
+     "Gamma0CoeffCohomology",
+     59
+    ],
+    [
+     "FLTPrelim_Modularity",
+     53
+    ],
+    [
+     "CuspForm_HeckeAlgebra",
+     37
+    ],
+    [
+     "ModularForm_HeckeOperatorForms",
+     34
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.119,
+   "mathlib_vocabulary_only": 35,
+   "namespaces": [
+    [
+     "CuspForm",
+     92
+    ],
+    [
+     "HeckeEis",
+     68
+    ],
+    [
+     "ModularCurve",
+     45
+    ]
+   ],
+   "size": 293
+  },
+  {
+   "defining_interfaces": [
+    [
+     "ModularCurve_NodeDescent",
+     81
+    ],
+    [
+     "ModularCurve_NodeLocalized",
+     63
+    ],
+    [
+     "ModularCurve_SupersingularModuli",
+     63
+    ],
+    [
+     "ModularCurve_CuspidalClass",
+     54
+    ],
+    [
+     "ModularCurve_ArithmeticGalois",
+     52
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.265,
+   "mathlib_vocabulary_only": 75,
+   "namespaces": [
+    [
+     "ModularCurve",
+     169
+    ],
+    [
+     "ValuationSubring",
+     17
+    ],
+    [
+     "AlgebraicGeometry",
+     14
+    ]
+   ],
+   "size": 283
+  },
+  {
+   "defining_interfaces": [
+    [
+     "QuaternionAlgebra_EichlerOrder",
+     179
+    ],
+    [
+     "Submodule_LocalBox",
+     96
+    ],
+    [
+     "CerednikDrinfeld_ClassSetGraph",
+     90
+    ],
+    [
+     "QuaternionAlgebra_ReducedNorm",
+     54
+    ],
+    [
+     "Submodule_FiniteAdeleBox",
+     52
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.09,
+   "mathlib_vocabulary_only": 25,
+   "namespaces": [
+    [
+     "QuaternionAlgebra",
+     139
+    ],
+    [
+     "CerednikDrinfeld",
+     88
+    ],
+    [
+     "Submodule",
+     23
+    ]
+   ],
+   "size": 278
+  },
+  {
+   "defining_interfaces": [
+    [
+     "HopfAlgebra_CartierDual",
+     51
+    ],
+    [
+     "MvFormalGroup_BasicV2",
+     49
+    ],
+    [
+     "PDivisibleGroup_Basic",
+     43
+    ],
+    [
+     "MvFormalGroup_PointsV2",
+     35
+    ],
+    [
+     "GaloisRep_CompletionBridge",
+     23
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.256,
+   "mathlib_vocabulary_only": 61,
+   "namespaces": [
+    [
+     "HopfAlgebra",
+     51
+    ],
+    [
+     "MvFormalGroup",
+     36
+    ],
+    [
+     "PDivisibleGroup",
+     30
+    ]
+   ],
+   "size": 238
+  },
+  {
+   "defining_interfaces": [
+    [
+     "AlgebraicGeometry_ProjSpace",
+     62
+    ],
+    [
+     "AlgebraicGeometry_ModulesProjPresentation",
+     33
+    ],
+    [
+     "AlgebraicGeometry_ThetaGroupLaw",
+     30
+    ],
+    [
+     "AlgebraicGeometry_RelativePicardFunctor",
+     30
+    ],
+    [
+     "AlgebraicGeometry_ThetaLevelGroup",
+     26
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.147,
+   "mathlib_vocabulary_only": 31,
+   "namespaces": [
+    [
+     "AlgebraicGeometry",
+     191
+    ],
+    [
+     "GoodReductionJacobian",
+     5
+    ],
+    [
+     "CerednikDrinfeld",
+     4
+    ]
+   ],
+   "size": 211
+  },
+  {
+   "defining_interfaces": [
+    [
+     "AlgebraicGeometry_RelativePicardFunctor",
+     75
+    ],
+    [
+     "AlgebraicGeometry_ModulesSectionsTensor",
+     53
+    ],
+    [
+     "SheafOfModules_Monoidal",
+     33
+    ],
+    [
+     "AlgebraicGeometry_ModulesDet",
+     25
+    ],
+    [
+     "AlgebraicGeometry_ModulesNormModule",
+     19
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.121,
+   "mathlib_vocabulary_only": 25,
+   "namespaces": [
+    [
+     "AlgebraicGeometry",
+     178
+    ],
+    [
+     "ModularCurve",
+     9
+    ],
+    [
+     "GoodReductionJacobian",
+     4
+    ]
+   ],
+   "size": 206
+  },
+  {
+   "defining_interfaces": [
+    [
+     "FormalGroup_NSeries",
+     161
+    ],
+    [
+     "FormalGroup_DrinfeldBasis",
+     140
+    ],
+    [
+     "FormalGroup_PointTransport",
+     125
+    ],
+    [
+     "WeierstrassCurve_FormalGroupLaw",
+     104
+    ],
+    [
+     "WeierstrassCurve_FormalGroup",
+     68
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.078,
+   "mathlib_vocabulary_only": 15,
+   "namespaces": [
+    [
+     "FormalGroup",
+     69
+    ],
+    [
+     "WeierstrassCurve",
+     68
+    ],
+    [
+     "ModularCurve",
+     38
+    ]
+   ],
+   "size": 193
+  },
+  {
+   "defining_interfaces": [
+    [
+     "CerednikDrinfeld_SpecialFormalModule",
+     161
+    ],
+    [
+     "CerednikDrinfeld_GradedCartierModuleData",
+     150
+    ],
+    [
+     "CerednikDrinfeld_GradedCartierNModule",
+     142
+    ],
+    [
+     "MvFormalGroup_NegV2",
+     126
+    ],
+    [
+     "CerednikDrinfeld_CartierModuleModel",
+     106
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.071,
+   "mathlib_vocabulary_only": 13,
+   "namespaces": [
+    [
+     "CerednikDrinfeld",
+     172
+    ],
+    [
+     "WittVector",
+     5
+    ],
+    [
+     "MvFormalGroup",
+     4
+    ]
+   ],
+   "size": 184
+  },
+  {
+   "defining_interfaces": [
+    [
+     "GaloisRep_LocalConditions",
+     55
+    ],
+    [
+     "GaloisRep_DeformationRingData",
+     36
+    ],
+    [
+     "FLTPrelim_Ramification",
+     32
+    ],
+    [
+     "GaloisRep_Flat",
+     30
+    ],
+    [
+     "FLTPrelim_ModularRep",
+     24
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.163,
+   "mathlib_vocabulary_only": 28,
+   "namespaces": [
+    [
+     "GaloisRep",
+     39
+    ],
+    [
+     "GaloisRepAdic",
+     38
+    ],
+    [
+     "WeierstrassCurve",
+     29
+    ]
+   ],
+   "size": 172
+  },
+  {
+   "defining_interfaces": [
+    [
+     "AlgebraicGeometry_ProjSpace",
+     53
+    ],
+    [
+     "AlgebraicGeometry_HilbertFunctor",
+     49
+    ],
+    [
+     "AlgebraicGeometry_ModulesSectionZeroSchemeV2",
+     24
+    ],
+    [
+     "Nat_MacaulayPow",
+     20
+    ],
+    [
+     "AlgebraicGeometry_ProjTwistDatum",
+     19
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.169,
+   "mathlib_vocabulary_only": 28,
+   "namespaces": [
+    [
+     "AlgebraicGeometry",
+     103
+    ],
+    [
+     "MvPolynomial",
+     20
+    ],
+    [
+     "Module",
+     17
+    ]
+   ],
+   "size": 166
+  },
+  {
+   "defining_interfaces": [
+    [
+     "AlgebraicGeometry_RelativeGroupLaw",
+     35
+    ],
+    [
+     "AlgebraicGeometry_NeronModelPropertyBundleCarrier",
+     23
+    ],
+    [
+     "GoodReductionJacobian_RelativeGroupLawBaseChange",
+     22
+    ],
+    [
+     "NeronModelInfra_TopFormOrder",
+     22
+    ],
+    [
+     "NeronModelInfra_WeakNeronModel",
+     19
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.4,
+   "mathlib_vocabulary_only": 64,
+   "namespaces": [
+    [
+     "NeronModelInfra",
+     55
+    ],
+    [
+     "AlgebraicGeometry",
+     51
+    ],
+    [
+     "GoodReductionJacobian",
+     19
+    ]
+   ],
+   "size": 160
+  },
+  {
+   "defining_interfaces": [
+    [
+     "CerednikDrinfeld_QMModuliProps",
+     26
+    ],
+    [
+     "CerednikDrinfeld_QMModuli",
+     26
+    ],
+    [
+     "PDivisibleGroup_Points",
+     23
+    ],
+    [
+     "PadicAlgCl_RingOfIntegers",
+     14
+    ],
+    [
+     "PDivisibleGroup_Basic",
+     12
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.227,
+   "mathlib_vocabulary_only": 34,
+   "namespaces": [
+    [
+     "CerednikDrinfeld",
+     58
+    ],
+    [
+     "PDivisibleGroup",
+     19
+    ],
+    [
+     "ModularCurve",
+     15
+    ]
+   ],
+   "size": 150
+  },
+  {
+   "defining_interfaces": [
+    [
+     "LanglandsTunnell_ArchBaseChange",
+     106
+    ],
+    [
+     "LanglandsTunnell_CubicInduction_JacquetVector3",
+     91
+    ],
+    [
+     "AutomorphicForm_ArchWeightChar",
+     82
+    ],
+    [
+     "LanglandsTunnell_ArchCasimirCompanion",
+     46
+    ],
+    [
+     "LanglandsTunnell_CubicInduction_ArchCentre3",
+     46
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.083,
+   "mathlib_vocabulary_only": 12,
+   "namespaces": [
+    [
+     "LanglandsTunnell",
+     143
+    ],
+    [
+     "MeasureTheory",
+     1
+    ]
+   ],
+   "size": 144
+  },
+  {
+   "defining_interfaces": [
+    [
+     "LanglandsTunnell_CubicInduction_ArchCentre3",
+     90
+    ],
+    [
+     "LanglandsTunnell_CubicInduction_AutomorphyDatum31",
+     74
+    ],
+    [
+     "NumberField_StandardGlobalAddCharRat",
+     66
+    ],
+    [
+     "LanglandsTunnell_CubicInduction_SlabL2Cusp",
+     13
+    ],
+    [
+     "LanglandsTunnell_CubicInduction_ArchSmooth3",
+     5
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.252,
+   "mathlib_vocabulary_only": 34,
+   "namespaces": [
+    [
+     "LanglandsTunnell",
+     114
+    ],
+    [
+     "RegularSingular",
+     11
+    ],
+    [
+     "Matrix",
+     6
+    ]
+   ],
+   "size": 135
+  },
+  {
+   "defining_interfaces": [
+    [
+     "AdicCompletionGaloisAction",
+     10
+    ],
+    [
+     "WeierstrassCurve_DrinfeldBasisGlobal",
+     9
+    ],
+    [
+     "WeierstrassCurve_SectionAtOrigin",
+     9
+    ],
+    [
+     "ModularCurve_UVCrossingModel",
+     8
+    ],
+    [
+     "AlgebraicGeometry_ProjSpace",
+     8
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.669,
+   "mathlib_vocabulary_only": 89,
+   "namespaces": [
+    [
+     "IsRegularLocalRing",
+     25
+    ],
+    [
+     "AdicCompletion",
+     13
+    ],
+    [
+     "Algebra",
+     11
+    ]
+   ],
+   "size": 133
+  },
+  {
+   "defining_interfaces": [
+    [
+     "LanglandsTunnell_ArtinCoreCTM",
+     36
+    ],
+    [
+     "M4aHerbrand_GenuineDescent",
+     26
+    ],
+    [
+     "NumberField_PlaceDecompositionAction",
+     24
+    ],
+    [
+     "ArtinL_Abelian",
+     22
+    ],
+    [
+     "Mathlib_RingTheory_Valuation_UpperRamificationGroup",
+     19
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.041,
+   "mathlib_vocabulary_only": 5,
+   "namespaces": [
+    [
+     "NumberField",
+     39
+    ],
+    [
+     "ArtinL",
+     22
+    ],
+    [
+     "LanglandsTunnell",
+     22
+    ]
+   ],
+   "size": 123
+  },
+  {
+   "defining_interfaces": [
+    [
+     "MvFormalGroup_NegV2",
+     105
+    ],
+    [
+     "CerednikDrinfeld_SpecialFormalModule",
+     89
+    ],
+    [
+     "MvFormalGroup_CartierModule",
+     63
+    ],
+    [
+     "CerednikDrinfeld_CartierModuleModel",
+     62
+    ],
+    [
+     "CerednikDrinfeld_GradedCartierModuleData",
+     61
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.092,
+   "mathlib_vocabulary_only": 11,
+   "namespaces": [
+    [
+     "CerednikDrinfeld",
+     88
+    ],
+    [
+     "MvFormalGroup",
+     19
+    ],
+    [
+     "WittVector",
+     4
+    ]
+   ],
+   "size": 120
+  },
+  {
+   "defining_interfaces": [
+    [
+     "HopfAlgebra_HopfKer",
+     23
+    ],
+    [
+     "ModularCurve_JZeroNeronPrimaryTorsionFlag",
+     21
+    ],
+    [
+     "AlgebraicGeometry_FppfSiteCohomology",
+     11
+    ],
+    [
+     "MazurAdmissible_GaloisModule",
+     11
+    ],
+    [
+     "GaloisRep_Flat",
+     8
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.283,
+   "mathlib_vocabulary_only": 34,
+   "namespaces": [
+    [
+     "AlgebraicGeometry",
+     33
+    ],
+    [
+     "ModularCurve",
+     31
+    ],
+    [
+     "HopfAlgebra",
+     19
+    ]
+   ],
+   "size": 120
+  },
+  {
+   "defining_interfaces": [
+    [
+     "CerednikDrinfeld_QMFormalModuleOf",
+     43
+    ],
+    [
+     "GoodReductionJacobian_BareDeformation",
+     29
+    ],
+    [
+     "AlgebraicGeometry_OrderedAffineCoverCech",
+     23
+    ],
+    [
+     "AlgebraicGeometry_OrderedAffineCoverComap",
+     16
+    ],
+    [
+     "CerednikDrinfeld_QMFineModuli",
+     15
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.184,
+   "mathlib_vocabulary_only": 21,
+   "namespaces": [
+    [
+     "GoodReductionJacobian",
+     41
+    ],
+    [
+     "AlgebraicGeometry",
+     35
+    ],
+    [
+     "CerednikDrinfeld",
+     34
+    ]
+   ],
+   "size": 114
+  },
+  {
+   "defining_interfaces": [
+    [
+     "WeierstrassCurve_RationalEnd",
+     83
+    ],
+    [
+     "QuaternionAlgebra_EichlerOrder",
+     42
+    ],
+    [
+     "WeierstrassCurve_KernelIdeal",
+     33
+    ],
+    [
+     "CerednikDrinfeld_ClassSetGraph",
+     27
+    ],
+    [
+     "ModularCurve_SSDegeneracyHecke",
+     19
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.101,
+   "mathlib_vocabulary_only": 11,
+   "namespaces": [
+    [
+     "WeierstrassCurve",
+     65
+    ],
+    [
+     "CerednikDrinfeld",
+     28
+    ],
+    [
+     "QuaternionAlgebra",
+     7
+    ]
+   ],
+   "size": 109
+  },
+  {
+   "defining_interfaces": [
+    [
+     "GaloisRep_AdZero",
+     26
+    ],
+    [
+     "ExtEndgame_ProductionDatum",
+     24
+    ],
+    [
+     "GaloisRep_LocalFlatClasses",
+     23
+    ],
+    [
+     "GroupCohomology_TangentSpace",
+     23
+    ],
+    [
+     "FLTPrelim_Ramification",
+     19
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.15,
+   "mathlib_vocabulary_only": 16,
+   "namespaces": [
+    [
+     "PDivisibleGroup",
+     31
+    ],
+    [
+     "ResidualGaloisRep",
+     21
+    ],
+    [
+     "HopfAlgebra",
+     18
+    ]
+   ],
+   "size": 107
+  },
+  {
+   "defining_interfaces": [
+    [
+     "ExtCitation_LocalLevelResidues",
+     28
+    ],
+    [
+     "LocalRing_PrincipalUnits",
+     19
+    ],
+    [
+     "GroupCohomology_ContinuousH2",
+     16
+    ],
+    [
+     "GroupCohomology_GaloisUnitsInflation",
+     11
+    ],
+    [
+     "GroupCohomology_CyclicCarry",
+     9
+    ]
+   ],
+   "mathlib_vocabulary_fraction": 0.343,
+   "mathlib_vocabulary_only": 35,
+   "namespaces": [
+    [
+     "ExtCitation",
+     26
+    ],
+    [
+     "groupCohomology",
+     25
+    ],
+    [
+     "IntermediateField",
+     14
+    ]
+   ],
+   "size": 102
+  }
+ ]
+}

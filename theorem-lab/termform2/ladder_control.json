@@ -1,0 +1,87 @@
+{
+ "in_V1_not_in_unbeamed_V0": [],
+ "in_unbeamed_V0_not_in_V1": [
+  "divisors_le_sqrt"
+ ],
+ "label": "COMPUTED",
+ "question": "does an UNBEAMED V0 reach what V1 certified?",
+ "v0_unbeamed": {
+  "atoms": 40,
+  "certified": {
+   "divisors_le_sqrt": {
+    "cost": 5,
+    "term": "(<count(k: (n % k))> - (<count(k: (n % k))> // 2))"
+   },
+   "floor_n_2": {
+    "cost": 1,
+    "term": "<count(k: (k % 2))>"
+   },
+   "floor_n_3": {
+    "cost": 3,
+    "term": "(n // <least(k: (2 // k))>)"
+   },
+   "floor_n_4": {
+    "cost": 1,
+    "term": "<count(k: (k % 4))>"
+   },
+   "is_even": {
+    "cost": 3,
+    "term": "(n // <count(k: (n % 2))>)"
+   },
+   "is_prime": {
+    "cost": 3,
+    "term": "(2 // <count(k: (n % k))>)"
+   },
+   "is_square": {
+    "cost": 3,
+    "term": "(<count(k: (n % k))> % 2)"
+   },
+   "n": {
+    "cost": 1,
+    "term": "n"
+   },
+   "n_div_spf": {
+    "cost": 3,
+    "term": "(n // <least(k: (n % k))>)"
+   },
+   "n_minus_1": {
+    "cost": 1,
+    "term": "<count(k: (k // n))>"
+   },
+   "n_minus_n_div_spf": {
+    "cost": 5,
+    "term": "(n - (n // <least(k: (n % k))>))"
+   },
+   "spf": {
+    "cost": 1,
+    "term": "<least(k: (n % k))>"
+   },
+   "tau": {
+    "cost": 1,
+    "term": "<count(k: (n % k))>"
+   },
+   "tau_minus_1": {
+    "cost": 3,
+    "term": "(<count(k: (n % k))> - 1)"
+   }
+  },
+  "classes": 275801,
+  "expansions": 1840320,
+  "truncated": false
+ },
+ "v1_certified": [
+  "floor_n_2",
+  "floor_n_3",
+  "floor_n_4",
+  "is_even",
+  "is_prime",
+  "is_square",
+  "n",
+  "n_div_spf",
+  "n_minus_1",
+  "n_minus_n_div_spf",
+  "spf",
+  "tau",
+  "tau_minus_1"
+ ]
+}

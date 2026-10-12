@@ -1,0 +1,6 @@
+{
+ "asymmetric_searches_found": [],
+ "source": "Coppersmith-Mossinghoff-Scheinerman-VanderKam 2024 searches SYMMETRIC ideal solutions only (abstract; section 4.1 odd case, section 4.2 even case), and reports n=11 as 'no symmetric ideal solutions' below height 3500. Borwein-Lisonek-Percival 2003, as quoted there, likewise proved 'no symmetric ideal solutions with size n = 11 exist with height at most 2000'. Neither paper reports an asymmetric search at n = 11.",
+ "provenance_tier": "PRIMARY-VERIFIED-LOCALLY for what the paper says; absence of an asymmetric search ELSEWHERE in the literature is not established -- two papers is not a survey.",
+ "why_it_is_still_not_a_target": "22 integers under 10 moment conditions less 2 for affine normalisation = 10 degrees of freedom, against 6 for the symmetric case. At H = 100 that is 1e20 candidates. PREREG_PTE11.md section 6's branch 'if A-5 fails, the asymmetric region is the target' assumed unswept implies attackable."
+}
