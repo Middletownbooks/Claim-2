@@ -88,42 +88,77 @@ U = <9> mod 572 = {1, 9, 53, 81, 113, 133, 157, 185, 269, 289, 313, 445, 477, 52
 **240 free sign parameters instead of 4m = 2288.** That is the search the authors
 actually ran: 2^240 rather than 2^2288.
 
-### On "11-symmetry" — the measured group is order 15
+### "11-symmetry" resolved: 11 is the Paley prime, and 15 = 5 x 3
 
-Stated as the new idea was *11 symmetry*. What is measurable in the artifact is an
-order-**15** multiplier group, and an order-11 multiplier is **impossible** here:
-`φ(572) = 240` and `11 ∤ 240`, so `(Z/572)*` has no element of order 11. Nor is
-there any exact translation period (checked over every divisor of 572). Eleven
-enters as a **factor of m**: `572 = 11 · 52`, and it is divisibility by 11 that
-makes `|(Z/572)*| = 240 = 2⁴·3·5` rich enough to contain a cyclic subgroup of
-order 15 at all. Whether "11" referred to choosing `m` divisible by 11, or to
-something in the session that did not survive into the artifact, is a question for
-the authors — the orbit structure above is what the matrix carries.
+My first pass recorded the measured group as order 15 and noted that an order-11
+multiplier is impossible (`11 ∤ φ(572) = 240`). True, and beside the point. The
+authors' design report (Opus 5.5, 2026-10-09, `claude/focused-planck-j1645f`,
+`report/prompt_paley_design.md`) gives the actual object, and it is **both** numbers:
 
-## 5. Why this route worked where the b=0 ladder stalled — the generalisable part
+> *the Paley-coset ansatz **is** the orbit slice of that order-(p−1)/2 group …
+> Adding a multiplier μ on G′ gives the orbit slice of the product group.*
 
-The parallel b=0 effort (`claude/hadamard-matrix-methods-vs79hi`) established in
-FINDING 156 §3 that **`d` is not a free parameter: every larger multiplier group is
-killed outright by `Σ a_k² = 4v`**, and its ladder stalls around 2⁻¹³² at v = 487.
+With `G = G′ × Z_p = Z₅₂ × Z₁₁` and `p = 11`, the quadratic-residue group on the
+`Z₁₁` factor has order `(p−1)/2 = 5`; composing with the `×29` multiplier of order 3
+on `Z₅₂` gives **15**. Eleven is the **Paley prime**, not a multiplier order.
 
-That constraint is a property of **b=0**, not of the method. Compare the two
-row-sum budgets:
+Verified exactly on the core (`h2292/paley_struct.py`):
 
-| family | law off 0 | `Σ a_k²` | consequence |
-|---|---|---|---|
-| **b=0** | `0` | `4m = 4v` — **large** | row sums must be big; a large multiplier group forces orbit-weighted sums that cannot reach it, so `d` is pinned small |
-| **b=1** | `−4` | **4** | row sums `(2,0,0,0)`; almost no budget to satisfy, so **large multiplier groups stay admissible** |
+| check | result |
+|---|---|
+| Paley-coset form on every `Z₁₁`-coset — one value at `z=0`, one on QR, one on NQR, exactly one of `u,w` nonzero | **0 violations**, all four blocks |
+| constant cosets | `K = 21`, `K_k = (6,6,2,7)`, `N₋ = 12`, `N₊ = 9` |
+| **Corollary 1 norm identity** `(p+1)K − 4N₋ = 4n′ − 4b` | `204 = 204` ✓ |
+| QR part: `μ ≡ 1 mod 52` | `{1,53,157,313,521}`, residues mod 11 = `{1,3,4,5,9}` = **QR₁₁**, order 5 |
+| `Z₅₂` part: `μ ≡ 1 mod 11` | `{1,133,529}`, residues mod 52 = `{1,9,`**`29`**`}`, order 3 |
+| product | `5 × 3 = 15 = |U|` ✓ |
 
-So the b=1 family admits multiplier groups that b=0 forbids, and `|U| = 15` here
-against the b=0 ladder's `d ∈ {3,5,7,9}` is that difference showing up in the one
-place it matters — the exponent. **2^240 against the b=0 route's 2^216 free bits at
-v=487, but at a density that was reachable.**
+So the core sits in exactly the slice the report costed as *"Paley(11) + ×29 (order 3
+on Z₁₃) = the repo's d = 15 slice, 240 free bits, 193 constraint bits, log₂E = +23.2"*
+— and at `K = 21`, which is the `K` its own `paley_coreyield.py` ranked best
+(best predicted core yield `2^−9.5` at `K = 21`).
 
-That is a redirect for the parallel thread, and it is stated as a prediction so it
-can be scored: **on the remaining twelve open orders below 3000, the b=1 family
-with a large odd multiplier group should be searchable at orders where the b=0
-route is not**, because the binding constraint that pins `d` small is absent. The
-twelve are in `OPEN_ORDERS.md`; 2292 is now off that list.
+## 5. The provenance, and what actually did the work
+
+From the design report, the chain was:
+
+1. **Forensics on a solved order.** The published `419` b=1 core, after translating
+   three blocks by 208, is an **exact Paley(11) core on `G′ = Z₃₈`, invariant under
+   `×7`** — so it already lived in an order-15 slice, and **both** published
+   Paley-coset cores (359 at b=7, 419 at b=1) use `p = 11`.
+2. **The structural theorem.** The Paley-coset ansatz is *itself* a multiplier orbit
+   slice; "Paley + multiplier" designs are orbit slices of product groups. This is
+   what makes the transfer well-posed rather than analogical.
+3. **Targeting.** Of the open orders, `573` with `p = 11`, `G′ = Z₅₂`, `×29` is **the
+   only analogue of 419's slice predicted non-empty** (`+23.2`, against 419's
+   `+21.1`). The 571 and 647 slices score `−10` to `−142`.
+4. **End-to-end validation on a known order first.** The slice pipeline rebuilt a
+   verified 419 core from the published gadget in ~4 min, and then, run *from
+   scratch* with designed-and-ranked gadgets, found a **new** verified `H(1676)` in
+   272 s.
+5. **Gadget design was the bottleneck, and ranking broke it.** Random gadgets in the
+   slice: **0 stage-1 solutions in 800.** Designed gadgets (cyclotomic
+   near-difference sets on the multiplier orbits, `|PAF_w| ≤ 2`, `|t_k| ≤ 1`), filtered
+   by Lemma 4, Lemma 6 and α-feasibility, then **ranked by predicted stage-1 yield**:
+   the 5th gadget run exactly produced the core.
+6. **At 573**: 392 stage-1 `y`'s from 19 of 61 designed gadgets, ~45 min on three
+   cores — and stage 2 costed at `2^48–2^49`, about `2^3–2^4` above the `2^45` target,
+   **not run in that report.**
+
+### Correcting my own §5 prediction
+
+The first version of this file proposed that the b=1 family admits large multiplier
+groups because its row-sum budget is `Σaₖ² = 4` against b=0's `4v`, and registered
+that as a prediction over the remaining twelve open orders. **That is over-general
+and the report refutes the general form.** The b=1, `p = 11` family is largely
+*empty*: `v = 45, 67, 89, 111, 133` are all proved exactly empty, with Gaussian
+estimates of `+23` to `+40` that the exact pipeline contradicts — killed by the rigid
+gadget (Lemma 4) and by Lemma 6. Large multiplier groups are not generally admissible
+at b=1; what is true is far narrower and the report already established it: **573 is
+the one open order whose Paley(11)+multiplier slice is predicted non-empty.**
+
+The row-sum observation survives only as a remark about why the b=0 `d`-pinning
+argument does not transfer verbatim, not as a route.
 
 ## 6. What is not established here
 
@@ -133,5 +168,10 @@ twelve are in `OPEN_ORDERS.md`; 2292 is now off that list.
   claim does not.
 * No claim that the core is *new up to equivalence* — no equivalence testing against
   known H(2292) constructions was done, because none was available to test against.
-* The 11-versus-15 question in §4 is unresolved and is about provenance, not about
-  the matrix.
+* The 11-versus-15 question is **resolved** (§4): 11 is the Paley prime, 15 = 5 × 3.
+* **The last `2^3–2^4` is unexplained from outside.** The design report costed 573 at
+  `2^48–2^49` and did not run stage 2. It named two ways to close the gap — a
+  `Z₄`-level decomposition of the `u`-join over `Z₅₂ = Z₄ × Z₁₃`, or widening the
+  gadget design beyond `|PAF_w| ≤ 2` and `|t_k| ≤ 1`. Which of those (or a favourable
+  gadget) produced this core is not recoverable from the artifact; the core's `K = 21`
+  matching the top-ranked `K` is suggestive of the ranking having done it.
